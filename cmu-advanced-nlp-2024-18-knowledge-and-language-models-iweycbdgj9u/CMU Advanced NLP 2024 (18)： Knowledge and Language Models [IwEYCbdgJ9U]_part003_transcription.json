@@ -1,0 +1,947 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 12.08,
+      "text": "The first way is to improve embeddings with existing Lexicons."
+    },
+    {
+      "id": 1,
+      "start": 12.08,
+      "end": 14.76,
+      "text": "And this example is using non-contextual embeddings,"
+    },
+    {
+      "id": 2,
+      "start": 14.76,
+      "end": 18.36,
+      "text": "like not the ones we get from neural language models,"
+    },
+    {
+      "id": 3,
+      "start": 18.36,
+      "end": 20.6,
+      "text": "but once we get from just running a embedding model"
+    },
+    {
+      "id": 4,
+      "start": 20.6,
+      "end": 23.6,
+      "text": "like WordDevac or something like this."
+    },
+    {
+      "id": 5,
+      "start": 23.6,
+      "end": 27.24,
+      "text": "And what they did in this paper is they essentially"
+    },
+    {
+      "id": 6,
+      "start": 27.24,
+      "end": 29.68,
+      "text": "retrofitted embeddings to existing Lexicons"
+    },
+    {
+      "id": 7,
+      "start": 29.68,
+      "end": 32.4,
+      "text": "by doing post-hoc transformations of the embeddings"
+    },
+    {
+      "id": 8,
+      "start": 32.4,
+      "end": 38.72,
+      "text": "so that they matched the knowledge graph or Lexicon better."
+    },
+    {
+      "id": 9,
+      "start": 38.72,
+      "end": 44.08,
+      "text": "And so the way they did this is they started out"
+    },
+    {
+      "id": 10,
+      "start": 44.08,
+      "end": 45.88,
+      "text": "with pre-trained embeddings."
+    },
+    {
+      "id": 11,
+      "start": 45.88,
+      "end": 47.72,
+      "text": "And they had a double objective of making"
+    },
+    {
+      "id": 12,
+      "start": 47.72,
+      "end": 50.08,
+      "text": "the transform embeddings close to the neighbors"
+    },
+    {
+      "id": 13,
+      "start": 50.08,
+      "end": 52.92,
+      "text": "and close to the original embedding."
+    },
+    {
+      "id": 14,
+      "start": 52.92,
+      "end": 56.28,
+      "text": "And the way they did this is they essentially"
+    },
+    {
+      "id": 15,
+      "start": 56.68,
+      "end": 64.68,
+      "text": "had this regularization term over here."
+    },
+    {
+      "id": 16,
+      "start": 64.68,
+      "end": 67.76,
+      "text": "So this regularization term is basically saying,"
+    },
+    {
+      "id": 17,
+      "start": 67.76,
+      "end": 70.4,
+      "text": "I don't want you to move your embeddings too far away"
+    },
+    {
+      "id": 18,
+      "start": 70.4,
+      "end": 73.32,
+      "text": "from how they were initialized."
+    },
+    {
+      "id": 19,
+      "start": 73.32,
+      "end": 76.72,
+      "text": "And then at the same time, I would like you to make"
+    },
+    {
+      "id": 20,
+      "start": 76.72,
+      "end": 79.96,
+      "text": "these embeddings closer to each other"
+    },
+    {
+      "id": 21,
+      "start": 79.96,
+      "end": 81.56,
+      "text": "if they are synonyms of each other."
+    },
+    {
+      "id": 22,
+      "start": 81.56,
+      "end": 83.64,
+      "text": "So they did this using WordNet"
+    },
+    {
+      "id": 23,
+      "start": 83.64,
+      "end": 86.24,
+      "text": "and they basically took the words that were synonyms"
+    },
+    {
+      "id": 24,
+      "start": 86.52,
+      "end": 89.08,
+      "text": "to each other in syn sets with each other."
+    },
+    {
+      "id": 25,
+      "start": 89.08,
+      "end": 91.6,
+      "text": "And they tried to regularize the synonyms"
+    },
+    {
+      "id": 26,
+      "start": 91.6,
+      "end": 93.48,
+      "text": "to be closer together, but also the embeddings"
+    },
+    {
+      "id": 27,
+      "start": 93.48,
+      "end": 95.88,
+      "text": "to be closer to how they started out."
+    },
+    {
+      "id": 28,
+      "start": 97.72,
+      "end": 99.44,
+      "text": "And there were also examples of forcing"
+    },
+    {
+      "id": 29,
+      "start": 99.44,
+      "end": 101.6,
+      "text": "antonyms away from each other."
+    },
+    {
+      "id": 30,
+      "start": 101.6,
+      "end": 104.76,
+      "text": "So like if you're, this is a little bit of an older work."
+    },
+    {
+      "id": 31,
+      "start": 104.76,
+      "end": 107.44,
+      "text": "So it was working on non-contextualized embeddings,"
+    },
+    {
+      "id": 32,
+      "start": 107.44,
+      "end": 109.52,
+      "text": "but we could do something very similar"
+    },
+    {
+      "id": 33,
+      "start": 109.52,
+      "end": 113.16,
+      "text": "for more modern models and like knowledge graph embeddings,"
+    },
+    {
+      "id": 34,
+      "start": 113.16,
+      "end": 114.0,
+      "text": "for example."
+    },
+    {
+      "id": 35,
+      "start": 114.0,
+      "end": 119.0,
+      "text": "So let's say we had a model that identifies entities"
+    },
+    {
+      "id": 36,
+      "start": 122.76,
+      "end": 126.88,
+      "text": "and then different examples of those entities"
+    },
+    {
+      "id": 37,
+      "start": 126.88,
+      "end": 128.64,
+      "text": "across different contexts."
+    },
+    {
+      "id": 38,
+      "start": 131.32,
+      "end": 133.08,
+      "text": "Let's go back to the working data."
+    },
+    {
+      "id": 39,
+      "start": 144.16,
+      "end": 148.16,
+      "text": "And so if we had lots of examples of Joe Biden,"
+    },
+    {
+      "id": 40,
+      "start": 149.2,
+      "end": 151.48,
+      "text": "Joe Biden is referred to in a number of ways,"
+    },
+    {
+      "id": 41,
+      "start": 151.48,
+      "end": 154.76,
+      "text": "like Joe Biden, Joseph Biden, Joseph Arbiden,"
+    },
+    {
+      "id": 42,
+      "start": 156.68,
+      "end": 159.72,
+      "text": "J, J, R, B, I guess,"
+    },
+    {
+      "id": 43,
+      "start": 161.12,
+      "end": 164.44,
+      "text": "Podes 48, 46, sorry."
+    },
+    {
+      "id": 44,
+      "start": 165.88,
+      "end": 170.72,
+      "text": "And so you could find different examples"
+    },
+    {
+      "id": 45,
+      "start": 170.72,
+      "end": 173.48,
+      "text": "of things that match these strings"
+    },
+    {
+      "id": 46,
+      "start": 173.48,
+      "end": 175.4,
+      "text": "and even do entity linking,"
+    },
+    {
+      "id": 47,
+      "start": 175.4,
+      "end": 177.48,
+      "text": "which I'll talk about in a little bit."
+    },
+    {
+      "id": 48,
+      "start": 177.48,
+      "end": 179.52,
+      "text": "And then encourage the embeddings"
+    },
+    {
+      "id": 49,
+      "start": 179.52,
+      "end": 182.04,
+      "text": "for all of these different instances to be closer together,"
+    },
+    {
+      "id": 50,
+      "start": 182.04,
+      "end": 185.64,
+      "text": "to make your model like distinguish them less"
+    },
+    {
+      "id": 51,
+      "start": 185.64,
+      "end": 189.52,
+      "text": "and ensure that they get closer embeddings"
+    },
+    {
+      "id": 52,
+      "start": 189.52,
+      "end": 191.4,
+      "text": "and they could improve like question answering,"
+    },
+    {
+      "id": 53,
+      "start": 191.4,
+      "end": 192.88,
+      "text": "look up, other stuff like that."
+    },
+    {
+      "id": 54,
+      "start": 196.88,
+      "end": 197.72,
+      "text": "Cool."
+    },
+    {
+      "id": 55,
+      "start": 198.72,
+      "end": 200.36,
+      "text": "Um, yeah."
+    },
+    {
+      "id": 56,
+      "start": 201.24,
+      "end": 203.12,
+      "text": "I have a question about this."
+    },
+    {
+      "id": 57,
+      "start": 203.12,
+      "end": 207.0,
+      "text": "So what happens if you do like some wood modeling"
+    },
+    {
+      "id": 58,
+      "start": 207.0,
+      "end": 208.96,
+      "text": "and then you don't have like the embedding"
+    },
+    {
+      "id": 59,
+      "start": 208.96,
+      "end": 212.12,
+      "text": "for that entire string that is supposed to be closer"
+    },
+    {
+      "id": 60,
+      "start": 212.12,
+      "end": 212.96,
+      "text": "to another two?"
+    },
+    {
+      "id": 61,
+      "start": 212.96,
+      "end": 215.12,
+      "text": "Yeah, what happens if you do some word modeling"
+    },
+    {
+      "id": 62,
+      "start": 215.12,
+      "end": 217.12,
+      "text": "and you don't have the embedding,"
+    },
+    {
+      "id": 63,
+      "start": 217.12,
+      "end": 218.36,
+      "text": "you don't have a single embedding"
+    },
+    {
+      "id": 64,
+      "start": 218.36,
+      "end": 219.56,
+      "text": "that corresponds to an entity."
+    },
+    {
+      "id": 65,
+      "start": 219.56,
+      "end": 221.24,
+      "text": "So that's a really good question."
+    },
+    {
+      "id": 66,
+      "start": 221.24,
+      "end": 223.04,
+      "text": "Um, let me check."
+    },
+    {
+      "id": 67,
+      "start": 224.32,
+      "end": 226.28,
+      "text": "I don't think I actually have these on the slide."
+    },
+    {
+      "id": 68,
+      "start": 226.28,
+      "end": 228.4,
+      "text": "So I might have to open a paper."
+    },
+    {
+      "id": 69,
+      "start": 237.56,
+      "end": 238.44,
+      "text": "Yeah, okay."
+    },
+    {
+      "id": 70,
+      "start": 238.44,
+      "end": 241.2,
+      "text": "So there's a lot of different ways to handle this."
+    },
+    {
+      "id": 71,
+      "start": 241.2,
+      "end": 248.2,
+      "text": "So there's two papers."
+    },
+    {
+      "id": 72,
+      "start": 248.2,
+      "end": 252.2,
+      "text": "The first paper is a really nice paper, very influential"
+    },
+    {
+      "id": 73,
+      "start": 252.2,
+      "end": 254.2,
+      "text": "on the subject of co-reference resolution"
+    },
+    {
+      "id": 74,
+      "start": 254.2,
+      "end": 258.2,
+      "text": "and co-reference resolution is essentially trying"
+    },
+    {
+      "id": 75,
+      "start": 258.2,
+      "end": 261.2,
+      "text": "to identify when two spans correspond to each other."
+    },
+    {
+      "id": 76,
+      "start": 261.2,
+      "end": 264.2,
+      "text": "So I'm going to go ahead and do a little bit of this."
+    },
+    {
+      "id": 77,
+      "start": 264.2,
+      "end": 267.2,
+      "text": "I'm going to go ahead and do a little bit of this."
+    },
+    {
+      "id": 78,
+      "start": 267.2,
+      "end": 270.2,
+      "text": "So essentially trying to identify when two spans correspond"
+    },
+    {
+      "id": 79,
+      "start": 270.2,
+      "end": 271.2,
+      "text": "to each other."
+    },
+    {
+      "id": 80,
+      "start": 271.2,
+      "end": 275.2,
+      "text": "So like if I say Joe Biden early in the document"
+    },
+    {
+      "id": 81,
+      "start": 275.2,
+      "end": 277.2,
+      "text": "and then later in the document, it just says Biden,"
+    },
+    {
+      "id": 82,
+      "start": 277.2,
+      "end": 280.2,
+      "text": "we want to know that those two things are referring to each other."
+    },
+    {
+      "id": 83,
+      "start": 280.2,
+      "end": 284.2,
+      "text": "And then we had a paper later where we generalize this"
+    },
+    {
+      "id": 84,
+      "start": 284.2,
+      "end": 286.2,
+      "text": "and apply, you know, very similar methodology"
+    },
+    {
+      "id": 85,
+      "start": 286.2,
+      "end": 289.2,
+      "text": "to like lots and lots of different analysis tasks."
+    },
+    {
+      "id": 86,
+      "start": 289.2,
+      "end": 293.2,
+      "text": "But I can, um, I can show the beginning here."
+    },
+    {
+      "id": 87,
+      "start": 293.2,
+      "end": 296.2,
+      "text": "And basically the methodology that they use here."
+    },
+    {
+      "id": 88,
+      "start": 296.2,
+      "end": 302.2,
+      "text": "Um, is they had a."
+    },
+    {
+      "id": 89,
+      "start": 302.2,
+      "end": 305.2,
+      "text": "And this is specifically for modeling spans"
+    },
+    {
+      "id": 90,
+      "start": 305.2,
+      "end": 309.2,
+      "text": "and getting embeddings out of spans of tokens."
+    },
+    {
+      "id": 91,
+      "start": 309.2,
+      "end": 314.2,
+      "text": "And what they did is they essentially have a model"
+    },
+    {
+      "id": 92,
+      "start": 314.2,
+      "end": 317.2,
+      "text": "where you take the thing from the beginning,"
+    },
+    {
+      "id": 93,
+      "start": 317.2,
+      "end": 319.2,
+      "text": "the embedding from the beginning of the span,"
+    },
+    {
+      "id": 94,
+      "start": 319.2,
+      "end": 321.2,
+      "text": "the embedding from the end of the span."
+    },
+    {
+      "id": 95,
+      "start": 321.2,
+      "end": 326.2,
+      "text": "And the average embedding of all the embeddings in the span."
+    },
+    {
+      "id": 96,
+      "start": 326.2,
+      "end": 329.2,
+      "text": "And that gives you three vectors for any span, right?"
+    },
+    {
+      "id": 97,
+      "start": 329.2,
+      "end": 332.2,
+      "text": "Because you can always get the beginning, the end, and the mean."
+    },
+    {
+      "id": 98,
+      "start": 332.2,
+      "end": 335.2,
+      "text": "And then based on that, they feed that through, um,"
+    },
+    {
+      "id": 99,
+      "start": 335.2,
+      "end": 339.2,
+      "text": "like a neural network and get a new embedding."
+    },
+    {
+      "id": 100,
+      "start": 339.2,
+      "end": 342.2,
+      "text": "So they feed that through a transformation and get a new embedding."
+    },
+    {
+      "id": 101,
+      "start": 342.2,
+      "end": 344.2,
+      "text": "And so that's the method that they used."
+    },
+    {
+      "id": 102,
+      "start": 344.2,
+      "end": 347.2,
+      "text": "And I think our paper actually has a better."
+    },
+    {
+      "id": 103,
+      "start": 347.2,
+      "end": 350.2,
+      "text": "Um."
+    },
+    {
+      "id": 104,
+      "start": 350.2,
+      "end": 354.2,
+      "text": "A better figure of how you can actually use them."
+    },
+    {
+      "id": 105,
+      "start": 354.2,
+      "end": 356.2,
+      "text": "Actually, maybe it doesn't."
+    },
+    {
+      "id": 106,
+      "start": 356.2,
+      "end": 361.2,
+      "text": "Okay, but anyway, um, yeah, because, uh, yeah, here's a figure."
+    },
+    {
+      "id": 107,
+      "start": 361.2,
+      "end": 364.2,
+      "text": "So then you can use that for a number of things."
+    },
+    {
+      "id": 108,
+      "start": 364.2,
+      "end": 366.2,
+      "text": "You could use that to like look up something in a knowledge base."
+    },
+    {
+      "id": 109,
+      "start": 366.2,
+      "end": 368.2,
+      "text": "You could also use that to, um,"
+    },
+    {
+      "id": 110,
+      "start": 368.2,
+      "end": 372.2,
+      "text": "decide whether two spans are co-referent by feeding in like the first span"
+    },
+    {
+      "id": 111,
+      "start": 372.2,
+      "end": 376.2,
+      "text": "and the second span in, in then predicting whether those two spans,"
+    },
+    {
+      "id": 112,
+      "start": 376.2,
+      "end": 378.2,
+      "text": "course, correspond to each other or not."
+    },
+    {
+      "id": 113,
+      "start": 378.2,
+      "end": 384.2,
+      "text": "So this general idea of modeling spans and then modeling relations"
+    },
+    {
+      "id": 114,
+      "start": 384.2,
+      "end": 387.2,
+      "text": "between the spans allows you to solve like lots of different tasks,"
+    },
+    {
+      "id": 115,
+      "start": 387.2,
+      "end": 392.2,
+      "text": "like part of speech tagging or named entity recognition or relation extraction or other stuff like that."
+    },
+    {
+      "id": 116,
+      "start": 392.2,
+      "end": 398.2,
+      "text": "So, um, yeah, actually, I realized now that I should have probably talked about these in the slides where I was talking about modeling."
+    },
+    {
+      "id": 117,
+      "start": 398.2,
+      "end": 402.2,
+      "text": "But that that would be my recommended way of doing."
+    },
+    {
+      "id": 118,
+      "start": 402.2,
+      "end": 407.2,
+      "text": "Cool. Any other questions?"
+    },
+    {
+      "id": 119,
+      "start": 407.2,
+      "end": 410.2,
+      "text": "Okay."
+    },
+    {
+      "id": 120,
+      "start": 410.2,
+      "end": 413.2,
+      "text": "So,"
+    },
+    {
+      "id": 121,
+      "start": 413.2,
+      "end": 418.2,
+      "text": "another question is how can we inject knowledge into language models?"
+    },
+    {
+      "id": 122,
+      "start": 418.2,
+      "end": 421.2,
+      "text": "There's a bunch of different ways to do this."
+    },
+    {
+      "id": 123,
+      "start": 421.2,
+      "end": 428.2,
+      "text": "One very easy way is to somehow look up relevant knowledge in your knowledge graph."
+    },
+    {
+      "id": 124,
+      "start": 428.2,
+      "end": 434.2,
+      "text": "And, um, oh, sorry."
+    },
+    {
+      "id": 125,
+      "start": 434.2,
+      "end": 438.2,
+      "text": "It was presenting on my own screen, not screen that everybody can see."
+    },
+    {
+      "id": 126,
+      "start": 438.2,
+      "end": 443.2,
+      "text": "So, um, to look up all of the knowledge and a knowledge graph."
+    },
+    {
+      "id": 127,
+      "start": 443.2,
+      "end": 446.2,
+      "text": "And, um, somehow provide it to the model."
+    },
+    {
+      "id": 128,
+      "start": 446.2,
+      "end": 449.2,
+      "text": "One way you can provide it to the model is through prompting."
+    },
+    {
+      "id": 129,
+      "start": 449.2,
+      "end": 458.2,
+      "text": "Um, but the problem with prompting is that you're not necessarily going to be able to."
+    },
+    {
+      "id": 130,
+      "start": 458.2,
+      "end": 472.2,
+      "text": "And, um, you know, you're not going to be able to visualize knowledge that is kind of like minority knowledge because the embeddings of the entities that you're presenting may not be, you know, like well learned."
+    },
+    {
+      "id": 131,
+      "start": 472.2,
+      "end": 480.2,
+      "text": "So you're requiring essentially the model to be able to generalize from the knowledge you provide in the."
+    },
+    {
+      "id": 132,
+      "start": 480.2,
+      "end": 486.2,
+      "text": "And, um, the fact that the prompt is like minor entities or other things like that that are not as well learned."
+    },
+    {
+      "id": 133,
+      "start": 486.2,
+      "end": 492.2,
+      "text": "So, is another, um, method to handle this."
+    },
+    {
+      "id": 134,
+      "start": 492.2,
+      "end": 498.2,
+      "text": "We previously proposed a method that allows you to."
+    },
+    {
+      "id": 135,
+      "start": 498.2,
+      "end": 500.2,
+      "text": "Essentially predict."
+    },
+    {
+      "id": 136,
+      "start": 500.2,
+      "end": 507.2,
+      "text": "Instead of predicting directly the words here, you can predict a tag that says birth name."
+    },
+    {
+      "id": 137,
+      "start": 507.2,
+      "end": 510.2,
+      "text": "Or family name or something like that."
+    },
+    {
+      "id": 138,
+      "start": 510.2,
+      "end": 514.2,
+      "text": "And then post hoc the model will fill in."
+    },
+    {
+      "id": 139,
+      "start": 514.2,
+      "end": 517.2,
+      "text": "Uh, that like birth name."
+    },
+    {
+      "id": 140,
+      "start": 517.2,
+      "end": 519.2,
+      "text": "Packs to based on a knowledge base."
+    },
+    {
+      "id": 141,
+      "start": 519.2,
+      "end": 525.2,
+      "text": "So, um, you know, if you have a Wikipedia article about Barack Obama that you're trying to write."
+    },
+    {
+      "id": 142,
+      "start": 525.2,
+      "end": 527.2,
+      "text": "It could predict."
+    },
+    {
+      "id": 143,
+      "start": 527.2,
+      "end": 529.2,
+      "text": "And so, um, the birth name."
+    },
+    {
+      "id": 144,
+      "start": 529.2,
+      "end": 534.2,
+      "text": "Born, uh, birth name comma born in birth date."
+    },
+    {
+      "id": 145,
+      "start": 534.2,
+      "end": 538.2,
+      "text": "And that's like a very, very common thing in Wikipedia, right?"
+    },
+    {
+      "id": 146,
+      "start": 538.2,
+      "end": 544.2,
+      "text": "So because of that, it can predict it very consistently, very, uh, formulaically."
+    },
+    {
+      "id": 147,
+      "start": 544.2,
+      "end": 552.2,
+      "text": "And that allows you to, um, you know, with high confidence, get something that makes sense and is factual and reduce hallucination and others stuff like that."
+    },
+    {
+      "id": 148,
+      "start": 552.2,
+      "end": 555.2,
+      "text": "Um, basically, how could you inject this into language models?"
+    },
+    {
+      "id": 149,
+      "start": 555.2,
+      "end": 558.2,
+      "text": "There's multiple ways. One is prompting that's maybe the easier way."
+    },
+    {
+      "id": 150,
+      "start": 558.2,
+      "end": 566.2,
+      "text": "Another way is through like templateic generation like this where you generate placeholders for all the information you want to add."
+    },
+    {
+      "id": 151,
+      "start": 566.2,
+      "end": 575.2,
+      "text": "And then you add the information directly from the knowledge base through the place with us later."
+    },
+    {
+      "id": 152,
+      "start": 575.2,
+      "end": 582.2,
+      "text": "There's details about this in the paper like how we, um, formulate a training objective for something like this."
+    },
+    {
+      "id": 153,
+      "start": 582.2,
+      "end": 589.2,
+      "text": "And the difficulty in formulating a training objective is that you need to figure out when you want to replace things."
+    },
+    {
+      "id": 154,
+      "start": 589.2,
+      "end": 592.2,
+      "text": "So like you might not always want to replace with birth name."
+    },
+    {
+      "id": 155,
+      "start": 592.2,
+      "end": 595.2,
+      "text": "You might want to replace with given name and family name."
+    },
+    {
+      "id": 156,
+      "start": 595.2,
+      "end": 603.2,
+      "text": "And we demonstrate that you can figure out how to do this by essentially like marginalizing over the various ways of."
+    }
+  ],
+  "language": "en"
+}

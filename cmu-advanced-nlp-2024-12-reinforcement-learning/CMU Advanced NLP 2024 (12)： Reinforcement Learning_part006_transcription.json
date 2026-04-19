@@ -1,0 +1,1103 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 2.68,
+      "text": "I'm an equivalent reward for all of the tokens"
+    },
+    {
+      "id": 1,
+      "start": 2.68,
+      "end": 4.8,
+      "text": "in the current utterance and zero reward"
+    },
+    {
+      "id": 2,
+      "start": 4.8,
+      "end": 7.6,
+      "text": "for the previous ones, but I'm not 100% sure about that."
+    },
+    {
+      "id": 3,
+      "start": 7.6,
+      "end": 10.6,
+      "text": "There might be other methods of the core use of the PC."
+    },
+    {
+      "id": 4,
+      "start": 13.68,
+      "end": 16.2,
+      "text": "So stabilizing reinforcement learning."
+    },
+    {
+      "id": 5,
+      "start": 16.2,
+      "end": 19.08,
+      "text": "So stabilizing reinforcement learning,"
+    },
+    {
+      "id": 6,
+      "start": 19.08,
+      "end": 21.4,
+      "text": "there's a lot of reasons why it's unstable."
+    },
+    {
+      "id": 7,
+      "start": 22.6,
+      "end": 25.52,
+      "text": "The first reason is you're sampling an individual output"
+    },
+    {
+      "id": 8,
+      "start": 25.52,
+      "end": 30.52,
+      "text": "and calculating based on the individual sampled output."
+    },
+    {
+      "id": 9,
+      "start": 31.84,
+      "end": 34.36,
+      "text": "And then there's an infinity of other outputs"
+    },
+    {
+      "id": 10,
+      "start": 34.36,
+      "end": 36.12,
+      "text": "that you could be optimizing over."
+    },
+    {
+      "id": 11,
+      "start": 36.12,
+      "end": 38.28,
+      "text": "For MLE, this is not a problem."
+    },
+    {
+      "id": 12,
+      "start": 38.28,
+      "end": 41.8,
+      "text": "Because for MLE, you're always contrasting"
+    },
+    {
+      "id": 13,
+      "start": 41.8,
+      "end": 45.92,
+      "text": "the gold standard output to all of the other outputs"
+    },
+    {
+      "id": 14,
+      "start": 45.92,
+      "end": 47.24,
+      "text": "in the space."
+    },
+    {
+      "id": 15,
+      "start": 47.24,
+      "end": 49.32,
+      "text": "And you're saying, I want to update the gold standard output"
+    },
+    {
+      "id": 16,
+      "start": 49.32,
+      "end": 51.68,
+      "text": "and downway all of the other ones."
+    },
+    {
+      "id": 17,
+      "start": 51.68,
+      "end": 53.68,
+      "text": "But for reinforcement learning,"
+    },
+    {
+      "id": 18,
+      "start": 53.68,
+      "end": 55.28,
+      "text": "you only have a single sampled output"
+    },
+    {
+      "id": 19,
+      "start": 55.28,
+      "end": 59.0,
+      "text": "that output might be wrong in that sense of instability."
+    },
+    {
+      "id": 20,
+      "start": 59.0,
+      "end": 61.88,
+      "text": "This is particularly a problem when using bigger outputs,"
+    },
+    {
+      "id": 21,
+      "start": 61.88,
+      "end": 64.88,
+      "text": "spaces like all of the words in the vocabulary."
+    },
+    {
+      "id": 22,
+      "start": 64.88,
+      "end": 69.88,
+      "text": "Another problem is anytime you start using negative rewards"
+    },
+    {
+      "id": 23,
+      "start": 71.12,
+      "end": 75.0,
+      "text": "because if you start using negative rewards,"
+    },
+    {
+      "id": 24,
+      "start": 75.0,
+      "end": 78.4,
+      "text": "those rewards will be downweating"
+    },
+    {
+      "id": 25,
+      "start": 78.4,
+      "end": 81.16,
+      "text": "the probability of a particular output sequence."
+    },
+    {
+      "id": 26,
+      "start": 81.16,
+      "end": 82.2,
+      "text": "And that might be a good idea."
+    },
+    {
+      "id": 27,
+      "start": 82.2,
+      "end": 83.8,
+      "text": "Maybe you're getting a toxic output"
+    },
+    {
+      "id": 28,
+      "start": 83.8,
+      "end": 85.88,
+      "text": "with something like that and you want to downway it."
+    },
+    {
+      "id": 29,
+      "start": 85.88,
+      "end": 87.48,
+      "text": "But at the same time, in addition to that,"
+    },
+    {
+      "id": 30,
+      "start": 87.48,
+      "end": 91.2,
+      "text": "toxic output, there's a combinatorial number"
+    },
+    {
+      "id": 31,
+      "start": 91.2,
+      "end": 94.44,
+      "text": "of completely nonsense outputs that aren't even English."
+    },
+    {
+      "id": 32,
+      "start": 94.44,
+      "end": 97.04,
+      "text": "And so basically, you can start diverge from the net,"
+    },
+    {
+      "id": 33,
+      "start": 97.04,
+      "end": 101.2,
+      "text": "starting to diverge from the natural language modeling"
+    },
+    {
+      "id": 34,
+      "start": 101.2,
+      "end": 103.12,
+      "text": "distribution that you have before."
+    },
+    {
+      "id": 35,
+      "start": 103.12,
+      "end": 105.84,
+      "text": "So this is a big problem."
+    },
+    {
+      "id": 36,
+      "start": 107.52,
+      "end": 111.96,
+      "text": "So a number of strategies can be used to stabilize."
+    },
+    {
+      "id": 37,
+      "start": 111.96,
+      "end": 115.56,
+      "text": "The first one is, this is completely obvious right now"
+    },
+    {
+      "id": 38,
+      "start": 115.56,
+      "end": 118.12,
+      "text": "and nobody in the right mind would avoid doing this."
+    },
+    {
+      "id": 39,
+      "start": 118.12,
+      "end": 120.96,
+      "text": "But the first one is pre-training with MLLE."
+    },
+    {
+      "id": 40,
+      "start": 120.96,
+      "end": 124.04,
+      "text": "And so you start with a pre-trained model"
+    },
+    {
+      "id": 41,
+      "start": 124.04,
+      "end": 126.8,
+      "text": "and then switch over to RL after you finished"
+    },
+    {
+      "id": 42,
+      "start": 126.8,
+      "end": 127.84,
+      "text": "a pre-training model."
+    },
+    {
+      "id": 43,
+      "start": 129.04,
+      "end": 133.24,
+      "text": "And so this makes a lot of sense"
+    },
+    {
+      "id": 44,
+      "start": 133.24,
+      "end": 134.44,
+      "text": "if you're training a language model,"
+    },
+    {
+      "id": 45,
+      "start": 134.44,
+      "end": 136.76,
+      "text": "which I assume that almost everybody in this class"
+    },
+    {
+      "id": 46,
+      "start": 136.76,
+      "end": 138.08,
+      "text": "is going to be doing."
+    },
+    {
+      "id": 47,
+      "start": 138.08,
+      "end": 141.64,
+      "text": "But it does only work in scenarios where you can run MLLE"
+    },
+    {
+      "id": 48,
+      "start": 141.64,
+      "end": 144.6,
+      "text": "and so it doesn't work if you're predicting"
+    },
+    {
+      "id": 49,
+      "start": 144.6,
+      "end": 146.76,
+      "text": "like latent variables that aren't included"
+    },
+    {
+      "id": 50,
+      "start": 146.76,
+      "end": 148.44,
+      "text": "in the original space."
+    },
+    {
+      "id": 51,
+      "start": 149.4,
+      "end": 154.4,
+      "text": "It also doesn't work in a setting where like you want"
+    },
+    {
+      "id": 52,
+      "start": 154.44,
+      "end": 158.36,
+      "text": "to learn a chatbot, you want to learn a chatbot"
+    },
+    {
+      "id": 53,
+      "start": 158.36,
+      "end": 163.36,
+      "text": "for customer service for a company that has,"
+    },
+    {
+      "id": 54,
+      "start": 166.96,
+      "end": 170.84,
+      "text": "like for example, a product catalog that the language model"
+    },
+    {
+      "id": 55,
+      "start": 170.84,
+      "end": 172.76,
+      "text": "has never seen before."
+    },
+    {
+      "id": 56,
+      "start": 172.76,
+      "end": 176.8,
+      "text": "And so if the language model has no information"
+    },
+    {
+      "id": 57,
+      "start": 176.8,
+      "end": 178.36,
+      "text": "about the product catalog whatsoever,"
+    },
+    {
+      "id": 58,
+      "start": 178.36,
+      "end": 181.32,
+      "text": "you don't provide it to RAG or something like that."
+    },
+    {
+      "id": 59,
+      "start": 181.32,
+      "end": 184.84,
+      "text": "It's going to have to explore infinitely or not infinitely,"
+    },
+    {
+      "id": 60,
+      "start": 184.84,
+      "end": 187.32,
+      "text": "but it's going to have to explore too large of a space"
+    },
+    {
+      "id": 61,
+      "start": 187.32,
+      "end": 189.08,
+      "text": "and you're never going to converge with"
+    },
+    {
+      "id": 62,
+      "start": 190.08,
+      "end": 191.52,
+      "text": "with your language modeling objective."
+    },
+    {
+      "id": 63,
+      "start": 191.52,
+      "end": 194.44,
+      "text": "So you need to basically be able to create at least"
+    },
+    {
+      "id": 64,
+      "start": 194.44,
+      "end": 197.88,
+      "text": "some supervised training data to train with MLLE."
+    },
+    {
+      "id": 65,
+      "start": 199.24,
+      "end": 200.72,
+      "text": "But assuming you can do that,"
+    },
+    {
+      "id": 66,
+      "start": 200.72,
+      "end": 202.88,
+      "text": "I'm assuming that almost everybody is going to do"
+    },
+    {
+      "id": 67,
+      "start": 202.88,
+      "end": 204.48,
+      "text": "some sort of pre-training with MLLE."
+    },
+    {
+      "id": 68,
+      "start": 206.16,
+      "end": 209.32,
+      "text": "The next step that people use in reinforcement learning"
+    },
+    {
+      "id": 69,
+      "start": 209.32,
+      "end": 211.36,
+      "text": "that's really important to stabilize"
+    },
+    {
+      "id": 70,
+      "start": 211.36,
+      "end": 214.36,
+      "text": "is regularization to an existing model."
+    },
+    {
+      "id": 71,
+      "start": 214.36,
+      "end": 218.0,
+      "text": "And you have an existing model and you want to prevent it"
+    },
+    {
+      "id": 72,
+      "start": 218.0,
+      "end": 220.04,
+      "text": "from getting too far away."
+    },
+    {
+      "id": 73,
+      "start": 220.04,
+      "end": 222.48,
+      "text": "And the reason why you want to do this is like,"
+    },
+    {
+      "id": 74,
+      "start": 222.48,
+      "end": 224.92,
+      "text": "let's say you start assigning a negative word"
+    },
+    {
+      "id": 75,
+      "start": 224.92,
+      "end": 227.64,
+      "text": "to toxic utterances, for example,"
+    },
+    {
+      "id": 76,
+      "start": 227.64,
+      "end": 230.08,
+      "text": "if your model stops being a language model whatsoever,"
+    },
+    {
+      "id": 77,
+      "start": 230.08,
+      "end": 230.96,
+      "text": "that's a bad idea."
+    },
+    {
+      "id": 78,
+      "start": 230.96,
+      "end": 233.84,
+      "text": "So you want to keep it as a language model,"
+    },
+    {
+      "id": 79,
+      "start": 233.84,
+      "end": 236.48,
+      "text": "keep it close enough to still being a competent language model"
+    },
+    {
+      "id": 80,
+      "start": 236.48,
+      "end": 239.36,
+      "text": "while removing the toxic utterances."
+    },
+    {
+      "id": 81,
+      "start": 240.48,
+      "end": 243.4,
+      "text": "So there's a number of methods that people used to do this."
+    },
+    {
+      "id": 82,
+      "start": 244.92,
+      "end": 247.76,
+      "text": "The most prominent ones are kale regularization."
+    },
+    {
+      "id": 83,
+      "start": 249.12,
+      "end": 252.2,
+      "text": "So the first most prominent one is kale regularization."
+    },
+    {
+      "id": 84,
+      "start": 252.2,
+      "end": 255.8,
+      "text": "And the way this works is basically in addition,"
+    },
+    {
+      "id": 85,
+      "start": 255.8,
+      "end": 257.6,
+      "text": "you have two terms."
+    },
+    {
+      "id": 86,
+      "start": 258.6,
+      "end": 263.32,
+      "text": "The first term is a term that improves your reward."
+    },
+    {
+      "id": 87,
+      "start": 263.32,
+      "end": 266.96,
+      "text": "So you have your old model, where your old model"
+    },
+    {
+      "id": 88,
+      "start": 266.96,
+      "end": 269.0,
+      "text": "is creating a probability."
+    },
+    {
+      "id": 89,
+      "start": 271.0,
+      "end": 273.08,
+      "text": "It has a probability here."
+    },
+    {
+      "id": 90,
+      "start": 273.08,
+      "end": 276.24,
+      "text": "And then you have the probability assigned by your new model."
+    },
+    {
+      "id": 91,
+      "start": 276.24,
+      "end": 279.08,
+      "text": "And then you have your reward signal here."
+    },
+    {
+      "id": 92,
+      "start": 279.08,
+      "end": 282.84,
+      "text": "And so this is basically improving the log odds"
+    },
+    {
+      "id": 93,
+      "start": 282.84,
+      "end": 285.88,
+      "text": "or improving the odds of getting a good reward"
+    },
+    {
+      "id": 94,
+      "start": 285.96,
+      "end": 287.8,
+      "text": "for high reward sequences."
+    },
+    {
+      "id": 95,
+      "start": 289.72,
+      "end": 294.12,
+      "text": "Separately from this, you have this kale regularization term."
+    },
+    {
+      "id": 96,
+      "start": 294.12,
+      "end": 298.72,
+      "text": "And this kale regularization term is keeping the scores"
+    },
+    {
+      "id": 97,
+      "start": 298.72,
+      "end": 301.4,
+      "text": "of, it's keeping the probability distribution"
+    },
+    {
+      "id": 98,
+      "start": 301.4,
+      "end": 304.8,
+      "text": "of your new model similar to the probability distribution"
+    },
+    {
+      "id": 99,
+      "start": 304.8,
+      "end": 305.72,
+      "text": "of your old model."
+    },
+    {
+      "id": 100,
+      "start": 306.68,
+      "end": 312.16,
+      "text": "And this beta parameter, basically you can increase it"
+    },
+    {
+      "id": 101,
+      "start": 312.16,
+      "end": 315.6,
+      "text": "or decrease it based on how similar you want to keep"
+    },
+    {
+      "id": 102,
+      "start": 315.6,
+      "end": 318.68,
+      "text": "the how similar you want to keep them all."
+    },
+    {
+      "id": 103,
+      "start": 323.52,
+      "end": 325.44,
+      "text": "Another method that people use is something called"
+    },
+    {
+      "id": 104,
+      "start": 325.44,
+      "end": 329.4,
+      "text": "proximal policy optimization or PPO."
+    },
+    {
+      "id": 105,
+      "start": 329.4,
+      "end": 334.4,
+      "text": "And this is a method that is based on flipping the outputs."
+    },
+    {
+      "id": 106,
+      "start": 336.68,
+      "end": 339.56,
+      "text": "And we define this ratio here."
+    },
+    {
+      "id": 107,
+      "start": 341.0,
+      "end": 342.96,
+      "text": "So this ratio is equivalent to this here."
+    },
+    {
+      "id": 108,
+      "start": 342.96,
+      "end": 347.64,
+      "text": "So it's basically kind of the amount that your learning"
+    },
+    {
+      "id": 109,
+      "start": 347.64,
+      "end": 349.68,
+      "text": "or the amount that the new model updates"
+    },
+    {
+      "id": 110,
+      "start": 349.68,
+      "end": 351.72,
+      "text": "high reward sequences."
+    },
+    {
+      "id": 111,
+      "start": 351.72,
+      "end": 355.4,
+      "text": "And so here we have the same thing that we had above."
+    },
+    {
+      "id": 112,
+      "start": 356.8,
+      "end": 359.52,
+      "text": "So it looks like this."
+    },
+    {
+      "id": 113,
+      "start": 359.52,
+      "end": 363.0,
+      "text": "But over here we have a flipped version of this."
+    },
+    {
+      "id": 114,
+      "start": 363.0,
+      "end": 367.52,
+      "text": "Where essentially what we do is we flip this ratio."
+    },
+    {
+      "id": 115,
+      "start": 372.96,
+      "end": 377.96,
+      "text": "And this ratio to be within a certain range"
+    },
+    {
+      "id": 116,
+      "start": 387.32,
+      "end": 389.2,
+      "text": "of the original ratio."
+    },
+    {
+      "id": 117,
+      "start": 389.2,
+      "end": 394.2,
+      "text": "And what this is doing is this is essentially forcing"
+    },
+    {
+      "id": 118,
+      "start": 395.64,
+      "end": 400.64,
+      "text": "the model to not reward large jumps into space"
+    },
+    {
+      "id": 119,
+      "start": 401.28,
+      "end": 405.28,
+      "text": "because if you take the minimum,"
+    },
+    {
+      "id": 120,
+      "start": 405.28,
+      "end": 409.28,
+      "text": "and actually I'm sorry, I just realized I might have done"
+    },
+    {
+      "id": 121,
+      "start": 409.28,
+      "end": 412.16,
+      "text": "something confusing here because this is actually higher"
+    },
+    {
+      "id": 122,
+      "start": 412.16,
+      "end": 413.16,
+      "text": "is better."
+    },
+    {
+      "id": 123,
+      "start": 413.16,
+      "end": 414.4,
+      "text": "So this isn't really a loss venture."
+    },
+    {
+      "id": 124,
+      "start": 414.4,
+      "end": 416.4,
+      "text": "This is something you're attempting to maximize."
+    },
+    {
+      "id": 125,
+      "start": 416.4,
+      "end": 418.64,
+      "text": "So in contrast to all of the other things I was talking"
+    },
+    {
+      "id": 126,
+      "start": 418.64,
+      "end": 421.88,
+      "text": "about before, this is something where higher is better"
+    },
+    {
+      "id": 127,
+      "start": 421.88,
+      "end": 423.64,
+      "text": "instead of lower is better."
+    },
+    {
+      "id": 128,
+      "start": 423.64,
+      "end": 427.32,
+      "text": "But anyway, basically by taking the minimum of this,"
+    },
+    {
+      "id": 129,
+      "start": 427.72,
+      "end": 432.32,
+      "text": "you're encouraging the model to keep examining the space"
+    },
+    {
+      "id": 130,
+      "start": 437.48,
+      "end": 441.24,
+      "text": "where you don't diverge much from the original model."
+    },
+    {
+      "id": 131,
+      "start": 441.24,
+      "end": 443.96,
+      "text": "And if the space where the original model was in"
+    },
+    {
+      "id": 132,
+      "start": 443.96,
+      "end": 447.24,
+      "text": "is better than the new space that your model has moved into,"
+    },
+    {
+      "id": 133,
+      "start": 447.24,
+      "end": 449.28,
+      "text": "you move back towards the original model."
+    },
+    {
+      "id": 134,
+      "start": 449.28,
+      "end": 454.16,
+      "text": "So basically like if you learned a model,"
+    },
+    {
+      "id": 135,
+      "start": 454.16,
+      "end": 456.16,
+      "text": "if you started learning a model that looks like it was"
+    },
+    {
+      "id": 136,
+      "start": 456.32,
+      "end": 461.0,
+      "text": "optimizing your reward, but then suddenly the model went out"
+    },
+    {
+      "id": 137,
+      "start": 461.0,
+      "end": 464.72,
+      "text": "the rails and it starts generating"
+    },
+    {
+      "id": 138,
+      "start": 464.72,
+      "end": 467.84,
+      "text": "lately nonsense outputs that get really bad reward."
+    },
+    {
+      "id": 139,
+      "start": 467.84,
+      "end": 470.36,
+      "text": "This will push it back towards the original policy"
+    },
+    {
+      "id": 140,
+      "start": 470.36,
+      "end": 472.16,
+      "text": "and that's a basic idea behind the PTA."
+    },
+    {
+      "id": 141,
+      "start": 474.24,
+      "end": 477.56,
+      "text": "In terms of what I see people using, PTO was"
+    },
+    {
+      "id": 142,
+      "start": 477.56,
+      "end": 479.96,
+      "text": "like really, really popular for a while,"
+    },
+    {
+      "id": 143,
+      "start": 479.96,
+      "end": 483.08,
+      "text": "but I started to see people use alternative strategies"
+    },
+    {
+      "id": 144,
+      "start": 483.08,
+      "end": 484.6,
+      "text": "that use scale regularization."
+    },
+    {
+      "id": 145,
+      "start": 484.6,
+      "end": 488.12,
+      "text": "So I don't think either one of them is like"
+    },
+    {
+      "id": 146,
+      "start": 488.12,
+      "end": 490.28,
+      "text": "particularly more popular than you the others."
+    },
+    {
+      "id": 147,
+      "start": 490.28,
+      "end": 491.68,
+      "text": "And this one's a little bit simpler,"
+    },
+    {
+      "id": 148,
+      "start": 491.68,
+      "end": 493.92,
+      "text": "it can sexually say like the top one."
+    },
+    {
+      "id": 149,
+      "start": 497.76,
+      "end": 499.56,
+      "text": "Cool, any questions about this?"
+    },
+    {
+      "id": 150,
+      "start": 503.08,
+      "end": 503.92,
+      "text": "Okay."
+    },
+    {
+      "id": 151,
+      "start": 505.36,
+      "end": 507.88,
+      "text": "And actually one thing I should mention is"
+    },
+    {
+      "id": 152,
+      "start": 507.88,
+      "end": 511.96,
+      "text": "all of these things are implemented in whatever libraries"
+    },
+    {
+      "id": 153,
+      "start": 511.96,
+      "end": 515.12,
+      "text": "you use like HulkingFace.trl, a transformer reinforcement"
+    },
+    {
+      "id": 154,
+      "start": 515.12,
+      "end": 516.76,
+      "text": "learning is an example library."
+    },
+    {
+      "id": 155,
+      "start": 516.76,
+      "end": 518.28,
+      "text": "All of these methods are implemented there."
+    },
+    {
+      "id": 156,
+      "start": 518.28,
+      "end": 520.24,
+      "text": "So if you actually want to use these in practice,"
+    },
+    {
+      "id": 157,
+      "start": 520.24,
+      "end": 521.08,
+      "text": "that's the point."
+    },
+    {
+      "id": 158,
+      "start": 523.76,
+      "end": 525.68,
+      "text": "The next thing is adding a baseline."
+    },
+    {
+      "id": 159,
+      "start": 525.68,
+      "end": 529.88,
+      "text": "And so the basic idea is that you have expectations"
+    },
+    {
+      "id": 160,
+      "start": 529.88,
+      "end": 533.16,
+      "text": "about your reward for a particular sentence."
+    },
+    {
+      "id": 161,
+      "start": 533.16,
+      "end": 537.16,
+      "text": "And like let's say we wanted to translate a sentence"
+    },
+    {
+      "id": 162,
+      "start": 537.16,
+      "end": 539.68,
+      "text": "and we have something like this is an easy sentence"
+    },
+    {
+      "id": 163,
+      "start": 539.68,
+      "end": 541.52,
+      "text": "and Buffalo Buffalo Buffalo,"
+    },
+    {
+      "id": 164,
+      "start": 541.52,
+      "end": 545.68,
+      "text": "which is a harder sentence to translate."
+    },
+    {
+      "id": 165,
+      "start": 545.68,
+      "end": 547.64,
+      "text": "And so we have a reward."
+    },
+    {
+      "id": 166,
+      "start": 549.2,
+      "end": 551.56,
+      "text": "If you're not familiar with this example,"
+    },
+    {
+      "id": 167,
+      "start": 551.56,
+      "end": 554.44,
+      "text": "you can search on Wikipedia for Buffalo Buffalo Buffalo"
+    },
+    {
+      "id": 168,
+      "start": 554.44,
+      "end": 556.68,
+      "text": "and you'll find out what I'm talking about."
+    },
+    {
+      "id": 169,
+      "start": 558.0,
+      "end": 560.48,
+      "text": "But there's a reward."
+    },
+    {
+      "id": 170,
+      "start": 560.48,
+      "end": 563.4,
+      "text": "And let's say you got a reward of 0.8 for the first one"
+    },
+    {
+      "id": 171,
+      "start": 563.4,
+      "end": 566.12,
+      "text": "and a reward of 0.3 for the second one."
+    },
+    {
+      "id": 172,
+      "start": 567.12,
+      "end": 573.32,
+      "text": "But the problem is if the first one actually is really easy"
+    },
+    {
+      "id": 173,
+      "start": 573.32,
+      "end": 575.12,
+      "text": "and the second one is really hard,"
+    },
+    {
+      "id": 174,
+      "start": 575.12,
+      "end": 577.8,
+      "text": "getting a reward of 0.8 for the second one"
+    },
+    {
+      "id": 175,
+      "start": 577.8,
+      "end": 580.64,
+      "text": "for like a translation or something is actually bad, right?"
+    },
+    {
+      "id": 176,
+      "start": 580.64,
+      "end": 582.28,
+      "text": "And the reward of 0.3 is good"
+    },
+    {
+      "id": 177,
+      "start": 582.28,
+      "end": 584.52,
+      "text": "because you're moving in the right direction."
+    },
+    {
+      "id": 178,
+      "start": 584.52,
+      "end": 591.12,
+      "text": "And so you basically, you have the baseline minus reward,"
+    },
+    {
+      "id": 179,
+      "start": 591.12,
+      "end": 593.68,
+      "text": "sorry, reward minus baseline."
+    },
+    {
+      "id": 180,
+      "start": 593.8,
+      "end": 596.56,
+      "text": "And this would give you a negative value"
+    },
+    {
+      "id": 181,
+      "start": 596.56,
+      "end": 599.68,
+      "text": "for this first one and a positive value for the second one."
+    },
+    {
+      "id": 182,
+      "start": 599.68,
+      "end": 601.88,
+      "text": "And so the basic idea is can we predict?"
+    }
+  ],
+  "language": "en"
+}

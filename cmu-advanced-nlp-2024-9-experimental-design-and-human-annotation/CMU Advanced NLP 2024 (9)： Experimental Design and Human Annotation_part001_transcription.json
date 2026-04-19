@@ -1,0 +1,305 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 14.0,
+      "text": "That's great. That's a great example of a successful top down idea, but the problem is for every example like that, there's a thousand top down ideas in the graveyard of not being very effective."
+    },
+    {
+      "id": 1,
+      "start": 14.0,
+      "end": 25.0,
+      "text": "I think in order to do something like this, you better have a very strong conviction or you better have maybe some initial evidence or a very strong intuition about why this might be a good idea."
+    },
+    {
+      "id": 2,
+      "start": 25.0,
+      "end": 37.0,
+      "text": "And you would be able to test that intuition through intermediate steps to demonstrate like through point data or other stuff like that."
+    },
+    {
+      "id": 3,
+      "start": 37.0,
+      "end": 43.0,
+      "text": "Cool. So these are kind of the general ways that we can come up with research ideas."
+    },
+    {
+      "id": 4,
+      "start": 43.0,
+      "end": 49.0,
+      "text": "The next thing that we want to do is research our topic area. Were there any questions about bottom up versus top down?"
+    },
+    {
+      "id": 5,
+      "start": 49.0,
+      "end": 59.0,
+      "text": "I'm going to talk about effective strategies to bottom up stuff in in two weeks. So we can talk more about that than those."
+    },
+    {
+      "id": 6,
+      "start": 59.0,
+      "end": 62.0,
+      "text": "Okay, if not, I'll be back."
+    },
+    {
+      "id": 7,
+      "start": 62.0,
+      "end": 79.0,
+      "text": "So next we have research topic areas. So this is about how you will do assignment three, which is researching topic area getting forming a very good understanding of the topic that you're trying to handle."
+    },
+    {
+      "id": 8,
+      "start": 79.0,
+      "end": 83.0,
+      "text": "And so there's a bunch of different ways you can do this."
+    },
+    {
+      "id": 9,
+      "start": 83.0,
+      "end": 96.0,
+      "text": "The first one is keyword search. And so you look something up on Google Scholar or something finding older and newer papers. So this is like following the tracks of papers."
+    },
+    {
+      "id": 10,
+      "start": 96.0,
+      "end": 102.0,
+      "text": "You can read the abstract and intro, read the details and most relevant papers."
+    },
+    {
+      "id": 11,
+      "start": 102.0,
+      "end": 114.0,
+      "text": "And I don't do this as much now, but when I was a graduate student, I would often make a short summary of the paper to make sure I really understood the details."
+    },
+    {
+      "id": 12,
+      "start": 114.0,
+      "end": 131.0,
+      "text": "Because also now I teach a class and actually making these slides is very useful for me. So going back into the transformer slides, you know, that kind of services my, you know, my way of digestion papers and making sure that I can explain them."
+    },
+    {
+      "id": 13,
+      "start": 131.0,
+      "end": 137.0,
+      "text": "And if you're not teaching a class and you can go in and make a summary and do it results. So that can confirm."
+    },
+    {
+      "id": 14,
+      "start": 137.0,
+      "end": 147.0,
+      "text": "So, so let if I your memory and like confirm your ability to understand everything that's in there."
+    },
+    {
+      "id": 15,
+      "start": 147.0,
+      "end": 152.0,
+      "text": "Cool. So next I'd like to talk about some sources and papers and L.P."
+    },
+    {
+      "id": 16,
+      "start": 152.0,
+      "end": 161.0,
+      "text": "So I think really good source is the ACL anthology. Another good source is Google Scholar. They both have their advantages and their disadvantages."
+    },
+    {
+      "id": 17,
+      "start": 161.0,
+      "end": 168.0,
+      "text": "Increasingly, actually, I realized now that I should add this to my slides, but increasingly a lot of good papers and L.P."
+    },
+    {
+      "id": 18,
+      "start": 168.0,
+      "end": 176.0,
+      "text": "So I think I'm going to have a question machine learning conferences. So like I see a mail or NREPS or I clear or things like that."
+    },
+    {
+      "id": 19,
+      "start": 176.0,
+      "end": 188.0,
+      "text": "The problem is the ACL anthology is way better than any of them at like organizing the papers in an easy to process way. So I think I'll talk about this for now."
+    },
+    {
+      "id": 20,
+      "start": 188.0,
+      "end": 202.0,
+      "text": "The ACL anthology covers many prestigious venues and NLP. It has all of these ones here. This figure is a little bit old. I made it in 2021, but you know it reaches up to the present day."
+    },
+    {
+      "id": 21,
+      "start": 202.0,
+      "end": 217.0,
+      "text": "And what I do often is I can start with the past three to five years of several top venues in here, like ACL, EMLP, NACL, and tackle and go in and do keyword search."
+    },
+    {
+      "id": 22,
+      "start": 217.0,
+      "end": 224.0,
+      "text": "And so like, let's say."
+    },
+    {
+      "id": 23,
+      "start": 224.0,
+      "end": 240.0,
+      "text": "Let's say I was interested in multilingual multilingual, large language models in evaluating them or some way. So I would go to ACL and then I would just put in multilingual."
+    },
+    {
+      "id": 24,
+      "start": 240.0,
+      "end": 247.0,
+      "text": "And you get a wonderful paper by by some researcher."
+    },
+    {
+      "id": 25,
+      "start": 247.0,
+      "end": 262.0,
+      "text": "That was not intentional. I didn't know that it was going to happen. So on the flight cross-lingual masking for multilingual pre training, scaling multilingual corporate language models to 500 languages. That seems pretty, pretty relevant."
+    },
+    {
+      "id": 26,
+      "start": 262.0,
+      "end": 276.0,
+      "text": "Evaluating multilingual compositional generalization. So you can just go through here and see a bunch of papers that like that could be useful."
+    },
+    {
+      "id": 27,
+      "start": 276.0,
+      "end": 287.0,
+      "text": "And you could, if you're doing a more machine learning oriented thing, you can do the same thing for like the NREPS proceedings or the ICMELP proceedings or something like that."
+    },
+    {
+      "id": 28,
+      "start": 287.0,
+      "end": 304.0,
+      "text": "Separately from this, you can go through Google Scholar. This allows for a search of papers by keyword. And so if I write like neural entity recognition, it will give neural architectures for the identity recognition, all these things like this."
+    },
+    {
+      "id": 29,
+      "start": 304.0,
+      "end": 316.0,
+      "text": "You can view the more recent papers. So like, for example, if you're researching a kind of generic topic that a lot of people use."
+    },
+    {
+      "id": 30,
+      "start": 316.0,
+      "end": 331.0,
+      "text": "A lot of people do research on you might be getting papers from like 1998 or something like this. And you know, they might be useful, but honestly the methodology is changed so much since and that most methodological papers from that long ago are probably I can be very useful."
+    },
+    {
+      "id": 31,
+      "start": 331.0,
+      "end": 350.0,
+      "text": "And so you can view the recent papers. Another really useful thing that you can do is view papers that site the current paper and you can even click on this and then you can search within the citing papers. So, um, let's say I want to know about how people all"
+    },
+    {
+      "id": 32,
+      "start": 350.0,
+      "end": 356.0,
+      "text": "do."
+    },
+    {
+      "id": 33,
+      "start": 356.0,
+      "end": 368.0,
+      "text": "Let's say I want to see if anybody does neural entity recognition with state space models. So I do like stage space model."
+    },
+    {
+      "id": 34,
+      "start": 368.0,
+      "end": 383.0,
+      "text": "And then I search within the citing articles and I'm able to find three articles that at least site this paper and talk about state space models."
+    },
+    {
+      "id": 35,
+      "start": 383.0,
+      "end": 397.0,
+      "text": "None of these seem particularly relevant to what I was looking for, but you get the idea like this can be a useful tool for planning and these things."
+    },
+    {
+      "id": 36,
+      "start": 397.0,
+      "end": 415.0,
+      "text": "And then finding older papers. This is also relatively easy. So you read the papers that you're interested in and then it will have backwards older papers and you look them up in the references. This is how I find older papers that might be relevant."
+    },
+    {
+      "id": 37,
+      "start": 416.0,
+      "end": 430.0,
+      "text": "And so these are the tools that I use some other. So I'd like to give a few caveats about Google scholar and things like Twitter or LinkedIn or something like this."
+    },
+    {
+      "id": 38,
+      "start": 431.0,
+      "end": 458.0,
+      "text": "They give you very biased views on all the papers that are out there because they sort for popularity basically. So, um, actually if you're looking at like Twitter or LinkedIn or something like that, you can actually get a pretty bleak view on natural language processing and say, oh, anybody is doing is training large language models because you know, these things tend to become popular and then they get amplified by algorithms and stuff like that."
+    },
+    {
+      "id": 39,
+      "start": 458.0,
+      "end": 477.0,
+      "text": "In fact, like the landscape is much richer, which is why I do definitely suggest that you like actually look through conference proceedings and stuff and find papers that are not, you know, amplified as much. So I definitely highly recommend doing this in addition to, you know, Google scholar or social media or other things like that."
+    },
+    {
+      "id": 40,
+      "start": 477.0,
+      "end": 483.0,
+      "text": "I think it might be fine."
+    },
+    {
+      "id": 41,
+      "start": 483.0,
+      "end": 501.0,
+      "text": "I'd also like to mention a thing about the ups and downs of preemptive surveys. So, um, serving extensively before doing research has a bunch of good sides. So it prevents you from duplicating work. So somebody else might have done a very similar thing."
+    },
+    {
+      "id": 42,
+      "start": 501.0,
+      "end": 513.0,
+      "text": "It also increases your toolbox method. So, you know, if it's a problem that a lot of people have worked on before, then, you know, it helps give you ideas and methods that you could be using."
+    },
+    {
+      "id": 43,
+      "start": 513.0,
+      "end": 537.0,
+      "text": "However, in a way, it also kind of constrains your thinking. So, um, if you like one, once you have built up a very extensive survey of like ways to do things, you tend to like move away from there. When in fact, like if you thought just thought of ways to solve problems without looking at everything, you might come up with something over here."
+    },
+    {
+      "id": 44,
+      "start": 537.0,
+      "end": 545.0,
+      "text": "It actually be a good idea, right? And so there's this really nice essay is actually shared with me by Chris Nannon from Stanford."
+    },
+    {
+      "id": 45,
+      "start": 545.0,
+      "end": 565.0,
+      "text": "It's called how to build an economics model in your spare time. It's about it's from a Nobel Prize winner in economics, but he's talking about how when he tries to come up with new and like important ideas, he doesn't look at economics journals. He looks at the newspaper and tries to, you know, like."
+    },
+    {
+      "id": 46,
+      "start": 565.0,
+      "end": 570.0,
+      "text": "Look at problems that people are talking about in the newspaper and think about whether there's an economic solution to them."
+    },
+    {
+      "id": 47,
+      "start": 570.0,
+      "end": 585.0,
+      "text": "And so if we think about the analog of how we can do this in natural language processing, you know, maybe you don't necessarily right away want to do a really extensive survey. First, you might just think about like what's bothering you."
+    },
+    {
+      "id": 48,
+      "start": 585.0,
+      "end": 599.0,
+      "text": "Like when you're using chat, what is really frustrating to you about how it gives responses or what are the things you wish were possible to do through natural language processing, but not are not possible to do."
+    },
+    {
+      "id": 49,
+      "start": 599.0,
+      "end": 605.0,
+      "text": "And then you can start from there, you can look at, you know, what companies are."
+    }
+  ],
+  "language": "en"
+}

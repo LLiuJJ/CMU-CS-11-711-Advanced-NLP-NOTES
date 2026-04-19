@@ -1,0 +1,209 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 16.0,
+      "text": "is when they use greedy averaging and then the blue circle here is when they use the uniform averaging and then green is all of the models that they they put into this average and what they found is"
+    },
+    {
+      "id": 1,
+      "start": 16.0,
+      "end": 45.0,
+      "text": "this is average accuracy on the image net which is the thing that they used in deciding which models to merge in greedily and then this is on distribution shifts so this is on other data sets other than the ones they use specifically for training and what you can see is the greedy averaging method does better than the best single model on the data set that they used to decide that greedy average."
+    },
+    {
+      "id": 2,
+      "start": 45.0,
+      "end": 73.0,
+      "text": "The uniform average actually does worse than the best model so you would actually be better off for image net accuracy to just use the best model but it's more robust so on the distribution shift like data set it actually does better than any of the models so you can see that there's kind of trade offs between choosing those essentially."
+    },
+    {
+      "id": 3,
+      "start": 73.0,
+      "end": 93.0,
+      "text": "That should be on some way but they also demonstrate that averaging is correlated with on some way so this is the image net accuracy of the parameter average model this is image net accuracy of done some both so this is actually I think a really interesting figure."
+    },
+    {
+      "id": 4,
+      "start": 93.0,
+      "end": 122.0,
+      "text": "What it shows is that there's a pretty strong correlation between the two averaging is almost never better than unsombling the two together but it's faster of course so it's better because it's faster and there are situations where the ensemble is much better than the average model so like the average model hurts the averaging hurts on some like this not hurt so what this shows you is perimeter averaging is not good."
+    },
+    {
+      "id": 5,
+      "start": 123.0,
+      "end": 133.0,
+      "text": "It's safe and it nearly approximates model unsombling most of the time but there are cases where it doesn't so you do need to be a little bit careful and it might hurt your accuracy and some cases."
+    },
+    {
+      "id": 6,
+      "start": 133.0,
+      "end": 145.0,
+      "text": "Oh yeah sorry very good point yes it's a pair of legs."
+    },
+    {
+      "id": 7,
+      "start": 145.0,
+      "end": 165.0,
+      "text": "Yeah."
+    },
+    {
+      "id": 8,
+      "start": 165.0,
+      "end": 194.0,
+      "text": "Yeah so notably all of these are initialized it's been a little while since I read this but I know all of these were initialized from a model that was already pretty good and in which they and then they were fine tuned in different ways I guess and so this I think this might be initialized with a model that was trained on a different data server something like that and so they are all starting from the same initialization."
+    },
+    {
+      "id": 9,
+      "start": 194.0,
+      "end": 214.0,
+      "text": "So for any mutation invariance is not an issue there because they're starting from the three different time but despite the fact that it's not a problem there are there are cases where like averaging is detrimental compared to ensemble."
+    },
+    {
+      "id": 10,
+      "start": 214.0,
+      "end": 228.0,
+      "text": "Okay so yeah."
+    },
+    {
+      "id": 11,
+      "start": 244.0,
+      "end": 252.0,
+      "text": "Okay."
+    },
+    {
+      "id": 12,
+      "start": 252.0,
+      "end": 260.0,
+      "text": "Yeah."
+    },
+    {
+      "id": 13,
+      "start": 282.0,
+      "end": 311.0,
+      "text": "Yeah so that's a great question I'll just repeat it which is these experiments were done on CNN's or image net like CNN based image net quest fires is there something different than transformers particularly because transformer representations tend to be like very concentrated in particular parts of the space."
+    },
+    {
+      "id": 14,
+      "start": 311.0,
+      "end": 340.0,
+      "text": "That's an excellent question what I do know is a lot of people do merge together transformer models in fact if you look at the hugging face leaderboard there's like something in something merge together like all over the leaderboard and it does tend to improve accuracy so I know it is definitely effective for transformers however are there specific model like parameter averaging our model merging methods that could improve accuracy by taking it."
+    },
+    {
+      "id": 15,
+      "start": 340.0,
+      "end": 360.0,
+      "text": "I think you're received by taking advantage of the fact that transformers behavior in a certain way I think that's totally possible and you know it would be an interesting research direction and I'm not familiar enough with that particular part myself to say oh I have this great idea that you should work on but I think if you're interested in."
+    },
+    {
+      "id": 16,
+      "start": 360.0,
+      "end": 365.0,
+      "text": "Cool."
+    },
+    {
+      "id": 17,
+      "start": 365.0,
+      "end": 394.0,
+      "text": "Okay so there's also the idea of task vectors and basically task vectors here we are just merging together to models by taking the parameters of the models and averaging them together task vectors and other related works specifically take advantage of the fact that we're looking at different fine tune models and so these are models where we have a base model and we know that."
+    },
+    {
+      "id": 18,
+      "start": 394.0,
+      "end": 411.0,
+      "text": "That we fine tuned from this base model and the basic idea is that we have our base model here and the task vector is the difference between the base models vector parameters and the fine tune models parameters so that's what they define as a task vector."
+    },
+    {
+      "id": 19,
+      "start": 411.0,
+      "end": 440.0,
+      "text": "What does this allow us to do this allows us to do a number of interesting things the first one is that we can actually subtract out a quote unquote tasks that we don't want so like let's say we had a model that was trained on lots of toxic text or we had a model that was trained on lots of private text or something like that we could actually."
+    },
+    {
+      "id": 20,
+      "start": 440.0,
+      "end": 450.0,
+      "text": "So we actually subtract out the task vector from this and basically attempt to remove the models ability to do that sort of things."
+    },
+    {
+      "id": 21,
+      "start": 450.0,
+      "end": 463.0,
+      "text": "You can also take two task vectors and combine them together and like get the model from the combination of the two."
+    },
+    {
+      "id": 22,
+      "start": 463.0,
+      "end": 479.0,
+      "text": "This isn't exactly the same is averaging the parameters because if you average the parameters you would probably get something in the middle right here but if you average the two vectors or add the two vectors together you get something over here actually sorry if you average the vectors may be the same."
+    },
+    {
+      "id": 23,
+      "start": 479.0,
+      "end": 490.0,
+      "text": "So you could like add together the two vectors and that would be something different and taking the average so it gives you a little bit more flexibility about things to do."
+    },
+    {
+      "id": 24,
+      "start": 490.0,
+      "end": 509.0,
+      "text": "And another thing this allows you to do is this allows you to try to result conflicts between the vectors of different tasks and so this is an illustration of this method here and this has three tasks basically it has model one model two model three."
+    },
+    {
+      "id": 25,
+      "start": 509.0,
+      "end": 538.0,
+      "text": "And each of them has vectors and you'll see that in some cases these vectors can conflict so we have like pink going up we have yellow and purple going down we have yellow going up we have pink and purple going down etc etc and what this does is this identifies the vectors that are pointing the most strongly in particular directions and then it resolves conflicts between them and comes up with a vector that tries to move in a direction that improves all of the tasks."
+    },
+    {
+      "id": 26,
+      "start": 538.0,
+      "end": 550.0,
+      "text": "Same time they demonstrate that this is the better method for kind of improving the ability to do all of the tasks compared to just the average things together."
+    },
+    {
+      "id": 27,
+      "start": 550.0,
+      "end": 553.0,
+      "text": "So yeah."
+    },
+    {
+      "id": 28,
+      "start": 553.0,
+      "end": 556.0,
+      "text": "Yeah."
+    },
+    {
+      "id": 29,
+      "start": 556.0,
+      "end": 562.0,
+      "text": "You can just have more integration."
+    },
+    {
+      "id": 30,
+      "start": 562.0,
+      "end": 566.0,
+      "text": "Yeah, so this is."
+    },
+    {
+      "id": 31,
+      "start": 566.0,
+      "end": 577.0,
+      "text": "Yeah, you could move it more in that direction and there's obviously no guarantee that it would make it better but it might make it more extreme at least so."
+    },
+    {
+      "id": 32,
+      "start": 577.0,
+      "end": 581.0,
+      "text": "Any other questions."
+    },
+    {
+      "id": 33,
+      "start": 581.0,
+      "end": 584.0,
+      "text": "Oh yes."
+    }
+  ],
+  "language": "en"
+}

@@ -1,0 +1,509 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 14.68,
+      "text": "So if you have lots of tagging data, I think you're, yeah. So I think you're basically,"
+    },
+    {
+      "id": 1,
+      "start": 14.68,
+      "end": 18.6,
+      "text": "this is a good point. So if you don't have lots of tagging data, you might have much,"
+    },
+    {
+      "id": 2,
+      "start": 18.6,
+      "end": 22.16,
+      "text": "much more language modeling data than you have tagging data. So it's a better idea to train"
+    },
+    {
+      "id": 3,
+      "start": 22.16,
+      "end": 28.7,
+      "text": "more on it. That is true, but you could sample like 99 mini batches of language modeling"
+    },
+    {
+      "id": 4,
+      "start": 28.7,
+      "end": 35.7,
+      "text": "data and one mini batch of time data or 999 of language modeling data. So it's a good,"
+    },
+    {
+      "id": 5,
+      "start": 35.7,
+      "end": 40.7,
+      "text": "you're going in a good direction. Anything else? Yeah."
+    },
+    {
+      "id": 6,
+      "start": 40.7,
+      "end": 54.08,
+      "text": "So if your pre-training data has certain biases, you might infer it. Do you think that's"
+    },
+    {
+      "id": 7,
+      "start": 54.08,
+      "end": 57.98,
+      "text": "a bigger problem with pre-training or pre-training and fine-tuning or scanning both the"
+    },
+    {
+      "id": 8,
+      "start": 57.98,
+      "end": 87.82,
+      "text": "data? So you might lose some of the information that exists in the multi-fresh data side. I think"
+    },
+    {
+      "id": 9,
+      "start": 87.82,
+      "end": 92.46,
+      "text": "that's pretty close to what I'm going to say. So let me just go ahead and give the answer."
+    },
+    {
+      "id": 10,
+      "start": 92.46,
+      "end": 99.22,
+      "text": "Hopefully everybody can find the things about it. But this is a paper that we wrote previously."
+    },
+    {
+      "id": 11,
+      "start": 99.22,
+      "end": 106.66,
+      "text": "And basically one interesting thing is that you actually do better. You do better if you"
+    },
+    {
+      "id": 12,
+      "start": 106.66,
+      "end": 113.18,
+      "text": "train on multiple tasks at the same time. And our hypothesis about why the reason you do"
+    },
+    {
+      "id": 13,
+      "start": 113.18,
+      "end": 117.86,
+      "text": "better on the end task that you finally want to do well on compared to pre-training and fine-tuning."
+    },
+    {
+      "id": 14,
+      "start": 117.86,
+      "end": 124.62,
+      "text": "And our hypothesis about this, which I've also seen a few other works, is if you pre-traine"
+    },
+    {
+      "id": 15,
+      "start": 124.62,
+      "end": 128.7,
+      "text": "on the task that you finally want to solve, while you're also solving the language modeling"
+    },
+    {
+      "id": 16,
+      "start": 128.7,
+      "end": 137.26,
+      "text": "task, the essentially the model is learning representations that are useful for both at"
+    },
+    {
+      "id": 17,
+      "start": 137.26,
+      "end": 142.62,
+      "text": "the same time is opposed to if you're training on the language modeling task, it will be learning"
+    },
+    {
+      "id": 18,
+      "start": 142.62,
+      "end": 146.46,
+      "text": "representations that are useful for the language modeling task, but not necessarily focusing"
+    },
+    {
+      "id": 19,
+      "start": 146.46,
+      "end": 151.54,
+      "text": "on the representations that will be useful for the end task. So like for example, if you're"
+    },
+    {
+      "id": 20,
+      "start": 151.54,
+      "end": 156.94,
+      "text": "jointly training on sentiment analysis and language modeling, the representations that are"
+    },
+    {
+      "id": 21,
+      "start": 156.94,
+      "end": 162.58,
+      "text": "useful for sentiment analysis will be more salient than the like in the model essentially."
+    },
+    {
+      "id": 22,
+      "start": 162.58,
+      "end": 171.1,
+      "text": "And so we, there will be particularly a problem when there's multiple, when you have a varied"
+    },
+    {
+      "id": 23,
+      "start": 171.1,
+      "end": 175.58,
+      "text": "optimization landscape and multiple local optimal, and the language modeling might not get"
+    },
+    {
+      "id": 24,
+      "start": 175.58,
+      "end": 180.34,
+      "text": "you into the global optimum that you want for the end task that you're solving. There's"
+    },
+    {
+      "id": 25,
+      "start": 180.34,
+      "end": 185.98,
+      "text": "also another interesting paper from M-PROPEC where recently, then, Erns, that shows something"
+    },
+    {
+      "id": 26,
+      "start": 185.98,
+      "end": 190.66,
+      "text": "a little bit similar, specifically from the point of view of safety training. And they"
+    },
+    {
+      "id": 27,
+      "start": 190.66,
+      "end": 196.86,
+      "text": "demonstrate that if you start out by having a concept of safety early in your training,"
+    },
+    {
+      "id": 28,
+      "start": 196.86,
+      "end": 203.18,
+      "text": "you're able to reach better, better final results than if you start safety training after"
+    },
+    {
+      "id": 29,
+      "start": 203.18,
+      "end": 209.42,
+      "text": "you trained your model for a while. So, and this is particularly for things like toxicity."
+    },
+    {
+      "id": 30,
+      "start": 209.42,
+      "end": 213.82,
+      "text": "So there are downsides to pre-training and fine-tuning, but the upsides of, you know,"
+    },
+    {
+      "id": 31,
+      "start": 213.82,
+      "end": 217.66,
+      "text": "spending lots of compute once and then fine-tuning for lots of different, you know, downstream"
+    },
+    {
+      "id": 32,
+      "start": 217.66,
+      "end": 226.06,
+      "text": "tasks is like, large enough that that's still the standard. Any questions about that?"
+    },
+    {
+      "id": 33,
+      "start": 228.54,
+      "end": 237.98,
+      "text": "Okay, let's move on. So we talked about prompting before. I'm just going to go over that very"
+    },
+    {
+      "id": 34,
+      "start": 237.98,
+      "end": 243.58,
+      "text": "quick, you know, just to say it for completeness, but when we're prompting, we have an encoder,"
+    },
+    {
+      "id": 35,
+      "start": 244.54,
+      "end": 249.9,
+      "text": "we train it on language rattling or whatever else, but then we freeze it and then we specify the"
+    },
+    {
+      "id": 36,
+      "start": 249.9,
+      "end": 257.66,
+      "text": "task by a prefix like this. And what instruction tuning does is instruction tuning is like a"
+    },
+    {
+      "id": 37,
+      "start": 257.66,
+      "end": 263.98,
+      "text": "combination of fine-tuning and prompting. And so what we do is we pre-train and then we,"
+    },
+    {
+      "id": 38,
+      "start": 266.94,
+      "end": 272.86,
+      "text": "sorry, I guess I failed to update the particular version, so this is just a figure for fine-tuning."
+    },
+    {
+      "id": 39,
+      "start": 272.86,
+      "end": 281.9,
+      "text": "So normally what you do is you have a prompt for one task, a prompt for another task,"
+    },
+    {
+      "id": 40,
+      "start": 281.9,
+      "end": 288.38,
+      "text": "a prompt for another task, and then you train your model specifically so that it does good"
+    },
+    {
+      "id": 41,
+      "start": 288.38,
+      "end": 293.42,
+      "text": "completions of this prompt. So it'll give us an actual example of that, so, yes, sorry, the figure,"
+    },
+    {
+      "id": 42,
+      "start": 294.06,
+      "end": 296.06,
+      "text": "I only need to fix it."
+    },
+    {
+      "id": 43,
+      "start": 303.18,
+      "end": 304.14,
+      "text": "Just taking the note."
+    },
+    {
+      "id": 44,
+      "start": 310.14,
+      "end": 318.22,
+      "text": "Okay, so we haven't really covered fine-tuning yet in general. So I want to talk a little bit about"
+    },
+    {
+      "id": 45,
+      "start": 318.22,
+      "end": 322.86,
+      "text": "what we do for fine-tuning, and particularly what we do for fine-tuning very large models,"
+    },
+    {
+      "id": 46,
+      "start": 322.86,
+      "end": 328.7,
+      "text": "because I think that's what a lot of people want to do nowadays. So for full fine-tuning,"
+    },
+    {
+      "id": 47,
+      "start": 329.34,
+      "end": 338.86,
+      "text": "fine-tuning is relatively easy. What we do is conceptually hard in practice. So what we do is we"
+    },
+    {
+      "id": 48,
+      "start": 338.86,
+      "end": 346.62,
+      "text": "simply continue training the language model on whatever data we want to be fitting to. So this"
+    },
+    {
+      "id": 49,
+      "start": 346.62,
+      "end": 350.54,
+      "text": "could be like translation pairs, it could be question answering pairs, it could be anything"
+    },
+    {
+      "id": 50,
+      "start": 350.54,
+      "end": 357.02,
+      "text": "else like that. But the issue is depending on the method that you're using to optimize your model,"
+    },
+    {
+      "id": 51,
+      "start": 357.42,
+      "end": 363.58,
+      "text": "the method can take lots of memory, and also in some cases it can be relatively unstable compared"
+    },
+    {
+      "id": 52,
+      "start": 363.58,
+      "end": 369.26,
+      "text": "to some other alternative said I'm going to talk about in a bit. And just to give an example,"
+    },
+    {
+      "id": 53,
+      "start": 369.26,
+      "end": 377.98,
+      "text": "training a 65 billion parameter model, which is the largest version of LAMO-1, with 16-bit mix"
+    },
+    {
+      "id": 54,
+      "start": 377.98,
+      "end": 384.38,
+      "text": "precision actually takes much more memory than you would expect if you haven't done this before."
+    },
+    {
+      "id": 55,
+      "start": 385.34,
+      "end": 394.78,
+      "text": "So if you look at the amount of memory required for holding the model in the first place,"
+    },
+    {
+      "id": 56,
+      "start": 394.78,
+      "end": 402.86,
+      "text": "if we have 65 billion parameters, times two, that would be 130 gigabytes of memory already. So"
+    },
+    {
+      "id": 57,
+      "start": 402.86,
+      "end": 411.82,
+      "text": "that's already a lot of memory, right? But if we want to hold both the parameters and the"
+    },
+    {
+      "id": 58,
+      "start": 411.82,
+      "end": 420.38,
+      "text": "gradients of the model, obviously we need to double the number of points here. So we also have 130"
+    },
+    {
+      "id": 59,
+      "start": 420.38,
+      "end": 427.34,
+      "text": "gigabytes for the parameters, sorry, for the gradients. Then we have the optimizer, and this could be"
+    },
+    {
+      "id": 60,
+      "start": 427.34,
+      "end": 433.18,
+      "text": "an optimizer like Adam. If people remember, Adam has first moments and second moments, so it has"
+    },
+    {
+      "id": 61,
+      "start": 433.18,
+      "end": 443.5,
+      "text": "a mean and something that looks like the variance. And these, at least according to this paper from"
+    },
+    {
+      "id": 62,
+      "start": 443.5,
+      "end": 454.06,
+      "text": "2019, needed to be stored in 32 bits. So these needed to be stored in 32 bits of memory because"
+    },
+    {
+      "id": 63,
+      "start": 454.06,
+      "end": 459.5,
+      "text": "if you stored them in smaller amounts of memory, they would have underflow issues, overflow issues,"
+    },
+    {
+      "id": 64,
+      "start": 459.58,
+      "end": 466.62,
+      "text": "and basically the numerical precision would destabilize your training. And then in addition,"
+    },
+    {
+      "id": 65,
+      "start": 466.62,
+      "end": 473.18,
+      "text": "the parameters also needed to be measured in 32 bits. So you needed a 32 bit copy of the parameters."
+    },
+    {
+      "id": 66,
+      "start": 475.42,
+      "end": 479.66,
+      "text": "This is just the parameters of the model, and then separately from that, you also need to do the"
+    },
+    {
+      "id": 67,
+      "start": 479.66,
+      "end": 484.14,
+      "text": "forward and backward passes. And so if you do the forward and backward passes, depending on how big"
+    },
+    {
+      "id": 68,
+      "start": 484.14,
+      "end": 491.1,
+      "text": "your batch size is, how many tokens you have in each instance, this could take, you know,"
+    },
+    {
+      "id": 69,
+      "start": 491.1,
+      "end": 497.42,
+      "text": "significant amounts of memory to like a hundred to 300 gigabytes. So overall, this would take"
+    },
+    {
+      "id": 70,
+      "start": 497.42,
+      "end": 506.06,
+      "text": "around a thousand to 1,400 gigabytes of GPU memory in the very naive scenario. And this is not that great."
+    },
+    {
+      "id": 71,
+      "start": 506.3,
+      "end": 515.26,
+      "text": "Now this paper was written in 2019 and there's a pen, some advances since then in optimizing models."
+    },
+    {
+      "id": 72,
+      "start": 516.14,
+      "end": 525.58,
+      "text": "So to give some examples of things that can be fixed, previously when we were using F P 16,"
+    },
+    {
+      "id": 73,
+      "start": 526.22,
+      "end": 533.82,
+      "text": "so like the regular ANSI floating point numbers, like we use on our CPU, this was,"
+    },
+    {
+      "id": 74,
+      "start": 535.02,
+      "end": 541.82,
+      "text": "you needed 32 bit floats to make this stable. Now it's pretty standard to use BF 16,"
+    },
+    {
+      "id": 75,
+      "start": 542.46,
+      "end": 549.02,
+      "text": "brain float 16, like I talked about earlier in the class. And because of that, this can be made"
+    },
+    {
+      "id": 76,
+      "start": 549.1,
+      "end": 555.42,
+      "text": "more stable, so you can reduce this to things like Q bytes instead of four bytes. We can also,"
+    },
+    {
+      "id": 77,
+      "start": 556.46,
+      "end": 561.58,
+      "text": "if we make do that, we don't need this extra copy of the parameters. So we can get away with about"
+    },
+    {
+      "id": 78,
+      "start": 561.58,
+      "end": 567.42,
+      "text": "eight bytes per parameter. We want to optimize, but that's still, you know, a lot of memory. That's"
+    },
+    {
+      "id": 79,
+      "start": 567.42,
+      "end": 573.66,
+      "text": "130 gigabytes of memory for a 65 gigabyte model. And the forward and backward passes still take"
+    },
+    {
+      "id": 80,
+      "start": 574.38,
+      "end": 579.58,
+      "text": "so basically what I want to say is full fine tuning is a pretty memory intensive. And"
+    },
+    {
+      "id": 81,
+      "start": 581.9,
+      "end": 591.58,
+      "text": "if we look at how big a standard GPU is, I took some specs here. The memory is, the memory is just"
+    },
+    {
+      "id": 82,
+      "start": 591.58,
+      "end": 598.38,
+      "text": "the memory on the GPU. The class, I did a very unscientific thing of Google the price on Amazon"
+    },
+    {
+      "id": 83,
+      "start": 598.38,
+      "end": 608.3,
+      "text": "and people look at the price of the GPU here."
+    }
+  ],
+  "language": "en"
+}

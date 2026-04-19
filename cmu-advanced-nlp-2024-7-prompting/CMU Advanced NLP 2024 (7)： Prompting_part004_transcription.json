@@ -1,0 +1,443 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 2.0,
+      "text": "It's a little bit slow."
+    },
+    {
+      "id": 1,
+      "start": 19.0,
+      "end": 28.0,
+      "text": "Okay, so they're there that work, but no, I did not say let's think step by step. I didn't I didn't ask it to do this."
+    },
+    {
+      "id": 2,
+      "start": 29.0,
+      "end": 38.0,
+      "text": "And the reason why is we're going to talk about instruction tuning next time, but basically GPT has been tuned to do this reasoning even if you don't ask it to do that."
+    },
+    {
+      "id": 3,
+      "start": 39.0,
+      "end": 44.0,
+      "text": "It wouldn't do that naturally, but it's because lots of supervised data has been added in this model."
+    },
+    {
+      "id": 4,
+      "start": 45.0,
+      "end": 54.0,
+      "text": "So like another thing is like if you are planning on doing anything about like chain of thought reasoning or stuff like that is a class project."
+    },
+    {
+      "id": 5,
+      "start": 55.0,
+      "end": 59.0,
+      "text": "You need to keep in mind that the like GPT models have already been trained to do this."
+    },
+    {
+      "id": 6,
+      "start": 59.0,
+      "end": 72.0,
+      "text": "And so if you want to like try to find out a better way to elicit this from a raw model, you'll need to use a raw model like llama to with no chap tuning and stuff like that in order to do that in a neutral."
+    },
+    {
+      "id": 7,
+      "start": 72.0,
+      "end": 77.0,
+      "text": "Setting that hasn't been can come to me by like super less."
+    },
+    {
+      "id": 8,
+      "start": 80.0,
+      "end": 83.0,
+      "text": "Any questions."
+    },
+    {
+      "id": 9,
+      "start": 85.0,
+      "end": 86.0,
+      "text": "Okay."
+    },
+    {
+      "id": 10,
+      "start": 86.0,
+      "end": 96.0,
+      "text": "So next I want to talk about prompting and programs that chat GPT gave me a good example of why why this is useful or important."
+    },
+    {
+      "id": 11,
+      "start": 97.0,
+      "end": 114.0,
+      "text": "So there's two results actually both of these are from my collaborators, but the first one is it demonstrates that structuring outputs it programs can help you get better results even if the task isn't a programmatic task."
+    },
+    {
+      "id": 12,
+      "start": 114.0,
+      "end": 116.0,
+      "text": "So this is kind of interesting."
+    },
+    {
+      "id": 13,
+      "start": 117.0,
+      "end": 130.0,
+      "text": "So we were looking at predicting structured outputs and these structured outputs specifically our procedural knowledge like this. So like how do we click a pie or how do we serve pies out of plate."
+    },
+    {
+      "id": 14,
+      "start": 131.0,
+      "end": 137.0,
+      "text": "So we had this procedural knowledge like take the pies out to pull open the cabinet drawer, pick out several plates."
+    },
+    {
+      "id": 15,
+      "start": 137.0,
+      "end": 143.0,
+      "text": "And we wanted to know the dependencies between these so we could create a structured like procedural knowledge base."
+    },
+    {
+      "id": 16,
+      "start": 143.0,
+      "end": 147.0,
+      "text": "So this is not an inherently code based task. It's not it."
+    },
+    {
+      "id": 17,
+      "start": 147.0,
+      "end": 153.0,
+      "text": "You know, you could just ask the model in natural language and that would work as well."
+    },
+    {
+      "id": 18,
+      "start": 153.0,
+      "end": 159.0,
+      "text": "So we structured things in a couple of varieties. So we had a textural format."
+    },
+    {
+      "id": 19,
+      "start": 159.0,
+      "end": 163.0,
+      "text": "We had something in the doc format, which is a way to draw graphs."
+    },
+    {
+      "id": 20,
+      "start": 163.0,
+      "end": 168.0,
+      "text": "And then we had we also tried structuring the output and Python."
+    },
+    {
+      "id": 21,
+      "start": 168.0,
+      "end": 175.0,
+      "text": "So these are just different ways to format the output. They all say the same thing and we can extract the answer from all of them."
+    },
+    {
+      "id": 22,
+      "start": 175.0,
+      "end": 182.0,
+      "text": "But we found that structuring it in Python basically is the more effective way of doing this."
+    },
+    {
+      "id": 23,
+      "start": 182.0,
+      "end": 195.0,
+      "text": "So why is it this the case the answer is essentially the same thing that I was talking about before with you know predicting excellent instead of five right you know it's seen a ton of Python and it's training data."
+    },
+    {
+      "id": 24,
+      "start": 195.0,
+      "end": 198.0,
+      "text": "So it's very good at predicting Python."
+    },
+    {
+      "id": 25,
+      "start": 198.0,
+      "end": 208.0,
+      "text": "It's less good at predicting that format because it's seen less that format and it hasn't seen very much past here."
+    },
+    {
+      "id": 26,
+      "start": 208.0,
+      "end": 223.0,
+      "text": "Another comment is code is very highly structured compared to natural language and because code is very highly structured we have things like dependencies where we refer back to variables that we defined before and other things like this."
+    },
+    {
+      "id": 27,
+      "start": 223.0,
+      "end": 237.0,
+      "text": "So I think when it starts outputting code, the models get into this mode which say yes, please refer back to the things you've seen previously more often like attempt to previous stuff more often and don't just like generate things."
+    },
+    {
+      "id": 28,
+      "start": 237.0,
+      "end": 252.0,
+      "text": "You know, arbitrarily and hallucinate you know new content and because of this for generating structured outputs even if the structured outputs don't need to be code you can benefit by doing this."
+    },
+    {
+      "id": 29,
+      "start": 252.0,
+      "end": 260.0,
+      "text": "Another thing that's a really handy trick is anytime you want to get a structured output out of a model."
+    },
+    {
+      "id": 30,
+      "start": 260.0,
+      "end": 266.0,
+      "text": "You can ask it to generate something in JSON instead of generating it in impacts."
+    },
+    {
+      "id": 31,
+      "start": 266.0,
+      "end": 272.0,
+      "text": "And the reason why JSON is useful is you can parse the JSON you can pull out the strings and other stuff like that."
+    },
+    {
+      "id": 32,
+      "start": 272.0,
+      "end": 284.0,
+      "text": "So this can be very effective because if you just add an instruction that says please please format things in this particular format."
+    },
+    {
+      "id": 33,
+      "start": 284.0,
+      "end": 291.0,
+      "text": "Often the model won't listen to you and it will output something in a different format you need to write a really annoying parser to pull out the information that you actually want."
+    },
+    {
+      "id": 34,
+      "start": 291.0,
+      "end": 301.0,
+      "text": "But it gets JSON right almost all the time just because it seems so much JSON so that's a nice trick if you want to do something with that."
+    },
+    {
+      "id": 35,
+      "start": 301.0,
+      "end": 308.0,
+      "text": "Another thing is a paper called program a language models that we did about a year ago."
+    },
+    {
+      "id": 36,
+      "start": 308.0,
+      "end": 318.0,
+      "text": "And the method that we proposed here is using a program to generate outputs using a program to generate outputs."
+    },
+    {
+      "id": 37,
+      "start": 318.0,
+      "end": 322.0,
+      "text": "And this can be more precise in asking an alum to do so."
+    },
+    {
+      "id": 38,
+      "start": 322.0,
+      "end": 337.0,
+      "text": "And so instead of doing chain of that prompting we created a few few shot examples where we wrote like the text here and then the text in English."
+    },
+    {
+      "id": 39,
+      "start": 337.0,
+      "end": 343.0,
+      "text": "And then we had code corresponding code the text in English corresponding code."
+    },
+    {
+      "id": 40,
+      "start": 343.0,
+      "end": 346.0,
+      "text": "And then the answer is and then the final code."
+    },
+    {
+      "id": 41,
+      "start": 346.0,
+      "end": 351.0,
+      "text": "And then we basically generate this code and execute it to get the answer."
+    },
+    {
+      "id": 42,
+      "start": 351.0,
+      "end": 356.0,
+      "text": "So like as you saw this is implemented in chat you know it's you write something out."
+    },
+    {
+      "id": 43,
+      "start": 356.0,
+      "end": 361.0,
+      "text": "It will decide whether it wants to generate code or generate text depending on the type of problem."
+    },
+    {
+      "id": 44,
+      "start": 361.0,
+      "end": 372.0,
+      "text": "And it's just more precise it can solve like actually rather complex problems like you know calculating how much tax you need to be paying or something like that."
+    },
+    {
+      "id": 45,
+      "start": 372.0,
+      "end": 380.0,
+      "text": "It's especially useful for numeric questions and it's implemented in things like the chat you can be code interpreter bar and code execution other things like that."
+    },
+    {
+      "id": 46,
+      "start": 380.0,
+      "end": 389.0,
+      "text": "And it's pretty cool it can actually do visualizations for you for papers also so if you ask it to visualize data for you."
+    },
+    {
+      "id": 47,
+      "start": 389.0,
+      "end": 400.0,
+      "text": "Chat you can now does a pretty good job of doing this like to give an example I asked it I gave it a big type on list and asked it to generate a histogram and it didn't really good job for me."
+    },
+    {
+      "id": 48,
+      "start": 400.0,
+      "end": 412.0,
+      "text": "So it also gives you the code so you can go in and modify it later. So I would definitely recommend you know thinking about using this either in your research or just to write your reports for this class."
+    },
+    {
+      "id": 49,
+      "start": 412.0,
+      "end": 427.0,
+      "text": "This class is a generative AI friendly mostly so like I do I do want you to learn the things we expect you to learn which is why I suggest that you don't like just write every everything for assignment number one with chat."
+    },
+    {
+      "id": 50,
+      "start": 427.0,
+      "end": 435.0,
+      "text": "I think even if you tried to do that and probably get it wrong in several ways so you're probably better off understanding the content and."
+    },
+    {
+      "id": 51,
+      "start": 435.0,
+      "end": 438.0,
+      "text": "Cool."
+    },
+    {
+      "id": 52,
+      "start": 438.0,
+      "end": 447.0,
+      "text": "This can also be expanded a whole lot into like agents and tools and I'm going to talk about that separately later."
+    },
+    {
+      "id": 53,
+      "start": 447.0,
+      "end": 452.0,
+      "text": "Cool. Any anything about this."
+    },
+    {
+      "id": 54,
+      "start": 452.0,
+      "end": 463.0,
+      "text": "I'm going to go next so prompt engineering when you're designing prompts there's a number of different ways you can do this you can do this manually."
+    },
+    {
+      "id": 55,
+      "start": 463.0,
+      "end": 470.0,
+      "text": "You to do this you can figure a manual template based on the characteristics of the task using all of the knowledge that I told you before."
+    },
+    {
+      "id": 56,
+      "start": 470.0,
+      "end": 477.0,
+      "text": "You can also do automated search and there's a number of different ways to do automated search for prompts."
+    },
+    {
+      "id": 57,
+      "start": 477.0,
+      "end": 487.0,
+      "text": "So the other one is doing some sort of search into street space so you find a prompt that is essentially tax."
+    },
+    {
+      "id": 58,
+      "start": 487.0,
+      "end": 495.0,
+      "text": "The other one is searching continuous space so you find a prompt that isn't actually comprehensible tax but nonetheless is a good prompt."
+    },
+    {
+      "id": 59,
+      "start": 495.0,
+      "end": 506.0,
+      "text": "So looking at manual engineering making sure that the format matches that of a trained model such as the chat format is actually really really important."
+    },
+    {
+      "id": 60,
+      "start": 506.0,
+      "end": 516.0,
+      "text": "This can have a large effect on models there's a really nice paper that demonstrated this convincingly before and also releases some software that allows you to do this."
+    },
+    {
+      "id": 61,
+      "start": 516.0,
+      "end": 518.0,
+      "text": "Kind of in an efficient manner."
+    },
+    {
+      "id": 62,
+      "start": 518.0,
+      "end": 522.0,
+      "text": "And what this is showing is."
+    },
+    {
+      "id": 63,
+      "start": 522.0,
+      "end": 537.0,
+      "text": "This is the original formatting of a prompt that was given I believe by some sort of like machine reading or a document based question answering data set which was like passage answer."
+    },
+    {
+      "id": 64,
+      "start": 537.0,
+      "end": 544.0,
+      "text": "If you modify the spacing between the fields that increases your score by several percentage points."
+    },
+    {
+      "id": 65,
+      "start": 544.0,
+      "end": 550.0,
+      "text": "And if you remove the colons that increases your score by a few more percentage points."
+    },
+    {
+      "id": 66,
+      "start": 550.0,
+      "end": 555.0,
+      "text": "It's kind of silly but like little things like this actually can make a really big difference."
+    },
+    {
+      "id": 67,
+      "start": 555.0,
+      "end": 560.0,
+      "text": "If you modify the casing this decreases by a lot."
+    },
+    {
+      "id": 68,
+      "start": 560.0,
+      "end": 567.0,
+      "text": "If you modify the casing and remove colons so the thing that was useful like adding colons here."
+    },
+    {
+      "id": 69,
+      "start": 567.0,
+      "end": 577.0,
+      "text": "And that further decreases if you forget to add a space between the passage and the text that really hurts your accuracy."
+    },
+    {
+      "id": 70,
+      "start": 577.0,
+      "end": 589.0,
+      "text": "So this is pretty painful right like you don't want to be getting 0.036% accuracy when adding a space would give you like 75% accuracy right."
+    },
+    {
+      "id": 71,
+      "start": 589.0,
+      "end": 597.0,
+      "text": "And one interesting thing is this is looking at different models."
+    },
+    {
+      "id": 72,
+      "start": 597.0,
+      "end": 604.0,
+      "text": "And with different models it's pretty consistent that many different."
+    }
+  ],
+  "language": "en"
+}

@@ -1,0 +1,551 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 4.64,
+      "text": "like marginalizing over the various ways of doing this,"
+    },
+    {
+      "id": 1,
+      "start": 4.64,
+      "end": 8.0,
+      "text": "but that's kind of more complex detail that's in the paper."
+    },
+    {
+      "id": 2,
+      "start": 13.28,
+      "end": 18.24,
+      "text": "Another really interesting question that we,"
+    },
+    {
+      "id": 3,
+      "start": 18.24,
+      "end": 22.0,
+      "text": "this is also a paper that I was involved in from four years ago,"
+    },
+    {
+      "id": 4,
+      "start": 22.0,
+      "end": 25.92,
+      "text": "but I feel like this is not entirely solved even in like modern"
+    },
+    {
+      "id": 5,
+      "start": 25.92,
+      "end": 32.24,
+      "text": "rag systems today is how can we reason over a lot of text that's included in a knowledge base?"
+    },
+    {
+      "id": 6,
+      "start": 34.56,
+      "end": 38.0,
+      "text": "Sorry, reason over text corpus like we reason over knowledge bases."
+    },
+    {
+      "id": 7,
+      "start": 39.04,
+      "end": 48.24,
+      "text": "And basically what we did was we answered questions using text corpura as a traceable knowledge"
+    },
+    {
+      "id": 8,
+      "start": 48.24,
+      "end": 52.32,
+      "text": "bases and we did relevance matching over mentions."
+    },
+    {
+      "id": 9,
+      "start": 54.4,
+      "end": 58.56,
+      "text": "And the way we did this is we created mentioned vectors."
+    },
+    {
+      "id": 10,
+      "start": 59.6,
+      "end": 64.88,
+      "text": "And the mentioned vectors are vectors of all of the mentions in the knowledge base of particular"
+    },
+    {
+      "id": 11,
+      "start": 64.88,
+      "end": 72.32,
+      "text": "entities. And then we retrieved relevant mentions from pre-trained models."
+    },
+    {
+      "id": 12,
+      "start": 73.28,
+      "end": 79.6,
+      "text": "So we ran embeddings in the generated embeddings for each of the mentions in the whole corpus."
+    },
+    {
+      "id": 13,
+      "start": 80.64,
+      "end": 90.56,
+      "text": "And based on this, let me find the place over here. So based on this, we basically"
+    },
+    {
+      "id": 14,
+      "start": 91.68,
+      "end": 98.88,
+      "text": "encoded all of these in here. And then we had a dense query vector. And the dense query vector"
+    },
+    {
+      "id": 15,
+      "start": 98.88,
+      "end": 104.32,
+      "text": "was specifically trained so that it would be able to identify entity mentions"
+    },
+    {
+      "id": 16,
+      "start": 106.4,
+      "end": 113.04,
+      "text": "that answered the problem. So if we had like when was the grateful dad in Bob Dylan album released,"
+    },
+    {
+      "id": 17,
+      "start": 113.92,
+      "end": 119.2,
+      "text": "we would have Bob Dylan be one vector, the grateful dad be another vector. And the model would be"
+    },
+    {
+      "id": 18,
+      "start": 119.2,
+      "end": 123.92,
+      "text": "specifically trained so that when you took the entity embedding of this and matched it with an"
+    },
+    {
+      "id": 19,
+      "start": 123.92,
+      "end": 130.56,
+      "text": "entity embedding in this big corpus of encoded things here, it would be most likely to return"
+    },
+    {
+      "id": 20,
+      "start": 130.56,
+      "end": 136.88,
+      "text": "relevant information to answer these like entity relation questions. So then the question is how"
+    },
+    {
+      "id": 21,
+      "start": 136.88,
+      "end": 142.88,
+      "text": "do we train a model like this? How do we train like a dense embedding model so that it gets"
+    },
+    {
+      "id": 22,
+      "start": 142.88,
+      "end": 149.12,
+      "text": "relevant information for answering questions? And basically the way we did this was through week"
+    },
+    {
+      "id": 23,
+      "start": 149.12,
+      "end": 155.76,
+      "text": "supervision. Just like I talked about for relation extraction, in relation extraction, we can create"
+    },
+    {
+      "id": 24,
+      "start": 155.76,
+      "end": 160.64,
+      "text": "week supervision by taking a big existing knowledge base and identifying all of the sentences where"
+    },
+    {
+      "id": 25,
+      "start": 160.64,
+      "end": 167.44,
+      "text": "the answer is included. And so what we did is we took this big existing knowledge base and said,"
+    },
+    {
+      "id": 26,
+      "start": 167.92,
+      "end": 172.24,
+      "text": "okay, what are some of the relations in the knowledge base? One example of relation in the"
+    },
+    {
+      "id": 27,
+      "start": 172.24,
+      "end": 178.32,
+      "text": "knowledge base is Steven Spielberg is the director of saving private Ryan. So we created questions that"
+    },
+    {
+      "id": 28,
+      "start": 178.32,
+      "end": 185.76,
+      "text": "said, who was the director of saving private Ryan? We can create those with templates easily for"
+    },
+    {
+      "id": 29,
+      "start": 185.76,
+      "end": 192.24,
+      "text": "many different relations. And then we took the embedding for a saving private Ryan in that question."
+    },
+    {
+      "id": 30,
+      "start": 192.88,
+      "end": 200.64,
+      "text": "And we tried to upweight all of the saving private Ryan embeddings over all of Wikipedia,"
+    },
+    {
+      "id": 31,
+      "start": 200.64,
+      "end": 207.84,
+      "text": "where Steven Spielberg co-occurred in that sentence. So that tries to match, you know, artificially"
+    },
+    {
+      "id": 32,
+      "start": 207.84,
+      "end": 213.28,
+      "text": "created questions with sentences that would be the answer to that question. And so that gives you"
+    },
+    {
+      "id": 33,
+      "start": 213.28,
+      "end": 217.92,
+      "text": "like supervision, it gives you a lot of data to train over, it gives you a good model so that"
+    },
+    {
+      "id": 34,
+      "start": 217.92,
+      "end": 225.84,
+      "text": "allowed us to learn this model well. So this is one example of how you can do like rag specifically,"
+    },
+    {
+      "id": 35,
+      "start": 225.84,
+      "end": 233.92,
+      "text": "like informed by knowledge bases and stuff like that. Any questions about this?"
+    },
+    {
+      "id": 36,
+      "start": 238.16,
+      "end": 244.96,
+      "text": "Okay. So another thing that I'd like to go into is something we call schema free extraction."
+    },
+    {
+      "id": 37,
+      "start": 245.68,
+      "end": 248.48,
+      "text": "And so if I go back to the Wiki Data page,"
+    },
+    {
+      "id": 38,
+      "start": 252.24,
+      "end": 258.0,
+      "text": "Wiki Data has something we call a schema. And the schema is basically like, what are the"
+    },
+    {
+      "id": 39,
+      "start": 258.72,
+      "end": 264.88,
+      "text": "relations that are included in the database? So one of the relations that's included in the databases"
+    },
+    {
+      "id": 40,
+      "start": 264.88,
+      "end": 278.4,
+      "text": "instance of, I guess, also image, lots of images, signature, sex or gender, country of citizenship."
+    },
+    {
+      "id": 41,
+      "start": 278.4,
+      "end": 285.04,
+      "text": "And these relations are like decided a priori by the people who created Wiki Data. And there's lots and"
+    },
+    {
+      "id": 42,
+      "start": 285.04,
+      "end": 293.12,
+      "text": "lots of them, but that doesn't necessarily mean that like similarly to the problem of not having"
+    },
+    {
+      "id": 43,
+      "start": 293.12,
+      "end": 298.96,
+      "text": "all the entities, we can't have all of the relations. And just to give one example, I was in preparation"
+    },
+    {
+      "id": 44,
+      "start": 298.96,
+      "end": 304.8,
+      "text": "for our large language model selector, I actually created some structured data about large language"
+    },
+    {
+      "id": 45,
+      "start": 304.8,
+      "end": 309.52,
+      "text": "models. And some of the instruction, the structured data about large language model that I created"
+    },
+    {
+      "id": 46,
+      "start": 309.52,
+      "end": 316.08,
+      "text": "was like, what is the variety of positional embedding that they're using? Or positional embedding"
+    },
+    {
+      "id": 47,
+      "start": 316.08,
+      "end": 322.8,
+      "text": "variety. And positional embedding variety is not in Wiki Data, I think. I'd be surprised if it was"
+    },
+    {
+      "id": 48,
+      "start": 322.8,
+      "end": 329.44,
+      "text": "in Wiki Data, but I think it's not in Wiki Data. So as you go down to more esoteric concepts or"
+    },
+    {
+      "id": 49,
+      "start": 329.44,
+      "end": 334.88,
+      "text": "specialized domains or stuff like that, you're almost always guaranteed to not have all the entities"
+    },
+    {
+      "id": 50,
+      "start": 334.88,
+      "end": 340.48,
+      "text": "you need or not have all of the relations you need. So that's the problem that schema free"
+    },
+    {
+      "id": 51,
+      "start": 340.48,
+      "end": 345.12,
+      "text": "extraction is trying to solve. It's trying to figure out how we can jointly figure out the schema"
+    },
+    {
+      "id": 52,
+      "start": 345.2,
+      "end": 348.16,
+      "text": "together with the information that you want to extract."
+    },
+    {
+      "id": 53,
+      "start": 353.2,
+      "end": 358.96,
+      "text": "And the most famous example of this is something called open information extraction."
+    },
+    {
+      "id": 54,
+      "start": 358.96,
+      "end": 364.16,
+      "text": "An open information extraction, basically what it's saying is we don't need a schema."
+    },
+    {
+      "id": 55,
+      "start": 365.04,
+      "end": 372.0,
+      "text": "There's no there's no schema. The only schema that we have is the actual text in the sentences"
+    },
+    {
+      "id": 56,
+      "start": 372.24,
+      "end": 378.24,
+      "text": "that we're referring to the entities. So if we have united, united has a hub in Chicago,"
+    },
+    {
+      "id": 57,
+      "start": 378.24,
+      "end": 385.68,
+      "text": "which is the headquarters of United Continental Holdings. The relation is literally has a hub in."
+    },
+    {
+      "id": 58,
+      "start": 387.6,
+      "end": 394.16,
+      "text": "That's the relation. And then for this we have Chicago is the headquarters of."
+    },
+    {
+      "id": 59,
+      "start": 394.4,
+      "end": 402.16,
+      "text": "But the problem with this is that this cannot abstract away. So if we had another sentence that said"
+    },
+    {
+      "id": 60,
+      "start": 402.16,
+      "end": 408.48,
+      "text": "Chicago or United Continental Holdings has its headquarters in Chicago, that would be treated"
+    },
+    {
+      "id": 61,
+      "start": 408.48,
+      "end": 411.84,
+      "text": "as completely different. You wouldn't be able to like group those two together."
+    },
+    {
+      "id": 62,
+      "start": 415.84,
+      "end": 423.28,
+      "text": "So in open information extraction, actually a lot of the methods, this is one of the few things"
+    },
+    {
+      "id": 63,
+      "start": 423.28,
+      "end": 430.64,
+      "text": "where people still use rule-based systems as kind of like almost state-of-the-art systems."
+    },
+    {
+      "id": 64,
+      "start": 430.64,
+      "end": 435.28,
+      "text": "But basically the reason why you're able to do this is it's not actually that hard to extract"
+    },
+    {
+      "id": 65,
+      "start": 435.28,
+      "end": 442.16,
+      "text": "kind of the relevant strings between two entities. And so both the precision and recall are pretty high."
+    },
+    {
+      "id": 66,
+      "start": 443.04,
+      "end": 448.48,
+      "text": "And another reason why people use rule-based systems is because they like you want to run it over"
+    },
+    {
+      "id": 67,
+      "start": 448.48,
+      "end": 452.72,
+      "text": "the whole web and running a neural model with the whole web is expensive. So you can use a rule-based"
+    },
+    {
+      "id": 68,
+      "start": 452.72,
+      "end": 460.48,
+      "text": "model. So some examples of this include text runner and reverb. The basic ideas behind them"
+    },
+    {
+      "id": 69,
+      "start": 460.48,
+      "end": 467.52,
+      "text": "is that you use a parser to extract to do a syntactic analysis of the sentence in extract"
+    },
+    {
+      "id": 70,
+      "start": 467.52,
+      "end": 473.76,
+      "text": "according to rules. So for example the relation must contain a predicate. The subject and object"
+    },
+    {
+      "id": 71,
+      "start": 473.76,
+      "end": 480.72,
+      "text": "must be noun phrases other things like this. And then what they did later is what they did in this"
+    },
+    {
+      "id": 72,
+      "start": 480.72,
+      "end": 485.28,
+      "text": "paper. Arguably this is maybe no longer necessary with the compute power we have now, but they trained"
+    },
+    {
+      "id": 73,
+      "start": 485.28,
+      "end": 490.8,
+      "text": "an even faster model to extract over large amounts of data. So they basically use this as a"
+    },
+    {
+      "id": 74,
+      "start": 490.8,
+      "end": 495.44,
+      "text": "week supervision and then trained a model that could do it even faster with a sequence-based model."
+    },
+    {
+      "id": 75,
+      "start": 499.44,
+      "end": 504.16,
+      "text": "Another thing that they did was they aggregated multiple pieces of evidence"
+    },
+    {
+      "id": 76,
+      "start": 504.16,
+      "end": 510.08,
+      "text": "heuristically to find common and therefore potentially reliable extractions. So like"
+    },
+    {
+      "id": 77,
+      "start": 513.6,
+      "end": 519.12,
+      "text": "any piece of text on the internet like could be a lie, right? So you know if"
+    },
+    {
+      "id": 78,
+      "start": 521.76,
+      "end": 527.2,
+      "text": "I might write on my blog United has a hobby in like Denver or on the other hand"
+    },
+    {
+      "id": 79,
+      "start": 528.0,
+      "end": 536.56,
+      "text": "um wait a sec, right? Something has a hobby in Denver but United has a hobby in Pittsburgh is"
+    },
+    {
+      "id": 80,
+      "start": 536.56,
+      "end": 543.04,
+      "text": "definitely wrong. So let's let's go with that. So somebody could write that on the internet and in"
+    },
+    {
+      "id": 81,
+      "start": 543.04,
+      "end": 549.2,
+      "text": "fact because I just said it it's probably in YouTube comments somewhere but um like"
+    },
+    {
+      "id": 82,
+      "start": 551.2,
+      "end": 555.04,
+      "text": "any any piece of information on the internet could be wrong. So basically they had"
+    },
+    {
+      "id": 83,
+      "start": 555.44,
+      "end": 562.16,
+      "text": "heuristic methods to filter these out and usually these were frequency-based so it's like"
+    },
+    {
+      "id": 84,
+      "start": 562.8,
+      "end": 567.92,
+      "text": "if both United and Pittsburgh are very common but it's very rare for somebody to say United"
+    },
+    {
+      "id": 85,
+      "start": 567.92,
+      "end": 572.56,
+      "text": "has a hobby in Pittsburgh then that means it's statistically unlikely for this to be correct"
+    },
+    {
+      "id": 86,
+      "start": 572.56,
+      "end": 577.28,
+      "text": "because if it were correct we'd expect to see it much more frequently. So those were the kind"
+    },
+    {
+      "id": 87,
+      "start": 577.36,
+      "end": 586.88,
+      "text": "of things that they did here. There's also some neural models for OpenIe. I think these are"
+    },
+    {
+      "id": 88,
+      "start": 588.0,
+      "end": 593.68,
+      "text": "used maybe a little bit less often but basically heuristics are still not perfect and so"
+    },
+    {
+      "id": 89,
+      "start": 594.64,
+      "end": 600.24,
+      "text": "what they did the problem with like not relying on heuristics is you need to get training data"
+    },
+    {
+      "id": 90,
+      "start": 600.24,
+      "end": 609.36,
+      "text": "from somewhere. So there's a rather clever paper."
+    }
+  ],
+  "language": "en"
+}

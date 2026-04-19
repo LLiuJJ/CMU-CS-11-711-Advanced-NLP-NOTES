@@ -1,0 +1,485 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 7.2,
+      "text": "actions, you provide examples or you give instructions of what these APIs looks like in the"
+    },
+    {
+      "id": 1,
+      "start": 7.2,
+      "end": 13.84,
+      "text": "prompt. And if you discontinue generation, you'd also have a previous example as a like"
+    },
+    {
+      "id": 2,
+      "start": 13.84,
+      "end": 23.2,
+      "text": "a few shot example where you can ask new questions. There's a, besides, you know, this kind of"
+    },
+    {
+      "id": 3,
+      "start": 23.2,
+      "end": 30.08,
+      "text": "natural back and forth generating code, it's our generating actions. There's those on, oh,"
+    },
+    {
+      "id": 4,
+      "start": 30.08,
+      "end": 38.56,
+      "text": "actually, that's a question. What if there's a loss of APIs? Say, now I have four APIs here"
+    },
+    {
+      "id": 5,
+      "start": 38.56,
+      "end": 46.16,
+      "text": "for the language model to choose, but in reality, I might have a thousand possible actions to perform."
+    },
+    {
+      "id": 6,
+      "start": 47.12,
+      "end": 53.84,
+      "text": "And if I just present them in this way, like describe what each API takes in as an argument,"
+    },
+    {
+      "id": 7,
+      "start": 53.84,
+      "end": 63.84,
+      "text": "what they do, they might extend, they might, you know, like exceed the context. So I don't, or they"
+    },
+    {
+      "id": 8,
+      "start": 63.84,
+      "end": 70.24,
+      "text": "might cost a lot of money because, you know, token is money. So do you have anyone who's suggesting"
+    },
+    {
+      "id": 9,
+      "start": 70.96,
+      "end": 77.6,
+      "text": "if there's a lot of APIs, how should I still let a language model generate APIs? Pause."
+    },
+    {
+      "id": 10,
+      "start": 84.72,
+      "end": 89.04,
+      "text": "Yeah, so basically, yeah, that's a good answer. So you have kind of an external memory"
+    },
+    {
+      "id": 11,
+      "start": 89.84,
+      "end": 98.0,
+      "text": "where you can query based on the current context, what are the most necessary required APIs from"
+    },
+    {
+      "id": 12,
+      "start": 98.08,
+      "end": 102.32,
+      "text": "that external memory? And provide the definitions for them. Yeah, that's a good answer."
+    },
+    {
+      "id": 13,
+      "start": 103.92,
+      "end": 110.88,
+      "text": "Define these, we also have another scenario where we can actually just generate code to perform"
+    },
+    {
+      "id": 14,
+      "start": 110.88,
+      "end": 117.36,
+      "text": "certain tasks. This way, we are combining reasoning ability, planning ability, plus this action"
+    },
+    {
+      "id": 15,
+      "start": 117.36,
+      "end": 123.68,
+      "text": "calling ability, owing one. Previously, we have to generate natural language traces and transform"
+    },
+    {
+      "id": 16,
+      "start": 123.68,
+      "end": 130.8,
+      "text": "natural languages traces into actions. So this is how you would solve this task. So assuming,"
+    },
+    {
+      "id": 17,
+      "start": 130.8,
+      "end": 138.24,
+      "text": "you know, you just ask chat, you can use Python, you have some common APIs installed, you have"
+    },
+    {
+      "id": 18,
+      "start": 138.24,
+      "end": 145.44,
+      "text": "down the authentication steps, as answers the following questions, like set up a meeting with someone"
+    },
+    {
+      "id": 19,
+      "start": 145.52,
+      "end": 154.64,
+      "text": "tomorrow at 10 a.m. And actually, chat, you can generate a Python code that does this task for you."
+    },
+    {
+      "id": 20,
+      "start": 155.28,
+      "end": 162.32,
+      "text": "And then you probably have guessed it, you can just execute them. Probably you won't actually"
+    },
+    {
+      "id": 21,
+      "start": 162.32,
+      "end": 168.4,
+      "text": "need it because nowadays, you know, open AI or other Gem night, those documents have built in"
+    },
+    {
+      "id": 22,
+      "start": 168.4,
+      "end": 174.24,
+      "text": "like code interpreter functionality rather than a generic code, but basically, it generates a code"
+    },
+    {
+      "id": 23,
+      "start": 174.24,
+      "end": 180.96,
+      "text": "based on your task instruction and execute them. And this way, you are still doing prompting,"
+    },
+    {
+      "id": 24,
+      "start": 180.96,
+      "end": 188.24,
+      "text": "but then your reasoning or all of these logics are more likely to be handled by this code."
+    },
+    {
+      "id": 25,
+      "start": 190.72,
+      "end": 198.56,
+      "text": "So these are an overview. Previously, touched a bit about how we're going to prompt"
+    },
+    {
+      "id": 26,
+      "start": 198.64,
+      "end": 204.56,
+      "text": "language models to perform tasks. Then we are going to touch a bit about evaluation, environment,"
+    },
+    {
+      "id": 27,
+      "start": 204.56,
+      "end": 213.12,
+      "text": "and benchmark. This is a research oriented task. We are definitely going to think about, you know,"
+    },
+    {
+      "id": 28,
+      "start": 213.12,
+      "end": 220.0,
+      "text": "reproducible environments or like evaluations, other than just products. So evaluation of"
+    },
+    {
+      "id": 29,
+      "start": 220.0,
+      "end": 227.52,
+      "text": "language model agents are actually quite hard. Existing, there are several existing work on this"
+    },
+    {
+      "id": 30,
+      "start": 227.52,
+      "end": 236.0,
+      "text": "area. Many of them contain simplified environments and basic tasks. And if you are performing, like,"
+    },
+    {
+      "id": 31,
+      "start": 236.0,
+      "end": 241.92,
+      "text": "basic task performance is saturating, you have already seen the example I previously presented,"
+    },
+    {
+      "id": 32,
+      "start": 241.92,
+      "end": 247.84,
+      "text": "to ask it to whether it is okay to go hiking today, to check the weather, it is super easy for"
+    },
+    {
+      "id": 33,
+      "start": 247.84,
+      "end": 254.0,
+      "text": "chat GPT to do it. And even just to book a meeting through the Google API, Google Canada API,"
+    },
+    {
+      "id": 34,
+      "start": 254.96,
+      "end": 261.04,
+      "text": "actually that code I verified is actually correct in the previous slide. So you can see if it's"
+    },
+    {
+      "id": 35,
+      "start": 261.04,
+      "end": 267.6,
+      "text": "simple task, simple environment, the performance is saturating. A 100% accuracy won't tell you"
+    },
+    {
+      "id": 36,
+      "start": 267.6,
+      "end": 276.32,
+      "text": "any further progress in LM agent research. So the seal is nice to know some of these existing"
+    },
+    {
+      "id": 37,
+      "start": 277.28,
+      "end": 283.2,
+      "text": "evaluation benchmarks. The first half of them are usually state lists with non-inverteo"
+    },
+    {
+      "id": 38,
+      "start": 283.2,
+      "end": 292.8,
+      "text": "environment. For example, this mind to what work focused on like dumping web pages, and then what"
+    },
+    {
+      "id": 39,
+      "start": 292.8,
+      "end": 300.96,
+      "text": "actions can be performed on them to get them transformed into other stages. And sometimes they"
+    },
+    {
+      "id": 40,
+      "start": 300.96,
+      "end": 307.6,
+      "text": "are evaluated by checking action sequence accuracy. Sometimes they are just checking the stepwise"
+    },
+    {
+      "id": 41,
+      "start": 307.68,
+      "end": 313.76,
+      "text": "or surface from only accuracy. Here is an example from mind to web. So the task is to, you know,"
+    },
+    {
+      "id": 42,
+      "start": 313.76,
+      "end": 322.24,
+      "text": "follow one of the team leaders, follow the team leaders of one of the NLT teams from NLT"
+    },
+    {
+      "id": 43,
+      "start": 322.24,
+      "end": 331.2,
+      "text": "and supposedly this action sequence is a ground-choose action sequence. You should have, you have this"
+    },
+    {
+      "id": 44,
+      "start": 331.52,
+      "end": 340.48,
+      "text": "starting website of prop possibly NL, and you click on, you hover, then then click on something,"
+    },
+    {
+      "id": 45,
+      "start": 340.48,
+      "end": 347.6,
+      "text": "click on something, eventually you will arrive at the final desired state. But these previous"
+    },
+    {
+      "id": 46,
+      "start": 348.32,
+      "end": 355.04,
+      "text": "benchmark like mind to web evaluate based on the accuracy of how these actions predicted matches"
+    },
+    {
+      "id": 47,
+      "start": 355.76,
+      "end": 362.96,
+      "text": "the ground-choose model. And the only check, you know, click, if correct, is correct, or if the"
+    },
+    {
+      "id": 48,
+      "start": 362.96,
+      "end": 369.36,
+      "text": "argument is correct. Does anyone have a dear, why this might not be desirable? A desirable way of"
+    },
+    {
+      "id": 49,
+      "start": 369.36,
+      "end": 384.56,
+      "text": "evaluating NL agents, we'll go ahead. Yeah, yeah, that's a good answer. And also possibly other"
+    },
+    {
+      "id": 50,
+      "start": 384.56,
+      "end": 391.28,
+      "text": "reasons are, so you first have to go through in this order, but you know, you can sometimes these"
+    },
+    {
+      "id": 51,
+      "start": 391.28,
+      "end": 397.6,
+      "text": "orders are not strictly dependent on each other. So you can perform one task, like say this class"
+    },
+    {
+      "id": 52,
+      "start": 397.6,
+      "end": 404.24,
+      "text": "is composed of two sub tasks, you can do these two in parallel or in any order. Then if you are"
+    },
+    {
+      "id": 53,
+      "start": 404.24,
+      "end": 409.44,
+      "text": "just given a ground-choose action sequence, and you get why are based on, you know, if the action"
+    },
+    {
+      "id": 54,
+      "start": 410.0,
+      "end": 415.36,
+      "text": "is correct, if the argument is correct, then you are going to miss out, you know, basically miss out a"
+    },
+    {
+      "id": 55,
+      "start": 415.36,
+      "end": 421.6,
+      "text": "lot of opportunity where the agent actually does it correctly, but, you know, it didn't cover in this"
+    },
+    {
+      "id": 56,
+      "start": 421.6,
+      "end": 430.32,
+      "text": "task. And there are other, so previously I was talking about these kind of stateless, not"
+    },
+    {
+      "id": 57,
+      "start": 430.32,
+      "end": 435.44,
+      "text": "interacting environment, but then there are also some environments, interacting environment here,"
+    },
+    {
+      "id": 58,
+      "start": 435.52,
+      "end": 441.68,
+      "text": "already available, but usually they are short horizon, a full-glambo, there's a workshop and"
+    },
+    {
+      "id": 59,
+      "start": 441.68,
+      "end": 449.6,
+      "text": "many water width bits here. Here's an example of an actual interactive web environment for agents."
+    },
+    {
+      "id": 60,
+      "start": 450.16,
+      "end": 456.4,
+      "text": "So it's just simple web pages where you can click, you can enter yourself. So there are simple"
+    },
+    {
+      "id": 61,
+      "start": 456.48,
+      "end": 467.36,
+      "text": "tasks, for example, let's say in this next example, I just ask you to submit my last 711 in this"
+    },
+    {
+      "id": 62,
+      "start": 467.36,
+      "end": 474.4,
+      "text": "text box and submit. So as you can imagine, these tasks usually just take one or two or three steps"
+    },
+    {
+      "id": 63,
+      "start": 475.04,
+      "end": 482.64,
+      "text": "actions to perform. So that's why we call it short horizon. And the environment is pretty simple"
+    },
+    {
+      "id": 64,
+      "start": 482.64,
+      "end": 493.12,
+      "text": "because it's just like the websites from 1990s. So and also there are, and also there are"
+    },
+    {
+      "id": 65,
+      "start": 494.32,
+      "end": 500.96,
+      "text": "like webshop benchmark, which is a simplified version of Amazon, basically Amazon if, you know, it is"
+    },
+    {
+      "id": 66,
+      "start": 502.64,
+      "end": 511.84,
+      "text": "20 years ago. And there is, like you can search for jacket, your favorite jacket fit. So the question"
+    },
+    {
+      "id": 67,
+      "start": 511.84,
+      "end": 519.28,
+      "text": "here is you know, I'm looking for extra red color women, some like warm jacket coat and"
+    },
+    {
+      "id": 68,
+      "start": 519.28,
+      "end": 524.32,
+      "text": "price lowered in the same dollar. You have a lot of instructions here. The goal is to find the"
+    },
+    {
+      "id": 69,
+      "start": 524.32,
+      "end": 530.96,
+      "text": "correct item that suits your instruction. You still have to navigate through this simplified"
+    },
+    {
+      "id": 70,
+      "start": 530.96,
+      "end": 538.32,
+      "text": "version of Amazon, but you know, the same rule, the same issue applies. It's this pretty simple"
+    },
+    {
+      "id": 71,
+      "start": 538.4,
+      "end": 545.2,
+      "text": "environment and it is like short horizon. Just to give you an example, I just just give you like a"
+    },
+    {
+      "id": 72,
+      "start": 545.2,
+      "end": 554.4,
+      "text": "beating like QSGP4 to perform on these kind of webshop with proper tuning. It can already achieve"
+    },
+    {
+      "id": 73,
+      "start": 554.4,
+      "end": 565.36,
+      "text": "like basically, let's say, a test. So it's getting there. So that's why we think there are, if you"
+    },
+    {
+      "id": 74,
+      "start": 565.36,
+      "end": 572.64,
+      "text": "are interested in building agent benchmarks, there are several key considerations. So first,"
+    },
+    {
+      "id": 75,
+      "start": 573.2,
+      "end": 578.4,
+      "text": "you have to have an interactive environment because without environment, you know, you can just"
+    },
+    {
+      "id": 76,
+      "start": 579.04,
+      "end": 585.84,
+      "text": "you are stuck with evaluation metrics that are just by checking if the action is correct, rather than"
+    },
+    {
+      "id": 77,
+      "start": 585.84,
+      "end": 592.16,
+      "text": "the final execution results. So, and also, you know, you need to have kind of diverse functionality."
+    },
+    {
+      "id": 78,
+      "start": 593.04,
+      "end": 598.4,
+      "text": "Previously, like you are just focused on shopping and then, you know, if I want to cheat on this"
+    },
+    {
+      "id": 79,
+      "start": 598.4,
+      "end": 604.88,
+      "text": "benchmark, I would just overfit to this shopping functionality. And then you need to..."
+    }
+  ],
+  "language": "en"
+}

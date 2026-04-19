@@ -1,0 +1,689 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 6.48,
+      "text": "of generation. This is where the name Fudge comes from, the FUD stands for future discriminator."
+    },
+    {
+      "id": 1,
+      "start": 6.48,
+      "end": 13.04,
+      "text": "And so what they do is they train a model on prefixes to guess whether that sequence will be formal."
+    },
+    {
+      "id": 2,
+      "start": 13.04,
+      "end": 17.36,
+      "text": "You can do this if you have a bunch of data that's sort of sort of into formal and not formal, right?"
+    },
+    {
+      "id": 3,
+      "start": 17.92,
+      "end": 24.16,
+      "text": "Every sort of prefix of a sentence in the formal category is a training example, right?"
+    },
+    {
+      "id": 4,
+      "start": 24.16,
+      "end": 28.56,
+      "text": "You know, a sentence that starts to you prefer. You can chop off each token to get sort of a"
+    },
+    {
+      "id": 5,
+      "start": 28.56,
+      "end": 36.48,
+      "text": "set of prefixes to sequences that have the little formal and you can do the same thing to your informal set"
+    },
+    {
+      "id": 6,
+      "start": 36.48,
+      "end": 40.56,
+      "text": "and train a discriminator to choose between them to say like what's the probability, the sentence,"
+    },
+    {
+      "id": 7,
+      "start": 40.56,
+      "end": 46.48,
+      "text": "but will belong to the formal set when we finish. And so this idea of sort of trying to guess at a"
+    },
+    {
+      "id": 8,
+      "start": 46.48,
+      "end": 50.08,
+      "text": "given decoding set if we're going to wind up with our constraints satisfied at the end"
+    },
+    {
+      "id": 9,
+      "start": 51.84,
+      "end": 57.84,
+      "text": "is sort of key way to do constrained coding and one that will return to you in just a couple of"
+    },
+    {
+      "id": 10,
+      "start": 57.84,
+      "end": 65.68,
+      "text": "slides. I want to touch on something slightly different, which is that maybe one of the constraints"
+    },
+    {
+      "id": 11,
+      "start": 65.68,
+      "end": 70.24,
+      "text": "we care about is something a little more nebulous that we want to match human preference."
+    },
+    {
+      "id": 12,
+      "start": 71.28,
+      "end": 74.88,
+      "text": "The way that we usually accomplish this constraint is a little bit different, right?"
+    },
+    {
+      "id": 13,
+      "start": 77.52,
+      "end": 83.04,
+      "text": "This would usually do through reinforcement learning for human feedback. And so we take sort of"
+    },
+    {
+      "id": 14,
+      "start": 83.04,
+      "end": 90.8,
+      "text": "our original model distribution and we take sort of really like type like distribution of evidence that"
+    },
+    {
+      "id": 15,
+      "start": 90.8,
+      "end": 97.12,
+      "text": "says like this model says that this sequence is really hard reward, this sequence is really low reward"
+    },
+    {
+      "id": 16,
+      "start": 97.12,
+      "end": 102.4,
+      "text": "and we try to sort of combine them somehow through training. So we get a new model that is quote,"
+    },
+    {
+      "id": 17,
+      "start": 102.4,
+      "end": 108.64,
+      "text": "unquote, align and that it has like a higher likelihood of giving us things that have really high"
+    },
+    {
+      "id": 18,
+      "start": 108.64,
+      "end": 115.12,
+      "text": "reward and according to our reward distribution. You can view this though as a type of"
+    },
+    {
+      "id": 19,
+      "start": 115.12,
+      "end": 120.48,
+      "text": "Bayesian inference. And so what this means is the distribution that we really want to get at the end"
+    },
+    {
+      "id": 20,
+      "start": 120.48,
+      "end": 127.76,
+      "text": "is a distribution that combines our original model's distribution and some idea of like how likely"
+    },
+    {
+      "id": 21,
+      "start": 127.76,
+      "end": 134.96,
+      "text": "we are to satisfy the reward, right? This we do through reinforcement learning, but if we sort of"
+    },
+    {
+      "id": 22,
+      "start": 134.96,
+      "end": 139.6,
+      "text": "know what these two distributions look like, we've just been talking about a lot of methods that"
+    },
+    {
+      "id": 23,
+      "start": 139.6,
+      "end": 144.88,
+      "text": "modify the original model's distribution with external information. It seems like maybe we'll just"
+    },
+    {
+      "id": 24,
+      "start": 144.88,
+      "end": 150.08,
+      "text": "add that external information in at decoding time to get some of the same effects."
+    },
+    {
+      "id": 25,
+      "start": 151.68,
+      "end": 156.64,
+      "text": "And it turns out you can do exactly this. So this is a paper from last year called reward of"
+    },
+    {
+      "id": 26,
+      "start": 156.64,
+      "end": 164.24,
+      "text": "my decoding. And the idea here is sort of in the same conceptual classes, but instead of"
+    },
+    {
+      "id": 27,
+      "start": 165.28,
+      "end": 170.32,
+      "text": "predicting whether we're likely to satisfy the constraint, we're predicting how much reward we"
+    },
+    {
+      "id": 28,
+      "start": 170.32,
+      "end": 174.96,
+      "text": "think that sequence will have at the end of generation. So we take our original model without doing"
+    },
+    {
+      "id": 29,
+      "start": 174.96,
+      "end": 182.4,
+      "text": "any RLHF and we get the output, we get the predictions for the next hook-in and then we use a model"
+    },
+    {
+      "id": 30,
+      "start": 182.4,
+      "end": 188.08,
+      "text": "that's been trained to predict the likely reward given some prefix like a future discriminator."
+    },
+    {
+      "id": 31,
+      "start": 188.08,
+      "end": 192.88,
+      "text": "And we calculate the likely reward if we take each of those tokens and then we use the combination"
+    },
+    {
+      "id": 32,
+      "start": 192.88,
+      "end": 197.92,
+      "text": "of those two distributions to choose what's a decode next. And this sort of gives you some of the"
+    },
+    {
+      "id": 33,
+      "start": 197.92,
+      "end": 203.92,
+      "text": "benefits of RLHF without actually having to do reinforcement learning. So it's a way of treating"
+    },
+    {
+      "id": 34,
+      "start": 203.92,
+      "end": 208.56,
+      "text": "like aligning the human feedback as just another constraint that you can impose at decoding."
+    },
+    {
+      "id": 35,
+      "start": 209.04,
+      "end": 217.12,
+      "text": "So those were sort of a subset of the constraints decoding strategies that people use."
+    },
+    {
+      "id": 36,
+      "start": 217.12,
+      "end": 220.8,
+      "text": "Before we get into human loop stuff, are there any questions on this?"
+    },
+    {
+      "id": 37,
+      "start": 224.0,
+      "end": 224.72,
+      "text": "Yes."
+    },
+    {
+      "id": 38,
+      "start": 224.88,
+      "end": 234.08,
+      "text": "So for the first one, you have to create a space for the system in the next one,"
+    },
+    {
+      "id": 39,
+      "start": 237.76,
+      "end": 242.48,
+      "text": "right. So for the discriminator, you need to train one for every constraint and you do, yeah."
+    },
+    {
+      "id": 40,
+      "start": 243.04,
+      "end": 247.12,
+      "text": "So you need to have some set of data that satisfies your constraint on some set of data that"
+    },
+    {
+      "id": 41,
+      "start": 247.12,
+      "end": 249.6,
+      "text": "adopted before you've been forced to make a constraint."
+    },
+    {
+      "id": 42,
+      "start": 250.56,
+      "end": 259.12,
+      "text": "In the paper, that's what they did. But in alternative might be just to train a discriminator"
+    },
+    {
+      "id": 43,
+      "start": 259.12,
+      "end": 264.64,
+      "text": "to determine whether any constraint was violated. So if you have 110 strings,"
+    },
+    {
+      "id": 44,
+      "start": 264.64,
+      "end": 269.12,
+      "text": "you could do a binary press fire about whether any constraint is violated and then"
+    },
+    {
+      "id": 45,
+      "start": 269.12,
+      "end": 270.96,
+      "text": "they're also in the solution."
+    },
+    {
+      "id": 46,
+      "start": 270.96,
+      "end": 275.44,
+      "text": "But if you wanted to add a new constraint, you still have to retrain it."
+    },
+    {
+      "id": 47,
+      "start": 275.44,
+      "end": 277.28,
+      "text": "You have to retrain it, for example, in modern."
+    },
+    {
+      "id": 48,
+      "start": 280.24,
+      "end": 286.32,
+      "text": "The reason that this is sort of relatively reasonable to do is that this determination of"
+    },
+    {
+      "id": 49,
+      "start": 286.32,
+      "end": 291.44,
+      "text": "if a constraint is likely to be violated is sort of a lighter weight or easier task to learn."
+    },
+    {
+      "id": 50,
+      "start": 291.44,
+      "end": 296.16,
+      "text": "You can use a relatively small model for this versus like your big model that has to be able"
+    },
+    {
+      "id": 51,
+      "start": 296.16,
+      "end": 298.4,
+      "text": "to predict the next token for any sequence anywhere."
+    },
+    {
+      "id": 52,
+      "start": 298.4,
+      "end": 304.96,
+      "text": "Yeah. Another interesting thing is if you think about it, normally you're predicting with your"
+    },
+    {
+      "id": 53,
+      "start": 304.96,
+      "end": 311.68,
+      "text": "big softmax like this over all of your vocabulary, you can even use the same representations here"
+    },
+    {
+      "id": 54,
+      "start": 312.32,
+      "end": 317.12,
+      "text": "to predict with a binary press fire whether the constraint is violated."
+    },
+    {
+      "id": 55,
+      "start": 317.12,
+      "end": 323.12,
+      "text": "Let's say you have 100 constraints. This is still a vector of size 100 compared to your vector"
+    },
+    {
+      "id": 56,
+      "start": 323.12,
+      "end": 330.4,
+      "text": "of size 32,000 that you're using for a lot more, right? So it's not like this adds the training"
+    },
+    {
+      "id": 57,
+      "start": 330.48,
+      "end": 334.8,
+      "text": "we've passed in time but it adds very little like inference time, I guess."
+    },
+    {
+      "id": 58,
+      "start": 334.8,
+      "end": 337.6,
+      "text": "Let's just follow it to that."
+    },
+    {
+      "id": 59,
+      "start": 337.6,
+      "end": 340.32,
+      "text": "Like, there are times when you sound to use, right?"
+    },
+    {
+      "id": 60,
+      "start": 340.32,
+      "end": 345.44,
+      "text": "Do you do the constraint with you just like imagine you're doing the opposite of it?"
+    },
+    {
+      "id": 61,
+      "start": 346.48,
+      "end": 348.48,
+      "text": "You know, I said that's a good point."
+    },
+    {
+      "id": 62,
+      "start": 349.6,
+      "end": 354.16,
+      "text": "I guess like in that constraints, there are times when you can add like 20,000"
+    },
+    {
+      "id": 63,
+      "start": 354.24,
+      "end": 356.16,
+      "text": "to like the integration."
+    },
+    {
+      "id": 64,
+      "start": 362.0,
+      "end": 367.04,
+      "text": "Like is there a way to generalize your constraint and be like don't talk about this whole center"
+    },
+    {
+      "id": 65,
+      "start": 367.04,
+      "end": 373.84,
+      "text": "of poverty? You could do that by training a discriminator by training one discriminator that"
+    },
+    {
+      "id": 66,
+      "start": 373.84,
+      "end": 380.0,
+      "text": "considers all of those or by training like 100 different discriminators and then sort of taking"
+    },
+    {
+      "id": 67,
+      "start": 380.64,
+      "end": 386.16,
+      "text": "the maximum score from any of them, right? If you want to be able to exclude all of these things"
+    },
+    {
+      "id": 68,
+      "start": 386.16,
+      "end": 388.32,
+      "text": "to consider any of the bar buyers, right?"
+    },
+    {
+      "id": 69,
+      "start": 390.32,
+      "end": 396.72,
+      "text": "And for reward, ordinances you're doing, are we sort of like train us a word model or do you"
+    },
+    {
+      "id": 70,
+      "start": 396.72,
+      "end": 401.92,
+      "text": "like just come from the PV screen down RLHF data about these sorts on there?"
+    },
+    {
+      "id": 71,
+      "start": 402.4,
+      "end": 408.56,
+      "text": "And then we sort of like train another discriminator, but this one now suits the world."
+    },
+    {
+      "id": 72,
+      "start": 409.36,
+      "end": 411.36,
+      "text": "I don't think you like to pull the under side."
+    },
+    {
+      "id": 73,
+      "start": 411.36,
+      "end": 413.76,
+      "text": "Yeah, so how do we get the reward model here?"
+    },
+    {
+      "id": 74,
+      "start": 414.4,
+      "end": 419.92,
+      "text": "This is we can use the same data that we do for RLHF, but we need a slightly different model."
+    },
+    {
+      "id": 75,
+      "start": 419.92,
+      "end": 424.0,
+      "text": "So for RLHF, we'll train a reward model over full sequences, right?"
+    },
+    {
+      "id": 76,
+      "start": 424.72,
+      "end": 429.68,
+      "text": "And here we need to do the same trick where we sort of look at just perfects and try to guess"
+    },
+    {
+      "id": 77,
+      "start": 429.68,
+      "end": 434.72,
+      "text": "the reward downstream. But if we have already had preference data, then we have some,"
+    },
+    {
+      "id": 78,
+      "start": 435.68,
+      "end": 440.88,
+      "text": "like we have a data source to do this one. I think from remembering correctly, they also had a"
+    },
+    {
+      "id": 79,
+      "start": 440.88,
+      "end": 445.52,
+      "text": "couple more sort of tricks for data augmentation to get this to work. This is sort of what the"
+    },
+    {
+      "id": 80,
+      "start": 445.52,
+      "end": 451.68,
+      "text": "long term you'll be able to figure out because like reward is generally a stupid model after you."
+    },
+    {
+      "id": 81,
+      "start": 453.12,
+      "end": 456.8,
+      "text": "And also if you don't know very much about RLHF, we're going to cover that"
+    },
+    {
+      "id": 82,
+      "start": 456.8,
+      "end": 459.36,
+      "text": "in your class, so don't worry if it's a..."
+    },
+    {
+      "id": 83,
+      "start": 459.36,
+      "end": 460.48,
+      "text": "Yeah, sorry to jump ahead."
+    },
+    {
+      "id": 84,
+      "start": 460.56,
+      "end": 461.36,
+      "text": "I know."
+    },
+    {
+      "id": 85,
+      "start": 463.36,
+      "end": 468.32,
+      "text": "So for two, I know a lot of this is very wide, would you do it in there?"
+    },
+    {
+      "id": 86,
+      "start": 469.12,
+      "end": 474.0,
+      "text": "To ensure it could be like RLHF, the one that I'm studying for,"
+    },
+    {
+      "id": 87,
+      "start": 474.0,
+      "end": 478.0,
+      "text": "and it's like two on RLHF, you know, more abstracts."
+    },
+    {
+      "id": 88,
+      "start": 478.88,
+      "end": 480.24,
+      "text": "Is it something along with the plan?"
+    },
+    {
+      "id": 89,
+      "start": 480.96,
+      "end": 484.08,
+      "text": "Yeah, like what are the real world applications like could we use this to make"
+    },
+    {
+      "id": 90,
+      "start": 484.16,
+      "end": 486.16,
+      "text": "a lot more empathetic with updates?"
+    },
+    {
+      "id": 91,
+      "start": 486.16,
+      "end": 491.92,
+      "text": "Yeah, any, any now attribute that you can sort of collect like cognitive and negative data for,"
+    },
+    {
+      "id": 92,
+      "start": 491.92,
+      "end": 496.8,
+      "text": "you could do this kind of constraint for. I think the ones you see most commonly are with"
+    },
+    {
+      "id": 93,
+      "start": 496.8,
+      "end": 501.52,
+      "text": "human preference, and then like negative constraints, like you don't want your model to generate"
+    },
+    {
+      "id": 94,
+      "start": 501.52,
+      "end": 505.52,
+      "text": "offensive content. And if you can build like a good discriminator for, and he said,"
+    },
+    {
+      "id": 95,
+      "start": 505.52,
+      "end": 508.08,
+      "text": "don't really have a offensive direction, you can kind of stop it."
+    },
+    {
+      "id": 96,
+      "start": 508.24,
+      "end": 515.52,
+      "text": "What if you have good ideas, do you generate a bunch of formulas and talk to model itself,"
+    },
+    {
+      "id": 97,
+      "start": 515.52,
+      "end": 517.12,
+      "text": "whether it's violence, the problem?"
+    },
+    {
+      "id": 98,
+      "start": 517.76,
+      "end": 522.08,
+      "text": "Yeah, you could do that for sure. Could you ask, like, could you generate a bunch of samples"
+    },
+    {
+      "id": 99,
+      "start": 522.08,
+      "end": 524.08,
+      "text": "and ask the model for violence that you started?"
+    },
+    {
+      "id": 100,
+      "start": 525.36,
+      "end": 529.2,
+      "text": "This is also a type of sort of sample in the marine marine marine strategy."
+    },
+    {
+      "id": 101,
+      "start": 530.16,
+      "end": 538.0,
+      "text": "But yeah, this would be sort of a more clever, like, less heavyweight version of this checking"
+    },
+    {
+      "id": 102,
+      "start": 538.0,
+      "end": 542.24,
+      "text": "if it's about time, right? You'd like ask the model for violence at the constraint, and if it's"
+    },
+    {
+      "id": 103,
+      "start": 542.24,
+      "end": 544.16,
+      "text": "a good enough model, it could probably do that for you."
+    },
+    {
+      "id": 104,
+      "start": 545.2,
+      "end": 547.6,
+      "text": "I think that's a close-in message, you don't have to strain anything."
+    },
+    {
+      "id": 105,
+      "start": 548.24,
+      "end": 554.4,
+      "text": "Yeah, yeah, and this is sort of a general, like, the generating text that like satisfies"
+    },
+    {
+      "id": 106,
+      "start": 554.4,
+      "end": 558.72,
+      "text": "the constraint is harder than checking if the text satisfies the constraint. So even if the model"
+    },
+    {
+      "id": 107,
+      "start": 558.72,
+      "end": 562.96,
+      "text": "isn't good about, like, not generating text about climbing when you tell it to, it might be"
+    },
+    {
+      "id": 108,
+      "start": 562.96,
+      "end": 565.76,
+      "text": "able to tell if it's good about it. Yeah."
+    },
+    {
+      "id": 109,
+      "start": 581.52,
+      "end": 584.32,
+      "text": "Yeah, like, how do you collect the data to train with discriminator?"
+    },
+    {
+      "id": 110,
+      "start": 585.28,
+      "end": 591.68,
+      "text": "Generally, you're going to see, like, you'll look at see if there are datasets that already captured"
+    },
+    {
+      "id": 111,
+      "start": 591.68,
+      "end": 595.44,
+      "text": "this attribute, or you could sort of write heuristics to try to recover it if it's an attribute"
+    },
+    {
+      "id": 112,
+      "start": 595.44,
+      "end": 600.16,
+      "text": "that not a lot of other people care about. Like, you could write your heuristic to check if text is"
+    },
+    {
+      "id": 113,
+      "start": 600.16,
+      "end": 604.16,
+      "text": "about climbing, for instance, and then try to recover what's in the..."
+    }
+  ],
+  "language": "en"
+}

@@ -1,0 +1,1181 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 3.96,
+      "text": "Stanford, human preferences data set,"
+    },
+    {
+      "id": 1,
+      "start": 3.96,
+      "end": 8.08,
+      "text": "I forget what S stands for, human preferences data set."
+    },
+    {
+      "id": 2,
+      "start": 8.08,
+      "end": 12.72,
+      "text": "Basically, this is where they tried to find Reddit posts."
+    },
+    {
+      "id": 3,
+      "start": 12.72,
+      "end": 15.8,
+      "text": "I think Reddit posts, they got more upvotes"
+    },
+    {
+      "id": 4,
+      "start": 15.8,
+      "end": 18.12,
+      "text": "despite the fact that they were posted later"
+    },
+    {
+      "id": 5,
+      "start": 18.12,
+      "end": 19.88,
+      "text": "than a previous one."
+    },
+    {
+      "id": 6,
+      "start": 19.88,
+      "end": 23.76,
+      "text": "So the idea is usually the first posts get more upvotes."
+    },
+    {
+      "id": 7,
+      "start": 23.76,
+      "end": 26.72,
+      "text": "So if you get more upvotes for a later post"
+    },
+    {
+      "id": 8,
+      "start": 26.72,
+      "end": 28.6,
+      "text": "to that indicates that you're probably more valuable"
+    },
+    {
+      "id": 9,
+      "start": 28.6,
+      "end": 29.6,
+      "text": "than that earlier."
+    },
+    {
+      "id": 10,
+      "start": 29.6,
+      "end": 33.52,
+      "text": "So kind of clever way of creating data."
+    },
+    {
+      "id": 11,
+      "start": 33.52,
+      "end": 37.44,
+      "text": "I'm actually not sure what the synthetic JPEG A1s,"
+    },
+    {
+      "id": 12,
+      "start": 37.44,
+      "end": 38.76,
+      "text": "I didn't look at that."
+    },
+    {
+      "id": 13,
+      "start": 38.76,
+      "end": 41.72,
+      "text": "And then separately from that, meta collected"
+    },
+    {
+      "id": 14,
+      "start": 41.72,
+      "end": 43.4,
+      "text": "a very large amount of internal data"
+    },
+    {
+      "id": 15,
+      "start": 43.4,
+      "end": 46.68,
+      "text": "that they didn't release for tuning LAMA."
+    },
+    {
+      "id": 16,
+      "start": 46.68,
+      "end": 48.84,
+      "text": "And they did this through various iterations."
+    },
+    {
+      "id": 17,
+      "start": 48.84,
+      "end": 51.48,
+      "text": "So basically what they did is they created"
+    },
+    {
+      "id": 18,
+      "start": 51.48,
+      "end": 53.72,
+      "text": "a first version of the model."
+    },
+    {
+      "id": 19,
+      "start": 53.72,
+      "end": 56.6,
+      "text": "They let it use loose, and users, they also"
+    },
+    {
+      "id": 20,
+      "start": 56.6,
+      "end": 61.28,
+      "text": "did some data collection with people who were actually"
+    },
+    {
+      "id": 21,
+      "start": 61.28,
+      "end": 62.88,
+      "text": "trying to break the model and getting"
+    },
+    {
+      "id": 22,
+      "start": 62.88,
+      "end": 64.76,
+      "text": "into say bad things."
+    },
+    {
+      "id": 23,
+      "start": 64.76,
+      "end": 66.72,
+      "text": "They collected preference data from these people,"
+    },
+    {
+      "id": 24,
+      "start": 66.72,
+      "end": 68.48,
+      "text": "and then they iterated over and over again"
+    },
+    {
+      "id": 25,
+      "start": 68.48,
+      "end": 70.4,
+      "text": "to collect more and more of this data"
+    },
+    {
+      "id": 26,
+      "start": 70.4,
+      "end": 73.52,
+      "text": "on various versions of the model."
+    },
+    {
+      "id": 27,
+      "start": 73.52,
+      "end": 75.56,
+      "text": "So as the model gets better, it's"
+    },
+    {
+      "id": 28,
+      "start": 75.56,
+      "end": 77.28,
+      "text": "going to be harder to collect this data"
+    },
+    {
+      "id": 29,
+      "start": 77.28,
+      "end": 83.92,
+      "text": "but they want to kind of increase the current model of the model."
+    },
+    {
+      "id": 30,
+      "start": 83.92,
+      "end": 85.8,
+      "text": "So the next step that they did was they"
+    },
+    {
+      "id": 31,
+      "start": 85.8,
+      "end": 88.64,
+      "text": "trained a model to follow these preferences."
+    },
+    {
+      "id": 32,
+      "start": 88.64,
+      "end": 91.72,
+      "text": "And so they trained a model that basically"
+    },
+    {
+      "id": 33,
+      "start": 91.72,
+      "end": 98.88,
+      "text": "can predict human preference given to language model outputs."
+    },
+    {
+      "id": 34,
+      "start": 98.88,
+      "end": 100.36,
+      "text": "And this is a hard problem, right?"
+    },
+    {
+      "id": 35,
+      "start": 100.36,
+      "end": 103.56,
+      "text": "Because these are language model outputs."
+    },
+    {
+      "id": 36,
+      "start": 103.56,
+      "end": 106.48,
+      "text": "And the language model thought it was a good output,"
+    },
+    {
+      "id": 37,
+      "start": 106.48,
+      "end": 109.76,
+      "text": "regardless, because otherwise it wouldn't be sampling."
+    },
+    {
+      "id": 38,
+      "start": 109.76,
+      "end": 113.2,
+      "text": "And so you need to distinguish between two very fluent looking"
+    },
+    {
+      "id": 39,
+      "start": 113.2,
+      "end": 116.96,
+      "text": "outputs where one is preferred and one is not preferred."
+    },
+    {
+      "id": 40,
+      "start": 116.96,
+      "end": 122.2,
+      "text": "So even kind of strong models, like by the way,"
+    },
+    {
+      "id": 41,
+      "start": 122.2,
+      "end": 123.84,
+      "text": "there are some open-roward models."
+    },
+    {
+      "id": 42,
+      "start": 123.84,
+      "end": 125.72,
+      "text": "Like this open-assistant reward model"
+    },
+    {
+      "id": 43,
+      "start": 125.72,
+      "end": 128.12,
+      "text": "is publicly available, and you can just go and download it"
+    },
+    {
+      "id": 44,
+      "start": 128.12,
+      "end": 131.2,
+      "text": "if you want it."
+    },
+    {
+      "id": 45,
+      "start": 131.2,
+      "end": 135.88,
+      "text": "But this, if you evaluated on this anthropic, helpful,"
+    },
+    {
+      "id": 46,
+      "start": 135.88,
+      "end": 140.76,
+      "text": "and harmless data set, this gets about 67 or 68 accuracy."
+    },
+    {
+      "id": 47,
+      "start": 144.2,
+      "end": 151.76,
+      "text": "But if you evaluate it on this open-assistant data set,"
+    },
+    {
+      "id": 48,
+      "start": 151.76,
+      "end": 155.4,
+      "text": "sorry, if you evaluate the public models, including GPT-4,"
+    },
+    {
+      "id": 49,
+      "start": 155.4,
+      "end": 159.16,
+      "text": "on the meta data set, actually it's pretty hard"
+    },
+    {
+      "id": 50,
+      "start": 159.16,
+      "end": 162.88,
+      "text": "for to distinguish between the things."
+    },
+    {
+      "id": 51,
+      "start": 162.88,
+      "end": 166.16,
+      "text": "And here they're evaluating both helpful and harmless"
+    },
+    {
+      "id": 52,
+      "start": 166.16,
+      "end": 168.04,
+      "text": "or helpful and safety."
+    },
+    {
+      "id": 53,
+      "start": 168.04,
+      "end": 172.96,
+      "text": "And the reason why is because it's very easy to create a very safe,"
+    },
+    {
+      "id": 54,
+      "start": 172.96,
+      "end": 174.44,
+      "text": "but not helpful at all, modeled by saying,"
+    },
+    {
+      "id": 55,
+      "start": 174.44,
+      "end": 177.0,
+      "text": "I don't know all the time, it's very,"
+    },
+    {
+      "id": 56,
+      "start": 177.0,
+      "end": 180.16,
+      "text": "it's relatively easy to create a helpful model that's very unsafe."
+    },
+    {
+      "id": 57,
+      "start": 180.16,
+      "end": 182.48,
+      "text": "Like it will do anything you want."
+    },
+    {
+      "id": 58,
+      "start": 182.48,
+      "end": 184.12,
+      "text": "And so they want to balance between the two"
+    },
+    {
+      "id": 59,
+      "start": 184.12,
+      "end": 186.04,
+      "text": "and they evaluate them separately."
+    },
+    {
+      "id": 60,
+      "start": 186.04,
+      "end": 188.76,
+      "text": "They also created two different separate reward models."
+    },
+    {
+      "id": 61,
+      "start": 188.76,
+      "end": 191.92,
+      "text": "So they created one reward model to distinguish safety"
+    },
+    {
+      "id": 62,
+      "start": 191.92,
+      "end": 194.84,
+      "text": "and another reward model to distinguish helpfulness."
+    },
+    {
+      "id": 63,
+      "start": 194.84,
+      "end": 198.92,
+      "text": "And they use these separately to train the model."
+    },
+    {
+      "id": 64,
+      "start": 198.92,
+      "end": 200.68,
+      "text": "And you can see that the hopefulness model"
+    },
+    {
+      "id": 65,
+      "start": 200.68,
+      "end": 204.04,
+      "text": "does a lot better on discriminating between helpful things"
+    },
+    {
+      "id": 66,
+      "start": 204.04,
+      "end": 205.68,
+      "text": "and the safety model does a lot better"
+    },
+    {
+      "id": 67,
+      "start": 205.68,
+      "end": 207.4,
+      "text": "and discriminating, or does a little better"
+    },
+    {
+      "id": 68,
+      "start": 207.4,
+      "end": 209.68,
+      "text": "and discriminating between safety and unsafe things."
+    },
+    {
+      "id": 69,
+      "start": 213.4,
+      "end": 215.6,
+      "text": "Actually, I didn't include this in the slides,"
+    },
+    {
+      "id": 70,
+      "start": 215.6,
+      "end": 220.6,
+      "text": "but they also have an interesting graph that demonstrates"
+    },
+    {
+      "id": 71,
+      "start": 222.16,
+      "end": 225.92,
+      "text": "how good the reward models are based on their size."
+    },
+    {
+      "id": 72,
+      "start": 225.92,
+      "end": 227.56,
+      "text": "And it turns out that this is a place"
+    },
+    {
+      "id": 73,
+      "start": 227.56,
+      "end": 229.72,
+      "text": "where it's really, really important to use a large"
+    },
+    {
+      "id": 74,
+      "start": 229.72,
+      "end": 233.84,
+      "text": "and powerful language model to determine your reward"
+    },
+    {
+      "id": 75,
+      "start": 233.84,
+      "end": 237.08,
+      "text": "because they demonstrate that the 70 billion parameter model"
+    },
+    {
+      "id": 76,
+      "start": 237.08,
+      "end": 238.56,
+      "text": "that they used is actually far better"
+    },
+    {
+      "id": 77,
+      "start": 238.56,
+      "end": 241.44,
+      "text": "than the smaller models that they used"
+    },
+    {
+      "id": 78,
+      "start": 241.44,
+      "end": 243.64,
+      "text": "to predict the this reward."
+    },
+    {
+      "id": 79,
+      "start": 247.4,
+      "end": 251.88,
+      "text": "So this is a graph of their incremental training process"
+    },
+    {
+      "id": 80,
+      "start": 251.88,
+      "end": 253.64,
+      "text": "for safety tuning."
+    },
+    {
+      "id": 81,
+      "start": 253.64,
+      "end": 257.64,
+      "text": "And you can see they have their first supervised fine tune model."
+    },
+    {
+      "id": 82,
+      "start": 257.64,
+      "end": 261.32,
+      "text": "This is with no like RL or anything like this."
+    },
+    {
+      "id": 83,
+      "start": 261.32,
+      "end": 262.68,
+      "text": "This is a second model."
+    },
+    {
+      "id": 84,
+      "start": 265.32,
+      "end": 268.76,
+      "text": "And it improves a lot with respect to helpfulness."
+    },
+    {
+      "id": 85,
+      "start": 268.76,
+      "end": 271.52,
+      "text": "And then they do more and more RLHF"
+    },
+    {
+      "id": 86,
+      "start": 271.52,
+      "end": 275.04,
+      "text": "where they start with the supervised fine tune model"
+    },
+    {
+      "id": 87,
+      "start": 275.04,
+      "end": 278.32,
+      "text": "and gradually do add more reward data"
+    },
+    {
+      "id": 88,
+      "start": 278.32,
+      "end": 280.4,
+      "text": "trained with a better reward model."
+    },
+    {
+      "id": 89,
+      "start": 280.4,
+      "end": 283.76,
+      "text": "And get to the end where they finally have the best model"
+    },
+    {
+      "id": 90,
+      "start": 283.76,
+      "end": 286.16,
+      "text": "that I believe this is the one that they actually released."
+    },
+    {
+      "id": 91,
+      "start": 286.16,
+      "end": 288.72,
+      "text": "So you can see that they really put a lot of effort"
+    },
+    {
+      "id": 92,
+      "start": 288.72,
+      "end": 290.72,
+      "text": "into making this model safe."
+    },
+    {
+      "id": 93,
+      "start": 290.72,
+      "end": 292.32,
+      "text": "And that's one of the main points of the paper"
+    },
+    {
+      "id": 94,
+      "start": 292.32,
+      "end": 293.16,
+      "text": "that they have to."
+    },
+    {
+      "id": 95,
+      "start": 298.4,
+      "end": 301.32,
+      "text": "Another interesting part of the Lama tree paper"
+    },
+    {
+      "id": 96,
+      "start": 301.32,
+      "end": 305.04,
+      "text": "is how they got it to follow chat instructions."
+    },
+    {
+      "id": 97,
+      "start": 305.04,
+      "end": 310.04,
+      "text": "And so I think you're all familiar from the class"
+    },
+    {
+      "id": 98,
+      "start": 310.32,
+      "end": 312.6,
+      "text": "where I talked about prompting."
+    },
+    {
+      "id": 99,
+      "start": 312.88,
+      "end": 316.96,
+      "text": "Where basically they prompt the language model"
+    },
+    {
+      "id": 100,
+      "start": 316.96,
+      "end": 320.84,
+      "text": "using a system message and a user message"
+    },
+    {
+      "id": 101,
+      "start": 320.84,
+      "end": 322.88,
+      "text": "and an assistant message."
+    },
+    {
+      "id": 102,
+      "start": 322.88,
+      "end": 327.88,
+      "text": "And so the characteristic of the system message"
+    },
+    {
+      "id": 103,
+      "start": 327.88,
+      "end": 330.76,
+      "text": "is this is something that you want to be obeyed"
+    },
+    {
+      "id": 104,
+      "start": 330.76,
+      "end": 335.0,
+      "text": "throughout the entire conversation, right?"
+    },
+    {
+      "id": 105,
+      "start": 335.0,
+      "end": 339.68,
+      "text": "And so in order to get this obeyed"
+    },
+    {
+      "id": 106,
+      "start": 339.68,
+      "end": 341.76,
+      "text": "throughout the entire conversation,"
+    },
+    {
+      "id": 107,
+      "start": 341.76,
+      "end": 344.76,
+      "text": "you need a model that's paying particular attention"
+    },
+    {
+      "id": 108,
+      "start": 344.76,
+      "end": 346.04,
+      "text": "to the system message."
+    },
+    {
+      "id": 109,
+      "start": 347.04,
+      "end": 349.56,
+      "text": "In this example, I'm saying right in only emojis."
+    },
+    {
+      "id": 110,
+      "start": 349.56,
+      "end": 351.76,
+      "text": "So no matter how long this conversation gets,"
+    },
+    {
+      "id": 111,
+      "start": 351.76,
+      "end": 353.84,
+      "text": "you want your model to continue writing in emojis"
+    },
+    {
+      "id": 112,
+      "start": 353.84,
+      "end": 356.64,
+      "text": "and models don't do this spontaneously."
+    },
+    {
+      "id": 113,
+      "start": 356.64,
+      "end": 360.04,
+      "text": "So what they did here, and I'm 90%,"
+    },
+    {
+      "id": 114,
+      "start": 360.04,
+      "end": 363.36,
+      "text": "95% certain that my interpretation of the paper is correct."
+    },
+    {
+      "id": 115,
+      "start": 363.36,
+      "end": 364.96,
+      "text": "The paper is a little bit hard to understand"
+    },
+    {
+      "id": 116,
+      "start": 364.96,
+      "end": 365.72,
+      "text": "with respect to this."
+    },
+    {
+      "id": 117,
+      "start": 365.72,
+      "end": 371.52,
+      "text": "But what they, I think they do is they take"
+    },
+    {
+      "id": 118,
+      "start": 371.52,
+      "end": 376.12,
+      "text": "the system message and then they have a data generation"
+    },
+    {
+      "id": 119,
+      "start": 376.12,
+      "end": 380.68,
+      "text": "step where they basically ask an existing model"
+    },
+    {
+      "id": 120,
+      "start": 380.68,
+      "end": 384.0,
+      "text": "to write in only emojis and then say hello"
+    },
+    {
+      "id": 121,
+      "start": 384.0,
+      "end": 386.24,
+      "text": "and then the model generates something."
+    },
+    {
+      "id": 122,
+      "start": 386.24,
+      "end": 388.68,
+      "text": "And then they say again, write in only emojis,"
+    },
+    {
+      "id": 123,
+      "start": 388.68,
+      "end": 390.12,
+      "text": "how are you doing?"
+    },
+    {
+      "id": 124,
+      "start": 390.12,
+      "end": 392.48,
+      "text": "And then they generate it again."
+    },
+    {
+      "id": 125,
+      "start": 392.48,
+      "end": 394.96,
+      "text": "And because this is so close in the context,"
+    },
+    {
+      "id": 126,
+      "start": 395.96,
+      "end": 400.24,
+      "text": "the assistant basically will continue"
+    },
+    {
+      "id": 127,
+      "start": 400.24,
+      "end": 403.12,
+      "text": "paying attention to these directions."
+    },
+    {
+      "id": 128,
+      "start": 403.12,
+      "end": 405.04,
+      "text": "And then after that, now you have a data set"
+    },
+    {
+      "id": 129,
+      "start": 405.04,
+      "end": 406.92,
+      "text": "that you can train your model on."
+    },
+    {
+      "id": 130,
+      "start": 406.92,
+      "end": 409.0,
+      "text": "You can train your model on this generated data set"
+    },
+    {
+      "id": 131,
+      "start": 409.0,
+      "end": 411.96,
+      "text": "that looks like right in only emojis say hello,"
+    },
+    {
+      "id": 132,
+      "start": 411.96,
+      "end": 414.2,
+      "text": "how are you doing in stuff like this?"
+    },
+    {
+      "id": 133,
+      "start": 414.2,
+      "end": 416.04,
+      "text": "And they try this with a whole bunch of rules."
+    },
+    {
+      "id": 134,
+      "start": 416.04,
+      "end": 420.72,
+      "text": "It's like write as if you're explaining to a five year old"
+    },
+    {
+      "id": 135,
+      "start": 420.72,
+      "end": 425.04,
+      "text": "or write in a very polite manner,"
+    },
+    {
+      "id": 136,
+      "start": 425.04,
+      "end": 427.8,
+      "text": "write in a very informal manner and stuff like that."
+    },
+    {
+      "id": 137,
+      "start": 427.8,
+      "end": 430.4,
+      "text": "So they generate a whole bunch of the synthetic data."
+    },
+    {
+      "id": 138,
+      "start": 430.4,
+      "end": 433.4,
+      "text": "And in doing this, they basically are able to train the model"
+    },
+    {
+      "id": 139,
+      "start": 433.4,
+      "end": 435.44,
+      "text": "to pay very close attention to the system message"
+    },
+    {
+      "id": 140,
+      "start": 435.44,
+      "end": 437.92,
+      "text": "because it needs to do something like that."
+    },
+    {
+      "id": 141,
+      "start": 439.28,
+      "end": 443.4,
+      "text": "So yeah, these are kind of the unique characteristics"
+    },
+    {
+      "id": 142,
+      "start": 443.4,
+      "end": 444.24,
+      "text": "from Wav2."
+    },
+    {
+      "id": 143,
+      "start": 444.24,
+      "end": 445.96,
+      "text": "I'd love to tell you more about its training data"
+    },
+    {
+      "id": 144,
+      "start": 445.96,
+      "end": 448.96,
+      "text": "and all that other stuff, but they didn't tell us"
+    },
+    {
+      "id": 145,
+      "start": 448.96,
+      "end": 450.36,
+      "text": "like what they did with respect to that."
+    },
+    {
+      "id": 146,
+      "start": 450.36,
+      "end": 452.48,
+      "text": "So we'll just have to infer from Monday."
+    },
+    {
+      "id": 147,
+      "start": 455.0,
+      "end": 455.84,
+      "text": "Cool."
+    },
+    {
+      "id": 148,
+      "start": 455.84,
+      "end": 457.0,
+      "text": "Any questions about this?"
+    },
+    {
+      "id": 149,
+      "start": 458.76,
+      "end": 459.76,
+      "text": "Okay."
+    },
+    {
+      "id": 150,
+      "start": 459.76,
+      "end": 460.76,
+      "text": "All right."
+    },
+    {
+      "id": 151,
+      "start": 462.72,
+      "end": 464.72,
+      "text": "So next I want to go into Mistral and Mistral."
+    },
+    {
+      "id": 152,
+      "start": 464.72,
+      "end": 466.32,
+      "text": "This is going to be a little bit short"
+    },
+    {
+      "id": 153,
+      "start": 466.32,
+      "end": 468.68,
+      "text": "because they've kind of covered some of this stuff already"
+    },
+    {
+      "id": 154,
+      "start": 468.68,
+      "end": 470.56,
+      "text": "and also they didn't tell you very much"
+    },
+    {
+      "id": 155,
+      "start": 470.56,
+      "end": 472.68,
+      "text": "about the training process."
+    },
+    {
+      "id": 156,
+      "start": 472.68,
+      "end": 476.96,
+      "text": "Basically it was created by Mistral, AI, the company."
+    },
+    {
+      "id": 157,
+      "start": 476.96,
+      "end": 479.12,
+      "text": "And it's a strong and somewhat multilingual"
+    },
+    {
+      "id": 158,
+      "start": 479.12,
+      "end": 481.24,
+      "text": "open language model."
+    },
+    {
+      "id": 159,
+      "start": 481.24,
+      "end": 484.36,
+      "text": "It has some unique features like speed optimizations"
+    },
+    {
+      "id": 160,
+      "start": 484.36,
+      "end": 488.28,
+      "text": "and including group query attention and mixture of experts."
+    },
+    {
+      "id": 161,
+      "start": 492.56,
+      "end": 495.6,
+      "text": "It makes unlike the other ones"
+    },
+    {
+      "id": 162,
+      "start": 495.6,
+      "end": 498.2,
+      "text": "it makes some actual architectural modifications"
+    },
+    {
+      "id": 163,
+      "start": 498.2,
+      "end": 500.52,
+      "text": "including sliding window attention"
+    },
+    {
+      "id": 164,
+      "start": 500.52,
+      "end": 502.44,
+      "text": "and mixture of experts."
+    },
+    {
+      "id": 165,
+      "start": 502.44,
+      "end": 504.36,
+      "text": "And I have actually talked about both of them."
+    },
+    {
+      "id": 166,
+      "start": 504.36,
+      "end": 507.8,
+      "text": "So I'll just very briefly go through them here."
+    },
+    {
+      "id": 167,
+      "start": 507.8,
+      "end": 510.72,
+      "text": "The data as far as I could tell was not disclosed"
+    },
+    {
+      "id": 168,
+      "start": 510.72,
+      "end": 513.56,
+      "text": "very completely, but one important thing is"
+    },
+    {
+      "id": 169,
+      "start": 513.56,
+      "end": 515.44,
+      "text": "it includes English and European languages."
+    },
+    {
+      "id": 170,
+      "start": 515.44,
+      "end": 518.56,
+      "text": "So at least theoretically it should be better than Lama."
+    },
+    {
+      "id": 171,
+      "start": 518.56,
+      "end": 523.08,
+      "text": "At this one interesting thing about Lama is Lama."
+    },
+    {
+      "id": 172,
+      "start": 523.08,
+      "end": 525.48,
+      "text": "If I remember correctly, their actual numbers are in paper"
+    },
+    {
+      "id": 173,
+      "start": 525.48,
+      "end": 527.92,
+      "text": "but it's something like 85% English,"
+    },
+    {
+      "id": 174,
+      "start": 529.16,
+      "end": 534.0,
+      "text": "8% code and then like zero point three percent"
+    },
+    {
+      "id": 175,
+      "start": 534.0,
+      "end": 538.48,
+      "text": "other languages like starting in all the other languages"
+    },
+    {
+      "id": 176,
+      "start": 538.48,
+      "end": 539.64,
+      "text": "it's like 0.3%."
+    },
+    {
+      "id": 177,
+      "start": 539.64,
+      "end": 541.56,
+      "text": "So it's not very multilingual at all."
+    },
+    {
+      "id": 178,
+      "start": 542.4,
+      "end": 546.4,
+      "text": "And they were really only able to create a good English model."
+    },
+    {
+      "id": 179,
+      "start": 548.32,
+      "end": 550.56,
+      "text": "Also the training details were not disclosed"
+    },
+    {
+      "id": 180,
+      "start": 550.56,
+      "end": 552.56,
+      "text": "like I wasn't able to find the best out this far."
+    },
+    {
+      "id": 181,
+      "start": 555.84,
+      "end": 558.56,
+      "text": "So Mr. will use a sliding window attention."
+    },
+    {
+      "id": 182,
+      "start": 558.56,
+      "end": 561.28,
+      "text": "The no attention basically you always attend"
+    },
+    {
+      "id": 183,
+      "start": 561.28,
+      "end": 565.08,
+      "text": "to all of the previous things in the sequence."
+    },
+    {
+      "id": 184,
+      "start": 565.08,
+      "end": 570.08,
+      "text": "What Mr. Oldon's is it attends to the previous N examples"
+    },
+    {
+      "id": 185,
+      "start": 570.44,
+      "end": 572.88,
+      "text": "where N is equal to 4096."
+    },
+    {
+      "id": 186,
+      "start": 572.88,
+      "end": 577.88,
+      "text": "And because of this, what this means is you can attend 4096 back."
+    },
+    {
+      "id": 187,
+      "start": 579.52,
+      "end": 582.28,
+      "text": "And then in the next layer you can attend 4096 back"
+    },
+    {
+      "id": 188,
+      "start": 582.28,
+      "end": 583.96,
+      "text": "then you can attend 4096 back."
+    },
+    {
+      "id": 189,
+      "start": 583.96,
+      "end": 587.88,
+      "text": "So basically as many layers as you have times 4096"
+    },
+    {
+      "id": 190,
+      "start": 587.88,
+      "end": 590.92,
+      "text": "you can attend that many tokens back"
+    },
+    {
+      "id": 191,
+      "start": 590.92,
+      "end": 592.76,
+      "text": "for a minimal training penalty"
+    },
+    {
+      "id": 192,
+      "start": 592.76,
+      "end": 594.52,
+      "text": "because still the length of attention"
+    },
+    {
+      "id": 193,
+      "start": 594.52,
+      "end": 597.12,
+      "text": "for any particular token is the same."
+    },
+    {
+      "id": 194,
+      "start": 597.12,
+      "end": 598.72,
+      "text": "So that's one feature."
+    },
+    {
+      "id": 195,
+      "start": 600.08,
+      "end": 604.48,
+      "text": "Oh and then yeah sorry the other feature is mixed role is using."
+    }
+  ],
+  "language": "en"
+}

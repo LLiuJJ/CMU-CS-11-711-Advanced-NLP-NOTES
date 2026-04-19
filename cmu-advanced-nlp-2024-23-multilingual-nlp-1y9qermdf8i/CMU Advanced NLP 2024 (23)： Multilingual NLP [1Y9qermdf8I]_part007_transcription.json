@@ -1,0 +1,215 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 5.2,
+      "text": "parameters for the language, and then they also have a task-based adapter. So based on the task"
+    },
+    {
+      "id": 1,
+      "start": 5.2,
+      "end": 11.44,
+      "text": "that you're solving, they end the adapter here. And they also demonstrated that you can pre-train"
+    },
+    {
+      "id": 2,
+      "start": 11.44,
+      "end": 19.28,
+      "text": "models with language-specific parameters included. In them, also from the point of view of an adapter,"
+    },
+    {
+      "id": 3,
+      "start": 20.48,
+      "end": 27.2,
+      "text": "we have done a similar thing for summarization where we compared prefix tuning and prefix tuning"
+    },
+    {
+      "id": 4,
+      "start": 27.2,
+      "end": 32.56,
+      "text": "in Laura. And we found that you could do a similar thing where you train a single model,"
+    },
+    {
+      "id": 5,
+      "start": 32.56,
+      "end": 38.24,
+      "text": "but each language has its own prefix tuning parameters or own Laura parameters. And that can be"
+    },
+    {
+      "id": 6,
+      "start": 38.24,
+      "end": 49.68,
+      "text": "pretty effective at improving capacity in the model. Yeah, I have very little time to cover the"
+    },
+    {
+      "id": 7,
+      "start": 49.68,
+      "end": 58.08,
+      "text": "last slides, I guess. So I'll just very quickly mention what I was going to mention. So another thing"
+    },
+    {
+      "id": 8,
+      "start": 58.08,
+      "end": 63.04,
+      "text": "you can do is create new data. One way you can create new data is just ask people to annotate data"
+    },
+    {
+      "id": 9,
+      "start": 63.04,
+      "end": 69.04,
+      "text": "for you. But the problem is for low resource languages, it's often hard to get lots of data. So one"
+    },
+    {
+      "id": 10,
+      "start": 69.04,
+      "end": 75.76,
+      "text": "thing we do is leverage something called active learning. The basic idea behind active learning"
+    },
+    {
+      "id": 11,
+      "start": 75.76,
+      "end": 82.56,
+      "text": "is that you use labeled data. You do some training, you get a model, then you apply that model to"
+    },
+    {
+      "id": 12,
+      "start": 82.56,
+      "end": 89.76,
+      "text": "lots of unlabeled data and select some data that the model is highly uncertain about and then throw"
+    },
+    {
+      "id": 13,
+      "start": 89.76,
+      "end": 94.56,
+      "text": "that to annotation. And so basically what this does is this allows you to select data where the"
+    },
+    {
+      "id": 14,
+      "start": 94.56,
+      "end": 99.36,
+      "text": "current model is not very confident or not very good or something like this. This can be really"
+    },
+    {
+      "id": 15,
+      "start": 99.36,
+      "end": 105.12,
+      "text": "helpful. It's not limited to multilingual learning, but it's specifically quite helpful in cases"
+    },
+    {
+      "id": 16,
+      "start": 105.12,
+      "end": 113.6,
+      "text": "where you can annotate only a small amount of data. And so the basic idea is illustrated here"
+    },
+    {
+      "id": 17,
+      "start": 114.56,
+      "end": 120.88,
+      "text": "for binary classification, where if you only annotate data randomly, you might end up getting"
+    },
+    {
+      "id": 18,
+      "start": 120.88,
+      "end": 126.96,
+      "text": "data that doesn't tell you very well about the specific decision boundary. And as a result,"
+    },
+    {
+      "id": 19,
+      "start": 126.96,
+      "end": 132.64,
+      "text": "the model trained on the few data points that you randomly select could be inaccurate. Whereas active"
+    },
+    {
+      "id": 20,
+      "start": 132.64,
+      "end": 138.8,
+      "text": "learning finds data directly on the decision boundary here, and that allows you to find more"
+    },
+    {
+      "id": 21,
+      "start": 141.36,
+      "end": 148.72,
+      "text": "effective samples. There's two fundamental ideas, uncertainty and representativeness. And you"
+    },
+    {
+      "id": 22,
+      "start": 148.72,
+      "end": 153.92,
+      "text": "want to come up with models, you want to come up with a data that selects data where the model is"
+    },
+    {
+      "id": 23,
+      "start": 153.92,
+      "end": 161.36,
+      "text": "uncertain, but representative. And so actually you can select data only for representativeness,"
+    },
+    {
+      "id": 24,
+      "start": 161.36,
+      "end": 166.48,
+      "text": "and it's only and it's relatively useful. So you can select only data that has lots of high"
+    },
+    {
+      "id": 25,
+      "start": 166.48,
+      "end": 171.68,
+      "text": "frequency phrases, for example, for machine translation. And that will allow you to get better"
+    },
+    {
+      "id": 26,
+      "start": 171.68,
+      "end": 180.16,
+      "text": "coverage of high frequency phrases. But uncertainty is also good because it helps you find like the"
+    },
+    {
+      "id": 27,
+      "start": 180.16,
+      "end": 185.52,
+      "text": "model's current blind spots. The problem with only uncertainty is it gives you lots of garbage."
+    },
+    {
+      "id": 28,
+      "start": 185.52,
+      "end": 190.88,
+      "text": "It'll get like for example, for machine translation, it will select things with only emojis,"
+    },
+    {
+      "id": 29,
+      "start": 190.96,
+      "end": 195.04,
+      "text": "or something like that. And that's not very useful to train your model."
+    },
+    {
+      "id": 30,
+      "start": 196.72,
+      "end": 203.84,
+      "text": "So I am more examples in the slides. I'm going to finish that up. But uncertainty, you can use"
+    },
+    {
+      "id": 31,
+      "start": 203.84,
+      "end": 209.04,
+      "text": "model confidence, representativeness. Basically, what you do is you try to get good coverage of the"
+    },
+    {
+      "id": 32,
+      "start": 209.04,
+      "end": 216.08,
+      "text": "embedding space of all of the embeddings that you have for models. And you can also do this"
+    },
+    {
+      "id": 33,
+      "start": 216.08,
+      "end": 221.04,
+      "text": "multilingually combined together with cross-lingual transfer. And we have some examples of how you,"
+    },
+    {
+      "id": 34,
+      "start": 221.04,
+      "end": 226.08,
+      "text": "I have a few examples of how you can do that in the slides here. So"
+    }
+  ],
+  "language": "en"
+}

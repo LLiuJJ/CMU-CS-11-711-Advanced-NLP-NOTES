@@ -1,0 +1,521 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 7.0,
+      "text": "So, an example could be the test of the significance of a difference of the accuracy of a model on two datasets."
+    },
+    {
+      "id": 1,
+      "start": 7.0,
+      "end": 12.0,
+      "text": "So, like, let's say I have dataset number one in dataset number two."
+    },
+    {
+      "id": 2,
+      "start": 12.0,
+      "end": 24.0,
+      "text": "What is the likelihood that there's actually a real difference in the datasets as opposed to just random sampling ways between them?"
+    },
+    {
+      "id": 3,
+      "start": 24.0,
+      "end": 30.0,
+      "text": "In contrast, a parent test compares the means of a quantity on one dataset under two conditions."
+    },
+    {
+      "id": 4,
+      "start": 30.0,
+      "end": 37.0,
+      "text": "And so, an example of this could be testing the significance of a difference of the accuracy of two models on one dataset."
+    },
+    {
+      "id": 5,
+      "start": 37.0,
+      "end": 39.0,
+      "text": "So, this is a really important difference."
+    },
+    {
+      "id": 6,
+      "start": 39.0,
+      "end": 46.0,
+      "text": "And the reason why it's a really important difference, well number one, we're most commonly interested in the letter."
+    },
+    {
+      "id": 7,
+      "start": 46.0,
+      "end": 58.0,
+      "text": "Number two, if we can make assumptions about the association of the points in the dataset, we're much, much more likely to get a significant result."
+    },
+    {
+      "id": 8,
+      "start": 58.0,
+      "end": 72.0,
+      "text": "Because we can look at the difference of the models on individual data points as opposed to is opposed to looking at just the difference in the means."
+    },
+    {
+      "id": 9,
+      "start": 72.0,
+      "end": 77.0,
+      "text": "One example of a statistical significance test is a bootstrap test."
+    },
+    {
+      "id": 10,
+      "start": 77.0,
+      "end": 83.0,
+      "text": "And the bootstrap test is really convenient because you can implement it for any evaluation metric that you want to be using."
+    },
+    {
+      "id": 11,
+      "start": 83.0,
+      "end": 87.0,
+      "text": "And so, in NLP, we can use lots of different evaluation metrics."
+    },
+    {
+      "id": 12,
+      "start": 87.0,
+      "end": 101.0,
+      "text": "We can use an evaluation metric like accuracy, but we can also use an evaluation metric like F measure for classification or a blue score or character F score or word error rate or something like that."
+    },
+    {
+      "id": 13,
+      "start": 101.0,
+      "end": 104.0,
+      "text": "For various tasks."
+    },
+    {
+      "id": 14,
+      "start": 104.0,
+      "end": 112.0,
+      "text": "And this is applicable to any any metric you want to use any quantity you want to measure also."
+    },
+    {
+      "id": 15,
+      "start": 112.0,
+      "end": 121.0,
+      "text": "So, the basic idea of a bootstrap test is a method that can measure p-values and confidence intervals by resampling data."
+    },
+    {
+      "id": 16,
+      "start": 122.0,
+      "end": 130.0,
+      "text": "And so, the way you do this is you sample subsets from your death test set with replacement."
+    },
+    {
+      "id": 17,
+      "start": 130.0,
+      "end": 137.0,
+      "text": "So, you might sample 10,000 times and you measure accuracy on these many subsets."
+    },
+    {
+      "id": 18,
+      "start": 137.0,
+      "end": 141.0,
+      "text": "And then you take the."
+    },
+    {
+      "id": 19,
+      "start": 141.0,
+      "end": 146.0,
+      "text": "Look at all of the accuracies that you got on these some sample data sets."
+    },
+    {
+      "id": 20,
+      "start": 146.0,
+      "end": 162.0,
+      "text": "And then you take the middle percentile range like 2.5 to 97.5 and you can treat that as a confidence interval, the 95% confidence interval about where you're like 95% certain that your results will fall."
+    },
+    {
+      "id": 21,
+      "start": 162.0,
+      "end": 172.0,
+      "text": "Another thing that you can do is you can do a paired test in what the paired test does is it measures the number of wins."
+    },
+    {
+      "id": 22,
+      "start": 172.0,
+      "end": 174.0,
+      "text": "If."
+    },
+    {
+      "id": 23,
+      "start": 174.0,
+      "end": 180.0,
+      "text": "And you measure the percentage of wins and this is the confidence set again in accuracy is not by chance."
+    },
+    {
+      "id": 24,
+      "start": 180.0,
+      "end": 185.0,
+      "text": "And so this could be one minus the p value of the parent test."
+    },
+    {
+      "id": 25,
+      "start": 185.0,
+      "end": 192.0,
+      "text": "So, this is easy to implement applicable to any evaluation measure, but somewhat biased and small data sets."
+    },
+    {
+      "id": 26,
+      "start": 192.0,
+      "end": 200.0,
+      "text": "Just a maybe I can give a more concrete example. So, let's say we have a classification data set."
+    },
+    {
+      "id": 27,
+      "start": 200.0,
+      "end": 211.0,
+      "text": "What you can do is let's say we have a."
+    },
+    {
+      "id": 28,
+      "start": 211.0,
+      "end": 218.0,
+      "text": "X one, X two, X three, S four, X five."
+    },
+    {
+      "id": 29,
+      "start": 218.0,
+      "end": 221.0,
+      "text": "So, this is our quest vision."
+    },
+    {
+      "id": 30,
+      "start": 221.0,
+      "end": 226.0,
+      "text": "And we have system one."
+    },
+    {
+      "id": 31,
+      "start": 226.0,
+      "end": 229.0,
+      "text": "System to."
+    },
+    {
+      "id": 32,
+      "start": 229.0,
+      "end": 235.0,
+      "text": "And we have right, right, right, right, wrong, right."
+    },
+    {
+      "id": 33,
+      "start": 235.0,
+      "end": 238.0,
+      "text": "Right, wrong, wrong, right."
+    },
+    {
+      "id": 34,
+      "start": 238.0,
+      "end": 244.0,
+      "text": "And so, what we do is we randomly sample a sub data set."
+    },
+    {
+      "id": 35,
+      "start": 244.0,
+      "end": 255.0,
+      "text": "And let's say this is like X three, X two, X four, X one, X two."
+    },
+    {
+      "id": 36,
+      "start": 255.0,
+      "end": 258.0,
+      "text": "And so this is our sub data set."
+    },
+    {
+      "id": 37,
+      "start": 258.0,
+      "end": 262.0,
+      "text": "What we do is."
+    },
+    {
+      "id": 38,
+      "start": 262.0,
+      "end": 269.0,
+      "text": "So, X three would be zero one X two would be one one X four would be one zero."
+    },
+    {
+      "id": 39,
+      "start": 269.0,
+      "end": 276.0,
+      "text": "X one would be one one and then."
+    },
+    {
+      "id": 40,
+      "start": 276.0,
+      "end": 279.0,
+      "text": "X X two would be one."
+    },
+    {
+      "id": 41,
+      "start": 279.0,
+      "end": 284.0,
+      "text": "And so, the overall accuracy here is."
+    },
+    {
+      "id": 42,
+      "start": 284.0,
+      "end": 291.0,
+      "text": "60% and 80% so if we didn't do any statistical significance test, we might say, oh, it's just."
+    },
+    {
+      "id": 43,
+      "start": 291.0,
+      "end": 296.0,
+      "text": "And so, if we did the significance test, we might say, oh, system two is better."
+    },
+    {
+      "id": 44,
+      "start": 296.0,
+      "end": 297.0,
+      "text": "Obviously."
+    },
+    {
+      "id": 45,
+      "start": 297.0,
+      "end": 302.0,
+      "text": "But if we do the significance test, this is one sample from the bootstrap test."
+    },
+    {
+      "id": 46,
+      "start": 302.0,
+      "end": 304.0,
+      "text": "And here."
+    },
+    {
+      "id": 47,
+      "start": 304.0,
+      "end": 306.0,
+      "text": "Now."
+    },
+    {
+      "id": 48,
+      "start": 306.0,
+      "end": 314.0,
+      "text": "We get like 80% and 80% and it's like, okay, actually, maybe in some cases, these systems are equally good."
+    },
+    {
+      "id": 49,
+      "start": 314.0,
+      "end": 320.0,
+      "text": "Maybe there's a tie or if we sampled another one, let's say we sampled."
+    },
+    {
+      "id": 50,
+      "start": 320.0,
+      "end": 328.0,
+      "text": "X four X one X two X four X one."
+    },
+    {
+      "id": 51,
+      "start": 328.0,
+      "end": 336.0,
+      "text": "Then we get something like one zero one one one one one one zero one one."
+    },
+    {
+      "id": 52,
+      "start": 336.0,
+      "end": 339.0,
+      "text": "This would be 100%."
+    },
+    {
+      "id": 53,
+      "start": 339.0,
+      "end": 342.0,
+      "text": "This would be 60%."
+    },
+    {
+      "id": 54,
+      "start": 342.0,
+      "end": 344.0,
+      "text": "And so."
+    },
+    {
+      "id": 55,
+      "start": 344.0,
+      "end": 347.0,
+      "text": "And so, in some cases, depending on how we sample, actually system one wins."
+    },
+    {
+      "id": 56,
+      "start": 347.0,
+      "end": 357.0,
+      "text": "And so you have the number of times that system to wins based on based on these subsamples, you have the number of times that system one wins and you have the number of times you get a time."
+    },
+    {
+      "id": 57,
+      "start": 357.0,
+      "end": 366.0,
+      "text": "And only in the case where a system two or like the better system wins more than 95% of the time, you say that there's a significant."
+    },
+    {
+      "id": 58,
+      "start": 366.0,
+      "end": 372.0,
+      "text": "Or alternatively, you could also look at the confidence intervals by saying, okay, I sampled."
+    },
+    {
+      "id": 59,
+      "start": 372.0,
+      "end": 381.0,
+      "text": "Like 90 95% of the time, the accuracy of system ones, like 80% or lower."
+    },
+    {
+      "id": 60,
+      "start": 381.0,
+      "end": 385.0,
+      "text": "So now we do not allow."
+    },
+    {
+      "id": 61,
+      "start": 385.0,
+      "end": 394.0,
+      "text": "So yeah, sorry, this is a very very quick overview of this, but the reason why this is useful is, let's say you create a very small data set."
+    },
+    {
+      "id": 62,
+      "start": 394.0,
+      "end": 403.0,
+      "text": "If you create a very small data set, this is going to give you a very, it's going to be very hard to get a statistically significant result of this data set because it's tiny right."
+    },
+    {
+      "id": 63,
+      "start": 403.0,
+      "end": 409.0,
+      "text": "And, you know, quite frequently you're going to be sampling."
+    },
+    {
+      "id": 64,
+      "start": 409.0,
+      "end": 421.0,
+      "text": "You're going to be sampling data sets like this where the model, like where model one wins quite frequently you're going to be sampling other data sets where mountains and basically you're not going to be able to save with confidence."
+    },
+    {
+      "id": 65,
+      "start": 421.0,
+      "end": 425.0,
+      "text": "Which model is better because you just don't have enough data to save that."
+    },
+    {
+      "id": 66,
+      "start": 425.0,
+      "end": 431.0,
+      "text": "But as you make your data set bigger and bigger, it becomes easier and easier to get a significant result."
+    },
+    {
+      "id": 67,
+      "start": 431.0,
+      "end": 442.0,
+      "text": "And so, because you're more sure that you didn't just randomly pick data that model to is better at."
+    },
+    {
+      "id": 68,
+      "start": 442.0,
+      "end": 457.0,
+      "text": "So, there's also other varieties of tests. There's things like key tasks for unpaired, unpaired outputs and paired key tasks for a pair of outputs. Those work when your outputs are edited."
+    },
+    {
+      "id": 69,
+      "start": 457.0,
+      "end": 469.0,
+      "text": "So, they work for accuracy because the accuracy is just you add all the add all the ones and then divide by the number of instances and they get to an accuracy."
+    },
+    {
+      "id": 70,
+      "start": 469.0,
+      "end": 473.0,
+      "text": "That doesn't work for something like f measure."
+    },
+    {
+      "id": 71,
+      "start": 473.0,
+      "end": 485.0,
+      "text": "Because f measure is two times precision times recall divided by position, but we call."
+    },
+    {
+      "id": 72,
+      "start": 485.0,
+      "end": 489.0,
+      "text": "In precision and recall, you can."
+    },
+    {
+      "id": 73,
+      "start": 489.0,
+      "end": 499.0,
+      "text": "Like a t test works for this, but there's a non additive component of that measure so you can't calculate statistically significant differences in that measure using a t test."
+    },
+    {
+      "id": 74,
+      "start": 499.0,
+      "end": 511.0,
+      "text": "In that case, you're basically you have to use a bootstrap method like this in order to get it to work or you need to do some really complex math, but."
+    },
+    {
+      "id": 75,
+      "start": 511.0,
+      "end": 525.0,
+      "text": "So, are there any questions about this I guess we'll have a code example in the rest of the session so you can go in and take a look at that there's also tons of code examples online."
+    },
+    {
+      "id": 76,
+      "start": 525.0,
+      "end": 528.0,
+      "text": "Okay."
+    },
+    {
+      "id": 77,
+      "start": 528.0,
+      "end": 536.0,
+      "text": "So now let me let me go back to the actual slides for today."
+    },
+    {
+      "id": 78,
+      "start": 536.0,
+      "end": 541.0,
+      "text": "And given those the results of our statistical seconds."
+    },
+    {
+      "id": 79,
+      "start": 541.0,
+      "end": 550.0,
+      "text": "How can we estimate how much testing data is enough and there's a method called power analysis that allows you to do this."
+    },
+    {
+      "id": 80,
+      "start": 550.0,
+      "end": 557.0,
+      "text": "And basically the idea of power analysis is that you make an assumption about the effect size between settings."
+    },
+    {
+      "id": 81,
+      "start": 557.0,
+      "end": 562.0,
+      "text": "And for example, the expected accuracy difference between tested models."
+    },
+    {
+      "id": 82,
+      "start": 562.0,
+      "end": 574.0,
+      "text": "And given the effect size a significance threshold and a significance threshold, you can determine how much data is necessary to give a significant impact on those files."
+    },
+    {
+      "id": 83,
+      "start": 574.0,
+      "end": 578.0,
+      "text": "And so to give an example again."
+    },
+    {
+      "id": 84,
+      "start": 578.0,
+      "end": 591.0,
+      "text": "So, what's the same we're talking about the accuracy let's see we have a baseline model and we have a we have a baseline model and then we also have our proposed model."
+    },
+    {
+      "id": 85,
+      "start": 591.0,
+      "end": 601.0,
+      "text": "And we know kind of from experience of the baseline model is probably going to get around 90% accuracy. We know by like eyeballing eyeballing the data or something like that."
+    }
+  ],
+  "language": "en"
+}

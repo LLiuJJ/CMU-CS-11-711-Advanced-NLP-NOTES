@@ -1,0 +1,311 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 4.0,
+      "text": "Hey everyone, so I'd like to get started."
+    },
+    {
+      "id": 1,
+      "start": 4.0,
+      "end": 15.0,
+      "text": "The first thing is that I heard from the AWS people that they started the process of getting."
+    },
+    {
+      "id": 2,
+      "start": 15.0,
+      "end": 20.0,
+      "text": "Things issued on the 26th, which is three days ago, so you should be getting it soon."
+    },
+    {
+      "id": 3,
+      "start": 20.0,
+      "end": 24.0,
+      "text": "For reference, I submitted the form about seven days before that."
+    },
+    {
+      "id": 4,
+      "start": 24.0,
+      "end": 32.0,
+      "text": "So they're moving very slowly, but I think you should have eight of the S cards by then, but we could really them to run GPU machines or stuff like that."
+    },
+    {
+      "id": 5,
+      "start": 32.0,
+      "end": 53.0,
+      "text": "The moment you get AWS credits or maybe even before you get AWS credits, I might suggest that you try to start a GPU machine, like a P2 machine or something like that because sometimes you need to file for a limit increase to get a P2 machine and then also takes a little bit of time."
+    },
+    {
+      "id": 6,
+      "start": 53.0,
+      "end": 58.0,
+      "text": "So I would suggest that you you take a look at doing that."
+    },
+    {
+      "id": 7,
+      "start": 58.0,
+      "end": 69.0,
+      "text": "So you go to like if you're using AWS, if you're not using AWS, it doesn't matter, but if you're using AWS, you can go to watch instance and try to launch a P2 X large machine or something like that."
+    },
+    {
+      "id": 8,
+      "start": 69.0,
+      "end": 82.0,
+      "text": "So, but yeah, anyway, hopefully that will be done soon. I'm sorry about the delay on this. They said it would take seven days and it's taken almost twice that now. So I might hold this."
+    },
+    {
+      "id": 9,
+      "start": 82.0,
+      "end": 90.0,
+      "text": "Any other things before we get started."
+    },
+    {
+      "id": 10,
+      "start": 90.0,
+      "end": 94.0,
+      "text": "Okay, I don't see any. So I'll go ahead with this."
+    },
+    {
+      "id": 11,
+      "start": 94.0,
+      "end": 103.0,
+      "text": "I have slightly fewer sides today. So I might go a little bit off the slides and talk about papers and stuff or we might finish early either way."
+    },
+    {
+      "id": 12,
+      "start": 103.0,
+      "end": 109.0,
+      "text": "But when I would like to talk about is combining multiple models."
+    },
+    {
+      "id": 13,
+      "start": 109.0,
+      "end": 124.0,
+      "text": "And this is really important and useful. If you want to get like an extra few points of accuracy for anything, basically, because it's a pretty reliable way to get improvements."
+    },
+    {
+      "id": 14,
+      "start": 124.0,
+      "end": 132.0,
+      "text": "And there's a bunch of different kind of related but different topics that I'm going to talk about today."
+    },
+    {
+      "id": 15,
+      "start": 132.0,
+      "end": 147.0,
+      "text": "But anyway, the basic background is that we have many models that exist. And the reason why we have many models that exist is multiple hold number one, we could have different model architectures."
+    },
+    {
+      "id": 16,
+      "start": 147.0,
+      "end": 160.0,
+      "text": "And we could also have different initializations of those model architectures. So normally, you know, if we do initialization, we will initially initialize our model architecture."
+    },
+    {
+      "id": 17,
+      "start": 160.0,
+      "end": 175.0,
+      "text": "We start out with random seven B parameters. And then we train and we get llama seven B for our pre training for llama 27 B."
+    },
+    {
+      "id": 18,
+      "start": 175.0,
+      "end": 183.0,
+      "text": "So we might initialize another model. This could be, you know, the same architecture, different architecture, training on the same data or different data."
+    },
+    {
+      "id": 19,
+      "start": 183.0,
+      "end": 193.0,
+      "text": "And get something like mistral mistral seven B. In this case, actually, maybe these are I should have indicated that these are different architectures, but you know, we get a different operating model."
+    },
+    {
+      "id": 20,
+      "start": 193.0,
+      "end": 200.0,
+      "text": "And of course, we could also make it bigger or smaller or whatever else and then we get monitor 270 B over here."
+    },
+    {
+      "id": 21,
+      "start": 200.0,
+      "end": 214.0,
+      "text": "And after we do that, there's a lot of fine tuning that goes on according to different strategies. So we have, you know, llama 27 B instruct the tuna seven B version 1.5."
+    },
+    {
+      "id": 22,
+      "start": 214.0,
+      "end": 235.0,
+      "text": "mistral seven B instruct news, her knees to mistral seven B or llama 270 B instruct. So we have a variety of architectures, a variety of random initializations of those architectures, a variety of pre trained models due to pre training data or base models."
+    },
+    {
+      "id": 23,
+      "start": 235.0,
+      "end": 241.0,
+      "text": "And then a variety of fine dude models. And so we have this kind of like branch and tree basically."
+    },
+    {
+      "id": 24,
+      "start": 241.0,
+      "end": 253.0,
+      "text": "The reason why this is important is because when we're combining multiple models together, some of the methods are applicable to completely different models, some of the methods are only applicable to models that share the same architecture."
+    },
+    {
+      "id": 25,
+      "start": 253.0,
+      "end": 264.0,
+      "text": "And some of them are only applicable to models that share the same initialization and training trajectory. And so I'll try to distinguish between those."
+    },
+    {
+      "id": 26,
+      "start": 265.0,
+      "end": 280.0,
+      "text": "Cool. So the first thing I'll talk about is model on sampling and on sampling is kind of the very general technique that you can use in a lot of different ways, but it has disadvantages as well."
+    },
+    {
+      "id": 27,
+      "start": 280.0,
+      "end": 297.0,
+      "text": "So basically on sampling is combining the predictions from multiple models and the easiest way to do this ignore the LSTM here. This is just any sequence modeling thing. It's because the slides are old, but like let's say this is a transformer."
+    },
+    {
+      "id": 28,
+      "start": 297.0,
+      "end": 318.0,
+      "text": "It is calculating the current decoder state and you make a prediction. This is calculating a current decoder state in making a prediction and based on some combination of the two predictions, you decide what you actually want to output at the next step."
+    },
+    {
+      "id": 29,
+      "start": 319.0,
+      "end": 333.0,
+      "text": "So why would we want to do this? Does anyone have any ideas why we would want to use two models instead of using one model or just using the best model?"
+    },
+    {
+      "id": 30,
+      "start": 333.0,
+      "end": 347.0,
+      "text": "Or maybe in what situations we would want to do this?"
+    },
+    {
+      "id": 31,
+      "start": 347.0,
+      "end": 352.0,
+      "text": "What's the advantage of doing that?"
+    },
+    {
+      "id": 32,
+      "start": 352.0,
+      "end": 357.0,
+      "text": "Yeah, it reduces the bias kind of, yeah, sure."
+    },
+    {
+      "id": 33,
+      "start": 377.0,
+      "end": 405.0,
+      "text": "Yeah, so I'll repeat all of these. I think all of these are correct. So number one, it reduces the bias caused by a single model."
+    },
+    {
+      "id": 34,
+      "start": 405.0,
+      "end": 419.0,
+      "text": "Number two, it was, it's kind of like a Bayesian perspective, which I'll talk about in a second. And then number three, we have different models and models are better at some things and worse and other things."
+    },
+    {
+      "id": 35,
+      "start": 419.0,
+      "end": 426.0,
+      "text": "So talking about the better at some things and worse and other things."
+    },
+    {
+      "id": 36,
+      "start": 426.0,
+      "end": 438.0,
+      "text": "The basic idea behind on sampling is that the errors that model models make tend to not be consistent. And that tend to not be as consistent as when the model is getting it correct."
+    },
+    {
+      "id": 37,
+      "start": 438.0,
+      "end": 453.0,
+      "text": "So we might have, we might have one model that says, like let's say we just have really, really bad models. This is kind of a really obvious example."
+    },
+    {
+      "id": 38,
+      "start": 453.0,
+      "end": 464.0,
+      "text": "We have like the dog, the dog varts and then runs and then dies."
+    },
+    {
+      "id": 39,
+      "start": 464.0,
+      "end": 476.0,
+      "text": "And we have one model that just had tons of stuff about diving in its training data, another model that had tons of stuff about running and the training data or marijuana or something."
+    },
+    {
+      "id": 40,
+      "start": 476.0,
+      "end": 500.0,
+      "text": "So we'll get model one and model one will tend to give like a probability of like 0.3, maybe 0.4 and 0.05. And then we'll have another one over here that's like 0.3 to 0.41 and 0.0.0.0.0.0.0.0.4."
+    },
+    {
+      "id": 41,
+      "start": 500.0,
+      "end": 513.0,
+      "text": "So when you average the two together, you tend to get the right answer more often because kind of the mistakes that they make tend to be less correlated than the probability of getting it correct."
+    },
+    {
+      "id": 42,
+      "start": 513.0,
+      "end": 523.0,
+      "text": "And of course it's not perfect because ensemble models are not perfect, but this is a general tendency that we see a lot in models."
+    },
+    {
+      "id": 43,
+      "start": 523.0,
+      "end": 536.0,
+      "text": "And it's because of this, it kind of smooths over the idiosyncrasies of the models. You can even just ensemble models from different checkpoints in that still gives you improvements."
+    },
+    {
+      "id": 44,
+      "start": 536.0,
+      "end": 549.0,
+      "text": "And so when you ensemble models from different checkpoints, it's basically just what data did they see most recently and that also smooths over, you know, the fact that like this model happened to see some data more recently."
+    },
+    {
+      "id": 45,
+      "start": 549.0,
+      "end": 557.0,
+      "text": "And so it's less, you know, it's biased towards doing that. So this is a pretty effective method."
+    },
+    {
+      "id": 46,
+      "start": 557.0,
+      "end": 565.0,
+      "text": "This is one of the few methods that I know is going to improve my accuracy almost every time. Like there's a bunch of methods that you can apply."
+    },
+    {
+      "id": 47,
+      "start": 565.0,
+      "end": 577.0,
+      "text": "And I, I'm sampling, it's very rare for me to ensemble two models together and not get a boost in accuracy in some ways. So it's a good thing."
+    },
+    {
+      "id": 48,
+      "start": 577.0,
+      "end": 584.0,
+      "text": "There's two main ways to combine models together. And both of them are useful in different situations."
+    },
+    {
+      "id": 49,
+      "start": 584.0,
+      "end": 595.0,
+      "text": "The first one is linear interpolation. And when you do linear interpolation, basically what you're doing is you're taking the weighted average of model probabilities."
+    },
+    {
+      "id": 50,
+      "start": 595.0,
+      "end": 600.0,
+      "text": "And the way that looks mathematically is like this."
+    }
+  ],
+  "language": "en"
+}

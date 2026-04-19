@@ -1,0 +1,521 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 8.0,
+      "text": "Any questions about this?"
+    },
+    {
+      "id": 1,
+      "start": 8.0,
+      "end": 10.0,
+      "text": "Yeah."
+    },
+    {
+      "id": 2,
+      "start": 10.0,
+      "end": 12.0,
+      "text": "Yeah."
+    },
+    {
+      "id": 3,
+      "start": 12.0,
+      "end": 16.0,
+      "text": "I think you're getting sort of fun with this, like, input."
+    },
+    {
+      "id": 4,
+      "start": 16.0,
+      "end": 22.0,
+      "text": "And then you started with a similar input without using model and input."
+    },
+    {
+      "id": 5,
+      "start": 22.0,
+      "end": 24.0,
+      "text": "Can you give an example?"
+    },
+    {
+      "id": 6,
+      "start": 24.0,
+      "end": 25.0,
+      "text": "Yeah."
+    },
+    {
+      "id": 7,
+      "start": 25.0,
+      "end": 28.0,
+      "text": "Say my account is still in a great movie."
+    },
+    {
+      "id": 8,
+      "start": 28.0,
+      "end": 32.0,
+      "text": "For the movie, for example, I heard."
+    },
+    {
+      "id": 9,
+      "start": 32.0,
+      "end": 36.0,
+      "text": "Very, very good."
+    },
+    {
+      "id": 10,
+      "start": 36.0,
+      "end": 37.0,
+      "text": "Yeah."
+    },
+    {
+      "id": 11,
+      "start": 37.0,
+      "end": 41.0,
+      "text": "So."
+    },
+    {
+      "id": 12,
+      "start": 41.0,
+      "end": 44.0,
+      "text": "It depends a lot on the model."
+    },
+    {
+      "id": 13,
+      "start": 44.0,
+      "end": 55.0,
+      "text": "The reason why this system message was input here in the first place was this wasn't originally a feature of opening a models."
+    },
+    {
+      "id": 14,
+      "start": 55.0,
+      "end": 60.0,
+      "text": "Open AI was the first place to introduce us, which is why I'm calling it open AI message."
+    },
+    {
+      "id": 15,
+      "start": 60.0,
+      "end": 61.0,
+      "text": "It's for me."
+    },
+    {
+      "id": 16,
+      "start": 61.0,
+      "end": 69.0,
+      "text": "They didn't originally have something like this, but they were having lots of trouble with people trying to reveal the prompts that were given to systems."
+    },
+    {
+      "id": 17,
+      "start": 69.0,
+      "end": 74.0,
+      "text": "Like, like, prompt injection attacks or like jail breaking it."
+    },
+    {
+      "id": 18,
+      "start": 74.0,
+      "end": 75.0,
+      "text": "So like that."
+    },
+    {
+      "id": 19,
+      "start": 75.0,
+      "end": 85.0,
+      "text": "And so the models would basically reveal this prompt that was being used behind the scenes by whatever customer of open AI was like the planning system."
+    },
+    {
+      "id": 20,
+      "start": 85.0,
+      "end": 95.0,
+      "text": "And so in order to fix this, basically what open AI did, I believe, like, they're, they don't actually how you exactly what they did."
+    },
+    {
+      "id": 21,
+      "start": 95.0,
+      "end": 104.0,
+      "text": "So assuming what they did is they trained their models so that the models would not output anything that's included in the system message."
+    },
+    {
+      "id": 22,
+      "start": 104.0,
+      "end": 111.0,
+      "text": "So the system messages used to influence behavior, but it like they're explicitly trained to not output things that are within there."
+    },
+    {
+      "id": 23,
+      "start": 111.0,
+      "end": 114.0,
+      "text": "And so if you put the actual."
+    },
+    {
+      "id": 24,
+      "start": 114.0,
+      "end": 127.0,
+      "text": "If you put the actual thing that you wanted to evaluate within the system message, it might still predict the sentiment correctly, but it won't repeat the."
+    },
+    {
+      "id": 25,
+      "start": 127.0,
+      "end": 129.0,
+      "text": "The stuff that was in the system."
+    },
+    {
+      "id": 26,
+      "start": 129.0,
+      "end": 132.0,
+      "text": "Yeah."
+    },
+    {
+      "id": 27,
+      "start": 132.0,
+      "end": 139.0,
+      "text": "Yeah."
+    },
+    {
+      "id": 28,
+      "start": 139.0,
+      "end": 148.0,
+      "text": "Yeah, so that's a great question. So typically this is hand created. So you create something like this."
+    },
+    {
+      "id": 29,
+      "start": 148.0,
+      "end": 158.0,
+      "text": "I have a bracket X here, but another way that people typically specify this is you just have a big."
+    },
+    {
+      "id": 30,
+      "start": 158.0,
+      "end": 167.0,
+      "text": "You just have a big screen, which is like, you know, please."
+    },
+    {
+      "id": 31,
+      "start": 167.0,
+      "end": 173.0,
+      "text": "Please pass by by."
+    },
+    {
+      "id": 32,
+      "start": 173.0,
+      "end": 180.0,
+      "text": "And then you have."
+    },
+    {
+      "id": 33,
+      "start": 180.0,
+      "end": 192.0,
+      "text": "And then you substitute in like the end of this place here. So you usually have read it. I'm going to talk."
+    },
+    {
+      "id": 34,
+      "start": 192.0,
+      "end": 202.0,
+      "text": "And about some methods to one of these. Also, but I'd say like 90 95% of the time people are just writing the manual."
+    },
+    {
+      "id": 35,
+      "start": 202.0,
+      "end": 207.0,
+      "text": "If I would write them."
+    },
+    {
+      "id": 36,
+      "start": 207.0,
+      "end": 218.0,
+      "text": "And then."
+    },
+    {
+      "id": 37,
+      "start": 218.0,
+      "end": 233.0,
+      "text": "So typically the template is written when you decide what system you want to create. So you decide you want to create a sentiment analysis system. So you create a template that either says, like, please, please find a topic in the case of a model that is trained to follow instructions."
+    },
+    {
+      "id": 38,
+      "start": 233.0,
+      "end": 244.0,
+      "text": "Or if you have a base model that was not trained to follow instructions, which is where where nowadays, but GPT 2 or a lot, llama to without chat tuning as an example of that."
+    },
+    {
+      "id": 39,
+      "start": 244.0,
+      "end": 256.0,
+      "text": "So you would need to create a template that looks like this, where you put the model in a situation where the next."
+    },
+    {
+      "id": 40,
+      "start": 256.0,
+      "end": 263.0,
+      "text": "Where that follows up should be indicative of the answer to your question. So like positive or negative or something like that. So."
+    },
+    {
+      "id": 41,
+      "start": 263.0,
+      "end": 274.0,
+      "text": "Either way, like usually you hand write this when you decide what task is you want to do. Then this input acts this comes at test time this comes when you actually deploy your system."
+    },
+    {
+      "id": 42,
+      "start": 274.0,
+      "end": 282.0,
+      "text": "So this would be like in the Amazon review that you wanted to press by using a little."
+    },
+    {
+      "id": 43,
+      "start": 282.0,
+      "end": 285.0,
+      "text": "Cool, any other questions."
+    },
+    {
+      "id": 44,
+      "start": 285.0,
+      "end": 286.0,
+      "text": "Okay."
+    },
+    {
+      "id": 45,
+      "start": 287.0,
+      "end": 295.0,
+      "text": "So basically this is what is happening behind the scenes. I don't know what open a eyes format is because they won't tell us, of course."
+    },
+    {
+      "id": 46,
+      "start": 295.0,
+      "end": 300.0,
+      "text": "But you know, I'm assuming that that's similar to what's happening in open."
+    },
+    {
+      "id": 47,
+      "start": 300.0,
+      "end": 301.0,
+      "text": "Okay."
+    },
+    {
+      "id": 48,
+      "start": 301.0,
+      "end": 307.0,
+      "text": "So the next thing that we do is answer predictions. So given the prompt, we predict the answer."
+    },
+    {
+      "id": 49,
+      "start": 307.0,
+      "end": 315.0,
+      "text": "And so using whatever algorithm we want to use, we predict, you know, fantastic here."
+    },
+    {
+      "id": 50,
+      "start": 315.0,
+      "end": 333.0,
+      "text": "And actually it might not predict fantastic. It might predict something else like overall, it was a really fantastic movie that I liked a lot or something like that."
+    },
+    {
+      "id": 51,
+      "start": 333.0,
+      "end": 335.0,
+      "text": "So it might also do something like that."
+    },
+    {
+      "id": 52,
+      "start": 335.0,
+      "end": 345.0,
+      "text": "So based on that, we want to select the actual output out of the generated outputs and I'm calling this post processing."
+    },
+    {
+      "id": 53,
+      "start": 345.0,
+      "end": 356.0,
+      "text": "So for instance, we might take the output as is. So for something like just you interacting with chat JPT or interacting with a chat model, you might be looking at the text as is."
+    },
+    {
+      "id": 54,
+      "start": 356.0,
+      "end": 367.0,
+      "text": "Or it might be formatting the output for easy visualization, selecting only parts of the output that you want to use or mapping the output to other actions."
+    },
+    {
+      "id": 55,
+      "start": 367.0,
+      "end": 375.0,
+      "text": "So to give an example of formatting, this is a feature of chat JPT or bar or anything that you interact with."
+    },
+    {
+      "id": 56,
+      "start": 375.0,
+      "end": 380.0,
+      "text": "I wrote, please write a table with the last five presidents and their birth dates."
+    },
+    {
+      "id": 57,
+      "start": 380.0,
+      "end": 387.0,
+      "text": "And chat JPT is happy to do this for me. It says here is a table with the last five US presidents and their birth dates."
+    },
+    {
+      "id": 58,
+      "start": 387.0,
+      "end": 391.0,
+      "text": "Joe Biden, Donald Trump, Barack Obama, George W. West, for Clinton."
+    },
+    {
+      "id": 59,
+      "start": 391.0,
+      "end": 395.0,
+      "text": "But this is written in markdown."
+    },
+    {
+      "id": 60,
+      "start": 395.0,
+      "end": 400.0,
+      "text": "So it basically makes this table and then renders it in easy to be away."
+    },
+    {
+      "id": 61,
+      "start": 400.0,
+      "end": 406.0,
+      "text": "So this is really important if you're building a user facing system because you want to be able to render these things."
+    },
+    {
+      "id": 62,
+      "start": 406.0,
+      "end": 415.0,
+      "text": "But the only thing a large language model can output is text, right? It can output a three of tokens. So this is a really good way to interact with it."
+    },
+    {
+      "id": 63,
+      "start": 415.0,
+      "end": 421.0,
+      "text": "I followed by saying output that in JSON format. So it says here is information in JSON format."
+    },
+    {
+      "id": 64,
+      "start": 421.0,
+      "end": 427.0,
+      "text": "And instead of just giving me a big JSON string, it gives me syntax highlighting and all others stuff like this."
+    },
+    {
+      "id": 65,
+      "start": 427.0,
+      "end": 435.0,
+      "text": "Presumably what it's doing here is it's outputting like a triple hash or something like this."
+    },
+    {
+      "id": 66,
+      "start": 435.0,
+      "end": 444.0,
+      "text": "And the reason why I know that is because it seems to be making a mistake down here for some reason."
+    },
+    {
+      "id": 67,
+      "start": 444.0,
+      "end": 452.0,
+      "text": "Like I'll putting a weirdly formatted thing at the end. So even chat JPT makes mistakes."
+    },
+    {
+      "id": 68,
+      "start": 452.0,
+      "end": 455.0,
+      "text": "Cool."
+    },
+    {
+      "id": 69,
+      "start": 455.0,
+      "end": 467.0,
+      "text": "Another thing that you might want to do is especially if you're not using it in like a directly user facing application, but you want to use it to extract some information or make some classification decision or something like that."
+    },
+    {
+      "id": 70,
+      "start": 467.0,
+      "end": 472.0,
+      "text": "You often select information that's indicative of the answer."
+    },
+    {
+      "id": 71,
+      "start": 472.0,
+      "end": 476.0,
+      "text": "And so I love this movie overall. It was a movie that was simply fantastic."
+    },
+    {
+      "id": 72,
+      "start": 476.0,
+      "end": 483.0,
+      "text": "You can do things like extract keywords like fantastic and use that to indicate positive sentiment."
+    },
+    {
+      "id": 73,
+      "start": 483.0,
+      "end": 501.0,
+      "text": "And there's various methods for doing this. And these are also used in the benchmarks that are used to evaluate language models. So it's, you know, like even if you're not building an application directly, but you're just trying to do well in this class and get like a high score on the leaderboard or something. It's still useful to know about these things."
+    },
+    {
+      "id": 74,
+      "start": 502.0,
+      "end": 510.0,
+      "text": "For things like classification, you can identify keywords like fantastic that might be indicative of the class."
+    },
+    {
+      "id": 75,
+      "start": 510.0,
+      "end": 522.0,
+      "text": "Another thing that's pretty common is for regression or numerical problems. You identify numbers and pull out the numbers and use those numbers is the answer."
+    },
+    {
+      "id": 76,
+      "start": 522.0,
+      "end": 528.0,
+      "text": "For code, you can pull out code snippets and triple backticks and then execute the code, for example."
+    },
+    {
+      "id": 77,
+      "start": 528.0,
+      "end": 539.0,
+      "text": "So all of these things are basically heuristic methods, but they can be used to pull out the actual answer that you want from the text that's trying to die."
+    },
+    {
+      "id": 78,
+      "start": 539.0,
+      "end": 546.0,
+      "text": "Cool. Any questions about that."
+    },
+    {
+      "id": 79,
+      "start": 546.0,
+      "end": 554.0,
+      "text": "Something is output mapping given an answer, a method into a class label or a continuous value."
+    },
+    {
+      "id": 80,
+      "start": 554.0,
+      "end": 561.0,
+      "text": "And so this is doing something like taking fantastic and mapping it into the class positive."
+    },
+    {
+      "id": 81,
+      "start": 561.0,
+      "end": 568.0,
+      "text": "And so, you know, if you want to extract one to five star ratings from reviews, this is something you would need to do."
+    },
+    {
+      "id": 82,
+      "start": 568.0,
+      "end": 583.0,
+      "text": "And often it's like a one to one class to many, many word mapping. And by doing this, you can basically get a more robust mapping onto the number that you actually want."
+    },
+    {
+      "id": 83,
+      "start": 583.0,
+      "end": 588.0,
+      "text": "I actually coincidentally."
+    },
+    {
+      "id": 84,
+      "start": 588.0,
+      "end": 602.0,
+      "text": "I was a little bit quicker, so I really good example of this like a week ago."
+    },
+    {
+      "id": 85,
+      "start": 602.0,
+      "end": 609.0,
+      "text": "I don't know if I'm going to be able to find it."
+    }
+  ],
+  "language": "en"
+}

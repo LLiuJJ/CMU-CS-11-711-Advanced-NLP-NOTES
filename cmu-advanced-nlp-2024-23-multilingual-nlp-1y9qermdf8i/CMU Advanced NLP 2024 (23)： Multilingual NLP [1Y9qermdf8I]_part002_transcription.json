@@ -1,0 +1,1175 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 3.24,
+      "text": "is we usually have a shared tokenizer that's used"
+    },
+    {
+      "id": 1,
+      "start": 3.24,
+      "end": 6.84,
+      "text": "between all of the different languages."
+    },
+    {
+      "id": 2,
+      "start": 6.84,
+      "end": 10.12,
+      "text": "And so if it's something like English and French"
+    },
+    {
+      "id": 3,
+      "start": 10.12,
+      "end": 11.52,
+      "text": "with lots of shared words,"
+    },
+    {
+      "id": 4,
+      "start": 11.52,
+      "end": 13.6,
+      "text": "then actually many of the embeddings"
+    },
+    {
+      "id": 5,
+      "start": 13.6,
+      "end": 16.52,
+      "text": "will be shared between the different languages."
+    },
+    {
+      "id": 6,
+      "start": 16.52,
+      "end": 17.92,
+      "text": "That helps transfer,"
+    },
+    {
+      "id": 7,
+      "start": 17.92,
+      "end": 20.24,
+      "text": "but it's not absolutely essential for transfers."
+    },
+    {
+      "id": 8,
+      "start": 20.24,
+      "end": 23.2,
+      "text": "So like there has spent some work that demonstrates that"
+    },
+    {
+      "id": 9,
+      "start": 23.2,
+      "end": 24.8,
+      "text": "even with no shared vocabulary,"
+    },
+    {
+      "id": 10,
+      "start": 24.8,
+      "end": 29.6,
+      "text": "you can still benefit from transfer to some extent."
+    },
+    {
+      "id": 11,
+      "start": 29.6,
+      "end": 33.36,
+      "text": "But anyway, so with respect to the tokenization disparity,"
+    },
+    {
+      "id": 12,
+      "start": 34.84,
+      "end": 37.12,
+      "text": "I tried tokenizing English"
+    },
+    {
+      "id": 13,
+      "start": 38.28,
+      "end": 43.28,
+      "text": "in using the OpenAI GPT 3.5 and Ford tokenizer."
+    },
+    {
+      "id": 14,
+      "start": 45.32,
+      "end": 49.6,
+      "text": "And you can see that this content gave me 58 tokens."
+    },
+    {
+      "id": 15,
+      "start": 50.56,
+      "end": 54.48,
+      "text": "And then I tried to translate this into Burmese"
+    },
+    {
+      "id": 16,
+      "start": 54.48,
+      "end": 55.48,
+      "text": "using Google Translate."
+    },
+    {
+      "id": 17,
+      "start": 55.48,
+      "end": 57.16,
+      "text": "I don't know Burmese myself,"
+    },
+    {
+      "id": 18,
+      "start": 57.16,
+      "end": 58.8,
+      "text": "but I tried to translate it."
+    },
+    {
+      "id": 19,
+      "start": 59.68,
+      "end": 63.08,
+      "text": "And so this should be the same content,"
+    },
+    {
+      "id": 20,
+      "start": 63.08,
+      "end": 65.52,
+      "text": "at least to the extent that Google translate into Burmese's"
+    },
+    {
+      "id": 21,
+      "start": 65.52,
+      "end": 66.28,
+      "text": "if you're at it."
+    },
+    {
+      "id": 22,
+      "start": 68.16,
+      "end": 72.24,
+      "text": "And then I got 617 tokens for the same content."
+    },
+    {
+      "id": 23,
+      "start": 73.48,
+      "end": 75.36,
+      "text": "And the reason why is because you can see here,"
+    },
+    {
+      "id": 24,
+      "start": 75.36,
+      "end": 78.76,
+      "text": "basically it's still got OpenAI, right?"
+    },
+    {
+      "id": 25,
+      "start": 80.04,
+      "end": 81.76,
+      "text": "And interestingly, I didn't realize this."
+    },
+    {
+      "id": 26,
+      "start": 81.76,
+      "end": 84.44,
+      "text": "OpenAI isn't a single token in GPs model,"
+    },
+    {
+      "id": 27,
+      "start": 84.44,
+      "end": 85.84,
+      "text": "it's two tokens."
+    },
+    {
+      "id": 28,
+      "start": 85.84,
+      "end": 89.24,
+      "text": "But all of the other things are basically converted"
+    },
+    {
+      "id": 29,
+      "start": 89.24,
+      "end": 91.28,
+      "text": "into byte level tokens."
+    },
+    {
+      "id": 30,
+      "start": 91.28,
+      "end": 93.6,
+      "text": "So each byte is a token."
+    },
+    {
+      "id": 31,
+      "start": 93.6,
+      "end": 95.96,
+      "text": "And because Burmese uses a different script,"
+    },
+    {
+      "id": 32,
+      "start": 95.96,
+      "end": 97.8,
+      "text": "each one of these is like three bytes."
+    },
+    {
+      "id": 33,
+      "start": 97.8,
+      "end": 102.56,
+      "text": "So what you can see is it's a lot more."
+    },
+    {
+      "id": 34,
+      "start": 103.4,
+      "end": 108.16,
+      "text": "So it's 10.6 times the total amount."
+    },
+    {
+      "id": 35,
+      "start": 108.16,
+      "end": 109.56,
+      "text": "And what does that mean?"
+    },
+    {
+      "id": 36,
+      "start": 109.56,
+      "end": 110.92,
+      "text": "This means number one,"
+    },
+    {
+      "id": 37,
+      "start": 111.92,
+      "end": 116.32,
+      "text": "if you're processing Burmese with GPT 4,"
+    },
+    {
+      "id": 38,
+      "start": 116.32,
+      "end": 119.2,
+      "text": "it's 10 times more expensive for the same content."
+    },
+    {
+      "id": 39,
+      "start": 119.2,
+      "end": 121.64,
+      "text": "Because they count by the number of tokens."
+    },
+    {
+      "id": 40,
+      "start": 121.64,
+      "end": 125.44,
+      "text": "Number two, because you're letting it off into bytes like this,"
+    },
+    {
+      "id": 41,
+      "start": 125.44,
+      "end": 126.68,
+      "text": "it's slow."
+    },
+    {
+      "id": 42,
+      "start": 126.68,
+      "end": 128.72,
+      "text": "Generation becomes 10 times slower,"
+    },
+    {
+      "id": 43,
+      "start": 128.72,
+      "end": 132.08,
+      "text": "because it generates tokens at a particular speed."
+    },
+    {
+      "id": 44,
+      "start": 132.08,
+      "end": 133.12,
+      "text": "And also it gets worse,"
+    },
+    {
+      "id": 45,
+      "start": 133.12,
+      "end": 135.72,
+      "text": "because the reason why we do sub word tokens in the first places,"
+    },
+    {
+      "id": 46,
+      "start": 135.72,
+      "end": 139.72,
+      "text": "because they kind of allow us to clump semantic units together."
+    },
+    {
+      "id": 47,
+      "start": 139.72,
+      "end": 141.72,
+      "text": "And if the semantic units aren't clumped together,"
+    },
+    {
+      "id": 48,
+      "start": 141.72,
+      "end": 145.44,
+      "text": "the model has to use its capacity on combining together."
+    },
+    {
+      "id": 49,
+      "start": 145.44,
+      "end": 147.6,
+      "text": "The tokens in the layers of the model,"
+    },
+    {
+      "id": 50,
+      "start": 147.6,
+      "end": 149.64,
+      "text": "and that is prone to error."
+    },
+    {
+      "id": 51,
+      "start": 149.64,
+      "end": 152.92,
+      "text": "And it causes, uses the model's capacity,"
+    },
+    {
+      "id": 52,
+      "start": 152.92,
+      "end": 156.0,
+      "text": "and it does less well at modeling."
+    },
+    {
+      "id": 53,
+      "start": 156.0,
+      "end": 159.68,
+      "text": "So this is a pretty big problem for a number of reasons."
+    },
+    {
+      "id": 54,
+      "start": 159.68,
+      "end": 161.92,
+      "text": "It caused deficiency accuracy."
+    },
+    {
+      "id": 55,
+      "start": 164.32,
+      "end": 168.28,
+      "text": "So one way to fix this,"
+    },
+    {
+      "id": 56,
+      "start": 168.28,
+      "end": 170.08,
+      "text": "both from the point of view of training"
+    },
+    {
+      "id": 57,
+      "start": 170.08,
+      "end": 172.16,
+      "text": "and learning tokenizers,"
+    },
+    {
+      "id": 58,
+      "start": 172.16,
+      "end": 175.28,
+      "text": "is through heuristic sampling of data."
+    },
+    {
+      "id": 59,
+      "start": 175.28,
+      "end": 176.88,
+      "text": "And the most common way to do this"
+    },
+    {
+      "id": 60,
+      "start": 176.88,
+      "end": 179.36,
+      "text": "is something called temperature sampling."
+    },
+    {
+      "id": 61,
+      "start": 179.36,
+      "end": 182.28,
+      "text": "And the way temperature sampling works is,"
+    },
+    {
+      "id": 62,
+      "start": 182.28,
+      "end": 186.32,
+      "text": "you essentially grouped the data into groups."
+    },
+    {
+      "id": 63,
+      "start": 186.32,
+      "end": 188.0,
+      "text": "And usually when we say groups,"
+    },
+    {
+      "id": 64,
+      "start": 188.0,
+      "end": 190.68,
+      "text": "we talk about grouping into languages."
+    },
+    {
+      "id": 65,
+      "start": 192.0,
+      "end": 197.0,
+      "text": "And we sample the data according to its frequency"
+    },
+    {
+      "id": 66,
+      "start": 200.08,
+      "end": 202.4,
+      "text": "where we exponentiate the frequency"
+    },
+    {
+      "id": 67,
+      "start": 202.4,
+      "end": 204.6,
+      "text": "by one divided by a temperature,"
+    },
+    {
+      "id": 68,
+      "start": 205.16,
+      "end": 207.48,
+      "text": "and then re-normalize."
+    },
+    {
+      "id": 69,
+      "start": 207.48,
+      "end": 210.44,
+      "text": "And then sample batches from each language according to that."
+    },
+    {
+      "id": 70,
+      "start": 210.44,
+      "end": 215.44,
+      "text": "So the probability of sampling a batch from language L"
+    },
+    {
+      "id": 71,
+      "start": 217.92,
+      "end": 222.92,
+      "text": "becomes e to the frequency of L."
+    },
+    {
+      "id": 72,
+      "start": 228.92,
+      "end": 229.76,
+      "text": "Sorry."
+    },
+    {
+      "id": 73,
+      "start": 230.76,
+      "end": 233.92,
+      "text": "The frequency of L"
+    },
+    {
+      "id": 74,
+      "start": 237.52,
+      "end": 239.4,
+      "text": "at the one divided by a temperature,"
+    },
+    {
+      "id": 75,
+      "start": 243.6,
+      "end": 244.92,
+      "text": "normalize."
+    },
+    {
+      "id": 76,
+      "start": 244.92,
+      "end": 248.44,
+      "text": "So the L crime frequency of L that"
+    },
+    {
+      "id": 77,
+      "start": 248.44,
+      "end": 250.6,
+      "text": "is 25 by a temperature."
+    },
+    {
+      "id": 78,
+      "start": 253.0,
+      "end": 255.84,
+      "text": "And so what that does is essentially,"
+    },
+    {
+      "id": 79,
+      "start": 255.84,
+      "end": 258.6,
+      "text": "if we have a data distribution from a link"
+    },
+    {
+      "id": 80,
+      "start": 258.6,
+      "end": 260.88,
+      "text": "from each language, which is kind of like a long tail"
+    },
+    {
+      "id": 81,
+      "start": 260.88,
+      "end": 263.28,
+      "text": "distribution, like this,"
+    },
+    {
+      "id": 82,
+      "start": 263.28,
+      "end": 266.68,
+      "text": "normally you would sample this language a lot more."
+    },
+    {
+      "id": 83,
+      "start": 266.68,
+      "end": 269.36,
+      "text": "If you take the temperature and turn it into something"
+    },
+    {
+      "id": 84,
+      "start": 269.36,
+      "end": 272.04,
+      "text": "like five, that will flatten the distribution."
+    },
+    {
+      "id": 85,
+      "start": 272.04,
+      "end": 275.0,
+      "text": "So you'll sample the less frequent languages more"
+    },
+    {
+      "id": 86,
+      "start": 275.0,
+      "end": 277.16,
+      "text": "in the more frequent languages less."
+    },
+    {
+      "id": 87,
+      "start": 277.16,
+      "end": 279.24,
+      "text": "And if you take a very large number, like 100,"
+    },
+    {
+      "id": 88,
+      "start": 279.24,
+      "end": 281.28,
+      "text": "this will just flatten and say,"
+    },
+    {
+      "id": 89,
+      "start": 281.28,
+      "end": 285.24,
+      "text": "you sample like this"
+    },
+    {
+      "id": 90,
+      "start": 286.24,
+      "end": 288.92,
+      "text": "from each language uniformly."
+    },
+    {
+      "id": 91,
+      "start": 288.92,
+      "end": 293.84,
+      "text": "And this sampling can be done both at model training time"
+    },
+    {
+      "id": 92,
+      "start": 293.84,
+      "end": 296.72,
+      "text": "and at vocabulary construction time."
+    },
+    {
+      "id": 93,
+      "start": 296.72,
+      "end": 299.8,
+      "text": "And when you do it at vocabulary construction time,"
+    },
+    {
+      "id": 94,
+      "start": 299.8,
+      "end": 302.44,
+      "text": "basically what that means is it will down sample English"
+    },
+    {
+      "id": 95,
+      "start": 302.44,
+      "end": 305.56,
+      "text": "and up sample vermes or any of the other"
+    },
+    {
+      "id": 96,
+      "start": 305.56,
+      "end": 306.52,
+      "text": "low resource languages."
+    },
+    {
+      "id": 97,
+      "start": 306.52,
+      "end": 309.6,
+      "text": "So the low resource languages get more weight"
+    },
+    {
+      "id": 98,
+      "start": 309.6,
+      "end": 311.04,
+      "text": "in creating the vocabulary,"
+    },
+    {
+      "id": 99,
+      "start": 311.04,
+      "end": 314.08,
+      "text": "so they won't be split up as much like this."
+    },
+    {
+      "id": 100,
+      "start": 316.24,
+      "end": 320.76,
+      "text": "So I don't know if GPT does this, but XLMR does this"
+    },
+    {
+      "id": 101,
+      "start": 320.76,
+      "end": 322.24,
+      "text": "and Quinn does this."
+    },
+    {
+      "id": 102,
+      "start": 322.24,
+      "end": 324.04,
+      "text": "So there are definitely language models"
+    },
+    {
+      "id": 103,
+      "start": 324.04,
+      "end": 328.04,
+      "text": "that are attempting to be more fair"
+    },
+    {
+      "id": 104,
+      "start": 328.04,
+      "end": 330.68,
+      "text": "across different languages."
+    },
+    {
+      "id": 105,
+      "start": 330.68,
+      "end": 333.52,
+      "text": "Another thing that Quinn does, I talked about this previously"
+    },
+    {
+      "id": 106,
+      "start": 333.52,
+      "end": 335.0,
+      "text": "in the tour of large language models,"
+    },
+    {
+      "id": 107,
+      "start": 335.0,
+      "end": 338.2,
+      "text": "but it also makes a much larger vocabulary."
+    },
+    {
+      "id": 108,
+      "start": 338.2,
+      "end": 340.8,
+      "text": "So normally Lama is like 32."
+    },
+    {
+      "id": 109,
+      "start": 340.8,
+      "end": 345.12,
+      "text": "And I think Quinn was 32k and Quinn was something like 215k"
+    },
+    {
+      "id": 110,
+      "start": 345.12,
+      "end": 345.96,
+      "text": "or something."
+    },
+    {
+      "id": 111,
+      "start": 345.96,
+      "end": 348.2,
+      "text": "So they intentionally made the vocabulary larger."
+    },
+    {
+      "id": 112,
+      "start": 348.2,
+      "end": 352.28,
+      "text": "So the distribution would be better across different languages."
+    },
+    {
+      "id": 113,
+      "start": 354.68,
+      "end": 355.52,
+      "text": "Yeah."
+    },
+    {
+      "id": 114,
+      "start": 355.52,
+      "end": 358.72,
+      "text": "So how do you construct a batch for like machine translation?"
+    },
+    {
+      "id": 115,
+      "start": 358.72,
+      "end": 361.08,
+      "text": "Like when a batch gets signed to English and French"
+    },
+    {
+      "id": 116,
+      "start": 361.08,
+      "end": 362.72,
+      "text": "and then another for English."
+    },
+    {
+      "id": 117,
+      "start": 362.72,
+      "end": 364.32,
+      "text": "Yeah, that's a good question."
+    },
+    {
+      "id": 118,
+      "start": 364.32,
+      "end": 365.96,
+      "text": "You can do both."
+    },
+    {
+      "id": 119,
+      "start": 365.96,
+      "end": 368.76,
+      "text": "So sorry, just to repeat the question,"
+    },
+    {
+      "id": 120,
+      "start": 368.76,
+      "end": 371.6,
+      "text": "how do you construct batches for like machine translation?"
+    },
+    {
+      "id": 121,
+      "start": 371.6,
+      "end": 373.48,
+      "text": "When you create a batch of English French"
+    },
+    {
+      "id": 122,
+      "start": 373.48,
+      "end": 376.92,
+      "text": "or would you create a batch with like lots of different languages"
+    },
+    {
+      "id": 123,
+      "start": 376.92,
+      "end": 377.92,
+      "text": "in it at once?"
+    },
+    {
+      "id": 124,
+      "start": 379.28,
+      "end": 383.52,
+      "text": "I personally, what I would do,"
+    },
+    {
+      "id": 125,
+      "start": 383.52,
+      "end": 387.0,
+      "text": "and I think what most people do is they don't actually"
+    },
+    {
+      "id": 126,
+      "start": 387.0,
+      "end": 390.68,
+      "text": "sample batches that are uniform in this particular language."
+    },
+    {
+      "id": 127,
+      "start": 390.68,
+      "end": 392.32,
+      "text": "And the reason why is because SGD,"
+    },
+    {
+      "id": 128,
+      "start": 392.32,
+      "end": 394.2,
+      "text": "if you have lots of variants in your gradients,"
+    },
+    {
+      "id": 129,
+      "start": 394.2,
+      "end": 395.92,
+      "text": "it makes it less stable."
+    },
+    {
+      "id": 130,
+      "start": 395.92,
+      "end": 398.44,
+      "text": "And so if you do all English French in a single batch"
+    },
+    {
+      "id": 131,
+      "start": 398.44,
+      "end": 400.12,
+      "text": "at one time, that'll make it less stable"
+    },
+    {
+      "id": 132,
+      "start": 400.12,
+      "end": 401.96,
+      "text": "because it will move all in the French direction"
+    },
+    {
+      "id": 133,
+      "start": 401.96,
+      "end": 403.72,
+      "text": "and all in the German direction."
+    },
+    {
+      "id": 134,
+      "start": 403.72,
+      "end": 406.28,
+      "text": "So it's generally better practice to do this sort of"
+    },
+    {
+      "id": 135,
+      "start": 406.28,
+      "end": 409.88,
+      "text": "operating or sampling before you form your batches."
+    },
+    {
+      "id": 136,
+      "start": 409.88,
+      "end": 412.24,
+      "text": "And another thing that you can do is you can do"
+    },
+    {
+      "id": 137,
+      "start": 412.24,
+      "end": 416.76,
+      "text": "a bunch of this sampling at once, form a bunch of batches,"
+    },
+    {
+      "id": 138,
+      "start": 416.76,
+      "end": 419.08,
+      "text": "and then run through all of them."
+    },
+    {
+      "id": 139,
+      "start": 419.08,
+      "end": 420.52,
+      "text": "And then when you get near the end,"
+    },
+    {
+      "id": 140,
+      "start": 420.52,
+      "end": 423.0,
+      "text": "form some more batches and then throw them in there."
+    },
+    {
+      "id": 141,
+      "start": 423.0,
+      "end": 425.6,
+      "text": "So you can write data loaders to do that sort of stuff."
+    },
+    {
+      "id": 142,
+      "start": 425.6,
+      "end": 427.36,
+      "text": "Yeah, cool."
+    },
+    {
+      "id": 143,
+      "start": 428.08,
+      "end": 429.68,
+      "text": "Um, thanks."
+    },
+    {
+      "id": 144,
+      "start": 431.04,
+      "end": 435.64,
+      "text": "So there's also work on learning how to balance data."
+    },
+    {
+      "id": 145,
+      "start": 435.64,
+      "end": 439.04,
+      "text": "And this is a paper by my former student, Cindy."
+    },
+    {
+      "id": 146,
+      "start": 440.08,
+      "end": 441.6,
+      "text": "And it's kind of interesting."
+    },
+    {
+      "id": 147,
+      "start": 441.6,
+      "end": 446.4,
+      "text": "I don't know, I like it because it shows the possibility"
+    },
+    {
+      "id": 148,
+      "start": 446.4,
+      "end": 449.44,
+      "text": "of what could be done with respect to things here."
+    },
+    {
+      "id": 149,
+      "start": 450.4,
+      "end": 453.8,
+      "text": "But it's a little bit, it's a little bit expensive to run."
+    },
+    {
+      "id": 150,
+      "start": 453.8,
+      "end": 456.92,
+      "text": "So it might not be well suited for large scale pre-training."
+    },
+    {
+      "id": 151,
+      "start": 456.92,
+      "end": 463.92,
+      "text": "For example, but the basic idea is we have several training sets"
+    },
+    {
+      "id": 152,
+      "start": 463.92,
+      "end": 468.32,
+      "text": "where the training sets are composed of different languages."
+    },
+    {
+      "id": 153,
+      "start": 468.32,
+      "end": 470.96,
+      "text": "And then we have several development sets."
+    },
+    {
+      "id": 154,
+      "start": 470.96,
+      "end": 473.92,
+      "text": "And these development sets are ones that we want"
+    },
+    {
+      "id": 155,
+      "start": 473.92,
+      "end": 480.2,
+      "text": "to be good at like processing via translation or QA or whatever"
+    },
+    {
+      "id": 156,
+      "start": 480.2,
+      "end": 481.52,
+      "text": "else."
+    },
+    {
+      "id": 157,
+      "start": 481.52,
+      "end": 487.36,
+      "text": "And what we can do is we calculate gradients"
+    },
+    {
+      "id": 158,
+      "start": 487.36,
+      "end": 490.92,
+      "text": "according to these various training sets."
+    },
+    {
+      "id": 159,
+      "start": 490.92,
+      "end": 494.68,
+      "text": "We also calculate the gradient on the Devset."
+    },
+    {
+      "id": 160,
+      "start": 494.68,
+      "end": 498.72,
+      "text": "And we calculate the alignment between the train gradient"
+    },
+    {
+      "id": 161,
+      "start": 498.72,
+      "end": 501.64,
+      "text": "and the development gradient and see how closely they align."
+    },
+    {
+      "id": 162,
+      "start": 501.64,
+      "end": 503.72,
+      "text": "If they align very well, basically what it's saying"
+    },
+    {
+      "id": 163,
+      "start": 503.72,
+      "end": 507.64,
+      "text": "is this training set is moving us in a good direction"
+    },
+    {
+      "id": 164,
+      "start": 507.64,
+      "end": 511.92,
+      "text": "for optimizing the performance on the Devset."
+    },
+    {
+      "id": 165,
+      "start": 511.92,
+      "end": 515.32,
+      "text": "And if they don't align well, it's basically harmful"
+    },
+    {
+      "id": 166,
+      "start": 515.32,
+      "end": 517.76,
+      "text": "for optimizing performance on the Devset."
+    },
+    {
+      "id": 167,
+      "start": 517.76,
+      "end": 520.56,
+      "text": "And then we upweight or downweight the kind"
+    },
+    {
+      "id": 168,
+      "start": 520.56,
+      "end": 524.2,
+      "text": "of mixing factor of these data sets"
+    },
+    {
+      "id": 169,
+      "start": 524.2,
+      "end": 526.6,
+      "text": "according to how well the gradient's aligned."
+    },
+    {
+      "id": 170,
+      "start": 526.6,
+      "end": 528.48,
+      "text": "And so why is this interesting conceptually?"
+    },
+    {
+      "id": 171,
+      "start": 528.48,
+      "end": 530.64,
+      "text": "This is interesting conceptually because you can also"
+    },
+    {
+      "id": 172,
+      "start": 530.64,
+      "end": 534.84,
+      "text": "do it as you continue training the model."
+    },
+    {
+      "id": 173,
+      "start": 534.84,
+      "end": 539.68,
+      "text": "And one of the problems with heuristic sampling"
+    },
+    {
+      "id": 174,
+      "start": 539.68,
+      "end": 544.44,
+      "text": "is this number is very fiddly."
+    },
+    {
+      "id": 175,
+      "start": 544.44,
+      "end": 548.8,
+      "text": "And this temperature number is very fiddly."
+    },
+    {
+      "id": 176,
+      "start": 548.8,
+      "end": 551.24,
+      "text": "It differs from data set to data set."
+    },
+    {
+      "id": 177,
+      "start": 551.24,
+      "end": 558.72,
+      "text": "And it doesn't fully give you the full spectrum of which data"
+    },
+    {
+      "id": 178,
+      "start": 558.72,
+      "end": 560.28,
+      "text": "you should be up sampling."
+    },
+    {
+      "id": 179,
+      "start": 560.28,
+      "end": 563.64,
+      "text": "And this can allow you to learn it automatically."
+    },
+    {
+      "id": 180,
+      "start": 563.64,
+      "end": 566.76,
+      "text": "And just to give it an example of something it can learn,"
+    },
+    {
+      "id": 181,
+      "start": 566.76,
+      "end": 569.04,
+      "text": "it can learn that at the beginning of training,"
+    },
+    {
+      "id": 182,
+      "start": 569.04,
+      "end": 571.44,
+      "text": "you should be maybe upgrading the low resource data"
+    },
+    {
+      "id": 183,
+      "start": 571.44,
+      "end": 572.24,
+      "text": "sets."
+    },
+    {
+      "id": 184,
+      "start": 572.24,
+      "end": 575.8,
+      "text": "But then you start overfitting to the relatively small data"
+    },
+    {
+      "id": 185,
+      "start": 575.8,
+      "end": 577.8,
+      "text": "you have for Burmese or relatively small data"
+    },
+    {
+      "id": 186,
+      "start": 577.8,
+      "end": 580.12,
+      "text": "you have for some under-resource languages."
+    },
+    {
+      "id": 187,
+      "start": 580.12,
+      "end": 583.32,
+      "text": "And so it starts actively like harming your model."
+    },
+    {
+      "id": 188,
+      "start": 583.32,
+      "end": 585.64,
+      "text": "And when it starts actively harming your model,"
+    },
+    {
+      "id": 189,
+      "start": 585.64,
+      "end": 588.44,
+      "text": "then it will be automatically downweighted"
+    },
+    {
+      "id": 190,
+      "start": 588.44,
+      "end": 589.92,
+      "text": "so it stops harming your model."
+    },
+    {
+      "id": 191,
+      "start": 589.92,
+      "end": 592.84,
+      "text": "And then it will be up weighted again"
+    },
+    {
+      "id": 192,
+      "start": 592.84,
+      "end": 594.2,
+      "text": "when it makes sense to use it again."
+    },
+    {
+      "id": 193,
+      "start": 594.2,
+      "end": 598.48,
+      "text": "So this allows you to learn more nuanced strategies"
+    },
+    {
+      "id": 194,
+      "start": 598.48,
+      "end": 601.0,
+      "text": "than this in the..."
+    }
+  ],
+  "language": "en"
+}

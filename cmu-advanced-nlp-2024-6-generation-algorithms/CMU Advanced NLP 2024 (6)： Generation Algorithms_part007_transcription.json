@@ -1,0 +1,305 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 8.0,
+      "text": "Sometimes MBR will also be implemented in pretty much any library you use for models like hugging face, Pharisee or Jax."
+    },
+    {
+      "id": 1,
+      "start": 10.0,
+      "end": 18.0,
+      "text": "So to kind of take a step back here as we get to the end of class, there's really two raw categories of methods that we talked about today."
+    },
+    {
+      "id": 2,
+      "start": 19.0,
+      "end": 27.0,
+      "text": "Given our initial distribution from the model for a next token, given our input, we can do two kind of different things."
+    },
+    {
+      "id": 3,
+      "start": 27.0,
+      "end": 32.0,
+      "text": "We can add each individual decoding step, choose some kind of function to manipulate this distribution."
+    },
+    {
+      "id": 4,
+      "start": 32.0,
+      "end": 41.0,
+      "text": "And this could be something like short like cutting off the long tail, like modifying the temperature or adding extra information from another model or from a discriminator model."
+    },
+    {
+      "id": 5,
+      "start": 42.0,
+      "end": 49.0,
+      "text": "Or we can over a larger part of the decoding process, choose some function to choose between sequences."
+    },
+    {
+      "id": 6,
+      "start": 49.0,
+      "end": 54.0,
+      "text": "And this could be like choosing between next token and beam search from what we're putting beams."
+    },
+    {
+      "id": 7,
+      "start": 54.0,
+      "end": 60.0,
+      "text": "This could be choosing from full sequences when we're doing something like MBR or sample and rerank methods."
+    },
+    {
+      "id": 8,
+      "start": 60.0,
+      "end": 63.0,
+      "text": "And you can do these two things in parallel, right?"
+    },
+    {
+      "id": 9,
+      "start": 64.0,
+      "end": 73.0,
+      "text": "So we can use a different function to manipulate next token distribution and then some sort of like broader thing to choose what you do with the full sequences you get out of that distribution."
+    },
+    {
+      "id": 10,
+      "start": 73.0,
+      "end": 78.0,
+      "text": "But there are sort of these two broad categories of decoding."
+    },
+    {
+      "id": 11,
+      "start": 78.0,
+      "end": 81.0,
+      "text": "So what should you take away from this?"
+    },
+    {
+      "id": 12,
+      "start": 81.0,
+      "end": 83.0,
+      "text": "I think a couple of things."
+    },
+    {
+      "id": 13,
+      "start": 83.0,
+      "end": 86.0,
+      "text": "You can really powerful to control features of your output."
+    },
+    {
+      "id": 14,
+      "start": 86.0,
+      "end": 94.0,
+      "text": "If you want to impose particular constraints, if you want to factor in reward function or factor in a data source that you maybe didn't have a training time."
+    },
+    {
+      "id": 15,
+      "start": 94.0,
+      "end": 105.0,
+      "text": "And to some extent, you can do a more expensive decoding method to compensate for a worse model or a compensate for a model that hasn't been trained to do exactly the thing you want to do."
+    },
+    {
+      "id": 16,
+      "start": 105.0,
+      "end": 117.0,
+      "text": "Of course, you can't use this to make GPT to swell as good as GPT for, but you can sort of for some points in the middle, spend more computed and for as time to pay for not spending as much computer training."
+    },
+    {
+      "id": 17,
+      "start": 117.0,
+      "end": 127.0,
+      "text": "And particularly if you don't have access to the kind of giant GPUs you might need to continue fine shooting your model, this can be a really a really powerful turn it."
+    },
+    {
+      "id": 18,
+      "start": 127.0,
+      "end": 128.0,
+      "text": "Yeah."
+    },
+    {
+      "id": 19,
+      "start": 128.0,
+      "end": 131.0,
+      "text": "So say like something."
+    },
+    {
+      "id": 20,
+      "start": 131.0,
+      "end": 142.0,
+      "text": "If you want to be sort of like that, you know, add both in before I see this in a work that time."
+    },
+    {
+      "id": 21,
+      "start": 142.0,
+      "end": 144.0,
+      "text": "Is that kind of good?"
+    },
+    {
+      "id": 22,
+      "start": 144.0,
+      "end": 152.0,
+      "text": "Like try to see like if you have a model that you can do some kind of expensive decoding method for to get good output."
+    },
+    {
+      "id": 23,
+      "start": 152.0,
+      "end": 155.0,
+      "text": "Is it then worth trying training that model?"
+    },
+    {
+      "id": 24,
+      "start": 155.0,
+      "end": 166.0,
+      "text": "There's some recent work on life training models to produce the same kind of outputs you get out of a VR without actually doing the really expensive inference."
+    },
+    {
+      "id": 25,
+      "start": 166.0,
+      "end": 172.0,
+      "text": "So at some level like, yeah, you can decide like this model is good enough with this expensive method."
+    },
+    {
+      "id": 26,
+      "start": 172.0,
+      "end": 176.0,
+      "text": "We can try to make it cheaper life spending more money on fine."
+    },
+    {
+      "id": 27,
+      "start": 176.0,
+      "end": 183.0,
+      "text": "But that's not it's not necessarily during key that that's what it is."
+    },
+    {
+      "id": 28,
+      "start": 183.0,
+      "end": 189.0,
+      "text": "The methods that we looked at have these sort of trade offs in quality and diversity and an inference speed."
+    },
+    {
+      "id": 29,
+      "start": 189.0,
+      "end": 197.0,
+      "text": "So sampling from your model directly is pretty fast to do you get really diverse outputs, but it tends to be lower quality."
+    },
+    {
+      "id": 30,
+      "start": 197.0,
+      "end": 204.0,
+      "text": "Whereas more restricted sampling, these sort of mode seeking search methods tend to be higher quality, but you get less diverse outfits."
+    },
+    {
+      "id": 31,
+      "start": 204.0,
+      "end": 210.0,
+      "text": "And that's why we have these methods like diverse and stochastic research to turn our perspective."
+    },
+    {
+      "id": 32,
+      "start": 210.0,
+      "end": 219.0,
+      "text": "And then methods like MBR or other sample and re-rank methods tend to be very high quality outputs, but you pay for this with much slower inference time."
+    },
+    {
+      "id": 33,
+      "start": 219.0,
+      "end": 230.0,
+      "text": "But if I can come into anything today, I think it would be this, which is that is the decoding method you choose for your model has a really strong impact on performance downstream."
+    },
+    {
+      "id": 34,
+      "start": 230.0,
+      "end": 238.0,
+      "text": "You can get radically different results out of the same model about doing any additional training just by choosing the different decoding method that you might want to try."
+    },
+    {
+      "id": 35,
+      "start": 238.0,
+      "end": 247.0,
+      "text": "And so when you sort of let your libraries pick a total, quote, like sensible default can leave a lot of performance on the table."
+    },
+    {
+      "id": 36,
+      "start": 247.0,
+      "end": 262.0,
+      "text": "So I encourage you folks that if you're deploying models in production or if you're doing research, you know, maybe you'll be outpriced and your model has some undesirable behaviors to consider the decoding method you're using is proposing some kind of intuition or some kind of inductive bias."
+    },
+    {
+      "id": 37,
+      "start": 262.0,
+      "end": 268.0,
+      "text": "And if you can also that to get some of these behaviors without resorting to additional training."
+    },
+    {
+      "id": 38,
+      "start": 268.0,
+      "end": 279.0,
+      "text": "And that's sort of the end of any other questions."
+    },
+    {
+      "id": 39,
+      "start": 280.0,
+      "end": 292.0,
+      "text": "Yeah, I guess we don't have any questions. You can take questions up here. One one thing I'd like to point out also is that I love the final thing that Amanda said here."
+    },
+    {
+      "id": 40,
+      "start": 292.0,
+      "end": 307.0,
+      "text": "Another thing is that my impression from dealing with things is that it's a lot easier to predict the effect of inference time, decoding time manipulations and it is the effect of like."
+    },
+    {
+      "id": 41,
+      "start": 307.0,
+      "end": 313.0,
+      "text": "And then you can get a lot of training or something like this, like just to give an example."
+    },
+    {
+      "id": 42,
+      "start": 313.0,
+      "end": 320.0,
+      "text": "Beam search with the maximum like we've had trained a model tends to generate things that are shorter."
+    },
+    {
+      "id": 43,
+      "start": 320.0,
+      "end": 325.0,
+      "text": "Whereas greedy decoding tends to generate things that are longer and repeat more often and stuff like that."
+    },
+    {
+      "id": 44,
+      "start": 325.0,
+      "end": 332.0,
+      "text": "And if you try a few methods like this, you'll quickly find these kind of words of each of the methods."
+    },
+    {
+      "id": 45,
+      "start": 332.0,
+      "end": 344.0,
+      "text": "By forming a good intuition of this, you will also know how to fix these problems when you see them. It's like, oh, my models repeating itself a lot. Maybe I shouldn't be using research. I should be switching over to something else or something like that."
+    },
+    {
+      "id": 46,
+      "start": 344.0,
+      "end": 347.0,
+      "text": "So this is a good thing to know and play around with."
+    },
+    {
+      "id": 47,
+      "start": 347.0,
+      "end": 350.0,
+      "text": "Yeah, and I think pretty underutilized too."
+    },
+    {
+      "id": 48,
+      "start": 350.0,
+      "end": 358.0,
+      "text": "A lot of folks will now think about any coding method to fix that problem, even if like your model might actually be perfectly fine under a different different strategy."
+    },
+    {
+      "id": 49,
+      "start": 358.0,
+      "end": 360.0,
+      "text": "Okay, thanks a lot everyone."
+    }
+  ],
+  "language": "en"
+}

@@ -1,0 +1,257 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 4.88,
+      "text": "So I can very quickly see, okay, these things are TBD."
+    },
+    {
+      "id": 1,
+      "start": 4.88,
+      "end": 6.96,
+      "text": "Oh, this thing has been TBD for a very long time."
+    },
+    {
+      "id": 2,
+      "start": 6.96,
+      "end": 8.08,
+      "text": "Is my experiment crash?"
+    },
+    {
+      "id": 3,
+      "start": 8.08,
+      "end": 10.68,
+      "text": "Do I need to go back and restart my experiment"
+    },
+    {
+      "id": 4,
+      "start": 10.68,
+      "end": 11.52,
+      "text": "or something like that?"
+    },
+    {
+      "id": 5,
+      "start": 11.52,
+      "end": 14.16,
+      "text": "So it's an efficient way."
+    },
+    {
+      "id": 6,
+      "start": 14.16,
+      "end": 15.72,
+      "text": "And when you finish the last TBD,"
+    },
+    {
+      "id": 7,
+      "start": 15.72,
+      "end": 17.2,
+      "text": "it's a very good feeling person."
+    },
+    {
+      "id": 8,
+      "start": 20.68,
+      "end": 21.52,
+      "text": "Cool."
+    },
+    {
+      "id": 9,
+      "start": 21.52,
+      "end": 23.68,
+      "text": "Next computational resources."
+    },
+    {
+      "id": 10,
+      "start": 23.68,
+      "end": 26.48,
+      "text": "Actually, I kind of already talked about this a little bit,"
+    },
+    {
+      "id": 11,
+      "start": 26.48,
+      "end": 30.48,
+      "text": "but on Amazon Web Services, we have a class credits"
+    },
+    {
+      "id": 12,
+      "start": 30.48,
+      "end": 33.32,
+      "text": "that we're going to be issuing as soon as the assignment"
+    },
+    {
+      "id": 13,
+      "start": 33.32,
+      "end": 35.56,
+      "text": "one deadline is over."
+    },
+    {
+      "id": 14,
+      "start": 35.56,
+      "end": 38.44,
+      "text": "There's also Google Cloud and Colab."
+    },
+    {
+      "id": 15,
+      "start": 38.44,
+      "end": 41.08,
+      "text": "You can get commodity GPUs and other things like that."
+    },
+    {
+      "id": 16,
+      "start": 41.08,
+      "end": 46.28,
+      "text": "So you can also consider that."
+    },
+    {
+      "id": 17,
+      "start": 46.28,
+      "end": 50.08,
+      "text": "OK, let me get into data analysis."
+    },
+    {
+      "id": 18,
+      "start": 50.08,
+      "end": 54.56,
+      "text": "So I'm going to cover this a lot more"
+    },
+    {
+      "id": 19,
+      "start": 54.56,
+      "end": 56.44,
+      "text": "in an interpretation lecture."
+    },
+    {
+      "id": 20,
+      "start": 56.44,
+      "end": 59.4,
+      "text": "And this is going to be in three classes."
+    },
+    {
+      "id": 21,
+      "start": 59.4,
+      "end": 66.4,
+      "text": "So this is going to be the Tuesday after next."
+    },
+    {
+      "id": 22,
+      "start": 66.4,
+      "end": 69.36,
+      "text": "So very important things."
+    },
+    {
+      "id": 23,
+      "start": 69.36,
+      "end": 71.4,
+      "text": "Though I'll look at data, you'll"
+    },
+    {
+      "id": 24,
+      "start": 71.4,
+      "end": 75.04,
+      "text": "want to do quantitative analysis and qualitative analysis."
+    },
+    {
+      "id": 25,
+      "start": 75.04,
+      "end": 77.4,
+      "text": "You can also look at model explanations."
+    },
+    {
+      "id": 26,
+      "start": 77.4,
+      "end": 79.88,
+      "text": "So I'm going to cover how to do all of these things in that lecture."
+    },
+    {
+      "id": 27,
+      "start": 79.88,
+      "end": 83.96,
+      "text": "I don't have enough time to do it today."
+    },
+    {
+      "id": 28,
+      "start": 83.96,
+      "end": 87.04,
+      "text": "Then the final thing is reporting conclusions."
+    },
+    {
+      "id": 29,
+      "start": 87.04,
+      "end": 89.8,
+      "text": "This is also too much for a single class."
+    },
+    {
+      "id": 30,
+      "start": 89.8,
+      "end": 94.8,
+      "text": "But I very highly recommend this lecture."
+    },
+    {
+      "id": 31,
+      "start": 94.8,
+      "end": 96.32,
+      "text": "Sorry, these lecture slides."
+    },
+    {
+      "id": 32,
+      "start": 96.32,
+      "end": 97.88,
+      "text": "They don't take that long to look through."
+    },
+    {
+      "id": 33,
+      "start": 97.88,
+      "end": 103.48,
+      "text": "They're maybe 20 minutes or so, but they're very, very helpful."
+    },
+    {
+      "id": 34,
+      "start": 103.48,
+      "end": 107.28,
+      "text": "They talk about how to structure a paper, other things like this."
+    },
+    {
+      "id": 35,
+      "start": 107.28,
+      "end": 110.72,
+      "text": "And if you follow this advice for writing your reports"
+    },
+    {
+      "id": 36,
+      "start": 110.72,
+      "end": 114.8,
+      "text": "for three and four, assignment three and assignment four,"
+    },
+    {
+      "id": 37,
+      "start": 114.8,
+      "end": 118.64,
+      "text": "maybe even assignment two, I think you can't really go wrong."
+    },
+    {
+      "id": 38,
+      "start": 118.64,
+      "end": 121.28,
+      "text": "Actually, three and four is probably better than assignment two."
+    },
+    {
+      "id": 39,
+      "start": 121.28,
+      "end": 123.12,
+      "text": "Assignment two can be more discreet."
+    },
+    {
+      "id": 40,
+      "start": 123.12,
+      "end": 127.76,
+      "text": "So I definitely think I'm looking at the answer."
+    },
+    {
+      "id": 41,
+      "start": 127.76,
+      "end": 128.0,
+      "text": "Cool."
+    }
+  ],
+  "language": "en"
+}

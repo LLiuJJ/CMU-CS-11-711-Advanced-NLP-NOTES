@@ -1,0 +1,53 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 6.0,
+      "text": "So, look careful that this is not necessarily going to tell you nice linear correlations like that."
+    },
+    {
+      "id": 1,
+      "start": 6.0,
+      "end": 11.0,
+      "text": "So, let's say this correlation existed, if you use test need, it might not necessarily come out to this."
+    },
+    {
+      "id": 2,
+      "start": 11.0,
+      "end": 16.0,
+      "text": "Cool."
+    },
+    {
+      "id": 3,
+      "start": 16.0,
+      "end": 19.0,
+      "text": "Yep, that's my final thing."
+    },
+    {
+      "id": 4,
+      "start": 19.0,
+      "end": 23.0,
+      "text": "Actually, I talked to, said sequence models in the next class, but it's in the class after this."
+    },
+    {
+      "id": 5,
+      "start": 23.0,
+      "end": 26.0,
+      "text": "I'm going to be talking about language modeling."
+    },
+    {
+      "id": 6,
+      "start": 26.0,
+      "end": 27.0,
+      "text": "Cool."
+    },
+    {
+      "id": 7,
+      "start": 27.0,
+      "end": 29.0,
+      "text": "Any questions?"
+    }
+  ],
+  "language": "en"
+}

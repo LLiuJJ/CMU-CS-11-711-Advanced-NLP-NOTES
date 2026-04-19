@@ -1,0 +1,605 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 5.1,
+      "text": "any questions about this or comments or things like this."
+    },
+    {
+      "id": 1,
+      "start": 5.1,
+      "end": 9.22,
+      "text": "I think one thing that's changed really drastically from the last time I taught this class"
+    },
+    {
+      "id": 2,
+      "start": 9.22,
+      "end": 13.32,
+      "text": "is the fact that number one and number two are the things that people are actually doing"
+    },
+    {
+      "id": 3,
+      "start": 13.32,
+      "end": 18.3,
+      "text": "in practice, which was, you know, people who actually care about systems are doing number"
+    },
+    {
+      "id": 4,
+      "start": 18.3,
+      "end": 20.3,
+      "text": "one and number two is the main thing."
+    },
+    {
+      "id": 5,
+      "start": 20.3,
+      "end": 24.82,
+      "text": "It used to be that if you were actually serious about building a system, you really needed"
+    },
+    {
+      "id": 6,
+      "start": 24.82,
+      "end": 27.62,
+      "text": "to do the fun-tuning and now it's kind of like more optional."
+    },
+    {
+      "id": 7,
+      "start": 27.62,
+      "end": 34.62,
+      "text": "So, yeah."
+    },
+    {
+      "id": 8,
+      "start": 34.62,
+      "end": 53.62,
+      "text": "So, it's definitely an empirical observation."
+    },
+    {
+      "id": 9,
+      "start": 53.62,
+      "end": 66.66,
+      "text": "In terms of the theoretical background, I am not, I can't immediately quite to a particular"
+    },
+    {
+      "id": 10,
+      "start": 66.66,
+      "end": 74.86,
+      "text": "paper that does that, but I think if you think about the, I think I have seen that they"
+    },
+    {
+      "id": 11,
+      "start": 74.86,
+      "end": 77.86,
+      "text": "do exist in the past, but I can't think of it right now."
+    },
+    {
+      "id": 12,
+      "start": 77.86,
+      "end": 82.86,
+      "text": "I can try to, try to come up with an example of that."
+    },
+    {
+      "id": 13,
+      "start": 82.86,
+      "end": 89.86,
+      "text": "So, I should take notes."
+    },
+    {
+      "id": 14,
+      "start": 89.86,
+      "end": 94.86,
+      "text": "Or if someone wants to share one on Piazza, if you have any ideas and want to share with"
+    },
+    {
+      "id": 15,
+      "start": 94.86,
+      "end": 95.86,
+      "text": "Piazza, I'm sure that would be great."
+    },
+    {
+      "id": 16,
+      "start": 95.86,
+      "end": 102.86,
+      "text": "It would be great if they have a discussion on Piazza."
+    },
+    {
+      "id": 17,
+      "start": 102.86,
+      "end": 103.86,
+      "text": "Cool."
+    },
+    {
+      "id": 18,
+      "start": 103.86,
+      "end": 104.86,
+      "text": "Okay."
+    },
+    {
+      "id": 19,
+      "start": 104.86,
+      "end": 108.86,
+      "text": "So, next, I want to try to make a rule-based system."
+    },
+    {
+      "id": 20,
+      "start": 108.86,
+      "end": 112.86,
+      "text": "And I'm going to make a rule-based system for sentiment analysis."
+    },
+    {
+      "id": 21,
+      "start": 112.86,
+      "end": 113.86,
+      "text": "And this is a bad idea."
+    },
+    {
+      "id": 22,
+      "start": 113.86,
+      "end": 118.06,
+      "text": "I would not encourage you to ever do this in real life, but I want to do it here to show"
+    },
+    {
+      "id": 23,
+      "start": 118.06,
+      "end": 122.86,
+      "text": "you why it's a bad idea and like what are some of the hard problems that you encounter"
+    },
+    {
+      "id": 24,
+      "start": 122.86,
+      "end": 125.86,
+      "text": "when trying to create a system based on rules."
+    },
+    {
+      "id": 25,
+      "start": 125.86,
+      "end": 131.86,
+      "text": "And then we'll move into building and machine learning based system after we finish this."
+    },
+    {
+      "id": 26,
+      "start": 131.86,
+      "end": 137.86,
+      "text": "So, if we look at the example test, this is review sentiment analysis."
+    },
+    {
+      "id": 27,
+      "start": 137.86,
+      "end": 146.86,
+      "text": "It's one of the most valuable tasks that people do in NLD nowadays, because it allows people to know how customers"
+    },
+    {
+      "id": 28,
+      "start": 146.86,
+      "end": 152.86,
+      "text": "are thinking about products, improve their product development and other things like that,"
+    },
+    {
+      "id": 29,
+      "start": 152.86,
+      "end": 158.86,
+      "text": "monitor people's satisfaction with their social media service, other things like this."
+    },
+    {
+      "id": 30,
+      "start": 158.86,
+      "end": 167.86,
+      "text": "So, basically the way it works is you have outputs or you have sentences, inputs like I hate the movie, I love the movie,"
+    },
+    {
+      "id": 31,
+      "start": 167.86,
+      "end": 171.86,
+      "text": "I saw the movie and this gets mapped into positive, neutral or negative."
+    },
+    {
+      "id": 32,
+      "start": 171.86,
+      "end": 178.86,
+      "text": "So, I hate the movie would be negative, I love the movie positive and I saw this movie as neutral."
+    },
+    {
+      "id": 33,
+      "start": 178.86,
+      "end": 187.86,
+      "text": "So, that's the task, input, text, output labels, ternary, sentence-level."
+    },
+    {
+      "id": 34,
+      "start": 187.86,
+      "end": 192.86,
+      "text": "And in order to do this, we would like to build a model."
+    },
+    {
+      "id": 35,
+      "start": 192.86,
+      "end": 197.86,
+      "text": "And we're going to build the model in a rule based way, but it will still call it a model."
+    },
+    {
+      "id": 36,
+      "start": 197.86,
+      "end": 201.86,
+      "text": "And the way it works is we do feature extraction."
+    },
+    {
+      "id": 37,
+      "start": 201.86,
+      "end": 206.86,
+      "text": "So, we extract the salient features for making the decision about what's output next."
+    },
+    {
+      "id": 38,
+      "start": 206.86,
+      "end": 210.86,
+      "text": "We do score calculation, calculate a score for one or more possibilities."
+    },
+    {
+      "id": 39,
+      "start": 210.86,
+      "end": 212.86,
+      "text": "And we have a decision function."
+    },
+    {
+      "id": 40,
+      "start": 212.86,
+      "end": 215.86,
+      "text": "So, we choose one of those several possibilities."
+    },
+    {
+      "id": 41,
+      "start": 216.86,
+      "end": 227.86,
+      "text": "And so, for feature extraction, formally what this looks like is we have some function and it extracts a feature vector."
+    },
+    {
+      "id": 42,
+      "start": 227.86,
+      "end": 243.86,
+      "text": "For score calculation, we calculate the scores based on either a binary classification, where we have a weight vector and we take the dot product with our feature vector, or we have multi-class classification, where we have a weight matrix."
+    },
+    {
+      "id": 43,
+      "start": 243.86,
+      "end": 251.86,
+      "text": "And we take the product with the vector and that gives us scores over multiple classes."
+    },
+    {
+      "id": 44,
+      "start": 251.86,
+      "end": 254.86,
+      "text": "And then we have a decision rule."
+    },
+    {
+      "id": 45,
+      "start": 254.86,
+      "end": 258.86,
+      "text": "So, this decision rule tells us what the output is weight."
+    },
+    {
+      "id": 46,
+      "start": 258.86,
+      "end": 261.86,
+      "text": "Does anyone know what a typical decision rule is?"
+    },
+    {
+      "id": 47,
+      "start": 261.86,
+      "end": 267.86,
+      "text": "Maybe, maybe, so obvious that you don't think about it after."
+    },
+    {
+      "id": 48,
+      "start": 267.86,
+      "end": 277.86,
+      "text": "A threshold. So, like, for would that be for binary, single binary, skip, or score or a multi class."
+    },
+    {
+      "id": 49,
+      "start": 277.86,
+      "end": 286.86,
+      "text": "Binary, yes. So, and then you would pick a threshold and if it's over the threshold, you say, yes, and if it's under the threshold, you say no."
+    },
+    {
+      "id": 50,
+      "start": 286.86,
+      "end": 290.86,
+      "text": "Another option would be."
+    },
+    {
+      "id": 51,
+      "start": 290.86,
+      "end": 298.86,
+      "text": "You have a threshold and you say yes, no."
+    },
+    {
+      "id": 52,
+      "start": 298.86,
+      "end": 307.86,
+      "text": "So, you don't, you don't give an answer. And depending on how you're evaluated, what, what is a good classifier, you might want to understand from the time I say."
+    },
+    {
+      "id": 53,
+      "start": 307.86,
+      "end": 314.86,
+      "text": "For multi class, what's a standard decision rule for multiple class?"
+    },
+    {
+      "id": 54,
+      "start": 314.86,
+      "end": 322.86,
+      "text": "So, you find the index that has a higher score."
+    },
+    {
+      "id": 55,
+      "start": 322.86,
+      "end": 331.86,
+      "text": "We're going to be talking about other decision rules, also like self consistency and minimum base risk later for text generation."
+    },
+    {
+      "id": 56,
+      "start": 331.86,
+      "end": 336.86,
+      "text": "So, you can just keep that in mind and then we'll forget about it for like several classes."
+    },
+    {
+      "id": 57,
+      "start": 336.86,
+      "end": 345.86,
+      "text": "So, for sentiment classification, I have a code walk here."
+    },
+    {
+      "id": 58,
+      "start": 345.86,
+      "end": 365.86,
+      "text": "And this is pretty simple, but if you're bored of the class and would like to try out yourself, you can challenge and try to get a better score than I do."
+    },
+    {
+      "id": 59,
+      "start": 365.86,
+      "end": 371.86,
+      "text": "So, I'll just write a little bit of the text in the next few minutes, but we have this rule based classifier in here."
+    },
+    {
+      "id": 60,
+      "start": 371.86,
+      "end": 386.86,
+      "text": "And I will open it up in my VS code to try to create a rule based classifier and basically the way this works."
+    },
+    {
+      "id": 61,
+      "start": 386.86,
+      "end": 394.86,
+      "text": "That we have feature extraction."
+    },
+    {
+      "id": 62,
+      "start": 394.86,
+      "end": 400.86,
+      "text": "We have feature extraction, we have scoring and we have a decision."
+    },
+    {
+      "id": 63,
+      "start": 400.86,
+      "end": 407.86,
+      "text": "So, here for our feature extraction, I have created a list of good words and the list of bad words."
+    },
+    {
+      "id": 64,
+      "start": 407.86,
+      "end": 415.86,
+      "text": "And what we do is we just count the number of good words that appeared and count the number of bad words that appeared."
+    },
+    {
+      "id": 65,
+      "start": 415.86,
+      "end": 421.86,
+      "text": "Then we also have a bias feature. So, the bias feature is a feature that's always one."
+    },
+    {
+      "id": 66,
+      "start": 421.86,
+      "end": 427.86,
+      "text": "And so, what that is also as we have a dimension three feature vector."
+    },
+    {
+      "id": 67,
+      "start": 427.86,
+      "end": 433.86,
+      "text": "This is like a number of good words. This is the number of bad words and then we have the bias."
+    },
+    {
+      "id": 68,
+      "start": 434.86,
+      "end": 446.86,
+      "text": "And then I also define the future weights that so for every good word, we add one to our score. For every bad word, we add, we subtract one from our score and for the bias free of zero point."
+    },
+    {
+      "id": 69,
+      "start": 446.86,
+      "end": 453.86,
+      "text": "And so, you can take the dot product between these two."
+    },
+    {
+      "id": 70,
+      "start": 453.86,
+      "end": 457.86,
+      "text": "And we get minus zero point five."
+    },
+    {
+      "id": 71,
+      "start": 457.86,
+      "end": 460.86,
+      "text": "And that gives us that gives us this."
+    },
+    {
+      "id": 72,
+      "start": 460.86,
+      "end": 465.86,
+      "text": "So, let's run that."
+    },
+    {
+      "id": 73,
+      "start": 465.86,
+      "end": 469.86,
+      "text": "And I read in some data."
+    },
+    {
+      "id": 74,
+      "start": 469.86,
+      "end": 475.86,
+      "text": "And what this data looks like is basically we have a review."
+    },
+    {
+      "id": 75,
+      "start": 475.86,
+      "end": 480.86,
+      "text": "Which says the rock is destined to be the 21st century's new tone on."
+    },
+    {
+      "id": 76,
+      "start": 480.86,
+      "end": 485.86,
+      "text": "And that he's going to make a splash even greater than Arnold Schwarzenegger."
+    },
+    {
+      "id": 77,
+      "start": 485.86,
+      "end": 488.86,
+      "text": "Jean Claude Van Dam or Steven Seagull."
+    },
+    {
+      "id": 78,
+      "start": 488.86,
+      "end": 491.86,
+      "text": "So, this seems pretty positive, right?"
+    },
+    {
+      "id": 79,
+      "start": 491.86,
+      "end": 496.86,
+      "text": "That's a pretty high order to be better than Arnold Schwarzenegger. Jean Claude Van Dam."
+    },
+    {
+      "id": 80,
+      "start": 496.86,
+      "end": 498.86,
+      "text": "If you're familiar with action movies."
+    },
+    {
+      "id": 81,
+      "start": 498.86,
+      "end": 503.86,
+      "text": "And so, of course, this gets a positive label."
+    },
+    {
+      "id": 82,
+      "start": 503.86,
+      "end": 509.86,
+      "text": "And so, we have run classifier. Actually, maybe I should call this decision rule because this is essentially our decision rule."
+    },
+    {
+      "id": 83,
+      "start": 509.86,
+      "end": 517.86,
+      "text": "So, I basically do the thing that I mentioned here, the yes, no abstain or in this case positive negative neutral."
+    },
+    {
+      "id": 84,
+      "start": 517.86,
+      "end": 521.86,
+      "text": "So, if the score is greater than zero, we return one."
+    },
+    {
+      "id": 85,
+      "start": 521.86,
+      "end": 525.86,
+      "text": "If the score is less than zero, we return negative one, which is negative."
+    },
+    {
+      "id": 86,
+      "start": 525.86,
+      "end": 528.86,
+      "text": "And otherwise, we return zero."
+    },
+    {
+      "id": 87,
+      "start": 528.86,
+      "end": 532.86,
+      "text": "We have an accuracy calculation function just calculating the outputs are good."
+    },
+    {
+      "id": 88,
+      "start": 532.86,
+      "end": 535.86,
+      "text": "And."
+    },
+    {
+      "id": 89,
+      "start": 535.86,
+      "end": 543.86,
+      "text": "The overall label count in the in the output. So, you can see the slightly more positives than there are negatives."
+    },
+    {
+      "id": 90,
+      "start": 543.86,
+      "end": 549.86,
+      "text": "And then we can run this and we get a score of 43."
+    },
+    {
+      "id": 91,
+      "start": 549.86,
+      "end": 562.86,
+      "text": "And so, one one thing that I have found is I do a lot of kind of research on how to make an LPS systems better."
+    },
+    {
+      "id": 92,
+      "start": 562.86,
+      "end": 566.86,
+      "text": "And one of the things I found really invaluable is."
+    },
+    {
+      "id": 93,
+      "start": 566.86,
+      "end": 573.86,
+      "text": "If you're in a situation where you have a set task and you just want to make the system better on the set task."
+    },
+    {
+      "id": 94,
+      "start": 573.86,
+      "end": 580.86,
+      "text": "Doing comprehensive error analysis and understanding where your system is failing is one of the best ways to do that."
+    },
+    {
+      "id": 95,
+      "start": 580.86,
+      "end": 584.86,
+      "text": "And I would like to do a very rudimentary version of this here."
+    },
+    {
+      "id": 96,
+      "start": 584.86,
+      "end": 591.86,
+      "text": "And what I'm doing essentially is I'm just randomly picking several examples that were correct."
+    },
+    {
+      "id": 97,
+      "start": 591.86,
+      "end": 595.86,
+      "text": "And so, like, let's look at the examples here."
+    },
+    {
+      "id": 98,
+      "start": 595.86,
+      "end": 599.86,
+      "text": "Here the true label is zero in this predicted one."
+    },
+    {
+      "id": 99,
+      "start": 599.86,
+      "end": 602.86,
+      "text": "It may not be as cutting as what he or as."
+    }
+  ],
+  "language": "en"
+}

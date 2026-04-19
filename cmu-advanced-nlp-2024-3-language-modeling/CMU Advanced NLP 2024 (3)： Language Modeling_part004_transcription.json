@@ -1,0 +1,617 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 16.0,
+      "text": "And so, you know, when you're running a zip file or you're running gzep or bz2 or something like that, you're compressing a file into a smaller file and any language model can also be used to compress a smile file into a smaller file."
+    },
+    {
+      "id": 1,
+      "start": 17.0,
+      "end": 28.0,
+      "text": "And so the way it does this is if you have more likely sequences, for example, more likely sentences are more likely documents, you can press them into a shorter output."
+    },
+    {
+      "id": 2,
+      "start": 29.0,
+      "end": 31.0,
+      "text": "And kind of the."
+    },
+    {
+      "id": 3,
+      "start": 31.0,
+      "end": 35.0,
+      "text": "And kind of kind of that has a few things that has a few things that has a few things that has a few things that has a thousand tokens in each sentence or each sequence."
+    },
+    {
+      "id": 4,
+      "start": 36.0,
+      "end": 43.0,
+      "text": "I think it's pretty safe to say ideal because I think you can't get a better method for compression than this. I wasn't."
+    },
+    {
+      "id": 5,
+      "start": 44.0,
+      "end": 52.0,
+      "text": "Not well, worse than often information theory, but I think this is basically the ideal method for data compression."
+    },
+    {
+      "id": 6,
+      "start": 53.0,
+      "end": 61.0,
+      "text": "And the way it works is I have a figure up here, but I'd like to recreate it here, which is let's say we have a vocabulary of a."
+    },
+    {
+      "id": 7,
+      "start": 62.0,
+      "end": 75.0,
+      "text": "Which is 50% and then we have a vocabulary beat, which is 33% and a vocabulary C."
+    },
+    {
+      "id": 8,
+      "start": 76.0,
+      "end": 81.0,
+      "text": "Yeah, see, which is about some."
+    },
+    {
+      "id": 9,
+      "start": 82.0,
+      "end": 93.0,
+      "text": "And so if you have a single token sequence, if you have a single token sequence, what you do is you can see."
+    },
+    {
+      "id": 10,
+      "start": 94.0,
+      "end": 99.0,
+      "text": "The divide this into zero and one."
+    },
+    {
+      "id": 11,
+      "start": 100.0,
+      "end": 109.0,
+      "text": "So if your single token sequence is a, you can just put zero and you'll be done in putting it. If your single token sequence is B, then."
+    },
+    {
+      "id": 12,
+      "start": 110.0,
+      "end": 123.0,
+      "text": "One overlaps with B, so now you need to further split this up into one. And you can see that."
+    },
+    {
+      "id": 13,
+      "start": 130.0,
+      "end": 134.0,
+      "text": "And you can see that."
+    },
+    {
+      "id": 14,
+      "start": 140.0,
+      "end": 148.0,
+      "text": "One zero is entirely encompassed by by B. So now B is one zero and see."
+    },
+    {
+      "id": 15,
+      "start": 149.0,
+      "end": 152.0,
+      "text": "See is not entirely encompassed by that."
+    },
+    {
+      "id": 16,
+      "start": 152.0,
+      "end": 159.0,
+      "text": "So you need to further break this up and say it's zero one here."
+    },
+    {
+      "id": 17,
+      "start": 159.0,
+      "end": 166.0,
+      "text": "And now one one one is encompassed by that. So you would do it."
+    },
+    {
+      "id": 18,
+      "start": 167.0,
+      "end": 181.0,
+      "text": "See, it was one one one. And so every, every sequence that started with zero would start out with a, every sequence that started out with one zero would start with B and every sequence that started with one one one."
+    },
+    {
+      "id": 19,
+      "start": 181.0,
+      "end": 187.0,
+      "text": "And so then you can look at the next word."
+    },
+    {
+      "id": 20,
+      "start": 188.0,
+      "end": 197.0,
+      "text": "And let's say we're using a unigram model. If we're using a unigram model for the next, the next token. Let's say the next token is C."
+    },
+    {
+      "id": 21,
+      "start": 197.0,
+      "end": 209.0,
+      "text": "So now the next token being C, we already have B. And now we take we subdivide B."
+    },
+    {
+      "id": 22,
+      "start": 210.0,
+      "end": 223.0,
+      "text": "And then we find the next binary sequence that is entirely encompassed by B."
+    },
+    {
+      "id": 23,
+      "start": 224.0,
+      "end": 230.0,
+      "text": "And so the moment you find a binary sequence that's entirely encompassed by the interval."
+    },
+    {
+      "id": 24,
+      "start": 230.0,
+      "end": 235.0,
+      "text": "Then that is the sequence that we can use to represent."
+    },
+    {
+      "id": 25,
+      "start": 235.0,
+      "end": 249.0,
+      "text": "And so if you're interested in this, you can look up the arithmetic coding on Wikipedia. It's pretty fascinating. But basically, here, this is showing the example of the unigram model where the probabilities don't change based on the context."
+    },
+    {
+      "id": 26,
+      "start": 250.0,
+      "end": 257.0,
+      "text": "But what if we knew that C had a really high probability of following B."
+    },
+    {
+      "id": 27,
+      "start": 257.0,
+      "end": 269.0,
+      "text": "So if that's the case, now we have like a, a, b, c here, based on our, our diagram model or neural language model or something like that."
+    },
+    {
+      "id": 28,
+      "start": 270.0,
+      "end": 282.0,
+      "text": "So now this is your role as much, much larger. So it's much more likely to entirely encompass a shorter string. And because of that, the, the output can be much shorter."
+    },
+    {
+      "id": 29,
+      "start": 282.0,
+      "end": 298.0,
+      "text": "And so if you use this arithmetic encoding over a very long sequence of outputs, you're the length of the sequence that is needed to encode this, this particular output is going to be essentially."
+    },
+    {
+      "id": 30,
+      "start": 300.0,
+      "end": 315.0,
+      "text": "The number of bits according to the times the, times the sequence. So this is very directly connected to like compression and information to reinstall that."
+    },
+    {
+      "id": 31,
+      "start": 315.0,
+      "end": 318.0,
+      "text": "So that's where entry comes from."
+    },
+    {
+      "id": 32,
+      "start": 318.0,
+      "end": 324.0,
+      "text": "Are there any questions about this?"
+    },
+    {
+      "id": 33,
+      "start": 324.0,
+      "end": 327.0,
+      "text": "Yeah."
+    },
+    {
+      "id": 34,
+      "start": 327.0,
+      "end": 330.0,
+      "text": "I'm not sure if that's right."
+    },
+    {
+      "id": 35,
+      "start": 330.0,
+      "end": 333.0,
+      "text": "For C."
+    },
+    {
+      "id": 36,
+      "start": 333.0,
+      "end": 339.0,
+      "text": "So one one one is because."
+    },
+    {
+      "id": 37,
+      "start": 339.0,
+      "end": 343.0,
+      "text": "Let me see if I can do this."
+    },
+    {
+      "id": 38,
+      "start": 343.0,
+      "end": 346.0,
+      "text": "So."
+    },
+    {
+      "id": 39,
+      "start": 346.0,
+      "end": 351.0,
+      "text": "I have one one."
+    },
+    {
+      "id": 40,
+      "start": 351.0,
+      "end": 356.0,
+      "text": "So here this interval is one."
+    },
+    {
+      "id": 41,
+      "start": 356.0,
+      "end": 361.0,
+      "text": "This interval is one one. This interval is one one one."
+    },
+    {
+      "id": 42,
+      "start": 361.0,
+      "end": 367.0,
+      "text": "And one one one is the first interval that is entirely overlapping with the C."
+    },
+    {
+      "id": 43,
+      "start": 367.0,
+      "end": 375.0,
+      "text": "It's not one one zero because one one zero is overlapping with the answer."
+    },
+    {
+      "id": 44,
+      "start": 375.0,
+      "end": 378.0,
+      "text": "So which case."
+    },
+    {
+      "id": 45,
+      "start": 378.0,
+      "end": 383.0,
+      "text": "On the same with the earlier one."
+    },
+    {
+      "id": 46,
+      "start": 383.0,
+      "end": 385.0,
+      "text": "One zero."
+    },
+    {
+      "id": 47,
+      "start": 385.0,
+      "end": 387.0,
+      "text": "One zero."
+    },
+    {
+      "id": 48,
+      "start": 387.0,
+      "end": 390.0,
+      "text": "One one zero."
+    },
+    {
+      "id": 49,
+      "start": 390.0,
+      "end": 397.0,
+      "text": "When would you use one one zero to represent something?"
+    },
+    {
+      "id": 50,
+      "start": 397.0,
+      "end": 403.0,
+      "text": "I think it's a very interesting question. I guess we would."
+    },
+    {
+      "id": 51,
+      "start": 403.0,
+      "end": 406.0,
+      "text": "It seems a little bit wasteful."
+    },
+    {
+      "id": 52,
+      "start": 406.0,
+      "end": 407.0,
+      "text": "So."
+    },
+    {
+      "id": 53,
+      "start": 407.0,
+      "end": 410.0,
+      "text": "When we, when we think about that, I think."
+    },
+    {
+      "id": 54,
+      "start": 410.0,
+      "end": 414.0,
+      "text": "It might be the case that you just don't use it."
+    },
+    {
+      "id": 55,
+      "start": 414.0,
+      "end": 415.0,
+      "text": "But."
+    },
+    {
+      "id": 56,
+      "start": 415.0,
+      "end": 421.0,
+      "text": "Yeah, I'll try to think about that a little bit more because it seems like you should use every bed string. Right."
+    },
+    {
+      "id": 57,
+      "start": 421.0,
+      "end": 422.0,
+      "text": "So."
+    },
+    {
+      "id": 58,
+      "start": 422.0,
+      "end": 423.0,
+      "text": "Yeah."
+    },
+    {
+      "id": 59,
+      "start": 423.0,
+      "end": 428.0,
+      "text": "So."
+    },
+    {
+      "id": 60,
+      "start": 428.0,
+      "end": 433.0,
+      "text": "So the next thing is proplexity. So this is another one that you see."
+    },
+    {
+      "id": 61,
+      "start": 433.0,
+      "end": 443.0,
+      "text": "And so proplexity is basically two to the entry, two to the forward entropy or e to the negative word level log likelihood."
+    },
+    {
+      "id": 62,
+      "start": 443.0,
+      "end": 445.0,
+      "text": "In log space."
+    },
+    {
+      "id": 63,
+      "start": 445.0,
+      "end": 448.0,
+      "text": "And so this."
+    },
+    {
+      "id": 64,
+      "start": 448.0,
+      "end": 450.0,
+      "text": "And so this is a larger."
+    },
+    {
+      "id": 65,
+      "start": 450.0,
+      "end": 452.0,
+      "text": "Larger tends to be better."
+    },
+    {
+      "id": 66,
+      "start": 452.0,
+      "end": 463.0,
+      "text": "I'd like to do a little exercise to see if this works. So like, let's say we have one of them sees a squirrel. It will usually."
+    },
+    {
+      "id": 67,
+      "start": 463.0,
+      "end": 466.0,
+      "text": "Anyone gets the next word just yell it out."
+    },
+    {
+      "id": 68,
+      "start": 466.0,
+      "end": 467.0,
+      "text": "Bar."
+    },
+    {
+      "id": 69,
+      "start": 467.0,
+      "end": 469.0,
+      "text": "Okay."
+    },
+    {
+      "id": 70,
+      "start": 469.0,
+      "end": 471.0,
+      "text": "What about that?"
+    },
+    {
+      "id": 71,
+      "start": 471.0,
+      "end": 473.0,
+      "text": "What about something else?"
+    },
+    {
+      "id": 72,
+      "start": 473.0,
+      "end": 476.0,
+      "text": "Yeah."
+    },
+    {
+      "id": 73,
+      "start": 476.0,
+      "end": 479.0,
+      "text": "Run."
+    },
+    {
+      "id": 74,
+      "start": 479.0,
+      "end": 481.0,
+      "text": "Yeah."
+    },
+    {
+      "id": 75,
+      "start": 481.0,
+      "end": 484.0,
+      "text": "Don't."
+    },
+    {
+      "id": 76,
+      "start": 484.0,
+      "end": 488.0,
+      "text": "Anything else?"
+    },
+    {
+      "id": 77,
+      "start": 488.0,
+      "end": 491.0,
+      "text": "Any other ones?"
+    },
+    {
+      "id": 78,
+      "start": 491.0,
+      "end": 500.0,
+      "text": "So basically what this shows is humans are really bad language models."
+    },
+    {
+      "id": 79,
+      "start": 500.0,
+      "end": 503.0,
+      "text": "So."
+    },
+    {
+      "id": 80,
+      "start": 503.0,
+      "end": 512.0,
+      "text": "Interestingly, every single one of the words you predicted here is a regular verb."
+    },
+    {
+      "id": 81,
+      "start": 512.0,
+      "end": 516.0,
+      "text": "But in actual language model, GPT 2."
+    },
+    {
+      "id": 82,
+      "start": 516.0,
+      "end": 521.0,
+      "text": "The first thing it predicts is B, which is kind of like the copula."
+    },
+    {
+      "id": 83,
+      "start": 521.0,
+      "end": 523.0,
+      "text": "There's also start."
+    },
+    {
+      "id": 84,
+      "start": 523.0,
+      "end": 526.0,
+      "text": "And that will be like start running start something."
+    },
+    {
+      "id": 85,
+      "start": 526.0,
+      "end": 529.0,
+      "text": "And humans actually are really bad at doing this."
+    },
+    {
+      "id": 86,
+      "start": 529.0,
+      "end": 532.0,
+      "text": "So I really bad at predicting the next words. We're not trained that way."
+    },
+    {
+      "id": 87,
+      "start": 532.0,
+      "end": 535.0,
+      "text": "And so we end up having these biases."
+    },
+    {
+      "id": 88,
+      "start": 535.0,
+      "end": 542.0,
+      "text": "But anyway, the reason why I did this quiz was because that's essentially what perplexity means."
+    },
+    {
+      "id": 89,
+      "start": 542.0,
+      "end": 550.0,
+      "text": "And what what perplexity is is it's the number of times you'd have to sample from the probability distribution before you get the answer right."
+    },
+    {
+      "id": 90,
+      "start": 550.0,
+      "end": 555.0,
+      "text": "So you were a little bit biased here because we were doing sampling without replacement."
+    },
+    {
+      "id": 91,
+      "start": 555.0,
+      "end": 559.0,
+      "text": "So like nobody was actually picking a word that already been said."
+    },
+    {
+      "id": 92,
+      "start": 559.0,
+      "end": 564.0,
+      "text": "But it's essentially like if you guessed over and over and over again, how many times would you need to put it right?"
+    },
+    {
+      "id": 93,
+      "start": 564.0,
+      "end": 569.0,
+      "text": "And so here like if the actual answer was start the perplexity would be 4.66."
+    },
+    {
+      "id": 94,
+      "start": 569.0,
+      "end": 573.0,
+      "text": "So we'd expect the language model to get it in four guesses."
+    },
+    {
+      "id": 95,
+      "start": 573.0,
+      "end": 581.0,
+      "text": "And you guys all did six. So you lose."
+    },
+    {
+      "id": 96,
+      "start": 581.0,
+      "end": 585.0,
+      "text": "So another important thing to mention is evaluation and vocabulary."
+    },
+    {
+      "id": 97,
+      "start": 585.0,
+      "end": 588.0,
+      "text": "So for fair comparison."
+    },
+    {
+      "id": 98,
+      "start": 588.0,
+      "end": 591.0,
+      "text": "Make sure that the denominator is the same."
+    },
+    {
+      "id": 99,
+      "start": 591.0,
+      "end": 596.0,
+      "text": "So if you're calculating the perplexity, make sure that you're dividing by the same number."
+    },
+    {
+      "id": 100,
+      "start": 596.0,
+      "end": 602.0,
+      "text": "Every time you're dividing by words if the other paper or whatever is dividing by words."
+    },
+    {
+      "id": 101,
+      "start": 602.0,
+      "end": 609.0,
+      "text": "Like let's say you're comparing llama to gpp."
+    }
+  ],
+  "language": "en"
+}

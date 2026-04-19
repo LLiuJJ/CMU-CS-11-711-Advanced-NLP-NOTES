@@ -1,0 +1,509 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 7.36,
+      "text": "with the death snap. And then, ideally, if this longitudinal agent can interact with this"
+    },
+    {
+      "id": 1,
+      "start": 7.36,
+      "end": 14.16,
+      "text": "environment, it should predict, oh, I should go to the DEX1, which is my computer in red funds."
+    },
+    {
+      "id": 2,
+      "start": 14.16,
+      "end": 22.08,
+      "text": "And then you arrive at a new location and then you get a new observation. So this kind of task,"
+    },
+    {
+      "id": 3,
+      "start": 22.08,
+      "end": 27.28,
+      "text": "you can already get a sense of how this agent is usually interacting with your surrounding"
+    },
+    {
+      "id": 4,
+      "start": 27.28,
+      "end": 35.6,
+      "text": "surrounding environment. You have some sort of observation, you have some sort of action to perform."
+    },
+    {
+      "id": 5,
+      "start": 37.36,
+      "end": 44.16,
+      "text": "And there are of course other applications in games. For example, there are many benchmarks or"
+    },
+    {
+      "id": 6,
+      "start": 44.16,
+      "end": 50.72,
+      "text": "applications. For example, this one is called Mindodro. It works on creating an agent that can"
+    },
+    {
+      "id": 7,
+      "start": 50.72,
+      "end": 56.4,
+      "text": "listen to natural language instructions and perform Minecraft tasks for you. There are also"
+    },
+    {
+      "id": 8,
+      "start": 56.4,
+      "end": 64.24,
+      "text": "recent work from DeepMind Club, FEMA that given a natural language instruction program that"
+    },
+    {
+      "id": 9,
+      "start": 64.24,
+      "end": 70.08,
+      "text": "should asteroid, it will just have to shoot that asteroid in the game. And also,"
+    },
+    {
+      "id": 10,
+      "start": 71.44,
+      "end": 78.0,
+      "text": "our agent can also use in software development. Recently, there's a startup called Devon that created"
+    },
+    {
+      "id": 11,
+      "start": 78.48,
+      "end": 88.08,
+      "text": "a AI, so-called AI software engineer that the automation is this, you have this code editor,"
+    },
+    {
+      "id": 12,
+      "start": 88.08,
+      "end": 93.84,
+      "text": "you have an terminal that could, sorry, code editor and a terminal that you could actually command."
+    },
+    {
+      "id": 13,
+      "start": 93.84,
+      "end": 98.96,
+      "text": "And there's also a web browser where you can search for documentation. Ideally, if everything is"
+    },
+    {
+      "id": 14,
+      "start": 98.96,
+      "end": 106.4,
+      "text": "automated, you can just give a natural language instruction on, create, like, finish 7, 11 homework for"
+    },
+    {
+      "id": 15,
+      "start": 106.4,
+      "end": 112.56,
+      "text": "me. And it will just, the agent will just complete the homework there in these workplace."
+    },
+    {
+      "id": 16,
+      "start": 112.56,
+      "end": 118.56,
+      "text": "So in this scenario, the observation will be this string basically. It contains for a three,"
+    },
+    {
+      "id": 17,
+      "start": 118.56,
+      "end": 124.96,
+      "text": "like terminal web browser and editor. And the action you take is just like, you can"
+    },
+    {
+      "id": 18,
+      "start": 124.96,
+      "end": 130.48,
+      "text": "issue commands to terminal or you can search in the web browser or you can write code in the code"
+    },
+    {
+      "id": 19,
+      "start": 131.44,
+      "end": 138.0,
+      "text": "editor. There's of course a UI automation where you can browse web and like play some songs or,"
+    },
+    {
+      "id": 20,
+      "start": 138.88,
+      "end": 144.56,
+      "text": "you know, zooming, zoom out all these GUI navigation. I are so-"
+    },
+    {
+      "id": 21,
+      "start": 147.2,
+      "end": 154.08,
+      "text": "so now that we have a brief overview of what task and applications could be in name-odes,"
+    },
+    {
+      "id": 22,
+      "start": 155.04,
+      "end": 162.72,
+      "text": "say we have a pretty good LM agent. So now the topic becomes, can we have some methods to"
+    },
+    {
+      "id": 23,
+      "start": 162.72,
+      "end": 168.24,
+      "text": "view these agents? Now I'm going to, at the beginning, I'm going to cover some training-free methods."
+    },
+    {
+      "id": 24,
+      "start": 168.96,
+      "end": 176.56,
+      "text": "So how to, you know, how to let an LM become agent, basically, that's the question we're"
+    },
+    {
+      "id": 25,
+      "start": 176.8,
+      "end": 185.44,
+      "text": "going to answer. So usually an LM agent needs to take, as an agent, it needs to take into,"
+    },
+    {
+      "id": 26,
+      "start": 186.32,
+      "end": 192.24,
+      "text": "take in an observation of the current environment. Usually the one the all-lution can be,"
+    },
+    {
+      "id": 27,
+      "start": 192.24,
+      "end": 199.76,
+      "text": "you know, multiple modernities. You could have a text input as a, you know, as an observation. For"
+    },
+    {
+      "id": 28,
+      "start": 199.76,
+      "end": 206.64,
+      "text": "example, in this example, you know, I'm just gonna, it's like a description of the previous"
+    },
+    {
+      "id": 29,
+      "start": 206.64,
+      "end": 212.0,
+      "text": "off-world example. What's surrounding you? I have a desk, I have a chair here and there,"
+    },
+    {
+      "id": 30,
+      "start": 212.0,
+      "end": 217.04,
+      "text": "and what should I, if I want to grab the chair, what should I do next? That's the text input."
+    },
+    {
+      "id": 31,
+      "start": 217.04,
+      "end": 222.32,
+      "text": "Visually input, of course, if you are building an LM agent for games, of course, you are going to"
+    },
+    {
+      "id": 32,
+      "start": 222.32,
+      "end": 228.48,
+      "text": "have a capture or a current screenshot of your character in the surrounding environment. Sometimes"
+    },
+    {
+      "id": 33,
+      "start": 228.48,
+      "end": 234.96,
+      "text": "we may also have audio input. Like if you're playing games, you want to hear what's happening"
+    },
+    {
+      "id": 34,
+      "start": 234.96,
+      "end": 243.92,
+      "text": "surrounding you or behind you that is not seeing on the screen. And of course, we also have structured"
+    },
+    {
+      "id": 35,
+      "start": 243.92,
+      "end": 254.32,
+      "text": "input. For example, if you are building, say, like an agent for websites or for other desktop"
+    },
+    {
+      "id": 36,
+      "start": 254.32,
+      "end": 262.72,
+      "text": "applications, the websites usually are written in HTML code revenue layout of its UI. So it might"
+    },
+    {
+      "id": 37,
+      "start": 262.72,
+      "end": 269.12,
+      "text": "be like a tree-locked structure as you can, that you can take into as input for our own agent."
+    },
+    {
+      "id": 38,
+      "start": 269.12,
+      "end": 277.2,
+      "text": "So this also kind of the need for our agent also says that we need pretty good multi-model"
+    },
+    {
+      "id": 39,
+      "start": 277.2,
+      "end": 286.72,
+      "text": "LMs for these to work. And you're going to cover how should that become agent by first,"
+    },
+    {
+      "id": 40,
+      "start": 287.12,
+      "end": 295.04,
+      "text": "you need to plan and reason. Because in order to perform a complex task that the human issue to them,"
+    },
+    {
+      "id": 41,
+      "start": 295.04,
+      "end": 304.88,
+      "text": "you have to usually have to decompose them into sub-tems. There are many, many existing methods in"
+    },
+    {
+      "id": 42,
+      "start": 304.88,
+      "end": 311.68,
+      "text": "how I am that tackles this reasoning problem. The most famous of which is to chain out that"
+    },
+    {
+      "id": 43,
+      "start": 311.68,
+      "end": 317.92,
+      "text": "reason, which famously is just prompt the language model to that is synced by step. Here's"
+    },
+    {
+      "id": 44,
+      "start": 318.8,
+      "end": 324.88,
+      "text": "so basically the goal here is to let the language model generate some reasoning traces so that it has"
+    },
+    {
+      "id": 45,
+      "start": 324.88,
+      "end": 333.84,
+      "text": "a roughy a good pan of how to perform certain tasks. Here's an example from Alfred, which is you"
+    },
+    {
+      "id": 46,
+      "start": 333.84,
+      "end": 338.96,
+      "text": "are given a task for the description of your surroundings, you are in the middle room."
+    },
+    {
+      "id": 47,
+      "start": 340.56,
+      "end": 347.12,
+      "text": "And what's surrounding you and your task is to put some pepper shaker on a drawer. And if you want"
+    },
+    {
+      "id": 48,
+      "start": 347.12,
+      "end": 355.12,
+      "text": "to let an alarm to reason to how to perform this task into sub-task, you ask, what should I do next,"
+    },
+    {
+      "id": 49,
+      "start": 355.12,
+      "end": 361.36,
+      "text": "let's think step by step. And the language model, if it's a good language model, it will say,"
+    },
+    {
+      "id": 50,
+      "start": 361.44,
+      "end": 368.72,
+      "text": "first I need to find a pepper shaker and they a pepper shaker more likely to be an appearing"
+    },
+    {
+      "id": 51,
+      "start": 368.72,
+      "end": 378.24,
+      "text": "cabinet, countertops, and after I find pepper shaker one, I need to put it in say jola. So here you"
+    },
+    {
+      "id": 52,
+      "start": 378.24,
+      "end": 384.4,
+      "text": "can actually rely on large language models to generate reasoning traces. Basically decompose this,"
+    },
+    {
+      "id": 53,
+      "start": 384.96,
+      "end": 391.12,
+      "text": "find a put pepper shaker on drawer tasks into two sub-tanks. First you need to find them"
+    },
+    {
+      "id": 54,
+      "start": 391.36,
+      "end": 399.04,
+      "text": "and then you have to put it. But it is not enough to just have this kind of panning and reasoning to"
+    },
+    {
+      "id": 55,
+      "start": 399.04,
+      "end": 404.08,
+      "text": "generate some of these natural angles. Because you can't execute them, if you just have this"
+    },
+    {
+      "id": 56,
+      "start": 405.44,
+      "end": 413.12,
+      "text": "bunch of text, an actual robot will not be able to perform this task. And that's why we also need"
+    },
+    {
+      "id": 57,
+      "start": 413.12,
+      "end": 418.64,
+      "text": "the language model to have this tool use ability. So not only it should generate"
+    },
+    {
+      "id": 58,
+      "start": 419.28,
+      "end": 426.16,
+      "text": "reasoning traces, it needs to also interact with environment. Here we focus on actions here."
+    },
+    {
+      "id": 59,
+      "start": 426.16,
+      "end": 431.84,
+      "text": "So it needs to generate some action calls, ask you the action calls in environment, and then"
+    },
+    {
+      "id": 60,
+      "start": 431.84,
+      "end": 438.24,
+      "text": "supposedly if you action is moving for enough, it will change the environment a little bit. And then"
+    },
+    {
+      "id": 61,
+      "start": 438.24,
+      "end": 444.16,
+      "text": "supposedly you should have new observation to put it back in your prompt. Do the same example."
+    },
+    {
+      "id": 62,
+      "start": 444.8,
+      "end": 453.04,
+      "text": "You ask it, what should I do, let's think step by step, you find, just you say, oh, first I need"
+    },
+    {
+      "id": 63,
+      "start": 453.04,
+      "end": 461.52,
+      "text": "to find this pepper shaker. And it is more likely to appear in cabinets. Then with proper prompting,"
+    },
+    {
+      "id": 64,
+      "start": 463.04,
+      "end": 471.2,
+      "text": "the how I should be able to produce an action like go to cabinet one. And then you actually execute"
+    },
+    {
+      "id": 65,
+      "start": 471.68,
+      "end": 477.92,
+      "text": "this in this virtual environment. And now your observation, so you go to cabinet one, you actually"
+    },
+    {
+      "id": 66,
+      "start": 477.92,
+      "end": 484.88,
+      "text": "see what's inside cabinet one. And oh, having a one, there's a loss, which is not pepper spritz."
+    },
+    {
+      "id": 67,
+      "start": 484.88,
+      "end": 489.76,
+      "text": "So then you can do further reasoning and further action paintings. So this is how,"
+    },
+    {
+      "id": 68,
+      "start": 491.12,
+      "end": 499.04,
+      "text": "this general framework is called react. And it's quite a plotter in creating language model agents."
+    },
+    {
+      "id": 69,
+      "start": 499.04,
+      "end": 504.16,
+      "text": "So basically to that, a negative model becoming agent needs to have planning and reasoning ability,"
+    },
+    {
+      "id": 70,
+      "start": 504.16,
+      "end": 511.76,
+      "text": "some of those mostly achieved by channel prompting and tool usability by also, you know, providing"
+    },
+    {
+      "id": 71,
+      "start": 511.76,
+      "end": 521.68,
+      "text": "prompting to that it generate API calls. Here's a real word example. So you may ask how should I,"
+    },
+    {
+      "id": 72,
+      "start": 522.16,
+      "end": 530.48,
+      "text": "generate actions, proper actions that can be executed without training, you can still just do"
+    },
+    {
+      "id": 73,
+      "start": 530.48,
+      "end": 537.6,
+      "text": "prompting. So you are given, suppose you have the following APIs, the text that are not in"
+    },
+    {
+      "id": 74,
+      "start": 538.96,
+      "end": 545.12,
+      "text": "not in group, sorry, green are the prompts given to the language model and the text in our"
+    },
+    {
+      "id": 75,
+      "start": 545.2,
+      "end": 552.16,
+      "text": "generate my gp4. And you just ask them, you provide them with four APIs, whether get location,"
+    },
+    {
+      "id": 76,
+      "start": 552.8,
+      "end": 558.8,
+      "text": "you know, bus routes or count characters. And the question is, you know, is that okay to go"
+    },
+    {
+      "id": 77,
+      "start": 558.8,
+      "end": 563.52,
+      "text": "hiking today? So I'll answer this question, you know, you can see the language model can actually"
+    },
+    {
+      "id": 78,
+      "start": 563.52,
+      "end": 571.52,
+      "text": "reason a good way of solving this task by first checking your location. Okay, I'm in Seattle. And then"
+    },
+    {
+      "id": 79,
+      "start": 572.48,
+      "end": 580.64,
+      "text": "so it called the API call is, you know, it calls weather Seattle. And then cloudy equals to,"
+    },
+    {
+      "id": 80,
+      "start": 580.64,
+      "end": 584.4,
+      "text": "you know, like it's chance to bring. And then based on this optimization,"
+    },
+    {
+      "id": 81,
+      "start": 585.04,
+      "end": 590.72,
+      "text": "information, it is not recommended to go hiking. So this is kind of a actual example of how you"
+    },
+    {
+      "id": 82,
+      "start": 590.72,
+      "end": 599.2,
+      "text": "gonna call this a how you are going to enable LMS to generate executable actions. You provide"
+    },
+    {
+      "id": 83,
+      "start": 599.2,
+      "end": 602.16,
+      "text": "examples or you give instructions of"
+    }
+  ],
+  "language": "en"
+}

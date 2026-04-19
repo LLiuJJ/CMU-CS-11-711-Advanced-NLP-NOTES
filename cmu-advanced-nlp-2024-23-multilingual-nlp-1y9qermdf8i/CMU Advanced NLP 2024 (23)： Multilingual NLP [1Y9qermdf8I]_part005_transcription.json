@@ -1,0 +1,353 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 16.0,
+      "text": "And so basically, they train this on many different languages and this gives pretty high performance overall for a lot of different tasks."
+    },
+    {
+      "id": 1,
+      "start": 16.0,
+      "end": 31.0,
+      "text": "And so basically, they train this on many different languages and this gives pretty high performance overall for a lot of different tasks."
+    },
+    {
+      "id": 2,
+      "start": 31.0,
+      "end": 38.0,
+      "text": "And in particular, this model is trained explicitly to be multilingual. So it's."
+    },
+    {
+      "id": 3,
+      "start": 38.0,
+      "end": 45.0,
+      "text": "It essentially has better performance, it kind of like the long tail tasks than a lot of the standard language models that we have."
+    },
+    {
+      "id": 4,
+      "start": 46.0,
+      "end": 56.0,
+      "text": "There's also other versions like empty zero and bite T5 empty zero was instruction to and further."
+    },
+    {
+      "id": 5,
+      "start": 56.0,
+      "end": 70.0,
+      "text": "Bite T5 was trained with no tokenization just bite level, um, bite level modeling and because it's bite level modeling, it allows it to model any script you want to have troubles with unicode and other stuff like that."
+    },
+    {
+      "id": 6,
+      "start": 70.0,
+      "end": 81.0,
+      "text": "I have personally found that Mt5 performs better than bite T5 or at least it's easier to get it to work. So if you want a single one to start out with, I'd say Mt5 is pretty good."
+    },
+    {
+      "id": 7,
+      "start": 82.0,
+      "end": 96.0,
+      "text": "But there's also other options and I should also mention actually there was fine tuned version of Mt5 recently, which was called."
+    },
+    {
+      "id": 8,
+      "start": 97.0,
+      "end": 111.0,
+      "text": "So there was this model based on a large amount of kind of instruction tuning data."
+    },
+    {
+      "id": 9,
+      "start": 111.0,
+      "end": 129.0,
+      "text": "So it's based on Mt5, but they trained it on a whole bunch of kind of instruction tuning data. So this is kind of like a more modern version of Mt zero, I guess."
+    },
+    {
+      "id": 10,
+      "start": 130.0,
+      "end": 147.0,
+      "text": "And I haven't played around with it myself a lot, but it's allegedly pretty good instruction probably another stuff like this."
+    },
+    {
+      "id": 11,
+      "start": 148.0,
+      "end": 153.0,
+      "text": "I'd like to talk a little bit about some more advanced modeling strategies."
+    },
+    {
+      "id": 12,
+      "start": 153.0,
+      "end": 161.0,
+      "text": "And so for cross-lingual transfer learning it leverages data from one or more high resource source languages."
+    },
+    {
+      "id": 13,
+      "start": 161.0,
+      "end": 174.0,
+      "text": "Another thing that we often do is pre training and fine tuning and pre training and fine tuning is good if you have a specific language that you want your model to be good at because it allows you to specialize to that language."
+    },
+    {
+      "id": 14,
+      "start": 175.0,
+      "end": 180.0,
+      "text": "And as I mentioned with the curse of multi-linguality it's hard to get a model that's really good at all the languages."
+    },
+    {
+      "id": 15,
+      "start": 180.0,
+      "end": 183.0,
+      "text": "There's also zero shot transfer."
+    },
+    {
+      "id": 16,
+      "start": 183.0,
+      "end": 192.0,
+      "text": "And finally something called annotation projection or it's also called translate train in some literature."
+    },
+    {
+      "id": 17,
+      "start": 192.0,
+      "end": 204.0,
+      "text": "So pre training fine tune basically the way it works is you train on lots of lots and lots of data from lots of different languages and then you fine tune on data in another language."
+    },
+    {
+      "id": 18,
+      "start": 204.0,
+      "end": 217.0,
+      "text": "And so this this tends to work pretty well it particularly works well if there was at least some data from the language that you want to train on in the original training data set."
+    },
+    {
+      "id": 19,
+      "start": 217.0,
+      "end": 231.0,
+      "text": "If there was no data from the language you want to train on in the original training data set then it's pretty tough to get this to work because the model doesn't like already have knowledge of the language."
+    },
+    {
+      "id": 20,
+      "start": 231.0,
+      "end": 235.0,
+      "text": "Another thing that you can do is you can."
+    },
+    {
+      "id": 21,
+      "start": 235.0,
+      "end": 243.0,
+      "text": "So one of the problems with adapting to low resource languages is obviously like lack of data, especially lack of supervised data."
+    },
+    {
+      "id": 22,
+      "start": 243.0,
+      "end": 251.0,
+      "text": "Another thing that you can do is you can train on that language itself and then a few other very highly related languages."
+    },
+    {
+      "id": 23,
+      "start": 251.0,
+      "end": 258.0,
+      "text": "And so if you know like if you want to train for a particular."
+    },
+    {
+      "id": 24,
+      "start": 258.0,
+      "end": 269.0,
+      "text": "Language from India or something like this very often there's a few other languages from India and sometimes some of them might be higher resource so maybe like Hindu."
+    },
+    {
+      "id": 25,
+      "start": 269.0,
+      "end": 276.0,
+      "text": "Hindi is related and that's higher resource than the language that you're interested in training on."
+    },
+    {
+      "id": 26,
+      "start": 276.0,
+      "end": 280.0,
+      "text": "You can also do it. I mean obviously you can do this for any language."
+    },
+    {
+      "id": 27,
+      "start": 280.0,
+      "end": 286.0,
+      "text": "A lot for some languages there's just no higher resource counterpart which makes it a little bit tricky."
+    },
+    {
+      "id": 28,
+      "start": 286.0,
+      "end": 293.0,
+      "text": "But when there is you can take advantage of that."
+    },
+    {
+      "id": 29,
+      "start": 293.0,
+      "end": 303.0,
+      "text": "This is also another example of something that you know is a little bit tricky to implement because it requires metal learning and calculation of gradients and stuff like this."
+    },
+    {
+      "id": 30,
+      "start": 303.0,
+      "end": 311.0,
+      "text": "But there's this really nice work that essentially tries to learn a model that's good for fine tuning into different languages."
+    },
+    {
+      "id": 31,
+      "start": 311.0,
+      "end": 325.0,
+      "text": "And so the way they do this is unlike standard multilingual learning where you learn a model that is good at processing multiple languages and then try to find to net to a lower resource language."
+    },
+    {
+      "id": 32,
+      "start": 325.0,
+      "end": 334.0,
+      "text": "What you do is you try to learn a model that is good at adapting to well resource languages."
+    },
+    {
+      "id": 33,
+      "start": 334.0,
+      "end": 337.0,
+      "text": "And the way you do this is through a method called metal learning."
+    },
+    {
+      "id": 34,
+      "start": 337.0,
+      "end": 344.0,
+      "text": "I'm not going to cover metal learning given the limited amount of time if you've heard about it before you know basically what it is."
+    },
+    {
+      "id": 35,
+      "start": 344.0,
+      "end": 354.0,
+      "text": "If you haven't heard about it just to give a general idea what you do is you have a held out that that development set like I did for the data balancing thing."
+    },
+    {
+      "id": 36,
+      "start": 354.0,
+      "end": 363.0,
+      "text": "And we try to learn models so that the gradients that you derive from the updates here align well with the gradients on this data."
+    },
+    {
+      "id": 37,
+      "start": 363.0,
+      "end": 365.0,
+      "text": "And so you're trying to learn."
+    },
+    {
+      "id": 38,
+      "start": 365.0,
+      "end": 378.0,
+      "text": "You're trying to learn things where you know you update in the direction that is good for updating towards the low resource language when you start training on it."
+    },
+    {
+      "id": 39,
+      "start": 378.0,
+      "end": 390.0,
+      "text": "These are all fine tuning related things. There's other there's a lot more to talk about with respect to this like how you choose languages and other things like this."
+    },
+    {
+      "id": 40,
+      "start": 390.0,
+      "end": 397.0,
+      "text": "Another big paradigm is zero shot transfer for pretrained representations."
+    },
+    {
+      "id": 41,
+      "start": 397.0,
+      "end": 405.0,
+      "text": "And the way that this works is you pretrained a large language model using model angle data from many different languages."
+    },
+    {
+      "id": 42,
+      "start": 405.0,
+      "end": 409.0,
+      "text": "And then you fine tune using annotated data in a given language like English."
+    },
+    {
+      "id": 43,
+      "start": 409.0,
+      "end": 417.0,
+      "text": "And then you test it on a model on a different language from the fine tune language like French."
+    },
+    {
+      "id": 44,
+      "start": 417.0,
+      "end": 431.0,
+      "text": "And we benefit from this because multilingual pre training can learn something I shouldn't say a universal representation, but at least a representation that is conducive for transfer across languages."
+    },
+    {
+      "id": 45,
+      "start": 431.0,
+      "end": 451.0,
+      "text": "There's a lot of work on this. I am not going to cover it in a lot of detail number one in the interest of time, but also number two because I do actually kind of strongly believe that there are other reasonable options set out, perform this a pretty fair amount of the time."
+    },
+    {
+      "id": 46,
+      "start": 451.0,
+      "end": 469.0,
+      "text": "And one of them is something called annotation projection or translate translate train. And the way this works is very similar."
+    },
+    {
+      "id": 47,
+      "start": 469.0,
+      "end": 474.0,
+      "text": "And it's similar to what I talked about with back translation."
+    },
+    {
+      "id": 48,
+      "start": 474.0,
+      "end": 481.0,
+      "text": "But there's two varieties of annotation for detection. The first one translate train."
+    },
+    {
+      "id": 49,
+      "start": 481.0,
+      "end": 488.0,
+      "text": "Is you have annotated training data in English. And you translate it to the language you want to process like swahily."
+    },
+    {
+      "id": 50,
+      "start": 488.0,
+      "end": 515.0,
+      "text": "And so this is relatively easy for like question answering or something like this. So what you do is you just take question answering data. You translate the question. You translate the answer. And now you have swahily question answering data ensure there may be like translation errors or something like this, but having some training data is better than having no training data and also machine translation systems are reasonably good nowadays so you can actually get reasonably high quality data."
+    },
+    {
+      "id": 51,
+      "start": 515.0,
+      "end": 538.0,
+      "text": "The more complex version of this is what if you can't just translate your data, what if you're you're translated data is not just text, but it's some sort of annotations on top of text and to take the hardest possible example, the hardest possible example is something where you have like tags on every word."
+    },
+    {
+      "id": 52,
+      "start": 538.0,
+      "end": 550.0,
+      "text": "And so this could be like, for example, for part of speech tagging. And if you have part of speech tagging what you can do."
+    },
+    {
+      "id": 53,
+      "start": 550.0,
+      "end": 558.0,
+      "text": "You can have English swahily data. Maybe this is even, you know, like already translated data."
+    },
+    {
+      "id": 54,
+      "start": 559.0,
+      "end": 571.0,
+      "text": "It's already translated data, but you have part of speech tags either manual or automatic for the English data. And then you basically project the part of speech tags to the other language."
+    },
+    {
+      "id": 55,
+      "start": 571.0,
+      "end": 586.0,
+      "text": "And it doesn't have to be part of speech tags. It could be like named entity labels. It could be, you know, any other variety of things like this. And this gets tricky because basically you need to find alignments between the words in the languages."
+    },
+    {
+      "id": 56,
+      "start": 586.0,
+      "end": 597.0,
+      "text": "And, and then project the labels and you need to think about things like, okay, well, if this is a noun, how do I turn it into two nouns? Do I treat this as a determiner?"
+    },
+    {
+      "id": 57,
+      "start": 597.0,
+      "end": 606.0,
+      "text": "Like what sorts of rules do I use to solve these problems and stuff like that? So, you can either just translate the data."
+    }
+  ],
+  "language": "en"
+}

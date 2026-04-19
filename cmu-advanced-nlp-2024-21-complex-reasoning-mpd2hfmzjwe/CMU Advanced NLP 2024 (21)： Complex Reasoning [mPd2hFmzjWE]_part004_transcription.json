@@ -1,0 +1,1151 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 3.76,
+      "text": "idea is can we find a rule that underlies a pattern in data?"
+    },
+    {
+      "id": 1,
+      "start": 3.76,
+      "end": 7.36,
+      "text": "And here are some examples of this."
+    },
+    {
+      "id": 2,
+      "start": 7.36,
+      "end": 12.92,
+      "text": "The basic idea is if we have examples,"
+    },
+    {
+      "id": 3,
+      "start": 12.92,
+      "end": 19.92,
+      "text": "which are like if I put a cylinder and a square,"
+    },
+    {
+      "id": 4,
+      "start": 19.92,
+      "end": 24.0,
+      "text": "cylinder and a cube on this pink block, I get a noise."
+    },
+    {
+      "id": 5,
+      "start": 24.0,
+      "end": 26.4,
+      "text": "If I put just a cylinder on the pink block,"
+    },
+    {
+      "id": 6,
+      "start": 26.4,
+      "end": 28.28,
+      "text": "I don't get a noise."
+    },
+    {
+      "id": 7,
+      "start": 28.28,
+      "end": 33.68,
+      "text": "And you want to discover underlying rules based on the data"
+    },
+    {
+      "id": 8,
+      "start": 33.68,
+      "end": 35.24,
+      "text": "that you observed."
+    },
+    {
+      "id": 9,
+      "start": 35.24,
+      "end": 36.84,
+      "text": "And so why would you want to do this?"
+    },
+    {
+      "id": 10,
+      "start": 36.84,
+      "end": 40.28,
+      "text": "There's a couple reasons why you would want to do this."
+    },
+    {
+      "id": 11,
+      "start": 40.28,
+      "end": 43.0,
+      "text": "The first reason why you would like to do this"
+    },
+    {
+      "id": 12,
+      "start": 43.0,
+      "end": 46.08,
+      "text": "is because you might want something"
+    },
+    {
+      "id": 13,
+      "start": 46.08,
+      "end": 47.6,
+      "text": "that you can explain to humans."
+    },
+    {
+      "id": 14,
+      "start": 47.6,
+      "end": 52.28,
+      "text": "You can explain this underlying pattern exists in this data."
+    },
+    {
+      "id": 15,
+      "start": 52.28,
+      "end": 57.92,
+      "text": "It explains why the data appears"
+    },
+    {
+      "id": 16,
+      "start": 57.92,
+      "end": 61.24,
+      "text": "as it does appear and then humans can go in and analyze it"
+    },
+    {
+      "id": 17,
+      "start": 61.24,
+      "end": 62.04,
+      "text": "or something like that."
+    },
+    {
+      "id": 18,
+      "start": 62.04,
+      "end": 64.36,
+      "text": "So recently, there's been a big focus"
+    },
+    {
+      "id": 19,
+      "start": 64.36,
+      "end": 67.08,
+      "text": "on like using large language models"
+    },
+    {
+      "id": 20,
+      "start": 67.08,
+      "end": 69.56,
+      "text": "for scientific inquiry and other things like that"
+    },
+    {
+      "id": 21,
+      "start": 69.56,
+      "end": 71.96,
+      "text": "by coming up with good explanations"
+    },
+    {
+      "id": 22,
+      "start": 71.96,
+      "end": 73.8,
+      "text": "for why data is the way it is."
+    },
+    {
+      "id": 23,
+      "start": 73.8,
+      "end": 77.16,
+      "text": "So if we were able to do that, that would be really interesting."
+    },
+    {
+      "id": 24,
+      "start": 77.16,
+      "end": 80.96,
+      "text": "Another thing is language models are not particularly"
+    },
+    {
+      "id": 25,
+      "start": 80.96,
+      "end": 87.52,
+      "text": "good at coming up with they're not particularly"
+    },
+    {
+      "id": 26,
+      "start": 87.52,
+      "end": 90.64,
+      "text": "good at being consistent about difficult tasks"
+    },
+    {
+      "id": 27,
+      "start": 90.64,
+      "end": 95.72,
+      "text": "across very large numbers of examples."
+    },
+    {
+      "id": 28,
+      "start": 95.72,
+      "end": 99.68,
+      "text": "So if you could look at all of the data at once"
+    },
+    {
+      "id": 29,
+      "start": 99.68,
+      "end": 103.52,
+      "text": "in for general rules from them, put those rules in a prompt,"
+    },
+    {
+      "id": 30,
+      "start": 103.52,
+      "end": 107.12,
+      "text": "and then apply that prompt to make predictions"
+    },
+    {
+      "id": 31,
+      "start": 107.12,
+      "end": 109.36,
+      "text": "on new examples, you might be able to raise your overall"
+    },
+    {
+      "id": 32,
+      "start": 109.36,
+      "end": 110.32,
+      "text": "accuracy as well."
+    },
+    {
+      "id": 33,
+      "start": 110.32,
+      "end": 114.12,
+      "text": "So that's how humans learn as well."
+    },
+    {
+      "id": 34,
+      "start": 114.12,
+      "end": 118.36,
+      "text": "We don't just memorize each example."
+    },
+    {
+      "id": 35,
+      "start": 118.36,
+      "end": 120.04,
+      "text": "If we just look at a few examples,"
+    },
+    {
+      "id": 36,
+      "start": 120.04,
+      "end": 122.8,
+      "text": "then we might not generalize well to new examples."
+    },
+    {
+      "id": 37,
+      "start": 122.8,
+      "end": 128.8,
+      "text": "So we kind of tried to abstract away general rules."
+    },
+    {
+      "id": 38,
+      "start": 128.8,
+      "end": 131.24,
+      "text": "So this is also similar to program induction"
+    },
+    {
+      "id": 39,
+      "start": 131.24,
+      "end": 133.2,
+      "text": "from input output examples, which I talked"
+    },
+    {
+      "id": 40,
+      "start": 133.2,
+      "end": 135.48,
+      "text": "during the code generation class."
+    },
+    {
+      "id": 41,
+      "start": 135.48,
+      "end": 137.36,
+      "text": "So you have input output examples."
+    },
+    {
+      "id": 42,
+      "start": 137.36,
+      "end": 140.64,
+      "text": "And from them, you would like to come up with general rules."
+    },
+    {
+      "id": 43,
+      "start": 140.64,
+      "end": 142.68,
+      "text": "But this is a little bit more general."
+    },
+    {
+      "id": 44,
+      "start": 142.68,
+      "end": 144.72,
+      "text": "It doesn't necessarily need to be a program that you're"
+    },
+    {
+      "id": 45,
+      "start": 144.72,
+      "end": 145.76,
+      "text": "inducing."
+    },
+    {
+      "id": 46,
+      "start": 145.76,
+      "end": 149.36,
+      "text": "It could be a grammar or it could be an explanation"
+    },
+    {
+      "id": 47,
+      "start": 149.36,
+      "end": 150.92,
+      "text": "or it could be anything else like this."
+    },
+    {
+      "id": 48,
+      "start": 154.36,
+      "end": 157.76,
+      "text": "So there's a bit of work on rule induction with LLMs."
+    },
+    {
+      "id": 49,
+      "start": 157.76,
+      "end": 159.32,
+      "text": "It's pretty recent work."
+    },
+    {
+      "id": 50,
+      "start": 159.32,
+      "end": 161.76,
+      "text": "But I think it's pretty interesting."
+    },
+    {
+      "id": 51,
+      "start": 161.76,
+      "end": 166.4,
+      "text": "So the first one is hypothesis generation."
+    },
+    {
+      "id": 52,
+      "start": 166.4,
+      "end": 168.92,
+      "text": "Or the first step of this particular work here"
+    },
+    {
+      "id": 53,
+      "start": 168.92,
+      "end": 171.04,
+      "text": "is hypothesis generation."
+    },
+    {
+      "id": 54,
+      "start": 171.04,
+      "end": 177.76,
+      "text": "And basically what it does is it takes all of these input"
+    },
+    {
+      "id": 55,
+      "start": 177.76,
+      "end": 179.04,
+      "text": "output examples."
+    },
+    {
+      "id": 56,
+      "start": 179.04,
+      "end": 180.84,
+      "text": "And from these input output examples,"
+    },
+    {
+      "id": 57,
+      "start": 180.84,
+      "end": 183.64,
+      "text": "it predicts these rules."
+    },
+    {
+      "id": 58,
+      "start": 183.64,
+      "end": 186.52,
+      "text": "Like the answer is always one."
+    },
+    {
+      "id": 59,
+      "start": 186.52,
+      "end": 189.08,
+      "text": "Or you want to pick the smallest one"
+    },
+    {
+      "id": 60,
+      "start": 189.08,
+      "end": 191.6,
+      "text": "where you want to pick the first element."
+    },
+    {
+      "id": 61,
+      "start": 191.6,
+      "end": 194.6,
+      "text": "And then you evaluate it."
+    },
+    {
+      "id": 62,
+      "start": 194.6,
+      "end": 196.4,
+      "text": "And so you pick the smallest one."
+    },
+    {
+      "id": 63,
+      "start": 196.4,
+      "end": 199.04,
+      "text": "And you can either evaluate it using another language model"
+    },
+    {
+      "id": 64,
+      "start": 199.04,
+      "end": 204.16,
+      "text": "or you can evaluate it using a symbolic evaluator."
+    },
+    {
+      "id": 65,
+      "start": 204.16,
+      "end": 206.56,
+      "text": "If it's a program, you could use a symbolic evaluator."
+    },
+    {
+      "id": 66,
+      "start": 206.56,
+      "end": 208.28,
+      "text": "If it's a language model, you could just"
+    },
+    {
+      "id": 67,
+      "start": 208.28,
+      "end": 214.04,
+      "text": "ask the language model to pick answer one always"
+    },
+    {
+      "id": 68,
+      "start": 214.04,
+      "end": 217.36,
+      "text": "or pick the smallest one or pick the first element."
+    },
+    {
+      "id": 69,
+      "start": 217.36,
+      "end": 219.2,
+      "text": "And then you get lots of outputs."
+    },
+    {
+      "id": 70,
+      "start": 219.2,
+      "end": 221.12,
+      "text": "And then when you get lots of outputs,"
+    },
+    {
+      "id": 71,
+      "start": 221.12,
+      "end": 224.84,
+      "text": "you then can compare them against the expected outputs"
+    },
+    {
+      "id": 72,
+      "start": 224.84,
+      "end": 227.0,
+      "text": "and verify whether the rule is correct."
+    },
+    {
+      "id": 73,
+      "start": 227.0,
+      "end": 231.0,
+      "text": "Verify whether the rule gives you the appropriate answer."
+    },
+    {
+      "id": 74,
+      "start": 231.0,
+      "end": 234.36,
+      "text": "And once you've done that, you can go back"
+    },
+    {
+      "id": 75,
+      "start": 234.36,
+      "end": 239.72,
+      "text": "and do hypothesis refinement and maybe even give this feedback"
+    },
+    {
+      "id": 76,
+      "start": 239.72,
+      "end": 242.52,
+      "text": "about what was wrong and gradually"
+    },
+    {
+      "id": 77,
+      "start": 242.52,
+      "end": 245.88,
+      "text": "refine more accurate and more complex hypotheses."
+    },
+    {
+      "id": 78,
+      "start": 249.8,
+      "end": 254.04,
+      "text": "This is another variant of this idea,"
+    },
+    {
+      "id": 79,
+      "start": 254.04,
+      "end": 255.6,
+      "text": "which uses different methodology."
+    },
+    {
+      "id": 80,
+      "start": 255.6,
+      "end": 257.24,
+      "text": "I think both are completely valid."
+    },
+    {
+      "id": 81,
+      "start": 257.24,
+      "end": 261.28,
+      "text": "But this one has a little bit higher data constraints."
+    },
+    {
+      "id": 82,
+      "start": 261.28,
+      "end": 263.8,
+      "text": "So basically, what we do is we use hypotheses"
+    },
+    {
+      "id": 83,
+      "start": 263.8,
+      "end": 267.04,
+      "text": "in chain of thought reasoning and keep ones that"
+    },
+    {
+      "id": 84,
+      "start": 267.04,
+      "end": 270.12,
+      "text": "give resulting correct answers."
+    },
+    {
+      "id": 85,
+      "start": 270.12,
+      "end": 276.44,
+      "text": "So this is the step where they're trying to induce rules."
+    },
+    {
+      "id": 86,
+      "start": 276.44,
+      "end": 280.2,
+      "text": "And so here, this says, in the right side,"
+    },
+    {
+      "id": 87,
+      "start": 280.2,
+      "end": 282.92,
+      "text": "it has three panes."
+    },
+    {
+      "id": 88,
+      "start": 282.92,
+      "end": 284.88,
+      "text": "One is a terminal, one is a planner, and one is a code."
+    },
+    {
+      "id": 89,
+      "start": 284.88,
+      "end": 287.16,
+      "text": "Here, obviously, because if it was in base 10,"
+    },
+    {
+      "id": 90,
+      "start": 287.16,
+      "end": 288.8,
+      "text": "the language model would just solve the problem."
+    },
+    {
+      "id": 91,
+      "start": 288.8,
+      "end": 290.0,
+      "text": "And it's not very interesting."
+    },
+    {
+      "id": 92,
+      "start": 290.0,
+      "end": 293.32,
+      "text": "So they did base nine addition."
+    },
+    {
+      "id": 93,
+      "start": 293.32,
+      "end": 298.92,
+      "text": "And so the answer is we have, or the answer"
+    },
+    {
+      "id": 94,
+      "start": 298.92,
+      "end": 302.16,
+      "text": "provided by the language model is we have six plus four equals"
+    },
+    {
+      "id": 95,
+      "start": 302.16,
+      "end": 303.68,
+      "text": "11."
+    },
+    {
+      "id": 96,
+      "start": 303.68,
+      "end": 304.76,
+      "text": "The digit is one."
+    },
+    {
+      "id": 97,
+      "start": 304.76,
+      "end": 309.28,
+      "text": "And the curious one, we have seven plus one plus one equals 10."
+    },
+    {
+      "id": 98,
+      "start": 309.28,
+      "end": 310.4,
+      "text": "The digit is zero."
+    },
+    {
+      "id": 99,
+      "start": 310.4,
+      "end": 312.52,
+      "text": "And the curious one, a leading digit is one."
+    },
+    {
+      "id": 100,
+      "start": 312.52,
+      "end": 314.6,
+      "text": "So the answer is 101."
+    },
+    {
+      "id": 101,
+      "start": 315.12,
+      "end": 316.4,
+      "text": "This verifies."
+    },
+    {
+      "id": 102,
+      "start": 316.4,
+      "end": 318.12,
+      "text": "So they get the answer correct."
+    },
+    {
+      "id": 103,
+      "start": 318.12,
+      "end": 320.64,
+      "text": "And so they know that they assume that this derivation"
+    },
+    {
+      "id": 104,
+      "start": 320.64,
+      "end": 322.16,
+      "text": "is also correct."
+    },
+    {
+      "id": 105,
+      "start": 322.16,
+      "end": 326.04,
+      "text": "And then they extract particular rules, like six plus four"
+    },
+    {
+      "id": 106,
+      "start": 326.04,
+      "end": 329.92,
+      "text": "equals 11 and seven plus one plus one equals 10."
+    },
+    {
+      "id": 107,
+      "start": 329.92,
+      "end": 333.12,
+      "text": "And they add this to the rule library."
+    },
+    {
+      "id": 108,
+      "start": 333.12,
+      "end": 336.44,
+      "text": "So then the question is, how do they extract the rules?"
+    },
+    {
+      "id": 109,
+      "start": 336.44,
+      "end": 340.32,
+      "text": "The way they extract the rules is they have an in context prompt,"
+    },
+    {
+      "id": 110,
+      "start": 340.32,
+      "end": 343.92,
+      "text": "which surrounds the rules by basically XML tags."
+    },
+    {
+      "id": 111,
+      "start": 344.44,
+      "end": 346.84,
+      "text": "This is a rule that should be extracted."
+    },
+    {
+      "id": 112,
+      "start": 346.84,
+      "end": 350.4,
+      "text": "And so then anything that is in an XML tag,"
+    },
+    {
+      "id": 113,
+      "start": 350.4,
+      "end": 352.28,
+      "text": "they, when you get the correct answer,"
+    },
+    {
+      "id": 114,
+      "start": 352.28,
+      "end": 355.68,
+      "text": "they extract and add that to the rule library."
+    },
+    {
+      "id": 115,
+      "start": 355.68,
+      "end": 358.6,
+      "text": "And then conversely, like if the derivation,"
+    },
+    {
+      "id": 116,
+      "start": 358.6,
+      "end": 361.0,
+      "text": "if the answer is wrong, they just don't add it."
+    },
+    {
+      "id": 117,
+      "start": 361.0,
+      "end": 363.32,
+      "text": "Or they added as a negative example and say,"
+    },
+    {
+      "id": 118,
+      "start": 363.32,
+      "end": 366.2,
+      "text": "this is an incorrect rule."
+    },
+    {
+      "id": 119,
+      "start": 366.2,
+      "end": 369.44,
+      "text": "And then in the final step where they do deductive reasoning,"
+    },
+    {
+      "id": 120,
+      "start": 369.44,
+      "end": 372.24,
+      "text": "they can then go ahead and use these rules and improve accuracy."
+    },
+    {
+      "id": 121,
+      "start": 372.24,
+      "end": 373.6,
+      "text": "And they demonstrate that that helps."
+    },
+    {
+      "id": 122,
+      "start": 373.6,
+      "end": 376.52,
+      "text": "So basically, these are two different approaches."
+    },
+    {
+      "id": 123,
+      "start": 376.52,
+      "end": 378.8,
+      "text": "One is extracting directly from the chain of thought."
+    },
+    {
+      "id": 124,
+      "start": 378.8,
+      "end": 382.16,
+      "text": "The other is a priori trying to generate rules"
+    },
+    {
+      "id": 125,
+      "start": 382.16,
+      "end": 385.8,
+      "text": "from the whole rule base and then verifying them."
+    },
+    {
+      "id": 126,
+      "start": 387.76,
+      "end": 392.28,
+      "text": "Notably, both of these require verifiers."
+    },
+    {
+      "id": 127,
+      "start": 392.28,
+      "end": 396.64,
+      "text": "And so in some recent work, which I hope will be an archive"
+    },
+    {
+      "id": 128,
+      "start": 396.64,
+      "end": 400.36,
+      "text": "very soon, we took a look at whether language models"
+    },
+    {
+      "id": 129,
+      "start": 400.36,
+      "end": 403.64,
+      "text": "themselves can verify their own hypotheses."
+    },
+    {
+      "id": 130,
+      "start": 403.64,
+      "end": 409.32,
+      "text": "And so that removes the symbolic verifier here"
+    },
+    {
+      "id": 131,
+      "start": 409.32,
+      "end": 410.92,
+      "text": "by just asking the language model,"
+    },
+    {
+      "id": 132,
+      "start": 410.92,
+      "end": 412.72,
+      "text": "whether the output is correct or not."
+    },
+    {
+      "id": 133,
+      "start": 412.72,
+      "end": 416.76,
+      "text": "And we found that with very powerful language models,"
+    },
+    {
+      "id": 134,
+      "start": 416.76,
+      "end": 418.68,
+      "text": "like GPD4, you can actually do that as well."
+    },
+    {
+      "id": 135,
+      "start": 418.68,
+      "end": 422.2,
+      "text": "So that removes the necessity if you have a symbolic"
+    },
+    {
+      "id": 136,
+      "start": 422.2,
+      "end": 424.0,
+      "text": "verifier in the loop as well."
+    },
+    {
+      "id": 137,
+      "start": 426.24,
+      "end": 427.4,
+      "text": "Cool."
+    },
+    {
+      "id": 138,
+      "start": 428.28,
+      "end": 430.04,
+      "text": "The reason why I wanted to introduce this"
+    },
+    {
+      "id": 139,
+      "start": 430.04,
+      "end": 433.28,
+      "text": "is I don't know if like it seems like all of these"
+    },
+    {
+      "id": 140,
+      "start": 433.28,
+      "end": 437.0,
+      "text": "have been applied so far on kind of very toy examples."
+    },
+    {
+      "id": 141,
+      "start": 441.32,
+      "end": 443.12,
+      "text": "Like honestly, I don't really care"
+    },
+    {
+      "id": 142,
+      "start": 443.12,
+      "end": 449.24,
+      "text": "about whether I can play Tetris or find the largest"
+    },
+    {
+      "id": 143,
+      "start": 449.24,
+      "end": 454.72,
+      "text": "or smallest number within a list or something like this."
+    },
+    {
+      "id": 144,
+      "start": 454.72,
+      "end": 458.44,
+      "text": "But I think they have like really exciting possibilities"
+    },
+    {
+      "id": 145,
+      "start": 458.44,
+      "end": 461.04,
+      "text": "for how we could extract more general patterns"
+    },
+    {
+      "id": 146,
+      "start": 461.04,
+      "end": 464.16,
+      "text": "and like use these to improve language model-based systems."
+    },
+    {
+      "id": 147,
+      "start": 464.16,
+      "end": 466.8,
+      "text": "So I think it's a really exciting research direction."
+    },
+    {
+      "id": 148,
+      "start": 469.12,
+      "end": 470.12,
+      "text": "Cool."
+    },
+    {
+      "id": 149,
+      "start": 470.12,
+      "end": 471.12,
+      "text": "Any questions about this?"
+    },
+    {
+      "id": 150,
+      "start": 472.84,
+      "end": 473.68,
+      "text": "Yeah."
+    },
+    {
+      "id": 151,
+      "start": 473.68,
+      "end": 475.16,
+      "text": "Yeah, I think the X4 I mean,"
+    },
+    {
+      "id": 152,
+      "start": 475.16,
+      "end": 478.12,
+      "text": "X4, I think, is going to get a problem."
+    },
+    {
+      "id": 153,
+      "start": 479.08,
+      "end": 480.8,
+      "text": "Yeah, so that's a good question."
+    },
+    {
+      "id": 154,
+      "start": 481.8,
+      "end": 487.8,
+      "text": "So I think tool learning is maybe kind of a subset"
+    },
+    {
+      "id": 155,
+      "start": 490.0,
+      "end": 491.52,
+      "text": "of this possibly."
+    },
+    {
+      "id": 156,
+      "start": 491.52,
+      "end": 494.0,
+      "text": "Like I feel like in tool learning,"
+    },
+    {
+      "id": 157,
+      "start": 494.0,
+      "end": 497.36,
+      "text": "you're learning functions that are,"
+    },
+    {
+      "id": 158,
+      "start": 498.64,
+      "end": 500.64,
+      "text": "I don't know if they're like good explanations of the data,"
+    },
+    {
+      "id": 159,
+      "start": 500.64,
+      "end": 503.48,
+      "text": "but at the very least they're like useful."
+    },
+    {
+      "id": 160,
+      "start": 503.48,
+      "end": 505.64,
+      "text": "They're useful rules for solving the task."
+    },
+    {
+      "id": 161,
+      "start": 506.6,
+      "end": 509.08,
+      "text": "So I feel like they're approaching it"
+    },
+    {
+      "id": 162,
+      "start": 509.08,
+      "end": 510.48,
+      "text": "from two different motivations,"
+    },
+    {
+      "id": 163,
+      "start": 510.48,
+      "end": 515.4,
+      "text": "but actually the methods that they're using are similar."
+    },
+    {
+      "id": 164,
+      "start": 515.4,
+      "end": 518.28,
+      "text": "So like for example, in our tool learning work,"
+    },
+    {
+      "id": 165,
+      "start": 518.28,
+      "end": 521.92,
+      "text": "TROV we generated multiple options for tools"
+    },
+    {
+      "id": 166,
+      "start": 521.92,
+      "end": 526.24,
+      "text": "and we kept the ones that had high self-consistency."
+    },
+    {
+      "id": 167,
+      "start": 526.24,
+      "end": 528.16,
+      "text": "So that's kind of like the verifier step, right?"
+    },
+    {
+      "id": 168,
+      "start": 528.16,
+      "end": 531.68,
+      "text": "And then we threw away the ones that weren't useful"
+    },
+    {
+      "id": 169,
+      "start": 531.68,
+      "end": 534.0,
+      "text": "so that helps make a concise rule set."
+    },
+    {
+      "id": 170,
+      "start": 534.0,
+      "end": 535.68,
+      "text": "So yeah."
+    },
+    {
+      "id": 171,
+      "start": 536.68,
+      "end": 540.68,
+      "text": "And then like could we use tools to attack"
+    },
+    {
+      "id": 172,
+      "start": 543.68,
+      "end": 546.56,
+      "text": "kind of the more like conceptual reasoning stuff?"
+    },
+    {
+      "id": 173,
+      "start": 546.56,
+      "end": 548.84,
+      "text": "I don't actually know the answer to that."
+    },
+    {
+      "id": 174,
+      "start": 548.84,
+      "end": 549.68,
+      "text": "It's a good question."
+    },
+    {
+      "id": 175,
+      "start": 549.68,
+      "end": 551.68,
+      "text": "Yeah."
+    },
+    {
+      "id": 176,
+      "start": 551.68,
+      "end": 552.68,
+      "text": "Any other things?"
+    },
+    {
+      "id": 177,
+      "start": 556.04,
+      "end": 560.8,
+      "text": "Okay, another final one that I'd like to introduce."
+    },
+    {
+      "id": 178,
+      "start": 560.8,
+      "end": 562.36,
+      "text": "This is really like,"
+    },
+    {
+      "id": 179,
+      "start": 563.36,
+      "end": 567.32,
+      "text": "I really, really like this paper just from the point of view"
+    },
+    {
+      "id": 180,
+      "start": 567.32,
+      "end": 569.24,
+      "text": "of its ambition and motivation."
+    },
+    {
+      "id": 181,
+      "start": 569.24,
+      "end": 574.4,
+      "text": "And the idea is that they want to learn differences"
+    },
+    {
+      "id": 182,
+      "start": 574.4,
+      "end": 576.72,
+      "text": "between text collections."
+    },
+    {
+      "id": 183,
+      "start": 576.72,
+      "end": 578.68,
+      "text": "And why would you want to do this?"
+    },
+    {
+      "id": 184,
+      "start": 578.68,
+      "end": 581.16,
+      "text": "There's actually a ton of reasons why you would want to do this,"
+    },
+    {
+      "id": 185,
+      "start": 581.16,
+      "end": 586.04,
+      "text": "but the best one that they give here is actually, no, sorry,"
+    },
+    {
+      "id": 186,
+      "start": 586.04,
+      "end": 587.04,
+      "text": "maybe I didn't."
+    },
+    {
+      "id": 187,
+      "start": 587.04,
+      "end": 593.32,
+      "text": "Okay, so this is the last interesting one."
+    },
+    {
+      "id": 188,
+      "start": 593.32,
+      "end": 598.16,
+      "text": "The more interesting one that they give in the paper is examples"
+    },
+    {
+      "id": 189,
+      "start": 598.16,
+      "end": 602.92,
+      "text": "of reports from patients who took an actual drug"
+    },
+    {
+      "id": 190,
+      "start": 602.92,
+      "end": 603.92,
+      "text": "and took a placebo."
+    }
+  ],
+  "language": "en"
+}

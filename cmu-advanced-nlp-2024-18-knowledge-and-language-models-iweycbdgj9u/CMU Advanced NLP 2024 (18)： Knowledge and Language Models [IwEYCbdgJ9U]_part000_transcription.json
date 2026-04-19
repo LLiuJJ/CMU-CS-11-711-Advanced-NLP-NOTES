@@ -1,0 +1,323 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 13.4,
+      "text": "Everyone, I, they, I'd like to talk about learning from knowledge bases, learning from in four knowledge bases. This is kind of a chef from a lot of the stuff that we've done so far."
+    },
+    {
+      "id": 1,
+      "start": 15.0,
+      "end": 29.0,
+      "text": "And I'm going to be talking about like a different information source some relatively different algorithms compared to the stuff that we talked about up until this point. So, um, you know, it might be interesting. It might be different. So, uh,"
+    },
+    {
+      "id": 2,
+      "start": 30.0,
+      "end": 44.0,
+      "text": "I'm going to be talking about knowledge bases and knowledge bases are basically a structured databases of knowledge. And they can contain a lot of things."
+    },
+    {
+      "id": 3,
+      "start": 44.0,
+      "end": 58.0,
+      "text": "But most commonly when people are talking about them, they are talking about relational knowledge bases that include things like entities, which are nodes in a graph and relations, which are edges between nodes."
+    },
+    {
+      "id": 4,
+      "start": 58.0,
+      "end": 76.0,
+      "text": "And I'll talk about some examples of this in a little bit to make that a little bit more concrete. And then some of the questions that we ask about these are, how can we learn to create an expanded knowledge bases with, you know, neural network based methods."
+    },
+    {
+      "id": 5,
+      "start": 76.0,
+      "end": 85.0,
+      "text": "And then the second question is how can we learn from the information in knowledge bases to improve like neural network models or use them in effective ways."
+    },
+    {
+      "id": 6,
+      "start": 85.0,
+      "end": 91.0,
+      "text": "And how can we use a structured knowledge to answer questions."
+    },
+    {
+      "id": 7,
+      "start": 92.0,
+      "end": 107.0,
+      "text": "So, the first thing I'd like to talk about a little bit is types of knowledge bases. And they come in several different varieties. The first one I'd like to talk about is a very classical one called word net."
+    },
+    {
+      "id": 8,
+      "start": 107.0,
+      "end": 112.0,
+      "text": "Has anyone actually ever used word that before?"
+    },
+    {
+      "id": 9,
+      "start": 112.0,
+      "end": 120.0,
+      "text": "I see at least one person raising their hand so it's not entirely, uh, hasn't entirely disappeared. Is anyone heard of word not before?"
+    },
+    {
+      "id": 10,
+      "start": 120.0,
+      "end": 123.0,
+      "text": "Okay, more people."
+    },
+    {
+      "id": 11,
+      "start": 123.0,
+      "end": 129.0,
+      "text": "So basically this used to be a really big thing in natural language processing. It's not so much anymore."
+    },
+    {
+      "id": 12,
+      "start": 129.0,
+      "end": 141.0,
+      "text": "But I want to explain about it because I want to explain why this is maybe like less necessary to use, but actual knowledge bases are still more necessary to use."
+    },
+    {
+      "id": 13,
+      "start": 141.0,
+      "end": 152.0,
+      "text": "So word net is a large database of words. And specifically what it does is each word or something they call a synth set is a node."
+    },
+    {
+      "id": 14,
+      "start": 152.0,
+      "end": 161.0,
+      "text": "And then there are relationships between nodes. And the nodes can correspond to nouns."
+    },
+    {
+      "id": 15,
+      "start": 161.0,
+      "end": 176.0,
+      "text": "And or verbs or adjectives. And nouns have different types of relations between them. So they have things like an is a relation. So like a hatchback is a type of car."
+    },
+    {
+      "id": 16,
+      "start": 176.0,
+      "end": 194.0,
+      "text": "And they also make a part of relations where a wheel is a part of a car. And they also make distinctions between types and instances. So like Joe Biden is an instance of a president and president is the type."
+    },
+    {
+      "id": 17,
+      "start": 195.0,
+      "end": 211.0,
+      "text": "Verbal relations are ordered by specificity. So like communicate is more broad than talk. So talk is, you know, generally a subclass of communicate and then whisper is generally a subclass of talk. So it's ordered in this way."
+    },
+    {
+      "id": 18,
+      "start": 211.0,
+      "end": 220.0,
+      "text": "And then adjective relations are mostly antidems. So like wet and wet versus dry and other things like this."
+    },
+    {
+      "id": 19,
+      "start": 220.0,
+      "end": 233.0,
+      "text": "And then we said synth sets, actually the each node is not a word, despite the name word that it's a set of words that all have the same meaning."
+    },
+    {
+      "id": 20,
+      "start": 233.0,
+      "end": 248.0,
+      "text": "So you might have artifact and thing would both correspond to this node because they both mean basically the same thing. So it's like sets of seven. So this is also important when we talk about other types of knowledge bases as well."
+    },
+    {
+      "id": 21,
+      "start": 248.0,
+      "end": 277.0,
+      "text": "What was this used for this was used for, for example, trying to figure out whether trying to find all the cars that were mentioned in like a date in a large set of text. So you would go through you would identify all synth sets or you would identify all words that correspond to these synth sets and then you would pick a step up and find motor car and you would know that like all of those were mentions of cars."
+    },
+    {
+      "id": 22,
+      "start": 277.0,
+      "end": 290.0,
+      "text": "So like why don't we use word that very much anymore. Any ideas."
+    },
+    {
+      "id": 23,
+      "start": 290.0,
+      "end": 297.0,
+      "text": "What would you do instead if I told you find all the cars in a big piece of text."
+    },
+    {
+      "id": 24,
+      "start": 297.0,
+      "end": 312.0,
+      "text": "Yeah, just do something with embedding. So you might get you might get something and find all things that were close in embedding space to a car. What's another thing you might do."
+    },
+    {
+      "id": 25,
+      "start": 312.0,
+      "end": 325.0,
+      "text": "Like what I would do is I would download mistral and say this sentence talked about a car and it would say yes or no and I would you know or I would say find all the cars in this that are mentioned in the sentence and it would get them."
+    },
+    {
+      "id": 26,
+      "start": 325.0,
+      "end": 340.0,
+      "text": "Sure, that's like expensive, but it's really easy. So, you know, there are other options that might be less expensive, but they could solve a lot of the things. So, we're not, you know, started out with more and more."
+    },
+    {
+      "id": 27,
+      "start": 340.0,
+      "end": 349.0,
+      "text": "It's not being very popular in natural language processing, but now it's less so because we can get a lot of it from embedding so we can get a lot of it from language models itself."
+    },
+    {
+      "id": 28,
+      "start": 349.0,
+      "end": 358.0,
+      "text": "Another thing that started maybe before word now or even around the same time is word that was this data base called the psych."
+    },
+    {
+      "id": 29,
+      "start": 358.0,
+      "end": 363.0,
+      "text": "It was a manually curated database attempting to encode all common sense knowledge."
+    },
+    {
+      "id": 30,
+      "start": 363.0,
+      "end": 370.0,
+      "text": "And the project itself lasted for about 30 to 40 years. It might even still exist."
+    },
+    {
+      "id": 31,
+      "start": 370.0,
+      "end": 384.0,
+      "text": "And so they had this huge like hierarchy of all the different types of knowledge you could have. It encoded knowledge about like events and like which events happened before other events and all these other stuff like this."
+    },
+    {
+      "id": 32,
+      "start": 384.0,
+      "end": 394.0,
+      "text": "The problem with this is this was just too ambitious. Basically, it was not possible to encode all this manually by hand. So people."
+    },
+    {
+      "id": 33,
+      "start": 394.0,
+      "end": 407.0,
+      "text": "Like it did it got part of the way there, but that part of the way there was not enough for it to be really useful and practical systems. So it isn't this sort of method is not used as frequently enough."
+    },
+    {
+      "id": 34,
+      "start": 407.0,
+      "end": 419.0,
+      "text": "And a follow up one, which is its successor is now the most widely used knowledge basis something called dbpedia."
+    },
+    {
+      "id": 35,
+      "start": 419.0,
+      "end": 434.0,
+      "text": "And the basic idea behind dbpedia is that while psych is too difficult because they had people on the psych project who would go and create rules for machines."
+    },
+    {
+      "id": 36,
+      "start": 434.0,
+      "end": 444.0,
+      "text": "Wikipedia basically they have a very, very large number of humans curating this structured data about entities in the world for humans."
+    },
+    {
+      "id": 37,
+      "start": 444.0,
+      "end": 453.0,
+      "text": "They're creating it for humans because then you can put it on a Wikipedia page and you can look and see it says Carnegie Mellon University. It has the former names of Carnegie Mellon."
+    },
+    {
+      "id": 38,
+      "start": 453.0,
+      "end": 466.0,
+      "text": "It has the motto of Carnegie Mellon, the type of entity who was established by and when and other stuff like that. And because people were no longer creating it for machines, they're creating it for humans, people are like motivated to do this."
+    },
+    {
+      "id": 39,
+      "start": 466.0,
+      "end": 482.0,
+      "text": "So like lots of people will do it for free. So you can actually get a reasonably sized amount of data from this and actually cover, you know, like most of the entities in the world are not most of the entities in the world, but most of the notable entities in parts of the world that have high participation in Wikipedia."
+    },
+    {
+      "id": 40,
+      "start": 482.0,
+      "end": 497.0,
+      "text": "So now the thing that a lot of people use is something called wiki data. This is not, this name is a little bit of a misnomer because it's not actually that closely connected to Wikipedia."
+    },
+    {
+      "id": 41,
+      "start": 497.0,
+      "end": 505.0,
+      "text": "They extract data from Wikipedia, but they also extract it from lots of other sources. And this is a curated database of entities."
+    },
+    {
+      "id": 42,
+      "start": 505.0,
+      "end": 522.0,
+      "text": "It's linked. It's extremely large scale and it's multilingual. And this is an example of a thing from Richard Feynman, where people can go in and they can actually like add information and stuff like that."
+    },
+    {
+      "id": 43,
+      "start": 522.0,
+      "end": 528.0,
+      "text": "And you know, it gives information about education and all kinds of other stuff."
+    },
+    {
+      "id": 44,
+      "start": 528.0,
+      "end": 541.0,
+      "text": "So for fun, I can go to the wiki data site. Does anyone have an entity they'd like to know more about?"
+    },
+    {
+      "id": 45,
+      "start": 541.0,
+      "end": 551.0,
+      "text": "Any ideas, maybe something that has been in the news recently or."
+    },
+    {
+      "id": 46,
+      "start": 551.0,
+      "end": 561.0,
+      "text": "Nobody brave enough to come up with an entity. Yeah, mamba. That's a good one. I'm actually not sure if that one's going to be in here."
+    },
+    {
+      "id": 47,
+      "start": 561.0,
+      "end": 568.0,
+      "text": "There's lots of mambas, but I don't know about that particular mamba. Let me see."
+    },
+    {
+      "id": 48,
+      "start": 568.0,
+      "end": 574.0,
+      "text": "Do you want to know about a different mamba? Do you want to know about mamba? The research group."
+    },
+    {
+      "id": 49,
+      "start": 574.0,
+      "end": 580.0,
+      "text": "So mamba is a research group. It's the modeling and analysis for medicine research group."
+    },
+    {
+      "id": 50,
+      "start": 580.0,
+      "end": 590.0,
+      "text": "It focuses on mathematical biology and it's in the in this national center for scientific research in France."
+    },
+    {
+      "id": 51,
+      "start": 590.0,
+      "end": 594.0,
+      "text": "The chairperson is this person and stuff like that. So you can see it has all of these things."
+    },
+    {
+      "id": 52,
+      "start": 594.0,
+      "end": 600.0,
+      "text": "So mamba, this mamba is a node in the graph."
+    }
+  ],
+  "language": "en"
+}

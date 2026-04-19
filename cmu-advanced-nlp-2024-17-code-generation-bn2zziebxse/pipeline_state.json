@@ -1,0 +1,17 @@
+{
+  "video_path": "/Users/zhutingting/Desktop/cs11711/CMU Advanced NLP 2024 (17)： Code Generation [bN2ZZieBXsE].mp4",
+  "target_language": "中文",
+  "topic_slug": "cmu-advanced-nlp-2024-17-code-generation-bn2zziebxse",
+  "total_segments": 7,
+  "segments": {
+    "0": "completed",
+    "1": "completed",
+    "2": "completed",
+    "3": "completed",
+    "4": "completed",
+    "5": "completed",
+    "6": "completed"
+  },
+  "status": "completed",
+  "output_path": "/Users/zhutingting/Desktop/cs11711/cmu-advanced-nlp-2024-17-code-generation-bn2zziebxse/cmu-advanced-nlp-2024-17-code-generation-bn2zziebxse.md"
+}

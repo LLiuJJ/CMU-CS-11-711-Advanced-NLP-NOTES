@@ -1,0 +1,539 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 4.86,
+      "text": "And ideally, if you have really solid code"
+    },
+    {
+      "id": 1,
+      "start": 4.86,
+      "end": 8.0,
+      "text": "that doesn't have any sort of, like,"
+    },
+    {
+      "id": 2,
+      "start": 8.0,
+      "end": 12.32,
+      "text": "any sort of dangerous functions in it,"
+    },
+    {
+      "id": 3,
+      "start": 12.32,
+      "end": 16.16,
+      "text": "and also your learning rate is set appropriately,"
+    },
+    {
+      "id": 4,
+      "start": 16.16,
+      "end": 18.32,
+      "text": "this happens much, much less."
+    },
+    {
+      "id": 5,
+      "start": 18.32,
+      "end": 21.24,
+      "text": "So if your model training is spiking all the time,"
+    },
+    {
+      "id": 6,
+      "start": 21.24,
+      "end": 23.4,
+      "text": "then this can be an indicator that you have a problem."
+    },
+    {
+      "id": 7,
+      "start": 23.4,
+      "end": 25.44,
+      "text": "And just to give an example, like,"
+    },
+    {
+      "id": 8,
+      "start": 25.44,
+      "end": 26.88,
+      "text": "let's say you're taking an X,"
+    },
+    {
+      "id": 9,
+      "start": 26.88,
+      "end": 33.08,
+      "text": "and then let's say you're taking the log of something"
+    },
+    {
+      "id": 10,
+      "start": 33.08,
+      "end": 38.16,
+      "text": "where you're pretty sure that this should be positive."
+    },
+    {
+      "id": 11,
+      "start": 38.16,
+      "end": 39.32,
+      "text": "You're taking the log of something"
+    },
+    {
+      "id": 12,
+      "start": 39.32,
+      "end": 41.68,
+      "text": "where you're pretty sure that this should be positive."
+    },
+    {
+      "id": 13,
+      "start": 41.68,
+      "end": 45.84,
+      "text": "But in fact, it's getting very close to 0 some of the time."
+    },
+    {
+      "id": 14,
+      "start": 45.84,
+      "end": 47.96,
+      "text": "So if it's getting very close to 0 some of the time,"
+    },
+    {
+      "id": 15,
+      "start": 47.96,
+      "end": 50.76,
+      "text": "you'll get a huge gradient, because, like,"
+    },
+    {
+      "id": 16,
+      "start": 50.76,
+      "end": 53.92,
+      "text": "log 0 has an infinite gradient and things"
+    },
+    {
+      "id": 17,
+      "start": 53.92,
+      "end": 56.76,
+      "text": "that are very close to 0 have something very close to 0."
+    },
+    {
+      "id": 18,
+      "start": 57.04,
+      "end": 59.56,
+      "text": "So usually if you're seeing these sorts of spikes,"
+    },
+    {
+      "id": 19,
+      "start": 59.56,
+      "end": 61.8,
+      "text": "there's a reason for them like this."
+    },
+    {
+      "id": 20,
+      "start": 61.8,
+      "end": 65.72,
+      "text": "So you can also try to diagnose and make creating more stable."
+    },
+    {
+      "id": 21,
+      "start": 65.72,
+      "end": 71.52,
+      "text": "This is kind of a, like, you, this is a good thing to look at."
+    },
+    {
+      "id": 22,
+      "start": 71.52,
+      "end": 73.84,
+      "text": "But there's a lot of, like, experience that goes into this."
+    },
+    {
+      "id": 23,
+      "start": 73.84,
+      "end": 76.96,
+      "text": "So just going in and diagnosing and digging into the code"
+    },
+    {
+      "id": 24,
+      "start": 76.96,
+      "end": 77.88,
+      "text": "is a good way to go."
+    },
+    {
+      "id": 25,
+      "start": 77.88,
+      "end": 80.88,
+      "text": "Never got."
+    },
+    {
+      "id": 26,
+      "start": 80.88,
+      "end": 81.56,
+      "text": "Cool."
+    },
+    {
+      "id": 27,
+      "start": 81.56,
+      "end": 84.28,
+      "text": "Any questions about this?"
+    },
+    {
+      "id": 28,
+      "start": 87.76,
+      "end": 90.36,
+      "text": "I think a lot of this is, like, lived knowledge."
+    },
+    {
+      "id": 29,
+      "start": 90.36,
+      "end": 94.4,
+      "text": "So just, you know, try it and if you have problems,"
+    },
+    {
+      "id": 30,
+      "start": 94.4,
+      "end": 97.48,
+      "text": "ask me or the TAs or people."
+    },
+    {
+      "id": 31,
+      "start": 97.48,
+      "end": 98.88,
+      "text": "So the final thing I'd like to talk about"
+    },
+    {
+      "id": 32,
+      "start": 98.88,
+      "end": 100.72,
+      "text": "is comparing transformer architectures."
+    },
+    {
+      "id": 33,
+      "start": 100.72,
+      "end": 103.12,
+      "text": "So I talked about a lot of design decisions."
+    },
+    {
+      "id": 34,
+      "start": 103.12,
+      "end": 105.16,
+      "text": "I'm not going to talk about every single model today,"
+    },
+    {
+      "id": 35,
+      "start": 105.16,
+      "end": 107.12,
+      "text": "because I want to do that a little bit later"
+    },
+    {
+      "id": 36,
+      "start": 107.12,
+      "end": 109.36,
+      "text": "after we've introduced more concepts."
+    },
+    {
+      "id": 37,
+      "start": 109.36,
+      "end": 111.36,
+      "text": "But I would like to at least compare the Vassani"
+    },
+    {
+      "id": 38,
+      "start": 111.36,
+      "end": 114.2,
+      "text": "at all paper and mama."
+    },
+    {
+      "id": 39,
+      "start": 114.24,
+      "end": 117.44,
+      "text": "And if we look at some of the differences between them,"
+    },
+    {
+      "id": 40,
+      "start": 117.44,
+      "end": 118.92,
+      "text": "they're both using transformers."
+    },
+    {
+      "id": 41,
+      "start": 118.92,
+      "end": 122.32,
+      "text": "They're both doing other a lot of things similarly."
+    },
+    {
+      "id": 42,
+      "start": 123.48,
+      "end": 126.32,
+      "text": "But some of the differences are where,"
+    },
+    {
+      "id": 43,
+      "start": 126.32,
+      "end": 128.52,
+      "text": "what is the norm position?"
+    },
+    {
+      "id": 44,
+      "start": 128.52,
+      "end": 130.12,
+      "text": "Vassani is always doing post norm."
+    },
+    {
+      "id": 45,
+      "start": 130.12,
+      "end": 131.8,
+      "text": "La M is doing pre norm."
+    },
+    {
+      "id": 46,
+      "start": 131.8,
+      "end": 133.96,
+      "text": "What is the norm type?"
+    },
+    {
+      "id": 47,
+      "start": 133.96,
+      "end": 135.8,
+      "text": "Vassani is always doing layer norm."
+    },
+    {
+      "id": 48,
+      "start": 135.8,
+      "end": 137.76,
+      "text": "La M is doing RMS norm."
+    },
+    {
+      "id": 49,
+      "start": 137.76,
+      "end": 140.0,
+      "text": "What non-linearity are they using?"
+    },
+    {
+      "id": 50,
+      "start": 140.0,
+      "end": 141.92,
+      "text": "Relative versus Silio."
+    },
+    {
+      "id": 51,
+      "start": 141.96,
+      "end": 146.12,
+      "text": "And what positional encoding is sinusoidal versus row?"
+    },
+    {
+      "id": 52,
+      "start": 146.12,
+      "end": 150.64,
+      "text": "And you might be asking me, you might be thinking,"
+    },
+    {
+      "id": 53,
+      "start": 150.64,
+      "end": 153.0,
+      "text": "well, how much do I care about this anyway?"
+    },
+    {
+      "id": 54,
+      "start": 153.0,
+      "end": 158.16,
+      "text": "I mean, it might not be super important."
+    },
+    {
+      "id": 55,
+      "start": 158.16,
+      "end": 161.4,
+      "text": "But there was actually a really nice paper by Albert Duh,"
+    },
+    {
+      "id": 56,
+      "start": 161.4,
+      "end": 164.04,
+      "text": "who is a assistant professor in MLD,"
+    },
+    {
+      "id": 57,
+      "start": 164.04,
+      "end": 166.32,
+      "text": "where they were proposing a new architecture."
+    },
+    {
+      "id": 58,
+      "start": 166.32,
+      "end": 168.96,
+      "text": "But one of the kind of the Easter eggs in this paper"
+    },
+    {
+      "id": 59,
+      "start": 168.96,
+      "end": 171.4,
+      "text": "is this comparison here."
+    },
+    {
+      "id": 60,
+      "start": 171.4,
+      "end": 173.32,
+      "text": "And in this comparison, they basically"
+    },
+    {
+      "id": 61,
+      "start": 173.32,
+      "end": 178.56,
+      "text": "compare the Vassani at all original transformer architecture"
+    },
+    {
+      "id": 62,
+      "start": 178.56,
+      "end": 182.44,
+      "text": "and the Lama-style transformer plus plus,"
+    },
+    {
+      "id": 63,
+      "start": 182.44,
+      "end": 184.72,
+      "text": "like good transformer architecture."
+    },
+    {
+      "id": 64,
+      "start": 184.72,
+      "end": 189.32,
+      "text": "And they compare the perplexity, or actually,"
+    },
+    {
+      "id": 65,
+      "start": 189.32,
+      "end": 190.68,
+      "text": "this is log scale perplexity."
+    },
+    {
+      "id": 66,
+      "start": 190.68,
+      "end": 193.76,
+      "text": "So it's basically like log negative log likelihood."
+    },
+    {
+      "id": 67,
+      "start": 195.96,
+      "end": 198.32,
+      "text": "Oh, no, sorry, this is perplexity, but it's on the log scale."
+    },
+    {
+      "id": 68,
+      "start": 198.32,
+      "end": 200.68,
+      "text": "So yeah, this is actual perplexity."
+    },
+    {
+      "id": 69,
+      "start": 201.64,
+      "end": 203.32,
+      "text": "And then they compare the perplexity"
+    },
+    {
+      "id": 70,
+      "start": 203.32,
+      "end": 205.48,
+      "text": "based on the number of training flops."
+    },
+    {
+      "id": 71,
+      "start": 205.48,
+      "end": 208.4,
+      "text": "And so if you look at the yellow transformer"
+    },
+    {
+      "id": 72,
+      "start": 208.4,
+      "end": 212.32,
+      "text": "and the orange transformer plus plus,"
+    },
+    {
+      "id": 73,
+      "start": 212.32,
+      "end": 217.32,
+      "text": "you can actually see that it takes 10 times more flops"
+    },
+    {
+      "id": 74,
+      "start": 218.4,
+      "end": 223.4,
+      "text": "to achieve a approximately similar,"
+    },
+    {
+      "id": 75,
+      "start": 226.16,
+      "end": 228.68,
+      "text": "it can take 10 times more flops to achieve"
+    },
+    {
+      "id": 76,
+      "start": 228.68,
+      "end": 231.0,
+      "text": "an approximately similar result"
+    },
+    {
+      "id": 77,
+      "start": 231.0,
+      "end": 234.92,
+      "text": "with the old architecture compared to the new architecture."
+    },
+    {
+      "id": 78,
+      "start": 234.92,
+      "end": 236.64,
+      "text": "So this is really, really important, right?"
+    },
+    {
+      "id": 79,
+      "start": 236.64,
+      "end": 238.44,
+      "text": "You want your training to be 10 times faster."
+    },
+    {
+      "id": 80,
+      "start": 238.44,
+      "end": 243.24,
+      "text": "So you can see that a lot of people were saying"
+    },
+    {
+      "id": 81,
+      "start": 243.24,
+      "end": 245.4,
+      "text": "scale is all you need, an architecture engineering"
+    },
+    {
+      "id": 82,
+      "start": 245.4,
+      "end": 246.8,
+      "text": "is an important for things like that,"
+    },
+    {
+      "id": 83,
+      "start": 246.8,
+      "end": 248.6,
+      "text": "but it turns out that architecture engineering"
+    },
+    {
+      "id": 84,
+      "start": 248.6,
+      "end": 250.92,
+      "text": "is kind of important."
+    },
+    {
+      "id": 85,
+      "start": 250.92,
+      "end": 254.52,
+      "text": "So like a lot of the advances we've made"
+    },
+    {
+      "id": 86,
+      "start": 254.52,
+      "end": 256.36,
+      "text": "in the past five years or seven years,"
+    },
+    {
+      "id": 87,
+      "start": 256.36,
+      "end": 259.88,
+      "text": "with respect to that, are actually making different things."
+    },
+    {
+      "id": 88,
+      "start": 259.88,
+      "end": 261.76,
+      "text": "So I'll leave it at that."
+    }
+  ],
+  "language": "en"
+}

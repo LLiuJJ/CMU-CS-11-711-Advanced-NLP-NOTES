@@ -1,0 +1,1103 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 1.36,
+      "text": "or overflow."
+    },
+    {
+      "id": 1,
+      "start": 1.36,
+      "end": 4.96,
+      "text": "And therefore, a really popular data type"
+    },
+    {
+      "id": 2,
+      "start": 4.96,
+      "end": 7.2,
+      "text": "that was designed just for machine learning"
+    },
+    {
+      "id": 3,
+      "start": 7.2,
+      "end": 11.52,
+      "text": "is called Bflow 16, which just like moves."
+    },
+    {
+      "id": 4,
+      "start": 11.52,
+      "end": 13.28,
+      "text": "The idea is you're just moving some of the bits"
+    },
+    {
+      "id": 5,
+      "start": 13.28,
+      "end": 15.48,
+      "text": "from the fractional part to the exponential part"
+    },
+    {
+      "id": 6,
+      "start": 15.48,
+      "end": 17.76,
+      "text": "so you can have a larger range."
+    },
+    {
+      "id": 7,
+      "start": 17.76,
+      "end": 21.4,
+      "text": "But within that range, you may have a fewer choice"
+    },
+    {
+      "id": 8,
+      "start": 21.4,
+      "end": 22.76,
+      "text": "to values to choose from."
+    },
+    {
+      "id": 9,
+      "start": 22.76,
+      "end": 24.44,
+      "text": "But it just works."
+    },
+    {
+      "id": 10,
+      "start": 24.44,
+      "end": 27.72,
+      "text": "It supports some of the problems that we face in machine learning."
+    },
+    {
+      "id": 11,
+      "start": 30.4,
+      "end": 33.36,
+      "text": "Anyways, so this is floating point types."
+    },
+    {
+      "id": 12,
+      "start": 33.36,
+      "end": 38.56,
+      "text": "But as you can probably imagine, once you get below 16,"
+    },
+    {
+      "id": 13,
+      "start": 38.56,
+      "end": 40.64,
+      "text": "you're really impacting the amount of things"
+    },
+    {
+      "id": 14,
+      "start": 40.64,
+      "end": 43.68,
+      "text": "you can represent in a float, given that you need"
+    },
+    {
+      "id": 15,
+      "start": 43.68,
+      "end": 45.24,
+      "text": "like one thing for the sign."
+    },
+    {
+      "id": 16,
+      "start": 47.56,
+      "end": 52.0,
+      "text": "And then if your range of the exponent is small,"
+    },
+    {
+      "id": 17,
+      "start": 52.0,
+      "end": 53.72,
+      "text": "then you're suddenly you don't have them,"
+    },
+    {
+      "id": 18,
+      "start": 53.72,
+      "end": 56.72,
+      "text": "not much of a range of values you can represent at all."
+    },
+    {
+      "id": 19,
+      "start": 56.72,
+      "end": 62.24,
+      "text": "So a really popular way to like get really small amounts"
+    },
+    {
+      "id": 20,
+      "start": 62.24,
+      "end": 67.28,
+      "text": "of footprint in models is by quantizing to integers."
+    },
+    {
+      "id": 21,
+      "start": 67.28,
+      "end": 68.84,
+      "text": "And this is not that obvious because you're"
+    },
+    {
+      "id": 22,
+      "start": 68.84,
+      "end": 73.12,
+      "text": "taking a float and turning into an int."
+    },
+    {
+      "id": 23,
+      "start": 73.12,
+      "end": 77.08,
+      "text": "And so one way this is done is called abs max,"
+    },
+    {
+      "id": 24,
+      "start": 77.08,
+      "end": 80.52,
+      "text": "or absolute maximum quantization, where you basically"
+    },
+    {
+      "id": 25,
+      "start": 80.52,
+      "end": 84.6,
+      "text": "map each number in a list of floats"
+    },
+    {
+      "id": 26,
+      "start": 84.6,
+      "end": 86.76,
+      "text": "to a range of integers."
+    },
+    {
+      "id": 27,
+      "start": 86.76,
+      "end": 90.04,
+      "text": "So for float for int eight, the range"
+    },
+    {
+      "id": 28,
+      "start": 90.04,
+      "end": 93.8,
+      "text": "would be like negative 127 to 127, because that's"
+    },
+    {
+      "id": 29,
+      "start": 93.8,
+      "end": 98.76,
+      "text": "255 total values and 2.0 to array is 256."
+    },
+    {
+      "id": 30,
+      "start": 98.76,
+      "end": 103.76,
+      "text": "And here you basically find the absolute value"
+    },
+    {
+      "id": 31,
+      "start": 103.76,
+      "end": 105.28,
+      "text": "that is largest in the whole array."
+    },
+    {
+      "id": 32,
+      "start": 105.28,
+      "end": 109.56,
+      "text": "And then that becomes 127, or whatever"
+    },
+    {
+      "id": 33,
+      "start": 109.56,
+      "end": 113.96,
+      "text": "your whatever the largest value in your integer ranges."
+    },
+    {
+      "id": 34,
+      "start": 113.96,
+      "end": 116.64,
+      "text": "And then everything else becomes assigned"
+    },
+    {
+      "id": 35,
+      "start": 116.64,
+      "end": 120.64,
+      "text": "to the closest integer that's scaled by that value."
+    },
+    {
+      "id": 36,
+      "start": 120.64,
+      "end": 124.28,
+      "text": "So here, for example, in this example,"
+    },
+    {
+      "id": 37,
+      "start": 124.28,
+      "end": 126.8,
+      "text": "we have 20 is the largest value."
+    },
+    {
+      "id": 38,
+      "start": 126.8,
+      "end": 131.36,
+      "text": "And so 20 would become assigned as 127."
+    },
+    {
+      "id": 39,
+      "start": 131.36,
+      "end": 136.64,
+      "text": "And then everything else would be assigned proportional to that."
+    },
+    {
+      "id": 40,
+      "start": 136.64,
+      "end": 140.6,
+      "text": "So like 0.5 is 1.40th of 20."
+    },
+    {
+      "id": 41,
+      "start": 140.6,
+      "end": 145.04,
+      "text": "And 140th of 127 is rounds to the nearest number of 3."
+    },
+    {
+      "id": 42,
+      "start": 145.04,
+      "end": 149.24,
+      "text": "And so this is kind of how you can go beyond floats"
+    },
+    {
+      "id": 43,
+      "start": 149.24,
+      "end": 154.28,
+      "text": "and actually represent parameters with ints."
+    },
+    {
+      "id": 44,
+      "start": 154.28,
+      "end": 156.32,
+      "text": "The most extreme example, which should also now"
+    },
+    {
+      "id": 45,
+      "start": 156.32,
+      "end": 158.88,
+      "text": "highlight some of the issues with this idea of post-training"
+    },
+    {
+      "id": 46,
+      "start": 158.88,
+      "end": 162.72,
+      "text": "quantization, is what if we just had a binary value"
+    },
+    {
+      "id": 47,
+      "start": 162.72,
+      "end": 166.28,
+      "text": "for every parameter, 0 or 1?"
+    },
+    {
+      "id": 48,
+      "start": 166.28,
+      "end": 168.52,
+      "text": "And so instead of having, so we might"
+    },
+    {
+      "id": 49,
+      "start": 168.52,
+      "end": 170.76,
+      "text": "train a model using floats."
+    },
+    {
+      "id": 50,
+      "start": 170.76,
+      "end": 172.08,
+      "text": "And we get these parameters."
+    },
+    {
+      "id": 51,
+      "start": 172.08,
+      "end": 178.8,
+      "text": "So we have the purple here is like the hidden states."
+    },
+    {
+      "id": 52,
+      "start": 178.8,
+      "end": 182.52,
+      "text": "And then the red would be the activations."
+    },
+    {
+      "id": 53,
+      "start": 182.52,
+      "end": 184.76,
+      "text": "And these are all between 0 and 1."
+    },
+    {
+      "id": 54,
+      "start": 184.76,
+      "end": 187.76,
+      "text": "But if we now round them to the nearest value, 0 or 1,"
+    },
+    {
+      "id": 55,
+      "start": 187.76,
+      "end": 194.92,
+      "text": "we get on the top there a list of binary values."
+    },
+    {
+      "id": 56,
+      "start": 194.92,
+      "end": 196.72,
+      "text": "And this seems like really attractive, right?"
+    },
+    {
+      "id": 57,
+      "start": 196.72,
+      "end": 200.04,
+      "text": "Because you only need one bit per vector."
+    },
+    {
+      "id": 58,
+      "start": 200.04,
+      "end": 202.4,
+      "text": "It's really small."
+    },
+    {
+      "id": 59,
+      "start": 202.4,
+      "end": 204.56,
+      "text": "But now let's consider a real example here"
+    },
+    {
+      "id": 60,
+      "start": 204.56,
+      "end": 207.64,
+      "text": "where we are trying to do translation."
+    },
+    {
+      "id": 61,
+      "start": 207.64,
+      "end": 210.92,
+      "text": "And then we are producing these float valued hidden states"
+    },
+    {
+      "id": 62,
+      "start": 210.92,
+      "end": 211.92,
+      "text": "and activations."
+    },
+    {
+      "id": 63,
+      "start": 215.32,
+      "end": 218.2,
+      "text": "In this example, if I just round it up or down"
+    },
+    {
+      "id": 64,
+      "start": 218.2,
+      "end": 224.36,
+      "text": "each of the values, the output vectors that would be the embedding"
+    },
+    {
+      "id": 65,
+      "start": 224.36,
+      "end": 227.2,
+      "text": "vectors that we would then decode outputs,"
+    },
+    {
+      "id": 66,
+      "start": 227.2,
+      "end": 230.12,
+      "text": "even though they're very different in the original float"
+    },
+    {
+      "id": 67,
+      "start": 230.12,
+      "end": 234.08,
+      "text": "space, they actually become all the same thing here,"
+    },
+    {
+      "id": 68,
+      "start": 234.08,
+      "end": 235.96,
+      "text": "which is definitely not what you want."
+    },
+    {
+      "id": 69,
+      "start": 235.96,
+      "end": 238.44,
+      "text": "So basically by reducing the precision,"
+    },
+    {
+      "id": 70,
+      "start": 238.44,
+      "end": 241.4,
+      "text": "you might be like significantly impacting the range"
+    },
+    {
+      "id": 71,
+      "start": 241.4,
+      "end": 242.68,
+      "text": "of things you can express."
+    },
+    {
+      "id": 72,
+      "start": 242.68,
+      "end": 246.84,
+      "text": "And so this basically does not work."
+    },
+    {
+      "id": 73,
+      "start": 246.84,
+      "end": 251.64,
+      "text": "Turning a complex set of floats of high precision floats"
+    },
+    {
+      "id": 74,
+      "start": 251.64,
+      "end": 255.52,
+      "text": "to binary numbers does not work."
+    },
+    {
+      "id": 75,
+      "start": 255.52,
+      "end": 258.36,
+      "text": "And later I'll show that there are ways to make this work"
+    },
+    {
+      "id": 76,
+      "start": 258.36,
+      "end": 259.56,
+      "text": "that are a little more complicated."
+    },
+    {
+      "id": 77,
+      "start": 259.56,
+      "end": 263.32,
+      "text": "They just require more processing after the initial training"
+    },
+    {
+      "id": 78,
+      "start": 263.32,
+      "end": 265.72,
+      "text": "every model."
+    },
+    {
+      "id": 79,
+      "start": 265.72,
+      "end": 268.8,
+      "text": "OK, so now that I've motivated this problem,"
+    },
+    {
+      "id": 80,
+      "start": 268.8,
+      "end": 271.52,
+      "text": "we can talk about a few methods that actually work"
+    },
+    {
+      "id": 81,
+      "start": 271.52,
+      "end": 274.16,
+      "text": "for post-training quantization."
+    },
+    {
+      "id": 82,
+      "start": 274.16,
+      "end": 278.44,
+      "text": "The first one belongs to a class of methods"
+    },
+    {
+      "id": 83,
+      "start": 278.44,
+      "end": 280.84,
+      "text": "called model-aware quantization."
+    },
+    {
+      "id": 84,
+      "start": 280.84,
+      "end": 283.08,
+      "text": "And the idea here is that if you can study"
+    },
+    {
+      "id": 85,
+      "start": 283.08,
+      "end": 287.92,
+      "text": "the statistics of your model, you can sort of learn"
+    },
+    {
+      "id": 86,
+      "start": 287.92,
+      "end": 292.8,
+      "text": "ways to represent values in a way that is matching the actual"
+    },
+    {
+      "id": 87,
+      "start": 292.8,
+      "end": 297.16,
+      "text": "learning, the actual distribution of weights in that model."
+    },
+    {
+      "id": 88,
+      "start": 297.16,
+      "end": 302.8,
+      "text": "So for example, with birthed, most of the weights in each layer"
+    },
+    {
+      "id": 89,
+      "start": 302.8,
+      "end": 306.92,
+      "text": "are concentrated around the mean value there."
+    },
+    {
+      "id": 90,
+      "start": 306.92,
+      "end": 310.36,
+      "text": "And you have a few weights that are very far from that mean"
+    },
+    {
+      "id": 91,
+      "start": 310.36,
+      "end": 311.24,
+      "text": "value."
+    },
+    {
+      "id": 92,
+      "start": 311.24,
+      "end": 313.64,
+      "text": "So you can sort of fit a Gaussian distribution, normal"
+    },
+    {
+      "id": 93,
+      "start": 313.64,
+      "end": 318.4,
+      "text": "distribution, to the distribution of weights."
+    },
+    {
+      "id": 94,
+      "start": 318.4,
+      "end": 321.2,
+      "text": "And then only a few weights in each layer"
+    },
+    {
+      "id": 95,
+      "start": 321.2,
+      "end": 323.96,
+      "text": "will be the details of this distribution."
+    },
+    {
+      "id": 96,
+      "start": 323.96,
+      "end": 326.84,
+      "text": "So the idea here is that, therefore,"
+    },
+    {
+      "id": 97,
+      "start": 326.84,
+      "end": 331.76,
+      "text": "and just to motivate this a little more,"
+    },
+    {
+      "id": 98,
+      "start": 331.76,
+      "end": 334.16,
+      "text": "if you have values of the tails of the distribution,"
+    },
+    {
+      "id": 99,
+      "start": 334.16,
+      "end": 336.2,
+      "text": "they pose issues for quantization."
+    },
+    {
+      "id": 100,
+      "start": 336.68,
+      "end": 338.88,
+      "text": "If you're using the ABS Max quantization I mentioned"
+    },
+    {
+      "id": 101,
+      "start": 338.88,
+      "end": 341.28,
+      "text": "before, you're now defining your range"
+    },
+    {
+      "id": 102,
+      "start": 341.28,
+      "end": 344.0,
+      "text": "according to the minimum and maximum values."
+    },
+    {
+      "id": 103,
+      "start": 344.0,
+      "end": 345.36,
+      "text": "And then everything in between, which"
+    },
+    {
+      "id": 104,
+      "start": 345.36,
+      "end": 349.36,
+      "text": "might be close together, will now be grouped into the same bucket."
+    },
+    {
+      "id": 105,
+      "start": 349.36,
+      "end": 352.24,
+      "text": "And that throws away a lot of the ability"
+    },
+    {
+      "id": 106,
+      "start": 352.24,
+      "end": 356.32,
+      "text": "to distinguish between weights in your network."
+    },
+    {
+      "id": 107,
+      "start": 356.32,
+      "end": 360.48,
+      "text": "So the idea here is that you basically store the outliers"
+    },
+    {
+      "id": 108,
+      "start": 360.48,
+      "end": 364.08,
+      "text": "separately, and you actually store them in full precision."
+    },
+    {
+      "id": 109,
+      "start": 364.08,
+      "end": 368.04,
+      "text": "So you're paying the full storage cost for a few parameters."
+    },
+    {
+      "id": 110,
+      "start": 368.04,
+      "end": 371.0,
+      "text": "And then everything else that's sort of concentrated together"
+    },
+    {
+      "id": 111,
+      "start": 371.0,
+      "end": 375.28,
+      "text": "gets quantized into a much lower precision space."
+    },
+    {
+      "id": 112,
+      "start": 375.28,
+      "end": 379.08,
+      "text": "And I think that this is at least in theory very effective,"
+    },
+    {
+      "id": 113,
+      "start": 379.08,
+      "end": 381.76,
+      "text": "and they have strong results here."
+    },
+    {
+      "id": 114,
+      "start": 381.76,
+      "end": 385.48,
+      "text": "And however, a problem with that approach"
+    },
+    {
+      "id": 115,
+      "start": 385.48,
+      "end": 391.64,
+      "text": "is that you're defining the outliers"
+    },
+    {
+      "id": 116,
+      "start": 391.64,
+      "end": 395.84,
+      "text": "and the minimum and maximum for each layer uniformly."
+    },
+    {
+      "id": 117,
+      "start": 395.84,
+      "end": 398.0,
+      "text": "So instead, this L and the intake, which"
+    },
+    {
+      "id": 118,
+      "start": 398.0,
+      "end": 401.12,
+      "text": "is actually very popular in NLP, you might have heard of it"
+    },
+    {
+      "id": 119,
+      "start": 401.12,
+      "end": 407.16,
+      "text": "if you have been building NLP systems,"
+    },
+    {
+      "id": 120,
+      "start": 407.16,
+      "end": 409.4,
+      "text": "they go a little a step further."
+    },
+    {
+      "id": 121,
+      "start": 409.4,
+      "end": 412.96,
+      "text": "And they instead of quantizing each layer uniformly,"
+    },
+    {
+      "id": 122,
+      "start": 412.96,
+      "end": 417.68,
+      "text": "they quantize each row or column of a vector in matrix"
+    },
+    {
+      "id": 123,
+      "start": 417.68,
+      "end": 421.96,
+      "text": "multiplication separately, with the motivation"
+    },
+    {
+      "id": 124,
+      "start": 421.96,
+      "end": 425.96,
+      "text": "that most of the parameters in transformers"
+    },
+    {
+      "id": 125,
+      "start": 425.96,
+      "end": 428.52,
+      "text": "are for matrix multiplication."
+    },
+    {
+      "id": 126,
+      "start": 428.52,
+      "end": 431.44,
+      "text": "And so by doing this, they're able to actually"
+    },
+    {
+      "id": 127,
+      "start": 431.44,
+      "end": 434.4,
+      "text": "get a better quantization because you're"
+    },
+    {
+      "id": 128,
+      "start": 434.4,
+      "end": 438.6,
+      "text": "able to have a more precise space range of the values"
+    },
+    {
+      "id": 129,
+      "start": 438.6,
+      "end": 442.16,
+      "text": "for each row or column of a matrix."
+    },
+    {
+      "id": 130,
+      "start": 442.16,
+      "end": 443.0,
+      "text": "Yeah."
+    },
+    {
+      "id": 131,
+      "start": 443.0,
+      "end": 447.08,
+      "text": "Just curious in the previous case, why exactly?"
+    },
+    {
+      "id": 132,
+      "start": 447.6,
+      "end": 450.44,
+      "text": "So frequently they've changed."
+    },
+    {
+      "id": 133,
+      "start": 450.44,
+      "end": 451.4,
+      "text": "Based on the layers."
+    },
+    {
+      "id": 134,
+      "start": 455.72,
+      "end": 461.28,
+      "text": "Different layers might have more concentration of weights"
+    },
+    {
+      "id": 135,
+      "start": 461.28,
+      "end": 464.68,
+      "text": "to a single value, or the values of weights in that layer"
+    },
+    {
+      "id": 136,
+      "start": 464.68,
+      "end": 467.28,
+      "text": "might be concentrated or might be more broad."
+    },
+    {
+      "id": 137,
+      "start": 467.28,
+      "end": 468.28,
+      "text": "I think that's how to think of it."
+    },
+    {
+      "id": 138,
+      "start": 468.28,
+      "end": 470.24,
+      "text": "Does that in your state of portion"
+    },
+    {
+      "id": 139,
+      "start": 470.24,
+      "end": 472.96,
+      "text": "the layers in the column?"
+    },
+    {
+      "id": 140,
+      "start": 472.96,
+      "end": 474.56,
+      "text": "Because the layer is clear, it's"
+    },
+    {
+      "id": 141,
+      "start": 474.84,
+      "end": 475.92,
+      "text": "a little bit more precise."
+    },
+    {
+      "id": 142,
+      "start": 475.92,
+      "end": 479.76,
+      "text": "So do you have a key to increase the layer?"
+    },
+    {
+      "id": 143,
+      "start": 479.76,
+      "end": 481.16,
+      "text": "Yeah, I think that's right."
+    },
+    {
+      "id": 144,
+      "start": 481.16,
+      "end": 485.16,
+      "text": "I think that this paper also discusses that problem."
+    },
+    {
+      "id": 145,
+      "start": 485.16,
+      "end": 488.36,
+      "text": "That as you get later into the layers of a network,"
+    },
+    {
+      "id": 146,
+      "start": 488.36,
+      "end": 490.24,
+      "text": "you see a lot more of these outliers,"
+    },
+    {
+      "id": 147,
+      "start": 490.24,
+      "end": 491.96,
+      "text": "these large magnitude values."
+    },
+    {
+      "id": 148,
+      "start": 496.0,
+      "end": 498.56,
+      "text": "OK, so moving on here, the last thing I'll say"
+    },
+    {
+      "id": 149,
+      "start": 498.56,
+      "end": 502.56,
+      "text": "is that there is an overhead you're"
+    },
+    {
+      "id": 150,
+      "start": 502.56,
+      "end": 504.48,
+      "text": "paying when you're doing this kind of quantization,"
+    },
+    {
+      "id": 151,
+      "start": 504.48,
+      "end": 506.88,
+      "text": "where you have to, for each vector,"
+    },
+    {
+      "id": 152,
+      "start": 506.88,
+      "end": 510.36,
+      "text": "you have to, you are now mapping it to a list of numbers"
+    },
+    {
+      "id": 153,
+      "start": 510.36,
+      "end": 514.28,
+      "text": "and you need to then decode those numbers back into floats,"
+    },
+    {
+      "id": 154,
+      "start": 514.28,
+      "end": 515.76,
+      "text": "like decode your ints back into floats."
+    },
+    {
+      "id": 155,
+      "start": 515.76,
+      "end": 518.64,
+      "text": "So there's an overhead that costs time"
+    },
+    {
+      "id": 156,
+      "start": 518.64,
+      "end": 521.4,
+      "text": "when you're doing inference."
+    },
+    {
+      "id": 157,
+      "start": 521.4,
+      "end": 523.0,
+      "text": "So if you have a small model, this"
+    },
+    {
+      "id": 158,
+      "start": 523.0,
+      "end": 525.44,
+      "text": "is not going to help you go faster, most likely."
+    },
+    {
+      "id": 159,
+      "start": 525.44,
+      "end": 527.48,
+      "text": "But if you have a really big model,"
+    },
+    {
+      "id": 160,
+      "start": 527.48,
+      "end": 530.44,
+      "text": "it can actually double your inference speed at least."
+    },
+    {
+      "id": 161,
+      "start": 530.44,
+      "end": 532.44,
+      "text": "And it also lets you load models into memory"
+    },
+    {
+      "id": 162,
+      "start": 532.44,
+      "end": 534.88,
+      "text": "that you otherwise would not be able to."
+    },
+    {
+      "id": 163,
+      "start": 534.88,
+      "end": 538.2,
+      "text": "So there's definitely a trade off, and this is really desirable."
+    },
+    {
+      "id": 164,
+      "start": 542.28,
+      "end": 544.84,
+      "text": "Any questions here before I move on to some more high-level"
+    },
+    {
+      "id": 165,
+      "start": 544.84,
+      "end": 546.0,
+      "text": "stuff on quantization?"
+    },
+    {
+      "id": 166,
+      "start": 556.28,
+      "end": 559.4,
+      "text": "So in terms of hardware concerns,"
+    },
+    {
+      "id": 167,
+      "start": 559.4,
+      "end": 562.16,
+      "text": "I think one of the challenges, like,"
+    },
+    {
+      "id": 168,
+      "start": 562.16,
+      "end": 565.16,
+      "text": "if you're somebody who's interested in algorithms,"
+    },
+    {
+      "id": 169,
+      "start": 565.16,
+      "end": 567.0,
+      "text": "you might have very creative ideas"
+    },
+    {
+      "id": 170,
+      "start": 567.0,
+      "end": 569.28,
+      "text": "for how you might do quantization."
+    },
+    {
+      "id": 171,
+      "start": 569.28,
+      "end": 572.48,
+      "text": "But the problem is that the ability for quantization"
+    },
+    {
+      "id": 172,
+      "start": 572.48,
+      "end": 576.44,
+      "text": "to actually be effective or make things faster"
+    },
+    {
+      "id": 173,
+      "start": 576.44,
+      "end": 580.6,
+      "text": "is largely limited by both hardware and also low-level systems,"
+    },
+    {
+      "id": 174,
+      "start": 580.6,
+      "end": 583.2,
+      "text": "like the framework, like PyTorch,"
+    },
+    {
+      "id": 175,
+      "start": 583.2,
+      "end": 586.6,
+      "text": "that you're running your models on."
+    },
+    {
+      "id": 176,
+      "start": 586.6,
+      "end": 589.12,
+      "text": "So at a hardware level, some data types"
+    },
+    {
+      "id": 177,
+      "start": 589.12,
+      "end": 591.76,
+      "text": "are basically just not supported by hardware."
+    },
+    {
+      "id": 178,
+      "start": 592.36,
+      "end": 595.56,
+      "text": "Int3, like a 3-bit int, is not something"
+    },
+    {
+      "id": 179,
+      "start": 595.56,
+      "end": 598.28,
+      "text": "that processors generally support."
+    },
+    {
+      "id": 180,
+      "start": 598.28,
+      "end": 602.12,
+      "text": "So if your quantization method uses int3,"
+    },
+    {
+      "id": 181,
+      "start": 602.12,
+      "end": 603.84,
+      "text": "it's effectively just using int4,"
+    },
+    {
+      "id": 182,
+      "start": 603.84,
+      "end": 605.84,
+      "text": "and then you're not getting a speed."
+    }
+  ],
+  "language": "en"
+}

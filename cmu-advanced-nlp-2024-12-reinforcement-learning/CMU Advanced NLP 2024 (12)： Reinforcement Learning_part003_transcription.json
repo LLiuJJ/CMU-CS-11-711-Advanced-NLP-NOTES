@@ -1,0 +1,389 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 4.0,
+      "text": "matches human pairwise preferences, you can just calculate accuracy."
+    },
+    {
+      "id": 1,
+      "start": 4.0,
+      "end": 11.0,
+      "text": "So I didn't put that on the side here, but you can just calculate accuracy of pairwise preferences."
+    },
+    {
+      "id": 2,
+      "start": 11.0,
+      "end": 18.0,
+      "text": "You can also calculate the absolute error between the judgements if you want to know whether the absolute error matches."
+    },
+    {
+      "id": 3,
+      "start": 18.0,
+      "end": 22.0,
+      "text": "So these are good things to do."
+    },
+    {
+      "id": 4,
+      "start": 22.0,
+      "end": 31.0,
+      "text": "If you want to use in evaluation metric, but you aren't sure whether it's good or not, I would check to see whether the authors have done this sort of meta evaluation."
+    },
+    {
+      "id": 5,
+      "start": 31.0,
+      "end": 36.0,
+      "text": "If they haven't be a little bit suspicious, if they have be a little bit less suspicious."
+    },
+    {
+      "id": 6,
+      "start": 36.0,
+      "end": 39.0,
+      "text": "But, yeah."
+    },
+    {
+      "id": 7,
+      "start": 39.0,
+      "end": 41.0,
+      "text": "How do people do this typically?"
+    },
+    {
+      "id": 8,
+      "start": 41.0,
+      "end": 48.0,
+      "text": "Usually they create data sets like the WN, they use data sets like the WNK shared tasks."
+    },
+    {
+      "id": 9,
+      "start": 48.0,
+      "end": 54.0,
+      "text": "Or like some avail."
+    },
+    {
+      "id": 10,
+      "start": 54.0,
+      "end": 58.0,
+      "text": "But there's also other ways to create."
+    },
+    {
+      "id": 11,
+      "start": 58.0,
+      "end": 60.0,
+      "text": "There's also lots of other new sets."
+    },
+    {
+      "id": 12,
+      "start": 60.0,
+      "end": 69.0,
+      "text": "But in order to do this reliably, you need a fairly large data set. So it's one thing to be aware of."
+    },
+    {
+      "id": 13,
+      "start": 69.0,
+      "end": 72.0,
+      "text": "Cool."
+    },
+    {
+      "id": 14,
+      "start": 72.0,
+      "end": 80.0,
+      "text": "Then the final thing, all of the automatic evaluation methods that I talked about now are trying to match human preferences."
+    },
+    {
+      "id": 15,
+      "start": 80.0,
+      "end": 84.0,
+      "text": "But that's not the only thing that you necessarily want to do."
+    },
+    {
+      "id": 16,
+      "start": 84.0,
+      "end": 93.0,
+      "text": "The final thing that you might want to do is use the model outputs in the downstream system and see whether they are effective for that."
+    },
+    {
+      "id": 17,
+      "start": 93.0,
+      "end": 98.0,
+      "text": "So there's two concepts of intrinsic evaluation and extrinsic evaluation."
+    },
+    {
+      "id": 18,
+      "start": 98.0,
+      "end": 101.0,
+      "text": "So intrinsic evaluation."
+    },
+    {
+      "id": 19,
+      "start": 101.0,
+      "end": 108.0,
+      "text": "I'm evaluates the quality of the output itself. And so that would be like asking human directly about how good is this output."
+    },
+    {
+      "id": 20,
+      "start": 108.0,
+      "end": 113.0,
+      "text": "It's intrinsic evaluation is evaluating output quality by its utility."
+    },
+    {
+      "id": 21,
+      "start": 113.0,
+      "end": 122.0,
+      "text": "And so just to give one example, if you can evaluate large language model summaries through question answering accuracy."
+    },
+    {
+      "id": 22,
+      "start": 122.0,
+      "end": 139.0,
+      "text": "And so you can take the output of an LLM and feed it through a question answering model and see whether you're able to answer questions based on this and that kind of gives you a better idea of whether the summary required incorporates requisite information."
+    },
+    {
+      "id": 23,
+      "start": 139.0,
+      "end": 147.0,
+      "text": "But if you think about anything in LLM can be used for usually it's part of a bigger system. So you've been evaluated as part of that bigger system."
+    },
+    {
+      "id": 24,
+      "start": 147.0,
+      "end": 155.0,
+      "text": "The problem with this is it's a very indirect way of assessing things. So like let's say your QA model is just bad."
+    },
+    {
+      "id": 25,
+      "start": 155.0,
+      "end": 170.0,
+      "text": "How can you disentangle the effect of the LLM summary versus the QA model that's not trivial things to do. So ideally like a combination of these two is probably the best way to go."
+    },
+    {
+      "id": 26,
+      "start": 170.0,
+      "end": 176.0,
+      "text": "Cool. So yeah."
+    },
+    {
+      "id": 27,
+      "start": 177.0,
+      "end": 187.0,
+      "text": "Yeah, I wouldn't necessarily say it's harder to do it might even be easier to do, which is like let's say."
+    },
+    {
+      "id": 28,
+      "start": 187.0,
+      "end": 194.0,
+      "text": "What would be what would you say by the couple of things?"
+    },
+    {
+      "id": 29,
+      "start": 194.0,
+      "end": 206.0,
+      "text": "Let's say you are trying to."
+    },
+    {
+      "id": 30,
+      "start": 206.0,
+      "end": 221.0,
+      "text": "Let's say you're trying to guess whether."
+    },
+    {
+      "id": 31,
+      "start": 221.0,
+      "end": 237.0,
+      "text": "Let's say you're trying to guess whether a someone will be hiring the company or not based on in LLM generated summary of their qualifications for a position or something like that."
+    },
+    {
+      "id": 32,
+      "start": 237.0,
+      "end": 247.0,
+      "text": "And you actually maybe this is not a great example because whether you should be doing this ethically is a little bit easier."
+    },
+    {
+      "id": 33,
+      "start": 247.0,
+      "end": 259.0,
+      "text": "But let's say you were doing let's say you were doing something like that just because it's a one example I can pick up right now whether they will get hired or not is it's clear because you have a objective answer right whether they were hired or not."
+    },
+    {
+      "id": 34,
+      "start": 259.0,
+      "end": 272.0,
+      "text": "Or maybe maybe another example would be like let's say let's say you want to predict the diagnosis in a medical application based on an LLM generated summary of somebody's."
+    },
+    {
+      "id": 35,
+      "start": 272.0,
+      "end": 287.0,
+      "text": "LLM generated summary of somebody's you know past medical history and all this stuff and here you want the LLM generated summary you definitely want the summary because the summary is going to be viewed by a doctor who will make the final decision."
+    },
+    {
+      "id": 36,
+      "start": 287.0,
+      "end": 300.0,
+      "text": "But you also have information about the diagnosis of all the people in your medical system later because you know they went through your medical system for years and you know later like through lots of classes that whether how they were diagnosed."
+    },
+    {
+      "id": 37,
+      "start": 300.0,
+      "end": 311.0,
+      "text": "So you generate an LLM based summary and then you predict the diagnosis from the summary so there the evaluation of the diagnosis is very clear because you kind of have a goal of standard answer."
+    },
+    {
+      "id": 38,
+      "start": 311.0,
+      "end": 324.0,
+      "text": "But the in intrinsic evaluation of whether it's a good summer or not is not as clear because you have passed after it's whether it's good and understandable summary so the experience of evaluation might be easier because it's clear."
+    },
+    {
+      "id": 39,
+      "start": 324.0,
+      "end": 330.0,
+      "text": "So there are cases like that problems you would have to have that data."
+    },
+    {
+      "id": 40,
+      "start": 330.0,
+      "end": 334.0,
+      "text": "Isn't it very similar to evaluation?"
+    },
+    {
+      "id": 41,
+      "start": 334.0,
+      "end": 342.0,
+      "text": "Yeah. I just wonder if the baby is taking the moon like it's going to take a five years or like how do you comment with the list?"
+    },
+    {
+      "id": 42,
+      "start": 342.0,
+      "end": 345.0,
+      "text": "Oh yeah that's a great that's a great question."
+    },
+    {
+      "id": 43,
+      "start": 345.0,
+      "end": 352.0,
+      "text": "So how do you how do you get these squares here?"
+    },
+    {
+      "id": 44,
+      "start": 352.0,
+      "end": 370.0,
+      "text": "There's a number of different things in the WMT share tasks what they did is they did the first thing that you was a normalized by an indicator and what they do is they basically take the Z score or Z score of the"
+    },
+    {
+      "id": 45,
+      "start": 370.0,
+      "end": 380.0,
+      "text": "human and the thing is actual squares because some people are more harsh than other people and so what that means is you basically normalize to have zero mean and unit variance."
+    },
+    {
+      "id": 46,
+      "start": 380.0,
+      "end": 388.0,
+      "text": "And then after they've normalized zero mean and unit variance then I think they average together different humans."
+    },
+    {
+      "id": 47,
+      "start": 388.0,
+      "end": 409.0,
+      "text": "And then for how do you deal with the fact that humans disagree on things and I think it's pretty very I don't know if there's any good standard way of doing it but sometimes you just average sometimes you throw away examples for humans disagree a lot because you can't get the human stability."
+    },
+    {
+      "id": 48,
+      "start": 409.0,
+      "end": 413.0,
+      "text": "How can you expect how do you expect a machine to do well."
+    },
+    {
+      "id": 49,
+      "start": 413.0,
+      "end": 418.0,
+      "text": "So I think it's a little bit faster."
+    },
+    {
+      "id": 50,
+      "start": 418.0,
+      "end": 423.0,
+      "text": "So for code generation with that."
+    },
+    {
+      "id": 51,
+      "start": 423.0,
+      "end": 429.0,
+      "text": "Yeah so for code generation that's I want this example because I work in code generation."
+    },
+    {
+      "id": 52,
+      "start": 429.0,
+      "end": 442.0,
+      "text": "A lot of people only think about extrinsic evaluation of point generation or I don't think it's stringering but only think about execution based evaluation of code generation which is like you execute the code you see whether it passed you the class."
+    },
+    {
+      "id": 53,
+      "start": 442.0,
+      "end": 455.0,
+      "text": "So not other things like this but in reality actually there's a lot of other important things for like we have a way and stuff like that and you should be evaluating those things but I think a lot of people like from more than so."
+    },
+    {
+      "id": 54,
+      "start": 455.0,
+      "end": 464.0,
+      "text": "There are a few people sitting there for most of the time people are just execute because you have the classes unit."
+    },
+    {
+      "id": 55,
+      "start": 464.0,
+      "end": 485.0,
+      "text": "Okay so yeah moving on to the learning part so now I'd like to talk about learning and the first thing I'll cover is error risk and so basically the way we calculate error is we generate an output and we calculate its badness."
+    },
+    {
+      "id": 56,
+      "start": 485.0,
+      "end": 493.0,
+      "text": "And so generating the output could be our next it could be sampling it could be anything else like that."
+    },
+    {
+      "id": 57,
+      "start": 493.0,
+      "end": 506.0,
+      "text": "And we calculate its badness which is one minus in about which could be like how bad is the output if you're you have a badness measure or it could be one minus the evaluation square to calculate its badness."
+    },
+    {
+      "id": 58,
+      "start": 506.0,
+      "end": 528.0,
+      "text": "And this is divided into the error and generally what you want to do is you want to minimize error because in the end you're going to be deploying a system that outputs you know one thing and you're going to want that to be as good a thing as possible."
+    },
+    {
+      "id": 59,
+      "start": 528.0,
+      "end": 548.0,
+      "text": "But the problem with this is there's no easy way to actually optimize this value in especially in a text generation style setting but even in the classification setting we can't easily maximize error because if you look at the."
+    },
+    {
+      "id": 60,
+      "start": 548.0,
+      "end": 565.0,
+      "text": "If you look at the surface of the error at some point you're going to have a non-differentiable part when you take the dark max and or when you do sampling or anything like that so you're not going to be able to do gradient based optimization."
+    },
+    {
+      "id": 61,
+      "start": 565.0,
+      "end": 594.0,
+      "text": "So what we do normally is we instead calculate something called risk and what risk looks like is we talked a little bit about minimum base risk for decoding but this is for a training time and what it looks like is it's essentially the expected error of the output and the expected error of the output includes a probability and the objective function here."
+    },
+    {
+      "id": 62,
+      "start": 594.0,
+      "end": 599.0,
+      "text": "And that probability is different."
+    },
+    {
+      "id": 63,
+      "start": 599.0,
+      "end": 600.0,
+      "text": "So we can."
+    }
+  ],
+  "language": "en"
+}

@@ -1,0 +1,683 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 2.64,
+      "text": "And to sequence modeling, they start being able to model"
+    },
+    {
+      "id": 1,
+      "start": 2.64,
+      "end": 4.6,
+      "text": "which words are next to each other,"
+    },
+    {
+      "id": 2,
+      "start": 4.6,
+      "end": 6.68,
+      "text": "which tokens are next to each other and stuff like that."
+    },
+    {
+      "id": 3,
+      "start": 6.68,
+      "end": 8.8,
+      "text": "So even if they are less expressive,"
+    },
+    {
+      "id": 4,
+      "start": 8.8,
+      "end": 11.4,
+      "text": "the combination between them to be expressive or less."
+    },
+    {
+      "id": 5,
+      "start": 11.4,
+      "end": 14.48,
+      "text": "So yeah, that's kind of a preview of what we're"
+    },
+    {
+      "id": 6,
+      "start": 14.48,
+      "end": 16.52,
+      "text": "going to do next."
+    },
+    {
+      "id": 7,
+      "start": 16.52,
+      "end": 21.2,
+      "text": "OK, so let's assume that we want to have some subwords"
+    },
+    {
+      "id": 8,
+      "start": 21.2,
+      "end": 24.16,
+      "text": "that are longer than characters, but short of end tokens."
+    },
+    {
+      "id": 9,
+      "start": 24.16,
+      "end": 27.36,
+      "text": "How do we make these in a consistent way?"
+    },
+    {
+      "id": 10,
+      "start": 27.36,
+      "end": 29.84,
+      "text": "There's two major ways of doing this."
+    },
+    {
+      "id": 11,
+      "start": 29.84,
+      "end": 31.6,
+      "text": "The first one is byte pairing encoding."
+    },
+    {
+      "id": 12,
+      "start": 31.6,
+      "end": 33.68,
+      "text": "And this is very, very simple."
+    },
+    {
+      "id": 13,
+      "start": 33.68,
+      "end": 46.04,
+      "text": "In fact, it's so simple that we can implement it in this notebook"
+    },
+    {
+      "id": 14,
+      "start": 46.04,
+      "end": 50.36,
+      "text": "here, which you can click through on the slides."
+    },
+    {
+      "id": 15,
+      "start": 50.36,
+      "end": 57.24,
+      "text": "And it's about 10 lines of code."
+    },
+    {
+      "id": 16,
+      "start": 57.24,
+      "end": 67.36,
+      "text": "And so basically what byte pairing coding does is that you"
+    },
+    {
+      "id": 17,
+      "start": 67.36,
+      "end": 71.72,
+      "text": "start out with all of the vocabulary that you want to process,"
+    },
+    {
+      "id": 18,
+      "start": 71.72,
+      "end": 77.88,
+      "text": "where each vocabulary item is split into the characters"
+    },
+    {
+      "id": 19,
+      "start": 77.88,
+      "end": 80.64,
+      "text": "and an end of word symbol."
+    },
+    {
+      "id": 20,
+      "start": 80.64,
+      "end": 86.56,
+      "text": "And you have a corresponding frequency of this."
+    },
+    {
+      "id": 21,
+      "start": 86.56,
+      "end": 93.16,
+      "text": "You then get statistics about the most common pairs of tokens"
+    },
+    {
+      "id": 22,
+      "start": 93.16,
+      "end": 94.92,
+      "text": "that occur next to each other."
+    },
+    {
+      "id": 23,
+      "start": 94.92,
+      "end": 96.72,
+      "text": "And so here, the most common pairs of tokens"
+    },
+    {
+      "id": 24,
+      "start": 96.72,
+      "end": 99.84,
+      "text": "that occur next to each other are ES,"
+    },
+    {
+      "id": 25,
+      "start": 99.84,
+      "end": 105.08,
+      "text": "because it occurs nine times, because it occurs in newest"
+    },
+    {
+      "id": 26,
+      "start": 105.08,
+      "end": 110.36,
+      "text": "and wildest, also ST and TW, because those occur there too."
+    },
+    {
+      "id": 27,
+      "start": 110.36,
+      "end": 113.68,
+      "text": "And then you have W, E, and other things like that."
+    },
+    {
+      "id": 28,
+      "start": 113.68,
+      "end": 115.6,
+      "text": "So out of all the most frequent ones,"
+    },
+    {
+      "id": 29,
+      "start": 115.6,
+      "end": 117.64,
+      "text": "you just merge them together."
+    },
+    {
+      "id": 30,
+      "start": 117.64,
+      "end": 125.96,
+      "text": "And that gives you new ES, new ES key and wide ES key."
+    },
+    {
+      "id": 31,
+      "start": 125.96,
+      "end": 127.2,
+      "text": "And then you do the same thing."
+    },
+    {
+      "id": 32,
+      "start": 127.2,
+      "end": 128.8,
+      "text": "This time, now you get ES key."
+    },
+    {
+      "id": 33,
+      "start": 128.8,
+      "end": 133.68,
+      "text": "So now you get this suffix ES key."
+    },
+    {
+      "id": 34,
+      "start": 133.68,
+      "end": 136.24,
+      "text": "And that looks pretty reasonable for English, right?"
+    },
+    {
+      "id": 35,
+      "start": 136.24,
+      "end": 138.52,
+      "text": "ES key is a common suffix that we use."
+    },
+    {
+      "id": 36,
+      "start": 138.52,
+      "end": 141.0,
+      "text": "It seems like it should be a single token."
+    },
+    {
+      "id": 37,
+      "start": 141.0,
+      "end": 144.96,
+      "text": "And so you just do this over and over again."
+    },
+    {
+      "id": 38,
+      "start": 144.96,
+      "end": 148.64,
+      "text": "If you want a vocabulary of 60,000, for example,"
+    },
+    {
+      "id": 39,
+      "start": 148.64,
+      "end": 152.48,
+      "text": "you would do 60,000 minus number of characters"
+    },
+    {
+      "id": 40,
+      "start": 152.48,
+      "end": 153.4,
+      "text": "merge operations."
+    },
+    {
+      "id": 41,
+      "start": 153.4,
+      "end": 157.4,
+      "text": "And eventually, you would get a particular 60,000."
+    },
+    {
+      "id": 42,
+      "start": 157.4,
+      "end": 161.28,
+      "text": "And yeah, very, very simple method to do this."
+    },
+    {
+      "id": 43,
+      "start": 161.28,
+      "end": 162.24,
+      "text": "Any questions about that?"
+    },
+    {
+      "id": 44,
+      "start": 162.24,
+      "end": 165.24,
+      "text": "Yeah."
+    },
+    {
+      "id": 45,
+      "start": 165.24,
+      "end": 166.24,
+      "text": "Yeah."
+    },
+    {
+      "id": 46,
+      "start": 166.24,
+      "end": 167.24,
+      "text": "Yeah."
+    },
+    {
+      "id": 47,
+      "start": 167.24,
+      "end": 168.24,
+      "text": "30,000."
+    },
+    {
+      "id": 48,
+      "start": 168.24,
+      "end": 169.24,
+      "text": "30,000."
+    },
+    {
+      "id": 49,
+      "start": 169.24,
+      "end": 170.24,
+      "text": "30,000."
+    },
+    {
+      "id": 50,
+      "start": 170.24,
+      "end": 172.24,
+      "text": "And you do this over and over again."
+    },
+    {
+      "id": 51,
+      "start": 172.24,
+      "end": 173.24,
+      "text": "Yeah."
+    },
+    {
+      "id": 52,
+      "start": 173.24,
+      "end": 174.24,
+      "text": "30,000."
+    },
+    {
+      "id": 53,
+      "start": 174.24,
+      "end": 178.24,
+      "text": "Yeah."
+    },
+    {
+      "id": 54,
+      "start": 178.24,
+      "end": 179.24,
+      "text": "Yeah."
+    },
+    {
+      "id": 55,
+      "start": 179.24,
+      "end": 181.24,
+      "text": "So how do you feel about it?"
+    },
+    {
+      "id": 56,
+      "start": 181.24,
+      "end": 187.24,
+      "text": "I think it's a little bit different than the 30,000."
+    },
+    {
+      "id": 57,
+      "start": 187.24,
+      "end": 191.24,
+      "text": "So I think it's about your own experience."
+    },
+    {
+      "id": 58,
+      "start": 191.24,
+      "end": 197.24,
+      "text": "I think it's about the experience of creative thought of it."
+    },
+    {
+      "id": 59,
+      "start": 197.24,
+      "end": 198.24,
+      "text": "Yeah."
+    },
+    {
+      "id": 60,
+      "start": 198.24,
+      "end": 201.24,
+      "text": "So just to repeat the comment,"
+    },
+    {
+      "id": 61,
+      "start": 201.24,
+      "end": 204.24,
+      "text": "this seems like a greedy version of Huffman encoding,"
+    },
+    {
+      "id": 62,
+      "start": 204.24,
+      "end": 208.24,
+      "text": "which is a, you know, similar to what you're using in your zip file,"
+    },
+    {
+      "id": 63,
+      "start": 208.24,
+      "end": 212.24,
+      "text": "a way to shorten things by getting longer,"
+    },
+    {
+      "id": 64,
+      "start": 212.24,
+      "end": 216.24,
+      "text": "more frequent things being included as a single token."
+    },
+    {
+      "id": 65,
+      "start": 217.24,
+      "end": 219.24,
+      "text": "I think by comparing,"
+    },
+    {
+      "id": 66,
+      "start": 219.24,
+      "end": 221.24,
+      "text": "including did originally start,"
+    },
+    {
+      "id": 67,
+      "start": 221.24,
+      "end": 225.24,
+      "text": "like that, that's part of the reason why the encoding thing is here."
+    },
+    {
+      "id": 68,
+      "start": 225.24,
+      "end": 227.24,
+      "text": "I think it originally started there."
+    },
+    {
+      "id": 69,
+      "start": 227.24,
+      "end": 229.24,
+      "text": "I haven't read really deeply into this,"
+    },
+    {
+      "id": 70,
+      "start": 229.24,
+      "end": 233.24,
+      "text": "but I can talk more about how the next one corresponds to information theory."
+    },
+    {
+      "id": 71,
+      "start": 233.24,
+      "end": 239.24,
+      "text": "And Tuesday, I'm going to talk even more about how language models correspond to information theories."
+    },
+    {
+      "id": 72,
+      "start": 239.24,
+      "end": 243.24,
+      "text": "So we can discuss maybe more detail about it."
+    },
+    {
+      "id": 73,
+      "start": 243.24,
+      "end": 248.24,
+      "text": "So the alternative option is to use unigram models."
+    },
+    {
+      "id": 74,
+      "start": 248.24,
+      "end": 252.24,
+      "text": "And unigram models are the simplest type of language model."
+    },
+    {
+      "id": 75,
+      "start": 252.24,
+      "end": 256.24,
+      "text": "I'm going to talk more in detail about them next time, but basically,"
+    },
+    {
+      "id": 76,
+      "start": 256.24,
+      "end": 264.24,
+      "text": "the way it works is you create a model that generates all words words in the sequence independently."
+    },
+    {
+      "id": 77,
+      "start": 264.24,
+      "end": 269.24,
+      "text": "Sorry, I thought I had a."
+    },
+    {
+      "id": 78,
+      "start": 269.24,
+      "end": 281.24,
+      "text": "I thought I had a equation, but basically the equation looks like."
+    },
+    {
+      "id": 79,
+      "start": 281.24,
+      "end": 290.24,
+      "text": "Yes."
+    },
+    {
+      "id": 80,
+      "start": 290.24,
+      "end": 297.24,
+      "text": "So you say the probability of the sequence is the product of the probability of each of the words in the sequence."
+    },
+    {
+      "id": 81,
+      "start": 297.24,
+      "end": 309.24,
+      "text": "And then you try to pick a vocabulary that maximizes the probability of the corpus given a fixed vocabulary size."
+    },
+    {
+      "id": 82,
+      "start": 309.24,
+      "end": 313.24,
+      "text": "So you try to say, OK, you get a vocabulary size of 60,000."
+    },
+    {
+      "id": 83,
+      "start": 313.24,
+      "end": 315.24,
+      "text": "How do you."
+    },
+    {
+      "id": 84,
+      "start": 315.24,
+      "end": 321.24,
+      "text": "How do you pick the best 60,000 vocabulary to maximize the probability of the corpus?"
+    },
+    {
+      "id": 85,
+      "start": 321.24,
+      "end": 324.24,
+      "text": "And that will result in something very similar."
+    },
+    {
+      "id": 86,
+      "start": 324.24,
+      "end": 329.24,
+      "text": "It will also try to give longer vocabulary."
+    },
+    {
+      "id": 87,
+      "start": 329.24,
+      "end": 336.24,
+      "text": "Sorry, more common vocabulary longer sequences, because that allows you to maximize the subject."
+    },
+    {
+      "id": 88,
+      "start": 336.24,
+      "end": 345.24,
+      "text": "The optimization for this is performed using something called the EML algorithm, where basically predict the."
+    },
+    {
+      "id": 89,
+      "start": 345.24,
+      "end": 360.24,
+      "text": "The probability of each token showing up and then select the most common tokens and then trim off the one center less common and then just do this over and over again until you drop down to the 60,000."
+    },
+    {
+      "id": 90,
+      "start": 360.24,
+      "end": 368.24,
+      "text": "So the details for this are not important for most people in this class, because you're going to just be using a toolkit that implements this for you."
+    },
+    {
+      "id": 91,
+      "start": 368.24,
+      "end": 374.24,
+      "text": "But if you're interested in this, I'm happy to talk to you about it."
+    },
+    {
+      "id": 92,
+      "start": 374.24,
+      "end": 386.24,
+      "text": "If there's a huge problem with assuming independence and language models, because then you can rearrange the order of words and sentences."
+    },
+    {
+      "id": 93,
+      "start": 386.24,
+      "end": 391.24,
+      "text": "That's something we're going to talk about in language."
+    },
+    {
+      "id": 94,
+      "start": 391.24,
+      "end": 401.24,
+      "text": "The good thing about this is the EML algorithm requires dynamic programming in this case, and you can easily do dynamic programming if you don't make sense."
+    },
+    {
+      "id": 95,
+      "start": 401.24,
+      "end": 413.24,
+      "text": "And then finally, after you've picked your vocabulary and you've assigned a probability to each word in the vocabulary, you then find a segmentation of the input that maximizes the U to ground probabilities."
+    },
+    {
+      "id": 96,
+      "start": 413.24,
+      "end": 426.24,
+      "text": "So this is basically the idea of what's going on here. I'm not going to go into a lot of detail about this, because most people are just going to be users of this algorithm. So it's not super, super important."
+    },
+    {
+      "id": 97,
+      "start": 426.24,
+      "end": 440.24,
+      "text": "The one important thing about this is that there's a library called sentence piece that's used very widely in order to build these in order to build these sub word units."
+    },
+    {
+      "id": 98,
+      "start": 440.24,
+      "end": 453.24,
+      "text": "And basically what you do is you run the sentence piece train model or sorry program and that gives you you select your vocab size."
+    },
+    {
+      "id": 99,
+      "start": 453.24,
+      "end": 463.24,
+      "text": "This also this character coverage is basically how well do you need to cover all of the characters in your vocabulary or in your input text, what model type do you use."
+    },
+    {
+      "id": 100,
+      "start": 463.24,
+      "end": 475.24,
+      "text": "And then you run this sentence piece encode file to include the output and split the output. And there's also by time by names available for this."
+    },
+    {
+      "id": 101,
+      "start": 475.24,
+      "end": 485.24,
+      "text": "And by the one thing that you should know is by default it uses a unigram model, but it also supports PPE. In my experience, it doesn't make a huge difference about which one you use."
+    },
+    {
+      "id": 102,
+      "start": 485.24,
+      "end": 503.24,
+      "text": "The thing is how how big is your vocabulary size. And if your vocabulary size is smaller, then things will be more efficient, but less expressive, if your vocabulary size is bigger, things will be, will be more expressive, but less efficient."
+    },
+    {
+      "id": 103,
+      "start": 503.24,
+      "end": 516.24,
+      "text": "And a good rule of thumb is like something like 60,000 to 80,000 is pretty reasonable if you're only doing English. If you're spreading out to things that do other languages, which I'll talk about in a second, then you need a much bigger book."
+    },
+    {
+      "id": 104,
+      "start": 516.24,
+      "end": 519.24,
+      "text": "Maybe that is so."
+    },
+    {
+      "id": 105,
+      "start": 519.24,
+      "end": 524.24,
+      "text": "So there's two considerations here to important considerations when using these models."
+    },
+    {
+      "id": 106,
+      "start": 524.24,
+      "end": 539.24,
+      "text": "The first is multi-linguality, as I said, so when you're using sub word models, they're hard to use multi-lingually because, as I said before, they"
+    },
+    {
+      "id": 107,
+      "start": 539.24,
+      "end": 555.24,
+      "text": "have longer strings to more frequent strings, basically. So then imagine what happens if 50% of your purposes English, another 30% of your purposes, other"
+    },
+    {
+      "id": 108,
+      "start": 555.24,
+      "end": 574.24,
+      "text": "languages written in Latin script, 10% is Chinese, 5% is Cyrillic script languages, 4% to 3% is Japanese, and then you have like 0.01% written in like Burmese or something like that."
+    },
+    {
+      "id": 109,
+      "start": 574.24,
+      "end": 582.24,
+      "text": "So normally Burmese just gets chunked up really, really tiny, really long sequences and it doesn't work as well."
+    },
+    {
+      "id": 110,
+      "start": 582.24,
+      "end": 589.24,
+      "text": "So one way that people fix this."
+    },
+    {
+      "id": 111,
+      "start": 589.24,
+      "end": 598.24,
+      "text": "And actually there's a really nice blog post about this called exploring birds vocabulary, which I referenced here if you're interested in learning more about that."
+    },
+    {
+      "id": 112,
+      "start": 598.24,
+      "end": 602.24,
+      "text": "So one way that people work around this is"
+    }
+  ],
+  "language": "en"
+}

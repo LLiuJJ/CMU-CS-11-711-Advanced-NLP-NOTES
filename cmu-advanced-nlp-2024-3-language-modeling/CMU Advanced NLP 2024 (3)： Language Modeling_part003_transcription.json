@@ -1,0 +1,1037 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 1.8,
+      "text": "rely more on the higher order distribution."
+    },
+    {
+      "id": 1,
+      "start": 1.8,
+      "end": 3.24,
+      "text": "This is some of the counts is,"
+    },
+    {
+      "id": 2,
+      "start": 3.24,
+      "end": 4.52,
+      "text": "if the sum of the counts is smaller,"
+    },
+    {
+      "id": 3,
+      "start": 4.52,
+      "end": 6.28,
+      "text": "you rely more on the lower order distribution."
+    },
+    {
+      "id": 4,
+      "start": 6.28,
+      "end": 8.48,
+      "text": "So the more evidence you have, the more you rely on."
+    },
+    {
+      "id": 5,
+      "start": 8.48,
+      "end": 11.84,
+      "text": "So that's a basic idea behind these smoothing things."
+    },
+    {
+      "id": 6,
+      "start": 15.72,
+      "end": 20.6,
+      "text": "There's also a number of other varieties called discounting."
+    },
+    {
+      "id": 7,
+      "start": 20.6,
+      "end": 22.76,
+      "text": "So the discount hyperparameter,"
+    },
+    {
+      "id": 8,
+      "start": 22.76,
+      "end": 24.52,
+      "text": "basically you subtract this off."
+    },
+    {
+      "id": 9,
+      "start": 25.76,
+      "end": 27.16,
+      "text": "You subtract this from the counts."
+    },
+    {
+      "id": 10,
+      "start": 27.16,
+      "end": 29.12,
+      "text": "So you would subtract like zero point time"
+    },
+    {
+      "id": 11,
+      "start": 29.12,
+      "end": 30.72,
+      "text": "from each of the counts that you observe."
+    },
+    {
+      "id": 12,
+      "start": 30.72,
+      "end": 35.72,
+      "text": "Just empirically this is a better match for the fact that"
+    },
+    {
+      "id": 13,
+      "start": 38.56,
+      "end": 41.64,
+      "text": "natural language has a very long-tailed distribution."
+    },
+    {
+      "id": 14,
+      "start": 41.64,
+      "end": 43.72,
+      "text": "You can kind of do the math and show that that works."
+    },
+    {
+      "id": 15,
+      "start": 43.72,
+      "end": 46.44,
+      "text": "And that's actually in this paper,"
+    },
+    {
+      "id": 16,
+      "start": 46.44,
+      "end": 49.16,
+      "text": "if you're interested in looking at what details it is."
+    },
+    {
+      "id": 17,
+      "start": 51.12,
+      "end": 54.52,
+      "text": "And then kind of the state of the art in language modeling"
+    },
+    {
+      "id": 18,
+      "start": 54.52,
+      "end": 56.44,
+      "text": "before neural language models came out"
+    },
+    {
+      "id": 19,
+      "start": 56.44,
+      "end": 58.92,
+      "text": "was this Kinesu-Nehi smoothing."
+    },
+    {
+      "id": 20,
+      "start": 58.92,
+      "end": 62.32,
+      "text": "And what it does is it discounts,"
+    },
+    {
+      "id": 21,
+      "start": 62.32,
+      "end": 65.0,
+      "text": "but it also modifies the lower order distribution."
+    },
+    {
+      "id": 22,
+      "start": 65.0,
+      "end": 66.96,
+      "text": "So in the lower order distribution,"
+    },
+    {
+      "id": 23,
+      "start": 66.96,
+      "end": 69.88,
+      "text": "you basically modify the counts"
+    },
+    {
+      "id": 24,
+      "start": 69.88,
+      "end": 71.88,
+      "text": "with respect to how many times that word"
+    },
+    {
+      "id": 25,
+      "start": 71.88,
+      "end": 74.16,
+      "text": "has appeared in new context."
+    },
+    {
+      "id": 26,
+      "start": 74.16,
+      "end": 76.84,
+      "text": "With the idea being that you only use the lower order"
+    },
+    {
+      "id": 27,
+      "start": 76.84,
+      "end": 80.96,
+      "text": "distribution when you have new context."
+    },
+    {
+      "id": 28,
+      "start": 80.96,
+      "end": 82.92,
+      "text": "And so you can kind of be clever about,"
+    },
+    {
+      "id": 29,
+      "start": 85.2,
+      "end": 87.84,
+      "text": "you can be clever about how you build this distribution"
+    },
+    {
+      "id": 30,
+      "start": 87.84,
+      "end": 90.2,
+      "text": "based on the fact that you're only using it"
+    },
+    {
+      "id": 31,
+      "start": 90.2,
+      "end": 92.96,
+      "text": "in the case when this distribution is not very light."
+    },
+    {
+      "id": 32,
+      "start": 92.96,
+      "end": 97.6,
+      "text": "So I would spend a lot more time teaching this"
+    },
+    {
+      "id": 33,
+      "start": 97.6,
+      "end": 100.28,
+      "text": "when angry models were kind of the thing"
+    },
+    {
+      "id": 34,
+      "start": 100.28,
+      "end": 101.36,
+      "text": "that people were using,"
+    },
+    {
+      "id": 35,
+      "start": 101.36,
+      "end": 103.4,
+      "text": "but now I'm gonna go over them very quickly."
+    },
+    {
+      "id": 36,
+      "start": 103.4,
+      "end": 106.12,
+      "text": "So don't worry if you weren't able to follow all"
+    },
+    {
+      "id": 37,
+      "start": 106.12,
+      "end": 107.64,
+      "text": "of the details."
+    },
+    {
+      "id": 38,
+      "start": 107.64,
+      "end": 110.84,
+      "text": "But the basic thing, take away from this is number one,"
+    },
+    {
+      "id": 39,
+      "start": 110.84,
+      "end": 112.24,
+      "text": "these are the methods that people use"
+    },
+    {
+      "id": 40,
+      "start": 112.24,
+      "end": 113.92,
+      "text": "for angry language models."
+    },
+    {
+      "id": 41,
+      "start": 113.92,
+      "end": 116.08,
+      "text": "Number two, if you're thinking about combining"
+    },
+    {
+      "id": 42,
+      "start": 116.08,
+      "end": 118.04,
+      "text": "language models together in some way"
+    },
+    {
+      "id": 43,
+      "start": 118.04,
+      "end": 119.0,
+      "text": "through, you know,"
+    },
+    {
+      "id": 44,
+      "start": 119.0,
+      "end": 121.72,
+      "text": "ensembleing their probabilities or something like this,"
+    },
+    {
+      "id": 45,
+      "start": 121.72,
+      "end": 123.12,
+      "text": "this is something that you should think about"
+    },
+    {
+      "id": 46,
+      "start": 123.12,
+      "end": 124.16,
+      "text": "a little bit more carefully,"
+    },
+    {
+      "id": 47,
+      "start": 124.16,
+      "end": 126.36,
+      "text": "because like some language models may be good"
+    },
+    {
+      "id": 48,
+      "start": 126.36,
+      "end": 128.0,
+      "text": "in some context, other language models"
+    },
+    {
+      "id": 49,
+      "start": 128.0,
+      "end": 129.8,
+      "text": "might be good in other contexts."
+    },
+    {
+      "id": 50,
+      "start": 129.8,
+      "end": 131.28,
+      "text": "So you would need to think about that"
+    },
+    {
+      "id": 51,
+      "start": 131.28,
+      "end": 133.56,
+      "text": "when you're doing, when you're combining the models."
+    },
+    {
+      "id": 52,
+      "start": 135.8,
+      "end": 136.64,
+      "text": "Cool."
+    },
+    {
+      "id": 53,
+      "start": 137.56,
+      "end": 139.6,
+      "text": "Any questions about this?"
+    },
+    {
+      "id": 54,
+      "start": 142.96,
+      "end": 143.8,
+      "text": "Okay."
+    },
+    {
+      "id": 55,
+      "start": 144.8,
+      "end": 148.8,
+      "text": "So there's a lot of problems that we have to deal with"
+    },
+    {
+      "id": 56,
+      "start": 148.8,
+      "end": 152.52,
+      "text": "when we're creating angry models."
+    },
+    {
+      "id": 57,
+      "start": 152.52,
+      "end": 155.24,
+      "text": "And then it actually kind of motivated the reason"
+    },
+    {
+      "id": 58,
+      "start": 155.24,
+      "end": 158.12,
+      "text": "why we moved to neural language models."
+    },
+    {
+      "id": 59,
+      "start": 158.12,
+      "end": 160.24,
+      "text": "The first one is similar to what I talked about last time"
+    },
+    {
+      "id": 60,
+      "start": 160.24,
+      "end": 162.0,
+      "text": "with text classification,"
+    },
+    {
+      "id": 61,
+      "start": 162.0,
+      "end": 164.2,
+      "text": "that they can't share a strength among similar words"
+    },
+    {
+      "id": 62,
+      "start": 164.2,
+      "end": 165.52,
+      "text": "like bot and purchase."
+    },
+    {
+      "id": 63,
+      "start": 167.24,
+      "end": 169.16,
+      "text": "Another thing is that they can't easily condition"
+    },
+    {
+      "id": 64,
+      "start": 169.16,
+      "end": 170.84,
+      "text": "on context with intervening words."
+    },
+    {
+      "id": 65,
+      "start": 170.84,
+      "end": 173.44,
+      "text": "So angry models, if you have a rare word"
+    },
+    {
+      "id": 66,
+      "start": 173.44,
+      "end": 175.64,
+      "text": "in your context, immediately start falling back"
+    },
+    {
+      "id": 67,
+      "start": 175.64,
+      "end": 176.88,
+      "text": "to the unigram distribution"
+    },
+    {
+      "id": 68,
+      "start": 176.88,
+      "end": 178.16,
+      "text": "and they end up being very bad."
+    },
+    {
+      "id": 69,
+      "start": 178.16,
+      "end": 180.48,
+      "text": "So that was another issue."
+    },
+    {
+      "id": 70,
+      "start": 181.68,
+      "end": 185.6,
+      "text": "And they couldn't handle long distance dependencies."
+    },
+    {
+      "id": 71,
+      "start": 185.6,
+      "end": 189.84,
+      "text": "So if this was beyond the angram context"
+    },
+    {
+      "id": 72,
+      "start": 189.84,
+      "end": 192.56,
+      "text": "that they would be handling,"
+    },
+    {
+      "id": 73,
+      "start": 192.56,
+      "end": 194.92,
+      "text": "then you wouldn't be able to manage this."
+    },
+    {
+      "id": 74,
+      "start": 194.92,
+      "end": 198.04,
+      "text": "So actually before neural language models"
+    },
+    {
+      "id": 75,
+      "start": 198.04,
+      "end": 199.76,
+      "text": "became a really big thing,"
+    },
+    {
+      "id": 76,
+      "start": 199.76,
+      "end": 202.16,
+      "text": "people came up with a bunch of individual solutions"
+    },
+    {
+      "id": 77,
+      "start": 202.16,
+      "end": 204.52,
+      "text": "for this in order to solve the problems."
+    },
+    {
+      "id": 78,
+      "start": 204.52,
+      "end": 207.96,
+      "text": "But actually it wasn't that these solutions didn't work at all."
+    },
+    {
+      "id": 79,
+      "start": 207.96,
+      "end": 209.6,
+      "text": "It was just that engineering,"
+    },
+    {
+      "id": 80,
+      "start": 209.6,
+      "end": 211.56,
+      "text": "all of them together was so hard"
+    },
+    {
+      "id": 81,
+      "start": 211.56,
+      "end": 213.16,
+      "text": "that nobody actually ever did that."
+    },
+    {
+      "id": 82,
+      "start": 213.16,
+      "end": 214.8,
+      "text": "And so they relied on just end-grand models"
+    },
+    {
+      "id": 83,
+      "start": 214.8,
+      "end": 217.16,
+      "text": "out of the box and that wasn't scalable."
+    },
+    {
+      "id": 84,
+      "start": 217.16,
+      "end": 221.64,
+      "text": "So it's kind of a funny example of how like actually neural networks"
+    },
+    {
+      "id": 85,
+      "start": 221.64,
+      "end": 224.64,
+      "text": "despite all the pain that they cause in some areas"
+    },
+    {
+      "id": 86,
+      "start": 224.64,
+      "end": 226.44,
+      "text": "are a much better engineering solution"
+    },
+    {
+      "id": 87,
+      "start": 226.44,
+      "end": 227.68,
+      "text": "to solve all of these."
+    },
+    {
+      "id": 88,
+      "start": 227.68,
+      "end": 229.28,
+      "text": "So pretty much nothing so."
+    },
+    {
+      "id": 89,
+      "start": 230.28,
+      "end": 231.28,
+      "text": "Cool."
+    },
+    {
+      "id": 90,
+      "start": 231.28,
+      "end": 234.28,
+      "text": "So when to use angram models."
+    },
+    {
+      "id": 91,
+      "start": 234.28,
+      "end": 236.28,
+      "text": "Nour language models achieve better performance."
+    },
+    {
+      "id": 92,
+      "start": 236.28,
+      "end": 239.28,
+      "text": "But angram models are very, very fast to estimate and apply."
+    },
+    {
+      "id": 93,
+      "start": 239.28,
+      "end": 242.28,
+      "text": "You can even estimate them completely in parallel."
+    },
+    {
+      "id": 94,
+      "start": 242.28,
+      "end": 245.28,
+      "text": "Angram models also,"
+    },
+    {
+      "id": 95,
+      "start": 245.28,
+      "end": 252.28,
+      "text": "I don't know if this is necessarily a thing that you"
+    },
+    {
+      "id": 96,
+      "start": 252.28,
+      "end": 255.28,
+      "text": "a reason to use angram language models."
+    },
+    {
+      "id": 97,
+      "start": 255.28,
+      "end": 257.28,
+      "text": "But it is a reason to think a little bit,"
+    },
+    {
+      "id": 98,
+      "start": 258.28,
+      "end": 261.28,
+      "text": "critically about neural language models,"
+    },
+    {
+      "id": 99,
+      "start": 261.28,
+      "end": 266.28,
+      "text": "which is neural language models actually can be worse than angram language models."
+    },
+    {
+      "id": 100,
+      "start": 266.28,
+      "end": 268.28,
+      "text": "It modeling very low frequency phenomena."
+    },
+    {
+      "id": 101,
+      "start": 268.28,
+      "end": 271.28,
+      "text": "So angram language models can learn from a single example."
+    },
+    {
+      "id": 102,
+      "start": 271.28,
+      "end": 274.28,
+      "text": "They only need a single example of anything before the probability"
+    },
+    {
+      "id": 103,
+      "start": 274.28,
+      "end": 277.28,
+      "text": "of that continuation goes out very high."
+    },
+    {
+      "id": 104,
+      "start": 277.28,
+      "end": 284.28,
+      "text": "And but neural language models actually can forget or not memorize appropriately"
+    },
+    {
+      "id": 105,
+      "start": 284.28,
+      "end": 285.28,
+      "text": "from a single example."
+    },
+    {
+      "id": 106,
+      "start": 285.28,
+      "end": 287.28,
+      "text": "So they can be better than that."
+    },
+    {
+      "id": 107,
+      "start": 287.28,
+      "end": 291.28,
+      "text": "There's a toolkit, the standard toolkit for estimating angram language models is"
+    },
+    {
+      "id": 108,
+      "start": 291.28,
+      "end": 295.28,
+      "text": "called kennel and it's kind of frighteningly fast."
+    },
+    {
+      "id": 109,
+      "start": 295.28,
+      "end": 299.28,
+      "text": "And so people have been saying,"
+    },
+    {
+      "id": 110,
+      "start": 299.28,
+      "end": 300.28,
+      "text": "like I've seen some jokes,"
+    },
+    {
+      "id": 111,
+      "start": 300.28,
+      "end": 305.28,
+      "text": "which are like job posting sets say people who have been working on large language"
+    },
+    {
+      "id": 112,
+      "start": 305.28,
+      "end": 310.28,
+      "text": "models for we want people who have been 10 years of experience working on large language"
+    },
+    {
+      "id": 113,
+      "start": 310.28,
+      "end": 311.28,
+      "text": "models or something like that."
+    },
+    {
+      "id": 114,
+      "start": 311.28,
+      "end": 313.28,
+      "text": "And a lot of people are saying,"
+    },
+    {
+      "id": 115,
+      "start": 313.28,
+      "end": 317.28,
+      "text": "wait, nobody has 10 years of experience working on large language models."
+    },
+    {
+      "id": 116,
+      "start": 317.28,
+      "end": 323.28,
+      "text": "Well, I kind of feel to create a kennel and does have 10 years of experience working on large language models."
+    },
+    {
+      "id": 117,
+      "start": 323.28,
+      "end": 328.28,
+      "text": "He was estimating seven grand models."
+    },
+    {
+      "id": 118,
+      "start": 328.28,
+      "end": 335.28,
+      "text": "Seven grand models with a vocabulary of let's say 100,000 on, you know,"
+    },
+    {
+      "id": 119,
+      "start": 335.28,
+      "end": 336.28,
+      "text": "web text."
+    },
+    {
+      "id": 120,
+      "start": 336.28,
+      "end": 341.28,
+      "text": "So how many parameters is that that's more than any,"
+    },
+    {
+      "id": 121,
+      "start": 341.28,
+      "end": 345.28,
+      "text": "you know, large neural language model that we have nowadays."
+    },
+    {
+      "id": 122,
+      "start": 345.28,
+      "end": 349.28,
+      "text": "So they have a lot of these parameters are sparse."
+    },
+    {
+      "id": 123,
+      "start": 349.28,
+      "end": 350.28,
+      "text": "There's zero accounts."
+    },
+    {
+      "id": 124,
+      "start": 350.28,
+      "end": 354.28,
+      "text": "So obviously you don't, you don't memorize all of them."
+    },
+    {
+      "id": 125,
+      "start": 354.28,
+      "end": 356.28,
+      "text": "Cool."
+    },
+    {
+      "id": 126,
+      "start": 356.28,
+      "end": 359.28,
+      "text": "Another thing that maybe I should mention, like,"
+    },
+    {
+      "id": 127,
+      "start": 359.28,
+      "end": 362.28,
+      "text": "so this doesn't sound completely outdated."
+    },
+    {
+      "id": 128,
+      "start": 362.28,
+      "end": 370.28,
+      "text": "There was a really good paper recently that use the fact that angrams are so,"
+    },
+    {
+      "id": 129,
+      "start": 370.28,
+      "end": 375.28,
+      "text": "that's why I think it's not a good idea."
+    },
+    {
+      "id": 130,
+      "start": 375.28,
+      "end": 378.28,
+      "text": "Use this effect that angram models are so scalable."
+    },
+    {
+      "id": 131,
+      "start": 378.28,
+      "end": 380.28,
+      "text": "It's this paper."
+    },
+    {
+      "id": 132,
+      "start": 380.28,
+      "end": 383.28,
+      "text": "It's called data selection for language models via importance re sampling."
+    },
+    {
+      "id": 133,
+      "start": 383.28,
+      "end": 389.28,
+      "text": "And one interesting thing that they do in this paper is that they don't actually."
+    },
+    {
+      "id": 134,
+      "start": 389.28,
+      "end": 399.28,
+      "text": "They don't actually use neural models in any way, despite the fact that they use the downstream data that they sample in order to calculate neural models."
+    },
+    {
+      "id": 135,
+      "start": 399.28,
+      "end": 403.28,
+      "text": "But they run any grand models over,"
+    },
+    {
+      "id": 136,
+      "start": 403.28,
+      "end": 405.28,
+      "text": "over lots and lots of data."
+    },
+    {
+      "id": 137,
+      "start": 405.28,
+      "end": 413.28,
+      "text": "And then they fit a Gaussian distribution to the end gram model counts basically in order to select the data."
+    },
+    {
+      "id": 138,
+      "start": 413.28,
+      "end": 419.28,
+      "text": "And the reason why they do this is they want to do this over the entire web and running a neural model over the entire web would be too expensive."
+    },
+    {
+      "id": 139,
+      "start": 419.28,
+      "end": 421.28,
+      "text": "So they use angram models instead."
+    },
+    {
+      "id": 140,
+      "start": 421.28,
+      "end": 428.28,
+      "text": "So that's just an example of something in the modern context where keeping this in mind is."
+    },
+    {
+      "id": 141,
+      "start": 428.28,
+      "end": 434.28,
+      "text": "Okay, I'd like to move to the next part."
+    },
+    {
+      "id": 142,
+      "start": 434.28,
+      "end": 436.28,
+      "text": "So language model evaluation."
+    },
+    {
+      "id": 143,
+      "start": 436.28,
+      "end": 438.28,
+      "text": "This is important to know."
+    },
+    {
+      "id": 144,
+      "start": 438.28,
+      "end": 441.28,
+      "text": "I'm not going to talk about language model evaluation on other tasks."
+    },
+    {
+      "id": 145,
+      "start": 441.28,
+      "end": 447.28,
+      "text": "I'm only going to talk right now about language model evaluation on the task of language modeling."
+    },
+    {
+      "id": 146,
+      "start": 447.28,
+      "end": 455.28,
+      "text": "And there's a number of metrics that we use for the task of language modeling evaluating language models on the task of language modeling."
+    },
+    {
+      "id": 147,
+      "start": 455.28,
+      "end": 457.28,
+      "text": "The first one is log likelihood."
+    },
+    {
+      "id": 148,
+      "start": 457.28,
+      "end": 463.28,
+      "text": "And basically the way we calculate log likelihood is sorry, there's an extra parentheses there."
+    },
+    {
+      "id": 149,
+      "start": 463.28,
+      "end": 471.28,
+      "text": "But the way we calculate log likelihood is we get a test set that ideally has not been included in our training data."
+    },
+    {
+      "id": 150,
+      "start": 471.28,
+      "end": 478.28,
+      "text": "And we take all of the documents or sentences in the test set, we calculate the log probability of all of them."
+    },
+    {
+      "id": 151,
+      "start": 478.28,
+      "end": 482.28,
+      "text": "We don't actually use this super broadly to evaluate models."
+    },
+    {
+      "id": 152,
+      "start": 482.28,
+      "end": 487.28,
+      "text": "And the reason why is because this number is very dependent on the size of the data set."
+    },
+    {
+      "id": 153,
+      "start": 487.28,
+      "end": 489.28,
+      "text": "So if you have a larger data set, this number will be larger."
+    },
+    {
+      "id": 154,
+      "start": 489.28,
+      "end": 492.28,
+      "text": "If you have a smaller data set, this number will be smaller."
+    },
+    {
+      "id": 155,
+      "start": 492.28,
+      "end": 496.28,
+      "text": "So the more common thing to do is per word log likelihood."
+    },
+    {
+      "id": 156,
+      "start": 496.28,
+      "end": 507.28,
+      "text": "And per word, log likelihood is basically dividing the dividing the log probability of the entire corpus with the number of words that you have in the purpose."
+    },
+    {
+      "id": 157,
+      "start": 507.28,
+      "end": 519.28,
+      "text": "It's also coming for papers to report negative log likelihood where because that's used as a loss in their lower is better."
+    },
+    {
+      "id": 158,
+      "start": 519.28,
+      "end": 524.28,
+      "text": "So you just need to be careful about which one is being reported."
+    },
+    {
+      "id": 159,
+      "start": 524.28,
+      "end": 529.28,
+      "text": "So this is pretty common. I think most people are somewhat familiar with us."
+    },
+    {
+      "id": 160,
+      "start": 529.28,
+      "end": 533.28,
+      "text": "Another thing that you might see is entropy."
+    },
+    {
+      "id": 161,
+      "start": 533.28,
+      "end": 541.28,
+      "text": "And specifically, this is often called cross entropy because you're calculating the."
+    },
+    {
+      "id": 162,
+      "start": 541.28,
+      "end": 546.28,
+      "text": "You're estimating the model on a training data set and then evaluating it on a separate data set."
+    },
+    {
+      "id": 163,
+      "start": 546.28,
+      "end": 549.28,
+      "text": "So on the test data set."
+    },
+    {
+      "id": 164,
+      "start": 549.28,
+      "end": 559.28,
+      "text": "And this is how you often are usually calculated as log to of the probability divided by the number of words or units in the corpus."
+    },
+    {
+      "id": 165,
+      "start": 559.28,
+      "end": 562.28,
+      "text": "Does anyone know why this is log to."
+    },
+    {
+      "id": 166,
+      "start": 562.28,
+      "end": 571.28,
+      "text": "He's opposed to a normal."
+    },
+    {
+      "id": 167,
+      "start": 571.28,
+      "end": 577.28,
+      "text": "Anyone. Yeah, sure."
+    },
+    {
+      "id": 168,
+      "start": 577.28,
+      "end": 583.28,
+      "text": "So it's calculating his best. And this is kind of a."
+    },
+    {
+      "id": 169,
+      "start": 583.28,
+      "end": 593.28,
+      "text": "This is kind of a historical thing. And it's not super, super important for language models, but it's actually pretty interesting to think about."
+    },
+    {
+      "id": 170,
+      "start": 593.28,
+      "end": 600.28,
+      "text": "And so actually any probabilistic distribution can also be used for data compression."
+    },
+    {
+      "id": 171,
+      "start": 600.28,
+      "end": 607.28,
+      "text": "And so, you know, when you're running."
+    }
+  ],
+  "language": "en"
+}

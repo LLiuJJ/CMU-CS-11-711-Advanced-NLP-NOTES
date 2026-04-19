@@ -1,0 +1,1361 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 2.6,
+      "text": "is about climbing, for instance."
+    },
+    {
+      "id": 1,
+      "start": 2.6,
+      "end": 4.92,
+      "text": "And then try to recover what the knowing example data"
+    },
+    {
+      "id": 2,
+      "start": 4.92,
+      "end": 7.48,
+      "text": "that is or is not about climbing."
+    },
+    {
+      "id": 3,
+      "start": 7.48,
+      "end": 9.16,
+      "text": "If you could scrape a climbing forum and then"
+    },
+    {
+      "id": 4,
+      "start": 9.16,
+      "end": 12.16,
+      "text": "scrape a hiking forum and use the difference between them."
+    },
+    {
+      "id": 5,
+      "start": 12.16,
+      "end": 14.24,
+      "text": "But for a lot of tests, there's actually pretty good data"
+    },
+    {
+      "id": 6,
+      "start": 14.24,
+      "end": 15.44,
+      "text": "that's already out there for this."
+    },
+    {
+      "id": 7,
+      "start": 15.44,
+      "end": 18.96,
+      "text": "So there's a lot of style transfer tasks"
+    },
+    {
+      "id": 8,
+      "start": 18.96,
+      "end": 23.88,
+      "text": "that go from informal to formal or go from this to that"
+    },
+    {
+      "id": 9,
+      "start": 23.88,
+      "end": 26.24,
+      "text": "or make this text in an AMIC parameter."
+    },
+    {
+      "id": 10,
+      "start": 26.24,
+      "end": 28.64,
+      "text": "And you can find data from those sources."
+    },
+    {
+      "id": 11,
+      "start": 30.96,
+      "end": 33.24,
+      "text": "You never thought about finding data,"
+    },
+    {
+      "id": 12,
+      "start": 33.24,
+      "end": 36.64,
+      "text": "but I'm really curious what the word audience is doing."
+    },
+    {
+      "id": 13,
+      "start": 36.64,
+      "end": 38.56,
+      "text": "Whether it's with the forum better"
+    },
+    {
+      "id": 14,
+      "start": 38.56,
+      "end": 41.32,
+      "text": "than find data in the non-allowing chat."
+    },
+    {
+      "id": 15,
+      "start": 41.32,
+      "end": 44.16,
+      "text": "Like, so it will be more efficient."
+    },
+    {
+      "id": 16,
+      "start": 44.16,
+      "end": 45.64,
+      "text": "But I was scared."
+    },
+    {
+      "id": 17,
+      "start": 45.64,
+      "end": 49.0,
+      "text": "I think this is a comparison they make in their paper,"
+    },
+    {
+      "id": 18,
+      "start": 49.0,
+      "end": 51.36,
+      "text": "but I don't remember what they're coming from."
+    },
+    {
+      "id": 19,
+      "start": 51.36,
+      "end": 52.2,
+      "text": "I'm not sure."
+    },
+    {
+      "id": 20,
+      "start": 52.2,
+      "end": 53.52,
+      "text": "Yeah."
+    },
+    {
+      "id": 21,
+      "start": 53.52,
+      "end": 56.12,
+      "text": "In general, there's this sort of a, like,"
+    },
+    {
+      "id": 22,
+      "start": 56.2,
+      "end": 60.0,
+      "text": "you can pay a one-time kind of heavy cost to fine tune"
+    },
+    {
+      "id": 23,
+      "start": 60.0,
+      "end": 61.96,
+      "text": "or you can pay cost at inference time"
+    },
+    {
+      "id": 24,
+      "start": 61.96,
+      "end": 65.76,
+      "text": "every time to make your model better in the media these ways."
+    },
+    {
+      "id": 25,
+      "start": 65.76,
+      "end": 69.28,
+      "text": "And depending on how much inference you're playing during,"
+    },
+    {
+      "id": 26,
+      "start": 69.28,
+      "end": 71.72,
+      "text": "like, one or the other of these can be better."
+    },
+    {
+      "id": 27,
+      "start": 76.32,
+      "end": 77.84,
+      "text": "Great."
+    },
+    {
+      "id": 28,
+      "start": 77.84,
+      "end": 81.52,
+      "text": "So now we're going to talk about sort of methods"
+    },
+    {
+      "id": 29,
+      "start": 81.52,
+      "end": 85.28,
+      "text": "for introducing human interaction to the depotting process."
+    },
+    {
+      "id": 30,
+      "start": 85.28,
+      "end": 86.76,
+      "text": "And everything we've looked at so far"
+    },
+    {
+      "id": 31,
+      "start": 86.76,
+      "end": 90.28,
+      "text": "has been very sort of black box and a can top, right?"
+    },
+    {
+      "id": 32,
+      "start": 90.28,
+      "end": 92.36,
+      "text": "If you give the model and some input,"
+    },
+    {
+      "id": 33,
+      "start": 92.36,
+      "end": 93.76,
+      "text": "maybe we do some kind of manipulation"
+    },
+    {
+      "id": 34,
+      "start": 93.76,
+      "end": 97.2,
+      "text": "on the depotting side, you get one output back, right?"
+    },
+    {
+      "id": 35,
+      "start": 97.2,
+      "end": 101.28,
+      "text": "But in a lot of situations where maybe you have"
+    },
+    {
+      "id": 36,
+      "start": 101.28,
+      "end": 103.64,
+      "text": "some high risk application and you need somebody"
+    },
+    {
+      "id": 37,
+      "start": 103.64,
+      "end": 106.12,
+      "text": "to be consistently monitoring and maybe intervening"
+    },
+    {
+      "id": 38,
+      "start": 106.12,
+      "end": 107.64,
+      "text": "or you're doing something where you want to do"
+    },
+    {
+      "id": 39,
+      "start": 107.64,
+      "end": 110.16,
+      "text": "some kind of human AI collaboration"
+    },
+    {
+      "id": 40,
+      "start": 110.16,
+      "end": 112.04,
+      "text": "and you want to be able to go back and forth."
+    },
+    {
+      "id": 41,
+      "start": 112.04,
+      "end": 113.88,
+      "text": "Or you're going to have a conversation with the model."
+    },
+    {
+      "id": 42,
+      "start": 113.88,
+      "end": 117.04,
+      "text": "What you're actually doing is sort of a series of decodings"
+    },
+    {
+      "id": 43,
+      "start": 117.04,
+      "end": 119.16,
+      "text": "with human intervention in between."
+    },
+    {
+      "id": 44,
+      "start": 119.16,
+      "end": 121.32,
+      "text": "And I'm going to talk about a couple of these strategies"
+    },
+    {
+      "id": 45,
+      "start": 121.32,
+      "end": 121.84,
+      "text": "briefly."
+    },
+    {
+      "id": 46,
+      "start": 121.84,
+      "end": 124.56,
+      "text": "I think if you use sort of a modern LLL,"
+    },
+    {
+      "id": 47,
+      "start": 124.56,
+      "end": 126.52,
+      "text": "I'm your probably familiar with at least a few of them"
+    },
+    {
+      "id": 48,
+      "start": 126.52,
+      "end": 129.48,
+      "text": "already, but we'll sort of put names to each of them."
+    },
+    {
+      "id": 49,
+      "start": 129.48,
+      "end": 132.04,
+      "text": "And the set of examples that we're running with here"
+    },
+    {
+      "id": 50,
+      "start": 132.04,
+      "end": 134.0,
+      "text": "are from a paper called Wordcraft, which"
+    },
+    {
+      "id": 51,
+      "start": 134.0,
+      "end": 137.76,
+      "text": "is about story generation with LLL systems."
+    },
+    {
+      "id": 52,
+      "start": 137.76,
+      "end": 140.12,
+      "text": "But these can also be applied sort of more generally"
+    },
+    {
+      "id": 53,
+      "start": 140.12,
+      "end": 143.04,
+      "text": "to any kind of task that you'd want to go back and forth"
+    },
+    {
+      "id": 54,
+      "start": 143.04,
+      "end": 145.64,
+      "text": "with a recall."
+    },
+    {
+      "id": 55,
+      "start": 145.64,
+      "end": 149.2,
+      "text": "The sort of easiest or if a simplest place to start here"
+    },
+    {
+      "id": 56,
+      "start": 149.2,
+      "end": 151.2,
+      "text": "is just an interleaving text, right?"
+    },
+    {
+      "id": 57,
+      "start": 151.2,
+      "end": 154.4,
+      "text": "You can choose when the model starts and stops decoded,"
+    },
+    {
+      "id": 58,
+      "start": 154.4,
+      "end": 155.96,
+      "text": "and you can choose when a human writing"
+    },
+    {
+      "id": 59,
+      "start": 155.96,
+      "end": 157.24,
+      "text": "test in between."
+    },
+    {
+      "id": 60,
+      "start": 157.24,
+      "end": 159.52,
+      "text": "And you can condition your model and sort of a mixture"
+    },
+    {
+      "id": 61,
+      "start": 159.52,
+      "end": 161.12,
+      "text": "of human and model generated text"
+    },
+    {
+      "id": 62,
+      "start": 161.12,
+      "end": 163.36,
+      "text": "to choose what to continue next."
+    },
+    {
+      "id": 63,
+      "start": 163.36,
+      "end": 166.12,
+      "text": "You can also do something like have the model generate"
+    },
+    {
+      "id": 64,
+      "start": 166.12,
+      "end": 168.72,
+      "text": "a set of text edit that text in some way."
+    },
+    {
+      "id": 65,
+      "start": 168.72,
+      "end": 171.36,
+      "text": "Maybe the human is imposing some really subtle constraint."
+    },
+    {
+      "id": 66,
+      "start": 171.36,
+      "end": 173.48,
+      "text": "I want it to sound like my writing style."
+    },
+    {
+      "id": 67,
+      "start": 173.48,
+      "end": 174.88,
+      "text": "We don't have a discriminator for this,"
+    },
+    {
+      "id": 68,
+      "start": 174.88,
+      "end": 177.24,
+      "text": "but the human could sort of modify the text"
+    },
+    {
+      "id": 69,
+      "start": 177.24,
+      "end": 179.04,
+      "text": "and then continue generating from that point."
+    },
+    {
+      "id": 70,
+      "start": 179.04,
+      "end": 180.88,
+      "text": "And that will influence the style of the text that"
+    },
+    {
+      "id": 71,
+      "start": 180.88,
+      "end": 183.6,
+      "text": "continues to be in general."
+    },
+    {
+      "id": 72,
+      "start": 183.6,
+      "end": 187.68,
+      "text": "This case here is sort of a, you're writing a story together,"
+    },
+    {
+      "id": 73,
+      "start": 187.68,
+      "end": 190.0,
+      "text": "and so you're going back and forth and editing the text"
+    },
+    {
+      "id": 74,
+      "start": 190.0,
+      "end": 190.52,
+      "text": "like that."
+    },
+    {
+      "id": 75,
+      "start": 190.52,
+      "end": 192.64,
+      "text": "But you can also think of any kind of conversation"
+    },
+    {
+      "id": 76,
+      "start": 192.72,
+      "end": 196.0,
+      "text": "in the model as the same kind of interleaving of text, right?"
+    },
+    {
+      "id": 77,
+      "start": 196.0,
+      "end": 198.36,
+      "text": "Model gives some text."
+    },
+    {
+      "id": 78,
+      "start": 198.36,
+      "end": 200.84,
+      "text": "You provide some text, you go back and forth"
+    },
+    {
+      "id": 79,
+      "start": 200.84,
+      "end": 205.36,
+      "text": "and like these providing the text that conditions the model."
+    },
+    {
+      "id": 80,
+      "start": 205.36,
+      "end": 208.08,
+      "text": "Do you also want to do things like more fine-growing"
+    },
+    {
+      "id": 81,
+      "start": 208.08,
+      "end": 208.84,
+      "text": "replacement?"
+    },
+    {
+      "id": 82,
+      "start": 208.84,
+      "end": 211.16,
+      "text": "So here the person has highlighted some text"
+    },
+    {
+      "id": 83,
+      "start": 211.16,
+      "end": 213.4,
+      "text": "and said like, big, this more descriptive,"
+    },
+    {
+      "id": 84,
+      "start": 213.4,
+      "end": 218.04,
+      "text": "or shortness to two words, or maybe you want some additional"
+    },
+    {
+      "id": 85,
+      "start": 218.04,
+      "end": 220.04,
+      "text": "constraint like, can this be happier?"
+    },
+    {
+      "id": 86,
+      "start": 220.04,
+      "end": 224.12,
+      "text": "It can be sad, change the end date or something."
+    },
+    {
+      "id": 87,
+      "start": 224.12,
+      "end": 226.8,
+      "text": "You can accomplish this in a variety of ways."
+    },
+    {
+      "id": 88,
+      "start": 226.8,
+      "end": 229.24,
+      "text": "Here, this is done through input manipulation."
+    },
+    {
+      "id": 89,
+      "start": 229.24,
+      "end": 231.0,
+      "text": "So you prompt your model differently"
+    },
+    {
+      "id": 90,
+      "start": 231.0,
+      "end": 232.8,
+      "text": "with different constraints."
+    },
+    {
+      "id": 91,
+      "start": 232.8,
+      "end": 235.72,
+      "text": "You can also do this with an actual modeling change."
+    },
+    {
+      "id": 92,
+      "start": 235.72,
+      "end": 238.52,
+      "text": "Like if you want some kind of infilling model,"
+    },
+    {
+      "id": 93,
+      "start": 238.52,
+      "end": 240.84,
+      "text": "particularly for things like code, this can be helpful."
+    },
+    {
+      "id": 94,
+      "start": 240.84,
+      "end": 244.4,
+      "text": "So you have context from left and right sides."
+    },
+    {
+      "id": 95,
+      "start": 244.4,
+      "end": 246.36,
+      "text": "Or you can do this with the decoding changes"
+    },
+    {
+      "id": 96,
+      "start": 246.36,
+      "end": 248.08,
+      "text": "that we talked about in the previous section, right?"
+    },
+    {
+      "id": 97,
+      "start": 248.08,
+      "end": 251.36,
+      "text": "You could add a discriminator for descriptiveness of text,"
+    },
+    {
+      "id": 98,
+      "start": 251.36,
+      "end": 253.32,
+      "text": "or you could do some kind of sampling and ranking"
+    },
+    {
+      "id": 99,
+      "start": 253.32,
+      "end": 256.76,
+      "text": "method to recover a more descriptive output."
+    },
+    {
+      "id": 100,
+      "start": 256.76,
+      "end": 258.8,
+      "text": "Another thing that's very common in this space"
+    },
+    {
+      "id": 101,
+      "start": 258.8,
+      "end": 261.08,
+      "text": "is sampling and re-ranking methods"
+    },
+    {
+      "id": 102,
+      "start": 261.08,
+      "end": 264.48,
+      "text": "where the human is the one choosing what to return, right?"
+    },
+    {
+      "id": 103,
+      "start": 264.48,
+      "end": 267.68,
+      "text": "So in word craft, you see a set of choices"
+    },
+    {
+      "id": 104,
+      "start": 267.68,
+      "end": 269.68,
+      "text": "and you can choose which text to insert."
+    },
+    {
+      "id": 105,
+      "start": 269.68,
+      "end": 273.32,
+      "text": "But more commonly in something like ChatGbT or Bard,"
+    },
+    {
+      "id": 106,
+      "start": 273.32,
+      "end": 276.52,
+      "text": "you see this little action to regenerate text, right?"
+    },
+    {
+      "id": 107,
+      "start": 276.52,
+      "end": 278.56,
+      "text": "You as the human can reject this text and say,"
+    },
+    {
+      "id": 108,
+      "start": 278.56,
+      "end": 279.64,
+      "text": "like, no, I don't like this."
+    },
+    {
+      "id": 109,
+      "start": 279.64,
+      "end": 281.2,
+      "text": "Give me a different output."
+    },
+    {
+      "id": 110,
+      "start": 281.2,
+      "end": 284.68,
+      "text": "And this is also sort of a way of controlling decoding"
+    },
+    {
+      "id": 111,
+      "start": 284.68,
+      "end": 289.16,
+      "text": "just by doing it on a human-raving and algorithmic level."
+    },
+    {
+      "id": 112,
+      "start": 289.16,
+      "end": 291.68,
+      "text": "Of course, you don't necessarily need a human in here."
+    },
+    {
+      "id": 113,
+      "start": 291.68,
+      "end": 295.32,
+      "text": "And so some recent work has looked at functionally"
+    },
+    {
+      "id": 114,
+      "start": 295.32,
+      "end": 297.88,
+      "text": "using models to make these decisions instead."
+    },
+    {
+      "id": 115,
+      "start": 297.88,
+      "end": 301.08,
+      "text": "This is a prompting paper of poetry of thought, which"
+    },
+    {
+      "id": 116,
+      "start": 301.08,
+      "end": 304.4,
+      "text": "was sort of very popular on Twitter last summer."
+    },
+    {
+      "id": 117,
+      "start": 304.4,
+      "end": 308.24,
+      "text": "And the idea here is that you're going to generate"
+    },
+    {
+      "id": 118,
+      "start": 308.24,
+      "end": 312.28,
+      "text": "several smaller sequences, like a couple of sentences,"
+    },
+    {
+      "id": 119,
+      "start": 312.28,
+      "end": 315.24,
+      "text": "a reasoning step or a thought in the paper."
+    },
+    {
+      "id": 120,
+      "start": 315.24,
+      "end": 318.2,
+      "text": "And you're going to use a model to choose which ones"
+    },
+    {
+      "id": 121,
+      "start": 318.2,
+      "end": 318.88,
+      "text": "to continue."
+    },
+    {
+      "id": 122,
+      "start": 318.88,
+      "end": 321.24,
+      "text": "And you can do different constraints here."
+    },
+    {
+      "id": 123,
+      "start": 321.24,
+      "end": 324.08,
+      "text": "Like, I want to sort of rank this set of free,"
+    },
+    {
+      "id": 124,
+      "start": 324.08,
+      "end": 328.72,
+      "text": "or maybe I want to predict if anything in this set is wrong."
+    },
+    {
+      "id": 125,
+      "start": 328.72,
+      "end": 330.4,
+      "text": "Is this a good reasoning step?"
+    },
+    {
+      "id": 126,
+      "start": 330.4,
+      "end": 333.32,
+      "text": "And if the model says no, you no longer continue that."
+    },
+    {
+      "id": 127,
+      "start": 333.32,
+      "end": 337.0,
+      "text": "But the idea here is for real prompting, really achieving"
+    },
+    {
+      "id": 128,
+      "start": 337.0,
+      "end": 339.2,
+      "text": "something that sort of, if you've squinted it,"
+    },
+    {
+      "id": 129,
+      "start": 339.2,
+      "end": 340.64,
+      "text": "looks a lot like beam search."
+    },
+    {
+      "id": 130,
+      "start": 340.64,
+      "end": 344.92,
+      "text": "Instead of doing a token level thing"
+    },
+    {
+      "id": 131,
+      "start": 344.92,
+      "end": 347.16,
+      "text": "and making a decision based on likelihood,"
+    },
+    {
+      "id": 132,
+      "start": 347.16,
+      "end": 349.08,
+      "text": "you're generating sort of several sentences"
+    },
+    {
+      "id": 133,
+      "start": 349.08,
+      "end": 351.6,
+      "text": "at a time and making a decision based"
+    },
+    {
+      "id": 134,
+      "start": 351.6,
+      "end": 355.88,
+      "text": "on this model's feedback, the signal from an external source,"
+    },
+    {
+      "id": 135,
+      "start": 355.88,
+      "end": 357.92,
+      "text": "which here is a model could also be a human,"
+    },
+    {
+      "id": 136,
+      "start": 357.92,
+      "end": 360.0,
+      "text": "if you're willing to sort of wait around for them"
+    },
+    {
+      "id": 137,
+      "start": 360.0,
+      "end": 361.88,
+      "text": "to make the decision."
+    },
+    {
+      "id": 138,
+      "start": 361.88,
+      "end": 366.2,
+      "text": "And so this is a way of sort of giving feedback"
+    },
+    {
+      "id": 139,
+      "start": 366.2,
+      "end": 369.2,
+      "text": "on a water level than single tokens"
+    },
+    {
+      "id": 140,
+      "start": 369.2,
+      "end": 371.52,
+      "text": "to guide a decoding process to a final step."
+    },
+    {
+      "id": 141,
+      "start": 374.88,
+      "end": 377.84,
+      "text": "So the last couple of things we'll talk about here"
+    },
+    {
+      "id": 142,
+      "start": 377.84,
+      "end": 381.24,
+      "text": "are sort of practical considerations, speed, choosing"
+    },
+    {
+      "id": 143,
+      "start": 381.24,
+      "end": 382.76,
+      "text": "decoding methods."
+    },
+    {
+      "id": 144,
+      "start": 382.76,
+      "end": 384.72,
+      "text": "But I can take any questions before that."
+    },
+    {
+      "id": 145,
+      "start": 389.76,
+      "end": 391.8,
+      "text": "Great."
+    },
+    {
+      "id": 146,
+      "start": 391.8,
+      "end": 394.0,
+      "text": "So how do you make this fast?"
+    },
+    {
+      "id": 147,
+      "start": 394.0,
+      "end": 397.0,
+      "text": "And in particular, if you've ever tried"
+    },
+    {
+      "id": 148,
+      "start": 397.0,
+      "end": 399.0,
+      "text": "to sort of venture our performance of a model,"
+    },
+    {
+      "id": 149,
+      "start": 399.0,
+      "end": 400.56,
+      "text": "what you realized pretty quickly"
+    },
+    {
+      "id": 150,
+      "start": 400.56,
+      "end": 402.52,
+      "text": "was that the vast majority of times"
+    },
+    {
+      "id": 151,
+      "start": 402.52,
+      "end": 404.24,
+      "text": "actually spend in decoding."
+    },
+    {
+      "id": 152,
+      "start": 404.24,
+      "end": 406.48,
+      "text": "You have to generate one token at a time."
+    },
+    {
+      "id": 153,
+      "start": 406.48,
+      "end": 409.08,
+      "text": "You have to sort of pass that back to the model"
+    },
+    {
+      "id": 154,
+      "start": 409.08,
+      "end": 411.04,
+      "text": "to get conditioning to generate the next token."
+    },
+    {
+      "id": 155,
+      "start": 411.04,
+      "end": 415.56,
+      "text": "And so this is generally fairly slow."
+    },
+    {
+      "id": 156,
+      "start": 415.56,
+      "end": 417.8,
+      "text": "This is sort of a major impediment"
+    },
+    {
+      "id": 157,
+      "start": 417.8,
+      "end": 419.96,
+      "text": "if you're trying to do something like a streaming application"
+    },
+    {
+      "id": 158,
+      "start": 419.96,
+      "end": 421.56,
+      "text": "or a chat application."
+    },
+    {
+      "id": 159,
+      "start": 421.56,
+      "end": 425.12,
+      "text": "You don't want the person to be weighing around for an answer."
+    },
+    {
+      "id": 160,
+      "start": 425.12,
+      "end": 427.92,
+      "text": "One way to do this is a method called"
+    },
+    {
+      "id": 161,
+      "start": 427.92,
+      "end": 429.24,
+      "text": "speculative decoding."
+    },
+    {
+      "id": 162,
+      "start": 429.24,
+      "end": 434.72,
+      "text": "And this is a method where you're using a smaller model,"
+    },
+    {
+      "id": 163,
+      "start": 434.72,
+      "end": 437.44,
+      "text": "not like when contrastive decoding, right?"
+    },
+    {
+      "id": 164,
+      "start": 437.44,
+      "end": 440.2,
+      "text": "We're using a smaller model to decide what not to generate."
+    },
+    {
+      "id": 165,
+      "start": 440.2,
+      "end": 441.52,
+      "text": "But here we're using a smaller model"
+    },
+    {
+      "id": 166,
+      "start": 441.52,
+      "end": 444.04,
+      "text": "to decide what to generate."
+    },
+    {
+      "id": 167,
+      "start": 444.04,
+      "end": 446.4,
+      "text": "And the idea here is that most of these tokens are maybe"
+    },
+    {
+      "id": 168,
+      "start": 446.4,
+      "end": 448.88,
+      "text": "not super hard to decide."
+    },
+    {
+      "id": 169,
+      "start": 448.88,
+      "end": 450.72,
+      "text": "It's just that occasionally the bigger model might"
+    },
+    {
+      "id": 170,
+      "start": 450.72,
+      "end": 452.4,
+      "text": "want to go in a different direction."
+    },
+    {
+      "id": 171,
+      "start": 452.4,
+      "end": 454.88,
+      "text": "So these read tokens here are generated"
+    },
+    {
+      "id": 172,
+      "start": 454.88,
+      "end": 458.04,
+      "text": "by a smaller model or amateur model here."
+    },
+    {
+      "id": 173,
+      "start": 458.04,
+      "end": 460.64,
+      "text": "And the larger model asks largely as a verifier."
+    },
+    {
+      "id": 174,
+      "start": 460.64,
+      "end": 463.88,
+      "text": "And what it does is it checks if the output so far"
+    },
+    {
+      "id": 175,
+      "start": 463.88,
+      "end": 468.2,
+      "text": "is going in a direction that's in distribution"
+    },
+    {
+      "id": 176,
+      "start": 468.2,
+      "end": 469.52,
+      "text": "for the big model, something that's"
+    },
+    {
+      "id": 177,
+      "start": 469.52,
+      "end": 471.8,
+      "text": "within the realm of what it might sample."
+    },
+    {
+      "id": 178,
+      "start": 471.8,
+      "end": 474.8,
+      "text": "And to sort of an involved discussion in this paper"
+    },
+    {
+      "id": 179,
+      "start": 474.8,
+      "end": 478.08,
+      "text": "of how you determine something in distribution."
+    },
+    {
+      "id": 180,
+      "start": 478.08,
+      "end": 480.12,
+      "text": "So here, the smaller models generates"
+    },
+    {
+      "id": 181,
+      "start": 480.12,
+      "end": 484.2,
+      "text": "like five or six tokens that the larger model says, OK,"
+    },
+    {
+      "id": 182,
+      "start": 484.2,
+      "end": 487.36,
+      "text": "this looks great, until it hits a token that the larger model"
+    },
+    {
+      "id": 183,
+      "start": 487.36,
+      "end": 489.68,
+      "text": "would not have generated in that circumstance."
+    },
+    {
+      "id": 184,
+      "start": 489.68,
+      "end": 491.92,
+      "text": "And then the larger model rejects that token"
+    },
+    {
+      "id": 185,
+      "start": 491.92,
+      "end": 494.24,
+      "text": "and generates a different token instead."
+    },
+    {
+      "id": 186,
+      "start": 494.24,
+      "end": 498.64,
+      "text": "So you can see here, each of these red and then blue sections"
+    },
+    {
+      "id": 187,
+      "start": 498.64,
+      "end": 501.2,
+      "text": "is where the larger model has rejected something"
+    },
+    {
+      "id": 188,
+      "start": 501.2,
+      "end": 504.96,
+      "text": "and has to actually auto-regressively decode a single token."
+    },
+    {
+      "id": 189,
+      "start": 504.96,
+      "end": 507.8,
+      "text": "But I contrast if you were doing regular decoding"
+    },
+    {
+      "id": 190,
+      "start": 507.8,
+      "end": 510.84,
+      "text": "at each individual token in this sequence,"
+    },
+    {
+      "id": 191,
+      "start": 510.84,
+      "end": 513.72,
+      "text": "the larger model would have had to make the full forward"
+    },
+    {
+      "id": 192,
+      "start": 513.72,
+      "end": 515.6,
+      "text": "passed an equal to token."
+    },
+    {
+      "id": 193,
+      "start": 515.6,
+      "end": 519.8,
+      "text": "So here, rather than doing maybe, what, probably,"
+    },
+    {
+      "id": 194,
+      "start": 519.8,
+      "end": 522.8,
+      "text": "like 20-ish decoding steps to get this full sequence,"
+    },
+    {
+      "id": 195,
+      "start": 522.8,
+      "end": 525.52,
+      "text": "the larger model has done about eight equaling steps."
+    },
+    {
+      "id": 196,
+      "start": 525.52,
+      "end": 528.92,
+      "text": "And everything else, if they were to verify a block of token"
+    },
+    {
+      "id": 197,
+      "start": 528.92,
+      "end": 531.48,
+      "text": "that wants."
+    },
+    {
+      "id": 198,
+      "start": 531.48,
+      "end": 534.28,
+      "text": "This sort of idea, like using a smaller model"
+    },
+    {
+      "id": 199,
+      "start": 534.28,
+      "end": 536.48,
+      "text": "as an approximation is pretty powerful."
+    },
+    {
+      "id": 200,
+      "start": 536.48,
+      "end": 538.94,
+      "text": "And there's some great follow-up work"
+    },
+    {
+      "id": 201,
+      "start": 538.94,
+      "end": 539.88,
+      "text": "comes back to the decoding."
+    },
+    {
+      "id": 202,
+      "start": 539.88,
+      "end": 544.24,
+      "text": "I'm sort of ways to do this faster or with stronger guarantees."
+    },
+    {
+      "id": 203,
+      "start": 544.24,
+      "end": 546.76,
+      "text": "But this general concept is, I would"
+    },
+    {
+      "id": 204,
+      "start": 546.76,
+      "end": 549.92,
+      "text": "bet probably how models, like part of how"
+    },
+    {
+      "id": 205,
+      "start": 549.92,
+      "end": 554.36,
+      "text": "models like Chatgivity or Marter are generating kind of so quickly."
+    },
+    {
+      "id": 206,
+      "start": 554.36,
+      "end": 555.44,
+      "text": "There's another element here, which"
+    },
+    {
+      "id": 207,
+      "start": 555.44,
+      "end": 558.04,
+      "text": "is the model architecture being sparse."
+    },
+    {
+      "id": 208,
+      "start": 558.04,
+      "end": 561.76,
+      "text": "But I think that a few folks talk about mixture of experts"
+    },
+    {
+      "id": 209,
+      "start": 561.76,
+      "end": 565.64,
+      "text": "from my buildings that I'm going to do it."
+    },
+    {
+      "id": 210,
+      "start": 565.64,
+      "end": 568.28,
+      "text": "How do you do this kind of fast inference?"
+    },
+    {
+      "id": 211,
+      "start": 568.28,
+      "end": 571.04,
+      "text": "Library is like BLM will implement things,"
+    },
+    {
+      "id": 212,
+      "start": 571.04,
+      "end": 572.88,
+      "text": "I think implement speculative decoding"
+    },
+    {
+      "id": 213,
+      "start": 572.88,
+      "end": 575.72,
+      "text": "and implement hardware level tricks,"
+    },
+    {
+      "id": 214,
+      "start": 575.72,
+      "end": 578.56,
+      "text": "like choosing which attention weights to cashware"
+    },
+    {
+      "id": 215,
+      "start": 578.56,
+      "end": 581.28,
+      "text": "to do faster inference."
+    },
+    {
+      "id": 216,
+      "start": 581.28,
+      "end": 583.16,
+      "text": "There's also great libraries for doing things"
+    },
+    {
+      "id": 217,
+      "start": 583.16,
+      "end": 584.48,
+      "text": "like constrained decoding."
+    },
+    {
+      "id": 218,
+      "start": 584.48,
+      "end": 587.0,
+      "text": "So things like outlines will let you set constraints."
+    },
+    {
+      "id": 219,
+      "start": 587.0,
+      "end": 589.48,
+      "text": "I want my outputs to all be JSON."
+    },
+    {
+      "id": 220,
+      "start": 589.48,
+      "end": 591.52,
+      "text": "And it will impose additional constraints"
+    },
+    {
+      "id": 221,
+      "start": 591.52,
+      "end": 593.64,
+      "text": "during decoding to ensure that that happens."
+    },
+    {
+      "id": 222,
+      "start": 593.64,
+      "end": 596.12,
+      "text": "And then pretty much anything in these first couple"
+    },
+    {
+      "id": 223,
+      "start": 596.12,
+      "end": 599.52,
+      "text": "of sections we talked about, like sampling, both seeking search,"
+    },
+    {
+      "id": 224,
+      "start": 599.52,
+      "end": 603.68,
+      "text": "and sometimes NBR will also be implemented in pretty much any library"
+    },
+    {
+      "id": 225,
+      "start": 603.68,
+      "end": 604.08,
+      "text": "union."
+    }
+  ],
+  "language": "en"
+}

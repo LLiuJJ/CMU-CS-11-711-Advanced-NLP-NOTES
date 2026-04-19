@@ -1,0 +1,365 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 9.0,
+      "text": "Okay. So translation is maybe easy. What's the input and output of translation?"
+    },
+    {
+      "id": 1,
+      "start": 9.0,
+      "end": 21.0,
+      "text": "Okay. Yeah. So in translation inputs text in one language, output is text in another language."
+    },
+    {
+      "id": 2,
+      "start": 21.0,
+      "end": 24.0,
+      "text": "And then what is a good translation?"
+    },
+    {
+      "id": 3,
+      "start": 24.0,
+      "end": 32.0,
+      "text": "When you have a few different things, it's like, you have two different things, but when you need..."
+    },
+    {
+      "id": 4,
+      "start": 32.0,
+      "end": 38.0,
+      "text": "Yeah. Correct or the same is the input. Yes. It also should be fluent, but I agree."
+    },
+    {
+      "id": 5,
+      "start": 38.0,
+      "end": 43.0,
+      "text": "Any other things? Generation, the reason why I said it's tough is it's pretty broad."
+    },
+    {
+      "id": 6,
+      "start": 43.0,
+      "end": 47.0,
+      "text": "And it's not like, you can be doing generation with lots of different inputs."
+    },
+    {
+      "id": 7,
+      "start": 47.0,
+      "end": 52.0,
+      "text": "But yeah, any other things, maybe a little bit different. Yeah."
+    },
+    {
+      "id": 8,
+      "start": 52.0,
+      "end": 56.0,
+      "text": "Maybe like scenario and multiple choice question."
+    },
+    {
+      "id": 9,
+      "start": 56.0,
+      "end": 66.0,
+      "text": "A scenario and multiple choice question about the scenario. And so what would the scenario in the multiple choice question are probably the input and then the output is."
+    },
+    {
+      "id": 10,
+      "start": 66.0,
+      "end": 74.0,
+      "text": "An answer to the multiple choice question. And then there it's kind of obvious like what is good. It's the correct answer for sure."
+    },
+    {
+      "id": 11,
+      "start": 74.0,
+      "end": 81.0,
+      "text": "But interestingly, I think a lot of LLM evaluation is done on these multiple choice questions, but I'm."
+    },
+    {
+      "id": 12,
+      "start": 81.0,
+      "end": 87.0,
+      "text": "Get to encounter an actual application that cares about multiple choice question."
+    },
+    {
+      "id": 13,
+      "start": 87.0,
+      "end": 92.0,
+      "text": "So there's kind of a funny disconnect there, but yeah."
+    },
+    {
+      "id": 14,
+      "start": 92.0,
+      "end": 100.0,
+      "text": "You can come up with a search. Yeah. Vector search. That's very good. So the input is."
+    },
+    {
+      "id": 15,
+      "start": 100.0,
+      "end": 122.0,
+      "text": "So I'd say the input there is a query and a document case. And then the output is maybe an index into the document or."
+    },
+    {
+      "id": 16,
+      "start": 122.0,
+      "end": 131.0,
+      "text": "And then something that's good. Here's a good question. What's a good result from that?"
+    },
+    {
+      "id": 17,
+      "start": 131.0,
+      "end": 134.0,
+      "text": "What's a good output?"
+    },
+    {
+      "id": 18,
+      "start": 134.0,
+      "end": 163.0,
+      "text": "So that's just to repeat. It's like we need to have a similarity. A good similarity metric. We need to have a good threshold where we get like the ones we want."
+    },
+    {
+      "id": 19,
+      "start": 163.0,
+      "end": 171.0,
+      "text": "We don't get the ones we don't need. We're going to talk more about that in the retrieval lecture exactly how we evaluate and stuff. But yeah."
+    },
+    {
+      "id": 20,
+      "start": 171.0,
+      "end": 176.0,
+      "text": "So this is a good. Here are some good examples. I have some examples of my own."
+    },
+    {
+      "id": 21,
+      "start": 176.0,
+      "end": 181.0,
+      "text": "The first one is kind of the very generic one, maybe kind of like generation here."
+    },
+    {
+      "id": 22,
+      "start": 181.0,
+      "end": 190.0,
+      "text": "But text in continuing text. So this is language modeling. So you have a text and then you have the continuation you want to predict the continuation."
+    },
+    {
+      "id": 23,
+      "start": 190.0,
+      "end": 207.0,
+      "text": "Text in text and another language is translation text in a label could be text classification. Text in linguistic structure or some kind of entities or something like that could be language analysis or information extraction."
+    },
+    {
+      "id": 24,
+      "start": 207.0,
+      "end": 222.0,
+      "text": "We could also have the image in packs, which is image captioning or speech and text, which is speech recognition. And I take the very broad view of natural language processing, which is if it's any variety of language."
+    },
+    {
+      "id": 25,
+      "start": 222.0,
+      "end": 228.0,
+      "text": "If you're handling language in some way, it's natural language processing. It doesn't necessarily have to be text input text."
+    },
+    {
+      "id": 26,
+      "start": 228.0,
+      "end": 238.0,
+      "text": "So that's relevant for the projects that you're thinking about to at the end of this course. So the most common FAQ for this course is does my project count."
+    },
+    {
+      "id": 27,
+      "start": 238.0,
+      "end": 246.0,
+      "text": "And if you're uncertain, you should ask, but usually like if it has some sort of language involved and I'll usually say yes to test code."
+    },
+    {
+      "id": 28,
+      "start": 246.0,
+      "end": 260.0,
+      "text": "If it's like code to code, that's not code is not natural language. It is language, but it's not natural language. So that might be borderline. You might have to discuss about that."
+    },
+    {
+      "id": 29,
+      "start": 260.0,
+      "end": 266.0,
+      "text": "Cool. So next I'd like to talk about methods for creating an LP systems."
+    },
+    {
+      "id": 30,
+      "start": 266.0,
+      "end": 274.0,
+      "text": "And there's a lot of different ways to create an LP systems. All of these are alive and well in 2024."
+    },
+    {
+      "id": 31,
+      "start": 274.0,
+      "end": 284.0,
+      "text": "The first one is rule rule based system creation. And so the way this works is like let's say you want to build a tax class fire."
+    },
+    {
+      "id": 32,
+      "start": 284.0,
+      "end": 301.0,
+      "text": "So let's just write the simple play time function that classifies things into sports or other. And the way it classifies it into sports or other is it checks whether baseball soccer football antennas are included in the document and classifies it into sports."
+    },
+    {
+      "id": 33,
+      "start": 301.0,
+      "end": 319.0,
+      "text": "So, other if not. So has anyone written something like this, maybe not a tax classifier, but you know to identify entities or split words or something like that."
+    },
+    {
+      "id": 34,
+      "start": 319.0,
+      "end": 323.0,
+      "text": "Is anybody not ever written anything like this."
+    },
+    {
+      "id": 35,
+      "start": 323.0,
+      "end": 331.0,
+      "text": "Yeah, that's what I thought. So rule based systems are very convenient when you don't really care about how good your system is."
+    },
+    {
+      "id": 36,
+      "start": 331.0,
+      "end": 337.0,
+      "text": "Or you're doing something that's really, really simple and it's like it'll be perfect even if you do the very simple thing."
+    },
+    {
+      "id": 37,
+      "start": 337.0,
+      "end": 344.0,
+      "text": "And so I think it's worth talking a little bit about them and I'll talk a little bit about that this time."
+    },
+    {
+      "id": 38,
+      "start": 344.0,
+      "end": 357.0,
+      "text": "The second thing which like very rapidly over the course of maybe three years or so has become actually maybe the dominant paradigm in LP is prompting and prompting a language model."
+    },
+    {
+      "id": 39,
+      "start": 357.0,
+      "end": 366.0,
+      "text": "And the way this works is you ask a language model if the following sentence is about sports or vice versa otherwise for applying other."
+    },
+    {
+      "id": 40,
+      "start": 366.0,
+      "end": 379.0,
+      "text": "And you feed it to your favorite LM usually that's GPT something or other sometimes it's an open source model of some variety and then it will give you the answer."
+    },
+    {
+      "id": 41,
+      "start": 379.0,
+      "end": 389.0,
+      "text": "And then finally fine tuning so you take some pair data and you do machine learning from pair data where you have something like I want to play baseball."
+    },
+    {
+      "id": 42,
+      "start": 389.0,
+      "end": 397.0,
+      "text": "The sack prices going up you have a head for yesterday is where it finishes and you assign all these labels to them training model."
+    },
+    {
+      "id": 43,
+      "start": 397.0,
+      "end": 403.0,
+      "text": "And you can even start out with the prompting based model and fine tune a language model."
+    },
+    {
+      "id": 44,
+      "start": 403.0,
+      "end": 432.0,
+      "text": "So one major consideration when you're building systems like this is the data requirements for building such a system and for rules or prompting where it's just based on intuition really no data is needed whatsoever it you don't need a single example and you can start writing rules or like just just give an example."
+    },
+    {
+      "id": 45,
+      "start": 432.0,
+      "end": 442.0,
+      "text": "The rules and promise I wrote here I didn't look at any examples and I just broke up so this is something that you can start right with."
+    },
+    {
+      "id": 46,
+      "start": 442.0,
+      "end": 455.0,
+      "text": "But the problem is you also have no idea how well it works if you don't have any data whatsoever right so you'll you might be in trouble if you think something should be working."
+    },
+    {
+      "id": 47,
+      "start": 455.0,
+      "end": 467.0,
+      "text": "Normally the next thing that people move to nowadays when they're building practical systems is rules are prompting based on spot checks so that basically means that you start out with a rule based system or prompting based system."
+    },
+    {
+      "id": 48,
+      "start": 467.0,
+      "end": 474.0,
+      "text": "And then you go in and you run it on some data that you're interested in you just kind of qualitatively look at the data and say oh it's messing up here."
+    },
+    {
+      "id": 49,
+      "start": 474.0,
+      "end": 483.0,
+      "text": "Then you go in and fix your prompt a little better you go in and fix your rules a little bit or something like that so this is kind of the second level of difficulty."
+    },
+    {
+      "id": 50,
+      "start": 484.0,
+      "end": 506.0,
+      "text": "So the third level of difficulty would be something like rules are prompting with rigorous evaluation and so here you would create a development set with inputs and outputs so you create maybe 200 to 2000 examples and then evaluate your actual accuracy so you need an evaluation metric you need other things like this."
+    },
+    {
+      "id": 51,
+      "start": 507.0,
+      "end": 517.0,
+      "text": "This is the next level of difficulty but if you're going to be a serious you know NLP engineer or something like this you definitely will be doing this a lot I feel."
+    },
+    {
+      "id": 52,
+      "start": 517.0,
+      "end": 527.0,
+      "text": "And then so that here now you start needing a depth set in the test set and then finally fine tuning you need an additional training sets."
+    },
+    {
+      "id": 53,
+      "start": 528.0,
+      "end": 538.0,
+      "text": "And this will generally be a lot bigger than 200 to 3000 examples and generally the rule is that every time you double."
+    },
+    {
+      "id": 54,
+      "start": 543.0,
+      "end": 550.0,
+      "text": "Every time you double your training set size you get about a constant improvement so if you start out."
+    },
+    {
+      "id": 55,
+      "start": 551.0,
+      "end": 563.0,
+      "text": "If you start out down here with zero shot accuracy with the language model you you create a small training set and you get you know a pretty big increase."
+    },
+    {
+      "id": 56,
+      "start": 566.0,
+      "end": 568.0,
+      "text": "And then every time you double it."
+    },
+    {
+      "id": 57,
+      "start": 570.0,
+      "end": 577.0,
+      "text": "It increases by a constant factor it's kind of like just in general machine learning this is a time that we tend to see so."
+    },
+    {
+      "id": 58,
+      "start": 578.0,
+      "end": 590.0,
+      "text": "So based on this there's kind of like get a big gain from having a little bit of training data but the gains very quickly drop off and you start spending a lot of time annotating."
+    },
+    {
+      "id": 59,
+      "start": 596.0,
+      "end": 603.0,
+      "text": "So yeah this is the general overview of the different types of system building any any questions about this or comments."
+    }
+  ],
+  "language": "en"
+}

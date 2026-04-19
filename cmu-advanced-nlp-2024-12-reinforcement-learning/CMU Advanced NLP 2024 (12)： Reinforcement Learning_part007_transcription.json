@@ -1,0 +1,713 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 2.68,
+      "text": "predict our priori, how difficult this example is,"
+    },
+    {
+      "id": 1,
+      "start": 2.68,
+      "end": 5.74,
+      "text": "and then adjust our reward based on that."
+    },
+    {
+      "id": 2,
+      "start": 6.8,
+      "end": 10.88,
+      "text": "And so that's the basic idea."
+    },
+    {
+      "id": 3,
+      "start": 10.88,
+      "end": 13.08,
+      "text": "You just have kind of like a baseline model."
+    },
+    {
+      "id": 4,
+      "start": 14.16,
+      "end": 15.96,
+      "text": "You have a baseline model that predicts this"
+    },
+    {
+      "id": 5,
+      "start": 15.96,
+      "end": 18.56,
+      "text": "and you adjust appropriately."
+    },
+    {
+      "id": 6,
+      "start": 21.92,
+      "end": 23.96,
+      "text": "There's two major ways you can do this."
+    },
+    {
+      "id": 7,
+      "start": 23.96,
+      "end": 28.04,
+      "text": "The first one, the baseline doesn't need to be anything."
+    },
+    {
+      "id": 8,
+      "start": 28.04,
+      "end": 31.0,
+      "text": "The only hope is that it decreases the variance"
+    },
+    {
+      "id": 9,
+      "start": 31.0,
+      "end": 34.6,
+      "text": "in your reward and makes learning more stable."
+    },
+    {
+      "id": 10,
+      "start": 35.72,
+      "end": 38.76,
+      "text": "There's two options that I see done pretty widely."
+    },
+    {
+      "id": 11,
+      "start": 38.76,
+      "end": 41.04,
+      "text": "The first one is predicting the final reward."
+    },
+    {
+      "id": 12,
+      "start": 42.24,
+      "end": 45.72,
+      "text": "Predicting the final reward using a model"
+    },
+    {
+      "id": 13,
+      "start": 45.72,
+      "end": 50.72,
+      "text": "that doesn't look at all, at the answer that you provided."
+    },
+    {
+      "id": 14,
+      "start": 51.28,
+      "end": 52.96,
+      "text": "It only looks at the implant"
+    },
+    {
+      "id": 15,
+      "start": 52.96,
+      "end": 55.48,
+      "text": "or it only looks at the intermediate states"
+    },
+    {
+      "id": 16,
+      "start": 55.48,
+      "end": 57.64,
+      "text": "of a model or something."
+    },
+    {
+      "id": 17,
+      "start": 58.2,
+      "end": 60.0,
+      "text": "And so at the sentence level,"
+    },
+    {
+      "id": 18,
+      "start": 60.0,
+      "end": 62.6,
+      "text": "you can have one baseline per sentence."
+    },
+    {
+      "id": 19,
+      "start": 62.6,
+      "end": 65.04,
+      "text": "You can also do it at each decoder state."
+    },
+    {
+      "id": 20,
+      "start": 66.04,
+      "end": 71.04,
+      "text": "And this is basically, you can do this anytime you're doing"
+    },
+    {
+      "id": 21,
+      "start": 72.16,
+      "end": 74.92,
+      "text": "reinforcement learning by just finding a regression model"
+    },
+    {
+      "id": 22,
+      "start": 74.92,
+      "end": 77.56,
+      "text": "that does this for you, based on the rewards you get."
+    },
+    {
+      "id": 23,
+      "start": 78.6,
+      "end": 80.44,
+      "text": "The important thing is the baseline is not allowed"
+    },
+    {
+      "id": 24,
+      "start": 80.44,
+      "end": 82.16,
+      "text": "to use any of your actual predictions"
+    },
+    {
+      "id": 25,
+      "start": 82.16,
+      "end": 83.84,
+      "text": "because once you start using the predictions,"
+    },
+    {
+      "id": 26,
+      "start": 83.84,
+      "end": 86.8,
+      "text": "then it's not a baseline."
+    },
+    {
+      "id": 27,
+      "start": 88.04,
+      "end": 91.0,
+      "text": "Another option, which is relatively easy to implement"
+    },
+    {
+      "id": 28,
+      "start": 91.0,
+      "end": 94.24,
+      "text": "but can still be effective, is you calculate the mean"
+    },
+    {
+      "id": 29,
+      "start": 94.24,
+      "end": 96.24,
+      "text": "of the rewards in a batch."
+    },
+    {
+      "id": 30,
+      "start": 96.24,
+      "end": 98.44,
+      "text": "And so if you have a big batch of data"
+    },
+    {
+      "id": 31,
+      "start": 98.44,
+      "end": 102.44,
+      "text": "and your average reward in the batch is like 0.4,"
+    },
+    {
+      "id": 32,
+      "start": 102.44,
+      "end": 105.04,
+      "text": "then you just subtract that 0.4"
+    },
+    {
+      "id": 33,
+      "start": 105.04,
+      "end": 107.08,
+      "text": "and calculate your reward based on that."
+    },
+    {
+      "id": 34,
+      "start": 107.08,
+      "end": 109.44,
+      "text": "So that's another option that you can use."
+    },
+    {
+      "id": 35,
+      "start": 110.12,
+      "end": 115.12,
+      "text": "A kind of extreme example of this, of creating a baseline,"
+    },
+    {
+      "id": 36,
+      "start": 119.52,
+      "end": 122.96,
+      "text": "is contrasting pairwise examples,"
+    },
+    {
+      "id": 37,
+      "start": 122.96,
+      "end": 127.8,
+      "text": "or contrasting different outputs for the same input."
+    },
+    {
+      "id": 38,
+      "start": 127.84,
+      "end": 132.84,
+      "text": "And you can easily learn directly from pairwise human"
+    },
+    {
+      "id": 39,
+      "start": 133.68,
+      "end": 137.24,
+      "text": "preferences, which can provide more stability"
+    },
+    {
+      "id": 40,
+      "start": 137.24,
+      "end": 139.36,
+      "text": "because you know one is better than the other."
+    },
+    {
+      "id": 41,
+      "start": 139.36,
+      "end": 143.64,
+      "text": "So you essentially can be sure that you're"
+    },
+    {
+      "id": 42,
+      "start": 143.64,
+      "end": 146.04,
+      "text": "uploading a better one and down waiting a worse one."
+    },
+    {
+      "id": 43,
+      "start": 147.12,
+      "end": 149.36,
+      "text": "This is the idea behind DPO,"
+    },
+    {
+      "id": 44,
+      "start": 149.36,
+      "end": 151.76,
+      "text": "which is a recently pretty popular model,"
+    },
+    {
+      "id": 45,
+      "start": 151.76,
+      "end": 154.16,
+      "text": "but there's also other previous methods"
+    },
+    {
+      "id": 46,
+      "start": 154.16,
+      "end": 156.04,
+      "text": "and similar things."
+    },
+    {
+      "id": 47,
+      "start": 156.04,
+      "end": 160.12,
+      "text": "And the way DPO works is it basically calculates this ratio"
+    },
+    {
+      "id": 48,
+      "start": 160.12,
+      "end": 165.12,
+      "text": "of the probability of the new model,"
+    },
+    {
+      "id": 49,
+      "start": 165.92,
+      "end": 167.48,
+      "text": "to the old model,"
+    },
+    {
+      "id": 50,
+      "start": 167.48,
+      "end": 171.88,
+      "text": "but it upweights this probability for a good output"
+    },
+    {
+      "id": 51,
+      "start": 171.88,
+      "end": 175.12,
+      "text": "and it downweights this probability for a bad output."
+    },
+    {
+      "id": 52,
+      "start": 175.12,
+      "end": 178.44,
+      "text": "And so here we have our better outputs over here,"
+    },
+    {
+      "id": 53,
+      "start": 178.44,
+      "end": 180.4,
+      "text": "here we have our worst outputs."
+    },
+    {
+      "id": 54,
+      "start": 180.4,
+      "end": 182.84,
+      "text": "And you just, it's basically learning to upweat"
+    },
+    {
+      "id": 55,
+      "start": 182.84,
+      "end": 185.92,
+      "text": "the probability and downweat the probability of learning them."
+    },
+    {
+      "id": 56,
+      "start": 186.92,
+      "end": 191.92,
+      "text": "So you can notice that DPO is very similar to DPO"
+    },
+    {
+      "id": 57,
+      "start": 191.92,
+      "end": 194.48,
+      "text": "and DPO is very similar to DPO"
+    },
+    {
+      "id": 58,
+      "start": 194.48,
+      "end": 197.04,
+      "text": "instead it's using these ratios."
+    },
+    {
+      "id": 59,
+      "start": 197.04,
+      "end": 200.16,
+      "text": "But the disadvantage of this is you obviously"
+    },
+    {
+      "id": 60,
+      "start": 200.16,
+      "end": 203.04,
+      "text": "require pairwise stretchments and you can't learn a model"
+    },
+    {
+      "id": 61,
+      "start": 203.04,
+      "end": 204.92,
+      "text": "if you don't have these pairwise stretchments."
+    },
+    {
+      "id": 62,
+      "start": 209.48,
+      "end": 212.16,
+      "text": "Yeah, so the beta term is basically"
+    },
+    {
+      "id": 63,
+      "start": 212.16,
+      "end": 214.72,
+      "text": "a normalization term, it's a hyperparameter."
+    },
+    {
+      "id": 64,
+      "start": 215.6,
+      "end": 220.6,
+      "text": "For DPO, sorry, read the paper right when it came out"
+    },
+    {
+      "id": 65,
+      "start": 221.16,
+      "end": 223.64,
+      "text": "and I don't remember if it's a direct derivation"
+    },
+    {
+      "id": 66,
+      "start": 223.64,
+      "end": 225.36,
+      "text": "from the KL divergence term or not,"
+    },
+    {
+      "id": 67,
+      "start": 225.36,
+      "end": 227.52,
+      "text": "but I think it might be,"
+    },
+    {
+      "id": 68,
+      "start": 227.52,
+      "end": 229.68,
+      "text": "I'd have to go back and look at the paper."
+    },
+    {
+      "id": 69,
+      "start": 229.68,
+      "end": 233.56,
+      "text": "But basically the more the larger this is,"
+    },
+    {
+      "id": 70,
+      "start": 233.56,
+      "end": 236.36,
+      "text": "the larger gradient steps you'll be taking."
+    },
+    {
+      "id": 71,
+      "start": 237.28,
+      "end": 239.8,
+      "text": "It also, like you'll notice there,"
+    },
+    {
+      "id": 72,
+      "start": 239.8,
+      "end": 240.88,
+      "text": "sorry, I didn't mention this,"
+    },
+    {
+      "id": 73,
+      "start": 240.88,
+      "end": 243.36,
+      "text": "but you'll notice there's a sigmoid term here."
+    },
+    {
+      "id": 74,
+      "start": 243.36,
+      "end": 245.72,
+      "text": "So the beta,"
+    },
+    {
+      "id": 75,
+      "start": 246.64,
+      "end": 249.36,
+      "text": "the larger you increase the beta,"
+    },
+    {
+      "id": 76,
+      "start": 249.36,
+      "end": 253.84,
+      "text": "the more small differences in these values,"
+    },
+    {
+      "id": 77,
+      "start": 253.84,
+      "end": 257.92,
+      "text": "it basically stretches your shrinks,"
+    },
+    {
+      "id": 78,
+      "start": 257.92,
+      "end": 260.0,
+      "text": "the sigmoid will respect how it begins"
+    },
+    {
+      "id": 79,
+      "start": 260.0,
+      "end": 264.68,
+      "text": "so it will affect how much like small differences"
+    },
+    {
+      "id": 80,
+      "start": 264.68,
+      "end": 266.16,
+      "text": "in the small effects of turbulence."
+    },
+    {
+      "id": 81,
+      "start": 266.16,
+      "end": 268.72,
+      "text": "But I think this was derived from the KL"
+    },
+    {
+      "id": 82,
+      "start": 268.72,
+      "end": 271.2,
+      "text": "regularization term that we had previously"
+    },
+    {
+      "id": 83,
+      "start": 271.2,
+      "end": 274.16,
+      "text": "in the slide here,"
+    },
+    {
+      "id": 84,
+      "start": 274.16,
+      "end": 275.72,
+      "text": "but I think you have to go back and look at it"
+    },
+    {
+      "id": 85,
+      "start": 275.72,
+      "end": 277.32,
+      "text": "and let somebody know."
+    },
+    {
+      "id": 86,
+      "start": 277.32,
+      "end": 278.8,
+      "text": "It is, okay, good, yeah."
+    },
+    {
+      "id": 87,
+      "start": 282.08,
+      "end": 283.52,
+      "text": "I don't want to say wrong things,"
+    },
+    {
+      "id": 88,
+      "start": 283.52,
+      "end": 284.72,
+      "text": "but I also don't want to."
+    },
+    {
+      "id": 89,
+      "start": 286.4,
+      "end": 287.68,
+      "text": "Okay, cool."
+    },
+    {
+      "id": 90,
+      "start": 287.68,
+      "end": 289.92,
+      "text": "And so then increasing batch size,"
+    },
+    {
+      "id": 91,
+      "start": 292.32,
+      "end": 297.32,
+      "text": "because each, another thing is kind of necessarily"
+    },
+    {
+      "id": 92,
+      "start": 297.32,
+      "end": 299.36,
+      "text": "reinforcement learning is going to have higher variance"
+    },
+    {
+      "id": 93,
+      "start": 299.36,
+      "end": 300.96,
+      "text": "and maximum likelihood estimation"
+    },
+    {
+      "id": 94,
+      "start": 300.96,
+      "end": 302.12,
+      "text": "just because we're doing sampling"
+    },
+    {
+      "id": 95,
+      "start": 302.12,
+      "end": 303.96,
+      "text": "and other things like this."
+    },
+    {
+      "id": 96,
+      "start": 303.96,
+      "end": 308.32,
+      "text": "And so one very simple thing you can do"
+    },
+    {
+      "id": 97,
+      "start": 308.32,
+      "end": 310.64,
+      "text": "is just increase the number of examples or rollouts"
+    },
+    {
+      "id": 98,
+      "start": 310.64,
+      "end": 312.56,
+      "text": "that you do before and update to stabilize."
+    },
+    {
+      "id": 99,
+      "start": 312.56,
+      "end": 315.2,
+      "text": "And so I would definitely suggest that if you're seeing"
+    },
+    {
+      "id": 100,
+      "start": 315.2,
+      "end": 318.0,
+      "text": "any stability after doing all of the tricks"
+    },
+    {
+      "id": 101,
+      "start": 318.0,
+      "end": 320.28,
+      "text": "that I mentioned before that you increase your batch size"
+    },
+    {
+      "id": 102,
+      "start": 320.28,
+      "end": 322.44,
+      "text": "and often make a list for solve your problems."
+    },
+    {
+      "id": 103,
+      "start": 324.48,
+      "end": 329.28,
+      "text": "Another thing that people often do is save"
+    },
+    {
+      "id": 104,
+      "start": 329.28,
+      "end": 330.8,
+      "text": "many, many previous rollouts,"
+    },
+    {
+      "id": 105,
+      "start": 330.8,
+      "end": 333.36,
+      "text": "because generally doing rollouts is more expensive,"
+    },
+    {
+      "id": 106,
+      "start": 333.72,
+      "end": 336.76,
+      "text": "doing rollouts and collecting rewards is more expensive."
+    },
+    {
+      "id": 107,
+      "start": 336.76,
+      "end": 340.28,
+      "text": "And so you can save the rollouts that you have done"
+    },
+    {
+      "id": 108,
+      "start": 340.28,
+      "end": 342.72,
+      "text": "before and keep them around"
+    },
+    {
+      "id": 109,
+      "start": 342.72,
+      "end": 344.76,
+      "text": "so you can update randomness with larger batches"
+    },
+    {
+      "id": 110,
+      "start": 344.76,
+      "end": 346.08,
+      "text": "and more efficient."
+    },
+    {
+      "id": 111,
+      "start": 348.08,
+      "end": 348.92,
+      "text": "Cool."
+    },
+    {
+      "id": 112,
+      "start": 348.92,
+      "end": 350.8,
+      "text": "So that's all I have."
+    },
+    {
+      "id": 113,
+      "start": 350.8,
+      "end": 352.92,
+      "text": "I just realized we're exactly at times."
+    },
+    {
+      "id": 114,
+      "start": 352.92,
+      "end": 354.44,
+      "text": "So I should finish up here,"
+    },
+    {
+      "id": 115,
+      "start": 354.44,
+      "end": 356.32,
+      "text": "but I'll be happy to take any questions with my phone"
+    },
+    {
+      "id": 116,
+      "start": 356.32,
+      "end": 357.88,
+      "text": "for a happy person."
+    },
+    {
+      "id": 117,
+      "start": 357.88,
+      "end": 358.72,
+      "text": "Thanks."
+    }
+  ],
+  "language": "en"
+}

@@ -1,0 +1,545 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 6.56,
+      "text": "trained faster you actually can train a larger model and that will that will get you to a good solution"
+    },
+    {
+      "id": 1,
+      "start": 7.2,
+      "end": 10.88,
+      "text": "at some point that will get you to a good solution faster than a smaller model of,"
+    },
+    {
+      "id": 2,
+      "start": 10.88,
+      "end": 12.24,
+      "text": "you know, of course you need memories."
+    },
+    {
+      "id": 3,
+      "start": 21.92,
+      "end": 27.36,
+      "text": "So this is test loss training loss also looks like this. I think on this"
+    },
+    {
+      "id": 4,
+      "start": 27.36,
+      "end": 40.0,
+      "text": "particular paper they never repeated data and if you never repeat data actually your training loss"
+    },
+    {
+      "id": 5,
+      "start": 40.0,
+      "end": 46.4,
+      "text": "looks very similar to your test loss because if you like actually if you can assume your training"
+    },
+    {
+      "id": 6,
+      "start": 46.4,
+      "end": 51.44,
+      "text": "data set and your test data set are um identically distributed your training loss"
+    },
+    {
+      "id": 7,
+      "start": 51.44,
+      "end": 55.92,
+      "text": "of new training data should be exactly the same as your test class. So I think that's basically"
+    },
+    {
+      "id": 8,
+      "start": 55.92,
+      "end": 61.92,
+      "text": "why they were justified in doing that. But they probably did test loss to like uswage the concern"
+    },
+    {
+      "id": 9,
+      "start": 61.92,
+      "end": 66.24,
+      "text": "that this was overfinning to the training really well except a good question."
+    },
+    {
+      "id": 10,
+      "start": 67.6,
+      "end": 73.6,
+      "text": "Um, cool. So these are good things to know. So basically if you see your model doing something"
+    },
+    {
+      "id": 11,
+      "start": 73.6,
+      "end": 77.52,
+      "text": "like this um plateauing out maybe your models are swallowing you need to train a bigger one."
+    },
+    {
+      "id": 12,
+      "start": 80.56,
+      "end": 85.04,
+      "text": "Another piece of trouble that you can have is trouble with optimization and basically"
+    },
+    {
+      "id": 13,
+      "start": 85.52,
+      "end": 95.04,
+      "text": "um you should check your optimizer. Um usually people are using atom variants nowadays like atom or atom w. So just use that."
+    },
+    {
+      "id": 14,
+      "start": 95.04,
+      "end": 102.08,
+      "text": "Um learning rate. Uh so make sure that the learning rate you're using is standard for the kind of the model size that you're using."
+    },
+    {
+      "id": 15,
+      "start": 102.08,
+      "end": 106.48,
+      "text": "And the best way to do this is uh look at previous papers and see what they're using."
+    },
+    {
+      "id": 16,
+      "start": 106.48,
+      "end": 114.64,
+      "text": "Um initialization most people nowadays will not be training from scratch but if you are training from scratch"
+    },
+    {
+      "id": 17,
+      "start": 114.88,
+      "end": 120.88,
+      "text": "how you initialize your model is really important. And normally the way you do this is you do this with some sort of"
+    },
+    {
+      "id": 18,
+      "start": 120.88,
+      "end": 128.08,
+      "text": "uniform random noise and uh specifically you can pick the uniform random noise and intelligent ways based on"
+    },
+    {
+      "id": 19,
+      "start": 128.08,
+      "end": 134.8,
+      "text": "the data size which I'll talk about in a second. Um also mini batching um are you using sufficiently large"
+    },
+    {
+      "id": 20,
+      "start": 134.8,
+      "end": 139.28,
+      "text": "batches of data if you're using small batches of data you might have too much noise in your training"
+    },
+    {
+      "id": 21,
+      "start": 139.28,
+      "end": 142.96,
+      "text": "and it might diverge. So uh these are things you think about as well."
+    },
+    {
+      "id": 22,
+      "start": 145.28,
+      "end": 156.48,
+      "text": "Cool. Um so these are training time things. Um the next thing is debugging at test time."
+    },
+    {
+      "id": 23,
+      "start": 160.08,
+      "end": 168.48,
+      "text": "And this is particularly important if you're doing any sort of um like I guess a lot of this has kind of"
+    },
+    {
+      "id": 24,
+      "start": 168.48,
+      "end": 173.6,
+      "text": "been commoditized and it's implemented in hugging phase and stuff like that and as long as you're using"
+    },
+    {
+      "id": 25,
+      "start": 173.6,
+      "end": 179.28,
+      "text": "the standard implementations you're less likely to run into these bugs but if you are implementing"
+    },
+    {
+      "id": 26,
+      "start": 179.28,
+      "end": 184.0,
+      "text": "anything on your own this is actually really tricky and you can easily make mistakes so uh it's"
+    },
+    {
+      "id": 27,
+      "start": 184.0,
+      "end": 190.64,
+      "text": "important to know about it. So um one of the reasons why you could have training and test"
+    },
+    {
+      "id": 28,
+      "start": 190.64,
+      "end": 195.12,
+      "text": "disconnects especially if you're doing something like text to generation is that usually your"
+    },
+    {
+      "id": 29,
+      "start": 195.12,
+      "end": 200.48,
+      "text": "last calculation and prediction functions will be implemented in different functions and like anything"
+    },
+    {
+      "id": 30,
+      "start": 200.48,
+      "end": 206.72,
+      "text": "in software engineering um this can be a source of bugs, duplicated source code can be a source of"
+    },
+    {
+      "id": 31,
+      "start": 206.72,
+      "end": 211.04,
+      "text": "bugs because you might implement one thing in one place in one way another thing in another place"
+    },
+    {
+      "id": 32,
+      "start": 211.04,
+      "end": 217.44,
+      "text": "in another way. So this is no exception to that um it's especially true for structured prediction"
+    },
+    {
+      "id": 33,
+      "start": 217.44,
+      "end": 221.36,
+      "text": "models so anything where you're not just making a single prediction but you're making multiple"
+    },
+    {
+      "id": 34,
+      "start": 221.36,
+      "end": 227.6,
+      "text": "predictions in a row so you need to be a little bit careful about that. Um another thing that you"
+    },
+    {
+      "id": 35,
+      "start": 228.16,
+      "end": 232.72,
+      "text": "pay attention about is often uh especially if you're doing your own implementation,"
+    },
+    {
+      "id": 36,
+      "start": 232.72,
+      "end": 240.8,
+      "text": "last calculation is mini-batched and generation is not or in highly optimized versions of um of"
+    },
+    {
+      "id": 37,
+      "start": 240.8,
+      "end": 245.36,
+      "text": "inference you might be doing inference with dynamic batching and stuff like that and it might"
+    },
+    {
+      "id": 38,
+      "start": 245.36,
+      "end": 252.96,
+      "text": "become popular for even your might work mistakes. Um so how do we make sure that we're not making"
+    },
+    {
+      "id": 39,
+      "start": 253.12,
+      "end": 260.56,
+      "text": "mistakes here? There's a really simple way to debug any sort of mini-batched loss calculation"
+    },
+    {
+      "id": 40,
+      "start": 261.2,
+      "end": 267.92,
+      "text": "because normally when we mini-batch loss calculations we're simultaneously calculating the loss"
+    },
+    {
+      "id": 41,
+      "start": 267.92,
+      "end": 278.16,
+      "text": "for life uh for or eight or whatever sequences at a time and so you can calculate the loss with a"
+    },
+    {
+      "id": 42,
+      "start": 278.24,
+      "end": 283.92,
+      "text": "large batch size like 32 and then calculate the loss for each uh sentence individually and some"
+    },
+    {
+      "id": 43,
+      "start": 283.92,
+      "end": 290.56,
+      "text": "them together and these uh values should be the same and this can help make sure that you don't have"
+    },
+    {
+      "id": 44,
+      "start": 290.56,
+      "end": 298.24,
+      "text": "any you know issues with your padding or your masking or other things like this um so this is"
+    },
+    {
+      "id": 45,
+      "start": 298.24,
+      "end": 302.88,
+      "text": "particularly important if you're not just using out of the box things like you have a slightly"
+    },
+    {
+      "id": 46,
+      "start": 302.96,
+      "end": 307.92,
+      "text": "unusually structured model of like hierarchical encoding or anything like that you need to be"
+    },
+    {
+      "id": 47,
+      "start": 307.92,
+      "end": 316.48,
+      "text": "really careful about that. Um you can even create unit tests that test this so like um in machine"
+    },
+    {
+      "id": 48,
+      "start": 316.48,
+      "end": 320.72,
+      "text": "learning code we don't write unit tests or especially neural network based machine learning code"
+    },
+    {
+      "id": 49,
+      "start": 320.72,
+      "end": 325.12,
+      "text": "we don't write unit tests that often because it's kind of hard to do there's lots of randomness"
+    },
+    {
+      "id": 50,
+      "start": 325.12,
+      "end": 329.6,
+      "text": "and other stuff like that um but this is one thing that you can easily test and make sure that you"
+    },
+    {
+      "id": 51,
+      "start": 329.6,
+      "end": 341.04,
+      "text": "don't have any mistakes in. Any sort of uh generation algorithm uh so when you're generating or decoding"
+    },
+    {
+      "id": 52,
+      "start": 342.8,
+      "end": 347.2,
+      "text": "you can make sure that your decoding code is getting the same score as when you calculate the loss"
+    },
+    {
+      "id": 53,
+      "start": 348.0,
+      "end": 353.12,
+      "text": "and an easy way to do this is you call the decoding function to generate an output"
+    },
+    {
+      "id": 54,
+      "start": 353.92,
+      "end": 358.56,
+      "text": "and normally when you're doing any sort of search or sampling or something like that"
+    },
+    {
+      "id": 55,
+      "start": 359.04,
+      "end": 364.4,
+      "text": "during the search or sampling you're calculating the logits or the log probabilities of each"
+    },
+    {
+      "id": 56,
+      "start": 365.2,
+      "end": 369.44,
+      "text": "step that you sample so you keep track of that during your sampling algorithm"
+    },
+    {
+      "id": 57,
+      "start": 371.04,
+      "end": 375.44,
+      "text": "and then after that you call the loss function on the generated output"
+    },
+    {
+      "id": 58,
+      "start": 376.16,
+      "end": 380.64,
+      "text": "and you calculate the loss according to the loss function and the score of these two things"
+    },
+    {
+      "id": 59,
+      "start": 380.72,
+      "end": 391.76,
+      "text": "should be the same. So um you know you do your generate B and that gives you an output"
+    },
+    {
+      "id": 60,
+      "start": 394.08,
+      "end": 402.08,
+      "text": "and store and then you do um loss and the output"
+    },
+    {
+      "id": 61,
+      "start": 402.4,
+      "end": 410.72,
+      "text": "and that gives you the score to and then you just convert the probabilities to things together"
+    },
+    {
+      "id": 62,
+      "start": 411.36,
+      "end": 419.04,
+      "text": "and this can uh in my experience this has allowed me to find the majority of the bugs and"
+    },
+    {
+      "id": 63,
+      "start": 419.76,
+      "end": 426.32,
+      "text": "um these two things um have allowed me to find the majority of the bugs whenever I was doing any sort"
+    },
+    {
+      "id": 64,
+      "start": 426.32,
+      "end": 431.92,
+      "text": "of like complex thing with respect to generating or models and stuff like that so um"
+    },
+    {
+      "id": 65,
+      "start": 431.92,
+      "end": 436.16,
+      "text": "it's a very common place for bugs even if you're pretty familiar with models so I would"
+    },
+    {
+      "id": 66,
+      "start": 436.16,
+      "end": 442.8,
+      "text": "have to recommend that. This is particularly bad when you're doing something like a search algorithm"
+    },
+    {
+      "id": 67,
+      "start": 442.8,
+      "end": 451.28,
+      "text": "like beam search um and so beam search uh as you know from the generation class instead of picking one"
+    },
+    {
+      "id": 68,
+      "start": 451.28,
+      "end": 460.08,
+      "text": "high probability uh you know word in your next step you maintain several paths and one way that"
+    },
+    {
+      "id": 69,
+      "start": 460.08,
+      "end": 465.68,
+      "text": "you can fix us is as you make search better the model score should get better so the log likelihood"
+    },
+    {
+      "id": 70,
+      "start": 465.68,
+      "end": 471.04,
+      "text": "of the output should get better almost all the time so you can search with varying beam sizes and"
+    },
+    {
+      "id": 71,
+      "start": 471.04,
+      "end": 476.88,
+      "text": "make sure that you get a better overall model score at the end so um and you can even create a unit"
+    },
+    {
+      "id": 72,
+      "start": 476.88,
+      "end": 481.68,
+      "text": "test testing this as well. I don't think that that many people will be re-implementing beam search"
+    },
+    {
+      "id": 73,
+      "start": 481.68,
+      "end": 485.68,
+      "text": "so you might not need to worry about that too much but in case you are doing anything with respect to"
+    },
+    {
+      "id": 74,
+      "start": 485.76,
+      "end": 494.32,
+      "text": "search algorithm it's good thing to know. Cool um any questions about these two so far?"
+    },
+    {
+      "id": 75,
+      "start": 498.72,
+      "end": 506.0,
+      "text": "Yep okay um so the second the next thing I want to talk about this is something that people think"
+    },
+    {
+      "id": 76,
+      "start": 506.0,
+      "end": 510.8,
+      "text": "about a little bit less uh but it's actually something really important to know because it will"
+    },
+    {
+      "id": 77,
+      "start": 510.8,
+      "end": 516.8,
+      "text": "affect you it will affect everybody uh to some extent it will affect you to a greater or lesser"
+    },
+    {
+      "id": 78,
+      "start": 516.8,
+      "end": 526.32,
+      "text": "extent depending on um what uh type of you know system you're building but it will definitely affect"
+    },
+    {
+      "id": 79,
+      "start": 526.32,
+      "end": 531.92,
+      "text": "everybody and that's the mismatch between the the function that you're optimizing at training time"
+    },
+    {
+      "id": 80,
+      "start": 531.92,
+      "end": 539.68,
+      "text": "and the evaluation metric that you're evaluating and so uh like as I said in the reinforcement"
+    },
+    {
+      "id": 81,
+      "start": 539.68,
+      "end": 544.64,
+      "text": "learning class it's very common to optimize for maximum likelihood for training uh but there's"
+    },
+    {
+      "id": 82,
+      "start": 544.64,
+      "end": 549.6,
+      "text": "all kinds of problems with this you know um with respect to the mistake and not being sensitive to"
+    },
+    {
+      "id": 83,
+      "start": 549.6,
+      "end": 556.32,
+      "text": "mistakes and not being sensitive to your generation algorithm um but even though your likelihood is"
+    },
+    {
+      "id": 84,
+      "start": 556.32,
+      "end": 563.6,
+      "text": "getting better accuracy can get worse and this is a super simple example with uh image classification"
+    },
+    {
+      "id": 85,
+      "start": 563.6,
+      "end": 570.56,
+      "text": "on amnesty and I ran this experiment with like 10 lines of pytorch code or something like this uh"
+    },
+    {
+      "id": 86,
+      "start": 570.56,
+      "end": 580.08,
+      "text": "maybe more like 50 40 lines of pytorch code um and so here um on the left side we have the loss"
+    },
+    {
+      "id": 87,
+      "start": 580.72,
+      "end": 588.24,
+      "text": "on the training set and the test set or the dev set and here we have accuracy on the training set"
+    },
+    {
+      "id": 88,
+      "start": 588.32,
+      "end": 597.6,
+      "text": "in the test set and so whoops I showed you the answer I was going to do a quiz but I accidentally"
+    },
+    {
+      "id": 89,
+      "start": 597.6,
+      "end": 600.88,
+      "text": "showed you the answer um but the problem here is"
+    }
+  ],
+  "language": "en"
+}

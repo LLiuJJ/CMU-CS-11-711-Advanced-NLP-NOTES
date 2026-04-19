@@ -1,0 +1,413 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 7.0,
+      "text": "Oh, so to get started, I want to show an example of the scientific method."
+    },
+    {
+      "id": 1,
+      "start": 7.0,
+      "end": 12.0,
+      "text": "I took this directly from Wikipedia, but it's actually pretty nice."
+    },
+    {
+      "id": 2,
+      "start": 12.0,
+      "end": 20.0,
+      "text": "It's a pretty nice and concise summary of what we should do when we're coming up with new kind of research projects."
+    },
+    {
+      "id": 3,
+      "start": 21.0,
+      "end": 25.0,
+      "text": "And we start with an observation or question. We do research of the topic area."
+    },
+    {
+      "id": 4,
+      "start": 25.0,
+      "end": 30.0,
+      "text": "We form a hypothesis. We test it with an experiment analyzed data and report conclusions."
+    },
+    {
+      "id": 5,
+      "start": 30.0,
+      "end": 41.0,
+      "text": "And even if we're doing head of engineering based projects, still this thinking of the stuff that we're doing in a framework like this can help you a lot."
+    },
+    {
+      "id": 6,
+      "start": 42.0,
+      "end": 47.0,
+      "text": "So the first thing I'd like to talk about is identifying good research directions."
+    },
+    {
+      "id": 7,
+      "start": 47.0,
+      "end": 54.0,
+      "text": "And so I'm going to look at that from the observation slash question perspective here."
+    },
+    {
+      "id": 8,
+      "start": 54.0,
+      "end": 61.0,
+      "text": "So if we think about why we do research, particularly why we do research on natural language processing."
+    },
+    {
+      "id": 9,
+      "start": 61.0,
+      "end": 67.0,
+      "text": "There's a couple reasons why the first is application driven research."
+    },
+    {
+      "id": 10,
+      "start": 67.0,
+      "end": 72.0,
+      "text": "And usually this is I would like to make a useful system or make one work better."
+    },
+    {
+      "id": 11,
+      "start": 72.0,
+      "end": 78.0,
+      "text": "So, you know, this is probably the great majority of the NLP research."
+    },
+    {
+      "id": 12,
+      "start": 78.0,
+      "end": 87.0,
+      "text": "Then separately from that there's curiosity driven research, which is like I would like to know more about language or the world viewed through language."
+    },
+    {
+      "id": 13,
+      "start": 87.0,
+      "end": 97.0,
+      "text": "So this doesn't necessarily have to be immediately like a downstream application that users are using will immediately get better."
+    },
+    {
+      "id": 14,
+      "start": 97.0,
+      "end": 104.0,
+      "text": "It's more like we have a burning question that we would like to answer and we like to answer it."
+    },
+    {
+      "id": 15,
+      "start": 104.0,
+      "end": 116.0,
+      "text": "So NLP encompasses both sometimes if you read a paper, you'll have something that's doing both, especially like analyzing the internals or training dynamics of a neural network."
+    },
+    {
+      "id": 16,
+      "start": 116.0,
+      "end": 124.0,
+      "text": "To answer a curiosity driven question and then applying that to come up with a better method that makes it worse better."
+    },
+    {
+      "id": 17,
+      "start": 124.0,
+      "end": 129.0,
+      "text": "I would like to say though that it's kind of rare that there's a paper that does both of them really well."
+    },
+    {
+      "id": 18,
+      "start": 129.0,
+      "end": 145.0,
+      "text": "And so usually one of them is kind of the main focus and I think you can be well served by choosing which one is your main focus and then kind of the other might come as additional bonus on top of that."
+    },
+    {
+      "id": 19,
+      "start": 145.0,
+      "end": 150.0,
+      "text": "So here are a few examples of application driven research."
+    },
+    {
+      "id": 20,
+      "start": 150.0,
+      "end": 156.0,
+      "text": "So for example, ping at all, they proposed the task of sentiment analysis."
+    },
+    {
+      "id": 21,
+      "start": 156.0,
+      "end": 168.0,
+      "text": "So actually there was a paper 22 years ago that proposed the task of sentiment analysis. It might seem very, you know, normal nowadays, but there was a paper that proposed it back then."
+    },
+    {
+      "id": 22,
+      "start": 168.0,
+      "end": 177.0,
+      "text": "And they proposed sentiment analysis because labeling articles with their sentiment would provide succinct summaries to the readers."
+    },
+    {
+      "id": 23,
+      "start": 177.0,
+      "end": 185.0,
+      "text": "So they basically wanted to provide information to readers and that would be useful."
+    },
+    {
+      "id": 24,
+      "start": 185.0,
+      "end": 191.0,
+      "text": "Another paper by ready adult 2019 proposes a task of conversational question answering."
+    },
+    {
+      "id": 25,
+      "start": 191.0,
+      "end": 200.0,
+      "text": "Because in inability to build and maintain common ground is part of the reason why virtual assistants usually don't seem like competent conversational partners."
+    },
+    {
+      "id": 26,
+      "start": 200.0,
+      "end": 207.0,
+      "text": "So when you're talking to your Alexa or your Google home or something like this, you might ask it a question."
+    },
+    {
+      "id": 27,
+      "start": 207.0,
+      "end": 218.0,
+      "text": "And then after you asked it a question, you ask it another question, but it doesn't go back to the context that you had before and they wanted to solve this problem. So they propose this data set."
+    },
+    {
+      "id": 28,
+      "start": 218.0,
+      "end": 230.0,
+      "text": "Dear mineral proposed a method for bottom up the abstractive summarization because neural network based methods for abstractive summarization produce outputs that are fluent but perform poorly a content selection. So they had a problem."
+    },
+    {
+      "id": 29,
+      "start": 230.0,
+      "end": 237.0,
+      "text": "They had a task already in mind they weren't proposing a new task and they there's a problem with the existing system. So they fixed it."
+    },
+    {
+      "id": 30,
+      "start": 237.0,
+      "end": 243.0,
+      "text": "And then who know in Richardson proposed a method for unsupervised words, experimentation, namely sentence piece."
+    },
+    {
+      "id": 31,
+      "start": 243.0,
+      "end": 252.0,
+      "text": "Because language dependent processing makes it hard to train multilingual models is we have to carefully manage the configurations and pre and post processors for language."
+    },
+    {
+      "id": 32,
+      "start": 252.0,
+      "end": 255.0,
+      "text": "So they tried to make things easier."
+    },
+    {
+      "id": 33,
+      "start": 255.0,
+      "end": 262.0,
+      "text": "So like you can see all of these things like the first two are proposing new tasks to solve and they're doing it."
+    },
+    {
+      "id": 34,
+      "start": 262.0,
+      "end": 268.0,
+      "text": "So the point of view of creating something useful for users, the second two are proposing new methods."
+    },
+    {
+      "id": 35,
+      "start": 268.0,
+      "end": 273.0,
+      "text": "The first one is like improving accuracy."
+    },
+    {
+      "id": 36,
+      "start": 273.0,
+      "end": 280.0,
+      "text": "So it's this is the most common most commonly people say I have a test that I want to solve. There's a problem with accuracy. I want to improve it."
+    },
+    {
+      "id": 37,
+      "start": 280.0,
+      "end": 291.0,
+      "text": "But you can also improve other things. So you can improve like convenience or you can improve efficiency or other things like that. So all of those are, you know, perfectly reasonable things."
+    },
+    {
+      "id": 38,
+      "start": 292.0,
+      "end": 305.0,
+      "text": "I also have some examples of curiosity driven research. These are actually harder to find in the ACL anthology is definitely the minority case, but they still do exist."
+    },
+    {
+      "id": 39,
+      "start": 305.0,
+      "end": 315.0,
+      "text": "So for example, rink it at all 2017 asked what is the difference between the language of real news with that of satire, hope says in propaganda."
+    },
+    {
+      "id": 40,
+      "start": 315.0,
+      "end": 321.0,
+      "text": "So they were not attempting to create a system for fake news detection that was not their goal here."
+    },
+    {
+      "id": 41,
+      "start": 321.0,
+      "end": 328.0,
+      "text": "Their goal, their goal was just to figure out what were the different linguistic characteristics and they found that scientifically interesting."
+    },
+    {
+      "id": 42,
+      "start": 328.0,
+      "end": 332.0,
+      "text": "Maybe downstream that would be useful, but that wasn't the point of their paper."
+    },
+    {
+      "id": 43,
+      "start": 332.0,
+      "end": 338.0,
+      "text": "Another one, a federal at all ask are all languages equally hard to language model."
+    },
+    {
+      "id": 44,
+      "start": 338.0,
+      "end": 345.0,
+      "text": "And so basically they wanted to know are all languages just character strings and so language modeling them is similarly easy."
+    },
+    {
+      "id": 45,
+      "start": 345.0,
+      "end": 352.0,
+      "text": "Or are there certain characteristics of language that make them easier or harder to model with the current architectures that we got."
+    },
+    {
+      "id": 46,
+      "start": 352.0,
+      "end": 360.0,
+      "text": "And so they didn't propose a new architecture didn't propose to improve anything they just proposed to examine this question."
+    },
+    {
+      "id": 47,
+      "start": 360.0,
+      "end": 373.0,
+      "text": "And also, teni at all, this is actually an extremely impactful work downstream, but they weren't improving anything they just quantified where specific types of linguistic information are included in birth."
+    },
+    {
+      "id": 48,
+      "start": 373.0,
+      "end": 386.0,
+      "text": "So they will found that, for example, syntax was encoded better in the early layers semantics and the later layers and then if you go farther, you have to other find great things like pragmatic style information."
+    },
+    {
+      "id": 49,
+      "start": 386.0,
+      "end": 395.0,
+      "text": "So I think you can kind of see the difference between these two. Are there any questions about this?"
+    },
+    {
+      "id": 50,
+      "start": 395.0,
+      "end": 398.0,
+      "text": "Okay, let's be right."
+    },
+    {
+      "id": 51,
+      "start": 398.0,
+      "end": 411.0,
+      "text": "So the next question, which I think a lot of people might be asking particularly with respect to assignment four, which requires you to come up with something novel to do is how do we get research ideas."
+    },
+    {
+      "id": 52,
+      "start": 412.0,
+      "end": 429.0,
+      "text": "And the way we can do this is a twofold. So one is kind of we want to turn a concrete understanding of existing research is failings into a higher level experimental question."
+    },
+    {
+      "id": 53,
+      "start": 429.0,
+      "end": 437.0,
+      "text": "And the two ways that I normally characterize doing this are bottom up discovery of research ideas."
+    },
+    {
+      "id": 54,
+      "start": 437.0,
+      "end": 458.0,
+      "text": "Or the way the way I characterize this is bottom up discovery of research ideas. And this is a great tool for making incremental progress on existing systems on tasks that we really care about or expanding the scope of a task that we care about. So some examples of this would be like in assignment number three."
+    },
+    {
+      "id": 55,
+      "start": 458.0,
+      "end": 467.0,
+      "text": "You look, let's say you're looking at."
+    },
+    {
+      "id": 56,
+      "start": 467.0,
+      "end": 476.0,
+      "text": "Let's say you're looking at the question answering performance of models of multilingual models on different languages."
+    },
+    {
+      "id": 57,
+      "start": 476.0,
+      "end": 491.0,
+      "text": "And you for assignment three, you implement a couple multilingual models and different languages you run them. You look at the results and you identify that multilingual models are particularly bad at answering questions about name identities."
+    },
+    {
+      "id": 58,
+      "start": 491.0,
+      "end": 496.0,
+      "text": "And so now you have looked at the output you know decided that that's a big problem."
+    },
+    {
+      "id": 59,
+      "start": 496.0,
+      "end": 514.0,
+      "text": "You can go in and improve it. So this is a great tool for incremental progress. And like in fact, doing this really effectively has been very effective in my own research career. Like we, if I feel like I like to look at data, I try to do that a lot."
+    },
+    {
+      "id": 60,
+      "start": 514.0,
+      "end": 531.0,
+      "text": "And by doing that, I identify the most frequent problems. And because of that, when I fix those problems, my accuracy goes up a lot more than people who have the last good problems, right. And so if we want to accuracy to go up, I'm more efficient to, you know, improving things."
+    },
+    {
+      "id": 61,
+      "start": 531.0,
+      "end": 539.0,
+      "text": "And there's something from the opposite direction is moving from a higher level question to a lower level concrete testing of that question."
+    },
+    {
+      "id": 62,
+      "start": 539.0,
+      "end": 544.0,
+      "text": "And so this could be tap down design, this is tap down design of research ideas."
+    },
+    {
+      "id": 63,
+      "start": 544.0,
+      "end": 557.0,
+      "text": "This favors bigger ideas, but these ideas can be disconnected from reality or they could be not solving the right problems. So the typical like very, very successful example of this is,"
+    },
+    {
+      "id": 64,
+      "start": 557.0,
+      "end": 564.0,
+      "text": "neural machine translation is something like this, neural machine translations, neural sequence sequence models."
+    },
+    {
+      "id": 65,
+      "start": 564.0,
+      "end": 576.0,
+      "text": "This came out of a few people like Jeff Hinton and Yashiro Genji, believing for a very long time that neural networks were the right way to solve lots of problems."
+    },
+    {
+      "id": 66,
+      "start": 576.0,
+      "end": 596.0,
+      "text": "And so they had this idea, which was like we should be doing things with neural networks. And they, you know, they successfully executed that. Now everybody is doing things with neural networks. So they made a really huge revolution in the research space."
+    },
+    {
+      "id": 67,
+      "start": 596.0,
+      "end": 600.0,
+      "text": "That's great. That's a great example of a successful tap down idea, but the problem."
+    }
+  ],
+  "language": "en"
+}

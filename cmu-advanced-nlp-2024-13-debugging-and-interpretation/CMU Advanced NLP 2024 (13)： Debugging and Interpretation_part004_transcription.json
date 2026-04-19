@@ -1,0 +1,827 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 10.0,
+      "text": "So what I want you to take away with you, if you follow sleep, this is two boring."
+    },
+    {
+      "id": 1,
+      "start": 10.0,
+      "end": 12.0,
+      "text": "Here's sort of the two main takeaways."
+    },
+    {
+      "id": 2,
+      "start": 12.0,
+      "end": 16.0,
+      "text": "One, I want to convince you that model interpretability is important to study."
+    },
+    {
+      "id": 3,
+      "start": 16.0,
+      "end": 19.0,
+      "text": "And two, I want, I want you to find this interesting."
+    },
+    {
+      "id": 4,
+      "start": 19.0,
+      "end": 21.0,
+      "text": "And something you want to explore more."
+    },
+    {
+      "id": 5,
+      "start": 21.0,
+      "end": 23.0,
+      "text": "There's a bunch of details here."
+    },
+    {
+      "id": 6,
+      "start": 23.0,
+      "end": 28.0,
+      "text": "This is going to be kind of a whirlwind tour and not going to get super deep and anything."
+    },
+    {
+      "id": 7,
+      "start": 28.0,
+      "end": 30.0,
+      "text": "So hopefully this acts as a starting point."
+    },
+    {
+      "id": 8,
+      "start": 30.0,
+      "end": 34.0,
+      "text": "Then there's anything else."
+    },
+    {
+      "id": 9,
+      "start": 34.0,
+      "end": 37.0,
+      "text": "So interpretability in AI."
+    },
+    {
+      "id": 10,
+      "start": 37.0,
+      "end": 43.0,
+      "text": "The, the definition is the study of understanding the decisions that AI systems make."
+    },
+    {
+      "id": 11,
+      "start": 43.0,
+      "end": 46.0,
+      "text": "And putting them into easily human understandable terms."
+    },
+    {
+      "id": 12,
+      "start": 46.0,
+      "end": 48.0,
+      "text": "This can mean a lot of different things."
+    },
+    {
+      "id": 13,
+      "start": 48.0,
+      "end": 51.0,
+      "text": "And this is often really hard."
+    },
+    {
+      "id": 14,
+      "start": 51.0,
+      "end": 56.0,
+      "text": "And the why is to use that understanding to iteratively better design systems that are better."
+    },
+    {
+      "id": 15,
+      "start": 56.0,
+      "end": 64.0,
+      "text": "They're more, more performant, but also those that are more human understandable."
+    },
+    {
+      "id": 16,
+      "start": 64.0,
+      "end": 71.0,
+      "text": "So interpretability is this big blob that there's a bunch of other spheres that intersect with it."
+    },
+    {
+      "id": 17,
+      "start": 71.0,
+      "end": 74.0,
+      "text": "This is a super incomplete list."
+    },
+    {
+      "id": 18,
+      "start": 74.0,
+      "end": 78.0,
+      "text": "So there with me the causality and data integrate with this."
+    },
+    {
+      "id": 19,
+      "start": 78.0,
+      "end": 82.0,
+      "text": "There's aspects that are interpretable those aspects that matter here."
+    },
+    {
+      "id": 20,
+      "start": 82.0,
+      "end": 85.0,
+      "text": "And explainable AI is another thing that you probably heard."
+    },
+    {
+      "id": 21,
+      "start": 85.0,
+      "end": 92.0,
+      "text": "This sits friendly in the interpretability blob and connects with ideas and causality and."
+    },
+    {
+      "id": 22,
+      "start": 92.0,
+      "end": 97.0,
+      "text": "And data to model interpretability sits on this kind of other side of things."
+    },
+    {
+      "id": 23,
+      "start": 97.0,
+      "end": 101.0,
+      "text": "It intersects a little bit with causality and explainable AI, but."
+    },
+    {
+      "id": 24,
+      "start": 101.0,
+      "end": 104.0,
+      "text": "Is a little bit separate for it."
+    },
+    {
+      "id": 25,
+      "start": 104.0,
+      "end": 105.0,
+      "text": "And from it."
+    },
+    {
+      "id": 26,
+      "start": 105.0,
+      "end": 108.0,
+      "text": "And mechanistic interpretability, which you've probably heard of."
+    },
+    {
+      "id": 27,
+      "start": 108.0,
+      "end": 112.0,
+      "text": "And then it's got a lot of buzz recently kind of sits inside of model interpretability."
+    },
+    {
+      "id": 28,
+      "start": 112.0,
+      "end": 114.0,
+      "text": "It's a special case of model interpretability."
+    },
+    {
+      "id": 29,
+      "start": 114.0,
+      "end": 115.0,
+      "text": "I hope that."
+    },
+    {
+      "id": 30,
+      "start": 115.0,
+      "end": 118.0,
+      "text": "I can tell people agree with me."
+    },
+    {
+      "id": 31,
+      "start": 118.0,
+      "end": 120.0,
+      "text": "So yeah, which is you have a convolution that just looks at!"
+    },
+    {
+      "id": 32,
+      "start": 138.0,
+      "end": 141.0,
+      "text": "And in the first case, that's a nice line."
+    },
+    {
+      "id": 33,
+      "start": 141.0,
+      "end": 143.0,
+      "text": "Could be two parameters."
+    },
+    {
+      "id": 34,
+      "start": 143.0,
+      "end": 145.0,
+      "text": "The multivariate case again, but."
+    },
+    {
+      "id": 35,
+      "start": 145.0,
+      "end": 147.0,
+      "text": "A small number of parameters."
+    },
+    {
+      "id": 36,
+      "start": 147.0,
+      "end": 150.0,
+      "text": "We've moved it to more things."
+    },
+    {
+      "id": 37,
+      "start": 150.0,
+      "end": 151.0,
+      "text": "We've moved to."
+    },
+    {
+      "id": 38,
+      "start": 151.0,
+      "end": 154.0,
+      "text": "MLP is that have larger weight matrices."
+    },
+    {
+      "id": 39,
+      "start": 154.0,
+      "end": 157.0,
+      "text": "But all of these are kind of digestible and interpretable."
+    },
+    {
+      "id": 40,
+      "start": 157.0,
+      "end": 159.0,
+      "text": "So the interpretability world was sort of."
+    },
+    {
+      "id": 41,
+      "start": 159.0,
+      "end": 162.0,
+      "text": "Not super concerned with."
+    },
+    {
+      "id": 42,
+      "start": 162.0,
+      "end": 164.0,
+      "text": "Large ginormous thing."
+    },
+    {
+      "id": 43,
+      "start": 164.0,
+      "end": 166.0,
+      "text": "But we're not there anymore."
+    },
+    {
+      "id": 44,
+      "start": 166.0,
+      "end": 169.0,
+      "text": "And this is a language model."
+    },
+    {
+      "id": 45,
+      "start": 169.0,
+      "end": 172.0,
+      "text": "This is part of still part of the language model."
+    },
+    {
+      "id": 46,
+      "start": 172.0,
+      "end": 177.0,
+      "text": "Now it's getting more and more and more herrings."
+    },
+    {
+      "id": 47,
+      "start": 177.0,
+      "end": 180.0,
+      "text": "And this is just not interpretable."
+    },
+    {
+      "id": 48,
+      "start": 180.0,
+      "end": 182.0,
+      "text": "I mentioned."
+    },
+    {
+      "id": 49,
+      "start": 182.0,
+      "end": 187.0,
+      "text": "On on the first day of class that I hate only update parameters of models."
+    },
+    {
+      "id": 50,
+      "start": 187.0,
+      "end": 189.0,
+      "text": "Also hate when models are this way."
+    },
+    {
+      "id": 51,
+      "start": 189.0,
+      "end": 192.0,
+      "text": "And this is the six layer transformer."
+    },
+    {
+      "id": 52,
+      "start": 192.0,
+      "end": 195.0,
+      "text": "This is way smaller than basically anything that we have."
+    },
+    {
+      "id": 53,
+      "start": 195.0,
+      "end": 197.0,
+      "text": "And."
+    },
+    {
+      "id": 54,
+      "start": 197.0,
+      "end": 198.0,
+      "text": "And."
+    },
+    {
+      "id": 55,
+      "start": 198.0,
+      "end": 201.0,
+      "text": "This makes things very, very uninterpretable."
+    },
+    {
+      "id": 56,
+      "start": 201.0,
+      "end": 205.0,
+      "text": "So we'll talk about one one way that people sort of."
+    },
+    {
+      "id": 57,
+      "start": 205.0,
+      "end": 208.0,
+      "text": "Five years ago started addressing this problem."
+    },
+    {
+      "id": 58,
+      "start": 208.0,
+      "end": 209.0,
+      "text": "And this is."
+    },
+    {
+      "id": 59,
+      "start": 209.0,
+      "end": 211.0,
+      "text": "And this is the idea of probing."
+    },
+    {
+      "id": 60,
+      "start": 211.0,
+      "end": 213.0,
+      "text": "So how do we make sense of a giant model?"
+    },
+    {
+      "id": 61,
+      "start": 213.0,
+      "end": 214.0,
+      "text": "This is one way."
+    },
+    {
+      "id": 62,
+      "start": 214.0,
+      "end": 217.0,
+      "text": "So we take our giant model."
+    },
+    {
+      "id": 63,
+      "start": 217.0,
+      "end": 220.0,
+      "text": "We cut the top off basically."
+    },
+    {
+      "id": 64,
+      "start": 220.0,
+      "end": 222.0,
+      "text": "And now we have this way."
+    },
+    {
+      "id": 65,
+      "start": 222.0,
+      "end": 227.0,
+      "text": "And we stick a pro, which actually in a lot of cases looks very similar to language model and head."
+    },
+    {
+      "id": 66,
+      "start": 227.0,
+      "end": 232.0,
+      "text": "Usually it's a small two layer or one layer MLP."
+    },
+    {
+      "id": 67,
+      "start": 232.0,
+      "end": 237.0,
+      "text": "And we basically treat the model as something that."
+    },
+    {
+      "id": 68,
+      "start": 237.0,
+      "end": 242.0,
+      "text": "That exists and we only really care about the output of the model."
+    },
+    {
+      "id": 69,
+      "start": 242.0,
+      "end": 245.0,
+      "text": "So more specifically, what is the problem?"
+    },
+    {
+      "id": 70,
+      "start": 245.0,
+      "end": 246.0,
+      "text": "It's a classifier."
+    },
+    {
+      "id": 71,
+      "start": 246.0,
+      "end": 248.0,
+      "text": "This is green thing here."
+    },
+    {
+      "id": 72,
+      "start": 248.0,
+      "end": 256.0,
+      "text": "That is specifically trained to predict some specific property from a pre trained models representations alone."
+    },
+    {
+      "id": 73,
+      "start": 256.0,
+      "end": 262.0,
+      "text": "So in 2019, e and 10 e and so introduced edge problem."
+    },
+    {
+      "id": 74,
+      "start": 262.0,
+      "end": 264.0,
+      "text": "So this is a general method."
+    },
+    {
+      "id": 75,
+      "start": 264.0,
+      "end": 268.0,
+      "text": "It works to probe different types of information out of a model."
+    },
+    {
+      "id": 76,
+      "start": 268.0,
+      "end": 271.0,
+      "text": "So this bottom part here."
+    },
+    {
+      "id": 77,
+      "start": 271.0,
+      "end": 273.0,
+      "text": "Yeah, bottom part here."
+    },
+    {
+      "id": 78,
+      "start": 273.0,
+      "end": 275.0,
+      "text": "It passed in a sequence."
+    },
+    {
+      "id": 79,
+      "start": 275.0,
+      "end": 277.0,
+      "text": "You pass it into a model."
+    },
+    {
+      "id": 80,
+      "start": 277.0,
+      "end": 280.0,
+      "text": "This is burnt in their experiments often."
+    },
+    {
+      "id": 81,
+      "start": 280.0,
+      "end": 284.0,
+      "text": "And that outputs the set of contextual vectors."
+    },
+    {
+      "id": 82,
+      "start": 284.0,
+      "end": 287.0,
+      "text": "These contextual vectors can be at any layer."
+    },
+    {
+      "id": 83,
+      "start": 287.0,
+      "end": 292.0,
+      "text": "Often it's near the often it's near the top, but we'll talk about."
+    },
+    {
+      "id": 84,
+      "start": 292.0,
+      "end": 297.0,
+      "text": "The fact that this can work kind of across layers and different layers and code different information."
+    },
+    {
+      "id": 85,
+      "start": 297.0,
+      "end": 303.0,
+      "text": "And on top of this, you have this MLP that you train to output a prediction."
+    },
+    {
+      "id": 86,
+      "start": 303.0,
+      "end": 308.0,
+      "text": "And model is always always fixed in these cases."
+    },
+    {
+      "id": 87,
+      "start": 308.0,
+      "end": 315.0,
+      "text": "So you can do things like part of speech tagging where each specific word you try to determine what it's part of speeches."
+    },
+    {
+      "id": 88,
+      "start": 315.0,
+      "end": 320.0,
+      "text": "And in that case, this, these S1 and S2 spans here."
+    },
+    {
+      "id": 89,
+      "start": 320.0,
+      "end": 325.0,
+      "text": "Only one of them is active because you're predicting for every single contextualized vector."
+    },
+    {
+      "id": 90,
+      "start": 325.0,
+      "end": 329.0,
+      "text": "You're predicting whether that thing was a now or a different."
+    },
+    {
+      "id": 91,
+      "start": 329.0,
+      "end": 334.0,
+      "text": "Other sorts of tests to like entailment where you have two sequences in two spans."
+    },
+    {
+      "id": 92,
+      "start": 334.0,
+      "end": 338.0,
+      "text": "And you use the embeddings for those spans."
+    },
+    {
+      "id": 93,
+      "start": 338.0,
+      "end": 342.0,
+      "text": "For like sentence one and sentence two, you pull them together in some way."
+    },
+    {
+      "id": 94,
+      "start": 342.0,
+      "end": 347.0,
+      "text": "And then you pass them to this MLP and you see whether the MLP can."
+    },
+    {
+      "id": 95,
+      "start": 347.0,
+      "end": 349.0,
+      "text": "Solve that text."
+    },
+    {
+      "id": 96,
+      "start": 349.0,
+      "end": 351.0,
+      "text": "So they did this."
+    },
+    {
+      "id": 97,
+      "start": 351.0,
+      "end": 355.0,
+      "text": "In another paper, but we discovered the MLP pipeline."
+    },
+    {
+      "id": 98,
+      "start": 355.0,
+      "end": 365.0,
+      "text": "And there's a lot going on in this figure. The the only major thing here to take away is these numbers better in the pink purple color."
+    },
+    {
+      "id": 99,
+      "start": 365.0,
+      "end": 373.0,
+      "text": "So these are a bunch of different properties, so part of speech and a bunch of other things."
+    },
+    {
+      "id": 100,
+      "start": 373.0,
+      "end": 382.0,
+      "text": "And what they basically find is that earlier layers in the model, the things that are closer to the token level representation are more."
+    },
+    {
+      "id": 101,
+      "start": 382.0,
+      "end": 393.0,
+      "text": "Extractible using a probe and the things that require more contextualize information is extractible later from later layers of the model."
+    },
+    {
+      "id": 102,
+      "start": 393.0,
+      "end": 398.0,
+      "text": "And so here's sort of a brief description of what these tasks are."
+    },
+    {
+      "id": 103,
+      "start": 398.0,
+      "end": 407.0,
+      "text": "So the ones on the bottom are more semantic more contextualized like semantic polar roles and related relations classification."
+    },
+    {
+      "id": 104,
+      "start": 407.0,
+      "end": 417.0,
+      "text": "And the first few are more chunking and part of speech tagging on dependency labeling and these these sorts of tests."
+    },
+    {
+      "id": 105,
+      "start": 417.0,
+      "end": 426.0,
+      "text": "So there's a bunch of issues with probing and there aren't as many probing papers now as there were many years ago."
+    },
+    {
+      "id": 106,
+      "start": 426.0,
+      "end": 431.0,
+      "text": "And so if you're probed let's say your probe works."
+    },
+    {
+      "id": 107,
+      "start": 431.0,
+      "end": 440.0,
+      "text": "It's possible that the representation actually encodes that information. It's also possible that it doesn't the probe solve the task by itself."
+    },
+    {
+      "id": 108,
+      "start": 440.0,
+      "end": 444.0,
+      "text": "Keep in mind that you're learning this probe you're training this probe on labeled data."
+    },
+    {
+      "id": 109,
+      "start": 444.0,
+      "end": 459.0,
+      "text": "Let's say your probe doesn't work. Does that tell you anything maybe not maybe the representation that same information or maybe your probe doesn't doesn't actually isn't actually able to disentangle that information from your representation."
+    },
+    {
+      "id": 110,
+      "start": 459.0,
+      "end": 465.0,
+      "text": "And then you can't have the right function class maybe you poorly trained your probe. There's hyper parameters for your probe."
+    },
+    {
+      "id": 111,
+      "start": 465.0,
+      "end": 468.0,
+      "text": "So oftentimes your probe doesn't give you that much information."
+    },
+    {
+      "id": 112,
+      "start": 468.0,
+      "end": 476.0,
+      "text": "There's more problems too. So often we want to probe tasks themselves and that requires a lot of supervised data."
+    },
+    {
+      "id": 113,
+      "start": 476.0,
+      "end": 487.0,
+      "text": "But we can't collect a lot of supervised data. So we collect some of it. And then that instead produces this convenient sample that we have that's a data set that is a convenience handle of your task."
+    },
+    {
+      "id": 114,
+      "start": 487.0,
+      "end": 493.0,
+      "text": "And then really what you're probing is the data set. And so with all these limitations."
+    },
+    {
+      "id": 115,
+      "start": 493.0,
+      "end": 502.0,
+      "text": "It's it's fallen out of favor a little bit. It's still very, very useful. But it's fallen out of favor as like a core model interpretability idea."
+    },
+    {
+      "id": 116,
+      "start": 502.0,
+      "end": 508.0,
+      "text": "Also probes designed in this way are correlated. They're correlated not really causative."
+    },
+    {
+      "id": 117,
+      "start": 509.0,
+      "end": 515.0,
+      "text": "Your underlying model is trained in a specific way. All of that information was disentangled and kind of thrown away."
+    },
+    {
+      "id": 118,
+      "start": 515.0,
+      "end": 523.0,
+      "text": "And you're only looking at the output representation and you're saying, is my output representation correlated to the thing that I'm training this probe for."
+    },
+    {
+      "id": 119,
+      "start": 523.0,
+      "end": 537.0,
+      "text": "There's no notion of intervening on this latent space. There's no notion of causation really. So you're just seeing whether your representation is correlated with your property that you're probing for it."
+    },
+    {
+      "id": 120,
+      "start": 537.0,
+      "end": 542.0,
+      "text": "And then you're saying, is my output representation is a common sense."
+    },
+    {
+      "id": 121,
+      "start": 542.0,
+      "end": 547.0,
+      "text": "So I think these limitations, the communities moved a little bit away from this area."
+    },
+    {
+      "id": 122,
+      "start": 547.0,
+      "end": 552.0,
+      "text": "There's a bunch of other probing works. So a bunch of people aim to solve a bunch of these problems."
+    },
+    {
+      "id": 123,
+      "start": 552.0,
+      "end": 558.0,
+      "text": "And for the sake of time, I'm not going to go into all of these. But I'd encourage you to look into these."
+    },
+    {
+      "id": 124,
+      "start": 558.0,
+      "end": 564.0,
+      "text": "Controls for control for a lot of complexity of the of the probe and things like this."
+    },
+    {
+      "id": 125,
+      "start": 564.0,
+      "end": 571.0,
+      "text": "But even despite that, probing is sort of slowly kind of fall all the favor."
+    },
+    {
+      "id": 126,
+      "start": 571.0,
+      "end": 581.0,
+      "text": "So before I move into model interpretability, if there any questions on probing."
+    },
+    {
+      "id": 127,
+      "start": 581.0,
+      "end": 583.56,
+      "text": "So what is model interpretability?"
+    },
+    {
+      "id": 128,
+      "start": 583.56,
+      "end": 586.08,
+      "text": "So this is my definition here."
+    },
+    {
+      "id": 129,
+      "start": 586.08,
+      "end": 589.36,
+      "text": "This is the study of understanding internals and models."
+    },
+    {
+      "id": 130,
+      "start": 589.36,
+      "end": 591.56,
+      "text": "For example, there are weights and activations,"
+    },
+    {
+      "id": 131,
+      "start": 591.56,
+      "end": 594.28,
+      "text": "putting those insights in human intelligible trends"
+    },
+    {
+      "id": 132,
+      "start": 594.28,
+      "end": 597.16,
+      "text": "and using that insight to both patch current models"
+    },
+    {
+      "id": 133,
+      "start": 597.16,
+      "end": 598.52,
+      "text": "and develop betterings."
+    },
+    {
+      "id": 134,
+      "start": 598.52,
+      "end": 600.96,
+      "text": "So we're not able to do both of these things,"
+    },
+    {
+      "id": 135,
+      "start": 600.96,
+      "end": 602.72,
+      "text": "patching current models and develop better ones."
+    },
+    {
+      "id": 136,
+      "start": 602.72,
+      "end": 604.24,
+      "text": "We're kind of doing interpretability."
+    }
+  ],
+  "language": "en"
+}

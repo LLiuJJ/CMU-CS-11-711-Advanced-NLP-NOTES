@@ -1,0 +1,497 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 5.0,
+      "text": "And the paper that proposes is actually by Daniel Fried,"
+    },
+    {
+      "id": 1,
+      "start": 5.0,
+      "end": 13.0,
+      "text": "LTI here, and the basically what you want to do often is you have"
+    },
+    {
+      "id": 2,
+      "start": 13.0,
+      "end": 18.0,
+      "text": "previous code, you have next code, and you want to just fill in like a line that's missing."
+    },
+    {
+      "id": 3,
+      "start": 18.0,
+      "end": 23.0,
+      "text": "Like you want to add an extra, you know, if statement or some sort of modification."
+    },
+    {
+      "id": 4,
+      "start": 24.0,
+      "end": 30.0,
+      "text": "And so the way that at least this paper proposed it and the way that I think most"
+    },
+    {
+      "id": 5,
+      "start": 30.0,
+      "end": 35.0,
+      "text": "elements are actually doing this is they take a standard left to right LM."
+    },
+    {
+      "id": 6,
+      "start": 35.0,
+      "end": 39.0,
+      "text": "And what they want to do is they want to infill this code chunk."
+    },
+    {
+      "id": 7,
+      "start": 39.0,
+      "end": 44.0,
+      "text": "And so what they do is they put a mask in the place where they want to fill the chunk,"
+    },
+    {
+      "id": 8,
+      "start": 44.0,
+      "end": 49.0,
+      "text": "which would also be where your cursor is in your IDE right at that point."
+    },
+    {
+      "id": 9,
+      "start": 49.0,
+      "end": 52.0,
+      "text": "And then they have mass to zero."
+    },
+    {
+      "id": 10,
+      "start": 52.0,
+      "end": 60.0,
+      "text": "And then at the end, if they put mass to zero again, and then they output the like,"
+    },
+    {
+      "id": 11,
+      "start": 60.0,
+      "end": 63.0,
+      "text": "you know, all of the code that you want to generate there."
+    },
+    {
+      "id": 12,
+      "start": 63.0,
+      "end": 67.0,
+      "text": "And so you can just kind of arbitrarily generate these trunks by pulling, you know,"
+    },
+    {
+      "id": 13,
+      "start": 67.0,
+      "end": 72.0,
+      "text": "masking out chunks, putting in the mass token and then moving it to the end of the sequence."
+    },
+    {
+      "id": 14,
+      "start": 72.0,
+      "end": 75.0,
+      "text": "And then you can just use a standard left to right auto regressive language,"
+    },
+    {
+      "id": 15,
+      "start": 75.0,
+      "end": 78.0,
+      "text": "which might have solved this pattern."
+    },
+    {
+      "id": 16,
+      "start": 78.0,
+      "end": 81.0,
+      "text": "So this is really important if you want to build like a co-pilot style thing."
+    },
+    {
+      "id": 17,
+      "start": 81.0,
+      "end": 90.0,
+      "text": "And all of the code language models that I talk about at the end of this class use this technique."
+    },
+    {
+      "id": 18,
+      "start": 90.0,
+      "end": 96.0,
+      "text": "Another thing is there's lots of available information for learning coding things."
+    },
+    {
+      "id": 19,
+      "start": 96.0,
+      "end": 102.0,
+      "text": "Or for solving coding tasks. This includes, you know, the current code context, of course."
+    },
+    {
+      "id": 20,
+      "start": 102.0,
+      "end": 107.0,
+      "text": "Also the description of the issue that you want to be fixing, like if you're solving a poll request."
+    },
+    {
+      "id": 21,
+      "start": 107.0,
+      "end": 110.0,
+      "text": "Repo context from other files."
+    },
+    {
+      "id": 22,
+      "start": 110.0,
+      "end": 116.0,
+      "text": "What tabs you have open so that that's also an important thing."
+    },
+    {
+      "id": 23,
+      "start": 116.0,
+      "end": 124.0,
+      "text": "And when GitHub co-pilot came out, they didn't really tell you the details of how they were doing this."
+    },
+    {
+      "id": 24,
+      "start": 124.0,
+      "end": 128.0,
+      "text": "But GitHub co-pilot is written in JavaScript."
+    },
+    {
+      "id": 25,
+      "start": 128.0,
+      "end": 136.0,
+      "text": "And there was a PhD student, I think from maybe Georgia Tech or something,"
+    },
+    {
+      "id": 26,
+      "start": 136.0,
+      "end": 142.0,
+      "text": "who or master student who basically went in and took the JavaScript and like deminified it."
+    },
+    {
+      "id": 27,
+      "start": 142.0,
+      "end": 145.0,
+      "text": "Like for reverse engineered what was actually happening."
+    },
+    {
+      "id": 28,
+      "start": 145.0,
+      "end": 149.0,
+      "text": "And wrote a blog about it and this blog is great."
+    },
+    {
+      "id": 29,
+      "start": 149.0,
+      "end": 157.0,
+      "text": "So basically what co-pilot is doing, which also kind of gives you a gold standard way of looking at."
+    },
+    {
+      "id": 30,
+      "start": 157.0,
+      "end": 170.0,
+      "text": "You know, what kind of information is necessary to create a good model is first they extract information for the prompt given the current document in the cursor position."
+    },
+    {
+      "id": 31,
+      "start": 170.0,
+      "end": 177.0,
+      "text": "So they take the current document, where is the cursor and what is before this and what is after this."
+    },
+    {
+      "id": 32,
+      "start": 177.0,
+      "end": 181.0,
+      "text": "They identified the relative path of the file and what language it's in."
+    },
+    {
+      "id": 33,
+      "start": 181.0,
+      "end": 186.0,
+      "text": "So they they identify play fun files or JavaScript files or whatever."
+    },
+    {
+      "id": 34,
+      "start": 186.0,
+      "end": 191.0,
+      "text": "They find the most recently accessed 20 files in the same language."
+    },
+    {
+      "id": 35,
+      "start": 191.0,
+      "end": 197.0,
+      "text": "So like if you've opened 20 tabs, they keep track of which tab you had open."
+    },
+    {
+      "id": 36,
+      "start": 197.0,
+      "end": 205.0,
+      "text": "And then the actual prompt that they send over includes text that is before text that's after."
+    },
+    {
+      "id": 37,
+      "start": 205.0,
+      "end": 209.0,
+      "text": "Similar files out of the 20 files that you've opened recently."
+    },
+    {
+      "id": 38,
+      "start": 209.0,
+      "end": 215.0,
+      "text": "Also information from imported files and metadata about the language in the path."
+    },
+    {
+      "id": 39,
+      "start": 215.0,
+      "end": 219.0,
+      "text": "So all of this is sent to the model."
+    },
+    {
+      "id": 40,
+      "start": 219.0,
+      "end": 232.0,
+      "text": "And so this is just basically it's really good prompt engineering right there figuring out a good way to get all the information that would be useful for getting this model to work into the prompt."
+    },
+    {
+      "id": 41,
+      "start": 232.0,
+      "end": 242.0,
+      "text": "So I there's much, much more information in this blog. It's a really nice blog if you want to see about it, but that's a basic."
+    },
+    {
+      "id": 42,
+      "start": 242.0,
+      "end": 247.0,
+      "text": "Any questions."
+    },
+    {
+      "id": 43,
+      "start": 247.0,
+      "end": 249.0,
+      "text": "Yeah."
+    },
+    {
+      "id": 44,
+      "start": 249.0,
+      "end": 263.0,
+      "text": "This is what gets sent over to the co pilot server, but the way they're sending it makes me guess it like all of this is red."
+    },
+    {
+      "id": 45,
+      "start": 263.0,
+      "end": 277.0,
+      "text": "So like they also are considering I didn't mention it here, but they're considering the token one that and other stuff like that. So that kind of makes me feel like this is actually the front."
+    },
+    {
+      "id": 46,
+      "start": 277.0,
+      "end": 279.0,
+      "text": "Cool."
+    },
+    {
+      "id": 47,
+      "start": 279.0,
+      "end": 288.0,
+      "text": "So another thing that you can do is retrieval based code generation and retrieval based code generation."
+    },
+    {
+      "id": 48,
+      "start": 288.0,
+      "end": 293.0,
+      "text": "Basically what it does is it's like rag for code generation."
+    },
+    {
+      "id": 49,
+      "start": 293.0,
+      "end": 302.0,
+      "text": "And this has been around for a while, including our work that I said you're in a few more in 2018."
+    },
+    {
+      "id": 50,
+      "start": 302.0,
+      "end": 307.0,
+      "text": "And so one way you can do this is you can retrieve similar code from online."
+    },
+    {
+      "id": 51,
+      "start": 307.0,
+      "end": 314.0,
+      "text": "And then use it to basically prompt the retrieval augmented language model."
+    },
+    {
+      "id": 52,
+      "start": 314.0,
+      "end": 330.0,
+      "text": "So it's good if you have a model that's not super good at code in the first place or you know it's making mistakes. It's also good if you have a large code base like that's internal and you know the language model is not trained on it, but you still want to use that code base for generation."
+    },
+    {
+      "id": 53,
+      "start": 330.0,
+      "end": 340.0,
+      "text": "So it's really good if you're working it like a big company, for example, that has a very constant coding style, but hasn't trained its own LM."
+    },
+    {
+      "id": 54,
+      "start": 340.0,
+      "end": 345.0,
+      "text": "Particularly in code, there's also documentation, which can be retrieved."
+    },
+    {
+      "id": 55,
+      "start": 345.0,
+      "end": 365.0,
+      "text": "And so we have new libraries all the time, right? And when frustrating thing when using like a chat to pee or clawed or something like that when you're writing programs is that it can use old versions of libraries that are no longer compatible."
+    },
+    {
+      "id": 56,
+      "start": 365.0,
+      "end": 372.0,
+      "text": "So in this paper, which this is one of our papers to we call the doc prompting."
+    },
+    {
+      "id": 57,
+      "start": 372.0,
+      "end": 380.0,
+      "text": "Basically the idea is that you have your natural language input and then you look up."
+    },
+    {
+      "id": 58,
+      "start": 380.0,
+      "end": 388.0,
+      "text": "Similar thing similar documentation. So you find like pigment is a general syntax highlighter."
+    },
+    {
+      "id": 59,
+      "start": 388.0,
+      "end": 411.0,
+      "text": "You can find syntax highlighting. You can also look up the laxer. You can look up the HTML for matter. And then all of the things that have similar documentation, then you can append that to the prompt and then have that generating output and redemonstrate that this is good both in general, but also it's particularly good when you're dealing with new libraries that haven't done seen before libraries."
+    },
+    {
+      "id": 60,
+      "start": 411.0,
+      "end": 415.0,
+      "text": "So this is another thing."
+    },
+    {
+      "id": 61,
+      "start": 415.0,
+      "end": 418.0,
+      "text": "Cool."
+    },
+    {
+      "id": 62,
+      "start": 418.0,
+      "end": 425.0,
+      "text": "Another thing that you can do with code that you can't do easily with natural language is execution feedback."
+    },
+    {
+      "id": 63,
+      "start": 425.0,
+      "end": 436.0,
+      "text": "And so this is a paper where basically they do something that's rather simple, but they generate multiple types of code."
+    },
+    {
+      "id": 64,
+      "start": 436.0,
+      "end": 446.0,
+      "text": "So they basically sample different varieties of code. And I was talking about like tacit k, right before tacit k is good."
+    },
+    {
+      "id": 65,
+      "start": 446.0,
+      "end": 455.0,
+      "text": "If you have some way to confirm which output is correct, like you already have unit tests and you can run the unit test and identify which one passes unit test or you can have a human check it."
+    },
+    {
+      "id": 66,
+      "start": 455.0,
+      "end": 467.0,
+      "text": "In the case when you can't do that, what can you do. And basically what you can do is you can execute all of the code snippets that the model generated and check if the outputs overlap with each other."
+    },
+    {
+      "id": 67,
+      "start": 467.0,
+      "end": 482.0,
+      "text": "And if you have, you know, 30 programs that all generate very similar outputs, then those outputs, you know, then that program is probably correct and then you can just pick one of them according to some criterion."
+    },
+    {
+      "id": 68,
+      "start": 482.0,
+      "end": 497.0,
+      "text": "Specifically, in this case, they picked the program that has the lowest base risk, like we talked about minimum base risk in the decoding lectures. So they basically execute a lot and then calculate the base risk about that."
+    },
+    {
+      "id": 69,
+      "start": 497.0,
+      "end": 499.0,
+      "text": "Cool."
+    },
+    {
+      "id": 70,
+      "start": 499.0,
+      "end": 503.0,
+      "text": "Yeah."
+    },
+    {
+      "id": 71,
+      "start": 503.0,
+      "end": 515.0,
+      "text": "And so like self consistency is a variety of base rest. And they're using base risk here because outputs might not be exactly the same, but being closer is probably better than other."
+    },
+    {
+      "id": 72,
+      "start": 515.0,
+      "end": 521.0,
+      "text": "If they don't know that you see what the unit test does, they're just different."
+    },
+    {
+      "id": 73,
+      "start": 521.0,
+      "end": 531.0,
+      "text": "Comparison of the code. Yeah, that's a good question, especially if you use something good like code, but it's for to do that comparison, you might not even."
+    },
+    {
+      "id": 74,
+      "start": 531.0,
+      "end": 535.0,
+      "text": "I don't think they did that miss."
+    },
+    {
+      "id": 75,
+      "start": 535.0,
+      "end": 537.0,
+      "text": "Cool."
+    },
+    {
+      "id": 76,
+      "start": 537.0,
+      "end": 559.0,
+      "text": "Another interesting thing is there's several lines of work on fixing based on air messages. So the basic idea is you generate code, you try to run it, you get an air message from it and then you feed that back to the LLM in order to, you know, correct the air."
+    },
+    {
+      "id": 77,
+      "start": 559.0,
+      "end": 571.0,
+      "text": "Like LMS, if you give them an air and you give them buggy code, they do have some capacity to do that, especially as you get to this longer LMS. So this is kind of a nice paradigm."
+    },
+    {
+      "id": 78,
+      "start": 571.0,
+      "end": 578.0,
+      "text": "This paper intercode actually generalizes this a bit and it's more recent. That's why I cited it here."
+    },
+    {
+      "id": 79,
+      "start": 578.0,
+      "end": 587.0,
+      "text": "And so this also like says you can do a single turn code generation, you can also say, oh, could you please try again."
+    },
+    {
+      "id": 80,
+      "start": 587.0,
+      "end": 602.0,
+      "text": "You can also do planning and solving and other stuff like that. So this is a good kind of like environment, if you're interested in making these more interactive coding assistance, for example, so you could take an effect."
+    },
+    {
+      "id": 81,
+      "start": 602.0,
+      "end": 604.0,
+      "text": "Cool."
+    }
+  ],
+  "language": "en"
+}

@@ -1,0 +1,551 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 4.32,
+      "text": "that work better, but I don't know if there's any like gold standard and just"
+    },
+    {
+      "id": 1,
+      "start": 4.32,
+      "end": 9.16,
+      "text": "industry practice for doing something like this at the moment. So just to give"
+    },
+    {
+      "id": 2,
+      "start": 9.16,
+      "end": 14.68,
+      "text": "an example, this paper, it's a really nice paper examining why in context"
+    },
+    {
+      "id": 3,
+      "start": 14.68,
+      "end": 20.12,
+      "text": "learning works. One thing, one interesting finding that they have is they"
+    },
+    {
+      "id": 4,
+      "start": 20.12,
+      "end": 26.04,
+      "text": "output, they take in context examples, but they randomize the labels. They make"
+    },
+    {
+      "id": 5,
+      "start": 26.04,
+      "end": 33.24,
+      "text": "the labels wrong some of the time. So even with completely wrong labels, even"
+    },
+    {
+      "id": 6,
+      "start": 33.24,
+      "end": 37.72,
+      "text": "with labels that are correct, 0% of the time, you still get much, much better"
+    },
+    {
+      "id": 7,
+      "start": 37.72,
+      "end": 43.56,
+      "text": "accuracy than if you use no in context examples. And why is this probably, you"
+    },
+    {
+      "id": 8,
+      "start": 43.56,
+      "end": 48.68,
+      "text": "know, it's getting the model formatting correct, it's getting like the names of"
+    },
+    {
+      "id": 9,
+      "start": 48.68,
+      "end": 53.28,
+      "text": "the labels correct, even if it's not accurate. So it seems like it's not really"
+    },
+    {
+      "id": 10,
+      "start": 53.28,
+      "end": 56.36,
+      "text": "using these for training data, it's using them more just to know the formatting"
+    },
+    {
+      "id": 11,
+      "start": 56.36,
+      "end": 57.36,
+      "text": "appropriately."
+    },
+    {
+      "id": 12,
+      "start": 57.36,
+      "end": 64.36,
+      "text": "You just like, you know, you know, you know, what I see of it, when you're"
+    },
+    {
+      "id": 13,
+      "start": 64.36,
+      "end": 71.84,
+      "text": "looking at it, right? How is it, how does it, like, it is just why I want to"
+    },
+    {
+      "id": 14,
+      "start": 71.84,
+      "end": 75.76,
+      "text": "do it, I think I'm just going to see how you're doing, but I'm going to"
+    },
+    {
+      "id": 15,
+      "start": 75.76,
+      "end": 81.08,
+      "text": "find the difference. So this is, you're not training the model at the moment, we're"
+    },
+    {
+      "id": 16,
+      "start": 81.08,
+      "end": 83.76,
+      "text": "going to talk about that in that space. But right now you're taking a model that"
+    },
+    {
+      "id": 17,
+      "start": 83.76,
+      "end": 87.6,
+      "text": "has already been trained and you're providing it with a few examples and then"
+    },
+    {
+      "id": 18,
+      "start": 87.6,
+      "end": 90.8,
+      "text": "you're asking it to fill in the following examples."
+    },
+    {
+      "id": 19,
+      "start": 90.8,
+      "end": 94.48,
+      "text": "Is this the reason I'm talking about the input? Yes, exactly."
+    },
+    {
+      "id": 20,
+      "start": 94.48,
+      "end": 99.84,
+      "text": "And it's pretty amazing that that works in the first place, especially with the"
+    },
+    {
+      "id": 21,
+      "start": 99.84,
+      "end": 105.0,
+      "text": "model that hasn't been explicitly trained in that way. But there's a fair amount"
+    },
+    {
+      "id": 22,
+      "start": 105.0,
+      "end": 107.36,
+      "text": "of research that I think we're probably going to be talking about in the"
+    },
+    {
+      "id": 23,
+      "start": 107.36,
+      "end": 114.16,
+      "text": "interpretability class about why this happens. But basically, my interpretation"
+    },
+    {
+      "id": 24,
+      "start": 114.16,
+      "end": 117.28,
+      "text": "for why this happens is because there's so much repetitive stuff on the"
+    },
+    {
+      "id": 25,
+      "start": 117.28,
+      "end": 123.08,
+      "text": "internet, right? There is a bunch of examples of math problems, which is like"
+    },
+    {
+      "id": 26,
+      "start": 123.08,
+      "end": 127.12,
+      "text": "question one, and then the math problem and then the answer question two math"
+    },
+    {
+      "id": 27,
+      "start": 127.12,
+      "end": 131.24,
+      "text": "problem and then the answer. So in order to model the text on the internet,"
+    },
+    {
+      "id": 28,
+      "start": 131.24,
+      "end": 133.76,
+      "text": "it needs to learn how to be able to do these things."
+    },
+    {
+      "id": 29,
+      "start": 133.76,
+      "end": 142.52,
+      "text": "So cool. The second thing is more demonstrations can sometimes hurt"
+    },
+    {
+      "id": 30,
+      "start": 142.52,
+      "end": 146.92,
+      "text": "accuracy. So this is like binary classification versus multiple choice"
+    },
+    {
+      "id": 31,
+      "start": 146.92,
+      "end": 152.28,
+      "text": "question answering. And actually with binary classification, the model ends up"
+    },
+    {
+      "id": 32,
+      "start": 152.28,
+      "end": 157.52,
+      "text": "getting worse with more examples, probably just because the longer context"
+    },
+    {
+      "id": 33,
+      "start": 157.52,
+      "end": 164.72,
+      "text": "confuses the model or moves the instructions that are provided to the model"
+    },
+    {
+      "id": 34,
+      "start": 164.72,
+      "end": 171.32,
+      "text": "farther away in the context. So it starts forgetting them. So basically, what I"
+    },
+    {
+      "id": 35,
+      "start": 171.32,
+      "end": 176.08,
+      "text": "want to say is, you know, this is more of an art than a science. You might not"
+    },
+    {
+      "id": 36,
+      "start": 176.08,
+      "end": 182.32,
+      "text": "get entirely predictable results, but don't worry, it's natural to you. Cool, yeah."
+    },
+    {
+      "id": 37,
+      "start": 182.32,
+      "end": 201.0,
+      "text": "So the question is, if the income tax examples reflect the data distribution well,"
+    },
+    {
+      "id": 38,
+      "start": 201.0,
+      "end": 207.76,
+      "text": "would that boost the accuracy? I think the answer is provenance. Yeah. I don't know if"
+    },
+    {
+      "id": 39,
+      "start": 207.76,
+      "end": 217.56,
+      "text": "it's that clear because like what I would expect is better coverage is probably more"
+    },
+    {
+      "id": 40,
+      "start": 217.56,
+      "end": 224.32,
+      "text": "important than better representativeness. So like even if you have some minority"
+    },
+    {
+      "id": 41,
+      "start": 224.32,
+      "end": 228.72,
+      "text": "labels, it's probably better for the model to know what those minority labels look"
+    },
+    {
+      "id": 42,
+      "start": 228.72,
+      "end": 237.72,
+      "text": "like. And that's going to be especially from like stronger models. Cool. Okay."
+    },
+    {
+      "id": 43,
+      "start": 237.72,
+      "end": 242.56,
+      "text": "So next thing I want to talk about chain of thought prompting. So chain of thought prompting"
+    },
+    {
+      "id": 44,
+      "start": 242.56,
+      "end": 249.64,
+      "text": "is a very popular way of prompting models. And the way it works is you get the model to"
+    },
+    {
+      "id": 45,
+      "start": 249.64,
+      "end": 258.0,
+      "text": "explain its reasoning before making an answer. And so sorry, this example is a little bit"
+    },
+    {
+      "id": 46,
+      "start": 258.0,
+      "end": 264.84,
+      "text": "small, but like the standard prompting method is like Roger has five tennis balls. He buys"
+    },
+    {
+      "id": 47,
+      "start": 264.84,
+      "end": 268.24,
+      "text": "two more cans of tennis balls. Each can has three tennis balls. How many tennis balls"
+    },
+    {
+      "id": 48,
+      "start": 268.24,
+      "end": 277.0,
+      "text": "does he have now? The answer is 11. And so this is an in context example. And then you"
+    },
+    {
+      "id": 49,
+      "start": 277.0,
+      "end": 282.56,
+      "text": "have your input, which has a different problem. The cafeteria has 23 apples. If they use"
+    },
+    {
+      "id": 50,
+      "start": 282.56,
+      "end": 288.84,
+      "text": "20 to make lunch and bought six more, how many apples do they have? The answer is 27."
+    },
+    {
+      "id": 51,
+      "start": 288.84,
+      "end": 294.48,
+      "text": "And so this is wrong. So what chain of thought prompting does is instead of just giving"
+    },
+    {
+      "id": 52,
+      "start": 294.48,
+      "end": 301.48,
+      "text": "the answer, it gives you an additional reasoning chain that says Roger started with five balls,"
+    },
+    {
+      "id": 53,
+      "start": 301.48,
+      "end": 306.28,
+      "text": "two cans of three tennis balls. Each is six tennis balls, five plus six equals 11. The"
+    },
+    {
+      "id": 54,
+      "start": 306.28,
+      "end": 311.6,
+      "text": "answer is 11. And so then when you feed this in, basically the model will generate a similar"
+    },
+    {
+      "id": 55,
+      "start": 311.6,
+      "end": 316.64,
+      "text": "reasoning chain. And then it's more likely to get the answer correct. And this very robustly"
+    },
+    {
+      "id": 56,
+      "start": 316.64,
+      "end": 328.04,
+      "text": "works for many different problems where a reasoning chain is necessary. And if you think"
+    },
+    {
+      "id": 57,
+      "start": 328.04,
+      "end": 335.56,
+      "text": "about the reason why this, why this works, I think there's basically two reasons why."
+    },
+    {
+      "id": 58,
+      "start": 335.56,
+      "end": 340.92,
+      "text": "The first reason is I only wrote one on the finger, but the first reason is it allows the"
+    },
+    {
+      "id": 59,
+      "start": 340.92,
+      "end": 345.92,
+      "text": "model to decompose harder problems into simpler problems and simpler problems are easier"
+    },
+    {
+      "id": 60,
+      "start": 345.92,
+      "end": 354.56,
+      "text": "to use it. So instead of immediately trying to solve the whole problem in a single go,"
+    },
+    {
+      "id": 61,
+      "start": 354.56,
+      "end": 361.48,
+      "text": "it will first solve the problem of like how many are left after you use money. And so it"
+    },
+    {
+      "id": 62,
+      "start": 361.48,
+      "end": 365.88,
+      "text": "gets three. And so now it has this three here. So now it can solve the next problem adding"
+    },
+    {
+      "id": 63,
+      "start": 365.88,
+      "end": 372.64,
+      "text": "sex that's equal to 90. So it's solving simpler, subproblems than it is in compared to"
+    },
+    {
+      "id": 64,
+      "start": 372.64,
+      "end": 378.96,
+      "text": "everyone's. Another reason why is it allows for adaptive computation time. So if you think"
+    },
+    {
+      "id": 65,
+      "start": 378.96,
+      "end": 387.96,
+      "text": "about like a transformer model, if you think about a transformer model, a transformer model"
+    },
+    {
+      "id": 66,
+      "start": 387.96,
+      "end": 392.44,
+      "text": "has fixed computation time. You were predicting you showed it right. You have a fixed number of"
+    },
+    {
+      "id": 67,
+      "start": 392.44,
+      "end": 397.48,
+      "text": "layers. And based on that fixed number of layers, it passes all the information through"
+    },
+    {
+      "id": 68,
+      "start": 397.48,
+      "end": 402.88,
+      "text": "the matrix of prediction. And some problems are harder than others, right? So it would be"
+    },
+    {
+      "id": 69,
+      "start": 402.88,
+      "end": 408.52,
+      "text": "very wasteful to have a really big transformer that could solve, you know, really complex math"
+    },
+    {
+      "id": 70,
+      "start": 408.52,
+      "end": 417.52,
+      "text": "problems. In the same amount of time, it takes to predict that the next word is like a dog"
+    },
+    {
+      "id": 71,
+      "start": 417.52,
+      "end": 422.48,
+      "text": "after the word the big or something like that, right? So there are some things that are easy."
+    },
+    {
+      "id": 72,
+      "start": 422.48,
+      "end": 426.04,
+      "text": "We can do it a second. There are some things that take us more time. And essentially this"
+    },
+    {
+      "id": 73,
+      "start": 426.04,
+      "end": 433.04,
+      "text": "chain of thought reasoning is doing that. It's giving it more time to solve the harder problems."
+    },
+    {
+      "id": 74,
+      "start": 433.04,
+      "end": 451.04,
+      "text": "Yes. Okay. Yeah, good question. So that's what this next paper does. So the question was"
+    },
+    {
+      "id": 75,
+      "start": 451.04,
+      "end": 457.48,
+      "text": "what happens if we just ask it to reason? And the answer is it still works. And this paper"
+    },
+    {
+      "id": 76,
+      "start": 457.48,
+      "end": 464.64,
+      "text": "was really like, I love this paper for its simplicity and cleverness. And basically they"
+    },
+    {
+      "id": 77,
+      "start": 464.64,
+      "end": 471.88,
+      "text": "contrast few shot learning few shot chain of thought where you provide chain of thought examples,"
+    },
+    {
+      "id": 78,
+      "start": 471.88,
+      "end": 478.64,
+      "text": "zero shot prompting basically and zero shot chain of thought. So what they do is they just"
+    },
+    {
+      "id": 79,
+      "start": 478.64,
+      "end": 486.8,
+      "text": "add, let's think step by step, that they add that phrase to the end of the prompt. And then"
+    },
+    {
+      "id": 80,
+      "start": 486.8,
+      "end": 492.96,
+      "text": "that elicits the model to basically do chain of thought reason without any further examples"
+    },
+    {
+      "id": 81,
+      "start": 492.96,
+      "end": 498.0,
+      "text": "of how that chain of thought reasoning works. Why does this work? Again, because like on the"
+    },
+    {
+      "id": 82,
+      "start": 498.0,
+      "end": 504.0,
+      "text": "internet, there's a bunch of examples of math problem solving data sets or QA corpora"
+    },
+    {
+      "id": 83,
+      "start": 504.0,
+      "end": 509.44,
+      "text": "where it says let's think step by step. And after that, you consistently have this sort of"
+    },
+    {
+      "id": 84,
+      "start": 509.44,
+      "end": 516.64,
+      "text": "reasoning. So good intuition of this paper answers the question and this like actually does"
+    },
+    {
+      "id": 85,
+      "start": 517.36,
+      "end": 542.24,
+      "text": "it. One interesting thing is now if I go to chat GPT and I say I am teaching a class for 98 students,"
+    },
+    {
+      "id": 86,
+      "start": 542.24,
+      "end": 564.16,
+      "text": "50, 70% in the assignment is on time 10% and it really is very own. Maybe did not. Let's see,"
+    },
+    {
+      "id": 87,
+      "start": 564.16,
+      "end": 577.36,
+      "text": "let's see if this works. Okay, it's writing code for me. Which is, that's a feature slide. I kind of"
+    },
+    {
+      "id": 88,
+      "start": 577.36,
+      "end": 583.28,
+      "text": "didn't want it to do that."
+    },
+    {
+      "id": 89,
+      "start": 584.24,
+      "end": 586.0,
+      "text": "Okay."
+    },
+    {
+      "id": 90,
+      "start": 599.84,
+      "end": 602.88,
+      "text": "Okay, so it's a little bit slow."
+    }
+  ],
+  "language": "en"
+}

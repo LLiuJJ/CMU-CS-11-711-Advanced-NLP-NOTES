@@ -1,0 +1,533 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 10.2,
+      "text": "Cool. Another important topic is code synthesis from input output examples. So actually when"
+    },
+    {
+      "id": 1,
+      "start": 10.2,
+      "end": 16.44,
+      "text": "you said code generation or code synthesis like five years ago or ten years ago, a lot"
+    },
+    {
+      "id": 2,
+      "start": 16.44,
+      "end": 21.16,
+      "text": "of people would think about this. So this is actually, this has been around a lot longer"
+    },
+    {
+      "id": 3,
+      "start": 21.16,
+      "end": 29.4,
+      "text": "than code synthesis. Then serious inquiries into code synthesis from natural language."
+    },
+    {
+      "id": 4,
+      "start": 29.4,
+      "end": 36.72,
+      "text": "So basically the way this works is it can have no natural language whatsoever. But you"
+    },
+    {
+      "id": 5,
+      "start": 36.72,
+      "end": 44.52,
+      "text": "still can try to guess the input output examples. When would you want to do this? So one example"
+    },
+    {
+      "id": 6,
+      "start": 44.52,
+      "end": 49.36,
+      "text": "of this is something called flash fell, which has been around for a very long time in Microsoft"
+    },
+    {
+      "id": 7,
+      "start": 49.36,
+      "end": 56.88,
+      "text": "Excel. And basically the way it works is you have one column and the column might be"
+    },
+    {
+      "id": 8,
+      "start": 56.88,
+      "end": 79.68,
+      "text": "right, brand, new big and just get around and read. And so we have this column and then"
+    },
+    {
+      "id": 9,
+      "start": 79.68,
+      "end": 89.04,
+      "text": "we have like G new big. And from like one or a couple examples, basically what it does"
+    },
+    {
+      "id": 10,
+      "start": 89.04,
+      "end": 93.76,
+      "text": "is it tries to induce a program that can generate all the other examples. So in this particular"
+    },
+    {
+      "id": 11,
+      "start": 93.76,
+      "end": 101.96,
+      "text": "case, that would be like split, take the first character from the first one and all of the"
+    },
+    {
+      "id": 12,
+      "start": 101.96,
+      "end": 110.24,
+      "text": "last one and then concatenate and then all of the things. And so this is useful in some"
+    },
+    {
+      "id": 13,
+      "start": 110.24,
+      "end": 115.2,
+      "text": "cases like in Excel, when you have this long sheet and you run to fill in the rest of it."
+    },
+    {
+      "id": 14,
+      "start": 115.2,
+      "end": 123.4,
+      "text": "And this has actually been deployed in Excel and widely used. If you're interested in this"
+    },
+    {
+      "id": 15,
+      "start": 123.4,
+      "end": 128.96,
+      "text": "topic, there's a fair amount of work in it. My, there's a little bit less work now because"
+    },
+    {
+      "id": 16,
+      "start": 128.96,
+      "end": 134.08,
+      "text": "most people are focusing on learning programs from natural language and others stuff like this."
+    },
+    {
+      "id": 17,
+      "start": 134.08,
+      "end": 139.52,
+      "text": "But this slightly older paper paper called interpret explains a bunch of the different methods"
+    },
+    {
+      "id": 18,
+      "start": 139.52,
+      "end": 148.16,
+      "text": "that people used and how you like how they compare and stuff. And also, Joshua, a tenant,"
+    },
+    {
+      "id": 19,
+      "start": 148.16,
+      "end": 153.04,
+      "text": "bombs group from MIT has done a lot on programs and put out that example. So you can also take"
+    },
+    {
+      "id": 20,
+      "start": 153.04,
+      "end": 161.12,
+      "text": "that. That sounds interesting. One thing about this is these generally are mostly done on domain"
+    },
+    {
+      "id": 21,
+      "start": 161.12,
+      "end": 167.68,
+      "text": "specific languages. So they're mostly done like only for reg X's or they're done only for, you"
+    },
+    {
+      "id": 22,
+      "start": 167.68,
+      "end": 173.12,
+      "text": "know, SQL or something like that. Not for the more general purpose languages, just because a problem"
+    },
+    {
+      "id": 23,
+      "start": 173.12,
+      "end": 178.16,
+      "text": "without any natural language specification is harder. And so you need to like make the search space"
+    },
+    {
+      "id": 24,
+      "start": 178.16,
+      "end": 185.04,
+      "text": "smaller or traditionally you need to make the search space smaller. So that's another thing to know."
+    },
+    {
+      "id": 25,
+      "start": 188.24,
+      "end": 190.08,
+      "text": "Cool. Any questions about these?"
+    },
+    {
+      "id": 26,
+      "start": 192.88,
+      "end": 197.92,
+      "text": "Nice. Okay. So finally in the last few minutes, I'd like to talk about code LMs."
+    },
+    {
+      "id": 27,
+      "start": 198.96,
+      "end": 206.08,
+      "text": "And I'm going to go through about four of them. The first one is code X. And so yeah,"
+    },
+    {
+      "id": 28,
+      "start": 206.16,
+      "end": 209.92,
+      "text": "actually what I should mention is all of the LMs that I talked about up until this point are code"
+    },
+    {
+      "id": 29,
+      "start": 209.92,
+      "end": 215.6,
+      "text": "LMs because every LM trains on code. So I'm mainly going to be talking about one specifically for code"
+    },
+    {
+      "id": 30,
+      "start": 215.6,
+      "end": 225.2,
+      "text": "this time. So code X is the first and kind of like first really big impact code LM. It was created"
+    },
+    {
+      "id": 31,
+      "start": 225.2,
+      "end": 231.12,
+      "text": "by OpenAI. Originally, I don't know about the deployed model now because, you know, they don't"
+    },
+    {
+      "id": 32,
+      "start": 231.12,
+      "end": 236.48,
+      "text": "release details of it, but originally this was trained by continued training from GPT-3."
+    },
+    {
+      "id": 33,
+      "start": 237.2,
+      "end": 243.36,
+      "text": "So they had a text LM and then they just continued training it on lots and lots of code from GitHub."
+    },
+    {
+      "id": 34,
+      "start": 244.96,
+      "end": 251.6,
+      "text": "So yeah, the data was lots of data from GitHub. If you did anything on GitHub at any point in your"
+    },
+    {
+      "id": 35,
+      "start": 251.6,
+      "end": 259.44,
+      "text": "life, you might be contributing to code X. So thank you on behalf of OpenAI, a $80 billion company."
+    },
+    {
+      "id": 36,
+      "start": 260.16,
+      "end": 269.68,
+      "text": "And importantly, at powers, I believe it's still powers GitHub, a co-pilot. One interesting thing is"
+    },
+    {
+      "id": 37,
+      "start": 269.68,
+      "end": 276.24,
+      "text": "they had a large version of code X and then they had a smaller version of code X called code"
+    },
+    {
+      "id": 38,
+      "start": 276.24,
+      "end": 282.48,
+      "text": "Cushman. And the thing actually powering GitHub co-pilot is not the largest version. It's not code"
+    },
+    {
+      "id": 39,
+      "start": 282.48,
+      "end": 289.44,
+      "text": "DaVinci, it's code Cushman, which is smaller and much faster. And the reason why is probably"
+    },
+    {
+      "id": 40,
+      "start": 289.44,
+      "end": 295.76,
+      "text": "Cunefold number one, you need really fast responses when you're, you know, working on code."
+    },
+    {
+      "id": 41,
+      "start": 296.48,
+      "end": 300.08,
+      "text": "And there's actually in co-pilot, there's some caching and other stuff like that to make"
+    },
+    {
+      "id": 42,
+      "start": 300.08,
+      "end": 305.52,
+      "text": "your responses very fast as well. The second reason is probably it just be too expensive for them to"
+    },
+    {
+      "id": 43,
+      "start": 305.52,
+      "end": 310.96,
+      "text": "run DaVinci over all the code bases for how much they're charging you for co-pilot. So like every single"
+    },
+    {
+      "id": 44,
+      "start": 310.96,
+      "end": 316.88,
+      "text": "time you like change something in one of your files if you're using co-pilot, it's rerunning in LOM."
+    },
+    {
+      "id": 45,
+      "start": 317.6,
+      "end": 322.48,
+      "text": "And that would become very expensive if you look at the token file. So I think they're using a"
+    },
+    {
+      "id": 46,
+      "start": 322.48,
+      "end": 330.96,
+      "text": "smaller model because of that. But nonetheless, it's very good. Cool. So now I want to get into some"
+    },
+    {
+      "id": 47,
+      "start": 330.96,
+      "end": 336.8,
+      "text": "more modern models. The first one I want to get into is a star code or two. And the reason why I"
+    },
+    {
+      "id": 48,
+      "start": 336.8,
+      "end": 342.64,
+      "text": "want to talk about this first is because not necessarily that it's like absolutely the best one,"
+    },
+    {
+      "id": 49,
+      "start": 342.64,
+      "end": 346.56,
+      "text": "although it's very good. But it's one of the models that actually tells us everything about their"
+    },
+    {
+      "id": 50,
+      "start": 346.56,
+      "end": 353.12,
+      "text": "training data and training process and stuff. So we know everything about them. So the creator of this"
+    },
+    {
+      "id": 51,
+      "start": 353.12,
+      "end": 360.64,
+      "text": "was the big science project, which was led by Hugging Face and Service now. And includes lots and"
+    },
+    {
+      "id": 52,
+      "start": 360.64,
+      "end": 368.16,
+      "text": "lots of people from various universities and things. The architecture is mostly LOMA style. It has"
+    },
+    {
+      "id": 53,
+      "start": 368.16,
+      "end": 376.96,
+      "text": "3B, 7B, and 15B variants. One interesting thing about all code LMs is that they all do long"
+    },
+    {
+      "id": 54,
+      "start": 376.96,
+      "end": 383.68,
+      "text": "context. They all do longer context. And they all reconfigure rope for longer context specifically. So"
+    },
+    {
+      "id": 55,
+      "start": 384.48,
+      "end": 391.04,
+      "text": "you know, rope has a theta parameter that allows you to tell how long the like sign, sign waves and"
+    },
+    {
+      "id": 56,
+      "start": 391.04,
+      "end": 397.92,
+      "text": "stuff like that are. And they all always change the parameters so that the context is longer. So"
+    },
+    {
+      "id": 57,
+      "start": 397.92,
+      "end": 405.52,
+      "text": "that's another good thing to know about. The training data section of this paper is really"
+    },
+    {
+      "id": 58,
+      "start": 405.52,
+      "end": 413.68,
+      "text": "fascinating. I didn't like it's a really good way to look at, you know, how much data engineering"
+    },
+    {
+      "id": 59,
+      "start": 413.68,
+      "end": 419.44,
+      "text": "goes into making a good model. And just very shortly, they give a lot more detail in the paper. But"
+    },
+    {
+      "id": 60,
+      "start": 419.44,
+      "end": 427.68,
+      "text": "it's trained on code, including the stack, which is just a huge amount like repository of code that"
+    },
+    {
+      "id": 61,
+      "start": 427.68,
+      "end": 432.56,
+      "text": "will talk about in a second. Separately from that, it was trained on GitHub issues. It was trained"
+    },
+    {
+      "id": 62,
+      "start": 432.56,
+      "end": 439.12,
+      "text": "on pull requests, Jupyter notebooks, Kaggle notebooks, documentation, and also intermediate"
+    },
+    {
+      "id": 63,
+      "start": 439.12,
+      "end": 448.8,
+      "text": "representations from LOMVM. So LOMVM is a, you know, like intermediate compiler-style thing"
+    },
+    {
+      "id": 64,
+      "start": 448.8,
+      "end": 454.08,
+      "text": "that is used for compiling code. And it was also trained on a few code relevant natural language"
+    },
+    {
+      "id": 65,
+      "start": 454.08,
+      "end": 463.6,
+      "text": "data sets. So for pre-processing, they do something pretty interesting, which is they add metadata"
+    },
+    {
+      "id": 66,
+      "start": 463.6,
+      "end": 470.4,
+      "text": "tags such as the repo name and the file name and other stuff like this. 50% of the time. And they"
+    },
+    {
+      "id": 67,
+      "start": 470.4,
+      "end": 474.8,
+      "text": "do this 50% of the time because they want the model to work with them, but also be robust without"
+    },
+    {
+      "id": 68,
+      "start": 474.8,
+      "end": 482.4,
+      "text": "them. And so you can either add them or not add them at test time. They also do infill in every"
+    },
+    {
+      "id": 69,
+      "start": 482.4,
+      "end": 489.2,
+      "text": "serious code LOM does infilling this training. One interesting thing about this from the training"
+    },
+    {
+      "id": 70,
+      "start": 489.2,
+      "end": 495.04,
+      "text": "perspective is they actually trained it for four to five epochs, which is much more than we normally"
+    },
+    {
+      "id": 71,
+      "start": 495.04,
+      "end": 500.48,
+      "text": "do. So normally we only train for like one epoch over, you know, all of the data we have, but"
+    },
+    {
+      "id": 72,
+      "start": 500.48,
+      "end": 504.24,
+      "text": "here they were training for longer. And that's just because the amount of data they can get for code"
+    },
+    {
+      "id": 73,
+      "start": 504.24,
+      "end": 507.76,
+      "text": "is less than the amount of data they can get for all the natural language on the map."
+    },
+    {
+      "id": 74,
+      "start": 508.72,
+      "end": 516.72,
+      "text": "So the data set that they created is the stack two. And this is a code pre-training data set."
+    },
+    {
+      "id": 75,
+      "start": 516.72,
+      "end": 522.56,
+      "text": "One interesting thing that they thought about was license considerations. So I talked about the"
+    },
+    {
+      "id": 76,
+      "start": 522.56,
+      "end": 528.96,
+      "text": "how copyright is a problem when training large language models two classes ago. And so here they"
+    },
+    {
+      "id": 77,
+      "start": 528.96,
+      "end": 535.36,
+      "text": "specifically tried to find things with permissive licenses. And so what they did is they basically"
+    },
+    {
+      "id": 78,
+      "start": 535.36,
+      "end": 540.56,
+      "text": "looked at the license I'd get hub. And if a get hub license was permissive, they marked it as"
+    },
+    {
+      "id": 79,
+      "start": 540.56,
+      "end": 546.4,
+      "text": "permissive. Then they tried to detect licenses and then if all of them were permissive, they marked"
+    },
+    {
+      "id": 80,
+      "start": 546.4,
+      "end": 553.92,
+      "text": "it as permissive. This is a huge table that they have in the paper of all of the data that they have."
+    },
+    {
+      "id": 81,
+      "start": 554.72,
+      "end": 559.52,
+      "text": "And you know, I'm not going to go through all of this obviously, but what you can see is some of"
+    },
+    {
+      "id": 82,
+      "start": 559.52,
+      "end": 571.28,
+      "text": "the biggest data sets are like Java, PHP, Markdown, and Python and other stuff like that. So you"
+    },
+    {
+      "id": 83,
+      "start": 571.28,
+      "end": 576.16,
+      "text": "can see the major programming languages have lots of data, but there's also a long tail. So if you"
+    },
+    {
+      "id": 84,
+      "start": 576.8,
+      "end": 583.12,
+      "text": "like your, you know, more isoteric, but cool programming languages like Rust, yes, it has"
+    },
+    {
+      "id": 85,
+      "start": 583.12,
+      "end": 593.52,
+      "text": "rest too. So we can do all of those things. So the next model that I'd like to talk about is CodeLama."
+    },
+    {
+      "id": 86,
+      "start": 594.32,
+      "end": 600.0,
+      "text": "And CodeLama is another competitive model. It came out a little bit before start voter and"
+    },
+    {
+      "id": 87,
+      "start": 600.0,
+      "end": 609.52,
+      "text": "start voter to and deep seek voter, which I'm going to talk about."
+    }
+  ],
+  "language": "en"
+}

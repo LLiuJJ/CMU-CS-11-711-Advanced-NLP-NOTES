@@ -1,0 +1,725 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 10.0,
+      "text": "You instead want your student model to produce probabilities over the full distribution of labels that matches the teacher's distribution over labels."
+    },
+    {
+      "id": 1,
+      "start": 10.0,
+      "end": 18.0,
+      "text": "So like here, the Lama 70 billion our teacher has predicted like probabilities over three different labels."
+    },
+    {
+      "id": 2,
+      "start": 18.0,
+      "end": 21.0,
+      "text": "And then we want the student model to match those probabilities."
+    },
+    {
+      "id": 3,
+      "start": 21.0,
+      "end": 29.0,
+      "text": "I think a cool thing here is that this is usually not possible with supervised learning when you have an annotator."
+    },
+    {
+      "id": 4,
+      "start": 29.0,
+      "end": 35.0,
+      "text": "They usually just give you one answer. They don't tell you how likely it is that they were wrong about that answer."
+    },
+    {
+      "id": 5,
+      "start": 35.0,
+      "end": 39.0,
+      "text": "But they don't tell you what the next best answer was."
+    },
+    {
+      "id": 6,
+      "start": 39.0,
+      "end": 46.0,
+      "text": "But with a neural network that's teaching you, you can ask that. You have a lot more flexibility."
+    },
+    {
+      "id": 7,
+      "start": 46.0,
+      "end": 54.0,
+      "text": "And then this also changes how it's optimized. So instead of optimizing for like the probability of the correct answer."
+    },
+    {
+      "id": 8,
+      "start": 54.0,
+      "end": 60.0,
+      "text": "You can basically optimize for the difference in your, the distributions over the answers."
+    },
+    {
+      "id": 9,
+      "start": 60.0,
+      "end": 65.0,
+      "text": "And."
+    },
+    {
+      "id": 10,
+      "start": 65.0,
+      "end": 68.0,
+      "text": "As we can see here."
+    },
+    {
+      "id": 11,
+      "start": 68.0,
+      "end": 76.0,
+      "text": "Here in this paper by Jeff hinted and some others. They use this method for a speech. I think it was speech recognition."
+    },
+    {
+      "id": 12,
+      "start": 76.0,
+      "end": 82.0,
+      "text": "And they showed that this baseline here is."
+    },
+    {
+      "id": 13,
+      "start": 82.0,
+      "end": 91.0,
+      "text": "They took a training set and the through way labels and pseudo label those the inputs of the like the input speech with another model."
+    },
+    {
+      "id": 14,
+      "start": 91.0,
+      "end": 95.0,
+      "text": "And then they showed that if you're using hard targets."
+    },
+    {
+      "id": 15,
+      "start": 95.0,
+      "end": 99.0,
+      "text": "And you use like the full training sets inputs you can get pretty far."
+    },
+    {
+      "id": 16,
+      "start": 99.0,
+      "end": 112.0,
+      "text": "But if you instead don't have that much unlabeled speech and you use like a small amount of speech using soft targets is like way, way more effective."
+    },
+    {
+      "id": 17,
+      "start": 112.0,
+      "end": 118.0,
+      "text": "And I'll just jump ahead to. I think a."
+    },
+    {
+      "id": 18,
+      "start": 118.0,
+      "end": 122.0,
+      "text": "A result that is like pretty shocking that it works."
+    },
+    {
+      "id": 19,
+      "start": 122.0,
+      "end": 126.0,
+      "text": "So this came from a Zapplipton and some other people a few years ago."
+    },
+    {
+      "id": 20,
+      "start": 126.0,
+      "end": 133.0,
+      "text": "And the idea here is that you can take a model that is trained with supervised learning."
+    },
+    {
+      "id": 21,
+      "start": 133.0,
+      "end": 137.0,
+      "text": "And here they trained it on like a image classification task."
+    },
+    {
+      "id": 22,
+      "start": 137.0,
+      "end": 142.0,
+      "text": "And then repeatedly distill it to itself using soft targets."
+    },
+    {
+      "id": 23,
+      "start": 142.0,
+      "end": 148.0,
+      "text": "So you take a bunch of images and then predict the distribution over the labels of those images."
+    },
+    {
+      "id": 24,
+      "start": 148.0,
+      "end": 152.0,
+      "text": "And then train the model to basically match its own."
+    },
+    {
+      "id": 25,
+      "start": 152.0,
+      "end": 155.0,
+      "text": "The."
+    },
+    {
+      "id": 26,
+      "start": 155.0,
+      "end": 159.0,
+      "text": "You train the model in a soft target installation objectives."
+    },
+    {
+      "id": 27,
+      "start": 159.0,
+      "end": 161.0,
+      "text": "Using itself as a teacher."
+    },
+    {
+      "id": 28,
+      "start": 161.0,
+      "end": 166.0,
+      "text": "And it's still kind of bizarre to me that this works, but they show that this."
+    },
+    {
+      "id": 29,
+      "start": 166.0,
+      "end": 169.0,
+      "text": "Pretty consistently improves performance of a model."
+    },
+    {
+      "id": 30,
+      "start": 169.0,
+      "end": 178.0,
+      "text": "So I think that the to me, the intuition here is that this soft target objective, which is different than what you were trained on in."
+    },
+    {
+      "id": 31,
+      "start": 178.0,
+      "end": 181.0,
+      "text": "What you would train using supervised learning."
+    },
+    {
+      "id": 32,
+      "start": 181.0,
+      "end": 186.0,
+      "text": "It's like a different objective that is somehow conveying more information to your model."
+    },
+    {
+      "id": 33,
+      "start": 186.0,
+      "end": 189.0,
+      "text": "It's conveying like uncertainty is about the labels and."
+    },
+    {
+      "id": 34,
+      "start": 189.0,
+      "end": 193.0,
+      "text": "It's like a richer."
+    },
+    {
+      "id": 35,
+      "start": 193.0,
+      "end": 197.0,
+      "text": "A richer knowledge interface between the teacher and the student."
+    },
+    {
+      "id": 36,
+      "start": 197.0,
+      "end": 199.0,
+      "text": "Then just giving a single answer."
+    },
+    {
+      "id": 37,
+      "start": 199.0,
+      "end": 203.0,
+      "text": "And that this like rich interface of knowledge can be really effective to me."
+    },
+    {
+      "id": 38,
+      "start": 203.0,
+      "end": 206.0,
+      "text": "That's like the takeaway from this results."
+    },
+    {
+      "id": 39,
+      "start": 206.0,
+      "end": 211.0,
+      "text": "Yeah, check out this paper if you think this is cool."
+    },
+    {
+      "id": 40,
+      "start": 211.0,
+      "end": 214.0,
+      "text": "Okay, so."
+    },
+    {
+      "id": 41,
+      "start": 214.0,
+      "end": 219.0,
+      "text": "Any questions on what I talked about so far in distillation here."
+    },
+    {
+      "id": 42,
+      "start": 219.0,
+      "end": 222.0,
+      "text": "I think we're seeing that it's you."
+    },
+    {
+      "id": 43,
+      "start": 222.0,
+      "end": 225.0,
+      "text": "Is that all?"
+    },
+    {
+      "id": 44,
+      "start": 225.0,
+      "end": 233.0,
+      "text": "Yeah, we seem to drop on."
+    },
+    {
+      "id": 45,
+      "start": 233.0,
+      "end": 237.0,
+      "text": "I do."
+    },
+    {
+      "id": 46,
+      "start": 237.0,
+      "end": 240.0,
+      "text": "Is it the example?"
+    },
+    {
+      "id": 47,
+      "start": 240.0,
+      "end": 250.0,
+      "text": "Yeah, I think that's right."
+    },
+    {
+      "id": 48,
+      "start": 250.0,
+      "end": 261.0,
+      "text": "Yeah, if you think of a dropout as a way to perturb the model."
+    },
+    {
+      "id": 49,
+      "start": 261.0,
+      "end": 264.0,
+      "text": "You have different perturb versions of a model here."
+    },
+    {
+      "id": 50,
+      "start": 264.0,
+      "end": 268.0,
+      "text": "They instead instead produce these perturbed versions of the model by."
+    },
+    {
+      "id": 51,
+      "start": 268.0,
+      "end": 271.0,
+      "text": "They're the previous version to itself."
+    },
+    {
+      "id": 52,
+      "start": 271.0,
+      "end": 277.0,
+      "text": "And then under under that view, it's like they're both just ensembles of random perturbations of the same model."
+    },
+    {
+      "id": 53,
+      "start": 277.0,
+      "end": 280.0,
+      "text": "Yeah, I think that that's exactly right."
+    },
+    {
+      "id": 54,
+      "start": 280.0,
+      "end": 283.0,
+      "text": "I don't know."
+    },
+    {
+      "id": 55,
+      "start": 283.0,
+      "end": 293.0,
+      "text": "So, you see, with the answer is not high in which only then the softening of the view also has a low quality."
+    },
+    {
+      "id": 56,
+      "start": 293.0,
+      "end": 299.0,
+      "text": "How do you train the model of subject and use it on low quality software?"
+    },
+    {
+      "id": 57,
+      "start": 299.0,
+      "end": 310.0,
+      "text": "Yeah, I think that this method would require like pretty strong initial model to make this work."
+    },
+    {
+      "id": 58,
+      "start": 310.0,
+      "end": 315.0,
+      "text": "And then given like a decent enough initial model, it can make it better."
+    },
+    {
+      "id": 59,
+      "start": 315.0,
+      "end": 319.0,
+      "text": "That's how that's like my intuition on that."
+    },
+    {
+      "id": 60,
+      "start": 319.0,
+      "end": 341.0,
+      "text": "So, in the stream case that you start off with a random model that produces random outputs, you'll probably never improve performance."
+    },
+    {
+      "id": 61,
+      "start": 341.0,
+      "end": 346.0,
+      "text": "I don't have a clear answer, but I think that."
+    },
+    {
+      "id": 62,
+      "start": 346.0,
+      "end": 352.0,
+      "text": "I would say it probably just has to be a little better than random chance, which is probably a surprising answer."
+    },
+    {
+      "id": 63,
+      "start": 352.0,
+      "end": 356.0,
+      "text": "There's a previous work."
+    },
+    {
+      "id": 64,
+      "start": 356.0,
+      "end": 370.0,
+      "text": "You see if I can find it."
+    },
+    {
+      "id": 65,
+      "start": 370.0,
+      "end": 375.0,
+      "text": "Yeah, so this paper I recently read and it was pretty shocking to me."
+    },
+    {
+      "id": 66,
+      "start": 375.0,
+      "end": 382.0,
+      "text": "They take."
+    },
+    {
+      "id": 67,
+      "start": 382.0,
+      "end": 385.0,
+      "text": "They take models."
+    },
+    {
+      "id": 68,
+      "start": 385.0,
+      "end": 388.0,
+      "text": "Sorry, they."
+    },
+    {
+      "id": 69,
+      "start": 388.0,
+      "end": 392.0,
+      "text": "They focus on, I think, image classification here and they take an initial data set."
+    },
+    {
+      "id": 70,
+      "start": 392.0,
+      "end": 397.0,
+      "text": "And they randomly flip the label for like a certain percentage of examples."
+    },
+    {
+      "id": 71,
+      "start": 397.0,
+      "end": 402.0,
+      "text": "Like they provide the wrong label in train data for some percentage of examples."
+    },
+    {
+      "id": 72,
+      "start": 402.0,
+      "end": 406.0,
+      "text": "And they find like that."
+    },
+    {
+      "id": 73,
+      "start": 406.0,
+      "end": 414.0,
+      "text": "You can replace 99% of labels with the wrong label and still learn something useful."
+    },
+    {
+      "id": 74,
+      "start": 414.0,
+      "end": 419.0,
+      "text": "Which I think is like is really weird and doesn't make sense."
+    },
+    {
+      "id": 75,
+      "start": 419.0,
+      "end": 425.0,
+      "text": "And they kind of show that I think the idea is that this only works for really deep networks."
+    },
+    {
+      "id": 76,
+      "start": 425.0,
+      "end": 429.0,
+      "text": "So anyway, these models, I believe, were not."
+    },
+    {
+      "id": 77,
+      "start": 429.0,
+      "end": 430.0,
+      "text": "Retrained."
+    },
+    {
+      "id": 78,
+      "start": 430.0,
+      "end": 435.0,
+      "text": "So they were only learned on this terrible data."
+    },
+    {
+      "id": 79,
+      "start": 435.0,
+      "end": 436.0,
+      "text": "But."
+    },
+    {
+      "id": 80,
+      "start": 436.0,
+      "end": 442.0,
+      "text": "So I think that the so therefore like base if I'm generalizing that finding here."
+    },
+    {
+      "id": 81,
+      "start": 442.0,
+      "end": 447.0,
+      "text": "I think that because this show this suggests that mural nets are very robust to label noise."
+    },
+    {
+      "id": 82,
+      "start": 447.0,
+      "end": 452.0,
+      "text": "And if you think of this kind of method as you're using a noisy label from a teacher."
+    },
+    {
+      "id": 83,
+      "start": 452.0,
+      "end": 457.0,
+      "text": "I think it pretty far with data that is mostly noise, but still better."
+    },
+    {
+      "id": 84,
+      "start": 457.0,
+      "end": 464.0,
+      "text": "It's like not pure noise."
+    },
+    {
+      "id": 85,
+      "start": 464.0,
+      "end": 467.0,
+      "text": "War of comment rather than."
+    },
+    {
+      "id": 86,
+      "start": 467.0,
+      "end": 469.0,
+      "text": "For the."
+    },
+    {
+      "id": 87,
+      "start": 469.0,
+      "end": 471.0,
+      "text": "The priority between the problem."
+    },
+    {
+      "id": 88,
+      "start": 471.0,
+      "end": 475.0,
+      "text": "And they think around some of 16, 17."
+    },
+    {
+      "id": 89,
+      "start": 475.0,
+      "end": 480.0,
+      "text": "And they just read."
+    },
+    {
+      "id": 90,
+      "start": 480.0,
+      "end": 483.0,
+      "text": "Actually before this paper."
+    },
+    {
+      "id": 91,
+      "start": 483.0,
+      "end": 487.0,
+      "text": "So anyone is interested in this area."
+    },
+    {
+      "id": 92,
+      "start": 487.0,
+      "end": 492.0,
+      "text": "I'll be like, I'll be a core of uncertainty."
+    },
+    {
+      "id": 93,
+      "start": 492.0,
+      "end": 494.0,
+      "text": "And major teachers."
+    },
+    {
+      "id": 94,
+      "start": 494.0,
+      "end": 496.0,
+      "text": "And empty drawout."
+    },
+    {
+      "id": 95,
+      "start": 496.0,
+      "end": 498.0,
+      "text": "I draw out as a vision."
+    },
+    {
+      "id": 96,
+      "start": 498.0,
+      "end": 500.0,
+      "text": "So there's that."
+    },
+    {
+      "id": 97,
+      "start": 500.0,
+      "end": 503.0,
+      "text": "And also on the label noise."
+    },
+    {
+      "id": 98,
+      "start": 503.0,
+      "end": 509.0,
+      "text": "I think the important product on the previous paper that you mentioned was giving uniform noise."
+    },
+    {
+      "id": 99,
+      "start": 509.0,
+      "end": 515.0,
+      "text": "Like if we are giving some like specific like buyer noises."
+    },
+    {
+      "id": 100,
+      "start": 515.0,
+      "end": 517.0,
+      "text": "Like neural network."
+    },
+    {
+      "id": 101,
+      "start": 517.0,
+      "end": 520.0,
+      "text": "Like someone like very bio for that specific."
+    },
+    {
+      "id": 102,
+      "start": 520.0,
+      "end": 521.0,
+      "text": "But."
+    },
+    {
+      "id": 103,
+      "start": 521.0,
+      "end": 526.0,
+      "text": "If this thing comes to vision, label noise, the teachers are playing goals up to like."
+    },
+    {
+      "id": 104,
+      "start": 526.0,
+      "end": 535.0,
+      "text": "Even though those cases are somewhat like synthetic."
+    },
+    {
+      "id": 105,
+      "start": 535.0,
+      "end": 539.0,
+      "text": "I think it's pretty interesting to see those pieces."
+    },
+    {
+      "id": 106,
+      "start": 539.0,
+      "end": 544.0,
+      "text": "But still like they are only injecting like uniform distribution for the label."
+    },
+    {
+      "id": 107,
+      "start": 544.0,
+      "end": 547.0,
+      "text": "So that like you're radically speaking."
+    },
+    {
+      "id": 108,
+      "start": 547.0,
+      "end": 551.0,
+      "text": "The model will like with like enough number of iterations."
+    },
+    {
+      "id": 109,
+      "start": 551.0,
+      "end": 557.0,
+      "text": "And the model will be biased for the."
+    },
+    {
+      "id": 110,
+      "start": 557.0,
+      "end": 560.0,
+      "text": "Yeah, that's thanks for the clarification."
+    },
+    {
+      "id": 111,
+      "start": 560.0,
+      "end": 563.0,
+      "text": "So yeah, for the recording."
+    },
+    {
+      "id": 112,
+      "start": 563.0,
+      "end": 571.0,
+      "text": "The student pointed out that in the previous paper, an important detail is that the noise in the labels was uniformly sampled."
+    },
+    {
+      "id": 113,
+      "start": 571.0,
+      "end": 580.0,
+      "text": "And that if you said use non uniform random noise, it can actually have a major impact on the ability of a deep network to learn the input label mapping."
+    },
+    {
+      "id": 114,
+      "start": 580.0,
+      "end": 583.0,
+      "text": "Yeah, I think that's a really important thing."
+    },
+    {
+      "id": 115,
+      "start": 583.0,
+      "end": 588.0,
+      "text": "So."
+    },
+    {
+      "id": 116,
+      "start": 588.0,
+      "end": 596.0,
+      "text": "So distillation was originally designed here for like when you had a single label per input."
+    },
+    {
+      "id": 117,
+      "start": 596.0,
+      "end": 599.0,
+      "text": "But in text, we often have sequences."
+    },
+    {
+      "id": 118,
+      "start": 599.0,
+      "end": 602.0,
+      "text": "Maybe want to generate a sentence."
+    },
+    {
+      "id": 119,
+      "start": 602.0,
+      "end": 605.0,
+      "text": "And so how do we extend distillation?"
+    }
+  ],
+  "language": "en"
+}

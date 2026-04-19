@@ -1,0 +1,1091 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 2.74,
+      "text": "has better, it's like a better way to take advantage"
+    },
+    {
+      "id": 1,
+      "start": 2.74,
+      "end": 5.2,
+      "text": "of its reasoning capabilities."
+    },
+    {
+      "id": 2,
+      "start": 5.2,
+      "end": 7.68,
+      "text": "Does anyone have an idea about the answer?"
+    },
+    {
+      "id": 3,
+      "start": 11.0,
+      "end": 14.16,
+      "text": "Who thinks it's better to do it entirely in the language"
+    },
+    {
+      "id": 4,
+      "start": 14.16,
+      "end": 15.56,
+      "text": "that the question is asked in?"
+    },
+    {
+      "id": 5,
+      "start": 18.68,
+      "end": 22.92,
+      "text": "And who thinks it's better to do something in English?"
+    },
+    {
+      "id": 6,
+      "start": 22.92,
+      "end": 23.08,
+      "text": "OK."
+    },
+    {
+      "id": 7,
+      "start": 23.08,
+      "end": 25.8,
+      "text": "OK."
+    },
+    {
+      "id": 8,
+      "start": 25.8,
+      "end": 31.36,
+      "text": "So basically the answer is do it in English."
+    },
+    {
+      "id": 9,
+      "start": 31.36,
+      "end": 36.04,
+      "text": "And maybe this is, it might be a little bit dependent"
+    },
+    {
+      "id": 10,
+      "start": 36.04,
+      "end": 38.4,
+      "text": "on the language, but all of the languages they tested,"
+    },
+    {
+      "id": 11,
+      "start": 38.4,
+      "end": 44.4,
+      "text": "it's essentially that's the conclusion that they came to."
+    },
+    {
+      "id": 12,
+      "start": 44.4,
+      "end": 47.68,
+      "text": "And it's pretty stark in this particular paper."
+    },
+    {
+      "id": 13,
+      "start": 47.68,
+      "end": 52.32,
+      "text": "This might change a little bit with more powerful models,"
+    },
+    {
+      "id": 14,
+      "start": 52.32,
+      "end": 55.76,
+      "text": "but I still would be very surprised if this is not,"
+    },
+    {
+      "id": 15,
+      "start": 55.76,
+      "end": 58.76,
+      "text": "like, if this doesn't hold still."
+    },
+    {
+      "id": 16,
+      "start": 58.76,
+      "end": 63.48,
+      "text": "So you can see it's like approximately on average,"
+    },
+    {
+      "id": 17,
+      "start": 63.48,
+      "end": 67.32,
+      "text": "a seven point increase in the results."
+    },
+    {
+      "id": 18,
+      "start": 67.32,
+      "end": 73.6,
+      "text": "And just to be clear here, we have native chain of thought."
+    },
+    {
+      "id": 19,
+      "start": 73.6,
+      "end": 77.12,
+      "text": "So this is doing chain of thought in the language itself."
+    },
+    {
+      "id": 20,
+      "start": 77.12,
+      "end": 79.16,
+      "text": "This is doing chain of thought in English,"
+    },
+    {
+      "id": 21,
+      "start": 79.16,
+      "end": 80.68,
+      "text": "but then answering in the language itself."
+    },
+    {
+      "id": 22,
+      "start": 80.68,
+      "end": 83.0,
+      "text": "And this is just like translating everything into English."
+    },
+    {
+      "id": 23,
+      "start": 86.88,
+      "end": 89.56,
+      "text": "You can try this out too."
+    },
+    {
+      "id": 24,
+      "start": 89.56,
+      "end": 93.2,
+      "text": "If you speak another language, you can try to do it myself."
+    },
+    {
+      "id": 25,
+      "start": 93.2,
+      "end": 96.56,
+      "text": "When I try it in Japanese, it's very clear that the model"
+    },
+    {
+      "id": 26,
+      "start": 96.56,
+      "end": 98.24,
+      "text": "seems more intelligent than English."
+    },
+    {
+      "id": 27,
+      "start": 98.24,
+      "end": 101.04,
+      "text": "It just seems like it can do other things."
+    },
+    {
+      "id": 28,
+      "start": 101.04,
+      "end": 105.16,
+      "text": "Even though intelligence shouldn't be a function of the language"
+    },
+    {
+      "id": 29,
+      "start": 105.16,
+      "end": 106.96,
+      "text": "that you're asking your question in, right?"
+    },
+    {
+      "id": 30,
+      "start": 106.96,
+      "end": 110.08,
+      "text": "The model should have the ability to answer questions,"
+    },
+    {
+      "id": 31,
+      "start": 110.08,
+      "end": 112.84,
+      "text": "but it, because that's how humans work, right?"
+    },
+    {
+      "id": 32,
+      "start": 112.84,
+      "end": 115.68,
+      "text": "Our intelligence is kind of separated from our language."
+    },
+    {
+      "id": 33,
+      "start": 115.68,
+      "end": 116.92,
+      "text": "How well we can express ourselves"
+    },
+    {
+      "id": 34,
+      "start": 116.92,
+      "end": 119.24,
+      "text": "is a little bit different."
+    },
+    {
+      "id": 35,
+      "start": 119.24,
+      "end": 120.6,
+      "text": "Yeah."
+    },
+    {
+      "id": 36,
+      "start": 120.6,
+      "end": 122.92,
+      "text": "For the final output, this was a trendly"
+    },
+    {
+      "id": 37,
+      "start": 122.92,
+      "end": 125.48,
+      "text": "and back to the original language and then evaluated."
+    },
+    {
+      "id": 38,
+      "start": 125.48,
+      "end": 129.32,
+      "text": "For translate English, I'm not 100% sure about this."
+    },
+    {
+      "id": 39,
+      "start": 129.32,
+      "end": 133.12,
+      "text": "I think it was not."
+    },
+    {
+      "id": 40,
+      "start": 133.12,
+      "end": 135.36,
+      "text": "So that might be a confounding factor for this one,"
+    },
+    {
+      "id": 41,
+      "start": 135.36,
+      "end": 138.68,
+      "text": "but it's not a confounding factor for this one, anyway."
+    },
+    {
+      "id": 42,
+      "start": 139.64,
+      "end": 140.64,
+      "text": "Any other questions?"
+    },
+    {
+      "id": 43,
+      "start": 143.56,
+      "end": 144.4,
+      "text": "Okay, cool."
+    },
+    {
+      "id": 44,
+      "start": 147.2,
+      "end": 149.76,
+      "text": "So this is a pretty interesting result here."
+    },
+    {
+      "id": 45,
+      "start": 151.56,
+      "end": 154.04,
+      "text": "And the next kind of series of results"
+    },
+    {
+      "id": 46,
+      "start": 154.04,
+      "end": 155.92,
+      "text": "are going to be based on the,"
+    },
+    {
+      "id": 47,
+      "start": 155.92,
+      "end": 156.96,
+      "text": "that I'm going to talk about"
+    },
+    {
+      "id": 48,
+      "start": 156.96,
+      "end": 158.36,
+      "text": "are going to be based on the quality"
+    },
+    {
+      "id": 49,
+      "start": 158.36,
+      "end": 160.44,
+      "text": "of the reasoning chains that the model uses"
+    },
+    {
+      "id": 50,
+      "start": 160.44,
+      "end": 162.08,
+      "text": "in chain of thought."
+    },
+    {
+      "id": 51,
+      "start": 162.08,
+      "end": 166.24,
+      "text": "And this one is a simple heuristic"
+    },
+    {
+      "id": 52,
+      "start": 166.24,
+      "end": 169.48,
+      "text": "for improving the quality of the reasoning chains."
+    },
+    {
+      "id": 53,
+      "start": 169.48,
+      "end": 172.08,
+      "text": "And one thing I should mention is that"
+    },
+    {
+      "id": 54,
+      "start": 172.08,
+      "end": 173.28,
+      "text": "the quality of the reasoning chain"
+    },
+    {
+      "id": 55,
+      "start": 173.28,
+      "end": 176.48,
+      "text": "is definitely connected to the quality of the output."
+    },
+    {
+      "id": 56,
+      "start": 176.48,
+      "end": 180.36,
+      "text": "Like some, it's not necessarily the case, right?"
+    },
+    {
+      "id": 57,
+      "start": 180.36,
+      "end": 184.0,
+      "text": "It could just say a whole bunch of false,"
+    },
+    {
+      "id": 58,
+      "start": 184.0,
+      "end": 188.28,
+      "text": "like, actually, no, maybe I'll skip this one"
+    },
+    {
+      "id": 59,
+      "start": 191.2,
+      "end": 193.8,
+      "text": "and go and explain this one next."
+    },
+    {
+      "id": 60,
+      "start": 193.8,
+      "end": 198.8,
+      "text": "So, yeah, actually, sorry, the explanation ordering"
+    },
+    {
+      "id": 61,
+      "start": 200.6,
+      "end": 201.64,
+      "text": "for this is a little bit hard,"
+    },
+    {
+      "id": 62,
+      "start": 201.64,
+      "end": 203.24,
+      "text": "but yeah, I'll explain this one next."
+    },
+    {
+      "id": 63,
+      "start": 203.24,
+      "end": 208.24,
+      "text": "So very quickly, there's two ways that you could be reasoning."
+    },
+    {
+      "id": 64,
+      "start": 209.84,
+      "end": 214.04,
+      "text": "One way you could be reasoning is doing an explanation first"
+    },
+    {
+      "id": 65,
+      "start": 214.04,
+      "end": 216.68,
+      "text": "and then predicting the answer."
+    },
+    {
+      "id": 66,
+      "start": 216.68,
+      "end": 218.8,
+      "text": "The other way you could do it is predicting the answer"
+    },
+    {
+      "id": 67,
+      "start": 218.8,
+      "end": 221.96,
+      "text": "and then giving the explanation."
+    },
+    {
+      "id": 68,
+      "start": 221.96,
+      "end": 226.96,
+      "text": "And in general, if you have a reasonably strong model,"
+    },
+    {
+      "id": 69,
+      "start": 227.4,
+      "end": 231.6,
+      "text": "any of the modern frontier level models right now,"
+    },
+    {
+      "id": 70,
+      "start": 231.6,
+      "end": 233.04,
+      "text": "doing the explanation first"
+    },
+    {
+      "id": 71,
+      "start": 233.04,
+      "end": 234.84,
+      "text": "and then making the prediction is better."
+    },
+    {
+      "id": 72,
+      "start": 234.84,
+      "end": 237.48,
+      "text": "And the reason why is because chain of thought works"
+    },
+    {
+      "id": 73,
+      "start": 237.48,
+      "end": 242.24,
+      "text": "and the model is able to break down the questions"
+    },
+    {
+      "id": 74,
+      "start": 242.24,
+      "end": 247.24,
+      "text": "into simpler, it's able to break down the,"
+    },
+    {
+      "id": 75,
+      "start": 247.4,
+      "end": 250.64,
+      "text": "it's able to break down the answer"
+    },
+    {
+      "id": 76,
+      "start": 250.64,
+      "end": 253.96,
+      "text": "into simpler questions for mathematical reasoning"
+    },
+    {
+      "id": 77,
+      "start": 253.96,
+      "end": 255.08,
+      "text": "or something like that."
+    },
+    {
+      "id": 78,
+      "start": 255.92,
+      "end": 257.0,
+      "text": "And then give you the answer."
+    },
+    {
+      "id": 79,
+      "start": 257.0,
+      "end": 259.52,
+      "text": "So, for example, for TextEventschi 002,"
+    },
+    {
+      "id": 80,
+      "start": 259.52,
+      "end": 262.0,
+      "text": "which was same as the art at the time of this writing,"
+    },
+    {
+      "id": 81,
+      "start": 262.0,
+      "end": 265.6,
+      "text": "you see a five point booths from using explanation first"
+    },
+    {
+      "id": 82,
+      "start": 265.6,
+      "end": 267.12,
+      "text": "and then prediction after that."
+    },
+    {
+      "id": 83,
+      "start": 269.0,
+      "end": 272.16,
+      "text": "And in accuracy, but for the weaker models,"
+    },
+    {
+      "id": 84,
+      "start": 272.16,
+      "end": 273.04,
+      "text": "that was not the case."
+    },
+    {
+      "id": 85,
+      "start": 273.04,
+      "end": 278.04,
+      "text": "So if you were using GP3, that wasn't pretty for chain of thought"
+    },
+    {
+      "id": 86,
+      "start": 278.12,
+      "end": 281.08,
+      "text": "or you were using OPE that is not the case."
+    },
+    {
+      "id": 87,
+      "start": 281.08,
+      "end": 283.8,
+      "text": "But now they say, I think basically all models"
+    },
+    {
+      "id": 88,
+      "start": 283.8,
+      "end": 284.96,
+      "text": "doing the explanation first"
+    },
+    {
+      "id": 89,
+      "start": 284.96,
+      "end": 286.32,
+      "text": "and then the prediction is better."
+    },
+    {
+      "id": 90,
+      "start": 288.92,
+      "end": 293.92,
+      "text": "So going back, another thing that people have noticed"
+    },
+    {
+      "id": 91,
+      "start": 294.08,
+      "end": 295.84,
+      "text": "is like if your explanation is wrong,"
+    },
+    {
+      "id": 92,
+      "start": 295.84,
+      "end": 297.4,
+      "text": "your prediction also tends to be wrong."
+    },
+    {
+      "id": 93,
+      "start": 297.4,
+      "end": 299.44,
+      "text": "So if you make mistakes in intermediate steps"
+    },
+    {
+      "id": 94,
+      "start": 299.44,
+      "end": 302.44,
+      "text": "of your explanation, it tends to mess up your final prediction."
+    },
+    {
+      "id": 95,
+      "start": 303.48,
+      "end": 308.04,
+      "text": "So like one of the interesting ways that people have found"
+    },
+    {
+      "id": 96,
+      "start": 308.04,
+      "end": 313.12,
+      "text": "to improve the final explanation quality is they just observe"
+    },
+    {
+      "id": 97,
+      "start": 313.12,
+      "end": 316.76,
+      "text": "that if the explanations are longer, they tend to be better."
+    },
+    {
+      "id": 98,
+      "start": 316.76,
+      "end": 323.28,
+      "text": "It's kind of interesting, but like if they give you more reasoning steps,"
+    },
+    {
+      "id": 99,
+      "start": 323.28,
+      "end": 324.84,
+      "text": "this tends to be more accurate."
+    },
+    {
+      "id": 100,
+      "start": 324.84,
+      "end": 327.32,
+      "text": "And they actually demonstrate that in this paper"
+    },
+    {
+      "id": 101,
+      "start": 327.32,
+      "end": 330.04,
+      "text": "where here's a simple reasoning chain."
+    },
+    {
+      "id": 102,
+      "start": 330.04,
+      "end": 331.52,
+      "text": "Here's a more complex reasoning chain."
+    },
+    {
+      "id": 103,
+      "start": 331.52,
+      "end": 335.72,
+      "text": "And you actually see for exactly the same problem,"
+    },
+    {
+      "id": 104,
+      "start": 335.72,
+      "end": 337.88,
+      "text": "they get about 15% boost."
+    },
+    {
+      "id": 105,
+      "start": 337.88,
+      "end": 340.4,
+      "text": "And these are kind of like naturally occurring reasoning chains."
+    },
+    {
+      "id": 106,
+      "start": 340.4,
+      "end": 341.6,
+      "text": "They didn't like train the model"
+    },
+    {
+      "id": 107,
+      "start": 341.6,
+      "end": 343.88,
+      "text": "to give you longer reasoning chains or anything like that."
+    },
+    {
+      "id": 108,
+      "start": 343.88,
+      "end": 346.96,
+      "text": "But amongst the naturally occurring reasoning chains"
+    },
+    {
+      "id": 109,
+      "start": 346.96,
+      "end": 348.44,
+      "text": "the longer ones tend to be better."
+    },
+    {
+      "id": 110,
+      "start": 349.72,
+      "end": 354.68,
+      "text": "And this fact could be simply used to improve accuracy."
+    },
+    {
+      "id": 111,
+      "start": 354.68,
+      "end": 356.72,
+      "text": "And so the way they did this is they just sampled"
+    },
+    {
+      "id": 112,
+      "start": 356.72,
+      "end": 358.76,
+      "text": "multiple reasoning paths."
+    },
+    {
+      "id": 113,
+      "start": 358.76,
+      "end": 360.96,
+      "text": "And then they perform self-consistency"
+    },
+    {
+      "id": 114,
+      "start": 360.96,
+      "end": 362.32,
+      "text": "over the longer reasoning paths."
+    },
+    {
+      "id": 115,
+      "start": 362.32,
+      "end": 364.68,
+      "text": "So if you remember what self-consistency is,"
+    },
+    {
+      "id": 116,
+      "start": 364.68,
+      "end": 367.24,
+      "text": "it's basically like you do majority voting"
+    },
+    {
+      "id": 117,
+      "start": 367.24,
+      "end": 369.52,
+      "text": "over the answers for multiple reasoning paths."
+    },
+    {
+      "id": 118,
+      "start": 369.52,
+      "end": 372.44,
+      "text": "So they threw out the lower quality ones"
+    },
+    {
+      "id": 119,
+      "start": 372.44,
+      "end": 374.52,
+      "text": "and that improved overall accuracy."
+    },
+    {
+      "id": 120,
+      "start": 377.28,
+      "end": 380.56,
+      "text": "So yeah, that's a thing that you can do."
+    },
+    {
+      "id": 121,
+      "start": 381.08,
+      "end": 385.56,
+      "text": "So yeah, going back to systematic studies"
+    },
+    {
+      "id": 122,
+      "start": 388.36,
+      "end": 392.96,
+      "text": "of reasoning in LLUNs, one of the big results"
+    },
+    {
+      "id": 123,
+      "start": 392.96,
+      "end": 395.16,
+      "text": "that's actually really important to know about"
+    },
+    {
+      "id": 124,
+      "start": 395.16,
+      "end": 399.52,
+      "text": "is this sort of chain of thought reasoning"
+    },
+    {
+      "id": 125,
+      "start": 399.52,
+      "end": 402.28,
+      "text": "is considered to be an emergent ability"
+    },
+    {
+      "id": 126,
+      "start": 402.28,
+      "end": 405.16,
+      "text": "in large language models."
+    },
+    {
+      "id": 127,
+      "start": 405.16,
+      "end": 407.52,
+      "text": "And what we mean by an emergent ability"
+    },
+    {
+      "id": 128,
+      "start": 407.52,
+      "end": 412.52,
+      "text": "is what the name emergent ability typically refers to"
+    },
+    {
+      "id": 129,
+      "start": 413.2,
+      "end": 418.2,
+      "text": "is that it is something that increases dramatically"
+    },
+    {
+      "id": 130,
+      "start": 418.2,
+      "end": 421.32,
+      "text": "as the model size gets up to a certain point."
+    },
+    {
+      "id": 131,
+      "start": 421.32,
+      "end": 424.2,
+      "text": "So these actually, and I'm really sorry,"
+    },
+    {
+      "id": 132,
+      "start": 424.2,
+      "end": 425.88,
+      "text": "I cut off the thing on the bottom here."
+    },
+    {
+      "id": 133,
+      "start": 425.88,
+      "end": 428.76,
+      "text": "This is like open AI does this all the time"
+    },
+    {
+      "id": 134,
+      "start": 428.76,
+      "end": 430.08,
+      "text": "to not tell you how many parameters"
+    },
+    {
+      "id": 135,
+      "start": 430.08,
+      "end": 431.24,
+      "text": "they have in their models."
+    },
+    {
+      "id": 136,
+      "start": 432.2,
+      "end": 433.6,
+      "text": "I did not do it intentionally here"
+    },
+    {
+      "id": 137,
+      "start": 433.6,
+      "end": 436.52,
+      "text": "because I think it's actually in here in the paper."
+    },
+    {
+      "id": 138,
+      "start": 436.52,
+      "end": 440.72,
+      "text": "But these ones over here are 175 billion parameter models"
+    },
+    {
+      "id": 139,
+      "start": 440.72,
+      "end": 442.6,
+      "text": "and the larger models."
+    },
+    {
+      "id": 140,
+      "start": 444.92,
+      "end": 447.32,
+      "text": "And what you see is up until a certain point"
+    },
+    {
+      "id": 141,
+      "start": 447.32,
+      "end": 449.0,
+      "text": "you get basically zero accuracy"
+    },
+    {
+      "id": 142,
+      "start": 449.0,
+      "end": 451.92,
+      "text": "and then the outputs improve."
+    },
+    {
+      "id": 143,
+      "start": 452.92,
+      "end": 457.92,
+      "text": "And so for a while, people were really confused about this."
+    },
+    {
+      "id": 144,
+      "start": 458.44,
+      "end": 460.08,
+      "text": "Why does this happen?"
+    },
+    {
+      "id": 145,
+      "start": 460.08,
+      "end": 463.84,
+      "text": "It feels like magic that you get a really powerful model"
+    },
+    {
+      "id": 146,
+      "start": 463.84,
+      "end": 465.52,
+      "text": "and then suddenly it gets better."
+    },
+    {
+      "id": 147,
+      "start": 467.48,
+      "end": 468.72,
+      "text": "At the very end."
+    },
+    {
+      "id": 148,
+      "start": 469.68,
+      "end": 472.32,
+      "text": "But actually there's a much simpler solution."
+    },
+    {
+      "id": 149,
+      "start": 472.32,
+      "end": 474.68,
+      "text": "There's not that much magic to this."
+    },
+    {
+      "id": 150,
+      "start": 474.68,
+      "end": 478.28,
+      "text": "And we've known about this for a little while,"
+    },
+    {
+      "id": 151,
+      "start": 478.28,
+      "end": 482.48,
+      "text": "but this paper from 2023 really expressed it very clearly."
+    },
+    {
+      "id": 152,
+      "start": 482.48,
+      "end": 484.44,
+      "text": "So I highly recommend you take a look at this"
+    },
+    {
+      "id": 153,
+      "start": 484.44,
+      "end": 487.4,
+      "text": "if you're interested in kind of like the emergent abilities"
+    },
+    {
+      "id": 154,
+      "start": 487.4,
+      "end": 489.24,
+      "text": "in language models."
+    },
+    {
+      "id": 155,
+      "start": 489.24,
+      "end": 493.12,
+      "text": "But basically the thing about emergent abilities"
+    },
+    {
+      "id": 156,
+      "start": 493.12,
+      "end": 498.12,
+      "text": "is that they're mostly a matter of how you measure"
+    },
+    {
+      "id": 157,
+      "start": 501.76,
+      "end": 504.48,
+      "text": "your model's accuracy."
+    },
+    {
+      "id": 158,
+      "start": 505.44,
+      "end": 510.44,
+      "text": "And so let's say as your model gets better,"
+    },
+    {
+      "id": 159,
+      "start": 510.44,
+      "end": 515.44,
+      "text": "it gets gradually better at predicting the,"
+    },
+    {
+      "id": 160,
+      "start": 523.96,
+      "end": 526.24,
+      "text": "like a reasonable next token."
+    },
+    {
+      "id": 161,
+      "start": 530.84,
+      "end": 532.96,
+      "text": "So this is like, I don't know,"
+    },
+    {
+      "id": 162,
+      "start": 532.96,
+      "end": 536.96,
+      "text": "like 200 million parameter model, 500 million,"
+    },
+    {
+      "id": 163,
+      "start": 537.84,
+      "end": 542.68,
+      "text": "1 billion, 3 billion, 7 billion,"
+    },
+    {
+      "id": 164,
+      "start": 542.68,
+      "end": 546.12,
+      "text": "and like 70 billion, there's something like that."
+    },
+    {
+      "id": 165,
+      "start": 547.96,
+      "end": 552.04,
+      "text": "And so this is like the next token prediction accuracy."
+    },
+    {
+      "id": 166,
+      "start": 552.04,
+      "end": 556.2,
+      "text": "Or like the accuracy of predicting a reasonable next token"
+    },
+    {
+      "id": 167,
+      "start": 556.2,
+      "end": 559.04,
+      "text": "that won't result in your reasoning chain being wrong"
+    },
+    {
+      "id": 168,
+      "start": 559.04,
+      "end": 560.88,
+      "text": "and making a mistake."
+    },
+    {
+      "id": 169,
+      "start": 560.88,
+      "end": 565.88,
+      "text": "And so if you have an accuracy like this,"
+    },
+    {
+      "id": 170,
+      "start": 566.08,
+      "end": 568.0,
+      "text": "in order to get the correct answer,"
+    },
+    {
+      "id": 171,
+      "start": 568.0,
+      "end": 571.28,
+      "text": "like let's say there's about five or eight places"
+    },
+    {
+      "id": 172,
+      "start": 571.28,
+      "end": 573.68,
+      "text": "where you could possibly make a mistake in the derivation,"
+    },
+    {
+      "id": 173,
+      "start": 573.68,
+      "end": 577.6,
+      "text": "like one common places to make a mistake in a derivation"
+    },
+    {
+      "id": 174,
+      "start": 577.6,
+      "end": 580.08,
+      "text": "for math, for example, are where you predict a number,"
+    },
+    {
+      "id": 175,
+      "start": 580.08,
+      "end": 582.12,
+      "text": "like where you predict the result of an equation."
+    },
+    {
+      "id": 176,
+      "start": 582.12,
+      "end": 584.68,
+      "text": "And you might have five reasoning steps"
+    },
+    {
+      "id": 177,
+      "start": 584.68,
+      "end": 587.76,
+      "text": "where you might predict the result of an equation."
+    },
+    {
+      "id": 178,
+      "start": 587.76,
+      "end": 589.2,
+      "text": "And so if we do this,"
+    },
+    {
+      "id": 179,
+      "start": 590.72,
+      "end": 593.44,
+      "text": "let's exponentiate all of these by five."
+    },
+    {
+      "id": 180,
+      "start": 595.88,
+      "end": 597.88,
+      "text": "Um."
+    }
+  ],
+  "language": "en"
+}

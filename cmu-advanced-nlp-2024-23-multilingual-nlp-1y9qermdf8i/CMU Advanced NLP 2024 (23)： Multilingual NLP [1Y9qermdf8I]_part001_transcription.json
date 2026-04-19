@@ -1,0 +1,653 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 6.44,
+      "text": "Then the second question is must you serve many languages with strict memory constraints?"
+    },
+    {
+      "id": 1,
+      "start": 6.44,
+      "end": 9.32,
+      "text": "If the answer is yes, you can do multi-lingual models."
+    },
+    {
+      "id": 2,
+      "start": 9.32,
+      "end": 12.2,
+      "text": "If the answer is no, you could still do a multi-lingual model,"
+    },
+    {
+      "id": 3,
+      "start": 12.2,
+      "end": 18.8,
+      "text": "but you could also adapt to the specific language that you're interested in processing and do better by doing that adaption."
+    },
+    {
+      "id": 4,
+      "start": 18.8,
+      "end": 23.4,
+      "text": "Then if you don't have sufficient labeled data in the target language,"
+    },
+    {
+      "id": 5,
+      "start": 23.4,
+      "end": 29.56,
+      "text": "if you have access to people who can provide that data for you in your serious about building a model for that language,"
+    },
+    {
+      "id": 6,
+      "start": 29.76,
+      "end": 32.36,
+      "text": "you can just ask people to annotate things."
+    },
+    {
+      "id": 7,
+      "start": 32.36,
+      "end": 34.92,
+      "text": "So there's a lot of work on zero-shot adaptation,"
+    },
+    {
+      "id": 8,
+      "start": 34.92,
+      "end": 40.36,
+      "text": "which is essentially trying to get models to work well on new languages with no annotated data."
+    },
+    {
+      "id": 9,
+      "start": 40.36,
+      "end": 44.96,
+      "text": "But in reality, if you're ever going to be deploying a model to users,"
+    },
+    {
+      "id": 10,
+      "start": 46.76,
+      "end": 52.6,
+      "text": "you might as well label a thousand examples of whatever task you want to solve and train on those examples."
+    },
+    {
+      "id": 11,
+      "start": 52.6,
+      "end": 55.76,
+      "text": "And that's far easier than doing zero-shot adaptation."
+    },
+    {
+      "id": 12,
+      "start": 56.56,
+      "end": 63.56,
+      "text": "One caveat is if you're trying to show somebody the possibility of something working."
+    },
+    {
+      "id": 13,
+      "start": 63.56,
+      "end": 70.16,
+      "text": "So for example, you have a nice speech recognition system that works in many different languages"
+    },
+    {
+      "id": 14,
+      "start": 70.16,
+      "end": 73.76,
+      "text": "and you want to show people in a new country that it could possibly work,"
+    },
+    {
+      "id": 15,
+      "start": 73.76,
+      "end": 81.76,
+      "text": "then applying it zero-shot and not using any training data might be a good way to convince them that they should work with you."
+    },
+    {
+      "id": 16,
+      "start": 81.76,
+      "end": 85.76,
+      "text": "But in the end, if you care enough about it, you'll be annotating data."
+    },
+    {
+      "id": 17,
+      "start": 85.76,
+      "end": 89.36,
+      "text": "So this is my general flow for building a usable system."
+    },
+    {
+      "id": 18,
+      "start": 92.56,
+      "end": 93.56,
+      "text": "Any questions so far?"
+    },
+    {
+      "id": 19,
+      "start": 98.96,
+      "end": 101.36,
+      "text": "So let's go into multilingual language modeling."
+    },
+    {
+      "id": 20,
+      "start": 102.56,
+      "end": 104.56,
+      "text": "So multilingual language modeling,"
+    },
+    {
+      "id": 21,
+      "start": 104.96,
+      "end": 111.76,
+      "text": "in the very simplest sense, is just like train a language model on lots of data."
+    },
+    {
+      "id": 22,
+      "start": 113.76,
+      "end": 118.56,
+      "text": "And so if you're just training like GPT or something like that,"
+    },
+    {
+      "id": 23,
+      "start": 118.56,
+      "end": 120.16,
+      "text": "you just throw all of the data in there."
+    },
+    {
+      "id": 24,
+      "start": 120.96,
+      "end": 124.56,
+      "text": "You train your subword vocabularies over all of the data and something will happen."
+    },
+    {
+      "id": 25,
+      "start": 126.56,
+      "end": 129.36,
+      "text": "You might want to do more than that though if you really care about performance."
+    },
+    {
+      "id": 26,
+      "start": 129.76,
+      "end": 134.16,
+      "text": "So anyway, if we're doing multilingual modeling,"
+    },
+    {
+      "id": 27,
+      "start": 135.36,
+      "end": 137.76,
+      "text": "there's two varieties of multilingual modeling."
+    },
+    {
+      "id": 28,
+      "start": 138.56,
+      "end": 141.36,
+      "text": "The first one is if you have multilingual inputs,"
+    },
+    {
+      "id": 29,
+      "start": 142.16,
+      "end": 148.16,
+      "text": "and if you have multilingual inputs, you really don't need to do anything in order to get it to work."
+    },
+    {
+      "id": 30,
+      "start": 148.16,
+      "end": 151.36,
+      "text": "At least somewhat as long as your base model can learn,"
+    },
+    {
+      "id": 31,
+      "start": 152.16,
+      "end": 153.76,
+      "text": "can handle multiple languages."
+    },
+    {
+      "id": 32,
+      "start": 153.76,
+      "end": 158.16,
+      "text": "So to give an example, like let's say I want to translate into English."
+    },
+    {
+      "id": 33,
+      "start": 158.96,
+      "end": 160.56,
+      "text": "If I want to translate into English,"
+    },
+    {
+      "id": 34,
+      "start": 161.76,
+      "end": 166.96,
+      "text": "then I can just throw in these sentences and not say anything and say please translate this into English."
+    },
+    {
+      "id": 35,
+      "start": 167.36,
+      "end": 170.96,
+      "text": "And GPT will do a reasonably good job of translating it into English for me."
+    },
+    {
+      "id": 36,
+      "start": 170.96,
+      "end": 174.96,
+      "text": "I don't even say this is a French sentence or this is a Japanese sentence or something like that."
+    },
+    {
+      "id": 37,
+      "start": 176.56,
+      "end": 178.96,
+      "text": "However, this may be very obvious,"
+    },
+    {
+      "id": 38,
+      "start": 178.96,
+      "end": 183.76,
+      "text": "but like if you have multilingual output at the very least you need to tell it which language it should be generating in."
+    },
+    {
+      "id": 39,
+      "start": 184.56,
+      "end": 186.56,
+      "text": "So there's different ways to do this,"
+    },
+    {
+      "id": 40,
+      "start": 186.56,
+      "end": 189.76,
+      "text": "but basically you can add a tag or prompt about the target language"
+    },
+    {
+      "id": 41,
+      "start": 190.56,
+      "end": 191.76,
+      "text": "for generative tasks."
+    },
+    {
+      "id": 42,
+      "start": 191.76,
+      "end": 195.76,
+      "text": "And originally this is what was done in Google Translate."
+    },
+    {
+      "id": 43,
+      "start": 195.76,
+      "end": 197.76,
+      "text": "It's probably what they're doing right now."
+    },
+    {
+      "id": 44,
+      "start": 197.76,
+      "end": 202.56,
+      "text": "And they basically added a single tag to the beginning that said brunch or Japanese"
+    },
+    {
+      "id": 45,
+      "start": 202.56,
+      "end": 206.56,
+      "text": "and then the sentence they wanted to translate and then it gave them that."
+    },
+    {
+      "id": 46,
+      "start": 206.56,
+      "end": 214.56,
+      "text": "However, there are a few difficulties in multilingual learning."
+    },
+    {
+      "id": 47,
+      "start": 214.56,
+      "end": 218.56,
+      "text": "So the first one is the curse of multilinguality."
+    },
+    {
+      "id": 48,
+      "start": 218.56,
+      "end": 223.56,
+      "text": "And so actually if you look at a lot of the open source models at least,"
+    },
+    {
+      "id": 49,
+      "start": 224.56,
+      "end": 227.56,
+      "text": "most of them are only trained seriously on English."
+    },
+    {
+      "id": 50,
+      "start": 227.56,
+      "end": 230.56,
+      "text": "This includes things like Lama, Omo."
+    },
+    {
+      "id": 51,
+      "start": 230.56,
+      "end": 234.56,
+      "text": "Most of the language models that I talked about."
+    },
+    {
+      "id": 52,
+      "start": 234.56,
+      "end": 238.56,
+      "text": "And I think the reason why is this curse of multilinguality."
+    },
+    {
+      "id": 53,
+      "start": 238.56,
+      "end": 240.56,
+      "text": "And given a fixed size model,"
+    },
+    {
+      "id": 54,
+      "start": 240.56,
+      "end": 246.56,
+      "text": "the per language capacity decreases as we increase the number of languages."
+    },
+    {
+      "id": 55,
+      "start": 248.56,
+      "end": 253.56,
+      "text": "And this is an older example from the XLR paper,"
+    },
+    {
+      "id": 56,
+      "start": 253.56,
+      "end": 258.56,
+      "text": "which was kind of a masked language model that was used in a bunch of different languages."
+    },
+    {
+      "id": 57,
+      "start": 258.56,
+      "end": 264.56,
+      "text": "But what you can see is as they increase the number of languages,"
+    },
+    {
+      "id": 58,
+      "start": 264.56,
+      "end": 270.56,
+      "text": "the scores go down for the high resource languages as you get up to like 100 languages."
+    },
+    {
+      "id": 59,
+      "start": 270.56,
+      "end": 279.56,
+      "text": "For the one resource languages, the scores momentarily go up because you're now benefiting from transfer learning from other languages."
+    },
+    {
+      "id": 60,
+      "start": 279.56,
+      "end": 285.56,
+      "text": "But then they start to go down again is the model capacity runs out and you essentially do worse."
+    },
+    {
+      "id": 61,
+      "start": 285.56,
+      "end": 288.56,
+      "text": "And so this is an older paper. It shows it more convincingly,"
+    },
+    {
+      "id": 62,
+      "start": 288.56,
+      "end": 294.56,
+      "text": "but there's also some other examples like there was a very big effort by hugging face called bloom,"
+    },
+    {
+      "id": 63,
+      "start": 294.56,
+      "end": 298.56,
+      "text": "which was a model that was trained to be very multilingual."
+    },
+    {
+      "id": 64,
+      "start": 298.56,
+      "end": 305.56,
+      "text": "And they were, they trained a 175 billion parameter model to try to make it, you know,"
+    },
+    {
+      "id": 65,
+      "start": 305.56,
+      "end": 307.56,
+      "text": "very strongly to a lot of different languages."
+    },
+    {
+      "id": 66,
+      "start": 307.56,
+      "end": 312.56,
+      "text": "And it just ended up not being very good on English and being even worse on other languages."
+    },
+    {
+      "id": 67,
+      "start": 312.56,
+      "end": 316.56,
+      "text": "Because they kind of overreached their language, you know,"
+    },
+    {
+      "id": 68,
+      "start": 316.56,
+      "end": 320.56,
+      "text": "language modeling abilities at the time were just not good enough."
+    },
+    {
+      "id": 69,
+      "start": 320.56,
+      "end": 328.56,
+      "text": "I think things have gotten significantly better now, but still you'll notice that if you emphasize more on multilingual data,"
+    },
+    {
+      "id": 70,
+      "start": 328.56,
+      "end": 333.56,
+      "text": "you do increase the number of tokens that you see in like English, for example,"
+    },
+    {
+      "id": 71,
+      "start": 333.56,
+      "end": 336.56,
+      "text": "and that can cause accuracy to go down."
+    },
+    {
+      "id": 72,
+      "start": 336.56,
+      "end": 340.56,
+      "text": "Number of tokens and capacity available."
+    },
+    {
+      "id": 73,
+      "start": 340.56,
+      "end": 341.56,
+      "text": "Yeah."
+    },
+    {
+      "id": 74,
+      "start": 341.56,
+      "end": 348.56,
+      "text": "Does that happen because we see a fascinating stuff or is it like another underlying reason?"
+    },
+    {
+      "id": 75,
+      "start": 348.56,
+      "end": 353.56,
+      "text": "Does it happen because we see transfer learning stuff or for another underlying reason?"
+    },
+    {
+      "id": 76,
+      "start": 353.56,
+      "end": 356.56,
+      "text": "I think there's two reasons."
+    },
+    {
+      "id": 77,
+      "start": 356.56,
+      "end": 367.56,
+      "text": "The first reason is like if you have a fixed compute budget, then you're fundamentally going to be limited in the number of things that you can see."
+    },
+    {
+      "id": 78,
+      "start": 367.56,
+      "end": 374.56,
+      "text": "Actually, there's a nice paper by my student, Patrick."
+    },
+    {
+      "id": 79,
+      "start": 374.56,
+      "end": 380.56,
+      "text": "I'm a large hell at nice because it's not my paper, but I wasn't involved in it."
+    },
+    {
+      "id": 80,
+      "start": 380.56,
+      "end": 394.56,
+      "text": "But I should have put this on the slides actually, but there's this paper."
+    },
+    {
+      "id": 81,
+      "start": 394.56,
+      "end": 397.56,
+      "text": "I actually made maybe a deal."
+    },
+    {
+      "id": 82,
+      "start": 397.56,
+      "end": 408.56,
+      "text": "But basically what they find is the amount of compute that you spend."
+    },
+    {
+      "id": 83,
+      "start": 408.56,
+      "end": 412.56,
+      "text": "I don't find the main thing."
+    },
+    {
+      "id": 84,
+      "start": 412.56,
+      "end": 424.56,
+      "text": "So essentially the amount of weight that you spend on any particular."
+    },
+    {
+      "id": 85,
+      "start": 424.56,
+      "end": 429.56,
+      "text": "Sorry, I had to go back and take some time to look at the figure of state explain them accurately."
+    },
+    {
+      "id": 86,
+      "start": 429.56,
+      "end": 438.56,
+      "text": "But one of the findings in this paper is the amount of time that you spend on any individual language kind of corresponds to how well you do on that language."
+    },
+    {
+      "id": 87,
+      "start": 438.56,
+      "end": 442.56,
+      "text": "You're spending more time on one language."
+    },
+    {
+      "id": 88,
+      "start": 442.56,
+      "end": 444.56,
+      "text": "You do better on the other language."
+    },
+    {
+      "id": 89,
+      "start": 444.56,
+      "end": 451.56,
+      "text": "And there's the idea of scaling loss that I talked about before where your effective."
+    },
+    {
+      "id": 90,
+      "start": 451.56,
+      "end": 459.56,
+      "text": "Your effective capacity or like how good the model becomes is a function of like the parameter size and the amount of compute you spend."
+    },
+    {
+      "id": 91,
+      "start": 459.56,
+      "end": 462.56,
+      "text": "And if you're doing multiple languages, so you need to kind of."
+    },
+    {
+      "id": 92,
+      "start": 462.56,
+      "end": 465.56,
+      "text": "And that's what your parameters between languages."
+    },
+    {
+      "id": 93,
+      "start": 465.56,
+      "end": 475.56,
+      "text": "And one of the interesting findings from this paper is that actually you wouldn't expect more benefit from sharing that you actually get like you."
+    },
+    {
+      "id": 94,
+      "start": 475.56,
+      "end": 481.56,
+      "text": "You actually get relatively little benefit from sharing if you have enough data to train on."
+    },
+    {
+      "id": 95,
+      "start": 481.56,
+      "end": 490.56,
+      "text": "And because in many of the cases when we're training models were less bottleneck by data for the low resource languages."
+    },
+    {
+      "id": 96,
+      "start": 490.56,
+      "end": 493.56,
+      "text": "But for high resource languages, we're usually bottleneck by compute."
+    },
+    {
+      "id": 97,
+      "start": 493.56,
+      "end": 504.56,
+      "text": "So if you allocate more compute to other languages, and you're going to allocate less compute to English, for example, and a lot of people like a lot of the benchmarks on English for better or worse."
+    },
+    {
+      "id": 98,
+      "start": 504.56,
+      "end": 507.56,
+      "text": "So I think probably one."
+    },
+    {
+      "id": 99,
+      "start": 507.56,
+      "end": 513.56,
+      "text": "Like one good strategy here is yes, we have some people focusing on building building really good English models."
+    },
+    {
+      "id": 100,
+      "start": 513.56,
+      "end": 534.56,
+      "text": "We have some people focusing on building really good models for the top like 10 languages where we can afford to build a model for each of them. And then we have some people working on, you know, really good multi-lingual models and handle a whole bunch of languages and kind of just spread our efforts out in our compute for each of those models out."
+    },
+    {
+      "id": 101,
+      "start": 534.56,
+      "end": 539.56,
+      "text": "Cool. Any other questions about this?"
+    },
+    {
+      "id": 102,
+      "start": 539.56,
+      "end": 545.56,
+      "text": "Yeah."
+    },
+    {
+      "id": 103,
+      "start": 545.56,
+      "end": 553.56,
+      "text": "Yeah. So basically usually what we do is we just train, we just train a single model and all of the parameters are shared between all of the languages."
+    },
+    {
+      "id": 104,
+      "start": 553.56,
+      "end": 563.56,
+      "text": "The only things that are not shared are the word embeddings and I'll, or the sub word embedding, so I'll talk about that in a little bit."
+    },
+    {
+      "id": 105,
+      "start": 563.56,
+      "end": 582.56,
+      "text": "So there's a number of ways to mitigate this curse of multi-linguality. I kind of got ahead of myself and talking about the other paper, but there's a couple things that we can do to improve this."
+    },
+    {
+      "id": 106,
+      "start": 582.56,
+      "end": 597.56,
+      "text": "The last one is the tokenization disparity, which I just talked about. The sub word embeddings, we share all of the parameters in the body of the model, but fundamentally the words in the different languages are different. Sometimes the scripts are even different."
+    },
+    {
+      "id": 107,
+      "start": 597.56,
+      "end": 602.56,
+      "text": "And so what we do is we usually have a shared."
+    }
+  ],
+  "language": "en"
+}

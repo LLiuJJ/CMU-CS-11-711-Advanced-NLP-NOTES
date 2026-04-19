@@ -1,0 +1,557 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 2.0,
+      "text": "Okay."
+    },
+    {
+      "id": 1,
+      "start": 2.0,
+      "end": 5.0,
+      "text": "The next type of feedback is preference ratings."
+    },
+    {
+      "id": 2,
+      "start": 5.0,
+      "end": 11.0,
+      "text": "And so this is basically what you do is you have two or more outputs"
+    },
+    {
+      "id": 3,
+      "start": 11.0,
+      "end": 15.0,
+      "text": "from different models or different generations from an individual model."
+    },
+    {
+      "id": 4,
+      "start": 15.0,
+      "end": 17.0,
+      "text": "And you ask a human which one is better?"
+    },
+    {
+      "id": 5,
+      "start": 17.0,
+      "end": 20.0,
+      "text": "Like is one better than the other or are they tied?"
+    },
+    {
+      "id": 6,
+      "start": 20.0,
+      "end": 23.0,
+      "text": "And so in this case, you might have,"
+    },
+    {
+      "id": 7,
+      "start": 23.0,
+      "end": 24.0,
+      "text": "please send this package to Tokyo."
+    },
+    {
+      "id": 8,
+      "start": 24.0,
+      "end": 27.0,
+      "text": "Please send a package to Tokyo."
+    },
+    {
+      "id": 9,
+      "start": 27.0,
+      "end": 30.0,
+      "text": "We might disagree on how like good or bad each of them are."
+    },
+    {
+      "id": 10,
+      "start": 30.0,
+      "end": 34.0,
+      "text": "But I think most people would agree that this one is like,"
+    },
+    {
+      "id": 11,
+      "start": 34.0,
+      "end": 36.0,
+      "text": "despite the fact that it got this wrong,"
+    },
+    {
+      "id": 12,
+      "start": 36.0,
+      "end": 38.0,
+      "text": "the second one is better than the first one."
+    },
+    {
+      "id": 13,
+      "start": 38.0,
+      "end": 40.0,
+      "text": "So this is a little bit of an easier task."
+    },
+    {
+      "id": 14,
+      "start": 40.0,
+      "end": 46.0,
+      "text": "It's easier to get people to annotate these things consistently."
+    },
+    {
+      "id": 15,
+      "start": 46.0,
+      "end": 52.0,
+      "text": "However, it has to disadvantage that you can't really tell whether systems"
+    },
+    {
+      "id": 16,
+      "start": 52.0,
+      "end": 54.0,
+      "text": "are really good or really bad."
+    },
+    {
+      "id": 17,
+      "start": 54.0,
+      "end": 59.0,
+      "text": "So let's say you have a bunch of really bad systems that you're comparing with each other."
+    },
+    {
+      "id": 18,
+      "start": 59.0,
+      "end": 62.0,
+      "text": "You might find that one is better than the other,"
+    },
+    {
+      "id": 19,
+      "start": 62.0,
+      "end": 65.0,
+      "text": "but that still doesn't mean it's ready to be deployed."
+    },
+    {
+      "id": 20,
+      "start": 65.0,
+      "end": 68.0,
+      "text": "Or if you have a bunch of really good systems, they're all basically,"
+    },
+    {
+      "id": 21,
+      "start": 68.0,
+      "end": 71.0,
+      "text": "you know, very, very similar to another,"
+    },
+    {
+      "id": 22,
+      "start": 71.0,
+      "end": 74.0,
+      "text": "but one is like slightly more fluent than the other."
+    },
+    {
+      "id": 23,
+      "start": 74.0,
+      "end": 76.0,
+      "text": "You might still get a similar result."
+    },
+    {
+      "id": 24,
+      "start": 76.0,
+      "end": 80.0,
+      "text": "And so that also makes it, you know,"
+    },
+    {
+      "id": 25,
+      "start": 80.0,
+      "end": 83.0,
+      "text": "a little bit difficult to use practically in some ways."
+    },
+    {
+      "id": 26,
+      "start": 83.0,
+      "end": 85.0,
+      "text": "I didn't put it on the slide,"
+    },
+    {
+      "id": 27,
+      "start": 85.0,
+      "end": 89.0,
+      "text": "but there's another way you can kind of get the best of both worlds,"
+    },
+    {
+      "id": 28,
+      "start": 89.0,
+      "end": 93.0,
+      "text": "which is side by side assessment."
+    },
+    {
+      "id": 29,
+      "start": 93.0,
+      "end": 97.0,
+      "text": "And side by side assessment, basically what you do is you would say,"
+    },
+    {
+      "id": 30,
+      "start": 97.0,
+      "end": 99.0,
+      "text": "we send this package to Tokyo."
+    },
+    {
+      "id": 31,
+      "start": 99.0,
+      "end": 104.0,
+      "text": "We send the impact, which depends for each of them a direct score."
+    },
+    {
+      "id": 32,
+      "start": 104.0,
+      "end": 109.0,
+      "text": "But you can use decimal places and you can't use the same score for all of them."
+    },
+    {
+      "id": 33,
+      "start": 109.0,
+      "end": 112.0,
+      "text": "And so it's like,"
+    },
+    {
+      "id": 34,
+      "start": 112.0,
+      "end": 116.0,
+      "text": "5.004.99 out of five or something like that."
+    },
+    {
+      "id": 35,
+      "start": 116.0,
+      "end": 121.0,
+      "text": "Like you like one slightly better than you other or something like that."
+    },
+    {
+      "id": 36,
+      "start": 121.0,
+      "end": 123.0,
+      "text": "So there are ways, I think,"
+    },
+    {
+      "id": 37,
+      "start": 123.0,
+      "end": 128.0,
+      "text": "kind of get best in both worlds if you're interested in doing that."
+    },
+    {
+      "id": 38,
+      "start": 128.0,
+      "end": 136.0,
+      "text": "So."
+    },
+    {
+      "id": 39,
+      "start": 136.0,
+      "end": 145.0,
+      "text": "One problem, one other problem with preference rankings is that there's a limited number of things that humans can compare before they get really overwhelmed."
+    },
+    {
+      "id": 40,
+      "start": 145.0,
+      "end": 147.0,
+      "text": "So if you say,"
+    },
+    {
+      "id": 41,
+      "start": 147.0,
+      "end": 150.0,
+      "text": "I want."
+    },
+    {
+      "id": 42,
+      "start": 150.0,
+      "end": 154.0,
+      "text": "Like, I want to rate."
+    },
+    {
+      "id": 43,
+      "start": 154.0,
+      "end": 159.0,
+      "text": "15 systems or 20 systems with respect to how good they are with respect to each other."
+    },
+    {
+      "id": 44,
+      "start": 159.0,
+      "end": 163.0,
+      "text": "It's going to be impossible for humans to come up with a good preference rating between them."
+    },
+    {
+      "id": 45,
+      "start": 163.0,
+      "end": 178.0,
+      "text": "And so the typical way around this, which is also used in things like the chatbot arena by Alumsus and other things like this is to use something like an yellow or true skill ranking."
+    },
+    {
+      "id": 46,
+      "start": 178.0,
+      "end": 192.0,
+      "text": "And what these are is these are things that were created for the ranking of like chess players or video game players or other things where they like that all against each other in multiple matches."
+    },
+    {
+      "id": 47,
+      "start": 192.0,
+      "end": 198.0,
+      "text": "So they're going to be a pair wise and then you put all of the wins and losses into these ranking algorithms."
+    },
+    {
+      "id": 48,
+      "start": 198.0,
+      "end": 202.0,
+      "text": "And they give you a score about how good like each of the each of the players are."
+    },
+    {
+      "id": 49,
+      "start": 202.0,
+      "end": 212.0,
+      "text": "So if you do something like this, you can get basically a ranking of systems despite the fact that you only did pair wise assessments."
+    },
+    {
+      "id": 50,
+      "start": 212.0,
+      "end": 219.0,
+      "text": "So these are also good things more about."
+    },
+    {
+      "id": 51,
+      "start": 219.0,
+      "end": 224.0,
+      "text": "There's a variety of human feedback that we create is air annotation."
+    },
+    {
+      "id": 52,
+      "start": 224.0,
+      "end": 227.0,
+      "text": "And this can be useful for a number of reasons."
+    },
+    {
+      "id": 53,
+      "start": 227.0,
+      "end": 232.0,
+      "text": "But basically the way it works is you annotate individual errors within the outputs."
+    },
+    {
+      "id": 54,
+      "start": 232.0,
+      "end": 233.0,
+      "text": "And."
+    },
+    {
+      "id": 55,
+      "start": 233.0,
+      "end": 240.0,
+      "text": "Oh, one thing I should mention is that I'm giving a lot of examples from machine translation."
+    },
+    {
+      "id": 56,
+      "start": 240.0,
+      "end": 248.0,
+      "text": "I feel like machine translation has been doing evaluation of generated outputs for a lot longer than a lot of other fields of NLP have."
+    },
+    {
+      "id": 57,
+      "start": 248.0,
+      "end": 253.0,
+      "text": "And the way they're doing it for their methodology is more developed than a lot of other fields."
+    },
+    {
+      "id": 58,
+      "start": 253.0,
+      "end": 257.0,
+      "text": "But a lot of these things can also be applied to other other test as well."
+    },
+    {
+      "id": 59,
+      "start": 257.0,
+      "end": 263.0,
+      "text": "But anyway, getting back to this, there's something for machine translation called multi-dimensional quality metrics."
+    },
+    {
+      "id": 60,
+      "start": 263.0,
+      "end": 266.0,
+      "text": "And the multi-dimensional quality metrics."
+    },
+    {
+      "id": 61,
+      "start": 266.0,
+      "end": 275.0,
+      "text": "Basically what they do is they annotate spans in the output where each span in the output is given a severity ranking of the air."
+    },
+    {
+      "id": 62,
+      "start": 275.0,
+      "end": 287.0,
+      "text": "And there's about eight different types of errors like this doesn't violate or this violates linguistic conventions of using the word this instead of."
+    },
+    {
+      "id": 63,
+      "start": 287.0,
+      "end": 290.0,
+      "text": "By using the word instead of this here."
+    },
+    {
+      "id": 64,
+      "start": 290.0,
+      "end": 295.0,
+      "text": "And then this is an accuracy error because it's not accurately can be."
+    },
+    {
+      "id": 65,
+      "start": 295.0,
+      "end": 301.0,
+      "text": "And then this error is minor. This error is major."
+    },
+    {
+      "id": 66,
+      "start": 301.0,
+      "end": 309.0,
+      "text": "And then there's also like severe severe versus major but minor and major is more important distinction."
+    },
+    {
+      "id": 67,
+      "start": 309.0,
+      "end": 322.0,
+      "text": "So the advantage of this is a couple fold. Remember when it gives you more fine grain feedback in that you can say, OK, this system has a lot of accuracy errors in a system has a lot of linguistic conventions errors."
+    },
+    {
+      "id": 68,
+      "start": 322.0,
+      "end": 337.0,
+      "text": "It also can be more consistent because if you just say to people which output is better or what is the score of this output people have trouble deciding about that because it's a more subjective evaluation."
+    },
+    {
+      "id": 69,
+      "start": 337.0,
+      "end": 341.0,
+      "text": "But if I say is this word correct."
+    },
+    {
+      "id": 70,
+      "start": 341.0,
+      "end": 346.0,
+      "text": "It's a little bit easier for people to do so you can get more consistent annotations here."
+    },
+    {
+      "id": 71,
+      "start": 346.0,
+      "end": 358.0,
+      "text": "The problem with this is this can be very time consuming. So, you know, obviously you need to go through and annotate every single error that's for long outputs or something."
+    },
+    {
+      "id": 72,
+      "start": 358.0,
+      "end": 364.0,
+      "text": "So anyway, these are just three ways of collecting human feedback."
+    },
+    {
+      "id": 73,
+      "start": 364.0,
+      "end": 369.0,
+      "text": "And then there's an alternative which is automatic evaluation of outputs."
+    },
+    {
+      "id": 74,
+      "start": 369.0,
+      "end": 373.0,
+      "text": "And there's a bunch of different ways we can do this."
+    },
+    {
+      "id": 75,
+      "start": 373.0,
+      "end": 384.0,
+      "text": "Basic idea here is we have a source. We have a couple of hypotheses and we have an automatic system that generates outputs like scores."
+    },
+    {
+      "id": 76,
+      "start": 384.0,
+      "end": 399.0,
+      "text": "And we optionally have a reference output. So the reference output is a human created gold standard output with respect to how good that with respect to like what the output should be in the 90."
+    },
+    {
+      "id": 77,
+      "start": 399.0,
+      "end": 413.0,
+      "text": "And basically the goal of automatic evaluation is to predict human preferences or predict what the human scores would be."
+    },
+    {
+      "id": 78,
+      "start": 413.0,
+      "end": 423.0,
+      "text": "Because still at this point, we mostly view what humans think of the output to be kind of the gold standard."
+    },
+    {
+      "id": 79,
+      "start": 423.0,
+      "end": 436.0,
+      "text": "And this is called a variety of things, depending on what field you're in. In machine translation and summarization, it's called automatic evaluation also a lot in dialogue."
+    },
+    {
+      "id": 80,
+      "start": 436.0,
+      "end": 448.0,
+      "text": "If you're talking about people from reinforcement learning or other things or chat bots or things like that, a lot of people or like a GI or whatever."
+    },
+    {
+      "id": 81,
+      "start": 448.0,
+      "end": 468.0,
+      "text": "And there are people call it a reward model. Because that specifically comes from the point of view of like learning from this feedback, but essentially they're the same thing from my point of view. They're trying to predict how good and output is and how much you should reward the model for producing that output."
+    },
+    {
+      "id": 82,
+      "start": 468.0,
+      "end": 478.0,
+      "text": "So there's a bunch of different methods to do this. I'm not going to cover all of them. I'm just going to cover three paradigms for doing this. So you know where to look further if you're interested in doing these things."
+    },
+    {
+      "id": 83,
+      "start": 478.0,
+      "end": 495.0,
+      "text": "The first one is embedding based evaluation. And the way of embedding based evaluation works is usually it's unsupervised calculation based on embedding similarity between the output that the model generated."
+    },
+    {
+      "id": 84,
+      "start": 495.0,
+      "end": 514.0,
+      "text": "And in reference output that you have created. So sorry, this is very small, but we have a reference here that says the weather is cold today. And we have a candidate that says it is freezing today. So this is probably, you know, like a good, a reasonably good output."
+    },
+    {
+      "id": 85,
+      "start": 514.0,
+      "end": 525.0,
+      "text": "And we run this through some embedding model. It was called birth score. And so of course you can run it through birth, but basically it can be any embedding model that gives you embedding for each token in the sequence."
+    },
+    {
+      "id": 86,
+      "start": 525.0,
+      "end": 533.0,
+      "text": "And so there are five tokens in the sequence for tokens in the sequence. You get five tokens and then four sorry five embeddings and then four embeddings."
+    },
+    {
+      "id": 87,
+      "start": 533.0,
+      "end": 552.0,
+      "text": "You calculate pairwise cosine similarity between all of them. And this gives you a cosine similarity matrix. And then you take the arg max or you take the maximum similarity along either the rows or the columns."
+    },
+    {
+      "id": 88,
+      "start": 552.0,
+      "end": 563.0,
+      "text": "And here the rows correspond to tokens in the reference. And because the rows correspond to tokens in the reference."
+    },
+    {
+      "id": 89,
+      "start": 563.0,
+      "end": 571.0,
+      "text": "The how well you find something that is similar to each of the tokens in the reference is like a recall based method."
+    },
+    {
+      "id": 90,
+      "start": 572.0,
+      "end": 589.0,
+      "text": "Because it's saying how many tokens in the reference have a good match in the output. And then if you look at the columns, if you look at the max in the column, this is like a precision based metric because it's saying how many of the things in the output are similar have a similar match in the reference."
+    },
+    {
+      "id": 91,
+      "start": 589.0,
+      "end": 601.0,
+      "text": "So basically you can calculate recall and precision over all of the tokens and then feed this into something that looks like a measure. And you can also use key up ID."
+    }
+  ],
+  "language": "en"
+}

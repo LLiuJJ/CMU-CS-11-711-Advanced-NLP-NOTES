@@ -1,0 +1,653 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 5.0,
+      "text": "reports from patients who took an actual drug and took a placebo."
+    },
+    {
+      "id": 1,
+      "start": 5.96,
+      "end": 9.12,
+      "text": "And so patients write about like,"
+    },
+    {
+      "id": 2,
+      "start": 9.12,
+      "end": 12.56,
+      "text": "their symptoms or how they felt or they have checkups"
+    },
+    {
+      "id": 3,
+      "start": 12.56,
+      "end": 15.68,
+      "text": "or things like that that are all written in natural language."
+    },
+    {
+      "id": 4,
+      "start": 15.68,
+      "end": 19.52,
+      "text": "So one of the things that doctors try to do"
+    },
+    {
+      "id": 5,
+      "start": 19.52,
+      "end": 21.72,
+      "text": "is they try to look at all of these reports"
+    },
+    {
+      "id": 6,
+      "start": 21.72,
+      "end": 24.76,
+      "text": "and figure out if there's any like consistent difference"
+    },
+    {
+      "id": 7,
+      "start": 24.76,
+      "end": 26.36,
+      "text": "between people who took a placebo"
+    },
+    {
+      "id": 8,
+      "start": 26.36,
+      "end": 29.56,
+      "text": "and people who took an actual drug."
+    },
+    {
+      "id": 9,
+      "start": 29.56,
+      "end": 32.4,
+      "text": "And this is like a major part of medical trials, right?"
+    },
+    {
+      "id": 10,
+      "start": 33.64,
+      "end": 37.52,
+      "text": "And so the idea is like given all the texts of people"
+    },
+    {
+      "id": 11,
+      "start": 37.52,
+      "end": 39.56,
+      "text": "who took the drug, given all the texts of people"
+    },
+    {
+      "id": 12,
+      "start": 39.56,
+      "end": 41.2,
+      "text": "who took the placebo,"
+    },
+    {
+      "id": 13,
+      "start": 41.2,
+      "end": 43.24,
+      "text": "could you automatically extract differences"
+    },
+    {
+      "id": 14,
+      "start": 43.24,
+      "end": 44.36,
+      "text": "between them in some way?"
+    },
+    {
+      "id": 15,
+      "start": 45.36,
+      "end": 48.32,
+      "text": "And so the methodology that they use for this"
+    },
+    {
+      "id": 16,
+      "start": 48.32,
+      "end": 53.32,
+      "text": "is they have like group A, the Manchester United Sackar Squad,"
+    },
+    {
+      "id": 17,
+      "start": 53.96,
+      "end": 57.52,
+      "text": "welcomes Rising Star to the Serena Williams-Joyce"
+    },
+    {
+      "id": 18,
+      "start": 57.52,
+      "end": 59.08,
+      "text": "the UCLA Women's Tennis Raster"
+    },
+    {
+      "id": 19,
+      "start": 59.08,
+      "end": 61.24,
+      "text": "and then you have like 20 more examples."
+    },
+    {
+      "id": 20,
+      "start": 61.24,
+      "end": 63.28,
+      "text": "And then here you have Egypt's president"
+    },
+    {
+      "id": 21,
+      "start": 64.56,
+      "end": 68.84,
+      "text": "at the African Union Summit and other things like that"
+    },
+    {
+      "id": 22,
+      "start": 68.84,
+      "end": 72.88,
+      "text": "in 20 examples, not seen here."
+    },
+    {
+      "id": 23,
+      "start": 72.88,
+      "end": 76.2,
+      "text": "And so then if I asked a question,"
+    },
+    {
+      "id": 24,
+      "start": 77.2,
+      "end": 79.8,
+      "text": "the original data set includes news summaries,"
+    },
+    {
+      "id": 25,
+      "start": 79.8,
+      "end": 83.6,
+      "text": "the two corpora are generated based on when they were published."
+    },
+    {
+      "id": 26,
+      "start": 83.6,
+      "end": 86.6,
+      "text": "Samples from group A include news from 2007"
+    },
+    {
+      "id": 27,
+      "start": 87.16,
+      "end": 91.04,
+      "text": "while samples from group B include news from 2008."
+    },
+    {
+      "id": 28,
+      "start": 91.04,
+      "end": 92.68,
+      "text": "I'm a journalist trying to understand"
+    },
+    {
+      "id": 29,
+      "start": 92.68,
+      "end": 95.24,
+      "text": "what topics are popular across years."
+    },
+    {
+      "id": 30,
+      "start": 95.24,
+      "end": 98.2,
+      "text": "Please write a list of hypotheses separated by bullet points"
+    },
+    {
+      "id": 31,
+      "start": 98.2,
+      "end": 101.08,
+      "text": "of how data points from group A differ from those of group B"
+    },
+    {
+      "id": 32,
+      "start": 102.6,
+      "end": 104.88,
+      "text": "and then formatting information."
+    },
+    {
+      "id": 33,
+      "start": 108.16,
+      "end": 112.32,
+      "text": "And so based on the two sentence groups,"
+    },
+    {
+      "id": 34,
+      "start": 112.32,
+      "end": 115.48,
+      "text": "and B from the above, more sentences in group A,"
+    },
+    {
+      "id": 35,
+      "start": 116.48,
+      "end": 119.28,
+      "text": "mention a sports team or mention about academic relations"
+    },
+    {
+      "id": 36,
+      "start": 119.28,
+      "end": 120.08,
+      "text": "or things like that."
+    },
+    {
+      "id": 37,
+      "start": 120.08,
+      "end": 122.6,
+      "text": "And so what this allows you to do is it allows you"
+    },
+    {
+      "id": 38,
+      "start": 122.6,
+      "end": 124.32,
+      "text": "to come up with a whole bunch of hypotheses"
+    },
+    {
+      "id": 39,
+      "start": 124.32,
+      "end": 127.04,
+      "text": "about why one might be better than the other."
+    },
+    {
+      "id": 40,
+      "start": 127.04,
+      "end": 132.04,
+      "text": "So the problem with this though is like because of language model"
+    },
+    {
+      "id": 41,
+      "start": 132.04,
+      "end": 136.56,
+      "text": "limits, number one, they might just hallucinate things"
+    },
+    {
+      "id": 42,
+      "start": 136.56,
+      "end": 138.0,
+      "text": "and be totally wrong."
+    },
+    {
+      "id": 43,
+      "start": 139.04,
+      "end": 144.04,
+      "text": "Number two, the size of the context"
+    },
+    {
+      "id": 44,
+      "start": 144.08,
+      "end": 145.36,
+      "text": "to that they can take into account"
+    },
+    {
+      "id": 45,
+      "start": 145.36,
+      "end": 148.16,
+      "text": "when making this decision is relatively small."
+    },
+    {
+      "id": 46,
+      "start": 148.16,
+      "end": 152.6,
+      "text": "So the next thing that they do is then they have a much larger"
+    },
+    {
+      "id": 47,
+      "start": 152.6,
+      "end": 156.92,
+      "text": "corpus of text with like a thousand examples"
+    },
+    {
+      "id": 48,
+      "start": 156.92,
+      "end": 158.08,
+      "text": "or something like this."
+    },
+    {
+      "id": 49,
+      "start": 159.12,
+      "end": 164.12,
+      "text": "And then they treat each of these hypotheses as a classifier"
+    },
+    {
+      "id": 50,
+      "start": 166.08,
+      "end": 169.12,
+      "text": "and then they go through all of the examples from corpus one"
+    },
+    {
+      "id": 51,
+      "start": 169.12,
+      "end": 172.2,
+      "text": "which is like maybe 2000, your 2000,"
+    },
+    {
+      "id": 52,
+      "start": 172.2,
+      "end": 174.68,
+      "text": "then corpus two which is your 2008."
+    },
+    {
+      "id": 53,
+      "start": 174.68,
+      "end": 178.36,
+      "text": "And they ask the language model with respect to all of them,"
+    },
+    {
+      "id": 54,
+      "start": 178.36,
+      "end": 181.44,
+      "text": "does this sentence mention a sports team"
+    },
+    {
+      "id": 55,
+      "start": 181.44,
+      "end": 183.32,
+      "text": "recording a new member?"
+    },
+    {
+      "id": 56,
+      "start": 184.8,
+      "end": 188.32,
+      "text": "And so you get a classification for each one of these."
+    },
+    {
+      "id": 57,
+      "start": 198.4,
+      "end": 200.96,
+      "text": "And you get a certain number of ones and zeros."
+    },
+    {
+      "id": 58,
+      "start": 200.96,
+      "end": 203.52,
+      "text": "And so once you have a certain number of ones and zeros,"
+    },
+    {
+      "id": 59,
+      "start": 203.52,
+      "end": 206.8,
+      "text": "what's the next thing that you would do here?"
+    },
+    {
+      "id": 60,
+      "start": 206.8,
+      "end": 207.64,
+      "text": "Any ideas?"
+    },
+    {
+      "id": 61,
+      "start": 210.88,
+      "end": 213.0,
+      "text": "How do you tell if there's actually a difference"
+    },
+    {
+      "id": 62,
+      "start": 213.0,
+      "end": 213.84,
+      "text": "between these two?"
+    },
+    {
+      "id": 63,
+      "start": 222.44,
+      "end": 226.76,
+      "text": "Between two sets of numbers like one and zero."
+    },
+    {
+      "id": 64,
+      "start": 227.76,
+      "end": 231.76,
+      "text": "A hint is you probably had to do this for assignment two."
+    },
+    {
+      "id": 65,
+      "start": 239.52,
+      "end": 240.52,
+      "text": "Yeah."
+    },
+    {
+      "id": 66,
+      "start": 240.52,
+      "end": 241.6,
+      "text": "Significance."
+    },
+    {
+      "id": 67,
+      "start": 241.6,
+      "end": 242.24,
+      "text": "Yeah, exactly."
+    },
+    {
+      "id": 68,
+      "start": 242.24,
+      "end": 244.32,
+      "text": "You do a significance test between the two."
+    },
+    {
+      "id": 69,
+      "start": 244.32,
+      "end": 250.08,
+      "text": "And so what you can then do is you have lots of hypotheses."
+    },
+    {
+      "id": 70,
+      "start": 250.08,
+      "end": 252.4,
+      "text": "You have lots of significance values."
+    },
+    {
+      "id": 71,
+      "start": 252.4,
+      "end": 254.56,
+      "text": "You can order them by the significance value"
+    },
+    {
+      "id": 72,
+      "start": 254.56,
+      "end": 258.28,
+      "text": "and say the most significance or the difference"
+    },
+    {
+      "id": 73,
+      "start": 258.28,
+      "end": 262.4,
+      "text": "with the lowest p value between them"
+    },
+    {
+      "id": 74,
+      "start": 262.4,
+      "end": 263.92,
+      "text": "is the one that's most likely to be"
+    },
+    {
+      "id": 75,
+      "start": 263.92,
+      "end": 265.2,
+      "text": "an actual difference between the two."
+    },
+    {
+      "id": 76,
+      "start": 265.2,
+      "end": 270.2,
+      "text": "And you can find the news in 2007,"
+    },
+    {
+      "id": 77,
+      "start": 271.36,
+      "end": 275.52,
+      "text": "indeed, tended to talk about acts more than other things."
+    },
+    {
+      "id": 78,
+      "start": 275.52,
+      "end": 280.52,
+      "text": "So I actually used this in one of my unrelated projects"
+    },
+    {
+      "id": 79,
+      "start": 280.52,
+      "end": 282.44,
+      "text": "where I wanted to find the difference between"
+    },
+    {
+      "id": 80,
+      "start": 282.96,
+      "end": 287.96,
+      "text": "language models sentences at language models aligned well"
+    },
+    {
+      "id": 81,
+      "start": 288.4,
+      "end": 291.56,
+      "text": "with human brain signals and sentences"
+    },
+    {
+      "id": 82,
+      "start": 291.56,
+      "end": 293.32,
+      "text": "where language models didn't align well"
+    },
+    {
+      "id": 83,
+      "start": 293.32,
+      "end": 294.36,
+      "text": "with human brain signals."
+    },
+    {
+      "id": 84,
+      "start": 294.36,
+      "end": 298.0,
+      "text": "So we had some data of human brain signals"
+    },
+    {
+      "id": 85,
+      "start": 298.0,
+      "end": 301.4,
+      "text": "and we had a measure of alignment on each sentence."
+    },
+    {
+      "id": 86,
+      "start": 301.4,
+      "end": 303.88,
+      "text": "And it actually found some pretty interesting hypotheses"
+    },
+    {
+      "id": 87,
+      "start": 303.88,
+      "end": 307.72,
+      "text": "like language models tend to align less well"
+    },
+    {
+      "id": 88,
+      "start": 307.72,
+      "end": 310.24,
+      "text": "with human brain signals on metaphorical language"
+    },
+    {
+      "id": 89,
+      "start": 310.24,
+      "end": 313.8,
+      "text": "or a language that had to do with interpersonal relations"
+    },
+    {
+      "id": 90,
+      "start": 313.8,
+      "end": 316.16,
+      "text": "or other things like that."
+    },
+    {
+      "id": 91,
+      "start": 316.16,
+      "end": 318.08,
+      "text": "And then we actually went in and pursued"
+    },
+    {
+      "id": 92,
+      "start": 319.56,
+      "end": 321.16,
+      "text": "these to examine them further."
+    },
+    {
+      "id": 93,
+      "start": 321.16,
+      "end": 324.2,
+      "text": "And we didn't entirely rely on this,"
+    },
+    {
+      "id": 94,
+      "start": 325.68,
+      "end": 328.0,
+      "text": "like significance test because I didn't quite trust"
+    },
+    {
+      "id": 95,
+      "start": 328.0,
+      "end": 329.24,
+      "text": "the language models that much"
+    },
+    {
+      "id": 96,
+      "start": 329.24,
+      "end": 332.96,
+      "text": "to shape my entire resource, research agenda around them."
+    },
+    {
+      "id": 97,
+      "start": 332.96,
+      "end": 334.72,
+      "text": "But we came up with other ways to measure it."
+    },
+    {
+      "id": 98,
+      "start": 334.72,
+      "end": 336.48,
+      "text": "And some of the things checked out,"
+    },
+    {
+      "id": 99,
+      "start": 336.48,
+      "end": 337.64,
+      "text": "some of the things didn't check out."
+    },
+    {
+      "id": 100,
+      "start": 337.64,
+      "end": 341.28,
+      "text": "So again, I think this general direction"
+    },
+    {
+      "id": 101,
+      "start": 341.28,
+      "end": 344.0,
+      "text": "of like how can language models help us answer,"
+    },
+    {
+      "id": 102,
+      "start": 344.0,
+      "end": 346.72,
+      "text": "you know, complex research questions"
+    },
+    {
+      "id": 103,
+      "start": 346.72,
+      "end": 348.48,
+      "text": "that we wouldn't be able to easily"
+    },
+    {
+      "id": 104,
+      "start": 348.48,
+      "end": 350.44,
+      "text": "or very efficiently that would require"
+    },
+    {
+      "id": 105,
+      "start": 350.44,
+      "end": 352.84,
+      "text": "normally humans annotating lots of data"
+    },
+    {
+      "id": 106,
+      "start": 352.84,
+      "end": 355.88,
+      "text": "as an interesting topic as well."
+    },
+    {
+      "id": 107,
+      "start": 358.08,
+      "end": 358.92,
+      "text": "Cool."
+    }
+  ],
+  "language": "en"
+}

@@ -1,0 +1,473 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 7.0,
+      "text": "And so yeah, do all kinds of extra information with x2 and y2,"
+    },
+    {
+      "id": 1,
+      "start": 7.0,
+      "end": 11.0,
+      "text": "would they also respond to different layer?"
+    },
+    {
+      "id": 2,
+      "start": 11.0,
+      "end": 17.0,
+      "text": "So this specific example looks at this specific point."
+    },
+    {
+      "id": 3,
+      "start": 17.0,
+      "end": 23.0,
+      "text": "For every example, they'll probably find different regions in a different degree of manipulation."
+    },
+    {
+      "id": 4,
+      "start": 24.0,
+      "end": 29.0,
+      "text": "And yeah, that it gets a little uncomfortable kind of quickly."
+    },
+    {
+      "id": 5,
+      "start": 29.0,
+      "end": 40.0,
+      "text": "It's not like they're able to find, you know, a specific attention had that for a specific layer or specific way matrix that corresponds to like all."
+    },
+    {
+      "id": 6,
+      "start": 40.0,
+      "end": 44.0,
+      "text": "Yeah, relations of a specific type."
+    },
+    {
+      "id": 7,
+      "start": 44.0,
+      "end": 47.0,
+      "text": "Payment for questions."
+    },
+    {
+      "id": 8,
+      "start": 47.0,
+      "end": 51.0,
+      "text": "This is actually just a question of you know, it seems like more frequent."
+    },
+    {
+      "id": 9,
+      "start": 51.0,
+      "end": 56.0,
+      "text": "That's my experience more places in the model is you know, that's actually the case."
+    },
+    {
+      "id": 10,
+      "start": 56.0,
+      "end": 60.0,
+      "text": "I have no idea, but I would imagine that."
+    },
+    {
+      "id": 11,
+      "start": 60.0,
+      "end": 65.0,
+      "text": "Probably could occur in more places, but also."
+    },
+    {
+      "id": 12,
+      "start": 65.0,
+      "end": 70.0,
+      "text": "A lot of the information is redundant anyway in the model, especially for larger models."
+    },
+    {
+      "id": 13,
+      "start": 70.0,
+      "end": 82.0,
+      "text": "You might have to make target interventions in multiple places, but it's possible that one intervention in one place sufficiently destroys like contextualize information and other pieces of it's close."
+    },
+    {
+      "id": 14,
+      "start": 82.0,
+      "end": 90.0,
+      "text": "It depends on how big this intervention is if it's like hitting it with a hammer rather than some nice fine grain thing."
+    },
+    {
+      "id": 15,
+      "start": 90.0,
+      "end": 95.0,
+      "text": "It'd be a good, we get experiment to see."
+    },
+    {
+      "id": 16,
+      "start": 95.0,
+      "end": 99.0,
+      "text": "Any other questions."
+    },
+    {
+      "id": 17,
+      "start": 99.0,
+      "end": 106.0,
+      "text": "Alright, so we'll move into the stuff that I'm most familiar with in some of my work, so looking at activations."
+    },
+    {
+      "id": 18,
+      "start": 106.0,
+      "end": 110.0,
+      "text": "So this is this is work I've been doing for a while, this idea of steering vector."
+    },
+    {
+      "id": 19,
+      "start": 110.0,
+      "end": 115.0,
+      "text": "So I mentioned I poke models of stick steering vector is that stick."
+    },
+    {
+      "id": 20,
+      "start": 115.0,
+      "end": 126.0,
+      "text": "So it's basically a fixed line vector that steers a language model to generate a specific sequence exactly when added to the hidden states of a model out of specific location."
+    },
+    {
+      "id": 21,
+      "start": 126.0,
+      "end": 129.0,
+      "text": "So I'll read this again."
+    },
+    {
+      "id": 22,
+      "start": 129.0,
+      "end": 141.0,
+      "text": "There's a very like specific form that I wrote this in, so it's a fixed length vector that steers a language model to generate a specific sequence exactly when added to the hidden states of a model out of specific point."
+    },
+    {
+      "id": 23,
+      "start": 141.0,
+      "end": 148.0,
+      "text": "So this is different than a soft prompt or different than a model editing sort of approach."
+    },
+    {
+      "id": 24,
+      "start": 148.0,
+      "end": 155.0,
+      "text": "In this case, there is a vector that corresponds to a sequence and that vector doesn't correspond to any other sequence."
+    },
+    {
+      "id": 25,
+      "start": 155.0,
+      "end": 160.0,
+      "text": "There could be multiple vectors and that turns out there are multiple vectors that correspond to that sequence."
+    },
+    {
+      "id": 26,
+      "start": 160.0,
+      "end": 166.0,
+      "text": "It'll be a little bit clearer based on how we extract these things."
+    },
+    {
+      "id": 27,
+      "start": 166.0,
+      "end": 171.0,
+      "text": "So this is the stick that we're talking about."
+    },
+    {
+      "id": 28,
+      "start": 171.0,
+      "end": 173.0,
+      "text": "So how do we extract them?"
+    },
+    {
+      "id": 29,
+      "start": 173.0,
+      "end": 176.0,
+      "text": "So this is gpt2."
+    },
+    {
+      "id": 30,
+      "start": 176.0,
+      "end": 180.0,
+      "text": "Basically this is the steer thing in the left."
+    },
+    {
+      "id": 31,
+      "start": 180.0,
+      "end": 182.0,
+      "text": "This is the steering vector."
+    },
+    {
+      "id": 32,
+      "start": 182.0,
+      "end": 190.0,
+      "text": "This gets initialized randomly with small like in a in a reasonable way uniformly and small."
+    },
+    {
+      "id": 33,
+      "start": 190.0,
+      "end": 194.0,
+      "text": "And for any sequence, a specific sequence that we want the model to generate."
+    },
+    {
+      "id": 34,
+      "start": 194.0,
+      "end": 202.0,
+      "text": "We optimize this steering vector, Z steer to generate that sequence, keeping the rest of the model entirely fixed."
+    },
+    {
+      "id": 35,
+      "start": 202.0,
+      "end": 210.0,
+      "text": "So think about it as we're nudging a frozen model to be able to generate a specific sequence at a specific time."
+    },
+    {
+      "id": 36,
+      "start": 210.0,
+      "end": 222.0,
+      "text": "And we have a lot of different options and where to inject this steering vector can put it basically anywhere in the model can put it at any time step any number of these things in practice."
+    },
+    {
+      "id": 37,
+      "start": 222.0,
+      "end": 233.0,
+      "text": "Providing it just at the first time step and somewhere in the middle of the model, basically not the first layer and not the last layer works pretty well."
+    },
+    {
+      "id": 38,
+      "start": 233.0,
+      "end": 238.0,
+      "text": "And so more formal forget the kind of notation."
+    },
+    {
+      "id": 39,
+      "start": 238.0,
+      "end": 245.0,
+      "text": "But right here we initialize this is the steer and for a few iterations."
+    },
+    {
+      "id": 40,
+      "start": 245.0,
+      "end": 253.0,
+      "text": "And we do forward passes first this starts as random and then this gets closer and closer and closer to being able to generate the sequence."
+    },
+    {
+      "id": 41,
+      "start": 253.0,
+      "end": 256.0,
+      "text": "And eventually we get to a point and this end is pretty small."
+    },
+    {
+      "id": 42,
+      "start": 256.0,
+      "end": 269.0,
+      "text": "8 for 10 for most sequences, we get to a point where we have found the stick that is allowed to poke this model to generate that sequence exactly now when we greedy decode from the model."
+    },
+    {
+      "id": 43,
+      "start": 269.0,
+      "end": 283.0,
+      "text": "And then we pass in just the beginning of sequence token and this Z steer the steering vector and it's able to uncover a whole sequence that whole sequence that we had at the beginning entirely."
+    },
+    {
+      "id": 44,
+      "start": 283.0,
+      "end": 296.0,
+      "text": "This is weird and interesting because in a lot of cases in like the prompting world in the soft prompt world usually you need a pretty large width of a prompt to be able to do things with."
+    },
+    {
+      "id": 45,
+      "start": 296.0,
+      "end": 324.0,
+      "text": "So this generally in that structure you're doing a specific task and you're providing kind of a large a large prompt to do this with large soft prompt to do this with this is often this often has a width of 50 and a length of the the hidden size of the embedding size of the model in our case of all of our steering vectors are with one and there of just the hidden size of the model."
+    },
+    {
+      "id": 46,
+      "start": 324.0,
+      "end": 339.0,
+      "text": "And so happening actually before I go to results any questions this is a this is a weird setup and weird relative to what people do so have you to take any question."
+    },
+    {
+      "id": 47,
+      "start": 339.0,
+      "end": 344.0,
+      "text": "Yeah."
+    },
+    {
+      "id": 48,
+      "start": 344.0,
+      "end": 359.0,
+      "text": "Similarly, if your prompt was of a specific type so the prompt here is a continuous vector passed in it's a single length with hidden size continuous vector so."
+    },
+    {
+      "id": 49,
+      "start": 360.0,
+      "end": 366.0,
+      "text": "It's kind of like maybe collapsing your prompt into this compressing it into this train."
+    },
+    {
+      "id": 50,
+      "start": 367.0,
+      "end": 369.0,
+      "text": "You can think of it."
+    },
+    {
+      "id": 51,
+      "start": 369.0,
+      "end": 372.0,
+      "text": "Yeah."
+    },
+    {
+      "id": 52,
+      "start": 372.0,
+      "end": 376.0,
+      "text": "So this would be like three."
+    },
+    {
+      "id": 53,
+      "start": 376.0,
+      "end": 380.0,
+      "text": "I'm just thinking of using sand like."
+    },
+    {
+      "id": 54,
+      "start": 380.0,
+      "end": 395.0,
+      "text": "I'm potentially on something that I wanted to work on it a year ago and didn't get didn't get this sufficient buy in and then have to apply to grad school and."
+    },
+    {
+      "id": 55,
+      "start": 395.0,
+      "end": 403.0,
+      "text": "It went by the wayside but but definitely something to something to pursue."
+    },
+    {
+      "id": 56,
+      "start": 403.0,
+      "end": 405.0,
+      "text": "There's a lot of stuff."
+    },
+    {
+      "id": 57,
+      "start": 405.0,
+      "end": 409.0,
+      "text": "Any other questions."
+    },
+    {
+      "id": 58,
+      "start": 409.0,
+      "end": 413.0,
+      "text": "Alright so we can over two results."
+    },
+    {
+      "id": 59,
+      "start": 413.0,
+      "end": 428.0,
+      "text": "So we can find steering vectors and that's and that's interesting and we can find them pretty usually and for most sequences even sequences that the models hasn't seen before the underlying language model has been seen before."
+    },
+    {
+      "id": 60,
+      "start": 428.0,
+      "end": 439.0,
+      "text": "It also works for and this is kind of a negative but it also works for random sequences of very small white but it's harder to find."
+    },
+    {
+      "id": 61,
+      "start": 439.0,
+      "end": 449.0,
+      "text": "So you can imagine if your steering vector is basically a giant bulldozer that doesn't matter what your models learned similar to the probe situation."
+    },
+    {
+      "id": 62,
+      "start": 449.0,
+      "end": 456.0,
+      "text": "If you can compress all that information of that sequence into the vector really need the language model."
+    },
+    {
+      "id": 63,
+      "start": 456.0,
+      "end": 476.0,
+      "text": "So there are cases when you're looking at sequences of like five seven eight something like this you can uniformly sample from the vocabulary at random with replacement generate other garbage and find steering vectors for them takes a little while that your model is complex enough that you can basically bold up your model to be able to do."
+    },
+    {
+      "id": 64,
+      "start": 476.0,
+      "end": 487.0,
+      "text": "Even if that sequences incredibly low likelihood under the model but it works better for things that are higher likelihood under the model predictably."
+    },
+    {
+      "id": 65,
+      "start": 487.0,
+      "end": 495.0,
+      "text": "The I think the thing that surprised me the most was the steering letters themselves have interpretable properties."
+    },
+    {
+      "id": 66,
+      "start": 495.0,
+      "end": 499.0,
+      "text": "So distance in steering vector space reflects a mental similarity."
+    },
+    {
+      "id": 67,
+      "start": 499.0,
+      "end": 503.0,
+      "text": "If you have two sentences that are close."
+    },
+    {
+      "id": 68,
+      "start": 503.0,
+      "end": 508.0,
+      "text": "They're also close and steering vector space. That's kind of nice."
+    },
+    {
+      "id": 69,
+      "start": 508.0,
+      "end": 524.0,
+      "text": "It does better than for example the representations one would use for for probing so mean pooling bird hidden states like you looked at before those do actually worse than steering vectors just a bit surprising."
+    },
+    {
+      "id": 70,
+      "start": 524.0,
+      "end": 539.0,
+      "text": "So the style transfer is possible with simple vector arithmetic so it'd be nice to say that I have a sequence I want to subtract you know negativity and add positivity for sentiment or other sorts of style."
+    },
+    {
+      "id": 71,
+      "start": 539.0,
+      "end": 544.0,
+      "text": "We can do this and we can do this even though we're well and steering that first way."
+    },
+    {
+      "id": 72,
+      "start": 544.0,
+      "end": 552.0,
+      "text": "We can also decode from interpolations in the way in space. So you take two steering vectors for two sequences."
+    },
+    {
+      "id": 73,
+      "start": 552.0,
+      "end": 557.0,
+      "text": "You look in the middle of them, you look linearly interpolate between them and you decode."
+    },
+    {
+      "id": 74,
+      "start": 557.0,
+      "end": 569.0,
+      "text": "If the space is kind of weirdly peaking, then you would have issues and what you generate is garbage and there's no guarantee that the space should be reasonable between them but it turns out it is."
+    },
+    {
+      "id": 75,
+      "start": 569.0,
+      "end": 580.0,
+      "text": "So here's an example of when these style transfer cases so very, very simple easy easy sentence we found steering vectors for the taste is excellent."
+    },
+    {
+      "id": 76,
+      "start": 580.0,
+      "end": 596.0,
+      "text": "And we took a sample of 100 positive sentences and 100 negative sentences found their steering vectors took the mean and thought that you know that looks like the positive concept steering vector negative concepts steering vector we just did vector arithmetic just did."
+    },
+    {
+      "id": 77,
+      "start": 596.0,
+      "end": 601.0,
+      "text": "Steering vector plus negative minus positive."
+    }
+  ],
+  "language": "en"
+}

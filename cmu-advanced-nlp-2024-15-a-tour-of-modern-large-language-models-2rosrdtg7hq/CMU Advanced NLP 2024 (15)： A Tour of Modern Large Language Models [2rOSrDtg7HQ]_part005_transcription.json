@@ -1,0 +1,689 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 3.6,
+      "text": "And then, yeah, sorry, the other feature is mixed rule is using,"
+    },
+    {
+      "id": 1,
+      "start": 3.6,
+      "end": 4.96,
+      "text": "is using a mixture of experts,"
+    },
+    {
+      "id": 2,
+      "start": 4.96,
+      "end": 6.52,
+      "text": "like we've got to that in the previous time."
+    },
+    {
+      "id": 3,
+      "start": 6.52,
+      "end": 11.0,
+      "text": "So despite these, these are very strong models."
+    },
+    {
+      "id": 4,
+      "start": 11.0,
+      "end": 14.8,
+      "text": "They're generally stronger than Lama at a lot of things."
+    },
+    {
+      "id": 5,
+      "start": 14.8,
+      "end": 17.0,
+      "text": "And mixed rule is actually a lot faster"
+    },
+    {
+      "id": 6,
+      "start": 17.0,
+      "end": 20.32,
+      "text": "and easier to deploy than Lama 70B."
+    },
+    {
+      "id": 7,
+      "start": 20.32,
+      "end": 22.84,
+      "text": "It's smaller, it only has 45 billion parameters."
+    },
+    {
+      "id": 8,
+      "start": 22.84,
+      "end": 25.64,
+      "text": "So it's definitely a good choice if you want to do so."
+    },
+    {
+      "id": 9,
+      "start": 25.64,
+      "end": 26.6,
+      "text": "Let me try."
+    },
+    {
+      "id": 10,
+      "start": 26.6,
+      "end": 27.4,
+      "text": "Yeah."
+    },
+    {
+      "id": 11,
+      "start": 27.4,
+      "end": 34.4,
+      "text": "So, yeah, so it's attending the 496 tokens."
+    },
+    {
+      "id": 12,
+      "start": 34.4,
+      "end": 41.4,
+      "text": "So the contact size typically,"
+    },
+    {
+      "id": 13,
+      "start": 41.4,
+      "end": 45.4,
+      "text": "like, let's say you have a block of 496 tokens here."
+    },
+    {
+      "id": 14,
+      "start": 45.4,
+      "end": 49.4,
+      "text": "Typically, that means that the first token attains to zero tokens."
+    },
+    {
+      "id": 15,
+      "start": 49.4,
+      "end": 52.4,
+      "text": "The second token attains to one token."
+    },
+    {
+      "id": 16,
+      "start": 52.4,
+      "end": 55.4,
+      "text": "And the third token attains to two tokens."
+    },
+    {
+      "id": 17,
+      "start": 56.4,
+      "end": 60.4,
+      "text": "Here, this is maybe a little bit misleading, I guess."
+    },
+    {
+      "id": 18,
+      "start": 60.4,
+      "end": 64.4,
+      "text": "But if your context length is 4096,"
+    },
+    {
+      "id": 19,
+      "start": 64.4,
+      "end": 67.4,
+      "text": "you actually get a block of twice that size."
+    },
+    {
+      "id": 20,
+      "start": 67.4,
+      "end": 70.4,
+      "text": "You get a block of 8192 tokens."
+    },
+    {
+      "id": 21,
+      "start": 70.4,
+      "end": 75.4,
+      "text": "And so the first one attains to all of the previous ones."
+    },
+    {
+      "id": 22,
+      "start": 75.4,
+      "end": 82.4,
+      "text": "So the first, sorry, so the."
+    },
+    {
+      "id": 23,
+      "start": 82.4,
+      "end": 96.4,
+      "text": "So the 497 token attains to all of the previous ones."
+    },
+    {
+      "id": 24,
+      "start": 96.4,
+      "end": 98.4,
+      "text": "Sorry, you know what?"
+    },
+    {
+      "id": 25,
+      "start": 98.4,
+      "end": 102.4,
+      "text": "496 would be a great question."
+    },
+    {
+      "id": 26,
+      "start": 102.4,
+      "end": 109.4,
+      "text": "And so because of that,"
+    },
+    {
+      "id": 27,
+      "start": 109.4,
+      "end": 114.4,
+      "text": "you move to the very end and you have the 8192 second."
+    },
+    {
+      "id": 28,
+      "start": 114.4,
+      "end": 122.4,
+      "text": "That's depending from the 496."
+    },
+    {
+      "id": 29,
+      "start": 122.4,
+      "end": 125.4,
+      "text": "And so like every token is always attending to the previous one."
+    },
+    {
+      "id": 30,
+      "start": 125.4,
+      "end": 132.4,
+      "text": "And that allows you to kind of attend to things in the previous block."
+    },
+    {
+      "id": 31,
+      "start": 132.4,
+      "end": 136.4,
+      "text": "I didn't really know what to do next."
+    },
+    {
+      "id": 32,
+      "start": 136.4,
+      "end": 139.4,
+      "text": "I don't know what to do."
+    },
+    {
+      "id": 33,
+      "start": 139.4,
+      "end": 142.4,
+      "text": "I don't know what to do next."
+    },
+    {
+      "id": 34,
+      "start": 142.4,
+      "end": 144.4,
+      "text": "So I don't know what to do next."
+    },
+    {
+      "id": 35,
+      "start": 144.4,
+      "end": 146.4,
+      "text": "So the next one."
+    },
+    {
+      "id": 36,
+      "start": 146.4,
+      "end": 148.4,
+      "text": "I'd like to talk about his friend."
+    },
+    {
+      "id": 37,
+      "start": 148.4,
+      "end": 150.4,
+      "text": "This is one that in the US,"
+    },
+    {
+      "id": 38,
+      "start": 150.4,
+      "end": 153.4,
+      "text": "at least people may be pay a little bit less attention to."
+    },
+    {
+      "id": 39,
+      "start": 153.4,
+      "end": 156.4,
+      "text": "But it was created by Ali Baba."
+    },
+    {
+      "id": 40,
+      "start": 156.4,
+      "end": 159.4,
+      "text": "And it's a strong multilingual model,"
+    },
+    {
+      "id": 41,
+      "start": 159.4,
+      "end": 161.4,
+      "text": "especially English and Chinese,"
+    },
+    {
+      "id": 42,
+      "start": 161.4,
+      "end": 164.4,
+      "text": "but even in other languages as well."
+    },
+    {
+      "id": 43,
+      "start": 164.4,
+      "end": 169.4,
+      "text": "But one of its defining characteristics other than just being a strong model overall."
+    },
+    {
+      "id": 44,
+      "start": 169.4,
+      "end": 177.4,
+      "text": "Is that it has a large vocabulary for multilingual support and strong performance."
+    },
+    {
+      "id": 45,
+      "start": 177.4,
+      "end": 180.4,
+      "text": "It comes in several sizes."
+    },
+    {
+      "id": 46,
+      "start": 180.4,
+      "end": 183.4,
+      "text": "I believe."
+    },
+    {
+      "id": 47,
+      "start": 183.4,
+      "end": 187.4,
+      "text": "There's a seven B version and then there's also like a large like 70."
+    },
+    {
+      "id": 48,
+      "start": 187.4,
+      "end": 189.4,
+      "text": "And the S should be."
+    },
+    {
+      "id": 49,
+      "start": 189.4,
+      "end": 191.4,
+      "text": "So 72 B, I think."
+    },
+    {
+      "id": 50,
+      "start": 191.4,
+      "end": 195.4,
+      "text": "And it's using very standard."
+    },
+    {
+      "id": 51,
+      "start": 195.4,
+      "end": 205.4,
+      "text": "Architecture things, the only small difference it has is it has a bias in the attention there, which is doesn't exist in llama."
+    },
+    {
+      "id": 52,
+      "start": 205.4,
+      "end": 209.4,
+      "text": "An important thing is it's actually trained on multilingual data."
+    },
+    {
+      "id": 53,
+      "start": 209.4,
+      "end": 212.4,
+      "text": "And they use a large vocabulary."
+    },
+    {
+      "id": 54,
+      "start": 212.4,
+      "end": 218.4,
+      "text": "The use of vocabulary of 150 K in contrast to llamas 32 K."
+    },
+    {
+      "id": 55,
+      "start": 218.4,
+      "end": 224.4,
+      "text": "And that allows it to handle multilingual data relatively well."
+    },
+    {
+      "id": 56,
+      "start": 224.4,
+      "end": 227.4,
+      "text": "And."
+    },
+    {
+      "id": 57,
+      "start": 227.4,
+      "end": 232.4,
+      "text": "We have the three similar, you know, training regime."
+    },
+    {
+      "id": 58,
+      "start": 232.4,
+      "end": 237.4,
+      "text": "So overall, it's not very different from llama."
+    },
+    {
+      "id": 59,
+      "start": 237.4,
+      "end": 240.4,
+      "text": "What might be different is data engineering."
+    },
+    {
+      "id": 60,
+      "start": 240.4,
+      "end": 248.4,
+      "text": "And actually, I expect the data engineering part is a bit different because overall it's a bit stronger than llama to."
+    },
+    {
+      "id": 61,
+      "start": 248.4,
+      "end": 253.4,
+      "text": "And I think that has to do with data in various areas."
+    },
+    {
+      "id": 62,
+      "start": 253.4,
+      "end": 259.4,
+      "text": "One interesting piece from the paper that they have is."
+    },
+    {
+      "id": 63,
+      "start": 259.4,
+      "end": 265.4,
+      "text": "If we think all the way back to when we talked about word sub word models and word tokenization."
+    },
+    {
+      "id": 64,
+      "start": 265.4,
+      "end": 268.4,
+      "text": "Remember that sub word models split up the input."
+    },
+    {
+      "id": 65,
+      "start": 268.4,
+      "end": 271.4,
+      "text": "And they split up the input."
+    },
+    {
+      "id": 66,
+      "start": 271.4,
+      "end": 276.4,
+      "text": "So that frequent tokens get longer outputs and in frequent tokens get shorter outputs."
+    },
+    {
+      "id": 67,
+      "start": 276.4,
+      "end": 281.4,
+      "text": "So one of the problems, as I mentioned a long time ago when we covered this topic."
+    },
+    {
+      "id": 68,
+      "start": 281.4,
+      "end": 290.4,
+      "text": "Is this causes issues if you're doing multilingual things because if you have very little multilingual data in your training data for the sub word tokenization model."
+    },
+    {
+      "id": 69,
+      "start": 290.4,
+      "end": 294.4,
+      "text": "It will end up splitting all of the words into basically characters or even bytes."
+    },
+    {
+      "id": 70,
+      "start": 294.4,
+      "end": 298.4,
+      "text": "So what this shows here is."
+    },
+    {
+      "id": 71,
+      "start": 298.4,
+      "end": 310.4,
+      "text": "This is comparing the amount of sub word tokenization that happens according to each of the LOMs tokenizers with another explicitly multilingual model XLMR."
+    },
+    {
+      "id": 72,
+      "start": 310.4,
+      "end": 316.4,
+      "text": "So XLMR is kind of their baseline here with respect to how much it tokenizes each language."
+    },
+    {
+      "id": 73,
+      "start": 317.4,
+      "end": 321.4,
+      "text": "And on the very left we have llama."
+    },
+    {
+      "id": 74,
+      "start": 321.4,
+      "end": 330.4,
+      "text": "And so what we can see is that llama tokenizes tie 3.7 times as much as it is XLMR does."
+    },
+    {
+      "id": 75,
+      "start": 330.4,
+      "end": 337.4,
+      "text": "So it's basically splitting tie up into little tiny bits, which makes it very expensive and ineffective to process."
+    },
+    {
+      "id": 76,
+      "start": 337.4,
+      "end": 340.4,
+      "text": "Let's find some other languages that we care about."
+    },
+    {
+      "id": 77,
+      "start": 340.4,
+      "end": 349.4,
+      "text": "We have Hebrew, Arabic, Korean, Japanese, Chinese."
+    },
+    {
+      "id": 78,
+      "start": 349.4,
+      "end": 356.4,
+      "text": "So all of these you can see are split up pretty into many, many different chunks by llama."
+    },
+    {
+      "id": 79,
+      "start": 356.4,
+      "end": 361.4,
+      "text": "And then we have a few other language models in the middle and then we have plan on the right side."
+    },
+    {
+      "id": 80,
+      "start": 361.4,
+      "end": 372.4,
+      "text": "And what we can see is basically it's pretty comparable to XLMR, maybe a little bit more than XLMR, but pretty comparable to XLMR on many languages."
+    },
+    {
+      "id": 81,
+      "start": 372.4,
+      "end": 376.4,
+      "text": "And then I'm coded actually splits up code much less."
+    },
+    {
+      "id": 82,
+      "start": 376.4,
+      "end": 381.4,
+      "text": "So we can see that, you know, it's tokenizer is heavily multilingual."
+    },
+    {
+      "id": 83,
+      "start": 381.4,
+      "end": 384.4,
+      "text": "Another thing I'd like to point out is."
+    },
+    {
+      "id": 84,
+      "start": 384.4,
+      "end": 390.4,
+      "text": "I'm focusing on this particular language model for a number of reasons."
+    },
+    {
+      "id": 85,
+      "start": 390.4,
+      "end": 399.4,
+      "text": "The first one is multilinguality and I like multilinguality. I hope other people like multilinguality too."
+    },
+    {
+      "id": 86,
+      "start": 399.4,
+      "end": 412.4,
+      "text": "But another motivation is just it has quite strong performance and it's tapping the leaderboards in several different places."
+    },
+    {
+      "id": 87,
+      "start": 412.4,
+      "end": 416.4,
+      "text": "So if we look at the open L and leaderboard."
+    },
+    {
+      "id": 88,
+      "start": 416.4,
+      "end": 430.4,
+      "text": "At least, this was fine tuned model by advocates, which was originally based on the plan."
+    },
+    {
+      "id": 89,
+      "start": 430.4,
+      "end": 436.4,
+      "text": "So you can see that this is like a strong foundation model that lots of people are using for fine tuning things."
+    },
+    {
+      "id": 90,
+      "start": 436.4,
+      "end": 442.4,
+      "text": "So I would definitely encourage you to take a look at that."
+    },
+    {
+      "id": 91,
+      "start": 442.4,
+      "end": 452.4,
+      "text": "Of course, there's many, many different models that I didn't cover because if I covered all of the general purpose models, then we'll be here all day, but that's a first start."
+    },
+    {
+      "id": 92,
+      "start": 452.4,
+      "end": 462.4,
+      "text": "So next thing, I want to go into other kind of special purpose models. But are there any questions about about things I covered so far?"
+    },
+    {
+      "id": 93,
+      "start": 462.4,
+      "end": 465.4,
+      "text": "Cool. Okay."
+    },
+    {
+      "id": 94,
+      "start": 465.4,
+      "end": 468.4,
+      "text": "So next I'd like to go into other models."
+    },
+    {
+      "id": 95,
+      "start": 468.4,
+      "end": 474.4,
+      "text": "First is code models. So code models are models that were specifically trained on code."
+    },
+    {
+      "id": 96,
+      "start": 474.4,
+      "end": 478.4,
+      "text": "Actually, right now, every model is a code model."
+    },
+    {
+      "id": 97,
+      "start": 478.4,
+      "end": 486.4,
+      "text": "Like nobody pre-trains a large language model into serious about it and doesn't train on code because generating code is a huge use case."
+    },
+    {
+      "id": 98,
+      "start": 486.4,
+      "end": 495.4,
+      "text": "And also some work has demonstrated that training on code seems to improve reasoning abilities of language models as well."
+    },
+    {
+      "id": 99,
+      "start": 495.4,
+      "end": 502.4,
+      "text": "But these models were very heavily trained on code. So we have star code or two."
+    },
+    {
+      "id": 100,
+      "start": 502.4,
+      "end": 513.4,
+      "text": "This is a very recent entry. This is a fully open model. So you can see the data it was trained on all the training details are released and other stuff like that."
+    },
+    {
+      "id": 101,
+      "start": 513.4,
+      "end": 519.4,
+      "text": "So this is kind of in the pythia, you know, pythia, almost category."
+    },
+    {
+      "id": 102,
+      "start": 519.4,
+      "end": 527.4,
+      "text": "But it's very, it's actually a very strong model, very good model. So it's a good one to know that."
+    },
+    {
+      "id": 103,
+      "start": 527.4,
+      "end": 533.4,
+      "text": "Separately, there's code llama by meta, which is a code adaptation of llama."
+    },
+    {
+      "id": 104,
+      "start": 533.4,
+      "end": 541.4,
+      "text": "And it also gets quite a quite good performance. There's also another model called deep seek coder."
+    },
+    {
+      "id": 105,
+      "start": 541.4,
+      "end": 553.4,
+      "text": "All three of these are topping some variety of leaderboard where deep seek maybe is topping a few more leaderboards than the other ones are, but all of them aren't very competitive and might be the best in class for code things."
+    },
+    {
+      "id": 106,
+      "start": 553.4,
+      "end": 565.4,
+      "text": "I'm not talking very much about these because we're going to have a class on code generation and code related things later. So I'm not going to go into a lot of detail."
+    },
+    {
+      "id": 107,
+      "start": 565.4,
+      "end": 576.4,
+      "text": "Another thing is about math models. And so like one interesting thing is large language models are not particularly good at math."
+    },
+    {
+      "id": 108,
+      "start": 576.4,
+      "end": 582.4,
+      "text": "So there are quite a few models that were trained specifically for math."
+    },
+    {
+      "id": 109,
+      "start": 582.4,
+      "end": 585.4,
+      "text": "The first one is lemma."
+    },
+    {
+      "id": 110,
+      "start": 585.4,
+      "end": 591.4,
+      "text": "Yes, that is a pun for like lemma from me."
+    },
+    {
+      "id": 111,
+      "start": 591.4,
+      "end": 595.4,
+      "text": "I'm not responsible for it."
+    },
+    {
+      "id": 112,
+      "start": 595.4,
+      "end": 602.4,
+      "text": "So this was by a Luther AI. So because this was by a Luther again, this is a fully open model."
+    },
+    {
+      "id": 113,
+      "start": 602.4,
+      "end": 605.4,
+      "text": "The data is open."
+    }
+  ],
+  "language": "en"
+}

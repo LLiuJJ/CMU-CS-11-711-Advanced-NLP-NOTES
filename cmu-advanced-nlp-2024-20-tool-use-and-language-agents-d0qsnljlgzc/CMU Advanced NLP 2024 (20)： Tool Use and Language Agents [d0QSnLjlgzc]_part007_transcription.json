@@ -1,0 +1,635 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 9.32,
+      "text": "Basically means that the language model does not have good enough reasoning or planning ability without basic information basic knowledge sometimes it's just"
+    },
+    {
+      "id": 1,
+      "start": 9.88,
+      "end": 13.2,
+      "text": "Simply not being accurate for example you'd ask it to"
+    },
+    {
+      "id": 2,
+      "start": 14.04,
+      "end": 20.88,
+      "text": "Enter a due date it enters a wrong format and then you know if the website is not designed really well. I would just"
+    },
+    {
+      "id": 3,
+      "start": 22.0,
+      "end": 27.74,
+      "text": "Stop at this point because it is an incorrect format. I do the usual use this state speaker"
+    },
+    {
+      "id": 4,
+      "start": 28.22,
+      "end": 34.9,
+      "text": "That speaker like rigid but sometimes the language model would just figure out to enter some tax itself and sometimes"
+    },
+    {
+      "id": 5,
+      "start": 35.62,
+      "end": 37.62,
+      "text": "It's trivial arrows"
+    },
+    {
+      "id": 6,
+      "start": 37.62,
+      "end": 39.86,
+      "text": "Like in our study TV for"
+    },
+    {
+      "id": 7,
+      "start": 40.74,
+      "end": 45.38,
+      "text": "In with gv4 about 21 percent of examples filled due to repeated typing"
+    },
+    {
+      "id": 8,
+      "start": 45.38,
+      "end": 46.22,
+      "text": "I"
+    },
+    {
+      "id": 9,
+      "start": 46.22,
+      "end": 48.94,
+      "text": "We think this is probably related to"
+    },
+    {
+      "id": 10,
+      "start": 49.42,
+      "end": 52.46,
+      "text": "hallucination effects in large should come in national models"
+    },
+    {
+      "id": 11,
+      "start": 52.58,
+      "end": 59.1,
+      "text": "They will just enter a bunch of you know DMV area DMV area DMV area and then these two arrow"
+    },
+    {
+      "id": 12,
+      "start": 59.7,
+      "end": 60.94,
+      "text": "sometimes"
+    },
+    {
+      "id": 13,
+      "start": 60.94,
+      "end": 66.78,
+      "text": "They are not so trivial arrows. Here's a very interesting one. Assign this issue to myself"
+    },
+    {
+      "id": 14,
+      "start": 67.38,
+      "end": 70.66,
+      "text": "This is a good lab page and if you ask"
+    },
+    {
+      "id": 15,
+      "start": 71.7,
+      "end": 73.7,
+      "text": "Like gv4 to form this has for you"
+    },
+    {
+      "id": 16,
+      "start": 74.46,
+      "end": 77.62,
+      "text": "It doesn't know myself. It just enters"
+    },
+    {
+      "id": 17,
+      "start": 78.18,
+      "end": 83.94,
+      "text": "Myself as a stream to this assignment. It actually needs to query what's you"
+    },
+    {
+      "id": 18,
+      "start": 84.1,
+      "end": 86.9,
+      "text": "So it probably needs to enter me or"
+    },
+    {
+      "id": 19,
+      "start": 87.5,
+      "end": 92.18,
+      "text": "It's own use use name in this field. So it's kind of interesting"
+    },
+    {
+      "id": 20,
+      "start": 92.74,
+      "end": 99.06,
+      "text": "Finally, I'm going to touch a little bit of training methods for improving the agents previously"
+    },
+    {
+      "id": 21,
+      "start": 99.06,
+      "end": 106.46,
+      "text": "We have what we have covered tests and applications. I presented some of the prompting techniques and also"
+    },
+    {
+      "id": 22,
+      "start": 107.18,
+      "end": 109.18,
+      "text": "One of the state of the art"
+    },
+    {
+      "id": 23,
+      "start": 109.7,
+      "end": 115.9,
+      "text": "One of the state of the art you know like benchmark. So you have this playground. You have this environment now"
+    },
+    {
+      "id": 24,
+      "start": 116.5,
+      "end": 122.86,
+      "text": "But you are still not satisfied with the performance like even if you do only like"
+    },
+    {
+      "id": 25,
+      "start": 123.1,
+      "end": 125.42,
+      "text": "Chi of dot prompting and all of stuff"
+    },
+    {
+      "id": 26,
+      "start": 126.7,
+      "end": 133.34,
+      "text": "So the learning this topic for the learning of next model learn agents. I'm going to cover many free"
+    },
+    {
+      "id": 27,
+      "start": 134.14,
+      "end": 140.42,
+      "text": "types of learning first is in contact learning some may argue oh this is just prompting yes"
+    },
+    {
+      "id": 28,
+      "start": 140.42,
+      "end": 145.42,
+      "text": "I agree but you can still probably get most of it out of it by"
+    },
+    {
+      "id": 29,
+      "start": 146.14,
+      "end": 147.42,
+      "text": "providing better"
+    },
+    {
+      "id": 30,
+      "start": 147.42,
+      "end": 153.58,
+      "text": "Few shot examples and of course, there's supervised one tuning and learning from basically"
+    },
+    {
+      "id": 31,
+      "start": 153.58,
+      "end": 157.74,
+      "text": "This is learning from experts. Supposedly if you have good ground-choose"
+    },
+    {
+      "id": 32,
+      "start": 157.98,
+      "end": 161.82,
+      "text": "trajectories of how a human would perform a task before he can do"
+    },
+    {
+      "id": 33,
+      "start": 162.46,
+      "end": 167.34,
+      "text": "Use these data and finally if you are thinking about agents that interact with this"
+    },
+    {
+      "id": 34,
+      "start": 167.98,
+      "end": 169.98,
+      "text": "environment"
+    },
+    {
+      "id": 35,
+      "start": 169.98,
+      "end": 177.98,
+      "text": "You know quite popular technique for these type of tasks using reinforcement learning because if you have a good enough"
+    },
+    {
+      "id": 36,
+      "start": 178.22,
+      "end": 181.18,
+      "text": "Environment you probably can learn from the environment"
+    },
+    {
+      "id": 37,
+      "start": 181.74,
+      "end": 183.74,
+      "text": "So first a little bit of"
+    },
+    {
+      "id": 38,
+      "start": 184.22,
+      "end": 188.06,
+      "text": "background on in context learning so the language model"
+    },
+    {
+      "id": 39,
+      "start": 189.02,
+      "end": 194.06,
+      "text": "They basically learn more can perform a task by just conditioning on input output examples"
+    },
+    {
+      "id": 40,
+      "start": 194.62,
+      "end": 197.02,
+      "text": "without optimizing it for managers"
+    },
+    {
+      "id": 41,
+      "start": 197.02,
+      "end": 202.62,
+      "text": "Sometimes it is because we don't have access to these parameters. Sometimes it's too costly to train"
+    },
+    {
+      "id": 42,
+      "start": 203.34,
+      "end": 208.7,
+      "text": "But nonetheless this is a very popular way of doing in learning"
+    },
+    {
+      "id": 43,
+      "start": 209.1,
+      "end": 218.22,
+      "text": "Just like previously shown example on how we get the benchmark performance on like baseline performance on web arena tasks"
+    },
+    {
+      "id": 44,
+      "start": 218.7,
+      "end": 220.54,
+      "text": "uh, we provide a little bit of"
+    },
+    {
+      "id": 45,
+      "start": 221.66,
+      "end": 225.02,
+      "text": "Example of what the operation would look like and what"
+    },
+    {
+      "id": 46,
+      "start": 225.74,
+      "end": 228.06,
+      "text": "The actions should be given a task"
+    },
+    {
+      "id": 47,
+      "start": 228.86,
+      "end": 230.14,
+      "text": "so"
+    },
+    {
+      "id": 48,
+      "start": 230.14,
+      "end": 235.66,
+      "text": "Just like this if you are doing in context learning you can just provide some"
+    },
+    {
+      "id": 49,
+      "start": 236.3,
+      "end": 242.86,
+      "text": "Like user example user observation here like for example this observation represents a web page"
+    },
+    {
+      "id": 50,
+      "start": 243.58,
+      "end": 248.22,
+      "text": "It is a trimmed down version of the HTML document tree and then"
+    },
+    {
+      "id": 51,
+      "start": 248.78,
+      "end": 255.18,
+      "text": "The example assistant part is basically kind of the you can think of it as an output label where you"
+    },
+    {
+      "id": 52,
+      "start": 255.9,
+      "end": 259.82,
+      "text": "You know you think step by step you you kind of show it how to do this"
+    },
+    {
+      "id": 53,
+      "start": 260.46,
+      "end": 264.46,
+      "text": "Check out about reasoning and also you show it how to kind of"
+    },
+    {
+      "id": 54,
+      "start": 265.18,
+      "end": 271.74,
+      "text": "What a what what format it will be like to issue these kind of start for the start action"
+    },
+    {
+      "id": 55,
+      "start": 272.14,
+      "end": 275.5,
+      "text": "usually with proper instruction tuning sorry"
+    },
+    {
+      "id": 56,
+      "start": 276.38,
+      "end": 278.14,
+      "text": "usually with proper instruction"
+    },
+    {
+      "id": 57,
+      "start": 279.1,
+      "end": 286.54,
+      "text": "Instructions providing all the action space and all the format and a good several, you know, few shot examples of"
+    },
+    {
+      "id": 58,
+      "start": 286.78,
+      "end": 289.34,
+      "text": "new kind of operation and action"
+    },
+    {
+      "id": 59,
+      "start": 290.14,
+      "end": 291.1,
+      "text": "pairs"
+    },
+    {
+      "id": 60,
+      "start": 291.1,
+      "end": 297.66,
+      "text": "You with at least a language model are good enough to figure out the format. They was usually just generate"
+    },
+    {
+      "id": 61,
+      "start": 298.3,
+      "end": 300.3,
+      "text": "like these kind of"
+    },
+    {
+      "id": 62,
+      "start": 300.46,
+      "end": 306.22,
+      "text": "Like stop action kind of this kind of action process of practice with arguments format"
+    },
+    {
+      "id": 63,
+      "start": 306.38,
+      "end": 312.54,
+      "text": "So it is really in context learning sometimes is really good to tune the language model to"
+    },
+    {
+      "id": 64,
+      "start": 313.1,
+      "end": 316.46,
+      "text": "Your expecification of how does this format"
+    },
+    {
+      "id": 65,
+      "start": 317.66,
+      "end": 319.66,
+      "text": "However, there are"
+    },
+    {
+      "id": 66,
+      "start": 322.38,
+      "end": 323.9,
+      "text": "Oh, okay"
+    },
+    {
+      "id": 67,
+      "start": 324.06,
+      "end": 325.34,
+      "text": "Yeah, so"
+    },
+    {
+      "id": 68,
+      "start": 325.34,
+      "end": 332.62,
+      "text": "Then we have like supervised fine tuning where you can correct large amount of expert your actress from like human annotation"
+    },
+    {
+      "id": 69,
+      "start": 333.18,
+      "end": 337.66,
+      "text": "Like for example, you have this task intent observation action observation action pairs"
+    },
+    {
+      "id": 70,
+      "start": 338.3,
+      "end": 343.26,
+      "text": "But then finally you can find fine tuning elements with like the cross entropy loss"
+    },
+    {
+      "id": 71,
+      "start": 343.98,
+      "end": 352.62,
+      "text": "Like for example like a lot of existing work try to optimize the language model agents by just collecting human annotations"
+    },
+    {
+      "id": 72,
+      "start": 352.7,
+      "end": 354.46,
+      "text": "It is super"
+    },
+    {
+      "id": 73,
+      "start": 354.46,
+      "end": 360.06,
+      "text": "It is going to work super well, but it is data hungry and cannot learn much from failed trajectory"
+    },
+    {
+      "id": 74,
+      "start": 360.38,
+      "end": 363.58,
+      "text": "For example, if you have a success in the failed trajectory"
+    },
+    {
+      "id": 75,
+      "start": 364.46,
+      "end": 366.46,
+      "text": "You probably would not be able to"
+    },
+    {
+      "id": 76,
+      "start": 368.3,
+      "end": 374.86,
+      "text": "You probably would not be able you kind of wasted the failed trajectory even if say only the last stop is incorrect"
+    },
+    {
+      "id": 77,
+      "start": 375.74,
+      "end": 383.58,
+      "text": "And you know, they are several like data augmentation techniques where for example in this Minecraft playing example"
+    },
+    {
+      "id": 78,
+      "start": 383.9,
+      "end": 392.54,
+      "text": "You can just let it do take the augmentation based on you know YouTube videos or wiki pdl reddit stress"
+    },
+    {
+      "id": 79,
+      "start": 393.74,
+      "end": 395.74,
+      "text": "And finally"
+    },
+    {
+      "id": 80,
+      "start": 395.9,
+      "end": 399.5,
+      "text": "We have this like reinforcement learning based methods allow"
+    },
+    {
+      "id": 81,
+      "start": 400.3,
+      "end": 408.7,
+      "text": "Like ongoing research in this area, but previously we have like RIO HF research learning from human feedback"
+    },
+    {
+      "id": 82,
+      "start": 409.34,
+      "end": 417.66,
+      "text": "But then this time without human feedback we probably can just replace all these rewards with a real environment"
+    },
+    {
+      "id": 83,
+      "start": 417.66,
+      "end": 419.66,
+      "text": "For example, if you are doing"
+    },
+    {
+      "id": 84,
+      "start": 420.22,
+      "end": 422.22,
+      "text": "You have access to web rena"
+    },
+    {
+      "id": 85,
+      "start": 422.22,
+      "end": 423.66,
+      "text": "whether or not"
+    },
+    {
+      "id": 86,
+      "start": 423.66,
+      "end": 428.7,
+      "text": "Attacks is successful can be automatically determined with that environment"
+    },
+    {
+      "id": 87,
+      "start": 428.78,
+      "end": 432.3,
+      "text": "So it provides a natural feedback from the environment"
+    },
+    {
+      "id": 88,
+      "start": 433.02,
+      "end": 441.74,
+      "text": "So you know with some I also listed some of the reference here if you are interested you can go to the course website or check the slides"
+    },
+    {
+      "id": 89,
+      "start": 442.22,
+      "end": 448.06,
+      "text": "For some of these ongoing research, but I'm gonna not going to cover much in details here"
+    },
+    {
+      "id": 90,
+      "start": 448.86,
+      "end": 452.54,
+      "text": "Due to the time constraint, but these are generating the methods"
+    },
+    {
+      "id": 91,
+      "start": 453.34,
+      "end": 455.74,
+      "text": "For so I think"
+    },
+    {
+      "id": 92,
+      "start": 457.42,
+      "end": 459.58,
+      "text": "Yeah, if you have any questions about"
+    },
+    {
+      "id": 93,
+      "start": 460.86,
+      "end": 463.18,
+      "text": "Anything tools and agents"
+    },
+    {
+      "id": 94,
+      "start": 464.06,
+      "end": 466.06,
+      "text": "Feel free to ask"
+    },
+    {
+      "id": 95,
+      "start": 466.06,
+      "end": 470.06,
+      "text": "Thanks a lot we have time for maybe one or two quick questions"
+    },
+    {
+      "id": 96,
+      "start": 471.1,
+      "end": 473.66,
+      "text": "I'd like to preface this with saying that"
+    },
+    {
+      "id": 97,
+      "start": 475.9,
+      "end": 482.3,
+      "text": "Frank gave a really good example of web arena and I think web arena is a good example of some of the challenges and the"
+    },
+    {
+      "id": 98,
+      "start": 482.7,
+      "end": 487.18,
+      "text": "Agentspace not just like web agents, but also code generation agents robots"
+    },
+    {
+      "id": 99,
+      "start": 488.62,
+      "end": 496.3,
+      "text": "You know embodied environments and stuff which is that there's a lot of really simple ones that are that were interesting a few years ago"
+    },
+    {
+      "id": 100,
+      "start": 496.46,
+      "end": 501.82,
+      "text": "But are kind of like solved now or close enough to solve that they don't test the really are things like planning"
+    },
+    {
+      "id": 101,
+      "start": 502.38,
+      "end": 507.9,
+      "text": "You know ability to handle diverse environments and stuff like that and so web arena is just one example and then"
+    },
+    {
+      "id": 102,
+      "start": 508.86,
+      "end": 513.5,
+      "text": "Even if you're interested in other varieties of things you're gonna be facing the same problems with valuation"
+    },
+    {
+      "id": 103,
+      "start": 514.62,
+      "end": 516.62,
+      "text": "evaluation and knowledge"
+    },
+    {
+      "id": 104,
+      "start": 516.78,
+      "end": 520.54,
+      "text": "Well, um any anything speak for like to ask we can also take things up front"
+    }
+  ],
+  "language": "en"
+}

@@ -1,0 +1,293 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 13.0,
+      "text": "I write Python code to a spreadsheet."
+    },
+    {
+      "id": 1,
+      "start": 13.0,
+      "end": 24.0,
+      "text": "These numbers by five."
+    },
+    {
+      "id": 2,
+      "start": 24.0,
+      "end": 33.0,
+      "text": "I'm lazy enough that I just ask a spreadsheet to do this for me now."
+    },
+    {
+      "id": 3,
+      "start": 33.0,
+      "end": 39.0,
+      "text": "And so if we do this,"
+    },
+    {
+      "id": 4,
+      "start": 39.0,
+      "end": 54.0,
+      "text": "you go go chat GPT."
+    },
+    {
+      "id": 5,
+      "start": 54.0,
+      "end": 66.0,
+      "text": "So now we are getting something that looks like zero."
+    },
+    {
+      "id": 6,
+      "start": 66.0,
+      "end": 72.0,
+      "text": "Basically zero, basically zero."
+    },
+    {
+      "id": 7,
+      "start": 72.0,
+      "end": 95.0,
+      "text": "So what you can see is there's actually a pretty steady gradation of like the next token prediction accuracy here."
+    },
+    {
+      "id": 8,
+      "start": 95.0,
+      "end": 105.0,
+      "text": "If you need to predict multiple tokens correct, then it looks like it's doing basically nothing until you get up to like 75% next token accuracy and then it starts taking off."
+    },
+    {
+      "id": 9,
+      "start": 105.0,
+      "end": 118.0,
+      "text": "So that's like what happens in emergent abilities and you'll notice that most things that are talking about emergent abilities are usually talking about some sort of chain of thought or some sort of reasoning reasoning accuracy."
+    },
+    {
+      "id": 10,
+      "start": 118.0,
+      "end": 137.0,
+      "text": "Even if that's not the case, even if they're just predicting a single token, it can still happen because basically the probability of a single token can continue to go up smoothly, but you only get the token correct after the probability starts getting higher than all the others."
+    },
+    {
+      "id": 11,
+      "start": 137.0,
+      "end": 155.0,
+      "text": "And that's also a discontinuous function. So so basically what this paper shows is like even if you have like the probability of the correct token going the correct token going up gradually, you can see this emergent ability based on how you measure it."
+    },
+    {
+      "id": 12,
+      "start": 155.0,
+      "end": 160.0,
+      "text": "That's an important thing to realize about this."
+    },
+    {
+      "id": 13,
+      "start": 160.0,
+      "end": 171.0,
+      "text": "Another corollary of this is like let's say you want to do an interesting experiments about reasoning on on smaller models, like let's say you want to train a smaller model and see how it improves on reasoning."
+    },
+    {
+      "id": 14,
+      "start": 171.0,
+      "end": 187.0,
+      "text": "I would definitely encourage you to measure not only accuracy because you might see like very little change in accuracy, but also measure like log likelihood of reasoning chains or something like that because you'll see a smoother curve."
+    },
+    {
+      "id": 15,
+      "start": 187.0,
+      "end": 195.0,
+      "text": "Cool. Any questions about this?"
+    },
+    {
+      "id": 16,
+      "start": 195.0,
+      "end": 223.0,
+      "text": "Sounds good. So I talked a little bit about this. One of the things here that I didn't talk about is this paper measures not just the accuracy of the answer with chain of thoughts, but also measures the factuality of the explanations. So basically, whether the explanation is a good explanation for the"
+    },
+    {
+      "id": 17,
+      "start": 223.0,
+      "end": 251.0,
+      "text": "actual derivation. And also the consistency of the answer in the explanation to figure out whether the answer in the explanation match up with each other. And they did this with some synthetic data sets where you could actually measure the the read the reasoning steps by using math. So what they were able to find is basically the same."
+    },
+    {
+      "id": 18,
+      "start": 251.0,
+      "end": 270.0,
+      "text": "The answer in the explanation when the answer in the explanation tended to be consistent, especially for the stronger models. And let's see, yeah, the answer in the explanation tended to be consistent, especially for the stronger models."
+    },
+    {
+      "id": 19,
+      "start": 270.0,
+      "end": 294.0,
+      "text": "And that also meant that if you had higher factuality in the explanation that translates into higher, you know, factuality of accuracy of the actual prediction, I would bet that these numbers are even higher nowadays, I bet the consistency is even higher with more modern models and text eventually zero zero to."
+    },
+    {
+      "id": 20,
+      "start": 294.0,
+      "end": 306.0,
+      "text": "The reason being is like number one models are stronger number two all models are like trained for chain of thought pretty aggressively now. So that would make the difference there."
+    },
+    {
+      "id": 21,
+      "start": 306.0,
+      "end": 308.0,
+      "text": "Cool."
+    },
+    {
+      "id": 22,
+      "start": 308.0,
+      "end": 314.0,
+      "text": "So the other thing I'd like to talk about is training for chain of thought."
+    },
+    {
+      "id": 23,
+      "start": 314.0,
+      "end": 320.0,
+      "text": "So there's a fair amount of work in this general direction."
+    },
+    {
+      "id": 24,
+      "start": 320.0,
+      "end": 326.0,
+      "text": "From my point of view, there's basically two ways that people do this nowadays."
+    },
+    {
+      "id": 25,
+      "start": 326.0,
+      "end": 338.0,
+      "text": "The first way is usually through generating lots of synthetic data that represents chains of thoughts and then using that to."
+    },
+    {
+      "id": 26,
+      "start": 338.0,
+      "end": 353.0,
+      "text": "And then the most famous version of this, although this paper site's a lot of a lot of other ones, but basically they generate a large and diverse chain of thought data set from GP 3.5 and GP 4."
+    },
+    {
+      "id": 27,
+      "start": 353.0,
+      "end": 368.0,
+      "text": "5 million complex instructions, I think they generated 1 million from GP 4 and 4 million from GP 3.5 just because generating long sequences from GP 4 is expensive and they didn't want to do that many."
+    },
+    {
+      "id": 28,
+      "start": 368.0,
+      "end": 383.0,
+      "text": "And then they achieve corresponding high accuracy on chain of thought related things compared to other days that so compared to like Alpaca, which is much smaller and doesn't have as much chain of thought and also."
+    },
+    {
+      "id": 29,
+      "start": 383.0,
+      "end": 393.0,
+      "text": "Vikuna, which is similarly less focused on chain of thought they were able to do a good job."
+    },
+    {
+      "id": 30,
+      "start": 393.0,
+      "end": 402.0,
+      "text": "This paper was by Microsoft and they didn't actually release the Orca data set for whatever reason legal legal or competitive reasons or whatever."
+    },
+    {
+      "id": 31,
+      "start": 402.0,
+      "end": 415.0,
+      "text": "But there's another open orca data set that you can download and use that attempts to replicate it and it's reasonably good so you can keep that in mind if you're interested."
+    },
+    {
+      "id": 32,
+      "start": 415.0,
+      "end": 441.0,
+      "text": "This is another really interesting paper on trying to create assessments automatic assessments of how good chains of thought are and what they do essentially is it's relatively simple they get human feedback on each step of the derivation so they just basically ask people is this step of the derivation good."
+    },
+    {
+      "id": 33,
+      "start": 441.0,
+      "end": 466.0,
+      "text": "And if the answer is yes, then they give it a smiley face if the answer is no, they give it a frowny face and they use this to train a reward model where the reward model basically predicts whether each thing of the each step of the derivation is good and so we have two examples over here, I know this is really small you might be able to see it either in the paper on the slides on the website, but."
+    },
+    {
+      "id": 34,
+      "start": 466.0,
+      "end": 494.0,
+      "text": "What we can see here is that it assesses each of these steps and checks that the answer is good, but it's also able to identify places where like steps are incorrect and then the final answer becomes incorrect and then they use this for training a chain of thought style models so they have the model generate chains of thought and they assess them with the reward model and up wait answers that have good chains of thought and so."
+    },
+    {
+      "id": 35,
+      "start": 494.0,
+      "end": 509.0,
+      "text": "The good thing about this is they actually don't need they don't need the correct answers to train the model this way and because they don't need the correct answers to train the model this way they can also train the model on lots of other questions."
+    },
+    {
+      "id": 36,
+      "start": 509.0,
+      "end": 524.0,
+      "text": "The reason why this works is because like chain of thought makes it easier to generate each of the steps in the derivation it's also easier to assess whether an individual step in a derivation is wrong, then assess whether the answer is correct overall so."
+    },
+    {
+      "id": 37,
+      "start": 524.0,
+      "end": 529.0,
+      "text": "This feedback signals easier to get model provided than it is for."
+    },
+    {
+      "id": 38,
+      "start": 529.0,
+      "end": 533.0,
+      "text": "Like getting feedback on the answer itself yeah."
+    },
+    {
+      "id": 39,
+      "start": 533.0,
+      "end": 538.0,
+      "text": "Failure and one step causes only other steps to fail yep you just."
+    },
+    {
+      "id": 40,
+      "start": 538.0,
+      "end": 544.0,
+      "text": "Assess the next steps based on the assumption of the previous steps are you still get water quality."
+    },
+    {
+      "id": 41,
+      "start": 544.0,
+      "end": 547.0,
+      "text": "I don't think they."
+    },
+    {
+      "id": 42,
+      "start": 547.0,
+      "end": 556.0,
+      "text": "I don't think they do that I think they it's a good question i'm not 100% sure about this but I think they assess each one of the steps independently."
+    },
+    {
+      "id": 43,
+      "start": 556.0,
+      "end": 566.0,
+      "text": "And it's not necessarily the case that like failing on this step means the step is wrong right it could be just not using it at all also."
+    },
+    {
+      "id": 44,
+      "start": 566.0,
+      "end": 569.0,
+      "text": "Cool."
+    },
+    {
+      "id": 45,
+      "start": 569.0,
+      "end": 581.0,
+      "text": "So a final thing i'd like to talk about which I think is kind of interesting is abductive reasoning or learning explanations from data."
+    },
+    {
+      "id": 46,
+      "start": 581.0,
+      "end": 596.0,
+      "text": "And sorry."
+    },
+    {
+      "id": 47,
+      "start": 596.0,
+      "end": 603.0,
+      "text": "So basically the idea is can we find a rule that underlies a pattern in data."
+    }
+  ],
+  "language": "en"
+}

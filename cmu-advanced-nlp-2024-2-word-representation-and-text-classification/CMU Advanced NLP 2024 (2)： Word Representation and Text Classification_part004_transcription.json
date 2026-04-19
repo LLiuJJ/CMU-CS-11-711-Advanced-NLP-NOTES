@@ -1,0 +1,767 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 4.72,
+      "text": "And optimizing gradients, we do standard,"
+    },
+    {
+      "id": 1,
+      "start": 4.72,
+      "end": 7.68,
+      "text": "in standards the casting gradient percent,"
+    },
+    {
+      "id": 2,
+      "start": 7.68,
+      "end": 10.76,
+      "text": "which is the most standard optimization algorithm"
+    },
+    {
+      "id": 3,
+      "start": 10.76,
+      "end": 12.48,
+      "text": "for these models."
+    },
+    {
+      "id": 4,
+      "start": 12.48,
+      "end": 16.76,
+      "text": "We basically have a gradient over,"
+    },
+    {
+      "id": 5,
+      "start": 16.76,
+      "end": 20.56,
+      "text": "we take the gradient over the parameter of the loss function"
+    },
+    {
+      "id": 6,
+      "start": 20.56,
+      "end": 21.96,
+      "text": "and we call it G key."
+    },
+    {
+      "id": 7,
+      "start": 21.96,
+      "end": 24.6,
+      "text": "So here, sorry, I switched my terminology"
+    },
+    {
+      "id": 8,
+      "start": 24.6,
+      "end": 25.92,
+      "text": "between W and theta."
+    },
+    {
+      "id": 9,
+      "start": 25.92,
+      "end": 31.56,
+      "text": "So this could be W, the previous value of W."
+    },
+    {
+      "id": 10,
+      "start": 31.56,
+      "end": 34.04,
+      "text": "And this is the gradient of the loss."
+    },
+    {
+      "id": 11,
+      "start": 34.04,
+      "end": 38.6,
+      "text": "And then we take the previous value"
+    },
+    {
+      "id": 12,
+      "start": 38.6,
+      "end": 41.28,
+      "text": "and then we subtract out the learning rate times the gradient."
+    },
+    {
+      "id": 13,
+      "start": 44.72,
+      "end": 48.44,
+      "text": "And there are many, many other optimization options."
+    },
+    {
+      "id": 14,
+      "start": 48.44,
+      "end": 50.32,
+      "text": "I'll cover the more frequent one called the adamant"
+    },
+    {
+      "id": 15,
+      "start": 50.32,
+      "end": 52.32,
+      "text": "that I'm going to do this lecture."
+    },
+    {
+      "id": 16,
+      "start": 52.32,
+      "end": 58.32,
+      "text": "But this is the basic way of optimizing the model."
+    },
+    {
+      "id": 17,
+      "start": 58.32,
+      "end": 64.64,
+      "text": "So then my question now is, what is this algorithm?"
+    },
+    {
+      "id": 18,
+      "start": 64.64,
+      "end": 68.76,
+      "text": "With respect to, this is an algorithm"
+    },
+    {
+      "id": 19,
+      "start": 68.76,
+      "end": 73.0,
+      "text": "that has a loss function."
+    },
+    {
+      "id": 20,
+      "start": 73.0,
+      "end": 76.32,
+      "text": "It's calculating derivatives and it's optimizing gradients"
+    },
+    {
+      "id": 21,
+      "start": 76.32,
+      "end": 78.68,
+      "text": "using stochastic gradient descent."
+    },
+    {
+      "id": 22,
+      "start": 78.68,
+      "end": 82.2,
+      "text": "So does anyone have a guess about what the loss function is here?"
+    },
+    {
+      "id": 23,
+      "start": 82.2,
+      "end": 88.4,
+      "text": "And maybe what is the learning rate of stochastic gradient descent?"
+    },
+    {
+      "id": 24,
+      "start": 88.4,
+      "end": 91.08,
+      "text": "I kind of gave you a hint about the loss function actually."
+    },
+    {
+      "id": 25,
+      "start": 95.76,
+      "end": 98.0,
+      "text": "In just a recap, what this is doing here,"
+    },
+    {
+      "id": 26,
+      "start": 98.0,
+      "end": 102.2,
+      "text": "it's if predicted Y is equal to Y,"
+    },
+    {
+      "id": 27,
+      "start": 102.2,
+      "end": 106.2,
+      "text": "then it is moving the future rates"
+    },
+    {
+      "id": 28,
+      "start": 106.2,
+      "end": 109.64,
+      "text": "in the direction of Y times the frequency rate."
+    },
+    {
+      "id": 29,
+      "start": 112.2,
+      "end": 117.2,
+      "text": "Yeah."
+    },
+    {
+      "id": 30,
+      "start": 117.2,
+      "end": 121.2,
+      "text": "Yeah, exactly."
+    },
+    {
+      "id": 31,
+      "start": 121.2,
+      "end": 124.2,
+      "text": "So the loss function is hinge loss in the learning rate is one."
+    },
+    {
+      "id": 32,
+      "start": 124.2,
+      "end": 129.2,
+      "text": "And just to show how that corresponds,"
+    },
+    {
+      "id": 33,
+      "start": 129.2,
+      "end": 131.2,
+      "text": "we have this if statement here,"
+    },
+    {
+      "id": 34,
+      "start": 131.2,
+      "end": 134.2,
+      "text": "and we have the increment of the features."
+    },
+    {
+      "id": 35,
+      "start": 134.2,
+      "end": 139.2,
+      "text": "And this is what the,"
+    },
+    {
+      "id": 36,
+      "start": 140.2,
+      "end": 143.2,
+      "text": "what the law, sorry, the derivative looks like."
+    },
+    {
+      "id": 37,
+      "start": 143.2,
+      "end": 148.2,
+      "text": "So we have if this is moving in the right direction for the label,"
+    },
+    {
+      "id": 38,
+      "start": 148.2,
+      "end": 151.2,
+      "text": "then we increment otherwise we do nothing."
+    },
+    {
+      "id": 39,
+      "start": 151.2,
+      "end": 153.2,
+      "text": "So basically,"
+    },
+    {
+      "id": 40,
+      "start": 153.2,
+      "end": 156.2,
+      "text": "you can see that even this really simple algorithm"
+    },
+    {
+      "id": 41,
+      "start": 156.2,
+      "end": 158.2,
+      "text": "that I implemented with a few lines of paypan"
+    },
+    {
+      "id": 42,
+      "start": 158.2,
+      "end": 164.2,
+      "text": "is essentially equivalent to this stochastic gradient descent that we do in the course."
+    },
+    {
+      "id": 43,
+      "start": 164.2,
+      "end": 167.2,
+      "text": "So the good news about this is,"
+    },
+    {
+      "id": 44,
+      "start": 168.2,
+      "end": 169.2,
+      "text": "this is really simple,"
+    },
+    {
+      "id": 45,
+      "start": 169.2,
+      "end": 175.2,
+      "text": "but it only really works for like a bag of words model or a simple feature based model."
+    },
+    {
+      "id": 46,
+      "start": 175.2,
+      "end": 181.2,
+      "text": "But it opens up a lot of new possibilities for how we can optimize models."
+    },
+    {
+      "id": 47,
+      "start": 181.2,
+      "end": 187.2,
+      "text": "And in particular, I mentioned that there was a problem with combination features last class."
+    },
+    {
+      "id": 48,
+      "start": 187.2,
+      "end": 191.2,
+      "text": "Like don't hate and don't love are not just,"
+    },
+    {
+      "id": 49,
+      "start": 191.2,
+      "end": 194.2,
+      "text": "you know, hate plus don't in love plus don't."
+    },
+    {
+      "id": 50,
+      "start": 194.2,
+      "end": 197.2,
+      "text": "It's actually the combination of the two is really important."
+    },
+    {
+      "id": 51,
+      "start": 197.2,
+      "end": 199.2,
+      "text": "And so,"
+    },
+    {
+      "id": 52,
+      "start": 199.2,
+      "end": 201.2,
+      "text": "yeah, just give it an example,"
+    },
+    {
+      "id": 53,
+      "start": 201.2,
+      "end": 203.2,
+      "text": "we have don't love is maybe bad."
+    },
+    {
+      "id": 54,
+      "start": 203.2,
+      "end": 207.2,
+      "text": "Nothing I don't love is very good."
+    },
+    {
+      "id": 55,
+      "start": 207.2,
+      "end": 212.2,
+      "text": "And so in order to solve this problem,"
+    },
+    {
+      "id": 56,
+      "start": 212.2,
+      "end": 214.2,
+      "text": "we can control networks."
+    },
+    {
+      "id": 57,
+      "start": 214.2,
+      "end": 219.2,
+      "text": "And the way we do this is we have a look up of dense embedding."
+    },
+    {
+      "id": 58,
+      "start": 219.2,
+      "end": 220.2,
+      "text": "Sorry, I actually,"
+    },
+    {
+      "id": 59,
+      "start": 220.2,
+      "end": 222.2,
+      "text": "I just realized my coloring is off."
+    },
+    {
+      "id": 60,
+      "start": 222.2,
+      "end": 225.2,
+      "text": "I was using red to indicate dense embedding."
+    },
+    {
+      "id": 61,
+      "start": 225.2,
+      "end": 228.2,
+      "text": "So this should be maybe red instead of blue."
+    },
+    {
+      "id": 62,
+      "start": 228.2,
+      "end": 230.2,
+      "text": "But we take these dense embeddings."
+    },
+    {
+      "id": 63,
+      "start": 230.2,
+      "end": 235.2,
+      "text": "And then we create some complicated function to extract combination features."
+    },
+    {
+      "id": 64,
+      "start": 235.2,
+      "end": 240.2,
+      "text": "And then use those to calculate scores."
+    },
+    {
+      "id": 65,
+      "start": 240.2,
+      "end": 245.2,
+      "text": "And so we calculate these combination features."
+    },
+    {
+      "id": 66,
+      "start": 245.2,
+      "end": 251.2,
+      "text": "And what we want to do is we want to extract vectors from the input where each vector is."
+    },
+    {
+      "id": 67,
+      "start": 251.2,
+      "end": 259.2,
+      "text": "Where each vector has features."
+    },
+    {
+      "id": 68,
+      "start": 259.2,
+      "end": 261.2,
+      "text": "I'm sorry, this is in the wrong order."
+    },
+    {
+      "id": 69,
+      "start": 261.2,
+      "end": 263.2,
+      "text": "So I'll get back to this."
+    },
+    {
+      "id": 70,
+      "start": 263.2,
+      "end": 268.2,
+      "text": "So this was talking about the continuous bag of words features."
+    },
+    {
+      "id": 71,
+      "start": 268.2,
+      "end": 269.2,
+      "text": "So the problem with the continued,"
+    },
+    {
+      "id": 72,
+      "start": 269.2,
+      "end": 277.2,
+      "text": "continuous bag of words features was we were extracting features."
+    },
+    {
+      "id": 73,
+      "start": 277.2,
+      "end": 280.2,
+      "text": "Like this."
+    },
+    {
+      "id": 74,
+      "start": 280.2,
+      "end": 283.2,
+      "text": "But then we were directly using the feature,"
+    },
+    {
+      "id": 75,
+      "start": 283.2,
+      "end": 288.2,
+      "text": "the dense features that we extracted to make predictions without actually allowing for any interactions,"
+    },
+    {
+      "id": 76,
+      "start": 288.2,
+      "end": 290.2,
+      "text": "speaking the features."
+    },
+    {
+      "id": 77,
+      "start": 290.2,
+      "end": 293.2,
+      "text": "And so."
+    },
+    {
+      "id": 78,
+      "start": 293.2,
+      "end": 298.2,
+      "text": "No networks the way we fix this is we first extract these features."
+    },
+    {
+      "id": 79,
+      "start": 298.2,
+      "end": 301.2,
+      "text": "We take these features of each word embedding."
+    },
+    {
+      "id": 80,
+      "start": 301.2,
+      "end": 303.2,
+      "text": "And then we run them through."
+    },
+    {
+      "id": 81,
+      "start": 303.2,
+      "end": 308.2,
+      "text": "Kind of linear transforms in non linear."
+    },
+    {
+      "id": 82,
+      "start": 308.2,
+      "end": 314.2,
+      "text": "Like linear multiplications and then non linear transforms to extract additional features."
+    },
+    {
+      "id": 83,
+      "start": 314.2,
+      "end": 322.2,
+      "text": "And finally run this through several layers and then use the resulting features to make our predictions."
+    },
+    {
+      "id": 84,
+      "start": 322.2,
+      "end": 326.2,
+      "text": "And when we do this, this allows us to do more interesting things."
+    },
+    {
+      "id": 85,
+      "start": 326.2,
+      "end": 330.2,
+      "text": "So like, for example, we could learn a feature combination."
+    },
+    {
+      "id": 86,
+      "start": 330.2,
+      "end": 334.2,
+      "text": "A note in the second layer might be feature one and feature five are accurate."
+    },
+    {
+      "id": 87,
+      "start": 334.2,
+      "end": 343.2,
+      "text": "So there could be like feature one response to negative sentiment words like hate this finds."
+    },
+    {
+      "id": 88,
+      "start": 343.2,
+      "end": 345.2,
+      "text": "And other things like that."
+    },
+    {
+      "id": 89,
+      "start": 345.2,
+      "end": 353.2,
+      "text": "So for hate and the size feature one would have a value like 0 and then 7.2."
+    },
+    {
+      "id": 90,
+      "start": 353.2,
+      "end": 358.2,
+      "text": "And then we also have negation words like don't or not or something like that."
+    },
+    {
+      "id": 91,
+      "start": 358.2,
+      "end": 361.2,
+      "text": "And those were how."
+    },
+    {
+      "id": 92,
+      "start": 361.2,
+      "end": 367.2,
+      "text": "So."
+    },
+    {
+      "id": 93,
+      "start": 367.2,
+      "end": 382.2,
+      "text": "And so these would be the word embeddings where each word embedding corresponded to, you know, features of the words."
+    },
+    {
+      "id": 94,
+      "start": 382.2,
+      "end": 385.2,
+      "text": "And then."
+    },
+    {
+      "id": 95,
+      "start": 385.2,
+      "end": 395.2,
+      "text": "And after that we would extract feature combinations in this second layer that say, oh, we see at least one word where the first feature is active."
+    },
+    {
+      "id": 96,
+      "start": 395.2,
+      "end": 399.2,
+      "text": "And we see at least one word where the fifth feature is active."
+    },
+    {
+      "id": 97,
+      "start": 399.2,
+      "end": 403.2,
+      "text": "So now that allows us to capture the fact that we saw like don't."
+    },
+    {
+      "id": 98,
+      "start": 403.2,
+      "end": 409.2,
+      "text": "Or don't despise or not hate or not despise or something like that."
+    },
+    {
+      "id": 99,
+      "start": 409.2,
+      "end": 417.2,
+      "text": "So this is the way kind of this is a deep continuous bag of words model."
+    },
+    {
+      "id": 100,
+      "start": 417.2,
+      "end": 419.2,
+      "text": "This actually was proposed in 2015."
+    },
+    {
+      "id": 101,
+      "start": 419.2,
+      "end": 425.2,
+      "text": "I don't think I have the reference on the side, but I think it's in the notes on the website."
+    },
+    {
+      "id": 102,
+      "start": 425.2,
+      "end": 435.2,
+      "text": "And actually at that point in time they, they mean there were several interesting results that showed that even this like really simple model did really well."
+    },
+    {
+      "id": 103,
+      "start": 435.2,
+      "end": 446.2,
+      "text": "And then we had a text classification and other simple tasks like that because it was able to, you know, share features of the words and then extract combinations in the future."
+    },
+    {
+      "id": 104,
+      "start": 446.2,
+      "end": 449.2,
+      "text": "So."
+    },
+    {
+      "id": 105,
+      "start": 449.2,
+      "end": 453.2,
+      "text": "In order to learn these, we need to start turning to neural networks."
+    },
+    {
+      "id": 106,
+      "start": 453.2,
+      "end": 459.2,
+      "text": "And the reason why we need to start turning to neural networks is because."
+    },
+    {
+      "id": 107,
+      "start": 459.2,
+      "end": 464.2,
+      "text": "And we calculate the loss function of the."
+    },
+    {
+      "id": 108,
+      "start": 464.2,
+      "end": 474.2,
+      "text": "Well, I can calculate the loss function of the hinged loss for a bag of words modeled by hand. I definitely don't, I probably could but don't want to do it for a model that starts to become this complicated."
+    },
+    {
+      "id": 109,
+      "start": 474.2,
+      "end": 477.2,
+      "text": "So it's with multiple matrix."
+    },
+    {
+      "id": 110,
+      "start": 477.2,
+      "end": 479.2,
+      "text": "And I can't actually see stuff like that."
+    },
+    {
+      "id": 111,
+      "start": 479.2,
+      "end": 491.2,
+      "text": "So the way we do this, just a very brief coverage of this for because I think probably a lot of people have dealt with neural networks before."
+    },
+    {
+      "id": 112,
+      "start": 491.2,
+      "end": 497.2,
+      "text": "The original motivation was that we had neurons in the brain, where the."
+    },
+    {
+      "id": 113,
+      "start": 497.2,
+      "end": 505.2,
+      "text": "Each of the neurons in apps is took in an electrical signal and once they got enough electrical signal, they would fire."
+    },
+    {
+      "id": 114,
+      "start": 505.2,
+      "end": 512.2,
+      "text": "Now, the current conception of neural networks or deep learning models is basically computation graphs."
+    },
+    {
+      "id": 115,
+      "start": 512.2,
+      "end": 522.2,
+      "text": "And the way a competition graph works. And I'm especially going to talk about the way it works in natural language processing, which might be a contrast of the way it works in computer vision."
+    },
+    {
+      "id": 116,
+      "start": 522.2,
+      "end": 533.2,
+      "text": "Is we have an expression that looks like this and maybe maybe it's the expression acts corresponding to a scale."
+    },
+    {
+      "id": 117,
+      "start": 533.2,
+      "end": 540.2,
+      "text": "Each node corresponds to something like a tensor or matrix, a vector a scalar. So scaler is kind of zero dimensional."
+    },
+    {
+      "id": 118,
+      "start": 540.2,
+      "end": 546.2,
+      "text": "It's a single value one dimensional two dimensional or arbitrary dimensional."
+    },
+    {
+      "id": 119,
+      "start": 546.2,
+      "end": 552.2,
+      "text": "And then we also have notes that correspond to the result of function applications. So if we have X be a vector."
+    },
+    {
+      "id": 120,
+      "start": 552.2,
+      "end": 554.2,
+      "text": "We take the vector transpose."
+    },
+    {
+      "id": 121,
+      "start": 554.2,
+      "end": 562.2,
+      "text": "And so each edge represents a function argument and also a data dependency."
+    },
+    {
+      "id": 122,
+      "start": 562.2,
+      "end": 568.2,
+      "text": "And a node with an incoming edges of function of that edges tail node."
+    },
+    {
+      "id": 123,
+      "start": 568.2,
+      "end": 578.2,
+      "text": "And importantly, each node knows how to compute its value and the value of its derivative with respect to each argument times the derivative of an arbitrary."
+    },
+    {
+      "id": 124,
+      "start": 578.2,
+      "end": 588.2,
+      "text": "And functions can be basically arbitrary functions. It can be unary, a null area unary binary and a really often unary binary."
+    },
+    {
+      "id": 125,
+      "start": 588.2,
+      "end": 593.2,
+      "text": "And computation graphs are directed in cyclic."
+    },
+    {
+      "id": 126,
+      "start": 593.2,
+      "end": 603.2,
+      "text": "And one important thing to note is that you can have multiple ways of expressing the same function."
+    }
+  ],
+  "language": "en"
+}

@@ -1,0 +1,1187 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 3.8,
+      "text": "So this time I'm going to be talking about transformers,"
+    },
+    {
+      "id": 1,
+      "start": 3.8,
+      "end": 7.4,
+      "text": "kind of the backbone of most implementations,"
+    },
+    {
+      "id": 2,
+      "start": 7.4,
+      "end": 9.08,
+      "text": "not only in natural language processing,"
+    },
+    {
+      "id": 3,
+      "start": 9.08,
+      "end": 12.92,
+      "text": "but also a wide variety of other things as well."
+    },
+    {
+      "id": 4,
+      "start": 12.92,
+      "end": 16.08,
+      "text": "And I'm going to be talking both about transformers"
+    },
+    {
+      "id": 5,
+      "start": 16.08,
+      "end": 22.16,
+      "text": "as they were originally conceived and implemented in 2017."
+    },
+    {
+      "id": 6,
+      "start": 22.16,
+      "end": 25.04,
+      "text": "And also some modifications that people"
+    },
+    {
+      "id": 7,
+      "start": 25.04,
+      "end": 27.96,
+      "text": "makes to transformers today to make them work much better"
+    },
+    {
+      "id": 8,
+      "start": 27.96,
+      "end": 30.28,
+      "text": "in kind of modern language models such as Lama."
+    },
+    {
+      "id": 9,
+      "start": 30.28,
+      "end": 33.68,
+      "text": "So I'll talk about both of those at the same time."
+    },
+    {
+      "id": 10,
+      "start": 37.68,
+      "end": 43.2,
+      "text": "So as a Quimper Dinder, I just want to review the attention"
+    },
+    {
+      "id": 11,
+      "start": 43.2,
+      "end": 45.92,
+      "text": "from last time very quickly."
+    },
+    {
+      "id": 12,
+      "start": 45.92,
+      "end": 48.4,
+      "text": "And basically, if you remember attention,"
+    },
+    {
+      "id": 13,
+      "start": 48.4,
+      "end": 50.12,
+      "text": "there were two varieties of attention."
+    },
+    {
+      "id": 14,
+      "start": 50.12,
+      "end": 53.16,
+      "text": "One was cross-attention, where you"
+    },
+    {
+      "id": 15,
+      "start": 53.16,
+      "end": 58.04,
+      "text": "attend to another sentence, basically, or another sequence."
+    },
+    {
+      "id": 16,
+      "start": 58.04,
+      "end": 61.8,
+      "text": "So you have one sequence that serves as your keys"
+    },
+    {
+      "id": 17,
+      "start": 61.8,
+      "end": 64.92,
+      "text": "that you are attending to, and one sequence that"
+    },
+    {
+      "id": 18,
+      "start": 64.92,
+      "end": 67.52,
+      "text": "serves as your queries, the things that you are using"
+    },
+    {
+      "id": 19,
+      "start": 67.52,
+      "end": 71.2,
+      "text": "to attend to the sequence of keys."
+    },
+    {
+      "id": 20,
+      "start": 71.2,
+      "end": 76.76,
+      "text": "And so you can do that for every element in the query vector"
+    },
+    {
+      "id": 21,
+      "start": 76.76,
+      "end": 79.44,
+      "text": "attending to every element in the key vector."
+    },
+    {
+      "id": 22,
+      "start": 79.44,
+      "end": 82.04,
+      "text": "And the other alternative is self-attention,"
+    },
+    {
+      "id": 23,
+      "start": 82.04,
+      "end": 86.68,
+      "text": "where you are attending to the same sequence."
+    },
+    {
+      "id": 24,
+      "start": 86.68,
+      "end": 89.0,
+      "text": "So basically, you're guaranteed that the queries"
+    },
+    {
+      "id": 25,
+      "start": 89.0,
+      "end": 93.64,
+      "text": "and the keys attend, like correspond to the same sequence."
+    },
+    {
+      "id": 26,
+      "start": 93.64,
+      "end": 95.4,
+      "text": "And so that's really the only difference"
+    },
+    {
+      "id": 27,
+      "start": 95.4,
+      "end": 98.08,
+      "text": "between self-attentioning cross-attention."
+    },
+    {
+      "id": 28,
+      "start": 98.08,
+      "end": 102.0,
+      "text": "Transformer-based models use either a self-attention"
+    },
+    {
+      "id": 29,
+      "start": 102.0,
+      "end": 105.36,
+      "text": "or they use self-attention and cross-attention."
+    },
+    {
+      "id": 30,
+      "start": 105.36,
+      "end": 108.04,
+      "text": "So I'll talk a little bit about two different types"
+    },
+    {
+      "id": 31,
+      "start": 108.04,
+      "end": 111.84,
+      "text": "of transformer-based models that use both of those."
+    },
+    {
+      "id": 32,
+      "start": 111.84,
+      "end": 114.32,
+      "text": "And the way we calculated the tension"
+    },
+    {
+      "id": 33,
+      "start": 114.32,
+      "end": 118.4,
+      "text": "was basically by using the query vectors,"
+    },
+    {
+      "id": 34,
+      "start": 118.4,
+      "end": 120.56,
+      "text": "taking all the key vectors."
+    },
+    {
+      "id": 35,
+      "start": 120.56,
+      "end": 124.28,
+      "text": "And for each key pair, we would calculate the way"
+    },
+    {
+      "id": 36,
+      "start": 124.28,
+      "end": 126.2,
+      "text": "you keep between them like this."
+    },
+    {
+      "id": 37,
+      "start": 126.2,
+      "end": 128.76,
+      "text": "Then we would normalize it by using the softmax"
+    },
+    {
+      "id": 38,
+      "start": 128.76,
+      "end": 133.52,
+      "text": "to make sure they all add up to one in our B2-0."
+    },
+    {
+      "id": 39,
+      "start": 133.52,
+      "end": 136.68,
+      "text": "And then based on that, we took the value vectors."
+    },
+    {
+      "id": 40,
+      "start": 136.68,
+      "end": 140.4,
+      "text": "And we multiplied in these attention weights."
+    },
+    {
+      "id": 41,
+      "start": 140.4,
+      "end": 143.0,
+      "text": "And we got a final vector for that."
+    },
+    {
+      "id": 42,
+      "start": 143.0,
+      "end": 145.68,
+      "text": "So a single query vector would result"
+    },
+    {
+      "id": 43,
+      "start": 145.68,
+      "end": 149.4,
+      "text": "in a single value vector is that."
+    },
+    {
+      "id": 44,
+      "start": 149.4,
+      "end": 155.8,
+      "text": "So that's just the review to get everybody's mind working,"
+    },
+    {
+      "id": 45,
+      "start": 155.8,
+      "end": 158.52,
+      "text": "or everybody to come into the room."
+    },
+    {
+      "id": 46,
+      "start": 158.52,
+      "end": 161.12,
+      "text": "And so now I'd like to jump into the new content"
+    },
+    {
+      "id": 47,
+      "start": 161.12,
+      "end": 162.96,
+      "text": "of talking about how transformers work."
+    },
+    {
+      "id": 48,
+      "start": 165.96,
+      "end": 168.92,
+      "text": "In transformers, we're posting the paper attention"
+    },
+    {
+      "id": 49,
+      "start": 168.92,
+      "end": 173.92,
+      "text": "is all you need by Vasswani at all in 2017."
+    },
+    {
+      "id": 50,
+      "start": 173.92,
+      "end": 177.92,
+      "text": "When this paper came out, it was kind of already clear to me"
+    },
+    {
+      "id": 51,
+      "start": 177.92,
+      "end": 180.44,
+      "text": "that this was going to be a big thing,"
+    },
+    {
+      "id": 52,
+      "start": 180.44,
+      "end": 182.84,
+      "text": "assuming up to the paper came out."
+    },
+    {
+      "id": 53,
+      "start": 182.84,
+      "end": 187.32,
+      "text": "And it actually has turned out to be a very big thing for us."
+    },
+    {
+      "id": 54,
+      "start": 187.32,
+      "end": 192.0,
+      "text": "But basically when it came out, it was a sequence model,"
+    },
+    {
+      "id": 55,
+      "start": 192.0,
+      "end": 193.64,
+      "text": "a model that could generate sequences"
+    },
+    {
+      "id": 56,
+      "start": 193.64,
+      "end": 195.84,
+      "text": "based entirely on attention."
+    },
+    {
+      "id": 57,
+      "start": 195.84,
+      "end": 198.8,
+      "text": "And so this is in contrast to what came before it,"
+    },
+    {
+      "id": 58,
+      "start": 198.8,
+      "end": 202.44,
+      "text": "which is like they would have an RNN based encoder."
+    },
+    {
+      "id": 59,
+      "start": 202.44,
+      "end": 205.52,
+      "text": "And then they would only use attention for cross attention."
+    },
+    {
+      "id": 60,
+      "start": 205.52,
+      "end": 210.52,
+      "text": "So all of the blocks in the encoder up and down this point,"
+    },
+    {
+      "id": 61,
+      "start": 214.0,
+      "end": 217.84,
+      "text": "these would all be RNN-based blocks."
+    },
+    {
+      "id": 62,
+      "start": 219.36,
+      "end": 221.24,
+      "text": "And then they would have a decoder over here,"
+    },
+    {
+      "id": 63,
+      "start": 221.24,
+      "end": 226.24,
+      "text": "maybe also consisting of RNNs."
+    },
+    {
+      "id": 64,
+      "start": 226.8,
+      "end": 229.64,
+      "text": "Actually, this could be a bidirectional RNN, for example."
+    },
+    {
+      "id": 65,
+      "start": 232.64,
+      "end": 234.88,
+      "text": "And this could be a unit-indirectional RNN."
+    },
+    {
+      "id": 66,
+      "start": 238.6,
+      "end": 240.28,
+      "text": "And then they would only use attention"
+    },
+    {
+      "id": 67,
+      "start": 240.28,
+      "end": 241.96,
+      "text": "for the cross-attention part here."
+    },
+    {
+      "id": 68,
+      "start": 241.96,
+      "end": 243.48,
+      "text": "So this would be attention."
+    },
+    {
+      "id": 69,
+      "start": 245.6,
+      "end": 248.72,
+      "text": "And so what the transferer did is it basically said,"
+    },
+    {
+      "id": 70,
+      "start": 248.72,
+      "end": 251.32,
+      "text": "we're going to remove the RNN as the sequence modeling"
+    },
+    {
+      "id": 71,
+      "start": 251.32,
+      "end": 253.44,
+      "text": "and we're going to replace this all with self-attention."
+    },
+    {
+      "id": 72,
+      "start": 253.52,
+      "end": 256.4,
+      "text": "So hence the name attention is all you need."
+    },
+    {
+      "id": 73,
+      "start": 256.4,
+      "end": 259.04,
+      "text": "So they removed all of the other sequence modeling components"
+    },
+    {
+      "id": 74,
+      "start": 259.04,
+      "end": 259.88,
+      "text": "other than function."
+    },
+    {
+      "id": 75,
+      "start": 262.68,
+      "end": 264.88,
+      "text": "At the time the paper came out, it gave strong results"
+    },
+    {
+      "id": 76,
+      "start": 264.88,
+      "end": 266.04,
+      "text": "on machine translation."
+    },
+    {
+      "id": 77,
+      "start": 266.04,
+      "end": 268.56,
+      "text": "And of course now it gives strong results at everything."
+    },
+    {
+      "id": 78,
+      "start": 269.8,
+      "end": 273.24,
+      "text": "Another really important thing is it's fast"
+    },
+    {
+      "id": 79,
+      "start": 273.24,
+      "end": 276.0,
+      "text": "in an only consistent matrix multiplications."
+    },
+    {
+      "id": 80,
+      "start": 276.76,
+      "end": 278.76,
+      "text": "And so this is really important for the same reason"
+    },
+    {
+      "id": 81,
+      "start": 278.76,
+      "end": 281.52,
+      "text": "that I mentioned last class,"
+    },
+    {
+      "id": 82,
+      "start": 281.52,
+      "end": 283.6,
+      "text": "which is that RNNs are kind of bottlenecked"
+    },
+    {
+      "id": 83,
+      "start": 283.6,
+      "end": 285.76,
+      "text": "by the fact that you have to wait for the calculation"
+    },
+    {
+      "id": 84,
+      "start": 285.76,
+      "end": 288.92,
+      "text": "from the previous state before you can calculate the next one."
+    },
+    {
+      "id": 85,
+      "start": 288.92,
+      "end": 290.44,
+      "text": "Transformers you don't have to do that."
+    },
+    {
+      "id": 86,
+      "start": 290.44,
+      "end": 293.24,
+      "text": "So it makes it much faster."
+    },
+    {
+      "id": 87,
+      "start": 293.24,
+      "end": 297.88,
+      "text": "And actually I would argue that that's probably a bigger reason"
+    },
+    {
+      "id": 88,
+      "start": 297.88,
+      "end": 300.84,
+      "text": "why they became very popular than like that."
+    },
+    {
+      "id": 89,
+      "start": 300.84,
+      "end": 302.88,
+      "text": "Transformers are a better modeling methodology"
+    },
+    {
+      "id": 90,
+      "start": 302.88,
+      "end": 303.84,
+      "text": "or anything like that."
+    },
+    {
+      "id": 91,
+      "start": 303.84,
+      "end": 307.92,
+      "text": "I think it's actually mostly used in the being class."
+    },
+    {
+      "id": 92,
+      "start": 311.88,
+      "end": 315.08,
+      "text": "So I'm going to go through two types of transformers,"
+    },
+    {
+      "id": 93,
+      "start": 316.28,
+      "end": 320.44,
+      "text": "specifically encoder decoder transformers."
+    },
+    {
+      "id": 94,
+      "start": 320.44,
+      "end": 325.44,
+      "text": "And these are used in models such as T5 in BART."
+    },
+    {
+      "id": 95,
+      "start": 327.76,
+      "end": 331.44,
+      "text": "And T5 is actually still reasonably widely used"
+    },
+    {
+      "id": 96,
+      "start": 331.44,
+      "end": 333.48,
+      "text": "in some applications."
+    },
+    {
+      "id": 97,
+      "start": 333.48,
+      "end": 335.4,
+      "text": "And also decoder only models."
+    },
+    {
+      "id": 98,
+      "start": 335.4,
+      "end": 337.08,
+      "text": "And these are things like GPP and Mama."
+    },
+    {
+      "id": 99,
+      "start": 337.08,
+      "end": 340.36,
+      "text": "And this is used kind of most widely right now,"
+    },
+    {
+      "id": 100,
+      "start": 340.36,
+      "end": 342.12,
+      "text": "most of the new language models coming out"
+    },
+    {
+      "id": 101,
+      "start": 342.12,
+      "end": 343.44,
+      "text": "and put it on the models."
+    },
+    {
+      "id": 102,
+      "start": 345.08,
+      "end": 349.28,
+      "text": "So here are the architecture diagrams between them."
+    },
+    {
+      "id": 103,
+      "start": 349.28,
+      "end": 352.16,
+      "text": "And what you can see is a decoder only model only has"
+    },
+    {
+      "id": 104,
+      "start": 352.16,
+      "end": 357.16,
+      "text": "a single model here where the encoder decoder model"
+    },
+    {
+      "id": 105,
+      "start": 357.88,
+      "end": 361.6,
+      "text": "has an encoder and a decoder like this."
+    },
+    {
+      "id": 106,
+      "start": 362.88,
+      "end": 366.56,
+      "text": "So the way the blocks of the trend"
+    },
+    {
+      "id": 107,
+      "start": 366.56,
+      "end": 367.88,
+      "text": "or the way the transfer of the works"
+    },
+    {
+      "id": 108,
+      "start": 367.88,
+      "end": 369.8,
+      "text": "is you have an input embedding."
+    },
+    {
+      "id": 109,
+      "start": 369.8,
+      "end": 371.72,
+      "text": "You have something called positional encodings"
+    },
+    {
+      "id": 110,
+      "start": 371.72,
+      "end": 373.32,
+      "text": "which I'll talk about a bit."
+    },
+    {
+      "id": 111,
+      "start": 373.32,
+      "end": 376.08,
+      "text": "Then you have multi head attention blocks."
+    },
+    {
+      "id": 112,
+      "start": 376.08,
+      "end": 377.76,
+      "text": "And these multi head attention blocks"
+    },
+    {
+      "id": 113,
+      "start": 377.76,
+      "end": 381.32,
+      "text": "are followed by feed forward blocks."
+    },
+    {
+      "id": 114,
+      "start": 381.32,
+      "end": 382.56,
+      "text": "So the multi head attention blocks"
+    },
+    {
+      "id": 115,
+      "start": 382.56,
+      "end": 383.64,
+      "text": "are basically doing attention."
+    },
+    {
+      "id": 116,
+      "start": 383.64,
+      "end": 385.76,
+      "text": "The feed forward blocks are basically doing"
+    },
+    {
+      "id": 117,
+      "start": 385.76,
+      "end": 387.68,
+      "text": "extraction of combination features"
+    },
+    {
+      "id": 118,
+      "start": 388.84,
+      "end": 391.6,
+      "text": "to kind of mix together the different features"
+    },
+    {
+      "id": 119,
+      "start": 391.6,
+      "end": 394.84,
+      "text": "from the calculated by the attention."
+    },
+    {
+      "id": 120,
+      "start": 394.84,
+      "end": 398.88,
+      "text": "And then in the decoder only model"
+    },
+    {
+      "id": 121,
+      "start": 398.88,
+      "end": 400.2,
+      "text": "that's all you have."
+    },
+    {
+      "id": 122,
+      "start": 400.2,
+      "end": 401.88,
+      "text": "And then in the encoder decoder model"
+    },
+    {
+      "id": 123,
+      "start": 401.88,
+      "end": 405.64,
+      "text": "you also have something like this"
+    },
+    {
+      "id": 124,
+      "start": 405.64,
+      "end": 409.72,
+      "text": "where you have mass multi head attention"
+    },
+    {
+      "id": 125,
+      "start": 409.72,
+      "end": 413.56,
+      "text": "to calculate kind of in place of the RNN here."
+    },
+    {
+      "id": 126,
+      "start": 413.56,
+      "end": 416.08,
+      "text": "And then you have this multi head attention here"
+    },
+    {
+      "id": 127,
+      "start": 416.08,
+      "end": 418.52,
+      "text": "in place of the cross-advention here."
+    },
+    {
+      "id": 128,
+      "start": 418.52,
+      "end": 421.0,
+      "text": "And then you also have the feed forward network."
+    },
+    {
+      "id": 129,
+      "start": 421.0,
+      "end": 422.8,
+      "text": "And I'm gonna go through each one of these in detail"
+    },
+    {
+      "id": 130,
+      "start": 422.8,
+      "end": 426.24,
+      "text": "but that's just kind of the general structure."
+    },
+    {
+      "id": 131,
+      "start": 427.24,
+      "end": 430.52,
+      "text": "And so I mentioned that like encoder decoder models"
+    },
+    {
+      "id": 132,
+      "start": 430.52,
+      "end": 432.6,
+      "text": "were widely used in T5."
+    },
+    {
+      "id": 133,
+      "start": 432.6,
+      "end": 437.28,
+      "text": "This was also the original transformer paper had this"
+    },
+    {
+      "id": 134,
+      "start": 438.44,
+      "end": 441.12,
+      "text": "here, this connector here."
+    },
+    {
+      "id": 135,
+      "start": 441.12,
+      "end": 443.0,
+      "text": "This is a little bit newer."
+    },
+    {
+      "id": 136,
+      "start": 443.0,
+      "end": 446.24,
+      "text": "So why would you pick one or the other?"
+    },
+    {
+      "id": 137,
+      "start": 447.36,
+      "end": 451.56,
+      "text": "T5 and a barc basically they picked this one"
+    },
+    {
+      "id": 138,
+      "start": 451.56,
+      "end": 453.32,
+      "text": "kind of partly out of tradition"
+    },
+    {
+      "id": 139,
+      "start": 453.32,
+      "end": 458.08,
+      "text": "but also partly out of for things where you definitely"
+    },
+    {
+      "id": 140,
+      "start": 458.08,
+      "end": 460.76,
+      "text": "have like a clear input output structure."
+    },
+    {
+      "id": 141,
+      "start": 460.76,
+      "end": 463.92,
+      "text": "So it's like I want to take in a summary"
+    },
+    {
+      "id": 142,
+      "start": 463.92,
+      "end": 466.68,
+      "text": "or I want to take in a document that's my input,"
+    },
+    {
+      "id": 143,
+      "start": 466.68,
+      "end": 468.24,
+      "text": "I want to generate a summary"
+    },
+    {
+      "id": 144,
+      "start": 468.24,
+      "end": 470.96,
+      "text": "or I want to take in English sentence"
+    },
+    {
+      "id": 145,
+      "start": 470.96,
+      "end": 473.36,
+      "text": "and I want to generate a Japanese sentence"
+    },
+    {
+      "id": 146,
+      "start": 473.36,
+      "end": 474.88,
+      "text": "and that's a translation."
+    },
+    {
+      "id": 147,
+      "start": 476.6,
+      "end": 478.36,
+      "text": "However, things get a little bit tricky"
+    },
+    {
+      "id": 148,
+      "start": 478.36,
+      "end": 480.52,
+      "text": "when you're talking about something like a chatbot."
+    },
+    {
+      "id": 149,
+      "start": 480.52,
+      "end": 482.2,
+      "text": "So if you have a chatbot"
+    },
+    {
+      "id": 150,
+      "start": 482.2,
+      "end": 484.12,
+      "text": "what is your input and what's your output?"
+    },
+    {
+      "id": 151,
+      "start": 484.12,
+      "end": 486.24,
+      "text": "Like one thing that could be your input"
+    },
+    {
+      "id": 152,
+      "start": 486.24,
+      "end": 489.12,
+      "text": "is like all of the context that you've seen before"
+    },
+    {
+      "id": 153,
+      "start": 489.12,
+      "end": 492.32,
+      "text": "and then your output could be the next"
+    },
+    {
+      "id": 154,
+      "start": 493.48,
+      "end": 497.48,
+      "text": "the next like utterance or the next dioluncern."
+    },
+    {
+      "id": 155,
+      "start": 497.48,
+      "end": 499.52,
+      "text": "But on the other hand, another way you could look at it"
+    },
+    {
+      "id": 156,
+      "start": 499.52,
+      "end": 501.96,
+      "text": "is well it's all just part of this one big sequence"
+    },
+    {
+      "id": 157,
+      "start": 501.96,
+      "end": 504.8,
+      "text": "and we want to model this whole big sequence at the time."
+    },
+    {
+      "id": 158,
+      "start": 504.8,
+      "end": 509.36,
+      "text": "And so because of that decoder only models basically"
+    },
+    {
+      "id": 159,
+      "start": 509.36,
+      "end": 511.24,
+      "text": "don't force you to decide what your input"
+    },
+    {
+      "id": 160,
+      "start": 512.16,
+      "end": 513.32,
+      "text": "and what your output is, you can just treat"
+    },
+    {
+      "id": 161,
+      "start": 513.32,
+      "end": 515.36,
+      "text": "all of it as one long sequence"
+    },
+    {
+      "id": 162,
+      "start": 515.36,
+      "end": 517.76,
+      "text": "and that's a little bit more convenient."
+    },
+    {
+      "id": 163,
+      "start": 517.76,
+      "end": 519.52,
+      "text": "Another reason why decoder only models"
+    },
+    {
+      "id": 164,
+      "start": 519.52,
+      "end": 522.52,
+      "text": "are a little bit more convenient is they're simpler."
+    },
+    {
+      "id": 165,
+      "start": 522.52,
+      "end": 526.04,
+      "text": "So they just have these two layers"
+    },
+    {
+      "id": 166,
+      "start": 526.04,
+      "end": 529.56,
+      "text": "and they don't have like separate multi head attention blocks"
+    },
+    {
+      "id": 167,
+      "start": 529.56,
+      "end": 531.44,
+      "text": "for the encoder and the cross attention"
+    },
+    {
+      "id": 168,
+      "start": 531.44,
+      "end": 534.68,
+      "text": "and the decoder attention here."
+    },
+    {
+      "id": 169,
+      "start": 534.68,
+      "end": 537.48,
+      "text": "And so because of this, because this is simpler"
+    },
+    {
+      "id": 170,
+      "start": 537.48,
+      "end": 538.84,
+      "text": "and has fewer parameters overall"
+    },
+    {
+      "id": 171,
+      "start": 538.84,
+      "end": 540.88,
+      "text": "you can just make each layer bigger"
+    },
+    {
+      "id": 172,
+      "start": 540.88,
+      "end": 544.48,
+      "text": "or you can make more layers for other things like that."
+    },
+    {
+      "id": 173,
+      "start": 544.48,
+      "end": 545.92,
+      "text": "Actually one thing I forgot to mention"
+    },
+    {
+      "id": 174,
+      "start": 545.92,
+      "end": 548.44,
+      "text": "is this nx means you do this over and over again."
+    },
+    {
+      "id": 175,
+      "start": 548.44,
+      "end": 551.44,
+      "text": "So you have like multiple layers of these blocks basically."
+    },
+    {
+      "id": 176,
+      "start": 554.0,
+      "end": 556.0,
+      "text": "Well, any questions here?"
+    },
+    {
+      "id": 177,
+      "start": 558.16,
+      "end": 559.0,
+      "text": "Yeah."
+    },
+    {
+      "id": 178,
+      "start": 559.0,
+      "end": 562.28,
+      "text": "I guess we're in the same size and the same size."
+    },
+    {
+      "id": 179,
+      "start": 562.28,
+      "end": 563.12,
+      "text": "Yeah."
+    },
+    {
+      "id": 180,
+      "start": 563.12,
+      "end": 566.36,
+      "text": "So what do you mean by same size?"
+    },
+    {
+      "id": 181,
+      "start": 566.36,
+      "end": 567.6,
+      "text": "This is the first thing we asked about."
+    },
+    {
+      "id": 182,
+      "start": 567.6,
+      "end": 569.24,
+      "text": "Do you mean the same number of parameters"
+    },
+    {
+      "id": 183,
+      "start": 569.24,
+      "end": 571.56,
+      "text": "that you need each fly?"
+    },
+    {
+      "id": 184,
+      "start": 571.56,
+      "end": 573.36,
+      "text": "So for the same number of parameters,"
+    },
+    {
+      "id": 185,
+      "start": 573.36,
+      "end": 576.04,
+      "text": "I think it really depends."
+    },
+    {
+      "id": 186,
+      "start": 577.12,
+      "end": 579.76,
+      "text": "There was a comparison in the T5 paper"
+    },
+    {
+      "id": 187,
+      "start": 579.76,
+      "end": 581.28,
+      "text": "where they did something like that"
+    },
+    {
+      "id": 188,
+      "start": 581.28,
+      "end": 582.64,
+      "text": "and I think they did demonstrate"
+    },
+    {
+      "id": 189,
+      "start": 582.64,
+      "end": 584.92,
+      "text": "that the encoder decoder was slightly better"
+    },
+    {
+      "id": 190,
+      "start": 584.92,
+      "end": 588.36,
+      "text": "but I don't know if they exactly can fold for the size."
+    },
+    {
+      "id": 191,
+      "start": 588.36,
+      "end": 589.6,
+      "text": "I have to go back and look at that"
+    },
+    {
+      "id": 192,
+      "start": 589.6,
+      "end": 590.52,
+      "text": "if it's only the needles."
+    },
+    {
+      "id": 193,
+      "start": 590.52,
+      "end": 594.08,
+      "text": "But the T5 paper is actually a really, really nice paper"
+    },
+    {
+      "id": 194,
+      "start": 594.08,
+      "end": 597.6,
+      "text": "in terms of how they explore all the design dimensions"
+    },
+    {
+      "id": 195,
+      "start": 597.6,
+      "end": 599.48,
+      "text": "and what kind of objectives and stuff like that."
+    },
+    {
+      "id": 196,
+      "start": 599.48,
+      "end": 600.32,
+      "text": "So you could take..."
+    }
+  ],
+  "language": "en"
+}

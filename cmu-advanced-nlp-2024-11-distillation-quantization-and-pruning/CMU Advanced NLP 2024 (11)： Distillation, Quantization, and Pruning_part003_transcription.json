@@ -1,0 +1,407 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 7.0,
+      "text": "Let's say your model was just this basic two parameter model x and y and you have weights a and b."
+    },
+    {
+      "id": 1,
+      "start": 7.0,
+      "end": 15.0,
+      "text": "And let's say we know that the magnitude of a is like a lot bigger than the magnitude of beef."
+    },
+    {
+      "id": 2,
+      "start": 15.0,
+      "end": 21.0,
+      "text": "Then in magnitude pruning, we would just set b to zero."
+    },
+    {
+      "id": 3,
+      "start": 21.0,
+      "end": 27.0,
+      "text": "And then the model would just become a times x because the idea is that this."
+    },
+    {
+      "id": 4,
+      "start": 27.0,
+      "end": 33.0,
+      "text": "This parameter has a lot more effect on the output and therefore we don't need to consider the other one."
+    },
+    {
+      "id": 5,
+      "start": 33.0,
+      "end": 40.0,
+      "text": "But what if I told you now that the range of x like the average value of x was a thousand."
+    },
+    {
+      "id": 6,
+      "start": 40.0,
+      "end": 46.0,
+      "text": "Sorry, it was, sorry, the average value of x was one and the average value of y was a thousand."
+    },
+    {
+      "id": 7,
+      "start": 46.0,
+      "end": 56.0,
+      "text": "Now in practice, even though b is smaller, it's processing much larger inputs and therefore it's going to have an outsize impact on the output of the model."
+    },
+    {
+      "id": 8,
+      "start": 56.0,
+      "end": 68.0,
+      "text": "So that's the motivation of Wanda, which is here they decide which parameters to prune based on a combination of the magnitude of that parameter."
+    },
+    {
+      "id": 9,
+      "start": 68.0,
+      "end": 74.0,
+      "text": "As well as the magnitude of the actual inputs that come into that layer of the model."
+    },
+    {
+      "id": 10,
+      "start": 74.0,
+      "end": 82.0,
+      "text": "So they take like data calibration data and then they try to say learn what the average magnitude of the inputs are."
+    },
+    {
+      "id": 11,
+      "start": 82.0,
+      "end": 90.0,
+      "text": "And they use this to decide what parameters to prune."
+    },
+    {
+      "id": 12,
+      "start": 90.0,
+      "end": 93.0,
+      "text": "Okay, so."
+    },
+    {
+      "id": 13,
+      "start": 93.0,
+      "end": 104.0,
+      "text": "So far I've been talking about unstructured pruning and I think there's a pretty clear problem with this and makes this really not that effective in practice."
+    },
+    {
+      "id": 14,
+      "start": 104.0,
+      "end": 110.0,
+      "text": "The problem is that you can make a model sparse you can take the vectors and make them sparse."
+    },
+    {
+      "id": 15,
+      "start": 110.0,
+      "end": 118.0,
+      "text": "But if you're hardware does not take advantage of that sparsity, then you're not getting any gains and performance."
+    },
+    {
+      "id": 16,
+      "start": 118.0,
+      "end": 123.0,
+      "text": "So for example, here we like turned off after parameters."
+    },
+    {
+      "id": 17,
+      "start": 123.0,
+      "end": 133.0,
+      "text": "But if we're still multiplying zeros with other zeros in like a dense operation, we're doing exactly the same on a work we're getting no no no benefits here."
+    },
+    {
+      "id": 18,
+      "start": 133.0,
+      "end": 144.0,
+      "text": "And the reality is that right now hardware for machine learning does not support sparse data structures or a competition that well."
+    },
+    {
+      "id": 19,
+      "start": 144.0,
+      "end": 151.0,
+      "text": "Like major smart matrix modifications do some kinds of complicated things under the hood."
+    },
+    {
+      "id": 20,
+      "start": 151.0,
+      "end": 156.0,
+      "text": "And therefore they don't really work that well for sparse data structures."
+    },
+    {
+      "id": 21,
+      "start": 156.0,
+      "end": 165.0,
+      "text": "And so. So basically right now this is not very effective in the current hardware, although I hope this will change in the future."
+    },
+    {
+      "id": 22,
+      "start": 165.0,
+      "end": 171.0,
+      "text": "So therefore like a more immediately useful idea is called structured pruning."
+    },
+    {
+      "id": 23,
+      "start": 171.0,
+      "end": 181.0,
+      "text": "And the idea here is that instead of just picking parameters across with willy nilly across the whole model, you remove entire components or entire layers."
+    },
+    {
+      "id": 24,
+      "start": 181.0,
+      "end": 193.0,
+      "text": "And therefore you're ruining the model in a way that is structured and really going to make a difference on your overall runtime."
+    },
+    {
+      "id": 25,
+      "start": 193.0,
+      "end": 200.0,
+      "text": "So Graham and one of his PhD students a few years ago did some really cool work on this where they showed that."
+    },
+    {
+      "id": 26,
+      "start": 200.0,
+      "end": 212.0,
+      "text": "If you're training a transformer model like Bert, you usually have many heads of attention like you guys also experienced this for the llama homework where you had, I think it was eight heads of attention there."
+    },
+    {
+      "id": 27,
+      "start": 212.0,
+      "end": 220.0,
+      "text": "But in practice, most of these heads of attention can be removed without really any."
+    },
+    {
+      "id": 28,
+      "start": 220.0,
+      "end": 223.0,
+      "text": "Negative impact on the performance of your model."
+    },
+    {
+      "id": 29,
+      "start": 223.0,
+      "end": 233.0,
+      "text": "And so here they show that for a empty model, you can remove half of the attention heads entirely and get a negligible impact on your performance."
+    },
+    {
+      "id": 30,
+      "start": 233.0,
+      "end": 241.0,
+      "text": "This is different than what we showed here where we were removing parameters from anywhere in the model we saw fit."
+    },
+    {
+      "id": 31,
+      "start": 241.0,
+      "end": 250.0,
+      "text": "Here we're removing entire heads of attention, even some of those heads might have large magnitude weights, some of them might have small magnitude weights, but."
+    },
+    {
+      "id": 32,
+      "start": 250.0,
+      "end": 261.0,
+      "text": "We can just remove the entire attention head and this has a immediate impact on the performance of your model."
+    },
+    {
+      "id": 33,
+      "start": 261.0,
+      "end": 271.0,
+      "text": "And generalizing this recent work has proposed controlling even other kinds of components of your model."
+    },
+    {
+      "id": 34,
+      "start": 271.0,
+      "end": 292.0,
+      "text": "In this paper from from two years ago, they proposed masking having two levels of masks on your model. The first is like what they call a course mask, which is turning off large components like full attention heads are full forward layers where you replace them with identity matrix."
+    },
+    {
+      "id": 35,
+      "start": 292.0,
+      "end": 304.0,
+      "text": "And these are like really big things to turn off. And then you could also have fine masks like sorry, I meant entire self-pension layers, not attention heads."
+    },
+    {
+      "id": 36,
+      "start": 304.0,
+      "end": 310.0,
+      "text": "And then the fine mask to control like individual heads or removing individual dimensions."
+    },
+    {
+      "id": 37,
+      "start": 310.0,
+      "end": 317.0,
+      "text": "Changing your hidden state to be from like 512 dimensions to 200 dimensions."
+    },
+    {
+      "id": 38,
+      "start": 317.0,
+      "end": 324.0,
+      "text": "And so the idea here is they give two different levels of granularity at which you can turn off different components."
+    },
+    {
+      "id": 39,
+      "start": 324.0,
+      "end": 338.0,
+      "text": "And then these masks learn using some kind of held out validation data to learn what can we turn off without like totally destroying the performance of this model."
+    },
+    {
+      "id": 40,
+      "start": 338.0,
+      "end": 344.0,
+      "text": "And in this paper, they showed that you can really get pretty far with this idea."
+    },
+    {
+      "id": 41,
+      "start": 344.0,
+      "end": 359.0,
+      "text": "And the last thing I'll say about pruning here is that methods like this, you're actually learning a kind of control over your your model. So you're learning these this set of of masks."
+    },
+    {
+      "id": 42,
+      "start": 359.0,
+      "end": 364.0,
+      "text": "And that's pretty expensive in terms of training budget."
+    },
+    {
+      "id": 43,
+      "start": 364.0,
+      "end": 370.0,
+      "text": "It requires a lot of GPU memory. And so if you want to prune, let's say a Lama 70 billion model."
+    },
+    {
+      "id": 44,
+      "start": 370.0,
+      "end": 376.0,
+      "text": "You'll need basically as much computers as it need as it took to train that model to begin with."
+    },
+    {
+      "id": 45,
+      "start": 376.0,
+      "end": 386.0,
+      "text": "So one of this is a recent paper from Graham and one of his PhD students where they instead ask can we do pruning without having to like compute gradients at all."
+    },
+    {
+      "id": 46,
+      "start": 386.0,
+      "end": 400.0,
+      "text": "And basically, if we just have enough memory to run the model on our computer, can we then use that same computer to prune the model without having to do any to use add a more to compute gradients."
+    },
+    {
+      "id": 47,
+      "start": 400.0,
+      "end": 407.0,
+      "text": "And so I think the idea here is really clever. They basically randomly masked out all the different modules in the network."
+    },
+    {
+      "id": 48,
+      "start": 407.0,
+      "end": 418.0,
+      "text": "They create like 100 or 1000 variants of this model with different masks turned off. Then they measure the performance of those like perturb models."
+    },
+    {
+      "id": 49,
+      "start": 418.0,
+      "end": 426.0,
+      "text": "And then they learn a regression of like how much does each module affect the performance of the full system."
+    },
+    {
+      "id": 50,
+      "start": 426.0,
+      "end": 441.0,
+      "text": "And then you can then use these regression weights of this train of this learned regressor to figure out which modules you can actually turn off without impacting the performance too much."
+    },
+    {
+      "id": 51,
+      "start": 441.0,
+      "end": 447.0,
+      "text": "Okay. Any questions here."
+    },
+    {
+      "id": 52,
+      "start": 447.0,
+      "end": 460.0,
+      "text": "Like randomly prune models."
+    },
+    {
+      "id": 53,
+      "start": 460.0,
+      "end": 472.0,
+      "text": "Yeah, that's right. Like if you it depends on the."
+    },
+    {
+      "id": 54,
+      "start": 472.0,
+      "end": 486.0,
+      "text": "Yeah, I think like for self attention heads are for feed forward feed forward layers. You could think of it as just multiplying by the enemy."
+    },
+    {
+      "id": 55,
+      "start": 486.0,
+      "end": 499.0,
+      "text": "And next I'm going to move on to distillation. So if there's any questions about anything I've covered in pruning you can ask now and I know I was moving pretty fast. So happy to talk."
+    },
+    {
+      "id": 56,
+      "start": 499.0,
+      "end": 506.0,
+      "text": "What's the kind of learning regression is like does it generates other models that are."
+    },
+    {
+      "id": 57,
+      "start": 506.0,
+      "end": 519.0,
+      "text": "Yeah, the idea is that so the best way to do this would be to consider all possible choices of masks like turn off every combination of modules and then measure the performance."
+    },
+    {
+      "id": 58,
+      "start": 519.0,
+      "end": 533.0,
+      "text": "Then you know exactly which one which combination is the best. But if you have tens of layers and tens of components in each layer, you'll have like millions of different sub modules you want to try out."
+    },
+    {
+      "id": 59,
+      "start": 533.0,
+      "end": 546.0,
+      "text": "And this lets you just sample from that space, combinatorial space and then predict the interaction between what you have seen between the modules based on what you have seen."
+    },
+    {
+      "id": 60,
+      "start": 546.0,
+      "end": 549.0,
+      "text": "So it's like a more often."
+    },
+    {
+      "id": 61,
+      "start": 549.0,
+      "end": 552.0,
+      "text": "Yeah, yeah, that's right."
+    },
+    {
+      "id": 62,
+      "start": 552.0,
+      "end": 567.0,
+      "text": "I think you can make an analogy for this to like parameter selection where you can do random search, but now people do like fancier things like Beijing optimization, which are trying to explore the space in a more structured way."
+    },
+    {
+      "id": 63,
+      "start": 567.0,
+      "end": 571.0,
+      "text": "And so I think that this is similar and scary."
+    },
+    {
+      "id": 64,
+      "start": 571.0,
+      "end": 583.0,
+      "text": "So, are you like randomly choosing like, like for example, the green ones are the only."
+    },
+    {
+      "id": 65,
+      "start": 583.0,
+      "end": 596.0,
+      "text": "You're retaining 20% in the green line. So you're throwing away 80%."
+    },
+    {
+      "id": 66,
+      "start": 596.0,
+      "end": 602.0,
+      "text": "So in the like what this green line exactly means I did not go into the detail here is that."
+    }
+  ],
+  "language": "en"
+}

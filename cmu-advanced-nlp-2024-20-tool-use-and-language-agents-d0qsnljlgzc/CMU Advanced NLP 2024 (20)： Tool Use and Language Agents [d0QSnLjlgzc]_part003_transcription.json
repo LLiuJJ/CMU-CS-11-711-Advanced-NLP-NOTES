@@ -1,0 +1,323 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 15.0,
+      "text": "But like on the other hand, how much computation costs you need to pay, for example, extra tokens in your pump, where extra training steps are this confusing cost for the same thing that it's not."
+    },
+    {
+      "id": 1,
+      "start": 15.0,
+      "end": 18.0,
+      "text": "And a second of the quality of truth."
+    },
+    {
+      "id": 2,
+      "start": 18.0,
+      "end": 25.0,
+      "text": "So, instead of the top performance, there is also pretty important to measure the two performance itself."
+    },
+    {
+      "id": 3,
+      "start": 25.0,
+      "end": 31.0,
+      "text": "How quick can those two return the response to you? Do you need to wait one second or ten minutes?"
+    },
+    {
+      "id": 4,
+      "start": 31.0,
+      "end": 41.0,
+      "text": "Where how computation efficient are those tools? How much like GPU usage to cost, where it's merely confusing?"
+    },
+    {
+      "id": 5,
+      "start": 41.0,
+      "end": 51.0,
+      "text": "The third is real out with a lot of the way of tools. This majorly involves unstable tools that involves neural models from other randomized modules."
+    },
+    {
+      "id": 6,
+      "start": 51.0,
+      "end": 59.0,
+      "text": "So, for example, if you remember the visual QA example, it actually loads a VQA model and answer a question about the image."
+    },
+    {
+      "id": 7,
+      "start": 59.0,
+      "end": 64.0,
+      "text": "But sometimes, it's in your model, you can't answer the question correctly, but sometimes incorrectly."
+    },
+    {
+      "id": 8,
+      "start": 64.0,
+      "end": 76.0,
+      "text": "So, how do you, are users aware of this uncertainty of correctness of this tool? And if so, what should we do to like manage that?"
+    },
+    {
+      "id": 9,
+      "start": 76.0,
+      "end": 82.0,
+      "text": "And the fourth is reproducible testing. As we have shown with the issues of the evolution benchmark."
+    },
+    {
+      "id": 10,
+      "start": 82.0,
+      "end": 91.0,
+      "text": "As we asked, we have a question asking what is the current time, what is the current weather? Having a static reference result is probably not going to work."
+    },
+    {
+      "id": 11,
+      "start": 91.0,
+      "end": 101.0,
+      "text": "Not going to make it a reliable benchmark. So, maybe another approach is to have a reference pollution trajectory that, for example, includes get weather."
+    },
+    {
+      "id": 12,
+      "start": 101.0,
+      "end": 112.0,
+      "text": "This polling expression, and when the model generates its solution, it can like run the two solutions in parallel and track if their responses reach."
+    },
+    {
+      "id": 13,
+      "start": 112.0,
+      "end": 125.0,
+      "text": "Lastly, to save usage of tools. So, for example, a lot of tools are APIs posted by an unknown server. Do you trust it, so sometimes you like."
+    },
+    {
+      "id": 14,
+      "start": 125.0,
+      "end": 135.0,
+      "text": "So, your personal information to the tools. Are you confident enough that your personal information."
+    },
+    {
+      "id": 15,
+      "start": 135.0,
+      "end": 144.0,
+      "text": "These are all interesting aspects that like no one in the tool area, we will look into it yet."
+    },
+    {
+      "id": 16,
+      "start": 144.0,
+      "end": 157.0,
+      "text": "And we specifically did in quite a very unusual sense that we compare for each method, you compare the performance improvement and the competition calls that I have."
+    },
+    {
+      "id": 17,
+      "start": 157.0,
+      "end": 173.0,
+      "text": "So, we did analysis from two aspects. What is the, like what have benefit the most from tools. So, for example, on this figure, with the like single method between normal method,"
+    },
+    {
+      "id": 18,
+      "start": 173.0,
+      "end": 180.0,
+      "text": "and value, and say, data sets were different tasks. You can see it's very, very like, like, top, right."
+    },
+    {
+      "id": 19,
+      "start": 180.0,
+      "end": 185.0,
+      "text": "When I hear the mass data sense benefit a lot, perhaps like a huge improvement."
+    },
+    {
+      "id": 20,
+      "start": 185.0,
+      "end": 195.0,
+      "text": "So, I was a here to look at the multilingual task. And actually, it's not very decreasing the performance, but still use a lot of competition calls."
+    },
+    {
+      "id": 21,
+      "start": 195.0,
+      "end": 204.0,
+      "text": "So, there's an error like not going well, but we need not use possible. It's like, hopefully, the same."
+    },
+    {
+      "id": 22,
+      "start": 204.0,
+      "end": 215.0,
+      "text": "And the other dimension is what methods are efficient in using tools. Even on the same thing, if we compare on the math and table to the same, that's really different to the method."
+    },
+    {
+      "id": 23,
+      "start": 215.0,
+      "end": 231.0,
+      "text": "And there are methods that use a lot of competition. And sometimes without getting much improvement, but there are also methods that use like much fewer competition calls, which is similar amount of performance games."
+    },
+    {
+      "id": 24,
+      "start": 231.0,
+      "end": 242.0,
+      "text": "So, yeah, this kind of evaluation is probably very important to show the whole picture, where at least the more comprehensive picture of the truth method."
+    },
+    {
+      "id": 25,
+      "start": 242.0,
+      "end": 253.0,
+      "text": "So, that's it overview of the things that I talked about today, the basic tools, scenario, and also evaluation, the other aspects."
+    },
+    {
+      "id": 26,
+      "start": 253.0,
+      "end": 257.0,
+      "text": "Any kind of questions?"
+    },
+    {
+      "id": 27,
+      "start": 257.0,
+      "end": 266.0,
+      "text": "And those agents are really closely related also. So, I think we can also have some time as questions and every political."
+    },
+    {
+      "id": 28,
+      "start": 266.0,
+      "end": 284.0,
+      "text": "But, so, a very simple way to do this more systematically than just browsing through things is to randomly, randomly sample a randomly sample 100 outputs and look at 100 outputs and look at 100 errors and look at 100 errors and try to group them into some sort of typology and say, oh, this kind of errors is particularly frequent."
+    },
+    {
+      "id": 29,
+      "start": 284.0,
+      "end": 304.0,
+      "text": "Hello, everyone. I'm Frank and continue with the topic, continue with the topic about the negative models using tools. I'm going to talk about."
+    },
+    {
+      "id": 30,
+      "start": 304.0,
+      "end": 314.0,
+      "text": "I'm going to talk about the angle model as agents needs to all super closely related. So, as sorry."
+    },
+    {
+      "id": 31,
+      "start": 322.0,
+      "end": 329.0,
+      "text": "Not needed, but it would be nice."
+    },
+    {
+      "id": 32,
+      "start": 330.0,
+      "end": 342.0,
+      "text": "So, first, what are agents? I think they're recovered this a little bit, but basically anything that can be viewed as, you know, receiving environments through sensors and acting upon them through actuators."
+    },
+    {
+      "id": 33,
+      "start": 342.0,
+      "end": 351.0,
+      "text": "If you look at this plot here, you can see the agent will take in observations from the environment and perform actions on it."
+    },
+    {
+      "id": 34,
+      "start": 351.0,
+      "end": 360.0,
+      "text": "And the agent themselves will have some sort of abilities or knowledge goes preference of any preference prior knowledge."
+    },
+    {
+      "id": 35,
+      "start": 360.0,
+      "end": 372.0,
+      "text": "Things that's the topic is about LM agents now we usually use LM the large amount of themselves as the agents itself and other tools."
+    },
+    {
+      "id": 36,
+      "start": 372.0,
+      "end": 393.0,
+      "text": "So, Zora covered about can be used as per sectors, you know, or the actuators, for example, you play music. That's kind of an actuator and all these abilities, prior knowledge or observations, plastic experience can be seen as data or training data for you and that model."
+    },
+    {
+      "id": 37,
+      "start": 393.0,
+      "end": 402.0,
+      "text": "So, to get started on length model agents, I'm going to cover four stages of get yourself a large length model agent."
+    },
+    {
+      "id": 38,
+      "start": 402.0,
+      "end": 418.0,
+      "text": "First, to cover a bit of tasks and applications. Second, some training free methods for building agents so that you can use with API based models and evaluation environment and benchmark, which is a super important topic in research."
+    },
+    {
+      "id": 39,
+      "start": 418.0,
+      "end": 432.0,
+      "text": "And finally, I'm going to briefly cover some of the training methods for improving agents and since it's a pretty hot ongoing area, some of these training methods might not be the best."
+    },
+    {
+      "id": 40,
+      "start": 432.0,
+      "end": 437.0,
+      "text": "So first, what are the tasks and applications for large language model agents."
+    },
+    {
+      "id": 41,
+      "start": 437.0,
+      "end": 451.0,
+      "text": "So, to answer this question, to cover this, we need to answer why do we want agents. Imagine if things can be done by just talking. That's what human agents do. You talk to some real estate agent to buy and house for you."
+    },
+    {
+      "id": 42,
+      "start": 451.0,
+      "end": 464.0,
+      "text": "So nowadays, when we are interacting with computers, traditionally, you know, use graphical user interface or your right code manually, busy with hands using keyboard and mouse."
+    },
+    {
+      "id": 43,
+      "start": 464.0,
+      "end": 475.0,
+      "text": "But what if you know everything in the future can be just done without talking to some Alexa Google assistant. It's safe time. It is natural. It is accessible."
+    },
+    {
+      "id": 44,
+      "start": 475.0,
+      "end": 480.0,
+      "text": "And there's no need to browse or any of those programming learning curve."
+    },
+    {
+      "id": 45,
+      "start": 480.0,
+      "end": 496.0,
+      "text": "Nowadays, there are some agents that help you do tasks. We are the natural language interface computers. For example, there are Siri, there are Google assistant Alexa, you can set in alarm. That's actually agent because it actually set in alarm for you."
+    },
+    {
+      "id": 46,
+      "start": 496.0,
+      "end": 512.0,
+      "text": "And there are some natural language program tools. I think a lot of us are using my GitHub co pilot plugins to help you write code. You can just say, I want to sort my list in a sending order, it will generate code that does it for you."
+    },
+    {
+      "id": 47,
+      "start": 513.0,
+      "end": 525.0,
+      "text": "And also, I think many people also use chat GPT in their daily life. They want to throw out the feature of having ability to include plugins into the chat."
+    },
+    {
+      "id": 48,
+      "start": 525.0,
+      "end": 533.0,
+      "text": "So the tool integrations into chatbot can help you book slides or, you know, by instant create instant current orders."
+    },
+    {
+      "id": 49,
+      "start": 533.0,
+      "end": 552.0,
+      "text": "And in some other areas where the LAM agent could work, which is in robotics. Here in this example, the agent can see the surroundings as if in the like those Google Street view, we have those vision."
+    },
+    {
+      "id": 50,
+      "start": 553.0,
+      "end": 570.0,
+      "text": "The surroundings and you ask the agent to, you know, turn go with the frog traffic, you give some natural language instructions, these tasks are traditional called natural language navigation, which is given the natural language problem, you ask to go through a street."
+    },
+    {
+      "id": 51,
+      "start": 570.0,
+      "end": 591.0,
+      "text": "And there's also some data set, a data set called awkward, where you can, you are given a simulated environment here. And you are also given a text or the description, like you are in the middle room, you look around, you can see what's surrounding you. And there's a bad, there's drawer and you ask it."
+    },
+    {
+      "id": 52,
+      "start": 591.0,
+      "end": 601.0,
+      "text": "You ask that the task is to examine an alarm clock with the desk with the desk and then I."
+    }
+  ],
+  "language": "en"
+}

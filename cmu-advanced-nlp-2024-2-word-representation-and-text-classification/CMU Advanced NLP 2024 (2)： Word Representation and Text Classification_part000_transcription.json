@@ -1,0 +1,845 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 7.9,
+      "text": "So this time I'm going to talk about word representation and text class"
+    },
+    {
+      "id": 1,
+      "start": 7.9,
+      "end": 16.0,
+      "text": "viruses are kind of the foundations that you need to know in order to move on to the more complex things that will be talking in future classes."
+    },
+    {
+      "id": 2,
+      "start": 16.0,
+      "end": 26.0,
+      "text": "But actually, in particular, the word representation part is pretty important. It's a major thing that we need to do for all and it'll be models."
+    },
+    {
+      "id": 3,
+      "start": 26.0,
+      "end": 36.0,
+      "text": "So last class, I talked about the bag of words model."
+    },
+    {
+      "id": 4,
+      "start": 36.0,
+      "end": 46.0,
+      "text": "And just for review, this was a model where basically we take each word we represented as a one thought vector like this."
+    },
+    {
+      "id": 5,
+      "start": 46.0,
+      "end": 55.0,
+      "text": "And we add all of these vectors together. We multiply the resulting frequency vector by some weights and we get a score out of this."
+    },
+    {
+      "id": 6,
+      "start": 55.0,
+      "end": 63.0,
+      "text": "And we can use the score for binary classification or if we want to do multi class classification, we get multiple scores for each class."
+    },
+    {
+      "id": 7,
+      "start": 63.0,
+      "end": 70.0,
+      "text": "And the features F were just based on our word identities and the weights were learned."
+    },
+    {
+      "id": 8,
+      "start": 70.0,
+      "end": 76.0,
+      "text": "And if we look at what's missing in bag of words models."
+    },
+    {
+      "id": 9,
+      "start": 76.0,
+      "end": 81.0,
+      "text": "We talked about handling of conjugated or compound words."
+    },
+    {
+      "id": 10,
+      "start": 81.0,
+      "end": 84.0,
+      "text": "We talked about handling of word similarity."
+    },
+    {
+      "id": 11,
+      "start": 84.0,
+      "end": 89.0,
+      "text": "And we talked about handling of combination features and handling of sentence structure."
+    },
+    {
+      "id": 12,
+      "start": 89.0,
+      "end": 92.0,
+      "text": "And so all of these are tricky problems."
+    },
+    {
+      "id": 13,
+      "start": 92.0,
+      "end": 100.0,
+      "text": "And we saw that creating a rule based system to solve these problems is not trivial and at the very least would take a lot of time."
+    },
+    {
+      "id": 14,
+      "start": 100.0,
+      "end": 105.0,
+      "text": "And so now I want to talk about some solutions to the problems in this class."
+    },
+    {
+      "id": 15,
+      "start": 105.0,
+      "end": 113.0,
+      "text": "So the first, the solution to the first problem or a solution to the first problem is a sub word or character based models."
+    },
+    {
+      "id": 16,
+      "start": 113.0,
+      "end": 116.0,
+      "text": "And that's what I'll talk about first."
+    },
+    {
+      "id": 17,
+      "start": 116.0,
+      "end": 121.0,
+      "text": "Handling of word similarity. This can be handled using word embeddings."
+    },
+    {
+      "id": 18,
+      "start": 121.0,
+      "end": 125.0,
+      "text": "And the word embeddings will be another thing we'll talk about this time."
+    },
+    {
+      "id": 19,
+      "start": 125.0,
+      "end": 131.0,
+      "text": "Handling of combination features. We can handle through neural networks, which we'll also talk about this time."
+    },
+    {
+      "id": 20,
+      "start": 131.0,
+      "end": 134.0,
+      "text": "And then handling of sentence structure."
+    },
+    {
+      "id": 21,
+      "start": 134.0,
+      "end": 141.0,
+      "text": "The kind of standard way of handling this now is through sequence based models. And that will be starting in a few lessons."
+    },
+    {
+      "id": 22,
+      "start": 141.0,
+      "end": 144.0,
+      "text": "So."
+    },
+    {
+      "id": 23,
+      "start": 144.0,
+      "end": 147.0,
+      "text": "So we'll talk about the content."
+    },
+    {
+      "id": 24,
+      "start": 147.0,
+      "end": 149.0,
+      "text": "So sub word models."
+    },
+    {
+      "id": 25,
+      "start": 149.0,
+      "end": 159.0,
+      "text": "As I mentioned, this is a really, really important part of all of the models that we're building nowadays, including, you know, state of the art language models and things like this."
+    },
+    {
+      "id": 26,
+      "start": 159.0,
+      "end": 164.0,
+      "text": "And the basic idea behind this is that we want to split."
+    },
+    {
+      "id": 27,
+      "start": 164.0,
+      "end": 169.0,
+      "text": "In particular, split less common words up into multiple sub word tokens."
+    },
+    {
+      "id": 28,
+      "start": 169.0,
+      "end": 174.0,
+      "text": "If we have something like the companies are expanding."
+    },
+    {
+      "id": 29,
+      "start": 174.0,
+      "end": 178.0,
+      "text": "It might split companies into compound ease."
+    },
+    {
+      "id": 30,
+      "start": 178.0,
+      "end": 182.0,
+      "text": "And expand in like this."
+    },
+    {
+      "id": 31,
+      "start": 182.0,
+      "end": 189.0,
+      "text": "And there are a few benefits of this. The first benefit is that this allows you to."
+    },
+    {
+      "id": 32,
+      "start": 189.0,
+      "end": 194.0,
+      "text": "And the other one is to reduce parameter size and save compute and number."
+    },
+    {
+      "id": 33,
+      "start": 194.0,
+      "end": 201.0,
+      "text": "And both of these are kind of like equally important things that we need to be."
+    },
+    {
+      "id": 34,
+      "start": 201.0,
+      "end": 203.0,
+      "text": "We need to be considering."
+    },
+    {
+      "id": 35,
+      "start": 203.0,
+      "end": 204.0,
+      "text": "So."
+    },
+    {
+      "id": 36,
+      "start": 204.0,
+      "end": 207.0,
+      "text": "Does anyone know how many words there are in English."
+    },
+    {
+      "id": 37,
+      "start": 207.0,
+      "end": 215.0,
+      "text": "Any ideas."
+    },
+    {
+      "id": 38,
+      "start": 215.0,
+      "end": 218.0,
+      "text": "Yeah."
+    },
+    {
+      "id": 39,
+      "start": 218.0,
+      "end": 220.0,
+      "text": "Two million."
+    },
+    {
+      "id": 40,
+      "start": 220.0,
+      "end": 222.0,
+      "text": "Pretty good."
+    },
+    {
+      "id": 41,
+      "start": 222.0,
+      "end": 225.0,
+      "text": "Any other ideas."
+    },
+    {
+      "id": 42,
+      "start": 225.0,
+      "end": 228.0,
+      "text": "Yeah."
+    },
+    {
+      "id": 43,
+      "start": 228.0,
+      "end": 230.0,
+      "text": "Some models you 60,000."
+    },
+    {
+      "id": 44,
+      "start": 230.0,
+      "end": 235.0,
+      "text": "I think 60,000 is probably the sub word models."
+    },
+    {
+      "id": 45,
+      "start": 235.0,
+      "end": 236.0,
+      "text": "When you're talking about this."
+    },
+    {
+      "id": 46,
+      "start": 236.0,
+      "end": 242.0,
+      "text": "So they can use sub word models to take the two million, which I think is a reasonable guess to 60,000."
+    },
+    {
+      "id": 47,
+      "start": 242.0,
+      "end": 245.0,
+      "text": "Any other ideas."
+    },
+    {
+      "id": 48,
+      "start": 245.0,
+      "end": 246.0,
+      "text": "700,000."
+    },
+    {
+      "id": 49,
+      "start": 246.0,
+      "end": 249.0,
+      "text": "So this is a pretty good."
+    },
+    {
+      "id": 50,
+      "start": 249.0,
+      "end": 250.0,
+      "text": "So this is a pretty good."
+    },
+    {
+      "id": 51,
+      "start": 250.0,
+      "end": 252.0,
+      "text": "It doesn't really have a good answer."
+    },
+    {
+      "id": 52,
+      "start": 252.0,
+      "end": 254.0,
+      "text": "But to 200 million."
+    },
+    {
+      "id": 53,
+      "start": 254.0,
+      "end": 255.0,
+      "text": "Probably pretty good."
+    },
+    {
+      "id": 54,
+      "start": 255.0,
+      "end": 256.0,
+      "text": "600, 700,000."
+    },
+    {
+      "id": 55,
+      "start": 256.0,
+      "end": 257.0,
+      "text": "It's pretty good."
+    },
+    {
+      "id": 56,
+      "start": 257.0,
+      "end": 263.0,
+      "text": "The reason why this is a trick question is because our company and companies different words."
+    },
+    {
+      "id": 57,
+      "start": 263.0,
+      "end": 264.0,
+      "text": "Maybe, maybe not, right?"
+    },
+    {
+      "id": 58,
+      "start": 264.0,
+      "end": 271.0,
+      "text": "Because if we know the word company, we can at, you know, guess what the word company means."
+    },
+    {
+      "id": 59,
+      "start": 271.0,
+      "end": 272.0,
+      "text": "What about automobile?"
+    },
+    {
+      "id": 60,
+      "start": 272.0,
+      "end": 274.0,
+      "text": "Is that a different word?"
+    },
+    {
+      "id": 61,
+      "start": 274.0,
+      "end": 279.0,
+      "text": "Well, maybe if we know auto and mobile, we can kind of guess what automobile means, but not really."
+    },
+    {
+      "id": 62,
+      "start": 279.0,
+      "end": 281.0,
+      "text": "So maybe that's a different word."
+    },
+    {
+      "id": 63,
+      "start": 281.0,
+      "end": 283.0,
+      "text": "There's all kinds of shades of gray there."
+    },
+    {
+      "id": 64,
+      "start": 283.0,
+      "end": 291.0,
+      "text": "And also, we have really frequent words that everybody can probably acknowledge our words like the."
+    },
+    {
+      "id": 65,
+      "start": 291.0,
+      "end": 293.0,
+      "text": "And."
+    },
+    {
+      "id": 66,
+      "start": 293.0,
+      "end": 297.0,
+      "text": "And the card."
+    },
+    {
+      "id": 67,
+      "start": 297.0,
+      "end": 305.0,
+      "text": "And we have words down here, which are like misspellings or something like that misspellings of actual correct words or slang."
+    },
+    {
+      "id": 68,
+      "start": 305.0,
+      "end": 307.0,
+      "text": "Or other things like that."
+    },
+    {
+      "id": 69,
+      "start": 307.0,
+      "end": 311.0,
+      "text": "And then it's questionable whether those are actual words or that."
+    },
+    {
+      "id": 70,
+      "start": 311.0,
+      "end": 312.0,
+      "text": "So."
+    },
+    {
+      "id": 71,
+      "start": 312.0,
+      "end": 314.0,
+      "text": "There's a famous."
+    },
+    {
+      "id": 72,
+      "start": 314.0,
+      "end": 316.0,
+      "text": "Well,"
+    },
+    {
+      "id": 73,
+      "start": 316.0,
+      "end": 321.0,
+      "text": "which probably a lot of people have heard of."
+    },
+    {
+      "id": 74,
+      "start": 321.0,
+      "end": 325.0,
+      "text": "It's also the source of your dot, well."
+    },
+    {
+      "id": 75,
+      "start": 325.0,
+      "end": 328.0,
+      "text": "And then we have a lot of different words."
+    },
+    {
+      "id": 76,
+      "start": 328.0,
+      "end": 330.0,
+      "text": "Which is using zips law to compress."
+    },
+    {
+      "id": 77,
+      "start": 330.0,
+      "end": 335.0,
+      "text": "To compress outlets by making the more frequent words have shorter blank strings."
+    },
+    {
+      "id": 78,
+      "start": 335.0,
+      "end": 337.0,
+      "text": "Less frequent words have."
+    },
+    {
+      "id": 79,
+      "start": 337.0,
+      "end": 346.0,
+      "text": "You know, less frequent bite strings, but basically like we're going to have an infinite number of words or at least strings that are separated by white space."
+    },
+    {
+      "id": 80,
+      "start": 346.0,
+      "end": 347.0,
+      "text": "So we need to handle this somehow."
+    },
+    {
+      "id": 81,
+      "start": 347.0,
+      "end": 351.0,
+      "text": "That's what separate units do."
+    },
+    {
+      "id": 82,
+      "start": 351.0,
+      "end": 356.0,
+      "text": "So 60,000 was a good guess for the number of sub word units you might use in a model."
+    },
+    {
+      "id": 83,
+      "start": 356.0,
+      "end": 361.0,
+      "text": "And so by using sub word units, we can limit it to about that much."
+    },
+    {
+      "id": 84,
+      "start": 361.0,
+      "end": 368.0,
+      "text": "So there is a couple of common ways to create these sub word units."
+    },
+    {
+      "id": 85,
+      "start": 368.0,
+      "end": 377.0,
+      "text": "And basically all of them rely on the fact that you want more common strings to become sub word units."
+    },
+    {
+      "id": 86,
+      "start": 377.0,
+      "end": 385.0,
+      "text": "And or actually, sorry, I realize maybe before doing that, I could explain an alternative to creating sub word units."
+    },
+    {
+      "id": 87,
+      "start": 385.0,
+      "end": 390.0,
+      "text": "So the alternative to creating sub word units is to treat every character."
+    },
+    {
+      "id": 88,
+      "start": 390.0,
+      "end": 392.0,
+      "text": "Or maybe every bite."
+    },
+    {
+      "id": 89,
+      "start": 392.0,
+      "end": 397.0,
+      "text": "In a string as a single thing that you include in for them."
+    },
+    {
+      "id": 90,
+      "start": 397.0,
+      "end": 401.0,
+      "text": "So in other words, instead of trying to model the companies are expanding."
+    },
+    {
+      "id": 91,
+      "start": 401.0,
+      "end": 407.0,
+      "text": "We model T H E space, C O M, etc, etc."
+    },
+    {
+      "id": 92,
+      "start": 407.0,
+      "end": 411.0,
+      "text": "Can anyone think of any downsides of this?"
+    },
+    {
+      "id": 93,
+      "start": 411.0,
+      "end": 418.0,
+      "text": "Yeah."
+    },
+    {
+      "id": 94,
+      "start": 418.0,
+      "end": 430.0,
+      "text": "Yeah, the set of these will be very will be very small, but that's not necessarily a problem, right?"
+    },
+    {
+      "id": 95,
+      "start": 430.0,
+      "end": 433.0,
+      "text": "Any other ideas?"
+    },
+    {
+      "id": 96,
+      "start": 433.0,
+      "end": 440.0,
+      "text": "Yeah."
+    },
+    {
+      "id": 97,
+      "start": 440.0,
+      "end": 443.0,
+      "text": "Yeah, the resulting sequences will be very long."
+    },
+    {
+      "id": 98,
+      "start": 443.0,
+      "end": 447.0,
+      "text": "And when you say difficulty use, it could be difficult to use for a couple of reasons."
+    },
+    {
+      "id": 99,
+      "start": 447.0,
+      "end": 449.0,
+      "text": "There's mainly two reasons actually."
+    },
+    {
+      "id": 100,
+      "start": 449.0,
+      "end": 454.0,
+      "text": "Any ideas about this?"
+    },
+    {
+      "id": 101,
+      "start": 454.0,
+      "end": 456.0,
+      "text": "Any."
+    },
+    {
+      "id": 102,
+      "start": 456.0,
+      "end": 468.0,
+      "text": "Yeah."
+    },
+    {
+      "id": 103,
+      "start": 468.0,
+      "end": 471.0,
+      "text": "Yeah, there's a little bit of a separate problem than the character base model."
+    },
+    {
+      "id": 104,
+      "start": 471.0,
+      "end": 473.0,
+      "text": "So let me get back to that."
+    },
+    {
+      "id": 105,
+      "start": 473.0,
+      "end": 476.0,
+      "text": "But let's finish the discussion."
+    },
+    {
+      "id": 106,
+      "start": 476.0,
+      "end": 479.0,
+      "text": "So if it's really, if it's really long, maybe a simple thing."
+    },
+    {
+      "id": 107,
+      "start": 479.0,
+      "end": 484.0,
+      "text": "Like, let's say you have a big neural network and it's processing a really long sequence."
+    },
+    {
+      "id": 108,
+      "start": 484.0,
+      "end": 488.0,
+      "text": "Any ideas what happens?"
+    },
+    {
+      "id": 109,
+      "start": 488.0,
+      "end": 491.0,
+      "text": "Basically, you run out of memory, or it takes a really long time, right?"
+    },
+    {
+      "id": 110,
+      "start": 491.0,
+      "end": 493.0,
+      "text": "So you have computational problems."
+    },
+    {
+      "id": 111,
+      "start": 493.0,
+      "end": 503.0,
+      "text": "Another reason why is think of what a bag of words model would look like if it was a bag of character a smile."
+    },
+    {
+      "id": 112,
+      "start": 503.0,
+      "end": 508.0,
+      "text": "It wouldn't be very informative about whether like a sentence is positive sentiment or negative something, right?"
+    },
+    {
+      "id": 113,
+      "start": 508.0,
+      "end": 518.0,
+      "text": "So instead of having a g o o d, you would have instead of having good, you would have g o o d and that doesn't really directly tell you whether it's positive sentiment or not."
+    },
+    {
+      "id": 114,
+      "start": 518.0,
+      "end": 521.0,
+      "text": "So those are basically the two problems."
+    },
+    {
+      "id": 115,
+      "start": 521.0,
+      "end": 525.0,
+      "text": "Compute and lack of expressiveness in the underlying representation."
+    },
+    {
+      "id": 116,
+      "start": 525.0,
+      "end": 528.0,
+      "text": "So you need to handle both of those."
+    },
+    {
+      "id": 117,
+      "start": 528.0,
+      "end": 530.0,
+      "text": "Yes."
+    },
+    {
+      "id": 118,
+      "start": 530.0,
+      "end": 533.0,
+      "text": "So we move from there."
+    },
+    {
+      "id": 119,
+      "start": 533.0,
+      "end": 535.0,
+      "text": "For the rest of the week."
+    },
+    {
+      "id": 120,
+      "start": 535.0,
+      "end": 538.0,
+      "text": "So we just get what they hear in various instances."
+    },
+    {
+      "id": 121,
+      "start": 538.0,
+      "end": 540.0,
+      "text": "We're getting very."
+    },
+    {
+      "id": 122,
+      "start": 540.0,
+      "end": 541.0,
+      "text": "Yeah."
+    },
+    {
+      "id": 123,
+      "start": 541.0,
+      "end": 543.0,
+      "text": "So very good question."
+    },
+    {
+      "id": 124,
+      "start": 543.0,
+      "end": 544.0,
+      "text": "I'll repeat it."
+    },
+    {
+      "id": 125,
+      "start": 544.0,
+      "end": 551.0,
+      "text": "And actually, this also goes back to the other question you asked about words that look the same but are pronounced differently or have different meanings."
+    },
+    {
+      "id": 126,
+      "start": 551.0,
+      "end": 555.0,
+      "text": "And so, like, let's say we just remembered this full sentence, right?"
+    },
+    {
+      "id": 127,
+      "start": 555.0,
+      "end": 557.0,
+      "text": "The companies are expanding."
+    },
+    {
+      "id": 128,
+      "start": 557.0,
+      "end": 560.0,
+      "text": "And that was like a single embedding."
+    },
+    {
+      "id": 129,
+      "start": 560.0,
+      "end": 562.0,
+      "text": "And we somehow invented it."
+    },
+    {
+      "id": 130,
+      "start": 562.0,
+      "end": 565.0,
+      "text": "The problem would be we're never going to see that sentence again."
+    },
+    {
+      "id": 131,
+      "start": 565.0,
+      "end": 569.0,
+      "text": "Or if we go to longer sentences, we're never going to see longer sentences again."
+    },
+    {
+      "id": 132,
+      "start": 569.0,
+      "end": 571.0,
+      "text": "So it becomes two sparks."
+    },
+    {
+      "id": 133,
+      "start": 571.0,
+      "end": 575.0,
+      "text": "So there's kind of a sweet spot between like."
+    },
+    {
+      "id": 134,
+      "start": 575.0,
+      "end": 582.0,
+      "text": "Long enough to be expressive and short enough for like her many times so that you learn."
+    },
+    {
+      "id": 135,
+      "start": 582.0,
+      "end": 585.0,
+      "text": "And that's kind of what sub word models are aiming for."
+    },
+    {
+      "id": 136,
+      "start": 585.0,
+      "end": 594.0,
+      "text": "And if you get longer sub words, then you'll get things that are more expressive, but more sparks in order to sub words, you'll get things that are like."
+    },
+    {
+      "id": 137,
+      "start": 594.0,
+      "end": 595.0,
+      "text": "Less expressive, but less."
+    },
+    {
+      "id": 138,
+      "start": 595.0,
+      "end": 597.0,
+      "text": "So you need to balance between them."
+    },
+    {
+      "id": 139,
+      "start": 597.0,
+      "end": 601.0,
+      "text": "And then once we get into sequence modeling, they start being able to."
+    }
+  ],
+  "language": "en"
+}

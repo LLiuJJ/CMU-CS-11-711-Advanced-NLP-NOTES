@@ -1,0 +1,515 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 5.76,
+      "text": "is cutting is what he or is true is back in the glory days of weekend and two or three things"
+    },
+    {
+      "id": 1,
+      "start": 5.76,
+      "end": 11.2,
+      "text": "that I know about her, but who else engaged in filmmaking today is so cognizant of the cultural"
+    },
+    {
+      "id": 2,
+      "start": 11.2,
+      "end": 16.8,
+      "text": "and moral issues involved in the process. So what words in here are good indication that this is"
+    },
+    {
+      "id": 3,
+      "start": 16.8,
+      "end": 29.76,
+      "text": "in neutral sunbows. Any ideas? A little bit tough, huh? We're starting to think maybe we should"
+    },
+    {
+      "id": 4,
+      "start": 29.76,
+      "end": 40.16,
+      "text": "be using machine learning. Even by the intentionally low standards of fratboy humor,"
+    },
+    {
+      "id": 5,
+      "start": 41.04,
+      "end": 48.16,
+      "text": "sonority boys is a bowser. I think fratboy is maybe negative sentiment if you're familiar with U.S."
+    },
+    {
+      "id": 6,
+      "start": 49.76,
+      "end": 53.76,
+      "text": "U.S. I don't want to have any negative sentiment, but the people who say it that way have"
+    },
+    {
+      "id": 7,
+      "start": 53.76,
+      "end": 59.92,
+      "text": "negative sentiment maybe. So if we wanted to go in and do that we could maybe I won't save this, but"
+    },
+    {
+      "id": 8,
+      "start": 66.56,
+      "end": 73.92,
+      "text": "oh whoops, I'll go back and fix it. A crass. Crass is pretty obviously negative right so it can"
+    },
+    {
+      "id": 9,
+      "start": 73.92,
+      "end": 88.4,
+      "text": "add the crass. Actually let me just add the crass. And then I'll go back and have our train"
+    },
+    {
+      "id": 10,
+      "start": 88.4,
+      "end": 105.76,
+      "text": "accuracy. Maybe I need to run before we do. And the budget but train accuracy a little,"
+    },
+    {
+      "id": 11,
+      "start": 105.76,
+      "end": 114.16,
+      "text": "the dev test, the accuracy not very much. So I could go through and do this. Let me add on engaging."
+    },
+    {
+      "id": 12,
+      "start": 114.48,
+      "end": 120.56,
+      "text": "So I could go through and do this all day and you'd probably be very bored on."
+    },
+    {
+      "id": 13,
+      "start": 126.56,
+      "end": 129.76,
+      "text": "But I won't do that because we have much more important things to be doing."
+    },
+    {
+      "id": 14,
+      "start": 132.96,
+      "end": 138.64,
+      "text": "And so anyway we could go through and design all the features here, but like why is this"
+    },
+    {
+      "id": 15,
+      "start": 138.64,
+      "end": 147.6,
+      "text": "complicated? The reason why it was complicated became pretty clear from the very beginning,"
+    },
+    {
+      "id": 16,
+      "start": 148.24,
+      "end": 152.96,
+      "text": "the very first example I showed you, which was there was a really complicated sentence. All of us"
+    },
+    {
+      "id": 17,
+      "start": 153.68,
+      "end": 159.28,
+      "text": "could see that it wasn't really strongly positive, it wasn't really strongly negative. It was"
+    },
+    {
+      "id": 18,
+      "start": 159.28,
+      "end": 165.2,
+      "text": "kind of like in the middle, but it was in the middle and it set it in a very long way, not using"
+    },
+    {
+      "id": 19,
+      "start": 165.2,
+      "end": 168.64,
+      "text": "any clearly positive sentiment words, not using any clearly negative sentiment words."
+    },
+    {
+      "id": 20,
+      "start": 172.16,
+      "end": 180.48,
+      "text": "So yeah, basically I improved. But what are the difficult cases that we saw through?"
+    },
+    {
+      "id": 21,
+      "start": 181.36,
+      "end": 190.0,
+      "text": "So the first one is low frequency words. So here's an example. The actions which is between"
+    },
+    {
+      "id": 22,
+      "start": 190.0,
+      "end": 194.0,
+      "text": "past and present, but the material length is 2.10 U.S. to anchor the emotional"
+    },
+    {
+      "id": 23,
+      "start": 194.0,
+      "end": 199.04,
+      "text": "collections that perform to span a 125 year divide. So this is negative."
+    },
+    {
+      "id": 24,
+      "start": 200.0,
+      "end": 204.08,
+      "text": "10 U.S. is kind of a negative word, purport is kind of a negative word, but it doesn't appear"
+    },
+    {
+      "id": 25,
+      "start": 204.08,
+      "end": 208.88,
+      "text": "very frequently. So I would need to spend all my time looking to these words and trying to add them in."
+    },
+    {
+      "id": 26,
+      "start": 210.08,
+      "end": 215.52,
+      "text": "And here's yet another of course franchise mucking up its storyline with which is casual fans could"
+    },
+    {
+      "id": 27,
+      "start": 215.52,
+      "end": 222.96,
+      "text": "correct and basically negative again. So the solutions here are keep working until we get all of them,"
+    },
+    {
+      "id": 28,
+      "start": 223.84,
+      "end": 231.12,
+      "text": "which is maybe not super fun, or incorporate external resources such as sentiment dictionaries"
+    },
+    {
+      "id": 29,
+      "start": 231.12,
+      "end": 236.24,
+      "text": "that people created. We could do that, but that's a lot of engineering effort to make something work."
+    },
+    {
+      "id": 30,
+      "start": 239.2,
+      "end": 245.36,
+      "text": "Another one is conjugation. So we saw unengaging, I guess. That's an example of conjugation."
+    },
+    {
+      "id": 31,
+      "start": 246.4,
+      "end": 251.76,
+      "text": "Some other ones are operatic sprawling picture that's entertainingly acted magnificently,"
+    },
+    {
+      "id": 32,
+      "start": 251.76,
+      "end": 257.28,
+      "text": "shot and gripping enough to sustain most of its 170 minute length. So here we have magnificently."
+    },
+    {
+      "id": 33,
+      "start": 258.0,
+      "end": 261.28,
+      "text": "So even if I added magnificence, this wouldn't have been clocked, right?"
+    },
+    {
+      "id": 34,
+      "start": 263.68,
+      "end": 269.12,
+      "text": "It's basically an overlong episode of tales from the craft. So that's maybe another example."
+    },
+    {
+      "id": 35,
+      "start": 269.84,
+      "end": 275.92,
+      "text": "So some things that we could do or what we would have done before the modern paradigm of machine learning"
+    },
+    {
+      "id": 36,
+      "start": 276.48,
+      "end": 282.96,
+      "text": "is we would run some sort of normalizer like a stemmer or other things like this in order to convert this"
+    },
+    {
+      "id": 37,
+      "start": 282.96,
+      "end": 288.8,
+      "text": "into the root words that we already have seen somewhere in our data or have already handled."
+    },
+    {
+      "id": 38,
+      "start": 291.04,
+      "end": 296.56,
+      "text": "So that requires conjugation analysis or morphological analysis, as we say it in technical products."
+    },
+    {
+      "id": 39,
+      "start": 296.88,
+      "end": 304.48,
+      "text": "Negation. This is a tricky one. So this one's not nearly as dreadful as expected."
+    },
+    {
+      "id": 40,
+      "start": 305.44,
+      "end": 311.28,
+      "text": "So dreadful is a pretty bad word, right? But not nearly as dreadful as expected is like a solidly"
+    },
+    {
+      "id": 41,
+      "start": 311.28,
+      "end": 320.16,
+      "text": "neutral, you know, or maybe even positive. I would say that's neutral, but you know, neutral"
+    },
+    {
+      "id": 42,
+      "start": 320.24,
+      "end": 325.68,
+      "text": "and positive. It's definitely not negative. Serving syrup doesn't serve up a whole lot of"
+    },
+    {
+      "id": 43,
+      "start": 325.68,
+      "end": 332.88,
+      "text": "plants. So, laughs is obviously positive, but not serving up laughs is obviously negative."
+    },
+    {
+      "id": 44,
+      "start": 334.32,
+      "end": 339.12,
+      "text": "So if negation modifies the word disregard it, now we would probably need to do some sort of"
+    },
+    {
+      "id": 45,
+      "start": 339.12,
+      "end": 347.36,
+      "text": "syntactic analysis or semantic analysis. Some kind of metaphor and analogy. So puts a human face"
+    },
+    {
+      "id": 46,
+      "start": 347.36,
+      "end": 354.56,
+      "text": "on a land most westerners are unfamiliar. This is positive. Green might want to hang on to that"
+    },
+    {
+      "id": 47,
+      "start": 354.56,
+      "end": 362.16,
+      "text": "ski mask is robbery maybe the only way to pay for this next project. So this is saying that"
+    },
+    {
+      "id": 48,
+      "start": 362.96,
+      "end": 367.28,
+      "text": "the movie was so bad that the director will have to rob people in order to get money for the next"
+    },
+    {
+      "id": 49,
+      "start": 367.28,
+      "end": 373.92,
+      "text": "project. So that's kind of bad, I guess, has all the depth of awaiting pool. This is kind of my"
+    },
+    {
+      "id": 50,
+      "start": 373.92,
+      "end": 377.36,
+      "text": "favorite one because it's really short and sweet, but you know, you need to know how deep the"
+    },
+    {
+      "id": 51,
+      "start": 377.36,
+      "end": 384.24,
+      "text": "waiting pool is. So that's negative. So the solution here, I don't really even know how to handle"
+    },
+    {
+      "id": 52,
+      "start": 384.24,
+      "end": 388.56,
+      "text": "this with a roller system. I have no idea how we would ask for the newness. Yeah, machine learning"
+    },
+    {
+      "id": 53,
+      "start": 388.56,
+      "end": 396.8,
+      "text": "base models seem to be pretty adapted. Okay, and then I start doing these ones. Anyone have a good idea?"
+    },
+    {
+      "id": 54,
+      "start": 396.8,
+      "end": 402.4,
+      "text": "Any other friends who know Japanese?"
+    },
+    {
+      "id": 55,
+      "start": 404.8,
+      "end": 412.24,
+      "text": "Yeah, okay. So yeah, that's positive. That one's negative. And the solution here is"
+    },
+    {
+      "id": 56,
+      "start": 412.24,
+      "end": 418.8,
+      "text": "learn Japanese. Or whatever other language you want to process. So like obviously, rule-based"
+    },
+    {
+      "id": 57,
+      "start": 418.8,
+      "end": 426.56,
+      "text": "system start scale very well. So we've moved, but like rule-based system start scale very well."
+    },
+    {
+      "id": 58,
+      "start": 426.56,
+      "end": 430.96,
+      "text": "We're not going to be using them for most of the things we do in this class. But I do think it's"
+    },
+    {
+      "id": 59,
+      "start": 430.96,
+      "end": 437.04,
+      "text": "sometimes useful to try to create one for your task, maybe write at the very beginning of a project,"
+    },
+    {
+      "id": 60,
+      "start": 437.04,
+      "end": 442.64,
+      "text": "because it gives you an idea about what's really hard about the task in some cases. So I wouldn't"
+    },
+    {
+      "id": 61,
+      "start": 442.64,
+      "end": 446.4,
+      "text": "entirely discount them. I'm not introducing them for no reason whatsoever."
+    },
+    {
+      "id": 62,
+      "start": 448.88,
+      "end": 454.08,
+      "text": "So next is machine learning based analysis. And machine learning in general,"
+    },
+    {
+      "id": 63,
+      "start": 455.04,
+      "end": 459.04,
+      "text": "I hear actually when I say machine learning, I'm going to be talking about the traditional fine"
+    },
+    {
+      "id": 64,
+      "start": 459.04,
+      "end": 464.96,
+      "text": "tuning approach where we have a training set, Devset Test Set. And so we take our training set,"
+    },
+    {
+      "id": 65,
+      "start": 464.96,
+      "end": 470.0,
+      "text": "we run some learning algorithm over it. We have a learned feature extractor f,"
+    },
+    {
+      "id": 66,
+      "start": 471.12,
+      "end": 478.24,
+      "text": "possibly learned feature extractor f, possibly learned scoring function w. And then we apply"
+    },
+    {
+      "id": 67,
+      "start": 478.4,
+      "end": 483.84,
+      "text": "our inference algorithm our decision rule and make decisions. When I say possibly learned,"
+    },
+    {
+      "id": 68,
+      "start": 483.84,
+      "end": 487.36,
+      "text": "actually the first example I'm going to give of a machine learning based technique is,"
+    },
+    {
+      "id": 69,
+      "start": 487.36,
+      "end": 492.0,
+      "text": "doesn't have a learned feature extractor, but most things that we use nowadays do have learned"
+    },
+    {
+      "id": 70,
+      "start": 492.0,
+      "end": 499.76,
+      "text": "feature extractors. So our first attempt is going to be a bag of words model. And the way a"
+    },
+    {
+      "id": 71,
+      "start": 499.76,
+      "end": 510.56,
+      "text": "bag of words model works is essentially we start out by looking up a vector where one element in"
+    },
+    {
+      "id": 72,
+      "start": 510.56,
+      "end": 518.08,
+      "text": "the vector is is one and all the other elements in the vector are zero. And so if the word is"
+    },
+    {
+      "id": 73,
+      "start": 518.08,
+      "end": 522.96,
+      "text": "different, the position in the vector that's one will be different. We add all of these together."
+    },
+    {
+      "id": 74,
+      "start": 523.6,
+      "end": 529.2,
+      "text": "And this gives us a vector where each element is a frequency of that word in the vector."
+    },
+    {
+      "id": 75,
+      "start": 529.52,
+      "end": 532.4,
+      "text": "And then we multiply that by weights and we get a score."
+    },
+    {
+      "id": 76,
+      "start": 534.88,
+      "end": 540.32,
+      "text": "And here, as I said, this is not a learned feature vector. This is basically,"
+    },
+    {
+      "id": 77,
+      "start": 541.44,
+      "end": 545.68,
+      "text": "sorry, not a learned feature extractor. This is basically a fixed feature extractor,"
+    },
+    {
+      "id": 78,
+      "start": 545.68,
+      "end": 552.64,
+      "text": "but the weights themselves are learned. So my question is, I mentioned a whole lot of problems"
+    },
+    {
+      "id": 79,
+      "start": 552.72,
+      "end": 559.92,
+      "text": "before. I mentioned infrequent words. I mentioned conjugation. I mentioned different languages."
+    },
+    {
+      "id": 80,
+      "start": 559.92,
+      "end": 566.08,
+      "text": "I mentioned syntax and metaphor. So which of these do we think would be fixed by the sort of learning"
+    },
+    {
+      "id": 81,
+      "start": 566.08,
+      "end": 574.88,
+      "text": "based approach? Any ideas? Maybe not fixed. Maybe made significant better."
+    },
+    {
+      "id": 82,
+      "start": 575.36,
+      "end": 581.36,
+      "text": "Any brave people?"
+    },
+    {
+      "id": 83,
+      "start": 587.6,
+      "end": 588.32,
+      "text": "Maybe negation?"
+    },
+    {
+      "id": 84,
+      "start": 596.08,
+      "end": 597.92,
+      "text": "Okay, so maybe it doesn't when you have a negative code."
+    }
+  ],
+  "language": "en"
+}

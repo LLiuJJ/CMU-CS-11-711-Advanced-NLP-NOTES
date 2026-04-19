@@ -1,0 +1,347 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 9.36,
+      "text": "adapters or some sort of mixture of multiple methods can be can give you better results. So again, all this is in the paper if you want to look at my"
+    },
+    {
+      "id": 1,
+      "start": 13.12,
+      "end": 18.8,
+      "text": "Cool. Okay, so any any questions about that or"
+    },
+    {
+      "id": 2,
+      "start": 21.04,
+      "end": 29.84,
+      "text": "Okay, next I'm going to go through some NLP tasks and the reason I'm going to go through some NLP tasks is because when we're fine tuning, we need to be fine tuning towards individual tasks."
+    },
+    {
+      "id": 3,
+      "start": 30.0,
+      "end": 40.0,
+      "text": "So basically we build a model that's good at performing a single task construction tuning we build a general generalist model that is good at many tasks."
+    },
+    {
+      "id": 4,
+      "start": 40.0,
+      "end": 54.0,
+      "text": "And what I want to go through now is I want to go through some tasks that I've seen people use number one being really important in like actual applications of NLP models in industry."
+    },
+    {
+      "id": 5,
+      "start": 54.0,
+      "end": 67.0,
+      "text": "But number two, what what is the set of tasks that people used to evaluate generalist models. So like if you look at the GPT papers or you look at the Gemini paper, what is the set of tasks that they're using to demonstrate that their models work well."
+    },
+    {
+      "id": 6,
+      "start": 67.0,
+      "end": 71.0,
+      "text": "So the first one is context free question answering."
+    },
+    {
+      "id": 7,
+      "start": 71.0,
+      "end": 81.0,
+      "text": "Also called open book QA basically this requires answering a question without any specific grounding into documents. It's also what happens when chat GPT answers your questions without any specific grounding into documents."
+    },
+    {
+      "id": 8,
+      "start": 81.0,
+      "end": 88.0,
+      "text": "It's also what happens when chat GPT answers your questions without looking something up on the web, for example."
+    },
+    {
+      "id": 9,
+      "start": 88.0,
+      "end": 97.0,
+      "text": "An example data set that lots of people use is something called MMLU. This is massively multi pass language understanding data set."
+    },
+    {
+      "id": 10,
+      "start": 97.0,
+      "end": 114.0,
+      "text": "And it has questions in a number of relatively difficult areas like professional law. So this is asking what happens when a salesman ignores a trespassers will be prosecuted sign and enters a permits house."
+    },
+    {
+      "id": 11,
+      "start": 114.0,
+      "end": 119.0,
+      "text": "He drives up the driveway and an explosive charge explodes."
+    },
+    {
+      "id": 12,
+      "start": 119.0,
+      "end": 124.0,
+      "text": "The seller was injured can the seller recover damages from the hermit."
+    },
+    {
+      "id": 13,
+      "start": 124.0,
+      "end": 130.0,
+      "text": "So I would not be able to answer this with you know, certain because I'm not a lawyer."
+    },
+    {
+      "id": 14,
+      "start": 130.0,
+      "end": 143.0,
+      "text": "The answer is yes, the hermit was responsible for the explosive charge under the driveway. So now you know you can collect images if somebody tries to blow you up when you trespass on their property."
+    },
+    {
+      "id": 15,
+      "start": 143.0,
+      "end": 148.0,
+      "text": "But yeah, and this is lots and lots of categories like this."
+    },
+    {
+      "id": 16,
+      "start": 148.0,
+      "end": 157.0,
+      "text": "The next thing is contextual question answering and this is question answering grounded in actual context."
+    },
+    {
+      "id": 17,
+      "start": 157.0,
+      "end": 168.0,
+      "text": "One example data set that a lot of people use is something called natural questions. And this is a questions grounded in a wiki PDF document or the wiki PDF document collection."
+    },
+    {
+      "id": 18,
+      "start": 168.0,
+      "end": 177.0,
+      "text": "So grounded in a wiki PDF document means they give you the actual document you should be answering the question about and then you need to answer the question about it."
+    },
+    {
+      "id": 19,
+      "start": 177.0,
+      "end": 185.0,
+      "text": "This is often called machine reading because you expect it to like read and answer questions about the document."
+    },
+    {
+      "id": 20,
+      "start": 185.0,
+      "end": 200.0,
+      "text": "Or it could be okay, we're going to give you all of wiki PDF please provide us the answer to this question. And this is often called retrieval based question answering a retrieval augmented one variety of retrieval augmented generation or red."
+    },
+    {
+      "id": 21,
+      "start": 200.0,
+      "end": 217.0,
+      "text": "So this is really, really important. I think most many people that I talked to who want to build actual systems from language models or NLP systems are trying to do this sort of thing."
+    },
+    {
+      "id": 22,
+      "start": 217.0,
+      "end": 225.0,
+      "text": "And the second most popular thing that I talked to people who are trying to build like NLP systems of some variety is code generation."
+    },
+    {
+      "id": 23,
+      "start": 225.0,
+      "end": 233.0,
+      "text": "And basically this is simply generating code like Python sequel from a natural language command."
+    },
+    {
+      "id": 24,
+      "start": 233.0,
+      "end": 247.0,
+      "text": "And the most popular data set for this is something called human of L. And basically it has questions about the Python standard, how you do things with the Python standard library like return a list with elements implemented by one."
+    },
+    {
+      "id": 25,
+      "start": 247.0,
+      "end": 250.0,
+      "text": "The."
+    },
+    {
+      "id": 26,
+      "start": 250.0,
+      "end": 260.0,
+      "text": "It gives you the text and several examples of what the inputs and outputs should be in your supposed to return a program like this. And this is a simpler version of this. There's also more complex ones."
+    },
+    {
+      "id": 27,
+      "start": 260.0,
+      "end": 279.0,
+      "text": "One thing I should know, this is a area that I do a lot of research in human of L is a very simple example of this. It doesn't use any external libraries. It doesn't use context and other stuff like that. There's a lot of other more interesting data sets also. So if you're working on code generation, I can recommend those as well. And we'll do that later in the class."
+    },
+    {
+      "id": 28,
+      "start": 279.0,
+      "end": 293.0,
+      "text": "Next is summarization. And summarization, there's a couple varieties of this. What is single document summarization and other is multi document summarization."
+    },
+    {
+      "id": 29,
+      "start": 293.0,
+      "end": 301.0,
+      "text": "Single document compresses a longer document to a shorter one multi document compresses multiple documents into one."
+    },
+    {
+      "id": 30,
+      "start": 301.0,
+      "end": 319.0,
+      "text": "Honestly, right now single document summarization in English works pretty well out of the box. It's not perfect, but it's close enough to being perfect that I've worked in summarization before and I don't know if there's a whole lot more that we can do there. Of course, multi-lingual is interesting."
+    },
+    {
+      "id": 31,
+      "start": 319.0,
+      "end": 332.0,
+      "text": "Multi document summarization is definitely not solved in multi document summarization is when you have lots of documents about a particular topic and you want to summarize them down into a code here and summary of that topic."
+    },
+    {
+      "id": 32,
+      "start": 332.0,
+      "end": 341.0,
+      "text": "One example of that is wiki sum. This is a data set where you're provided with all of the links to pages about a wiki pd article."
+    },
+    {
+      "id": 33,
+      "start": 341.0,
+      "end": 355.0,
+      "text": "And you're expected to generate the first paragraph or few paragraphs of the article. And so you're expected to take like lots of noisy, you know, inculherent articles about Barack Obama and actually write about."
+    },
+    {
+      "id": 34,
+      "start": 355.0,
+      "end": 378.0,
+      "text": "So, I'm going to write something like this. Some other example interesting tasks for this include things like survey generation for papers or something like that. You want to know everything about a scientific topic or generating a report of all the things that happened in the stock market today or something like that."
+    },
+    {
+      "id": 35,
+      "start": 378.0,
+      "end": 383.0,
+      "text": "And there's lots of places where this could be used."
+    },
+    {
+      "id": 36,
+      "start": 383.0,
+      "end": 395.0,
+      "text": "Another class of tasks is information extraction. There's lots of examples of this, but basically they all boil down to extracting some sort of information in structured format."
+    },
+    {
+      "id": 37,
+      "start": 395.0,
+      "end": 416.0,
+      "text": "From text and this is things like entity recognition, identifying which words are entities entity linking linking entities to a knowledge base entity co reference, finding which entities in an input correspond to each other event recognition linking co reference. So all of the same things except doing it for events instead of entities."
+    },
+    {
+      "id": 38,
+      "start": 416.0,
+      "end": 426.0,
+      "text": "An example data set is something called onto notes. It's an older data set, but it has all these things annotated when you can extract things from this. There's lots of other data sets for this too."
+    },
+    {
+      "id": 39,
+      "start": 426.0,
+      "end": 440.0,
+      "text": "Also kind of more in general, you can think of like what if I gave you an Excel sheet. Could you go and like fill in Excel or Google sheet. Could you go and fill in all the columns in the sheet appropriately given all the information on that."
+    },
+    {
+      "id": 40,
+      "start": 440.0,
+      "end": 445.0,
+      "text": "So this is a pretty important task category."
+    },
+    {
+      "id": 41,
+      "start": 447.0,
+      "end": 453.0,
+      "text": "Translation. So I don't really need to talk that much about it. It's translating from one language to another."
+    },
+    {
+      "id": 42,
+      "start": 453.0,
+      "end": 466.0,
+      "text": "For both translation and summarization evaluation is kind of tricky. I'll talk about this in the future, but basically you assess quality based on similarity to some sort of reference."
+    },
+    {
+      "id": 43,
+      "start": 467.0,
+      "end": 472.0,
+      "text": "Using things like blue score or neural metrics."
+    },
+    {
+      "id": 44,
+      "start": 472.0,
+      "end": 485.0,
+      "text": "An example of this, which I think is actually a really nice example is something called the forest data set. And this is a translation of several or like a thousand wiki pdia."
+    },
+    {
+      "id": 45,
+      "start": 486.0,
+      "end": 506.0,
+      "text": "So quite a few wiki pdia articles into 101 languages. The reason why I like this data set a lot is because if you could translate into all of these languages, you would be able to aid information dissemination across the world, make excess information more equitable. So I like this data set a lot."
+    },
+    {
+      "id": 46,
+      "start": 506.0,
+      "end": 518.0,
+      "text": "And so separately from this, there are general purpose benchmarks. These benchmarks are not really for the purpose of evaluating any specific task that people think is actually useful."
+    },
+    {
+      "id": 47,
+      "start": 518.0,
+      "end": 523.0,
+      "text": "But rather trying to test the language abilities of language models themselves."
+    },
+    {
+      "id": 48,
+      "start": 523.0,
+      "end": 532.0,
+      "text": "A typical example of this is big bench. And this contains a whole bunch of tasks that test, you know, different abilities."
+    },
+    {
+      "id": 49,
+      "start": 532.0,
+      "end": 547.0,
+      "text": "And I have some examples here. These are very small. So you might need to look at the slides to see them. But for example, this is tracking chuffled objects like Alice Bobbing clear friends who occasionally trade books at the certain semester, each one has a new book."
+    },
+    {
+      "id": 50,
+      "start": 547.0,
+      "end": 552.0,
+      "text": "Then they trade, then they trade, then they trade, then they trade, which one does Bob have."
+    },
+    {
+      "id": 51,
+      "start": 552.0,
+      "end": 560.0,
+      "text": "Today is Christmas eve of 1937. What is the date tomorrow? And you need to write it in the appropriate format."
+    },
+    {
+      "id": 52,
+      "start": 560.0,
+      "end": 574.0,
+      "text": "Sherry tells the truth, Bernal says Sherry tells the truth, Alexis says Bernal lies, Michaela says Alexis tells the truth, all the more says Michaela tells the truth does Elwin or tell the truth."
+    },
+    {
+      "id": 53,
+      "start": 574.0,
+      "end": 577.0,
+      "text": "Hope you all got that one right."
+    },
+    {
+      "id": 54,
+      "start": 577.0,
+      "end": 588.0,
+      "text": "So like it's just these kind of exercises. And like when you look at how language models are being evaluated, they're being evaluated against like many of these tasks, not all of them necessarily, but many of them."
+    },
+    {
+      "id": 55,
+      "start": 588.0,
+      "end": 601.0,
+      "text": "I think Gemini evaluated with respect to every all of these task categories except information, it's actually really so these are kind of typical task categories and people look at."
+    },
+    {
+      "id": 56,
+      "start": 601.0,
+      "end": 604.0,
+      "text": "Cool, any questions about this?"
+    }
+  ],
+  "language": "en"
+}

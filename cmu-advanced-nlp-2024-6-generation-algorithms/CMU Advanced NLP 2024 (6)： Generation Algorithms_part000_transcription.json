@@ -1,0 +1,581 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 1.0,
+      "text": "Great."
+    },
+    {
+      "id": 1,
+      "start": 1.0,
+      "end": 5.0,
+      "text": "Yeah, so today we're going to be talking a little bit about generation algorithms."
+    },
+    {
+      "id": 2,
+      "start": 5.0,
+      "end": 10.0,
+      "text": "This will be sort of a tour through some of the most common methods and you're going to"
+    },
+    {
+      "id": 3,
+      "start": 10.0,
+      "end": 12.0,
+      "text": "talk a little bit about the theory behind them as well."
+    },
+    {
+      "id": 4,
+      "start": 12.0,
+      "end": 17.0,
+      "text": "If you're looking at the slides on the website, these might be ever so slightly different."
+    },
+    {
+      "id": 5,
+      "start": 17.0,
+      "end": 20.0,
+      "text": "But yeah, I'll try to stop at each section boundary per questions,"
+    },
+    {
+      "id": 6,
+      "start": 20.0,
+      "end": 25.0,
+      "text": "also feel free to sort of interact at any point for further questions."
+    },
+    {
+      "id": 7,
+      "start": 25.0,
+      "end": 27.0,
+      "text": "So we're starting off with some great news."
+    },
+    {
+      "id": 8,
+      "start": 27.0,
+      "end": 36.0,
+      "text": "Let's say that you have some friend who maybe owns a giant tech company and they've gifted you this absolutely massive new model and it's a great model."
+    },
+    {
+      "id": 9,
+      "start": 36.0,
+      "end": 38.0,
+      "text": "It's pretty trained with the latest architecture."
+    },
+    {
+      "id": 10,
+      "start": 38.0,
+      "end": 43.0,
+      "text": "It's prepared on trillions of tokens of text at that seven billion parameters."
+    },
+    {
+      "id": 11,
+      "start": 43.0,
+      "end": 47.0,
+      "text": "It looks like a really promising new model. You know, it's the top wall of these leaderboards."
+    },
+    {
+      "id": 12,
+      "start": 47.0,
+      "end": 56.0,
+      "text": "But if you actually take your new model and you sort of open up this box, and you kind of shake it out, maybe from last class, you know, a little bit architecturally what this model might look like."
+    },
+    {
+      "id": 13,
+      "start": 56.0,
+      "end": 64.0,
+      "text": "But if you actually kind of take a closer look at it from a different angle, what you see is that end is actually just a conditional probability distribution."
+    },
+    {
+      "id": 14,
+      "start": 64.0,
+      "end": 72.0,
+      "text": "You put some input x into your model and you get some probability out for any given sequence that you're sort of interested in evaluating, right?"
+    },
+    {
+      "id": 15,
+      "start": 72.0,
+      "end": 80.0,
+      "text": "And in particular, and gives you a probability distribution over all token to vocabulary to predict what token you would output next, right?"
+    },
+    {
+      "id": 16,
+      "start": 80.0,
+      "end": 91.0,
+      "text": "And so this is what this equation says given some input x and everything that you predicted so far, you get the probability of the next token of yj."
+    },
+    {
+      "id": 17,
+      "start": 91.0,
+      "end": 98.0,
+      "text": "And if you multiply this out over all the probabilities in your sequence, you can calculate the probability of any output y given your input x."
+    },
+    {
+      "id": 18,
+      "start": 98.0,
+      "end": 106.0,
+      "text": "So what this like super fancy model, you spend a lot of money to train is really just a conditional probability distribution."
+    },
+    {
+      "id": 19,
+      "start": 106.0,
+      "end": 116.0,
+      "text": "So those turns out to be okay because you can use a conditional probability distribution to do sort of any past that will really interested in an LP pretty much any past, right?"
+    },
+    {
+      "id": 20,
+      "start": 116.0,
+      "end": 126.0,
+      "text": "So by changing what you consider your input x and your output y to be, you can get outputs from this model for things like translation for summarization for reasoning past."
+    },
+    {
+      "id": 21,
+      "start": 126.0,
+      "end": 131.0,
+      "text": "Just by sort of changing what you consider your inputs and outputs in this setting."
+    },
+    {
+      "id": 22,
+      "start": 131.0,
+      "end": 139.0,
+      "text": "But there's sort of both good and bad things about your model being a probability distribution instead of just an Oracle that gives you sort of a single answer for every input."
+    },
+    {
+      "id": 23,
+      "start": 139.0,
+      "end": 146.0,
+      "text": "One kind of nice thing about this distribution is that you can get an idea of something like confidence, right?"
+    },
+    {
+      "id": 24,
+      "start": 146.0,
+      "end": 157.0,
+      "text": "If you give your model the input to plus two equals and almost all of the probability mass is on the token for you can say that the model predicts is pretty high confidence that two plus two equals four."
+    },
+    {
+      "id": 25,
+      "start": 157.0,
+      "end": 162.0,
+      "text": "Versus if you give it something that's maybe a little more open ended like you ask for the predict grams favorite color."
+    },
+    {
+      "id": 26,
+      "start": 162.0,
+      "end": 170.0,
+      "text": "And you see this distribution that's sort of a lot flatter, you know, the most likely output is green, but maybe we don't have a lot of confidence that that's correct answer."
+    },
+    {
+      "id": 27,
+      "start": 170.0,
+      "end": 174.0,
+      "text": "This is really closely tied into the idea of calibration, which you guys talked about."
+    },
+    {
+      "id": 28,
+      "start": 174.0,
+      "end": 177.0,
+      "text": "I guess a couple of classes are going out."
+    },
+    {
+      "id": 29,
+      "start": 177.0,
+      "end": 186.0,
+      "text": "The flip side of this though is that you notice that for this case like two plus two equals four, not all the probability mass is on four."
+    },
+    {
+      "id": 30,
+      "start": 186.0,
+      "end": 193.0,
+      "text": "And so models that are conditional probability distributions can loosen it right pretty much no matter what you do."
+    },
+    {
+      "id": 31,
+      "start": 193.0,
+      "end": 199.0,
+      "text": "There's going to be some non zero probability to some output that incorrect or undesirable."
+    },
+    {
+      "id": 32,
+      "start": 199.0,
+      "end": 203.0,
+      "text": "In some cases, maybe even offensive something that you don't want the model to output."
+    },
+    {
+      "id": 33,
+      "start": 203.0,
+      "end": 206.0,
+      "text": "And this is sort of an artifact of the way these models are trained."
+    },
+    {
+      "id": 34,
+      "start": 206.0,
+      "end": 211.0,
+      "text": "If there's a great word kind of more on the theory side here that shows that this is actually true."
+    },
+    {
+      "id": 35,
+      "start": 211.0,
+      "end": 217.0,
+      "text": "Even if everything in your input training data is sort of correct and factual and doesn't have any errors."
+    },
+    {
+      "id": 36,
+      "start": 217.0,
+      "end": 229.0,
+      "text": "You still wind up in the situation where some non zero probability mass is on some outputs that are undesirable or hallucinatory for sort of most inputs that you care about at eye rate."
+    },
+    {
+      "id": 37,
+      "start": 229.0,
+      "end": 235.0,
+      "text": "So if we have these issues, how do we actually get a good output out of the model?"
+    },
+    {
+      "id": 38,
+      "start": 235.0,
+      "end": 238.0,
+      "text": "And to do that, we're first going to talk about some sampling methods."
+    },
+    {
+      "id": 39,
+      "start": 238.0,
+      "end": 246.0,
+      "text": "But I want to pause here in case there are sort of any questions on this idea of a model as a conditional distribution."
+    },
+    {
+      "id": 40,
+      "start": 246.0,
+      "end": 249.0,
+      "text": "So we can jump right in."
+    },
+    {
+      "id": 41,
+      "start": 249.0,
+      "end": 261.0,
+      "text": "So we have this model right we know at each step at each token we might want to decode the distribution of likelihood over all vocabulary tokens right this conditional distribution we've been talking about."
+    },
+    {
+      "id": 42,
+      "start": 261.0,
+      "end": 270.0,
+      "text": "For the next time step and what we want out of this is a good output for some definition of good that we can sort of develop as we go here."
+    },
+    {
+      "id": 43,
+      "start": 270.0,
+      "end": 274.0,
+      "text": "And the natural first thing to try is we have a probability distribution."
+    },
+    {
+      "id": 44,
+      "start": 274.0,
+      "end": 291.0,
+      "text": "Can we just sample from it right and this is something called ancestral sampling so at each time step we're going to draw a token from this distribution sort of according to its relative probability right so something has twice as much probability mass according to the model will draw it twice as often."
+    },
+    {
+      "id": 45,
+      "start": 291.0,
+      "end": 297.0,
+      "text": "And sample from this distribution at each time step and this is sort of this is sort of a nice setup."
+    },
+    {
+      "id": 46,
+      "start": 297.0,
+      "end": 309.0,
+      "text": "We get exact samples from the model distribution so using the setup if you can you imagine like drawing an almost infinite number of samples and ridiculously large number and you look at their probabilities."
+    },
+    {
+      "id": 47,
+      "start": 309.0,
+      "end": 316.0,
+      "text": "You sort of get something from this distribution with exactly the probability of the real model distribution is given."
+    },
+    {
+      "id": 48,
+      "start": 316.0,
+      "end": 320.0,
+      "text": "It gives us an exact sample from the model that seems to be exactly what we want."
+    },
+    {
+      "id": 49,
+      "start": 320.0,
+      "end": 326.0,
+      "text": "But you can guess probably by the fact that we're only like 10 minutes into class here that this is not really the end of the story."
+    },
+    {
+      "id": 50,
+      "start": 326.0,
+      "end": 330.0,
+      "text": "And there's actually a couple of problems with sampling directly from our model distribution."
+    },
+    {
+      "id": 51,
+      "start": 330.0,
+      "end": 336.0,
+      "text": "The one that we're really going to focus on first here is this idea of a long tail."
+    },
+    {
+      "id": 52,
+      "start": 336.0,
+      "end": 352.0,
+      "text": "So a model like llama and maybe our new model M has 32,000 vocabulary type and you can imagine maybe out of those tokens there might be one or even 2000 of those tokens that are sort of a reasonable next thing to predict for a really open and task right."
+    },
+    {
+      "id": 53,
+      "start": 352.0,
+      "end": 359.0,
+      "text": "But there's going to be all kinds of things in that distribution that are maybe like composition there may be tokens that won't actually lead to the correct answer."
+    },
+    {
+      "id": 54,
+      "start": 359.0,
+      "end": 364.0,
+      "text": "Like there's a lot of things in this distribution that would be all really low likelihood."
+    },
+    {
+      "id": 55,
+      "start": 364.0,
+      "end": 367.0,
+      "text": "And this is fine. These things just get low probability mass."
+    },
+    {
+      "id": 56,
+      "start": 367.0,
+      "end": 376.0,
+      "text": "But the problem is if you give sort of a small amount of probability mass to 30,000 different things that mass will add up pretty quickly."
+    },
+    {
+      "id": 57,
+      "start": 376.0,
+      "end": 384.0,
+      "text": "And to see this we have sort of this illustration here. I don't know if you can see the difference between the green and the yellow, but I've also drawn a little bar between them."
+    },
+    {
+      "id": 58,
+      "start": 384.0,
+      "end": 393.0,
+      "text": "This is a really long tail distribution and the green part of the distribution, which is a lot of tokens with high likelihood has 50% of the total probability."
+    },
+    {
+      "id": 59,
+      "start": 393.0,
+      "end": 400.0,
+      "text": "The yellow part, which is all a lot of things that are all individually not super likely is the other 50% of the probability."
+    },
+    {
+      "id": 60,
+      "start": 400.0,
+      "end": 409.0,
+      "text": "And so what that means is if you're doing something like ancestral sampling, 50% of the time you'll be sampling something really unlikely from this long tail."
+    },
+    {
+      "id": 61,
+      "start": 409.0,
+      "end": 418.0,
+      "text": "That means sort of not like what we want, right? So is there anything we can do about this? And the obvious first solution here is can we just cut off that tail?"
+    },
+    {
+      "id": 62,
+      "start": 418.0,
+      "end": 421.0,
+      "text": "Like if we know these tokens are not super likely for you to ignore them."
+    },
+    {
+      "id": 63,
+      "start": 421.0,
+      "end": 424.0,
+      "text": "And there's a couple of different ways to do that."
+    },
+    {
+      "id": 64,
+      "start": 424.0,
+      "end": 432.0,
+      "text": "The first of these is something called top K sampling will we say, OK, you know, maybe we think there are 10 reasonable like outputs ish, right?"
+    },
+    {
+      "id": 65,
+      "start": 432.0,
+      "end": 435.0,
+      "text": "Maybe we'll just sample from the 10 most probable tokens."
+    },
+    {
+      "id": 66,
+      "start": 435.0,
+      "end": 442.0,
+      "text": "And here maybe we say if we want to pick top six sampling will sample from just the six most probable tokens."
+    },
+    {
+      "id": 67,
+      "start": 442.0,
+      "end": 450.0,
+      "text": "And so in this example, you can see we originally had 10 tokens and we're going to sample from just the blue ones just the six most likely tokens."
+    },
+    {
+      "id": 68,
+      "start": 450.0,
+      "end": 456.0,
+      "text": "In this example, this distribution is pretty flat. There's a lot of things that are like kind of likely, right?"
+    },
+    {
+      "id": 69,
+      "start": 456.0,
+      "end": 461.0,
+      "text": "So those six tokens are only 68% of the total probability mass."
+    },
+    {
+      "id": 70,
+      "start": 461.0,
+      "end": 467.0,
+      "text": "If we go like one time step further here, we might have a distribution that's a lot easier."
+    },
+    {
+      "id": 71,
+      "start": 467.0,
+      "end": 475.0,
+      "text": "Most of the mass wanted to single token. And so sampling from just the top six tokens actually captures 99% of the probability mass."
+    },
+    {
+      "id": 72,
+      "start": 475.0,
+      "end": 479.0,
+      "text": "Maybe we say that seems a little excessive, right? We don't really need."
+    },
+    {
+      "id": 73,
+      "start": 479.0,
+      "end": 482.0,
+      "text": "Maybe all of these tokens that are all kind of low probability."
+    },
+    {
+      "id": 74,
+      "start": 482.0,
+      "end": 489.0,
+      "text": "Maybe we just want to sort of sample from the top half of our distribution or something or the top 90%."
+    },
+    {
+      "id": 75,
+      "start": 489.0,
+      "end": 495.0,
+      "text": "So instead of choosing a top number of tokens to sample from, you could choose a top amount of probability."
+    },
+    {
+      "id": 76,
+      "start": 495.0,
+      "end": 498.0,
+      "text": "And this is something called top P or nucleosampling."
+    },
+    {
+      "id": 77,
+      "start": 498.0,
+      "end": 503.0,
+      "text": "So P here is the amount of probability from your distributions want to consider."
+    },
+    {
+      "id": 78,
+      "start": 503.0,
+      "end": 508.0,
+      "text": "So if you decide your P is about like 94% of the probability mass."
+    },
+    {
+      "id": 79,
+      "start": 508.0,
+      "end": 513.0,
+      "text": "You, in this first example here, would choose almost all of the tokens."
+    },
+    {
+      "id": 80,
+      "start": 513.0,
+      "end": 518.0,
+      "text": "Keep adding tokens in until you reach an amount of total probability that's about point nine for."
+    },
+    {
+      "id": 81,
+      "start": 518.0,
+      "end": 523.0,
+      "text": "But then when you get to the second step where you have a couple of really highly probable tokens."
+    },
+    {
+      "id": 82,
+      "start": 523.0,
+      "end": 528.0,
+      "text": "You'd only need a couple of tokens to add up to point nine for or even higher than point nine for."
+    },
+    {
+      "id": 83,
+      "start": 528.0,
+      "end": 531.0,
+      "text": "And so you would just sample from a smaller set of templates."
+    },
+    {
+      "id": 84,
+      "start": 531.0,
+      "end": 534.0,
+      "text": "So in top case sampling, the total amount of probability you're sampling from."
+    },
+    {
+      "id": 85,
+      "start": 534.0,
+      "end": 540.0,
+      "text": "Can you move around in top P sampling, the total number of tokens or sampling from my change."
+    },
+    {
+      "id": 86,
+      "start": 540.0,
+      "end": 546.0,
+      "text": "But maybe we sort of don't want to impose a strong constraint like we want like 94% here."
+    },
+    {
+      "id": 87,
+      "start": 546.0,
+      "end": 553.0,
+      "text": "Maybe just what we really care about is saying that we're not going to sample anything that's really really on the like right."
+    },
+    {
+      "id": 88,
+      "start": 553.0,
+      "end": 561.0,
+      "text": "Another way of doing this is called epsilon sampling where we just sample tokens that have at least some minimum amount of probability to them."
+    },
+    {
+      "id": 89,
+      "start": 561.0,
+      "end": 567.0,
+      "text": "Right. So maybe we just want tokens that are probability of at least point 0.05 here."
+    },
+    {
+      "id": 90,
+      "start": 567.0,
+      "end": 572.0,
+      "text": "In this first example, everything has at least some reasonable amount of probability."
+    },
+    {
+      "id": 91,
+      "start": 572.0,
+      "end": 575.0,
+      "text": "So we're actually going to sample from our full distribution."
+    },
+    {
+      "id": 92,
+      "start": 575.0,
+      "end": 583.0,
+      "text": "And then in the second example, when we have a lot of things that are really unlikely will only sample from sort of the more likely part of the distribution."
+    },
+    {
+      "id": 93,
+      "start": 583.0,
+      "end": 590.0,
+      "text": "And so all three of these methods are sort of different ways trying to cut off the long tail using sort of different."
+    },
+    {
+      "id": 94,
+      "start": 590.0,
+      "end": 595.0,
+      "text": "The tail of the distribution though isn't the only thing we could choose to modify."
+    },
+    {
+      "id": 95,
+      "start": 595.0,
+      "end": 600.0,
+      "text": "We could also choose to modify this sort of peakness of the distribution."
+    }
+  ],
+  "language": "en"
+}

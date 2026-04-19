@@ -1,0 +1,143 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 8.0,
+      "text": "So in the next class, I'm going to talk about parameter efficient fine tuning methods, which is kind of a more general."
+    },
+    {
+      "id": 1,
+      "start": 8.0,
+      "end": 18.0,
+      "text": "It's a more general version of prompt tuning or prefix tuning. There are methods that tune a small number of parameters to get the model to do something."
+    },
+    {
+      "id": 2,
+      "start": 18.0,
+      "end": 26.0,
+      "text": "And there's a bunch of different parameter efficient tuning methods. Many people may have heard of something like Laura or adapters."
+    },
+    {
+      "id": 3,
+      "start": 26.0,
+      "end": 38.0,
+      "text": "I just talked about prefix tuning. So essentially prompt tuning and prefix tuning are part of this more general class and parameter efficient fine tuning methods."
+    },
+    {
+      "id": 4,
+      "start": 38.0,
+      "end": 49.0,
+      "text": "And so what we can say is actually prompting is fine tuning prompting is a way of fine tuning the model or getting the model to perform a particular task."
+    },
+    {
+      "id": 5,
+      "start": 49.0,
+      "end": 60.0,
+      "text": "And we have this taxonomy of we have prompts and natural language that are created by humans. Actually, maybe I should say manual prompt engineering here."
+    },
+    {
+      "id": 6,
+      "start": 60.0,
+      "end": 75.0,
+      "text": "This was first done in the GPT two paper where they demonstrate that models models consult tasks by doing it this way prompt paraphrasing is a step up from this because it's no longer relying on human engineering and you can, you know, expand to a broader set of prompts."
+    },
+    {
+      "id": 7,
+      "start": 75.0,
+      "end": 92.0,
+      "text": "It can always start with human created prompts. So it's kind of like broader than that discrete prompt search doesn't necessarily need to rely on a paraphrasing model. It could rely on like gradient based models or something else like that to give you something that's not actually natural language."
+    },
+    {
+      "id": 8,
+      "start": 92.0,
+      "end": 104.0,
+      "text": "Kind of just random tokens continuous prompts or prompt tuning is a step up of that multi layer continuous prompts or prefix tuning is a layer above that parameter efficient."
+    },
+    {
+      "id": 9,
+      "start": 104.0,
+      "end": 110.0,
+      "text": "It's more general than that and then you have all training methods so including fine tuning your model."
+    },
+    {
+      "id": 10,
+      "start": 110.0,
+      "end": 114.0,
+      "text": "And so what are the implications of this."
+    },
+    {
+      "id": 11,
+      "start": 114.0,
+      "end": 125.0,
+      "text": "I think so a lot of people when prompting came out they were like prompting methods are very hacky. I don't like how we have to do manual prompt engineering."
+    },
+    {
+      "id": 12,
+      "start": 125.0,
+      "end": 138.0,
+      "text": "It seems like a dark art is opposed to like, you know, actually, you know, some sort of well understood fine tuning method that we could use."
+    },
+    {
+      "id": 13,
+      "start": 138.0,
+      "end": 153.0,
+      "text": "But I actually like them, I like prompting a lot because if anybody is familiar with like Bayesian Bayesian statistics or machine learning we have that concept of like a prior probability over parameters."
+    },
+    {
+      "id": 14,
+      "start": 153.0,
+      "end": 160.0,
+      "text": "And then a probability that we get after after fine tuning the model or after training the model."
+    },
+    {
+      "id": 15,
+      "start": 160.0,
+      "end": 178.0,
+      "text": "And prompts in a way are our first like good prior over neural network models they give us the ability to specify what task the model should be doing or like a general idea of what task the model should be doing before we ask the model to actually do the task."
+    },
+    {
+      "id": 16,
+      "start": 178.0,
+      "end": 185.0,
+      "text": "And so we can either use that prior as is we can use a prompted model as is without doing any additional tuning."
+    },
+    {
+      "id": 17,
+      "start": 185.0,
+      "end": 194.0,
+      "text": "Or we could take the prior that we have given to the model by using a natural language description of the task it should be doing."
+    },
+    {
+      "id": 18,
+      "start": 194.0,
+      "end": 200.0,
+      "text": "And then combine it with fine tuning so we can take the prompted model."
+    },
+    {
+      "id": 19,
+      "start": 200.0,
+      "end": 212.0,
+      "text": "And initialize we can initialize the distribution of this like test a prompt using the prompt using a human created prompt and then go ahead and fine tune it on lots of training data as well."
+    },
+    {
+      "id": 20,
+      "start": 212.0,
+      "end": 228.0,
+      "text": "And there's a method for doing that by chicken shirts called pattern exploiting training where they do exactly that they basically initialize with a manually created prompt and then they find to get the model on the bottom line."
+    },
+    {
+      "id": 21,
+      "start": 228.0,
+      "end": 240.0,
+      "text": "And then they give us a prompt and based method so they give us this like really nice way to very quickly create a system but we can also have you know whatever level of additional training on that."
+    },
+    {
+      "id": 22,
+      "start": 240.0,
+      "end": 247.0,
+      "text": "So that's a little bit early."
+    }
+  ],
+  "language": "en"
+}

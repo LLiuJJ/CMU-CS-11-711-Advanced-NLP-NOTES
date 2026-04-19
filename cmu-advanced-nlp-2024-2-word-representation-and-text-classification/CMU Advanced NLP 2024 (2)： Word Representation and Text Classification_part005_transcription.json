@@ -1,0 +1,1085 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 5.0,
+      "text": "and have multiple ways of expressing the same function."
+    },
+    {
+      "id": 1,
+      "start": 5.0,
+      "end": 7.44,
+      "text": "So this is actually really important"
+    },
+    {
+      "id": 2,
+      "start": 7.44,
+      "end": 9.48,
+      "text": "as you start implementing things."
+    },
+    {
+      "id": 3,
+      "start": 9.48,
+      "end": 11.48,
+      "text": "And the reason why is the left graph"
+    },
+    {
+      "id": 4,
+      "start": 11.48,
+      "end": 14.4,
+      "text": "and the right graph both express the same thing."
+    },
+    {
+      "id": 5,
+      "start": 14.4,
+      "end": 19.4,
+      "text": "The left graph expresses x transpose times a,"
+    },
+    {
+      "id": 6,
+      "start": 20.84,
+      "end": 25.84,
+      "text": "times x, whereas this one has xA,"
+    },
+    {
+      "id": 7,
+      "start": 26.84,
+      "end": 30.84,
+      "text": "and then it puts it into a node that is x transpose a, x."
+    },
+    {
+      "id": 8,
+      "start": 32.32,
+      "end": 34.12,
+      "text": "And so these express exactly the same thing,"
+    },
+    {
+      "id": 9,
+      "start": 34.12,
+      "end": 36.48,
+      "text": "but the graph on the left is larger."
+    },
+    {
+      "id": 10,
+      "start": 36.48,
+      "end": 37.96,
+      "text": "And the reason why this is important"
+    },
+    {
+      "id": 11,
+      "start": 37.96,
+      "end": 41.04,
+      "text": "is for practical implementation of neural networks."
+    },
+    {
+      "id": 12,
+      "start": 43.84,
+      "end": 46.0,
+      "text": "The larger graphs are gonna take more memory"
+    },
+    {
+      "id": 13,
+      "start": 46.0,
+      "end": 48.2,
+      "text": "and going to be slower usually."
+    },
+    {
+      "id": 14,
+      "start": 48.2,
+      "end": 51.84,
+      "text": "And so often in a neural network,"
+    },
+    {
+      "id": 15,
+      "start": 51.84,
+      "end": 52.44,
+      "text": "we'll get like, like,"
+    },
+    {
+      "id": 16,
+      "start": 52.6,
+      "end": 54.76,
+      "text": "or it's what we're going to look at in a second."
+    },
+    {
+      "id": 17,
+      "start": 58.28,
+      "end": 63.28,
+      "text": "You will have something you will be able to do this,"
+    },
+    {
+      "id": 18,
+      "start": 69.32,
+      "end": 71.4,
+      "text": "or you'll be able to do like,"
+    },
+    {
+      "id": 19,
+      "start": 83.44,
+      "end": 84.44,
+      "text": "this."
+    },
+    {
+      "id": 20,
+      "start": 86.56,
+      "end": 88.04,
+      "text": "So these are two different options."
+    },
+    {
+      "id": 21,
+      "start": 88.04,
+      "end": 89.92,
+      "text": "This one is using more operations,"
+    },
+    {
+      "id": 22,
+      "start": 89.92,
+      "end": 92.12,
+      "text": "and this one is using less operations."
+    },
+    {
+      "id": 23,
+      "start": 92.12,
+      "end": 94.32,
+      "text": "And this is going to be faster"
+    },
+    {
+      "id": 24,
+      "start": 94.32,
+      "end": 96.2,
+      "text": "because basically the implementation within"
+    },
+    {
+      "id": 25,
+      "start": 96.2,
+      "end": 98.32,
+      "text": "PideVort will have been optimized for you."
+    },
+    {
+      "id": 26,
+      "start": 98.32,
+      "end": 99.96,
+      "text": "It will only require one graph node"
+    },
+    {
+      "id": 27,
+      "start": 99.96,
+      "end": 101.84,
+      "text": "instead of multiple graph nodes."
+    },
+    {
+      "id": 28,
+      "start": 101.84,
+      "end": 102.88,
+      "text": "And that's even more important"
+    },
+    {
+      "id": 29,
+      "start": 102.88,
+      "end": 104.08,
+      "text": "when you start talking about like,"
+    },
+    {
+      "id": 30,
+      "start": 104.08,
+      "end": 105.72,
+      "text": "attention for something like that,"
+    },
+    {
+      "id": 31,
+      "start": 105.72,
+      "end": 108.32,
+      "text": "which we're doing in the top ring very soon."
+    },
+    {
+      "id": 32,
+      "start": 108.32,
+      "end": 110.84,
+      "text": "Attention is a very multi-head attention"
+    },
+    {
+      "id": 33,
+      "start": 110.84,
+      "end": 113.0,
+      "text": "or something like that is a very complicated operation."
+    },
+    {
+      "id": 34,
+      "start": 113.0,
+      "end": 117.0,
+      "text": "So you want to make sure that you're using the operators"
+    },
+    {
+      "id": 35,
+      "start": 117.0,
+      "end": 119.84,
+      "text": "that are available to you to make this more efficient."
+    },
+    {
+      "id": 36,
+      "start": 122.76,
+      "end": 125.32,
+      "text": "And then finally, we could like add all of these together"
+    },
+    {
+      "id": 37,
+      "start": 125.32,
+      "end": 127.24,
+      "text": "at the end, we could add a constant."
+    },
+    {
+      "id": 38,
+      "start": 128.32,
+      "end": 129.8,
+      "text": "And then we get this expression here,"
+    },
+    {
+      "id": 39,
+      "start": 129.8,
+      "end": 133.28,
+      "text": "which gives us kind of a polynomial expression."
+    },
+    {
+      "id": 40,
+      "start": 137.12,
+      "end": 140.32,
+      "text": "Also, another thing to note is within a neural network"
+    },
+    {
+      "id": 41,
+      "start": 140.32,
+      "end": 144.04,
+      "text": "computation graph, variable names are just labeling of nodes."
+    },
+    {
+      "id": 42,
+      "start": 144.04,
+      "end": 149.04,
+      "text": "And so if you're using a computation graph like this,"
+    },
+    {
+      "id": 43,
+      "start": 149.76,
+      "end": 152.6,
+      "text": "you might only be declaring one variable here,"
+    },
+    {
+      "id": 44,
+      "start": 152.6,
+      "end": 154.4,
+      "text": "but actually there's a whole bunch of stuff"
+    },
+    {
+      "id": 45,
+      "start": 154.4,
+      "end": 155.64,
+      "text": "going on behind the scenes"
+    },
+    {
+      "id": 46,
+      "start": 155.64,
+      "end": 157.76,
+      "text": "and all of that will take memory and computation time"
+    },
+    {
+      "id": 47,
+      "start": 157.76,
+      "end": 158.6,
+      "text": "and stuff like that."
+    },
+    {
+      "id": 48,
+      "start": 158.6,
+      "end": 160.52,
+      "text": "So it's important to be aware of that"
+    },
+    {
+      "id": 49,
+      "start": 160.52,
+      "end": 162.84,
+      "text": "if you want to make your implementations more efficient"
+    },
+    {
+      "id": 50,
+      "start": 162.84,
+      "end": 164.08,
+      "text": "than other other things."
+    },
+    {
+      "id": 51,
+      "start": 165.08,
+      "end": 169.08,
+      "text": "So we have several algorithms that go into implementing neural nets."
+    },
+    {
+      "id": 52,
+      "start": 171.84,
+      "end": 174.28,
+      "text": "The first one is graph construction."
+    },
+    {
+      "id": 53,
+      "start": 174.28,
+      "end": 176.2,
+      "text": "The second one is forward propagation."
+    },
+    {
+      "id": 54,
+      "start": 177.12,
+      "end": 180.12,
+      "text": "And graph construction is basically constructing the graph,"
+    },
+    {
+      "id": 55,
+      "start": 180.12,
+      "end": 182.4,
+      "text": "declaring all the variables and stuff like this."
+    },
+    {
+      "id": 56,
+      "start": 182.4,
+      "end": 184.72,
+      "text": "The second one is forward propagation."
+    },
+    {
+      "id": 57,
+      "start": 184.72,
+      "end": 188.6,
+      "text": "And the way you do this is in topological order."
+    },
+    {
+      "id": 58,
+      "start": 188.6,
+      "end": 191.4,
+      "text": "You compute the value of a node given its inputs."
+    },
+    {
+      "id": 59,
+      "start": 191.4,
+      "end": 194.0,
+      "text": "And so basically you start out with all of the nodes"
+    },
+    {
+      "id": 60,
+      "start": 194.0,
+      "end": 196.08,
+      "text": "that you give is input."
+    },
+    {
+      "id": 61,
+      "start": 196.08,
+      "end": 197.84,
+      "text": "And then you find any node in the graph"
+    },
+    {
+      "id": 62,
+      "start": 197.84,
+      "end": 202.6,
+      "text": "where all of its tail nodes or all of its children"
+    },
+    {
+      "id": 63,
+      "start": 202.6,
+      "end": 203.68,
+      "text": "have been calculated."
+    },
+    {
+      "id": 64,
+      "start": 203.68,
+      "end": 206.24,
+      "text": "So in this case, that would be these two nodes."
+    },
+    {
+      "id": 65,
+      "start": 206.24,
+      "end": 209.24,
+      "text": "And then in arbitrary order or even in parallel,"
+    },
+    {
+      "id": 66,
+      "start": 209.24,
+      "end": 212.2,
+      "text": "you calculate the value of all of the satisfied nodes"
+    },
+    {
+      "id": 67,
+      "start": 212.2,
+      "end": 213.28,
+      "text": "until you hit the end."
+    },
+    {
+      "id": 68,
+      "start": 214.4,
+      "end": 218.68,
+      "text": "And then the remaining algorithms are back propagation"
+    },
+    {
+      "id": 69,
+      "start": 218.68,
+      "end": 219.88,
+      "text": "and parameter update."
+    },
+    {
+      "id": 70,
+      "start": 219.88,
+      "end": 222.2,
+      "text": "I already talked about parameter update"
+    },
+    {
+      "id": 71,
+      "start": 222.2,
+      "end": 224.44,
+      "text": "using stochastic gradient descent."
+    },
+    {
+      "id": 72,
+      "start": 224.44,
+      "end": 226.92,
+      "text": "But for back propagation, we then process examples"
+    },
+    {
+      "id": 73,
+      "start": 226.92,
+      "end": 230.48,
+      "text": "in reverse topological order and calculate derivatives"
+    },
+    {
+      "id": 74,
+      "start": 230.48,
+      "end": 232.48,
+      "text": "and parameters with respect to the final value."
+    },
+    {
+      "id": 75,
+      "start": 233.76,
+      "end": 236.24,
+      "text": "And so we start out with the very final value."
+    },
+    {
+      "id": 76,
+      "start": 236.24,
+      "end": 238.48,
+      "text": "Usually this is your loss function."
+    },
+    {
+      "id": 77,
+      "start": 238.48,
+      "end": 241.28,
+      "text": "And then you just step backwards in topological order"
+    },
+    {
+      "id": 78,
+      "start": 241.28,
+      "end": 244.56,
+      "text": "to calculate the derivatives and all of these."
+    },
+    {
+      "id": 79,
+      "start": 244.56,
+      "end": 249.04,
+      "text": "So this is a pretty simple,"
+    },
+    {
+      "id": 80,
+      "start": 249.04,
+      "end": 251.0,
+      "text": "I think a lot of people may have seen this already,"
+    },
+    {
+      "id": 81,
+      "start": 251.0,
+      "end": 253.76,
+      "text": "but keeping this in mind is you're implementing"
+    },
+    {
+      "id": 82,
+      "start": 253.76,
+      "end": 257.72,
+      "text": "NLP models, especially models that are really memory intensive"
+    },
+    {
+      "id": 83,
+      "start": 257.72,
+      "end": 259.36,
+      "text": "or things like that is pretty important."
+    },
+    {
+      "id": 84,
+      "start": 259.36,
+      "end": 261.36,
+      "text": "Because if you accidentally,"
+    },
+    {
+      "id": 85,
+      "start": 261.36,
+      "end": 264.2,
+      "text": "like for example, calculate the same thing twice"
+    },
+    {
+      "id": 86,
+      "start": 264.2,
+      "end": 267.6,
+      "text": "or accidentally create a graph that is manipulating"
+    },
+    {
+      "id": 87,
+      "start": 267.6,
+      "end": 270.88,
+      "text": "very large tensors and creating very large intermediate states"
+    },
+    {
+      "id": 88,
+      "start": 270.88,
+      "end": 273.08,
+      "text": "that can kill your memory and cause big problems."
+    },
+    {
+      "id": 89,
+      "start": 273.08,
+      "end": 275.6,
+      "text": "So it's important things to be able to do."
+    },
+    {
+      "id": 90,
+      "start": 275.6,
+      "end": 282.48,
+      "text": "Cool, any questions about this?"
+    },
+    {
+      "id": 91,
+      "start": 285.08,
+      "end": 287.96,
+      "text": "Okay, if not, I will go on to the next one."
+    },
+    {
+      "id": 92,
+      "start": 287.96,
+      "end": 289.56,
+      "text": "So neural network frameworks,"
+    },
+    {
+      "id": 93,
+      "start": 289.56,
+      "end": 291.6,
+      "text": "there's several neural network frameworks,"
+    },
+    {
+      "id": 94,
+      "start": 291.6,
+      "end": 295.08,
+      "text": "but in NLP nowadays, I really only see two"
+    },
+    {
+      "id": 95,
+      "start": 295.08,
+      "end": 296.64,
+      "text": "and mostly only see one."
+    },
+    {
+      "id": 96,
+      "start": 297.96,
+      "end": 301.44,
+      "text": "So that one that almost everybody uses is PyTorch."
+    },
+    {
+      "id": 97,
+      "start": 302.44,
+      "end": 303.96,
+      "text": "And I would recommend using it"
+    },
+    {
+      "id": 98,
+      "start": 303.96,
+      "end": 308.96,
+      "text": "unless you, if you're a fan of rust or,"
+    },
+    {
+      "id": 99,
+      "start": 310.32,
+      "end": 314.16,
+      "text": "esoteric, not esoteric, but unusual programming languages"
+    },
+    {
+      "id": 100,
+      "start": 314.16,
+      "end": 316.72,
+      "text": "and you like beauty and things like this,"
+    },
+    {
+      "id": 101,
+      "start": 316.72,
+      "end": 318.68,
+      "text": "another option might be Jax."
+    },
+    {
+      "id": 102,
+      "start": 318.68,
+      "end": 320.92,
+      "text": "So I'll explain a little bit about the difference"
+    },
+    {
+      "id": 103,
+      "start": 320.92,
+      "end": 323.76,
+      "text": "between them and you can pick accordingly."
+    },
+    {
+      "id": 104,
+      "start": 326.08,
+      "end": 330.32,
+      "text": "First, both of these frameworks are developed by big companies"
+    },
+    {
+      "id": 105,
+      "start": 330.32,
+      "end": 332.2,
+      "text": "and they have a lot of engineering support behind them."
+    },
+    {
+      "id": 106,
+      "start": 332.2,
+      "end": 334.28,
+      "text": "That's kind of an important thing to think about"
+    },
+    {
+      "id": 107,
+      "start": 334.28,
+      "end": 335.76,
+      "text": "when you're deciding which framework to use"
+    },
+    {
+      "id": 108,
+      "start": 335.76,
+      "end": 337.6,
+      "text": "because it'll be well supported."
+    },
+    {
+      "id": 109,
+      "start": 339.52,
+      "end": 342.32,
+      "text": "PyTorch is definitely most widely used in NLP,"
+    },
+    {
+      "id": 110,
+      "start": 342.32,
+      "end": 346.12,
+      "text": "especially NLP research and it's used in some NLP projects."
+    },
+    {
+      "id": 111,
+      "start": 346.12,
+      "end": 349.4,
+      "text": "Jax is a use in some NLP projects."
+    },
+    {
+      "id": 112,
+      "start": 350.68,
+      "end": 353.28,
+      "text": "PyTorch favors dynamic execution."
+    },
+    {
+      "id": 113,
+      "start": 353.28,
+      "end": 357.44,
+      "text": "So what dynamic execution means is,"
+    },
+    {
+      "id": 114,
+      "start": 357.44,
+      "end": 360.12,
+      "text": "you basically create a computation graph"
+    },
+    {
+      "id": 115,
+      "start": 360.12,
+      "end": 363.88,
+      "text": "and then execute it every time you process an input."
+    },
+    {
+      "id": 116,
+      "start": 364.92,
+      "end": 369.16,
+      "text": "In contrast, there's also you define the computation graph first"
+    },
+    {
+      "id": 117,
+      "start": 369.16,
+      "end": 371.6,
+      "text": "and then execute it over and over again."
+    },
+    {
+      "id": 118,
+      "start": 371.6,
+      "end": 374.8,
+      "text": "So in other words, the graph construction step only happens once"
+    },
+    {
+      "id": 119,
+      "start": 374.8,
+      "end": 376.84,
+      "text": "kind of at the beginning of computation"
+    },
+    {
+      "id": 120,
+      "start": 376.84,
+      "end": 379.2,
+      "text": "and then you compile it afterwards."
+    },
+    {
+      "id": 121,
+      "start": 379.2,
+      "end": 383.72,
+      "text": "And it's actually PyTorch supports kind of defining"
+    },
+    {
+      "id": 122,
+      "start": 383.72,
+      "end": 387.96,
+      "text": "and compiling and Jax supports more dynamic things"
+    },
+    {
+      "id": 123,
+      "start": 387.96,
+      "end": 392.96,
+      "text": "but the way they were designed is kind of favoring"
+    },
+    {
+      "id": 124,
+      "start": 394.52,
+      "end": 397.4,
+      "text": "dynamic execution of favoring the machine population."
+    },
+    {
+      "id": 125,
+      "start": 397.4,
+      "end": 402.08,
+      "text": "And the difference between these two is,"
+    },
+    {
+      "id": 126,
+      "start": 402.08,
+      "end": 404.28,
+      "text": "this one gives you more flexibility."
+    },
+    {
+      "id": 127,
+      "start": 404.28,
+      "end": 407.4,
+      "text": "This one gives you better optimization and more speed"
+    },
+    {
+      "id": 128,
+      "start": 407.4,
+      "end": 409.52,
+      "text": "if you want to be back."
+    },
+    {
+      "id": 129,
+      "start": 412.2,
+      "end": 415.0,
+      "text": "Another thing about Jax is,"
+    },
+    {
+      "id": 130,
+      "start": 415.0,
+      "end": 417.92,
+      "text": "it's kind of very close to numpy in a win,"
+    },
+    {
+      "id": 131,
+      "start": 417.92,
+      "end": 420.04,
+      "text": "like it uses a very num,"
+    },
+    {
+      "id": 132,
+      "start": 420.04,
+      "end": 422.24,
+      "text": "something that's kind of close to numpy."
+    },
+    {
+      "id": 133,
+      "start": 422.24,
+      "end": 424.64,
+      "text": "It's very heavily based on tensors."
+    },
+    {
+      "id": 134,
+      "start": 424.64,
+      "end": 427.28,
+      "text": "And so because of this, you can kind of easily do"
+    },
+    {
+      "id": 135,
+      "start": 427.28,
+      "end": 429.2,
+      "text": "some interesting things like,"
+    },
+    {
+      "id": 136,
+      "start": 429.2,
+      "end": 430.96,
+      "text": "okay, I want to take this tensor"
+    },
+    {
+      "id": 137,
+      "start": 430.96,
+      "end": 433.36,
+      "text": "and I want to split it over two GDUs."
+    },
+    {
+      "id": 138,
+      "start": 434.4,
+      "end": 436.24,
+      "text": "And this is,"
+    },
+    {
+      "id": 139,
+      "start": 436.24,
+      "end": 439.04,
+      "text": "when it's you're training like a very large model"
+    },
+    {
+      "id": 140,
+      "start": 439.04,
+      "end": 444.04,
+      "text": "and you want to put kind of this part of the model."
+    },
+    {
+      "id": 141,
+      "start": 448.4,
+      "end": 450.36,
+      "text": "You want to put this part of the model on GP1,"
+    },
+    {
+      "id": 142,
+      "start": 450.36,
+      "end": 453.92,
+      "text": "this on GP2, this on GP3, this on GP4."
+    },
+    {
+      "id": 143,
+      "start": 453.92,
+      "end": 456.44,
+      "text": "It's slightly simpler conceptually to do in Jax"
+    },
+    {
+      "id": 144,
+      "start": 456.44,
+      "end": 458.48,
+      "text": "but it's also possible to be in PyTorch."
+    },
+    {
+      "id": 145,
+      "start": 460.48,
+      "end": 463.4,
+      "text": "And PyTorch by far has the most vibrant ecosystem."
+    },
+    {
+      "id": 146,
+      "start": 463.4,
+      "end": 466.56,
+      "text": "So like as I said, PyTorch is a good default choice"
+    },
+    {
+      "id": 147,
+      "start": 466.56,
+      "end": 467.96,
+      "text": "but you can consider using Jax"
+    },
+    {
+      "id": 148,
+      "start": 467.96,
+      "end": 471.12,
+      "text": "if you like new things."
+    },
+    {
+      "id": 149,
+      "start": 474.2,
+      "end": 475.52,
+      "text": "Cool."
+    },
+    {
+      "id": 150,
+      "start": 475.52,
+      "end": 477.92,
+      "text": "Yeah, actually I already talked about that."
+    },
+    {
+      "id": 151,
+      "start": 477.92,
+      "end": 480.92,
+      "text": "So in the interest of time,"
+    },
+    {
+      "id": 152,
+      "start": 480.92,
+      "end": 483.12,
+      "text": "I may not go into these very deeply"
+    },
+    {
+      "id": 153,
+      "start": 483.12,
+      "end": 488.24,
+      "text": "but it's important to note that we have examples"
+    },
+    {
+      "id": 154,
+      "start": 488.24,
+      "end": 493.24,
+      "text": "of all of the models that I talked about in the class today."
+    },
+    {
+      "id": 155,
+      "start": 495.72,
+      "end": 498.56,
+      "text": "These are created for simplicity,"
+    },
+    {
+      "id": 156,
+      "start": 498.56,
+      "end": 503.56,
+      "text": "not for speed or efficiency of implementation."
+    },
+    {
+      "id": 157,
+      "start": 504.04,
+      "end": 508.56,
+      "text": "So these are kind of PyTorch-based examples"
+    },
+    {
+      "id": 158,
+      "start": 509.72,
+      "end": 512.56,
+      "text": "where you can create the bag of words model,"
+    },
+    {
+      "id": 159,
+      "start": 513.84,
+      "end": 516.16,
+      "text": "a continuous bag of words model,"
+    },
+    {
+      "id": 160,
+      "start": 518.96,
+      "end": 523.96,
+      "text": "and a deep continuous bag of words model."
+    },
+    {
+      "id": 161,
+      "start": 525.64,
+      "end": 530.64,
+      "text": "And all of these, I believe are implemented in model.py."
+    },
+    {
+      "id": 162,
+      "start": 531.64,
+      "end": 535.64,
+      "text": "And the most important thing is where you define the forward pass"
+    },
+    {
+      "id": 163,
+      "start": 535.64,
+      "end": 540.24,
+      "text": "and maybe I can just give a simple example of this."
+    },
+    {
+      "id": 164,
+      "start": 540.24,
+      "end": 543.24,
+      "text": "But here, this is where you do the word embedding."
+    },
+    {
+      "id": 165,
+      "start": 543.24,
+      "end": 548.24,
+      "text": "This is where you sum up all of the embeddings at a bias."
+    },
+    {
+      "id": 166,
+      "start": 550.52,
+      "end": 554.52,
+      "text": "And then this is where you return the score."
+    },
+    {
+      "id": 167,
+      "start": 556.36,
+      "end": 557.52,
+      "text": "And then, oh, sorry."
+    },
+    {
+      "id": 168,
+      "start": 561.0,
+      "end": 564.32,
+      "text": "The continuous bag of words model sums up some embeddings"
+    },
+    {
+      "id": 169,
+      "start": 565.64,
+      "end": 569.08,
+      "text": "or gets the embeddings, sums up some embeddings,"
+    },
+    {
+      "id": 170,
+      "start": 571.2,
+      "end": 574.52,
+      "text": "gets the score here and then runs it through a linear,"
+    },
+    {
+      "id": 171,
+      "start": 574.52,
+      "end": 578.04,
+      "text": "or changes the view, runs it through a linear layer."
+    },
+    {
+      "id": 172,
+      "start": 578.04,
+      "end": 580.24,
+      "text": "And then the deep continuous bag of words model"
+    },
+    {
+      "id": 173,
+      "start": 580.24,
+      "end": 585.24,
+      "text": "also adds a few layers of linear transformations in the damage."
+    },
+    {
+      "id": 174,
+      "start": 585.24,
+      "end": 587.72,
+      "text": "So you should be able to see that these correspond"
+    },
+    {
+      "id": 175,
+      "start": 587.72,
+      "end": 590.24,
+      "text": "and pretty closely to the things that I had on the slides."
+    },
+    {
+      "id": 176,
+      "start": 590.24,
+      "end": 594.24,
+      "text": "So hopefully that's a good start if you're not very familiar"
+    },
+    {
+      "id": 177,
+      "start": 594.24,
+      "end": 596.12,
+      "text": "with implementing models and patterns."
+    },
+    {
+      "id": 178,
+      "start": 599.24,
+      "end": 603.12,
+      "text": "Oh, and yes, the recitation will be about playing around"
+    },
+    {
+      "id": 179,
+      "start": 603.12,
+      "end": 604.92,
+      "text": "with sentence fees and playing around with fees."
+    }
+  ],
+  "language": "en"
+}

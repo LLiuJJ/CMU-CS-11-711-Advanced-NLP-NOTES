@@ -1,0 +1,1073 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 5.0,
+      "text": "amazing, amazing paper that I can show you."
+    },
+    {
+      "id": 1,
+      "start": 5.32,
+      "end": 7.4,
+      "text": "I don't have it in the slides,"
+    },
+    {
+      "id": 2,
+      "start": 7.4,
+      "end": 9.52,
+      "text": "but it's a language ID in the wild,"
+    },
+    {
+      "id": 3,
+      "start": 9.52,
+      "end": 11.24,
+      "text": "unexpected challenges on the path"
+    },
+    {
+      "id": 4,
+      "start": 11.24,
+      "end": 14.76,
+      "text": "to a thousand language web text corpus."
+    },
+    {
+      "id": 5,
+      "start": 14.76,
+      "end": 18.54,
+      "text": "And just look at this figure in here."
+    },
+    {
+      "id": 6,
+      "start": 22.8,
+      "end": 27.8,
+      "text": "So here, the predicted language of this is money-per-y."
+    },
+    {
+      "id": 7,
+      "start": 30.72,
+      "end": 34.16,
+      "text": "I don't know why it's clearly all emojis,"
+    },
+    {
+      "id": 8,
+      "start": 34.16,
+      "end": 39.16,
+      "text": "but apparently the language ID system had to do that."
+    },
+    {
+      "id": 9,
+      "start": 42.16,
+      "end": 44.92,
+      "text": "Also, why you lie in, why you always lie in,"
+    },
+    {
+      "id": 10,
+      "start": 44.92,
+      "end": 46.92,
+      "text": "and like all these little characters"
+    },
+    {
+      "id": 11,
+      "start": 46.92,
+      "end": 48.48,
+      "text": "got predicted this tweet."
+    },
+    {
+      "id": 12,
+      "start": 51.72,
+      "end": 53.68,
+      "text": "This is a mis-rendered PDF."
+    },
+    {
+      "id": 13,
+      "start": 54.52,
+      "end": 58.68,
+      "text": "Is of our Huddy, is Iamara."
+    },
+    {
+      "id": 14,
+      "start": 59.6,
+      "end": 61.52,
+      "text": "This is a non-unicode font."
+    },
+    {
+      "id": 15,
+      "start": 64.56,
+      "end": 66.96,
+      "text": "Yeah, more things like this."
+    },
+    {
+      "id": 16,
+      "start": 66.96,
+      "end": 68.92,
+      "text": "Creative use of Unicode."
+    },
+    {
+      "id": 17,
+      "start": 68.92,
+      "end": 71.48,
+      "text": "Me, Owl is Poo-R."
+    },
+    {
+      "id": 18,
+      "start": 73.16,
+      "end": 75.76,
+      "text": "So there's just like lots of examples"
+    },
+    {
+      "id": 19,
+      "start": 75.76,
+      "end": 79.52,
+      "text": "where like actual web text can make language ID pretty hard."
+    },
+    {
+      "id": 20,
+      "start": 80.52,
+      "end": 85.52,
+      "text": "Fortunately, there are ways around this"
+    },
+    {
+      "id": 21,
+      "start": 86.4,
+      "end": 89.48,
+      "text": "by having like very well curated training data"
+    },
+    {
+      "id": 22,
+      "start": 89.48,
+      "end": 90.6,
+      "text": "for language ID systems"
+    },
+    {
+      "id": 23,
+      "start": 90.6,
+      "end": 92.28,
+      "text": "and also having good confidence metrics"
+    },
+    {
+      "id": 24,
+      "start": 92.28,
+      "end": 95.44,
+      "text": "for language ID systems, but it's definitely non-trivial."
+    },
+    {
+      "id": 25,
+      "start": 98.28,
+      "end": 100.68,
+      "text": "So after they did that, the language ID,"
+    },
+    {
+      "id": 26,
+      "start": 100.68,
+      "end": 102.68,
+      "text": "they get this model."
+    },
+    {
+      "id": 27,
+      "start": 102.68,
+      "end": 105.52,
+      "text": "And in terms of modeling techniques,"
+    },
+    {
+      "id": 28,
+      "start": 105.52,
+      "end": 108.92,
+      "text": "they use some interesting modeling techniques."
+    },
+    {
+      "id": 29,
+      "start": 108.92,
+      "end": 111.36,
+      "text": "The first one is mixture of experts."
+    },
+    {
+      "id": 30,
+      "start": 113.12,
+      "end": 115.56,
+      "text": "So mixture of experts is,"
+    },
+    {
+      "id": 31,
+      "start": 115.56,
+      "end": 117.16,
+      "text": "I've already talked about it before"
+    },
+    {
+      "id": 32,
+      "start": 117.16,
+      "end": 119.84,
+      "text": "in the context of the mixture model."
+    },
+    {
+      "id": 33,
+      "start": 119.84,
+      "end": 124.52,
+      "text": "This and you know, GPT models are also allegedly"
+    },
+    {
+      "id": 34,
+      "start": 124.52,
+      "end": 126.08,
+      "text": "using mixture of experts,"
+    },
+    {
+      "id": 35,
+      "start": 126.08,
+      "end": 128.76,
+      "text": "but here it's particularly important"
+    },
+    {
+      "id": 36,
+      "start": 128.76,
+      "end": 130.64,
+      "text": "because they're doing many different languages."
+    },
+    {
+      "id": 37,
+      "start": 130.64,
+      "end": 133.08,
+      "text": "And so if you're doing many different languages,"
+    },
+    {
+      "id": 38,
+      "start": 133.08,
+      "end": 135.6,
+      "text": "you can use particular parameters for some languages"
+    },
+    {
+      "id": 39,
+      "start": 135.6,
+      "end": 137.72,
+      "text": "and other parameters for other languages."
+    },
+    {
+      "id": 40,
+      "start": 137.72,
+      "end": 140.84,
+      "text": "So it's pretty helpful in that case."
+    },
+    {
+      "id": 41,
+      "start": 140.84,
+      "end": 142.64,
+      "text": "Another thing is curriculum learning."
+    },
+    {
+      "id": 42,
+      "start": 142.64,
+      "end": 143.88,
+      "text": "Like I just mentioned before,"
+    },
+    {
+      "id": 43,
+      "start": 143.88,
+      "end": 148.16,
+      "text": "they start training on the lower resource languages later."
+    },
+    {
+      "id": 44,
+      "start": 149.64,
+      "end": 150.96,
+      "text": "Self supervised training."
+    },
+    {
+      "id": 45,
+      "start": 150.96,
+      "end": 155.36,
+      "text": "So basically the way this works is by having a denoising objective"
+    },
+    {
+      "id": 46,
+      "start": 155.36,
+      "end": 158.36,
+      "text": "where they add a noise to the monolingual data"
+    },
+    {
+      "id": 47,
+      "start": 158.36,
+      "end": 162.12,
+      "text": "and then try to reproduce the original monolingual data."
+    },
+    {
+      "id": 48,
+      "start": 162.12,
+      "end": 164.72,
+      "text": "So they use that as well."
+    },
+    {
+      "id": 49,
+      "start": 164.72,
+      "end": 168.24,
+      "text": "Also another important technique"
+    },
+    {
+      "id": 50,
+      "start": 168.24,
+      "end": 172.08,
+      "text": "that is very widely used in machine translation now"
+    },
+    {
+      "id": 51,
+      "start": 172.08,
+      "end": 174.84,
+      "text": "is something called back translation."
+    },
+    {
+      "id": 52,
+      "start": 174.84,
+      "end": 176.84,
+      "text": "And the way back translation works is like,"
+    },
+    {
+      "id": 53,
+      "start": 176.84,
+      "end": 181.08,
+      "text": "let's say we want to translate in English to Swahili."
+    },
+    {
+      "id": 54,
+      "start": 185.64,
+      "end": 189.04,
+      "text": "English to Swahili translation model."
+    },
+    {
+      "id": 55,
+      "start": 189.04,
+      "end": 191.6,
+      "text": "And we don't have a lot of bi-text for English in Swahili,"
+    },
+    {
+      "id": 56,
+      "start": 191.6,
+      "end": 193.76,
+      "text": "but we have lots of Swahili."
+    },
+    {
+      "id": 57,
+      "start": 193.76,
+      "end": 197.36,
+      "text": "Basically what we do is we train a Swahili to English model."
+    },
+    {
+      "id": 58,
+      "start": 198.8,
+      "end": 203.36,
+      "text": "And we generate a lot of like translated,"
+    },
+    {
+      "id": 59,
+      "start": 203.36,
+      "end": 206.24,
+      "text": "like pseudo translated English here."
+    },
+    {
+      "id": 60,
+      "start": 206.24,
+      "end": 208.12,
+      "text": "And then you set his parallel data."
+    },
+    {
+      "id": 61,
+      "start": 209.16,
+      "end": 212.24,
+      "text": "This is really widely used in machine translation."
+    },
+    {
+      "id": 62,
+      "start": 213.8,
+      "end": 217.6,
+      "text": "There is a caveat that this English is not natural,"
+    },
+    {
+      "id": 63,
+      "start": 217.6,
+      "end": 221.16,
+      "text": "but that's actually kind of okay for a couple reasons."
+    },
+    {
+      "id": 64,
+      "start": 221.16,
+      "end": 223.6,
+      "text": "If the Swahili is actually natural,"
+    },
+    {
+      "id": 65,
+      "start": 223.6,
+      "end": 226.72,
+      "text": "then at least that output is natural."
+    },
+    {
+      "id": 66,
+      "start": 226.72,
+      "end": 228.32,
+      "text": "So you're generating natural output,"
+    },
+    {
+      "id": 67,
+      "start": 228.32,
+      "end": 231.12,
+      "text": "even if the input is a little bit unnatural."
+    },
+    {
+      "id": 68,
+      "start": 231.12,
+      "end": 234.04,
+      "text": "The other thing is actually as models get better,"
+    },
+    {
+      "id": 69,
+      "start": 234.04,
+      "end": 237.24,
+      "text": "there's a lot of really bad translations online."
+    },
+    {
+      "id": 70,
+      "start": 237.24,
+      "end": 240.64,
+      "text": "Like for example translations from not very good translators"
+    },
+    {
+      "id": 71,
+      "start": 240.64,
+      "end": 244.84,
+      "text": "or translations from older versions of Google translate,"
+    },
+    {
+      "id": 72,
+      "start": 244.84,
+      "end": 247.64,
+      "text": "for example, a lot of the like data online"
+    },
+    {
+      "id": 73,
+      "start": 247.64,
+      "end": 250.24,
+      "text": "is like old machine translation data."
+    },
+    {
+      "id": 74,
+      "start": 250.24,
+      "end": 253.16,
+      "text": "And so because of that, if you have a good back translation model,"
+    },
+    {
+      "id": 75,
+      "start": 253.16,
+      "end": 255.2,
+      "text": "it might be actually better than your original data"
+    },
+    {
+      "id": 76,
+      "start": 255.2,
+      "end": 256.04,
+      "text": "in the first place."
+    },
+    {
+      "id": 77,
+      "start": 257.64,
+      "end": 260.92,
+      "text": "So because of that back translation can be pretty good."
+    },
+    {
+      "id": 78,
+      "start": 262.2,
+      "end": 264.36,
+      "text": "And they also incorporated the seed data"
+    },
+    {
+      "id": 79,
+      "start": 264.36,
+      "end": 268.08,
+      "text": "that they created to seed the model."
+    },
+    {
+      "id": 80,
+      "start": 269.0,
+      "end": 270.76,
+      "text": "So this is a pretty good model."
+    },
+    {
+      "id": 81,
+      "start": 270.76,
+      "end": 275.76,
+      "text": "We did some evaluation of this from the language modeling"
+    },
+    {
+      "id": 82,
+      "start": 277.12,
+      "end": 278.12,
+      "text": "perspective."
+    },
+    {
+      "id": 83,
+      "start": 283.68,
+      "end": 288.68,
+      "text": "And basically what we found was that it is quite effective."
+    },
+    {
+      "id": 84,
+      "start": 291.84,
+      "end": 294.04,
+      "text": "The NLB model is quite competitive,"
+    },
+    {
+      "id": 85,
+      "start": 294.04,
+      "end": 296.16,
+      "text": "even with respect to the GPT models"
+    },
+    {
+      "id": 86,
+      "start": 296.16,
+      "end": 299.48,
+      "text": "for lower resource languages under like the top 40."
+    },
+    {
+      "id": 87,
+      "start": 299.48,
+      "end": 302.08,
+      "text": "It's not as good for the top 40 languages."
+    },
+    {
+      "id": 88,
+      "start": 302.08,
+      "end": 304.6,
+      "text": "And if you compare Google translate"
+    },
+    {
+      "id": 89,
+      "start": 304.6,
+      "end": 309.28,
+      "text": "and chat GPT on the top kind of like the higher resource languages,"
+    },
+    {
+      "id": 90,
+      "start": 309.28,
+      "end": 313.2,
+      "text": "actually GPT-4 can be Google translate on some languages"
+    },
+    {
+      "id": 91,
+      "start": 313.2,
+      "end": 315.96,
+      "text": "like Romanian and other things like that."
+    },
+    {
+      "id": 92,
+      "start": 315.96,
+      "end": 319.68,
+      "text": "So but anyway, the NLB model is quite good."
+    },
+    {
+      "id": 93,
+      "start": 319.68,
+      "end": 322.28,
+      "text": "So if you want to start out with a model you can use this."
+    },
+    {
+      "id": 94,
+      "start": 322.28,
+      "end": 324.4,
+      "text": "There's also another more recent model called"
+    },
+    {
+      "id": 95,
+      "start": 324.4,
+      "end": 328.44,
+      "text": "seamless M4T that also allows you to do speech translation as well."
+    },
+    {
+      "id": 96,
+      "start": 330.16,
+      "end": 332.72,
+      "text": "And if you want to show your CMU pride,"
+    },
+    {
+      "id": 97,
+      "start": 332.72,
+      "end": 335.08,
+      "text": "there's also Lego MT from Lately's group"
+    },
+    {
+      "id": 98,
+      "start": 335.08,
+      "end": 336.28,
+      "text": "that you can use for this."
+    },
+    {
+      "id": 99,
+      "start": 337.28,
+      "end": 338.28,
+      "text": "Cool."
+    },
+    {
+      "id": 100,
+      "start": 341.28,
+      "end": 344.68,
+      "text": "Okay, I'd like to move on to multi-lingual pre-trained models."
+    },
+    {
+      "id": 101,
+      "start": 344.68,
+      "end": 347.36,
+      "text": "Are there any questions about what I talked about so far?"
+    },
+    {
+      "id": 102,
+      "start": 350.44,
+      "end": 351.76,
+      "text": "Okay, cool."
+    },
+    {
+      "id": 103,
+      "start": 351.76,
+      "end": 354.92,
+      "text": "So I want to talk about multi-lingual pre-trained models."
+    },
+    {
+      "id": 104,
+      "start": 356.32,
+      "end": 360.6,
+      "text": "Close LLM such as GPT-4 typically kind of like incidentally"
+    },
+    {
+      "id": 105,
+      "start": 360.6,
+      "end": 365.6,
+      "text": "multi-lingual due to large training data."
+    },
+    {
+      "id": 106,
+      "start": 365.84,
+      "end": 369.56,
+      "text": "Open LLM's often do data filtering"
+    },
+    {
+      "id": 107,
+      "start": 369.56,
+      "end": 371.2,
+      "text": "to allow for good performance and English,"
+    },
+    {
+      "id": 108,
+      "start": 371.2,
+      "end": 372.76,
+      "text": "like I mentioned before."
+    },
+    {
+      "id": 109,
+      "start": 372.76,
+      "end": 376.96,
+      "text": "And so there aren't a whole lot of really good open options"
+    },
+    {
+      "id": 110,
+      "start": 376.96,
+      "end": 381.4,
+      "text": "for standard left to right auto regressive models."
+    },
+    {
+      "id": 111,
+      "start": 381.4,
+      "end": 382.88,
+      "text": "I would say probably at the moment,"
+    },
+    {
+      "id": 112,
+      "start": 382.88,
+      "end": 383.92,
+      "text": "when is the best one?"
+    },
+    {
+      "id": 113,
+      "start": 383.92,
+      "end": 388.92,
+      "text": "And I already covered that before in the previous class."
+    },
+    {
+      "id": 114,
+      "start": 389.56,
+      "end": 391.36,
+      "text": "So I'm not going to do it again."
+    },
+    {
+      "id": 115,
+      "start": 391.36,
+      "end": 394.6,
+      "text": "So but what I would like to talk about is multi-lingual"
+    },
+    {
+      "id": 116,
+      "start": 394.6,
+      "end": 399.6,
+      "text": "representation learning models and also encoder decoder models"
+    },
+    {
+      "id": 117,
+      "start": 400.08,
+      "end": 403.16,
+      "text": "because they unlike in English,"
+    },
+    {
+      "id": 118,
+      "start": 403.16,
+      "end": 406.96,
+      "text": "where I would say all the good models are auto regressive."
+    },
+    {
+      "id": 119,
+      "start": 406.96,
+      "end": 410.12,
+      "text": "The encoder decoder in mass language models"
+    },
+    {
+      "id": 120,
+      "start": 410.12,
+      "end": 412.96,
+      "text": "are actually pretty competitive for multi-lingual tasks."
+    },
+    {
+      "id": 121,
+      "start": 413.88,
+      "end": 417.2,
+      "text": "So language model pre-training such as Bert"
+    },
+    {
+      "id": 122,
+      "start": 417.2,
+      "end": 420.0,
+      "text": "has been shown to be effective"
+    },
+    {
+      "id": 123,
+      "start": 420.0,
+      "end": 423.48,
+      "text": "and it uses mass language modeling objectives."
+    },
+    {
+      "id": 124,
+      "start": 424.76,
+      "end": 428.52,
+      "text": "And models such as Embert and XLM and XLMR extend"
+    },
+    {
+      "id": 125,
+      "start": 428.52,
+      "end": 431.8,
+      "text": "Bert's style training for multi-lingual pre-training."
+    },
+    {
+      "id": 126,
+      "start": 431.8,
+      "end": 434.0,
+      "text": "Before I get into exactly how they do this,"
+    },
+    {
+      "id": 127,
+      "start": 435.16,
+      "end": 436.36,
+      "text": "I'd like to talk a little bit about"
+    },
+    {
+      "id": 128,
+      "start": 436.36,
+      "end": 439.56,
+      "text": "multi-lingual representation evaluation."
+    },
+    {
+      "id": 129,
+      "start": 439.56,
+      "end": 442.0,
+      "text": "And there's a few standard benchmarks that people use"
+    },
+    {
+      "id": 130,
+      "start": 442.0,
+      "end": 444.32,
+      "text": "for kind of just general purpose skills"
+    },
+    {
+      "id": 131,
+      "start": 444.32,
+      "end": 445.68,
+      "text": "of multi-lingual models."
+    },
+    {
+      "id": 132,
+      "start": 446.8,
+      "end": 451.24,
+      "text": "The first one is extreme and the follow up extreme are."
+    },
+    {
+      "id": 133,
+      "start": 451.24,
+      "end": 453.72,
+      "text": "And basically the way they work is"
+    },
+    {
+      "id": 134,
+      "start": 453.72,
+      "end": 456.16,
+      "text": "you have sentence classification structured prediction"
+    },
+    {
+      "id": 135,
+      "start": 456.16,
+      "end": 459.08,
+      "text": "sentence retrieval and question answering tasks"
+    },
+    {
+      "id": 136,
+      "start": 459.08,
+      "end": 462.44,
+      "text": "across a pretty wide variety of typologically diverse languages,"
+    },
+    {
+      "id": 137,
+      "start": 462.44,
+      "end": 465.48,
+      "text": "maybe something on the order of 40 different languages."
+    },
+    {
+      "id": 138,
+      "start": 467.12,
+      "end": 468.4,
+      "text": "Then there's also X-glue,"
+    },
+    {
+      "id": 139,
+      "start": 468.4,
+      "end": 470.32,
+      "text": "which is less typologically diverse"
+    },
+    {
+      "id": 140,
+      "start": 470.32,
+      "end": 473.24,
+      "text": "but also contains generation style tasks."
+    },
+    {
+      "id": 141,
+      "start": 474.36,
+      "end": 477.44,
+      "text": "And yeah, X-stream R is a harder version based on X-stream."
+    },
+    {
+      "id": 142,
+      "start": 478.12,
+      "end": 483.28,
+      "text": "So the way that people do multi-lingual mass language"
+    },
+    {
+      "id": 143,
+      "start": 483.28,
+      "end": 487.16,
+      "text": "modeling style objectives is unlike mass language modeling"
+    },
+    {
+      "id": 144,
+      "start": 487.16,
+      "end": 490.64,
+      "text": "where you mask out the input and you try to predict the output."
+    },
+    {
+      "id": 145,
+      "start": 490.64,
+      "end": 494.44,
+      "text": "What they can do is they feed in one sentence"
+    },
+    {
+      "id": 146,
+      "start": 494.44,
+      "end": 498.6,
+      "text": "that's in one language in another sentence"
+    },
+    {
+      "id": 147,
+      "start": 498.6,
+      "end": 502.72,
+      "text": "that's in another language, ideally parallel sentences,"
+    },
+    {
+      "id": 148,
+      "start": 502.72,
+      "end": 504.96,
+      "text": "and then mask things out."
+    },
+    {
+      "id": 149,
+      "start": 505.44,
+      "end": 509.08,
+      "text": "So the training code can be entirely the same"
+    },
+    {
+      "id": 150,
+      "start": 509.08,
+      "end": 513.12,
+      "text": "or almost entirely the same minus adding kind of"
+    },
+    {
+      "id": 151,
+      "start": 513.12,
+      "end": 516.44,
+      "text": "language embeddings here, but they train the model"
+    },
+    {
+      "id": 152,
+      "start": 517.36,
+      "end": 521.72,
+      "text": "so that it can kind of predict across the languages"
+    },
+    {
+      "id": 153,
+      "start": 521.72,
+      "end": 524.48,
+      "text": "which aligns the representations across language"
+    },
+    {
+      "id": 154,
+      "start": 524.48,
+      "end": 525.32,
+      "text": "it's better."
+    },
+    {
+      "id": 155,
+      "start": 525.32,
+      "end": 527.96,
+      "text": "And people have demonstrated that this is good"
+    },
+    {
+      "id": 156,
+      "start": 527.96,
+      "end": 529.48,
+      "text": "for learning representations."
+    },
+    {
+      "id": 157,
+      "start": 535.24,
+      "end": 536.56,
+      "text": "Actually, in the..."
+    },
+    {
+      "id": 158,
+      "start": 538.68,
+      "end": 541.8,
+      "text": "There's also methods that can explicitly use alignments"
+    },
+    {
+      "id": 159,
+      "start": 541.8,
+      "end": 544.0,
+      "text": "to improve the alignment between representations"
+    },
+    {
+      "id": 160,
+      "start": 544.0,
+      "end": 547.12,
+      "text": "in different languages, but in the interest of time,"
+    },
+    {
+      "id": 161,
+      "start": 547.12,
+      "end": 548.72,
+      "text": "I'll skip that and maybe get back to it"
+    },
+    {
+      "id": 162,
+      "start": 548.72,
+      "end": 550.28,
+      "text": "if we have time."
+    },
+    {
+      "id": 163,
+      "start": 552.12,
+      "end": 555.04,
+      "text": "A very good model to know about,"
+    },
+    {
+      "id": 164,
+      "start": 555.04,
+      "end": 558.76,
+      "text": "because I think this is still one of the best models"
+    },
+    {
+      "id": 165,
+      "start": 558.76,
+      "end": 563.84,
+      "text": "for being used for multi-lingual processing"
+    },
+    {
+      "id": 166,
+      "start": 563.84,
+      "end": 565.64,
+      "text": "is MT5."
+    },
+    {
+      "id": 167,
+      "start": 565.64,
+      "end": 568.96,
+      "text": "And MT5 is based on the T5 architecture,"
+    },
+    {
+      "id": 168,
+      "start": 568.96,
+      "end": 572.04,
+      "text": "which is basically an encoder-decoder architecture"
+    },
+    {
+      "id": 169,
+      "start": 572.04,
+      "end": 577.04,
+      "text": "with a masked reconstruction objective."
+    },
+    {
+      "id": 170,
+      "start": 577.96,
+      "end": 580.36,
+      "text": "And the way that works, in case..."
+    },
+    {
+      "id": 171,
+      "start": 583.64,
+      "end": 585.28,
+      "text": "We haven't talked about this in a while,"
+    },
+    {
+      "id": 172,
+      "start": 585.28,
+      "end": 589.12,
+      "text": "so in case we need a refresher,"
+    },
+    {
+      "id": 173,
+      "start": 589.12,
+      "end": 591.28,
+      "text": "the way it works is basically..."
+    },
+    {
+      "id": 174,
+      "start": 591.4,
+      "end": 594.28,
+      "text": "You have an encoder-decoder model"
+    },
+    {
+      "id": 175,
+      "start": 594.28,
+      "end": 596.72,
+      "text": "that takes in inputs,"
+    },
+    {
+      "id": 176,
+      "start": 596.72,
+      "end": 600.8,
+      "text": "and you do perturbations of the outputs,"
+    },
+    {
+      "id": 177,
+      "start": 600.8,
+      "end": 602.88,
+      "text": "so you do things like dropping..."
+    }
+  ],
+  "language": "en"
+}

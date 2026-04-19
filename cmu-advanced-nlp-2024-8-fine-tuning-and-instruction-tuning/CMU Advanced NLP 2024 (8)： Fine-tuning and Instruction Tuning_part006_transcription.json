@@ -1,0 +1,1193 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 2.0,
+      "text": "Oh, any questions about this?"
+    },
+    {
+      "id": 1,
+      "start": 6.24,
+      "end": 8.32,
+      "text": "Nice, okay, yes, sorry."
+    },
+    {
+      "id": 2,
+      "start": 8.32,
+      "end": 16.44,
+      "text": "How do they ensure that similar data"
+    },
+    {
+      "id": 3,
+      "start": 16.44,
+      "end": 17.92,
+      "text": "is not appear in the training data?"
+    },
+    {
+      "id": 4,
+      "start": 17.92,
+      "end": 22.12,
+      "text": "So people have tried a bunch of different things."
+    },
+    {
+      "id": 5,
+      "start": 22.12,
+      "end": 25.36,
+      "text": "This actually might be a good thing to talk about"
+    },
+    {
+      "id": 6,
+      "start": 25.36,
+      "end": 28.0,
+      "text": "at some point when you talk about data curation"
+    },
+    {
+      "id": 7,
+      "start": 28.0,
+      "end": 29.04,
+      "text": "or things like this."
+    },
+    {
+      "id": 8,
+      "start": 31.0,
+      "end": 35.84,
+      "text": "The first thing is you actually create the data."
+    },
+    {
+      "id": 9,
+      "start": 35.84,
+      "end": 37.52,
+      "text": "So similar is actually okay, right?"
+    },
+    {
+      "id": 10,
+      "start": 37.52,
+      "end": 42.52,
+      "text": "Because if it appears everywhere on the internet,"
+    },
+    {
+      "id": 11,
+      "start": 43.12,
+      "end": 44.68,
+      "text": "GPD4 will learn it."
+    },
+    {
+      "id": 12,
+      "start": 44.68,
+      "end": 47.32,
+      "text": "The problem is like the exact same thing appears."
+    },
+    {
+      "id": 13,
+      "start": 48.4,
+      "end": 51.4,
+      "text": "So number one, how do we prevent this from happening?"
+    },
+    {
+      "id": 14,
+      "start": 51.4,
+      "end": 53.8,
+      "text": "Number two, how do we even tell that it did happen?"
+    },
+    {
+      "id": 15,
+      "start": 54.8,
+      "end": 57.48,
+      "text": "So some things that people do to tell that it did happen"
+    },
+    {
+      "id": 16,
+      "start": 57.48,
+      "end": 62.48,
+      "text": "is it makes small perturbations to the test data"
+    },
+    {
+      "id": 17,
+      "start": 63.04,
+      "end": 68.04,
+      "text": "and test whether that drops the model score by a whole lot."
+    },
+    {
+      "id": 18,
+      "start": 68.64,
+      "end": 70.56,
+      "text": "There's actually a paper, I don't know if I can find it"
+    },
+    {
+      "id": 19,
+      "start": 70.56,
+      "end": 72.96,
+      "text": "immediately, but there was a paper recently"
+    },
+    {
+      "id": 20,
+      "start": 72.96,
+      "end": 77.96,
+      "text": "that just swapped the order of outputs in MMLU"
+    },
+    {
+      "id": 21,
+      "start": 78.88,
+      "end": 80.92,
+      "text": "and saw that the accuracy went down"
+    },
+    {
+      "id": 22,
+      "start": 80.92,
+      "end": 82.64,
+      "text": "for some language models."
+    },
+    {
+      "id": 23,
+      "start": 82.64,
+      "end": 86.24,
+      "text": "So that should make no difference whatsoever"
+    },
+    {
+      "id": 24,
+      "start": 86.24,
+      "end": 88.24,
+      "text": "because you're just changing the order of answers,"
+    },
+    {
+      "id": 25,
+      "start": 88.24,
+      "end": 91.28,
+      "text": "but it does outputs to go down."
+    },
+    {
+      "id": 26,
+      "start": 91.28,
+      "end": 93.84,
+      "text": "If that's a case, it's a pretty clear sign that it's leaking."
+    },
+    {
+      "id": 27,
+      "start": 95.72,
+      "end": 98.44,
+      "text": "Other things that people do are change the input a little bit."
+    },
+    {
+      "id": 28,
+      "start": 98.44,
+      "end": 101.52,
+      "text": "So like change the number and the math problem"
+    },
+    {
+      "id": 29,
+      "start": 101.52,
+      "end": 102.68,
+      "text": "to be a slightly different value"
+    },
+    {
+      "id": 30,
+      "start": 102.68,
+      "end": 104.6,
+      "text": "and see if that hurts the accuracy overall."
+    },
+    {
+      "id": 31,
+      "start": 104.6,
+      "end": 107.16,
+      "text": "And like making these little perturbations"
+    },
+    {
+      "id": 32,
+      "start": 107.16,
+      "end": 108.52,
+      "text": "that shouldn't change the accuracy"
+    },
+    {
+      "id": 33,
+      "start": 108.52,
+      "end": 109.76,
+      "text": "and then if they do significantly,"
+    },
+    {
+      "id": 34,
+      "start": 109.76,
+      "end": 110.92,
+      "text": "then you think there's a problem."
+    },
+    {
+      "id": 35,
+      "start": 110.92,
+      "end": 114.24,
+      "text": "So I think that's a basic tool to diagnose this."
+    },
+    {
+      "id": 36,
+      "start": 115.16,
+      "end": 117.76,
+      "text": "How do you prevent it from happening?"
+    },
+    {
+      "id": 37,
+      "start": 117.76,
+      "end": 119.76,
+      "text": "There's really simple and silly things"
+    },
+    {
+      "id": 38,
+      "start": 119.76,
+      "end": 124.76,
+      "text": "that you can do like zip the file"
+    },
+    {
+      "id": 39,
+      "start": 124.8,
+      "end": 129.16,
+      "text": "and like put a password on the file."
+    },
+    {
+      "id": 40,
+      "start": 129.16,
+      "end": 131.76,
+      "text": "And then like a scraper, even if it's scraping"
+    },
+    {
+      "id": 41,
+      "start": 131.76,
+      "end": 133.92,
+      "text": "all of GitHub for training data,"
+    },
+    {
+      "id": 42,
+      "start": 133.92,
+      "end": 135.96,
+      "text": "it won't scrape your zip"
+    },
+    {
+      "id": 43,
+      "start": 135.96,
+      "end": 137.76,
+      "text": "and password protected file, right?"
+    },
+    {
+      "id": 44,
+      "start": 137.76,
+      "end": 140.84,
+      "text": "So that's kind of a first line of defense."
+    },
+    {
+      "id": 45,
+      "start": 140.84,
+      "end": 143.64,
+      "text": "It doesn't work if someone puts it like,"
+    },
+    {
+      "id": 46,
+      "start": 143.92,
+      "end": 147.16,
+      "text": "someone puts it somewhere in unzipped format."
+    },
+    {
+      "id": 47,
+      "start": 147.16,
+      "end": 149.0,
+      "text": "So that's a problem."
+    },
+    {
+      "id": 48,
+      "start": 149.0,
+      "end": 151.6,
+      "text": "But there are things that you can do like that."
+    },
+    {
+      "id": 49,
+      "start": 151.6,
+      "end": 153.36,
+      "text": "Another thing you can do is just not reveal"
+    },
+    {
+      "id": 50,
+      "start": 153.36,
+      "end": 154.36,
+      "text": "your data whatsoever."
+    },
+    {
+      "id": 51,
+      "start": 154.36,
+      "end": 156.84,
+      "text": "So you can keep a private version of the data."
+    },
+    {
+      "id": 52,
+      "start": 157.64,
+      "end": 159.44,
+      "text": "You can keep a private version of the data"
+    },
+    {
+      "id": 53,
+      "start": 159.44,
+      "end": 163.64,
+      "text": "and not let anybody else see the outputs."
+    },
+    {
+      "id": 54,
+      "start": 163.64,
+      "end": 165.76,
+      "text": "So yeah, it's pretty tricky."
+    },
+    {
+      "id": 55,
+      "start": 165.76,
+      "end": 166.6,
+      "text": "Yeah."
+    },
+    {
+      "id": 56,
+      "start": 167.28,
+      "end": 168.12,
+      "text": "Yeah."
+    },
+    {
+      "id": 57,
+      "start": 172.28,
+      "end": 174.2,
+      "text": "How do you control for test complexity?"
+    },
+    {
+      "id": 58,
+      "start": 174.2,
+      "end": 176.32,
+      "text": "That's a great question."
+    },
+    {
+      "id": 59,
+      "start": 177.88,
+      "end": 179.88,
+      "text": "I don't think there's any really good definition"
+    },
+    {
+      "id": 60,
+      "start": 179.88,
+      "end": 182.0,
+      "text": "of test complexity yet."
+    },
+    {
+      "id": 61,
+      "start": 182.0,
+      "end": 185.52,
+      "text": "Some things that you can do are control for like length"
+    },
+    {
+      "id": 62,
+      "start": 185.52,
+      "end": 190.52,
+      "text": "or control for, you know, the number,"
+    },
+    {
+      "id": 63,
+      "start": 191.44,
+      "end": 194.88,
+      "text": "the number of hops that are required"
+    },
+    {
+      "id": 64,
+      "start": 194.88,
+      "end": 198.04,
+      "text": "in like multi hop reasoning."
+    },
+    {
+      "id": 65,
+      "start": 198.04,
+      "end": 201.36,
+      "text": "There's actually one really interesting work"
+    },
+    {
+      "id": 66,
+      "start": 205.52,
+      "end": 208.92,
+      "text": "that tries to do that control necessarily,"
+    },
+    {
+      "id": 67,
+      "start": 208.92,
+      "end": 211.76,
+      "text": "but at least evaluate."
+    },
+    {
+      "id": 68,
+      "start": 216.64,
+      "end": 218.0,
+      "text": "There's actually a couple."
+    },
+    {
+      "id": 69,
+      "start": 219.36,
+      "end": 221.92,
+      "text": "So what this tries to do"
+    },
+    {
+      "id": 70,
+      "start": 221.92,
+      "end": 224.88,
+      "text": "is this tries to break down questions"
+    },
+    {
+      "id": 71,
+      "start": 224.88,
+      "end": 228.48,
+      "text": "into kind of like operations that you would need to solve"
+    },
+    {
+      "id": 72,
+      "start": 228.48,
+      "end": 229.88,
+      "text": "due to solve them."
+    },
+    {
+      "id": 73,
+      "start": 229.88,
+      "end": 231.16,
+      "text": "So it's like,"
+    },
+    {
+      "id": 74,
+      "start": 232.76,
+      "end": 235.16,
+      "text": "which keywords have been contained by more than"
+    },
+    {
+      "id": 75,
+      "start": 235.16,
+      "end": 236.76,
+      "text": "a hundred ACL papers and they say,"
+    },
+    {
+      "id": 76,
+      "start": 236.76,
+      "end": 238.0,
+      "text": "okay, first you need to select,"
+    },
+    {
+      "id": 77,
+      "start": 238.0,
+      "end": 239.72,
+      "text": "then you need to filter, then you need to project"
+    },
+    {
+      "id": 78,
+      "start": 239.72,
+      "end": 240.56,
+      "text": "and stuff like that."
+    },
+    {
+      "id": 79,
+      "start": 240.56,
+      "end": 242.8,
+      "text": "So they try to at least express the level"
+    },
+    {
+      "id": 80,
+      "start": 242.8,
+      "end": 244.28,
+      "text": "of complexity in this way."
+    },
+    {
+      "id": 81,
+      "start": 245.36,
+      "end": 248.92,
+      "text": "There's also another one that's not so much on real data."
+    },
+    {
+      "id": 82,
+      "start": 249.92,
+      "end": 252.68,
+      "text": "Sorry, this is called the break benchmark,"
+    },
+    {
+      "id": 83,
+      "start": 252.68,
+      "end": 253.68,
+      "text": "if you're interested."
+    },
+    {
+      "id": 84,
+      "start": 254.92,
+      "end": 258.12,
+      "text": "There was also a more recent one paper that I liked."
+    },
+    {
+      "id": 85,
+      "start": 261.36,
+      "end": 264.6,
+      "text": "They tried to do something somewhat similar"
+    },
+    {
+      "id": 86,
+      "start": 270.4,
+      "end": 271.88,
+      "text": "where they express,"
+    },
+    {
+      "id": 87,
+      "start": 271.88,
+      "end": 274.8,
+      "text": "they come up with like math or programming problems"
+    },
+    {
+      "id": 88,
+      "start": 274.8,
+      "end": 276.48,
+      "text": "and try to express them as a graph"
+    },
+    {
+      "id": 89,
+      "start": 276.48,
+      "end": 279.52,
+      "text": "and then do some examination of how transformer models"
+    },
+    {
+      "id": 90,
+      "start": 279.52,
+      "end": 281.68,
+      "text": "do on things of different complexity."
+    },
+    {
+      "id": 91,
+      "start": 281.68,
+      "end": 283.72,
+      "text": "I think the problem is there's so many different things"
+    },
+    {
+      "id": 92,
+      "start": 283.72,
+      "end": 285.96,
+      "text": "that could make something harder easy."
+    },
+    {
+      "id": 93,
+      "start": 285.96,
+      "end": 289.56,
+      "text": "There's also like, is it in distribution or out of distribution"
+    },
+    {
+      "id": 94,
+      "start": 289.56,
+      "end": 292.96,
+      "text": "from the point of view of topic or language"
+    },
+    {
+      "id": 95,
+      "start": 292.96,
+      "end": 295.72,
+      "text": "or speaking style or things like that?"
+    },
+    {
+      "id": 96,
+      "start": 295.72,
+      "end": 299.44,
+      "text": "And actually, I think we're going to talk about this"
+    },
+    {
+      "id": 97,
+      "start": 300.4,
+      "end": 302.72,
+      "text": "in the debugging and evaluation lecture,"
+    },
+    {
+      "id": 98,
+      "start": 302.72,
+      "end": 304.32,
+      "text": "but like one of the things I really like to do"
+    },
+    {
+      "id": 99,
+      "start": 304.32,
+      "end": 306.32,
+      "text": "is I like to sub-segment to data"
+    },
+    {
+      "id": 100,
+      "start": 306.32,
+      "end": 308.0,
+      "text": "and look at different sub-segments of the data"
+    },
+    {
+      "id": 101,
+      "start": 308.0,
+      "end": 312.2,
+      "text": "where I think the sub-segments will affect accuracy by a lot."
+    },
+    {
+      "id": 102,
+      "start": 312.2,
+      "end": 314.64,
+      "text": "And basically, anything that you've got sub-segment on"
+    },
+    {
+      "id": 103,
+      "start": 314.64,
+      "end": 317.88,
+      "text": "is like something that determines difficulties."
+    },
+    {
+      "id": 104,
+      "start": 317.88,
+      "end": 321.68,
+      "text": "So yeah, let's just say about that basically."
+    },
+    {
+      "id": 105,
+      "start": 323.2,
+      "end": 324.68,
+      "text": "Cool, any other questions?"
+    },
+    {
+      "id": 106,
+      "start": 325.76,
+      "end": 328.56,
+      "text": "Okay, if that, let me get onto instruction tuning."
+    },
+    {
+      "id": 107,
+      "start": 328.56,
+      "end": 330.52,
+      "text": "I don't have a whole lot about instruction tuning"
+    },
+    {
+      "id": 108,
+      "start": 330.52,
+      "end": 333.56,
+      "text": "because it's, you know, conceptually pretty simple,"
+    },
+    {
+      "id": 109,
+      "start": 333.56,
+      "end": 336.08,
+      "text": "but I would like to talk about all of it."
+    },
+    {
+      "id": 110,
+      "start": 336.08,
+      "end": 341.08,
+      "text": "So basic instruction tuning was proposed almost simultaneously"
+    },
+    {
+      "id": 111,
+      "start": 341.36,
+      "end": 344.4,
+      "text": "by people at Google and people at Hugging Face."
+    },
+    {
+      "id": 112,
+      "start": 344.4,
+      "end": 349.6,
+      "text": "The way it works is you have tasks"
+    },
+    {
+      "id": 113,
+      "start": 349.6,
+      "end": 354.6,
+      "text": "and you train on lots of tasks where you append the prompt"
+    },
+    {
+      "id": 114,
+      "start": 355.36,
+      "end": 360.12,
+      "text": "and you append the prompt, you append the input"
+    },
+    {
+      "id": 115,
+      "start": 360.12,
+      "end": 363.12,
+      "text": "and then you just try to train to generate that approach."
+    },
+    {
+      "id": 116,
+      "start": 363.12,
+      "end": 366.08,
+      "text": "And so this is this contrast from like base language model"
+    },
+    {
+      "id": 117,
+      "start": 366.08,
+      "end": 368.0,
+      "text": "training because you're still training a language model"
+    },
+    {
+      "id": 118,
+      "start": 368.0,
+      "end": 369.88,
+      "text": "based on a prompt and an output,"
+    },
+    {
+      "id": 119,
+      "start": 369.88,
+      "end": 373.24,
+      "text": "but you're specifically formatting them"
+    },
+    {
+      "id": 120,
+      "start": 373.24,
+      "end": 374.16,
+      "text": "in a particular way."
+    },
+    {
+      "id": 121,
+      "start": 374.16,
+      "end": 376.92,
+      "text": "So it corresponds to solving tasks."
+    },
+    {
+      "id": 122,
+      "start": 376.92,
+      "end": 378.48,
+      "text": "It's essentially supervised training"
+    },
+    {
+      "id": 123,
+      "start": 378.48,
+      "end": 380.44,
+      "text": "but supervised training over many, many tasks,"
+    },
+    {
+      "id": 124,
+      "start": 380.44,
+      "end": 383.0,
+      "text": "fine tuning over many, many tasks."
+    },
+    {
+      "id": 125,
+      "start": 383.0,
+      "end": 386.52,
+      "text": "The interesting thing that these papers showed was"
+    },
+    {
+      "id": 126,
+      "start": 386.52,
+      "end": 390.56,
+      "text": "that basically if you do this instruction tuning,"
+    },
+    {
+      "id": 127,
+      "start": 390.56,
+      "end": 394.08,
+      "text": "you do well not only on the task set you trained on"
+    },
+    {
+      "id": 128,
+      "start": 394.08,
+      "end": 396.68,
+      "text": "but also on new tasks that you didn't train on."
+    },
+    {
+      "id": 129,
+      "start": 397.68,
+      "end": 400.24,
+      "text": "And so this is now really like important."
+    },
+    {
+      "id": 130,
+      "start": 400.24,
+      "end": 403.36,
+      "text": "It's incorporated in every serious language model"
+    },
+    {
+      "id": 131,
+      "start": 403.36,
+      "end": 407.16,
+      "text": "that's used in a kind of like production setting nowadays."
+    },
+    {
+      "id": 132,
+      "start": 407.16,
+      "end": 412.16,
+      "text": "And all, yeah, so I think that's the basic idea here."
+    },
+    {
+      "id": 133,
+      "start": 412.28,
+      "end": 413.8,
+      "text": "The basic idea here."
+    },
+    {
+      "id": 134,
+      "start": 417.92,
+      "end": 421.28,
+      "text": "You can also do things like learn to in context learn."
+    },
+    {
+      "id": 135,
+      "start": 421.28,
+      "end": 423.44,
+      "text": "So we talked about in context learning."
+    },
+    {
+      "id": 136,
+      "start": 423.44,
+      "end": 427.68,
+      "text": "So in context learning instead of giving just a prompt,"
+    },
+    {
+      "id": 137,
+      "start": 427.68,
+      "end": 430.52,
+      "text": "you give training examples in the context."
+    },
+    {
+      "id": 138,
+      "start": 430.52,
+      "end": 433.92,
+      "text": "And so that's what you do in this paper here as well."
+    },
+    {
+      "id": 139,
+      "start": 433.92,
+      "end": 436.2,
+      "text": "You sample a whole bunch of training examples,"
+    },
+    {
+      "id": 140,
+      "start": 436.2,
+      "end": 440.2,
+      "text": "you append them to the context and then you train the model."
+    },
+    {
+      "id": 141,
+      "start": 440.2,
+      "end": 441.72,
+      "text": "And so why is this good?"
+    },
+    {
+      "id": 142,
+      "start": 441.88,
+      "end": 443.48,
+      "text": "This is good because it will train the model"
+    },
+    {
+      "id": 143,
+      "start": 443.48,
+      "end": 445.52,
+      "text": "that's better in context learning basically."
+    },
+    {
+      "id": 144,
+      "start": 445.52,
+      "end": 449.52,
+      "text": "So if you want to provide these training examples"
+    },
+    {
+      "id": 145,
+      "start": 449.52,
+      "end": 450.92,
+      "text": "and you can train it like that."
+    },
+    {
+      "id": 146,
+      "start": 453.88,
+      "end": 455.52,
+      "text": "So these are the two basic ways"
+    },
+    {
+      "id": 147,
+      "start": 455.52,
+      "end": 457.68,
+      "text": "of doing instruction tuning."
+    },
+    {
+      "id": 148,
+      "start": 457.68,
+      "end": 459.8,
+      "text": "I'll all came out around the same time."
+    },
+    {
+      "id": 149,
+      "start": 462.32,
+      "end": 465.04,
+      "text": "There are a bunch of data sets that people have compiled."
+    },
+    {
+      "id": 150,
+      "start": 465.04,
+      "end": 468.84,
+      "text": "And you probably, if you want to do any sort of instruction"
+    },
+    {
+      "id": 151,
+      "start": 468.84,
+      "end": 471.2,
+      "text": "tuning, you probably want to use one of these data sets"
+    },
+    {
+      "id": 152,
+      "start": 471.2,
+      "end": 473.56,
+      "text": "because compiling together a bunch of data sets"
+    },
+    {
+      "id": 153,
+      "start": 473.56,
+      "end": 474.88,
+      "text": "is just annoying."
+    },
+    {
+      "id": 154,
+      "start": 474.88,
+      "end": 476.48,
+      "text": "It's not hard, but it's annoying."
+    },
+    {
+      "id": 155,
+      "start": 480.48,
+      "end": 484.4,
+      "text": "I very highly recommend this paper on the flange collection"
+    },
+    {
+      "id": 156,
+      "start": 484.4,
+      "end": 486.72,
+      "text": "because it gives a good summary."
+    },
+    {
+      "id": 157,
+      "start": 486.72,
+      "end": 488.72,
+      "text": "It has this really nice table that breaks them down"
+    },
+    {
+      "id": 158,
+      "start": 488.72,
+      "end": 492.2,
+      "text": "based on what's the name of the data set,"
+    },
+    {
+      "id": 159,
+      "start": 493.2,
+      "end": 495.56,
+      "text": "what is the size of the training data,"
+    },
+    {
+      "id": 160,
+      "start": 496.48,
+      "end": 500.28,
+      "text": "what prompts do they use, zero shot or few shot."
+    },
+    {
+      "id": 161,
+      "start": 500.28,
+      "end": 502.64,
+      "text": "So like few shot is learning in context learning,"
+    },
+    {
+      "id": 162,
+      "start": 502.64,
+      "end": 505.0,
+      "text": "like I mentioned before, how many tasks are there"
+    },
+    {
+      "id": 163,
+      "start": 506.04,
+      "end": 507.96,
+      "text": "in what detailed methods to be used."
+    },
+    {
+      "id": 164,
+      "start": 507.96,
+      "end": 509.72,
+      "text": "So you can take a look at this."
+    },
+    {
+      "id": 165,
+      "start": 509.72,
+      "end": 512.08,
+      "text": "Some very popular ones that lots of people use"
+    },
+    {
+      "id": 166,
+      "start": 512.08,
+      "end": 515.36,
+      "text": "are things like the flange collection from here."
+    },
+    {
+      "id": 167,
+      "start": 515.36,
+      "end": 519.44,
+      "text": "Also natural instructions is a very popular one"
+    },
+    {
+      "id": 168,
+      "start": 519.44,
+      "end": 520.96,
+      "text": "that still people use a lot."
+    },
+    {
+      "id": 169,
+      "start": 522.24,
+      "end": 525.44,
+      "text": "And self instruct is a popular one"
+    },
+    {
+      "id": 170,
+      "start": 525.44,
+      "end": 527.84,
+      "text": "that I'll talk about in a second."
+    },
+    {
+      "id": 171,
+      "start": 531.28,
+      "end": 532.6,
+      "text": "Cool."
+    },
+    {
+      "id": 172,
+      "start": 532.6,
+      "end": 534.92,
+      "text": "So the second thing that I want to talk about"
+    },
+    {
+      "id": 173,
+      "start": 534.92,
+      "end": 537.16,
+      "text": "is instruction tune models."
+    },
+    {
+      "id": 174,
+      "start": 537.16,
+      "end": 538.68,
+      "text": "Or the next thing that I want to talk about"
+    },
+    {
+      "id": 175,
+      "start": 538.68,
+      "end": 540.28,
+      "text": "is instruction tune models."
+    },
+    {
+      "id": 176,
+      "start": 540.28,
+      "end": 542.56,
+      "text": "These are examples of models that I can recommend"
+    },
+    {
+      "id": 177,
+      "start": 542.56,
+      "end": 544.56,
+      "text": "you use now in 2044."
+    },
+    {
+      "id": 178,
+      "start": 544.56,
+      "end": 546.48,
+      "text": "They're like good models to use."
+    },
+    {
+      "id": 179,
+      "start": 548.56,
+      "end": 553.64,
+      "text": "Flan T5, I think, is a very good model,"
+    },
+    {
+      "id": 180,
+      "start": 553.64,
+      "end": 556.4,
+      "text": "especially it's a very good model for its size."
+    },
+    {
+      "id": 181,
+      "start": 556.4,
+      "end": 560.84,
+      "text": "And it comes in various sizes from smaller models"
+    },
+    {
+      "id": 182,
+      "start": 560.84,
+      "end": 564.72,
+      "text": "to those up to 11 billion parameters."
+    },
+    {
+      "id": 183,
+      "start": 564.72,
+      "end": 567.84,
+      "text": "And it's an encoder decoder model based on T5"
+    },
+    {
+      "id": 184,
+      "start": 567.84,
+      "end": 569.52,
+      "text": "that was trained on lots of data."
+    },
+    {
+      "id": 185,
+      "start": 570.44,
+      "end": 573.68,
+      "text": "My impression is that this is a model"
+    },
+    {
+      "id": 186,
+      "start": 573.68,
+      "end": 576.36,
+      "text": "that's like consistently good at anything"
+    },
+    {
+      "id": 187,
+      "start": 576.36,
+      "end": 579.2,
+      "text": "that's like a simple input output style task,"
+    },
+    {
+      "id": 188,
+      "start": 579.2,
+      "end": 580.6,
+      "text": "not like a chat task."
+    },
+    {
+      "id": 189,
+      "start": 581.56,
+      "end": 583.64,
+      "text": "So if you just have input output,"
+    },
+    {
+      "id": 190,
+      "start": 583.64,
+      "end": 585.88,
+      "text": "you want to do like code generation,"
+    },
+    {
+      "id": 191,
+      "start": 585.88,
+      "end": 588.68,
+      "text": "you want to do maybe that code generation."
+    },
+    {
+      "id": 192,
+      "start": 588.68,
+      "end": 590.8,
+      "text": "You want to do like summarization or other things like that."
+    },
+    {
+      "id": 193,
+      "start": 590.8,
+      "end": 591.96,
+      "text": "That's a good model for you."
+    },
+    {
+      "id": 194,
+      "start": 593.88,
+      "end": 595.44,
+      "text": "Another one is Lama 2 chat."
+    },
+    {
+      "id": 195,
+      "start": 595.44,
+      "end": 597.52,
+      "text": "So Lama 2 chat was instruction tuned"
+    },
+    {
+      "id": 196,
+      "start": 597.52,
+      "end": 600.96,
+      "text": "and kind of tuned with human preferences,"
+    },
+    {
+      "id": 197,
+      "start": 600.96,
+      "end": 602.6,
+      "text": "but it is it."
+    }
+  ],
+  "language": "en"
+}

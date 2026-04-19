@@ -1,0 +1,767 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 9.72,
+      "text": "So, Womish Models are pretty powerful for solving many tasks."
+    },
+    {
+      "id": 1,
+      "start": 9.72,
+      "end": 14.96,
+      "text": "Mostly tax generation tasks, as you probably have seen a lot of examples from top to video"
+    },
+    {
+      "id": 2,
+      "start": 14.96,
+      "end": 15.96,
+      "text": "to the report."
+    },
+    {
+      "id": 3,
+      "start": 15.96,
+      "end": 21.56,
+      "text": "But however, our language models can announce for everything, and my version of answer is"
+    },
+    {
+      "id": 4,
+      "start": 21.56,
+      "end": 22.56,
+      "text": "no."
+    },
+    {
+      "id": 5,
+      "start": 22.56,
+      "end": 27.8,
+      "text": "So, if you look at thumbs and arrows, that Womish Models are actually not very good at"
+    },
+    {
+      "id": 6,
+      "start": 27.8,
+      "end": 28.8,
+      "text": "it."
+    },
+    {
+      "id": 7,
+      "start": 28.8,
+      "end": 34.84,
+      "text": "So, first, when some queries ask about complex reasoning, for example, if you want the"
+    },
+    {
+      "id": 8,
+      "start": 34.84,
+      "end": 40.24,
+      "text": "long-term model to do math population, it's not probably not going to do it very efficiently"
+    },
+    {
+      "id": 9,
+      "start": 40.24,
+      "end": 41.24,
+      "text": "or very accurately."
+    },
+    {
+      "id": 10,
+      "start": 41.24,
+      "end": 47.08,
+      "text": "For example, the common approach, like here, like using a channel 5, like you can do"
+    },
+    {
+      "id": 11,
+      "start": 47.08,
+      "end": 52.68,
+      "text": "as a process in very detail, and may not get the correct answer."
+    },
+    {
+      "id": 12,
+      "start": 52.68,
+      "end": 58.28,
+      "text": "However, if you have a calculator tool, you can just directly input the expression into"
+    },
+    {
+      "id": 13,
+      "start": 58.28,
+      "end": 61.56,
+      "text": "the calculator and get the formula result."
+    },
+    {
+      "id": 14,
+      "start": 61.56,
+      "end": 65.92,
+      "text": "That's a questionnaire, and there are other scenarios, for example, if you need to access"
+    },
+    {
+      "id": 15,
+      "start": 65.92,
+      "end": 71.2,
+      "text": "real-world information that Womish Models itself may not be, if our formula is mentally"
+    },
+    {
+      "id": 16,
+      "start": 71.2,
+      "end": 73.16,
+      "text": "unable to answer that question."
+    },
+    {
+      "id": 17,
+      "start": 73.16,
+      "end": 77.4,
+      "text": "For example, if you ask what is the current time, the current time is probably not in the"
+    },
+    {
+      "id": 18,
+      "start": 77.4,
+      "end": 78.48,
+      "text": "model training data."
+    },
+    {
+      "id": 19,
+      "start": 78.48,
+      "end": 83.8,
+      "text": "And, depending on the time they ask this question, the answer to this question is probably"
+    },
+    {
+      "id": 20,
+      "start": 83.8,
+      "end": 84.8,
+      "text": "different."
+    },
+    {
+      "id": 21,
+      "start": 84.8,
+      "end": 90.28,
+      "text": "So, the only way that language models can answer this is by using an external tool, for"
+    },
+    {
+      "id": 22,
+      "start": 90.28,
+      "end": 94.32,
+      "text": "example, calling the API called get time to get the current time."
+    },
+    {
+      "id": 23,
+      "start": 94.32,
+      "end": 99.44,
+      "text": "So, that's a motivation of why people start to get interested in tools and start using"
+    },
+    {
+      "id": 24,
+      "start": 99.44,
+      "end": 100.44,
+      "text": "them."
+    },
+    {
+      "id": 25,
+      "start": 100.44,
+      "end": 105.12,
+      "text": "And, there are a lot of interesting tool related work."
+    },
+    {
+      "id": 26,
+      "start": 105.12,
+      "end": 111.12,
+      "text": "So, you may have heard of two formula, which is maybe one of the most, like, Ferrisburg,"
+    },
+    {
+      "id": 27,
+      "start": 111.12,
+      "end": 115.36,
+      "text": "like, explicitly, propose a term tool to language models."
+    },
+    {
+      "id": 28,
+      "start": 115.36,
+      "end": 122.0,
+      "text": "And, what they do is they propose five tools, including a calculator for a weekly search"
+    },
+    {
+      "id": 29,
+      "start": 122.0,
+      "end": 126.84,
+      "text": "engine to provide external access to the language model."
+    },
+    {
+      "id": 30,
+      "start": 126.84,
+      "end": 133.0,
+      "text": "But, there are many works after this, and you can see this works are all interested"
+    },
+    {
+      "id": 31,
+      "start": 133.0,
+      "end": 135.6,
+      "text": "in two augmented language models."
+    },
+    {
+      "id": 32,
+      "start": 135.68,
+      "end": 141.84,
+      "text": "However, if you look closer, they all evaluate, they all use different tools and evaluate"
+    },
+    {
+      "id": 33,
+      "start": 141.84,
+      "end": 143.68,
+      "text": "on different data sets."
+    },
+    {
+      "id": 34,
+      "start": 143.68,
+      "end": 147.08,
+      "text": "For example, there's two formula and art paper."
+    },
+    {
+      "id": 35,
+      "start": 147.08,
+      "end": 153.36,
+      "text": "They use software as tools, such as calculator, a weekly search engine."
+    },
+    {
+      "id": 36,
+      "start": 153.36,
+      "end": 156.28,
+      "text": "And for this two works, they use API as tools."
+    },
+    {
+      "id": 37,
+      "start": 156.28,
+      "end": 160.16,
+      "text": "For example, the API, so you can't scrape from the website, like get weather or get"
+    },
+    {
+      "id": 38,
+      "start": 160.16,
+      "end": 161.32,
+      "text": "time."
+    },
+    {
+      "id": 39,
+      "start": 161.32,
+      "end": 165.16,
+      "text": "And, there are also works that use neural models as tools."
+    },
+    {
+      "id": 40,
+      "start": 165.16,
+      "end": 172.16,
+      "text": "For example, they scraped all the model names from heavy data, or other places, and use"
+    },
+    {
+      "id": 41,
+      "start": 172.16,
+      "end": 177.64,
+      "text": "like, language model, or other kinds of models that are specialized for some tasks and"
+    },
+    {
+      "id": 42,
+      "start": 177.64,
+      "end": 179.48,
+      "text": "use them as tools."
+    },
+    {
+      "id": 43,
+      "start": 179.48,
+      "end": 185.2,
+      "text": "And lastly, there are works that use, like, mostly locally defined and expert crafty"
+    },
+    {
+      "id": 44,
+      "start": 185.2,
+      "end": 187.04,
+      "text": "assumptions just for this."
+    },
+    {
+      "id": 45,
+      "start": 187.04,
+      "end": 192.84,
+      "text": "So, with all this different virus tools, a natural confusion, at least for me, is what"
+    },
+    {
+      "id": 46,
+      "start": 192.84,
+      "end": 196.04,
+      "text": "are tools anyway, are these all tools?"
+    },
+    {
+      "id": 47,
+      "start": 196.04,
+      "end": 202.44,
+      "text": "So to answer this question, we had a survey that I'll briefly cover this in three dimensions"
+    },
+    {
+      "id": 48,
+      "start": 202.44,
+      "end": 203.44,
+      "text": "today."
+    },
+    {
+      "id": 49,
+      "start": 203.44,
+      "end": 205.48,
+      "text": "One is what is the basic of tools?"
+    },
+    {
+      "id": 50,
+      "start": 205.48,
+      "end": 209.08,
+      "text": "What is the definition and what are the main functionalities of tools?"
+    },
+    {
+      "id": 51,
+      "start": 209.08,
+      "end": 212.88,
+      "text": "And second, what is the narrows where you can use tools?"
+    },
+    {
+      "id": 52,
+      "start": 212.88,
+      "end": 213.88,
+      "text": "What tools do we have?"
+    },
+    {
+      "id": 53,
+      "start": 213.88,
+      "end": 216.28,
+      "text": "What task can we apply this tools in?"
+    },
+    {
+      "id": 54,
+      "start": 216.28,
+      "end": 218.56,
+      "text": "And also using what methods?"
+    },
+    {
+      "id": 55,
+      "start": 219.28,
+      "end": 224.96,
+      "text": "And lastly, I'll cover the evaluation aspects, what task bags and what evaluation metrics"
+    },
+    {
+      "id": 56,
+      "start": 224.96,
+      "end": 225.96,
+      "text": "we can use."
+    },
+    {
+      "id": 57,
+      "start": 225.96,
+      "end": 231.96,
+      "text": "And also, what's the empirical benefit, where if they have any types of benefits at all?"
+    },
+    {
+      "id": 58,
+      "start": 231.96,
+      "end": 235.96,
+      "text": "So I'll first dive into the two basics."
+    },
+    {
+      "id": 59,
+      "start": 235.96,
+      "end": 244.52,
+      "text": "So, from definition, we think tools are actually a program that you can, like, language"
+    },
+    {
+      "id": 60,
+      "start": 244.52,
+      "end": 250.88,
+      "text": "models can leverage and, like, called program to exert some function."
+    },
+    {
+      "id": 61,
+      "start": 250.88,
+      "end": 259.84,
+      "text": "However, for a tool to be a program to be a tool, it needs to satisfy two properties."
+    },
+    {
+      "id": 62,
+      "start": 259.84,
+      "end": 261.84,
+      "text": "One is external."
+    },
+    {
+      "id": 63,
+      "start": 261.84,
+      "end": 269.12,
+      "text": "If we refer back to the definition of animal issues provided by the literature, let"
+    },
+    {
+      "id": 64,
+      "start": 269.12,
+      "end": 275.76,
+      "text": "this day, like, tools are external, employment, environment to object."
+    },
+    {
+      "id": 65,
+      "start": 275.76,
+      "end": 281.24,
+      "text": "So, like, similarly, for language model use tools, those tools should also be external"
+    },
+    {
+      "id": 66,
+      "start": 281.24,
+      "end": 284.96,
+      "text": "to the employer, which in this scenario is a language model."
+    },
+    {
+      "id": 67,
+      "start": 284.96,
+      "end": 290.44,
+      "text": "So in that sense, the program should be external to language model."
+    },
+    {
+      "id": 68,
+      "start": 290.44,
+      "end": 294.0,
+      "text": "And the second property is functional."
+    },
+    {
+      "id": 69,
+      "start": 294.0,
+      "end": 300.72,
+      "text": "So what we mean, that functional is this program should be a function that can be applied"
+    },
+    {
+      "id": 70,
+      "start": 300.72,
+      "end": 305.24,
+      "text": "to other objects in the environment and then change the state of the environment where"
+    },
+    {
+      "id": 71,
+      "start": 305.24,
+      "end": 307.12,
+      "text": "it, like, just yield an output."
+    },
+    {
+      "id": 72,
+      "start": 307.12,
+      "end": 312.88,
+      "text": "So, I think what example is, like, that if, in the environment, we have, like, a blank"
+    },
+    {
+      "id": 73,
+      "start": 312.88,
+      "end": 318.0,
+      "text": "canvas, which is an object, and we also have a tool, which is a brush here."
+    },
+    {
+      "id": 74,
+      "start": 318.0,
+      "end": 324.64,
+      "text": "And the function of this brush is to paint on the canvas and change, like, yielding"
+    },
+    {
+      "id": 75,
+      "start": 324.64,
+      "end": 328.32,
+      "text": "a result, which is the picture."
+    },
+    {
+      "id": 76,
+      "start": 328.32,
+      "end": 334.24,
+      "text": "So combining this two properties, we give a property definition of what is the tool,"
+    },
+    {
+      "id": 77,
+      "start": 334.24,
+      "end": 339.56,
+      "text": "which is a function interface, the computer program, the run sectional to the language"
+    },
+    {
+      "id": 78,
+      "start": 339.56,
+      "end": 340.56,
+      "text": "model."
+    },
+    {
+      "id": 79,
+      "start": 340.56,
+      "end": 346.4,
+      "text": "And ensure how the language model usage tool is by, generates the function calls and the"
+    },
+    {
+      "id": 80,
+      "start": 346.4,
+      "end": 350.4,
+      "text": "input argument through call about that tool."
+    },
+    {
+      "id": 81,
+      "start": 350.4,
+      "end": 353.4,
+      "text": "Any questions of us?"
+    },
+    {
+      "id": 82,
+      "start": 353.4,
+      "end": 354.4,
+      "text": "Cool."
+    },
+    {
+      "id": 83,
+      "start": 354.4,
+      "end": 360.48,
+      "text": "So after knowing the definition, what are the main functionalities of tools?"
+    },
+    {
+      "id": 84,
+      "start": 360.48,
+      "end": 362.96,
+      "text": "We summarize the main functionalities."
+    },
+    {
+      "id": 85,
+      "start": 362.96,
+      "end": 368.32,
+      "text": "With one more three main functionalities, one is a perception tool."
+    },
+    {
+      "id": 86,
+      "start": 368.32,
+      "end": 373.84,
+      "text": "Reception tool is used to collect data from the environment without changing its date."
+    },
+    {
+      "id": 87,
+      "start": 373.84,
+      "end": 380.84,
+      "text": "So for example, like a search engine may be a perception tool, you can just like search"
+    },
+    {
+      "id": 88,
+      "start": 380.84,
+      "end": 385.84,
+      "text": "on the web and collect the pieces of data that are most relevant to your query."
+    },
+    {
+      "id": 89,
+      "start": 385.84,
+      "end": 391.44,
+      "text": "And also another example could be like get weather, you can get, like, for example, that"
+    },
+    {
+      "id": 90,
+      "start": 391.44,
+      "end": 396.36,
+      "text": "calling a get weather API on the web."
+    },
+    {
+      "id": 91,
+      "start": 396.36,
+      "end": 400.0,
+      "text": "And the second functionality is action."
+    },
+    {
+      "id": 92,
+      "start": 400.0,
+      "end": 406.0,
+      "text": "So action tools are used to exert action in the environment and change the state of the"
+    },
+    {
+      "id": 93,
+      "start": 406.0,
+      "end": 407.0,
+      "text": "environment."
+    },
+    {
+      "id": 94,
+      "start": 407.0,
+      "end": 414.8,
+      "text": "So this is, we can reuse example that we've seen in last slide, but actually, so if you"
+    },
+    {
+      "id": 95,
+      "start": 414.8,
+      "end": 420.84,
+      "text": "see the canvas as an object that belongs to the environment, then the brush is like painting"
+    },
+    {
+      "id": 96,
+      "start": 420.84,
+      "end": 426.0,
+      "text": "the canvas and change the state of the environment."
+    },
+    {
+      "id": 97,
+      "start": 426.0,
+      "end": 433.0,
+      "text": "If third, Calibrate is computation tool, they keep me simple, like, computing computation"
+    },
+    {
+      "id": 98,
+      "start": 433.0,
+      "end": 435.0,
+      "text": "activities such as math population."
+    },
+    {
+      "id": 99,
+      "start": 435.0,
+      "end": 442.0,
+      "text": "But here we mean like more general acts of computing, which includes like any other source"
+    },
+    {
+      "id": 100,
+      "start": 442.0,
+      "end": 446.0,
+      "text": "of computing inside of just like number of calculations."
+    },
+    {
+      "id": 101,
+      "start": 446.0,
+      "end": 454.0,
+      "text": "For example, a translator could also be like a computation tool because you need to like translate"
+    },
+    {
+      "id": 102,
+      "start": 454.0,
+      "end": 457.0,
+      "text": "some data, always shoot another language."
+    },
+    {
+      "id": 103,
+      "start": 457.0,
+      "end": 463.0,
+      "text": "Another example, yeah, here's it like simple examples, so close to the other examples."
+    },
+    {
+      "id": 104,
+      "start": 463.0,
+      "end": 471.0,
+      "text": "However, there are like this, like different covers or different functionalities are not like this"
+    },
+    {
+      "id": 105,
+      "start": 471.0,
+      "end": 472.0,
+      "text": "joint."
+    },
+    {
+      "id": 106,
+      "start": 472.0,
+      "end": 475.0,
+      "text": "So one tool may have one functionality or more functionality."
+    },
+    {
+      "id": 107,
+      "start": 475.0,
+      "end": 482.0,
+      "text": "So this anyone have any ideas, for example, I'm going to watch tool can serve as like other"
+    },
+    {
+      "id": 108,
+      "start": 482.0,
+      "end": 489.0,
+      "text": "example, perception and computation tool, other things."
+    },
+    {
+      "id": 109,
+      "start": 489.0,
+      "end": 502.0,
+      "text": "Yeah, maybe to give a answer, the first one I mentioned, the we can search tool, it can"
+    },
+    {
+      "id": 110,
+      "start": 502.0,
+      "end": 505.0,
+      "text": "be both a perception tool and a computation tool."
+    },
+    {
+      "id": 111,
+      "start": 505.0,
+      "end": 510.0,
+      "text": "So we have a plan that you can collect relevant documents from the web, so that's like getting"
+    },
+    {
+      "id": 112,
+      "start": 510.0,
+      "end": 512.0,
+      "text": "information from the web."
+    },
+    {
+      "id": 113,
+      "start": 512.0,
+      "end": 514.0,
+      "text": "But it's still at the computation tool."
+    },
+    {
+      "id": 114,
+      "start": 514.0,
+      "end": 523.0,
+      "text": "If you think deeply in the process of how the search engine returns those thoughts back to you, given the query, it calculate with the"
+    },
+    {
+      "id": 115,
+      "start": 523.0,
+      "end": 532.0,
+      "text": "middle learning source of your query to many other documents and like read them by their source and return to tell probably what's going on."
+    },
+    {
+      "id": 116,
+      "start": 532.0,
+      "end": 535.0,
+      "text": "So that process also involves computing."
+    },
+    {
+      "id": 117,
+      "start": 535.0,
+      "end": 536.0,
+      "text": "Yep."
+    },
+    {
+      "id": 118,
+      "start": 536.0,
+      "end": 542.0,
+      "text": "Yeah, that's a good question."
+    },
+    {
+      "id": 119,
+      "start": 542.0,
+      "end": 550.0,
+      "text": "That's actually my success is about the what's the relationship between tools and agents."
+    },
+    {
+      "id": 120,
+      "start": 550.0,
+      "end": 558.0,
+      "text": "But maybe a brief answer to that is I think language models can't use tools and not like language model based agents."
+    },
+    {
+      "id": 121,
+      "start": 558.0,
+      "end": 566.0,
+      "text": "But tools are on the other hand tools are pretty important to help agents to achieve like success on many times."
+    },
+    {
+      "id": 122,
+      "start": 566.0,
+      "end": 572.0,
+      "text": "So here's the step on the relationship between tools and agents."
+    },
+    {
+      "id": 123,
+      "start": 572.0,
+      "end": 584.0,
+      "text": "So again, what that agents anyway, so here we have a pretty good definition of agents, which is anything that can be used as proceeding with the environment through"
+    },
+    {
+      "id": 124,
+      "start": 584.0,
+      "end": 588.0,
+      "text": "the search and actually on that environment through actuators."
+    },
+    {
+      "id": 125,
+      "start": 588.0,
+      "end": 594.0,
+      "text": "So connecting back to the functionality of tools and agent can use."
+    },
+    {
+      "id": 126,
+      "start": 594.0,
+      "end": 600.0,
+      "text": "So the perception tools to proceed the world and to get information from it."
+    }
+  ],
+  "language": "en"
+}

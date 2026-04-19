@@ -1,0 +1,563 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 7.52,
+      "text": "use them, you do attention over which adapter to use and then take the value from that adapter."
+    },
+    {
+      "id": 1,
+      "start": 8.08,
+      "end": 12.48,
+      "text": "They kind of like this idea because it allows you to, you know, train modules that are useful"
+    },
+    {
+      "id": 2,
+      "start": 12.48,
+      "end": 18.64,
+      "text": "for a particular task and then decide which one to use in any particular point. So I think there's"
+    },
+    {
+      "id": 3,
+      "start": 18.64,
+      "end": 25.28,
+      "text": "lots of creative things that we could do with this. There's also multi-lingual versions, so you train"
+    },
+    {
+      "id": 4,
+      "start": 25.28,
+      "end": 29.92,
+      "text": "adapters for individual languages and you train adapters for individual tasks and then you combine"
+    },
+    {
+      "id": 5,
+      "start": 29.92,
+      "end": 36.96,
+      "text": "them together. So if that's interesting, you can take a look at that. In a way, this is kind of like"
+    },
+    {
+      "id": 6,
+      "start": 36.96,
+      "end": 40.64,
+      "text": "a mixture of x for its model. If you've heard of that, we're going to talk about that in a future class,"
+    },
+    {
+      "id": 7,
+      "start": 40.64,
+      "end": 44.8,
+      "text": "so I won't go into lots of detail, but I wanted to talk about it here in the world. We're talking about"
+    },
+    {
+      "id": 8,
+      "start": 44.8,
+      "end": 56.24,
+      "text": "adapters. Cool. Okay, so now I want to go into talking about Wora. And Wora is very popular. It's"
+    },
+    {
+      "id": 9,
+      "start": 56.24,
+      "end": 63.84,
+      "text": "very likely that you've heard of it nowadays. The way Lora works is very similar conceptually to"
+    },
+    {
+      "id": 10,
+      "start": 63.84,
+      "end": 71.68,
+      "text": "adapters, but it has an important implementation difference. And the difference is that in contrast"
+    },
+    {
+      "id": 11,
+      "start": 71.76,
+      "end": 79.44,
+      "text": "to adapters, which had a, in contrast to adapters, which had a nonlinear layer here,"
+    },
+    {
+      "id": 12,
+      "start": 80.56,
+      "end": 88.96,
+      "text": "Wora has no nonlinear layer. So basically what it is doing is it is taking down-scaled matrix"
+    },
+    {
+      "id": 13,
+      "start": 88.96,
+      "end": 95.92,
+      "text": "and upscale, down-scale matrix and upscale matrix and just doing a linear transform with them."
+    },
+    {
+      "id": 14,
+      "start": 96.88,
+      "end": 104.96,
+      "text": "And so in this graph or in this figure here, which I took from the Lora paper,"
+    },
+    {
+      "id": 15,
+      "start": 104.96,
+      "end": 109.44,
+      "text": "it's actually showing them as like separate computation paths. It's showing like you use"
+    },
+    {
+      "id": 16,
+      "start": 109.44,
+      "end": 115.76,
+      "text": "a normal matrix and then you use the Lora matrix separately. But actually you can just add them"
+    },
+    {
+      "id": 17,
+      "start": 115.76,
+      "end": 121.92,
+      "text": "together and you get the equivalent result. So you add this matrix times this matrix into the"
+    },
+    {
+      "id": 18,
+      "start": 121.92,
+      "end": 127.28,
+      "text": "pre-franc-wave. And that gets you the same result as if you calculated them separately and then"
+    },
+    {
+      "id": 19,
+      "start": 127.28,
+      "end": 135.04,
+      "text": "you have them done afterwards. So why is Lora so popular? I would say Lora is so popular because"
+    },
+    {
+      "id": 20,
+      "start": 135.04,
+      "end": 140.08,
+      "text": "it's super convenient after you finished training with Lora. Because after you finished training with"
+    },
+    {
+      "id": 21,
+      "start": 140.08,
+      "end": 145.84,
+      "text": "Lora, you can just add that the learning matrices back into the original weight matrix. And you have"
+    },
+    {
+      "id": 22,
+      "start": 145.84,
+      "end": 149.68,
+      "text": "a model that's exactly the same shape. It doesn't have any other components. You don't need any"
+    },
+    {
+      "id": 23,
+      "start": 149.68,
+      "end": 156.56,
+      "text": "different components that. You just have updated parameters. And that contrasts to adapters because"
+    },
+    {
+      "id": 24,
+      "start": 156.56,
+      "end": 160.48,
+      "text": "in adapters you actually need to add extra model components. You have to have different"
+    },
+    {
+      "id": 25,
+      "start": 160.48,
+      "end": 167.68,
+      "text": "pipe works code to implement this. So I think that's the big reason Lora is so popular."
+    },
+    {
+      "id": 26,
+      "start": 170.56,
+      "end": 174.96,
+      "text": "It's not actually that complicated. It's pretty simple. But it's important to know."
+    },
+    {
+      "id": 27,
+      "start": 175.04,
+      "end": 187.44,
+      "text": "Cool. So another popular thing that you might have heard of is Kulora. And Kulora combines together"
+    },
+    {
+      "id": 28,
+      "start": 187.44,
+      "end": 193.76,
+      "text": "quantization with parameter efficient tuning. And we're going to talk a lot more about quantization in"
+    },
+    {
+      "id": 29,
+      "start": 193.76,
+      "end": 200.4,
+      "text": "the future class and maybe a week or so. But basically there are ways to compress the model down"
+    },
+    {
+      "id": 30,
+      "start": 200.48,
+      "end": 207.52,
+      "text": "to not be in like 16 bits, but be in like four bits. And so if each parameter is in four bits,"
+    },
+    {
+      "id": 31,
+      "start": 207.52,
+      "end": 217.2,
+      "text": "that makes the model very, very compact. And so if we go back to our calculation in this previous slide,"
+    },
+    {
+      "id": 32,
+      "start": 218.88,
+      "end": 229.92,
+      "text": "if we had 16 bit model to fit Lama on your memory, you needed 130 gigabytes. But like,"
+    },
+    {
+      "id": 33,
+      "start": 229.92,
+      "end": 237.28,
+      "text": "let's say we have a four bit model. Suddenly it's not 130. It's something closer to 32 and a half,"
+    },
+    {
+      "id": 34,
+      "start": 237.28,
+      "end": 248.24,
+      "text": "I guess. And 32 and a half is actually fits on a lot of hardware. It fits on A100s or H100s easily."
+    },
+    {
+      "id": 35,
+      "start": 248.24,
+      "end": 257.44,
+      "text": "It also fits on these like less expensive GPUs. I mean, less expensive might be relative. It's"
+    },
+    {
+      "id": 36,
+      "start": 257.44,
+      "end": 261.76,
+      "text": "still very expensive. But it also fits on your Mac probably if you have a MacBook, a fair amount of"
+    },
+    {
+      "id": 37,
+      "start": 261.76,
+      "end": 265.76,
+      "text": "memory. So you can just run it on a local machine and your CPU memory also. So"
+    },
+    {
+      "id": 38,
+      "start": 269.12,
+      "end": 276.16,
+      "text": "so basically the idea is we can press down the model to be much smaller. So the forward and backward"
+    },
+    {
+      "id": 39,
+      "start": 276.96,
+      "end": 286.24,
+      "text": "so the parameters are small. And then we have a very, very compact Laura layer that doesn't"
+    },
+    {
+      "id": 40,
+      "start": 286.32,
+      "end": 293.44,
+      "text": "Laura, which doesn't take very much memory in self. And that allows us to basically train a model on,"
+    },
+    {
+      "id": 41,
+      "start": 293.44,
+      "end": 300.48,
+      "text": "you know, commodity hardware like 48, 48 gigabytes GPU or something like your your Mac,"
+    },
+    {
+      "id": 42,
+      "start": 300.48,
+      "end": 307.6,
+      "text": "or something like that. And it also has like paging to page things from CPU to GPU memory to make"
+    },
+    {
+      "id": 43,
+      "start": 307.6,
+      "end": 317.12,
+      "text": "it even more efficient. But basically that's the general idea. So I definitely if you want to train"
+    },
+    {
+      "id": 44,
+      "start": 317.12,
+      "end": 321.52,
+      "text": "a large model on limited hardware, I'd recommend this. If you're not training a super large model"
+    },
+    {
+      "id": 45,
+      "start": 321.52,
+      "end": 326.8,
+      "text": "like 65 gigabytes, I think just Laura should be fine. Like you can probably train a 7D model or"
+    },
+    {
+      "id": 46,
+      "start": 326.8,
+      "end": 334.8,
+      "text": "a 13D model with just Laura. And that should be on a single GPU. Cool. Any questions about this?"
+    },
+    {
+      "id": 47,
+      "start": 337.76,
+      "end": 352.4,
+      "text": "I think we're going to be a little bit concerned about it. But you're not doing optimization and low"
+    },
+    {
+      "id": 48,
+      "start": 352.4,
+      "end": 356.88,
+      "text": "precision. You're just keeping the original model and low precision. So from that point of view, it's"
+    },
+    {
+      "id": 49,
+      "start": 359.6,
+      "end": 366.32,
+      "text": "manageable. And you can also look at the cute Laura paper. They have very extensive experiments."
+    },
+    {
+      "id": 50,
+      "start": 368.56,
+      "end": 375.92,
+      "text": "Cool. A final one that I'd like to talk about is BitTit. This is very, very simple. You basically"
+    },
+    {
+      "id": 51,
+      "start": 375.92,
+      "end": 384.24,
+      "text": "just train the biases of the model for any model that has biases. This also can fit models. It's"
+    },
+    {
+      "id": 52,
+      "start": 384.24,
+      "end": 388.96,
+      "text": "very simple because you don't even need to change. You don't need to add any extra code. You just"
+    },
+    {
+      "id": 53,
+      "start": 389.04,
+      "end": 395.36,
+      "text": "need to freeze all the parameters except the biases. So from that point of view, it's easy."
+    },
+    {
+      "id": 54,
+      "start": 397.92,
+      "end": 401.76,
+      "text": "So I talked about this a little bit last time, but I think everybody didn't have full"
+    },
+    {
+      "id": 55,
+      "start": 402.64,
+      "end": 406.08,
+      "text": "understanding of all the parameter efficient tuning methods to understand this well."
+    },
+    {
+      "id": 56,
+      "start": 407.2,
+      "end": 412.48,
+      "text": "But we had a paper where we basically looked at all of these tuning methods and we kind of"
+    },
+    {
+      "id": 57,
+      "start": 412.48,
+      "end": 418.96,
+      "text": "decompose them into several different design components. And actually maybe I'll also"
+    },
+    {
+      "id": 58,
+      "start": 420.96,
+      "end": 426.48,
+      "text": "pull up the table that we have with us that might be even easier to follow."
+    },
+    {
+      "id": 59,
+      "start": 435.68,
+      "end": 435.92,
+      "text": "So"
+    },
+    {
+      "id": 60,
+      "start": 442.48,
+      "end": 447.2,
+      "text": "basically there's different things that you can look at with respect to parameter efficient"
+    },
+    {
+      "id": 61,
+      "start": 447.2,
+      "end": 452.32,
+      "text": "tuning methods. There's the functional form of the non-linearity that you're using."
+    },
+    {
+      "id": 62,
+      "start": 452.96,
+      "end": 460.08,
+      "text": "There's the place where you insert the model. There's how you modify the representation and then"
+    },
+    {
+      "id": 63,
+      "start": 460.08,
+      "end": 464.0,
+      "text": "there's a composition function for how you take the modified representation and add it into the"
+    },
+    {
+      "id": 64,
+      "start": 464.0,
+      "end": 470.96,
+      "text": "original representation. So if you want to take a look at the table, you can take a look at this."
+    },
+    {
+      "id": 65,
+      "start": 470.96,
+      "end": 477.2,
+      "text": "It's also in the references. But basically what we can find is that things like adapters,"
+    },
+    {
+      "id": 66,
+      "start": 478.24,
+      "end": 483.12,
+      "text": "Laura and prefix tuning are actually very very similar to each other."
+    },
+    {
+      "id": 67,
+      "start": 483.12,
+      "end": 488.64,
+      "text": "With the difference being where do you get the original representation that you're feeding in?"
+    },
+    {
+      "id": 68,
+      "start": 488.64,
+      "end": 494.08,
+      "text": "So adapters generally get it from after the module that you're adapting."
+    },
+    {
+      "id": 69,
+      "start": 494.72,
+      "end": 500.24,
+      "text": "prefix tuning gets it from before. Laura also gets it from before. Also what's an unlinearity."
+    },
+    {
+      "id": 70,
+      "start": 500.24,
+      "end": 502.4,
+      "text": "It's a relu, a softmax or nothing."
+    },
+    {
+      "id": 71,
+      "start": 503.76,
+      "end": 509.2,
+      "text": "Laura actually, this isn't really mentioned in the paper but it is actually implemented in the code."
+    },
+    {
+      "id": 72,
+      "start": 509.2,
+      "end": 514.96,
+      "text": "There's also a scaler scaling factor here which is a hyperparameter so that's something to be aware of."
+    },
+    {
+      "id": 73,
+      "start": 516.16,
+      "end": 520.8,
+      "text": "And so basically by breaking these down you can number one that are understand each of the modules"
+    },
+    {
+      "id": 74,
+      "start": 520.8,
+      "end": 524.32,
+      "text": "and how they are each of the methods and how they interact with each other."
+    },
+    {
+      "id": 75,
+      "start": 525.92,
+      "end": 530.0,
+      "text": "And also what we show in this paper is that this understanding can lead you to"
+    },
+    {
+      "id": 76,
+      "start": 531.44,
+      "end": 534.72,
+      "text": "new variants that can be more effective than any of the existing variants."
+    },
+    {
+      "id": 77,
+      "start": 535.6,
+      "end": 541.44,
+      "text": "And so we propose two things called the parallel adapter and the scaled parallel adapter."
+    },
+    {
+      "id": 78,
+      "start": 541.44,
+      "end": 543.6,
+      "text": "And we demonstrate that they get better results."
+    },
+    {
+      "id": 79,
+      "start": 544.16,
+      "end": 548.0,
+      "text": "So then the question is which one to choose."
+    },
+    {
+      "id": 80,
+      "start": 548.8,
+      "end": 552.72,
+      "text": "For convenience, Laura and Bitfit don't change the model architecture."
+    },
+    {
+      "id": 81,
+      "start": 552.72,
+      "end": 557.76,
+      "text": "So if you don't really care about like the absolute best accuracy out of these tuning methods,"
+    },
+    {
+      "id": 82,
+      "start": 557.76,
+      "end": 561.52,
+      "text": "I would definitely recommend you use something like this."
+    },
+    {
+      "id": 83,
+      "start": 561.52,
+      "end": 564.72,
+      "text": "It's definitely the easiest thing after you're done training."
+    },
+    {
+      "id": 84,
+      "start": 565.76,
+      "end": 570.0,
+      "text": "For accuracy, one thing that we found in our paper for simpler tasks,"
+    },
+    {
+      "id": 85,
+      "start": 570.0,
+      "end": 572.4,
+      "text": "it really actually doesn't matter very much."
+    },
+    {
+      "id": 86,
+      "start": 572.4,
+      "end": 576.72,
+      "text": "So if you're just doing classification tasks, even something super simple like Bitfit is"
+    },
+    {
+      "id": 87,
+      "start": 576.72,
+      "end": 578.72,
+      "text": "rather competitive with all of the other methods."
+    },
+    {
+      "id": 88,
+      "start": 580.0,
+      "end": 583.2,
+      "text": "For more complex tasks and a small parameter budget,"
+    },
+    {
+      "id": 89,
+      "start": 584.0,
+      "end": 586.64,
+      "text": "we found prefix tuning to do a pretty good job."
+    },
+    {
+      "id": 90,
+      "start": 587.28,
+      "end": 591.84,
+      "text": "This is not a like universal finding, but it's what we found in our paper."
+    },
+    {
+      "id": 91,
+      "start": 592.72,
+      "end": 598.8,
+      "text": "And then for more complex tasks plus larger parameter budgets, adapters or some sort of mixture"
+    },
+    {
+      "id": 92,
+      "start": 598.8,
+      "end": 600.4,
+      "text": "of multiple methods can be..."
+    }
+  ],
+  "language": "en"
+}

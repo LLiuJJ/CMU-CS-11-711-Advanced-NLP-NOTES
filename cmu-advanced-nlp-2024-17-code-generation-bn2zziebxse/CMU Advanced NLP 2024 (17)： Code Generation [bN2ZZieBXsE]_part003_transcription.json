@@ -1,0 +1,341 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 6.0,
+      "text": "I imagine probably gives very similar representations to i and j."
+    },
+    {
+      "id": 1,
+      "start": 6.0,
+      "end": 9.0,
+      "text": "Just because they're both using iterators all the time."
+    },
+    {
+      "id": 2,
+      "start": 9.0,
+      "end": 16.0,
+      "text": "Whereas a normal model would give very different representations to i and j right because i is like a personal pronoun and jsn."
+    },
+    {
+      "id": 3,
+      "start": 16.0,
+      "end": 21.0,
+      "text": "So that's the reason why continued training would have."
+    },
+    {
+      "id": 4,
+      "start": 21.0,
+      "end": 24.0,
+      "text": "Cool. Any other things?"
+    },
+    {
+      "id": 5,
+      "start": 24.0,
+      "end": 29.0,
+      "text": "Okay. So another another place where code generation can be useful."
+    },
+    {
+      "id": 6,
+      "start": 29.0,
+      "end": 34.0,
+      "text": "We had the example of colab is in colab notebooks."
+    },
+    {
+      "id": 7,
+      "start": 34.0,
+      "end": 39.0,
+      "text": "And this or in data science notebooks. This paper was by Google."
+    },
+    {
+      "id": 8,
+      "start": 39.0,
+      "end": 44.0,
+      "text": "So this might actually even be used in the colab thing because."
+    },
+    {
+      "id": 9,
+      "start": 44.0,
+      "end": 49.0,
+      "text": "For what is a Google thing. But data data science notebooks allow for incremental implementation."
+    },
+    {
+      "id": 10,
+      "start": 49.0,
+      "end": 54.0,
+      "text": "I'm sure a lot of people here are almost everybody here uses them."
+    },
+    {
+      "id": 11,
+      "start": 54.0,
+      "end": 62.0,
+      "text": "And another interesting thing is they allow for evaluation of code generation in context or incremental code generation."
+    },
+    {
+      "id": 12,
+      "start": 62.0,
+      "end": 70.0,
+      "text": "And so you start out with like a notebook and then you have a natural language command and then you generate the output a natural language command you generate the output."
+    },
+    {
+      "id": 13,
+      "start": 70.0,
+      "end": 75.0,
+      "text": "So this is an actual example from the status."
+    },
+    {
+      "id": 14,
+      "start": 75.0,
+      "end": 80.0,
+      "text": "So this paper is very nice. It has a lot of."
+    },
+    {
+      "id": 15,
+      "start": 80.0,
+      "end": 90.0,
+      "text": "You know, it's a nice data set. One other thing that was really interesting from this paper is it demonstrated the problem of data leakage in evaluating models."
+    },
+    {
+      "id": 16,
+      "start": 90.0,
+      "end": 98.0,
+      "text": "This is relatively large problem. I don't know if we have a silver bullet solution for this, but it's an important thing to be aware of."
+    },
+    {
+      "id": 17,
+      "start": 98.0,
+      "end": 102.0,
+      "text": "Not just for code generation, but these are examples from generation."
+    },
+    {
+      "id": 18,
+      "start": 102.0,
+      "end": 113.0,
+      "text": "So here in the arcade data set, they basically both evaluated existing notebooks and they evaluated notebooks that."
+    },
+    {
+      "id": 19,
+      "start": 113.0,
+      "end": 121.0,
+      "text": "They actually created themselves. And there's a very, very stark difference between the notebooks that were created on the web."
+    },
+    {
+      "id": 20,
+      "start": 121.0,
+      "end": 132.0,
+      "text": "And the notebooks that they evaluated themselves. So like most of the code generation models except for palm, which was the best model and they created this data set."
+    },
+    {
+      "id": 21,
+      "start": 132.0,
+      "end": 146.0,
+      "text": "Did really poorly or did really well on the existing data and quite poorly on the new data, which is probably an indication of."
+    },
+    {
+      "id": 22,
+      "start": 146.0,
+      "end": 155.0,
+      "text": "Probably an indication of the fact that you know this is to some extent lead into the training data of the language models."
+    },
+    {
+      "id": 23,
+      "start": 155.0,
+      "end": 176.0,
+      "text": "There was also a very recent paper. Actually, I think this might be 2024. There was a very recent paper that did a similar thing where they evaluated on human of L and then their live code bench and live code bench. Basically what they did is they tried to pick."
+    },
+    {
+      "id": 24,
+      "start": 176.0,
+      "end": 193.0,
+      "text": "And there were problems from lead code and other websites that were more recent versus less recent. And they have some really nice graphs in their paper where they demonstrate that the less recent ones before the training cut off have like a high accuracy and then suddenly it drops right at the training."
+    },
+    {
+      "id": 25,
+      "start": 193.0,
+      "end": 198.0,
+      "text": "The models. So this is something to be aware of."
+    },
+    {
+      "id": 26,
+      "start": 198.0,
+      "end": 209.0,
+      "text": "This figure is showing here is this figure is showing on the x axis, pass it one on the live code bench easy and then pass it one on human of L."
+    },
+    {
+      "id": 27,
+      "start": 209.0,
+      "end": 222.0,
+      "text": "So we see this nice correlation between essentially like passing on life code bench easy and passing on human of L. Then we have this group of models that are kind of like up here."
+    },
+    {
+      "id": 28,
+      "start": 222.0,
+      "end": 237.0,
+      "text": "And these are ones where basically it's likely that human of L lead into the training data because they're getting better scores on human of L. Then you would expect that they get you know just looking at their performance on another data set."
+    },
+    {
+      "id": 29,
+      "start": 237.0,
+      "end": 248.0,
+      "text": "There's also a nice like analogous one for math reasoning problems like this. So this is definitely something to be aware of if you're looking only at like very standard bench racks."
+    },
+    {
+      "id": 30,
+      "start": 249.0,
+      "end": 258.0,
+      "text": "Cool. Any questions about this."
+    },
+    {
+      "id": 31,
+      "start": 258.0,
+      "end": 276.0,
+      "text": "Another data set that I really like the concept of and recently it's gotten a little bit of buzz because it was used in a in evaluation of a new coding assistant called Devon but this is something called sweet bench and its issues from GitHub and code basis."
+    },
+    {
+      "id": 32,
+      "start": 276.0,
+      "end": 286.0,
+      "text": "Is the input and you want to generate a pull request to basically solve these issues. And so your input is like data leak and GPD due to warm start."
+    },
+    {
+      "id": 33,
+      "start": 286.0,
+      "end": 297.0,
+      "text": "This is about non standard. Then you have the code base. It generates a PR for you and then it's run through the unit test to see if it passes all the unit test post PR."
+    },
+    {
+      "id": 34,
+      "start": 297.0,
+      "end": 307.0,
+      "text": "So it's very similar to you know what you would be doing in a well maintained software project you open a issue and then you open a pull request to fix the issue."
+    },
+    {
+      "id": 35,
+      "start": 307.0,
+      "end": 315.0,
+      "text": "This requires things like long context understanding on being able to do very precise implementations based on large software projects."
+    },
+    {
+      "id": 36,
+      "start": 315.0,
+      "end": 325.0,
+      "text": "And right now the state of the art on this is it at about 14% so it's definitely not a solve problem at all in the original paper."
+    },
+    {
+      "id": 37,
+      "start": 325.0,
+      "end": 341.0,
+      "text": "The state of the art method was like 6% or something like that so I imagine that we're not going to get up to 90% anytime soon because it's probably solving the easier ones and the harder ones are you know far beyond the ability of any language model we have at the moment."
+    },
+    {
+      "id": 38,
+      "start": 341.0,
+      "end": 344.0,
+      "text": "But I really like this."
+    },
+    {
+      "id": 39,
+      "start": 344.0,
+      "end": 358.0,
+      "text": "When caveat if you really like this benchmark is that it's kind of heavy to run so you need to be a little bit careful because you need to pull in like full repositories to run on so yeah, be a little bit."
+    },
+    {
+      "id": 40,
+      "start": 358.0,
+      "end": 366.0,
+      "text": "Sorry, there's so many like interesting data sets recently in this area that I spent a lot of time on data sets so I'll try to go a little bit more quickly but."
+    },
+    {
+      "id": 41,
+      "start": 366.0,
+      "end": 379.0,
+      "text": "The final one is designed to code and this is also a very recent data set basically the idea is code generation from websites so your input is a website and your output is."
+    },
+    {
+      "id": 42,
+      "start": 379.0,
+      "end": 393.0,
+      "text": "Like JavaScript code that implement set website and or or CSS or HTML code that implements a website so I really like this because you know it's a good test bed for multi modal models."
+    },
+    {
+      "id": 43,
+      "start": 393.0,
+      "end": 401.0,
+      "text": "And there aren't a whole lot of strong open source multi modal models that can solve this at the moment so I think it's kind of cool."
+    },
+    {
+      "id": 44,
+      "start": 401.0,
+      "end": 411.0,
+      "text": "They also propose the design to code model that does the best on this data set out of that you know any of the open source models but it's still far from."
+    },
+    {
+      "id": 45,
+      "start": 411.0,
+      "end": 438.0,
+      "text": "And then the question becomes how do they evaluate this in the first place and basically the idea is that they do high level visual similarity and so they calculate visual embeddings of the generated sites and then they also do low level elements similarity so they try to identify all of the elements in the generated web page and make sure that they recall all of the generated elements so I think this is nice."
+    },
+    {
+      "id": 46,
+      "start": 438.0,
+      "end": 446.0,
+      "text": "One thing if you notice if you use even state of the art like close models like cloud three or."
+    },
+    {
+      "id": 47,
+      "start": 446.0,
+      "end": 465.0,
+      "text": "GP4 is there really bad at this recall they can generate something that looks like maybe a little bit similar but it will be missing like the elements the design will be off you know other stuff like that so I think even in the closed like strong models this is not a sell problem."
+    },
+    {
+      "id": 48,
+      "start": 465.0,
+      "end": 470.0,
+      "text": "Cool yeah."
+    },
+    {
+      "id": 49,
+      "start": 470.0,
+      "end": 483.0,
+      "text": "So why is it a hard problem for the models I don't actually have a really confident answer to that but I think."
+    },
+    {
+      "id": 50,
+      "start": 483.0,
+      "end": 512.0,
+      "text": "So one thing I can tell you is that they are able to improve so they're able to generate something and then I say no that's bad please like make it better and it's generally better the second time especially if you give specific things like oh but the background on the generated site is white but actually it should be black and if you think about like even a skilled human programmer do you think you could write like."
+    },
+    {
+      "id": 51,
+      "start": 512.0,
+      "end": 540.0,
+      "text": "Website code and then view it once and then it would be correct I think you probably couldn't right and so like we're asking that models to do essentially the same thing except there like even worse than us and you know keeping track of all the visual elements and stuff so I think it's more like this problem probably just needs to interrupt or find one otherwise it's like asking too much of the model maybe."
+    },
+    {
+      "id": 52,
+      "start": 541.0,
+      "end": 557.0,
+      "text": "Cool okay so let's go into methods and code generation has some unique things the basic method that you can always use is a code generating LM and so you feed in previous code or you feed in whatever context you have into the LM and you generate."
+    },
+    {
+      "id": 53,
+      "start": 557.0,
+      "end": 566.0,
+      "text": "From it and virtually all serious LM's are trained on code nowadays like I just mentioned before."
+    },
+    {
+      "id": 54,
+      "start": 567.0,
+      "end": 587.0,
+      "text": "One one important thing here is when you're generating if you're generating for something like code generation I definitely suggest that you modify your temperature settings appropriately and set it to a low temperature otherwise you'll get kind of crazy code but if you said to load temperature you can get better sense."
+    },
+    {
+      "id": 55,
+      "start": 587.0,
+      "end": 603.0,
+      "text": "Anyway one really core capability of code LM's especially ones that you use in your IDE like copilot is in filling and the paper that proposes is."
+    }
+  ],
+  "language": "en"
+}

@@ -1,0 +1,443 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 3.0,
+      "text": "So let's get started."
+    },
+    {
+      "id": 1,
+      "start": 3.0,
+      "end": 7.0,
+      "text": "Today I'm going to be talking about learning from human feedback."
+    },
+    {
+      "id": 2,
+      "start": 7.0,
+      "end": 12.0,
+      "text": "I wrote reinforcement learning from human feedback because that's what, you know,"
+    },
+    {
+      "id": 3,
+      "start": 12.0,
+      "end": 17.0,
+      "text": "a lot of people talk about nowadays, but actually there's other methods of learning from human feedback."
+    },
+    {
+      "id": 4,
+      "start": 17.0,
+      "end": 26.0,
+      "text": "So first, I'm going to be talking about the ways we can get human feedback for the generations of models."
+    },
+    {
+      "id": 5,
+      "start": 26.0,
+      "end": 37.0,
+      "text": "And mostly focus on generation tasks because generation tasks are harder than like classification tasks that we deal with normally."
+    },
+    {
+      "id": 6,
+      "start": 37.0,
+      "end": 40.0,
+      "text": "So I'll spend a fair amount of time talking about how we do that."
+    },
+    {
+      "id": 7,
+      "start": 40.0,
+      "end": 49.0,
+      "text": "And then after I talked about how we do that, we'll move into how we actually learn from that single."
+    },
+    {
+      "id": 8,
+      "start": 49.0,
+      "end": 55.0,
+      "text": "So normally what we've done up until this point is maximum likelihood training."
+    },
+    {
+      "id": 9,
+      "start": 55.0,
+      "end": 73.0,
+      "text": "This is just an overview slide. So what we want to do is we want to maximize the likelihood of predicting the next word and the reference given the previous words, which gives us the loss of the output given the input where you know the input can be the prompt that output can be the answer to the output."
+    },
+    {
+      "id": 10,
+      "start": 73.0,
+      "end": 78.0,
+      "text": "But there's lots of problems with learning from maximum likelihood."
+    },
+    {
+      "id": 11,
+      "start": 78.0,
+      "end": 85.0,
+      "text": "And I'm going to give three examples here. I think all of these are actually real problems that we need to be worried about."
+    },
+    {
+      "id": 12,
+      "start": 85.0,
+      "end": 92.0,
+      "text": "So the first one is that some mistakes are worse than others. So in the end, we want good outputs."
+    },
+    {
+      "id": 13,
+      "start": 92.0,
+      "end": 99.0,
+      "text": "And some mistaken predictions can be a bigger problem for the output being good."
+    },
+    {
+      "id": 14,
+      "start": 99.0,
+      "end": 115.0,
+      "text": "So to give an example, let's say what we actually wanted from like a speech recognition system or translation system or something like that is please send this package to Pittsburgh."
+    },
+    {
+      "id": 15,
+      "start": 115.0,
+      "end": 122.0,
+      "text": "If I write, please send all package to Pittsburgh, then this is not a huge problem."
+    },
+    {
+      "id": 16,
+      "start": 122.0,
+      "end": 132.0,
+      "text": "If I please send this package to Tokyo, then that might be a big problem because the package you wanted to come to Pittsburgh goes to Tokyo instead."
+    },
+    {
+      "id": 17,
+      "start": 132.0,
+      "end": 135.0,
+      "text": "You might not want that to happen."
+    },
+    {
+      "id": 18,
+      "start": 135.0,
+      "end": 140.0,
+      "text": "You might also have it say bleeping send this package to Pittsburgh instead of please."
+    },
+    {
+      "id": 19,
+      "start": 140.0,
+      "end": 147.0,
+      "text": "And that would be a problem in the customer service system, right, because your customer would leave and never come back."
+    },
+    {
+      "id": 20,
+      "start": 147.0,
+      "end": 157.0,
+      "text": "So the terminal like this is not going to cause a huge issue messing up other things that's going to cause a wide relationship."
+    },
+    {
+      "id": 21,
+      "start": 157.0,
+      "end": 161.0,
+      "text": "But from the point of view of maximum likelihood, all of these are just tokens."
+    },
+    {
+      "id": 22,
+      "start": 161.0,
+      "end": 169.0,
+      "text": "And messing up one token is the same as messing up another token. So that's, you know, an issue."
+    },
+    {
+      "id": 23,
+      "start": 169.0,
+      "end": 174.0,
+      "text": "Another problem is that the gold standard and maximum likelihood estimation can be bad."
+    },
+    {
+      "id": 24,
+      "start": 174.0,
+      "end": 181.0,
+      "text": "And that would be like not what you want. And corporate or full of outputs that we wouldn't want to language model reproducing."
+    },
+    {
+      "id": 25,
+      "start": 181.0,
+      "end": 187.0,
+      "text": "So for example, a toxic comments on reddit disinformation."
+    },
+    {
+      "id": 26,
+      "start": 187.0,
+      "end": 197.0,
+      "text": "Another thing that a lot of people don't think about quite as much is a lot of the data online is from is automatically generated nowadays."
+    },
+    {
+      "id": 27,
+      "start": 197.0,
+      "end": 204.0,
+      "text": "For example, from machine translation, a lot of the translations online are from 2016 Google translate."
+    },
+    {
+      "id": 28,
+      "start": 204.0,
+      "end": 213.0,
+      "text": "When Google translate was a lot less good than it is now. And so you have like poor quality translations that were automatically generated."
+    },
+    {
+      "id": 29,
+      "start": 213.0,
+      "end": 228.0,
+      "text": "The final problem is something that's called exposure bias and exposure bias. Basically what it means is MLE training doesn't consider the necessity for generation in it relies on gold standard context."
+    },
+    {
+      "id": 30,
+      "start": 228.0,
+      "end": 231.0,
+      "text": "So if we go back to the MLE equation."
+    },
+    {
+      "id": 31,
+      "start": 231.0,
+      "end": 237.0,
+      "text": "When we're calculating MLE, this why less than T is always correct. It's always a good output."
+    },
+    {
+      "id": 32,
+      "start": 237.0,
+      "end": 242.0,
+      "text": "And so what the model does is it learns to over rely on good outputs."
+    },
+    {
+      "id": 33,
+      "start": 242.0,
+      "end": 248.0,
+      "text": "And one example of a problem that this causes is models tend to repeat themselves over and over again."
+    },
+    {
+      "id": 34,
+      "start": 248.0,
+      "end": 259.0,
+      "text": "For example, when you use some generation algorithms. And the reason why this happens is because in a gold standard output if a word has appeared previously."
+    },
+    {
+      "id": 35,
+      "start": 259.0,
+      "end": 274.0,
+      "text": "That word is more likely to happen next. So like if you say, like I am going, I'm going to Pittsburgh, you're much more likely to say Pittsburgh again in the future because you're talking about Pittsburgh topic."
+    },
+    {
+      "id": 36,
+      "start": 274.0,
+      "end": 283.0,
+      "text": "It's coherent. So what you get is you get MLE train models saying I'm going to Pittsburgh. I'm going to Pittsburgh. I'm going to Pittsburgh. You probably seen this before."
+    },
+    {
+      "id": 37,
+      "start": 283.0,
+      "end": 292.0,
+      "text": "It's on point. And so exposure biases basically that the model has never been exposed to mistakes in the past. And so it can't deal with them."
+    },
+    {
+      "id": 38,
+      "start": 292.0,
+      "end": 312.0,
+      "text": "So what this does is if you have an alternative training algorithm, you can fix this by generating a whole bunch of outputs down like scoring some of them poorly and penalizing the model for generating for outputs. So that can fix these problems as well."
+    },
+    {
+      "id": 39,
+      "start": 312.0,
+      "end": 317.0,
+      "text": "Any questions about this?"
+    },
+    {
+      "id": 40,
+      "start": 317.0,
+      "end": 325.0,
+      "text": "So now I'd like to get into how we measure how good in output is. And there's different ways of doing this."
+    },
+    {
+      "id": 41,
+      "start": 325.0,
+      "end": 334.0,
+      "text": "The first one is objective assessment. So for some tasks or for many tasks, there's kind of objectively a correct answer."
+    },
+    {
+      "id": 42,
+      "start": 334.0,
+      "end": 339.0,
+      "text": "There's also human subjective annotation. So you can ask humans to do annotation for you."
+    },
+    {
+      "id": 43,
+      "start": 339.0,
+      "end": 349.0,
+      "text": "There's machine prediction of human preferences. And there's also use in another system in a downstream task."
+    },
+    {
+      "id": 44,
+      "start": 349.0,
+      "end": 359.0,
+      "text": "So the way objective assessment works is you have an annotated correct answer and match against this. So like if you're solving math problems, answering objective questions."
+    },
+    {
+      "id": 45,
+      "start": 359.0,
+      "end": 369.0,
+      "text": "And you know, you can pick any arbitrary example. You can pick your classification example from like your text classification tasks."
+    },
+    {
+      "id": 46,
+      "start": 369.0,
+      "end": 377.0,
+      "text": "And even clear example is if you have math problems, there's kind of objectively wanting answer to any math problem and there's no other answer that could be correct."
+    },
+    {
+      "id": 47,
+      "start": 377.0,
+      "end": 387.0,
+      "text": "So this makes you're like easy if you're handling this type of problem. But of course, there's many other types of problems you have to handle that don't have objective answers."
+    },
+    {
+      "id": 48,
+      "start": 387.0,
+      "end": 393.0,
+      "text": "So let's say we're handling a generation task where we don't have an objective answer."
+    },
+    {
+      "id": 49,
+      "start": 393.0,
+      "end": 404.0,
+      "text": "In this case, kind of one of our gold standards is human evaluation. So we might have a source input like a prompt or an input text for machine translation."
+    },
+    {
+      "id": 50,
+      "start": 404.0,
+      "end": 414.0,
+      "text": "We have one or several hypotheses and we ask a human annotator to basically give a score for them or do some sort of other annotation."
+    },
+    {
+      "id": 51,
+      "start": 414.0,
+      "end": 422.0,
+      "text": "And the different varieties of annotation that we can give are something called direct assessment."
+    },
+    {
+      "id": 52,
+      "start": 422.0,
+      "end": 433.0,
+      "text": "So direct assessment is the term that comes from machine translation. So you might not see it used lots of other places, but it's basically just give a score directly to how good output is."
+    },
+    {
+      "id": 53,
+      "start": 433.0,
+      "end": 440.0,
+      "text": "So you can say like if you say, please send this translation is please send this package to Tokyo. We give it a score of two out of 10."
+    },
+    {
+      "id": 54,
+      "start": 440.0,
+      "end": 443.0,
+      "text": "Here's something like this."
+    },
+    {
+      "id": 55,
+      "start": 443.0,
+      "end": 460.0,
+      "text": "So the question here is like what does like let's say I give us for a two out of time for please send this package to Tokyo. What score should I give for please send it a package to go with anyone have any ideas."
+    },
+    {
+      "id": 56,
+      "start": 460.0,
+      "end": 463.0,
+      "text": "And if I can answer is please send this package to Tokyo."
+    },
+    {
+      "id": 57,
+      "start": 463.0,
+      "end": 466.0,
+      "text": "8 out of 10. Yeah."
+    },
+    {
+      "id": 58,
+      "start": 466.0,
+      "end": 470.0,
+      "text": "But you might disagree on that right. It's kind of like subjective."
+    },
+    {
+      "id": 59,
+      "start": 470.0,
+      "end": 481.0,
+      "text": "One of the difficulties of direct assessment is giving a number like this is pretty difficult if you don't have a very clear rubric and very skilled annotators and it's hard to get consistency between people when you do this."
+    },
+    {
+      "id": 60,
+      "start": 481.0,
+      "end": 490.0,
+      "text": "So the advantage is it kind of gives you an idea of how good things are overall, but the disadvantage is it's more difficult to entertain consistency."
+    },
+    {
+      "id": 61,
+      "start": 490.0,
+      "end": 496.0,
+      "text": "Another thing that I should point out is often scores are assigned separately based on desirable traits."
+    },
+    {
+      "id": 62,
+      "start": 496.0,
+      "end": 505.0,
+      "text": "So we don't necessarily just say how good is it we say how fluent is it like is it fluent in English in translation."
+    },
+    {
+      "id": 63,
+      "start": 505.0,
+      "end": 513.0,
+      "text": "There's a concept called adequacy, which is how well does the outlet reflect the inputs Mantis."
+    },
+    {
+      "id": 64,
+      "start": 513.0,
+      "end": 523.0,
+      "text": "And if you're assessing translation systems actually it's come into assess fluency without even looking at the input because then you can just say how fluent is it."
+    },
+    {
+      "id": 65,
+      "start": 523.0,
+      "end": 532.0,
+      "text": "But for adequacy you definitely need to understand the input so you need to be a bilingual speaker to be able to assess that."
+    },
+    {
+      "id": 66,
+      "start": 532.0,
+      "end": 542.0,
+      "text": "So factuality and so factuality is tricky. It can either be factuality grounded in a particular input text in which case."
+    },
+    {
+      "id": 67,
+      "start": 542.0,
+      "end": 557.0,
+      "text": "The text would have to be you know things that were said in the input or it can be just kind of is the statement factual in general in which case you need to go online you need to search for things and like check whether the statement is factual or not."
+    },
+    {
+      "id": 68,
+      "start": 557.0,
+      "end": 563.0,
+      "text": "These are like coherence does the output fit coherently within the larger discourse."
+    },
+    {
+      "id": 69,
+      "start": 563.0,
+      "end": 577.0,
+      "text": "And there's many many other ones of these this is also task dependent so like the things you will evaluate for machine translation are different than the ones you would do for dialogue which are different than the ones you do for a general purpose chat."
+    },
+    {
+      "id": 70,
+      "start": 577.0,
+      "end": 583.0,
+      "text": "Which is different things you do for summarization for example."
+    },
+    {
+      "id": 71,
+      "start": 583.0,
+      "end": 596.0,
+      "text": "If you're interested in doing something like this then I definitely encourage you to look at what other people have done for the tasks you're interested in previously and find out the different types of trade so you're not."
+    },
+    {
+      "id": 72,
+      "start": 596.0,
+      "end": 600.0,
+      "text": "Any any questions about this also."
+    }
+  ],
+  "language": "en"
+}

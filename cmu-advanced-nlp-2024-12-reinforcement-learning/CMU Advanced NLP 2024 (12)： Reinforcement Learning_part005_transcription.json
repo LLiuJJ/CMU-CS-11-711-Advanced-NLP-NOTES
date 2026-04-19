@@ -1,0 +1,1157 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 4.08,
+      "text": "In the context of reinforcement learning,"
+    },
+    {
+      "id": 1,
+      "start": 4.08,
+      "end": 7.32,
+      "text": "this is also called imitation learning,"
+    },
+    {
+      "id": 2,
+      "start": 7.32,
+      "end": 10.72,
+      "text": "because essentially you're learning"
+    },
+    {
+      "id": 3,
+      "start": 10.72,
+      "end": 13.32,
+      "text": "how to perform actions by imitating a teacher."
+    },
+    {
+      "id": 4,
+      "start": 14.64,
+      "end": 17.8,
+      "text": "And imitation learning is not just supervised MLA,"
+    },
+    {
+      "id": 5,
+      "start": 17.8,
+      "end": 20.12,
+      "text": "there's also other varieties of imitation learning,"
+    },
+    {
+      "id": 6,
+      "start": 20.12,
+      "end": 23.2,
+      "text": "but this is one variety of imitation learning."
+    },
+    {
+      "id": 7,
+      "start": 26.8,
+      "end": 29.76,
+      "text": "The next thing I'd like to talk about is self training"
+    },
+    {
+      "id": 8,
+      "start": 29.76,
+      "end": 33.76,
+      "text": "and basically self training, the idea is that you sample"
+    },
+    {
+      "id": 9,
+      "start": 33.76,
+      "end": 35.8,
+      "text": "or argmax according to the current model,"
+    },
+    {
+      "id": 10,
+      "start": 35.8,
+      "end": 37.32,
+      "text": "so you have your current model"
+    },
+    {
+      "id": 11,
+      "start": 37.32,
+      "end": 39.28,
+      "text": "and you get a sample from it."
+    },
+    {
+      "id": 12,
+      "start": 39.28,
+      "end": 41.16,
+      "text": "And then you use the sample or samples"
+    },
+    {
+      "id": 13,
+      "start": 41.16,
+      "end": 42.36,
+      "text": "to maximize likelihood."
+    },
+    {
+      "id": 14,
+      "start": 42.36,
+      "end": 46.64,
+      "text": "So basically instead of doing maximum likelihood"
+    },
+    {
+      "id": 15,
+      "start": 46.64,
+      "end": 50.84,
+      "text": "with respect to the gold standard output,"
+    },
+    {
+      "id": 16,
+      "start": 50.84,
+      "end": 53.68,
+      "text": "you're doing it with respect to your own output."
+    },
+    {
+      "id": 17,
+      "start": 53.68,
+      "end": 57.16,
+      "text": "So does this seem like a good idea?"
+    },
+    {
+      "id": 18,
+      "start": 60.32,
+      "end": 62.0,
+      "text": "I see a few people shaking heads."
+    },
+    {
+      "id": 19,
+      "start": 63.76,
+      "end": 65.6,
+      "text": "Any ideas why this is not a good idea?"
+    },
+    {
+      "id": 20,
+      "start": 68.84,
+      "end": 69.84,
+      "text": "Yeah."
+    },
+    {
+      "id": 21,
+      "start": 69.84,
+      "end": 73.12,
+      "text": "One is for three, two, so,"
+    },
+    {
+      "id": 22,
+      "start": 73.12,
+      "end": 75.2,
+      "text": "I can't even just buy a school of security"
+    },
+    {
+      "id": 23,
+      "start": 75.2,
+      "end": 77.4,
+      "text": "then I just don't have to go out and see"
+    },
+    {
+      "id": 24,
+      "start": 77.4,
+      "end": 79.2,
+      "text": "if there's no good information for it."
+    },
+    {
+      "id": 25,
+      "start": 79.2,
+      "end": 79.96,
+      "text": "Yeah, exactly."
+    },
+    {
+      "id": 26,
+      "start": 79.96,
+      "end": 82.84,
+      "text": "So if you don't have any access to any notion,"
+    },
+    {
+      "id": 27,
+      "start": 82.84,
+      "end": 84.68,
+      "text": "well, it's good."
+    },
+    {
+      "id": 28,
+      "start": 84.68,
+      "end": 87.48,
+      "text": "This will be optimizing for its good outputs"
+    },
+    {
+      "id": 29,
+      "start": 87.48,
+      "end": 89.16,
+      "text": "and bad outputs, right?"
+    },
+    {
+      "id": 30,
+      "start": 89.16,
+      "end": 92.2,
+      "text": "So your model might be outputting bad outputs"
+    },
+    {
+      "id": 31,
+      "start": 92.2,
+      "end": 93.68,
+      "text": "and you're just reinforcing the air set,"
+    },
+    {
+      "id": 32,
+      "start": 93.68,
+      "end": 95.2,
+      "text": "the model level."
+    },
+    {
+      "id": 33,
+      "start": 95.2,
+      "end": 98.0,
+      "text": "Nonetheless, self training actually improves"
+    },
+    {
+      "id": 34,
+      "start": 98.0,
+      "end": 100.24,
+      "text": "your accuracy somewhat in some cases."
+    },
+    {
+      "id": 35,
+      "start": 100.24,
+      "end": 102.56,
+      "text": "Like, for example, if your accuracy,"
+    },
+    {
+      "id": 36,
+      "start": 102.56,
+      "end": 105.08,
+      "text": "if your model is right more often than not,"
+    },
+    {
+      "id": 37,
+      "start": 106.24,
+      "end": 109.64,
+      "text": "basically optimizing towards the more often than not"
+    },
+    {
+      "id": 38,
+      "start": 109.64,
+      "end": 111.84,
+      "text": "right outputs can actually,"
+    },
+    {
+      "id": 39,
+      "start": 113.2,
+      "end": 115.08,
+      "text": "due to the implicit regularization"
+    },
+    {
+      "id": 40,
+      "start": 115.08,
+      "end": 116.84,
+      "text": "that models have in early stopping"
+    },
+    {
+      "id": 41,
+      "start": 116.84,
+      "end": 117.8,
+      "text": "and other things like that,"
+    },
+    {
+      "id": 42,
+      "start": 117.8,
+      "end": 119.56,
+      "text": "it can actually move you in the right direction"
+    },
+    {
+      "id": 43,
+      "start": 119.56,
+      "end": 120.72,
+      "text": "and improve accuracy."
+    },
+    {
+      "id": 44,
+      "start": 123.4,
+      "end": 127.92,
+      "text": "So there are alternatives to this"
+    },
+    {
+      "id": 45,
+      "start": 127.92,
+      "end": 129.44,
+      "text": "that further improve accuracy."
+    },
+    {
+      "id": 46,
+      "start": 129.44,
+      "end": 132.04,
+      "text": "So like, for example, if you have multiple models"
+    },
+    {
+      "id": 47,
+      "start": 132.04,
+      "end": 135.76,
+      "text": "and you only generate sentences"
+    },
+    {
+      "id": 48,
+      "start": 135.76,
+      "end": 137.36,
+      "text": "where the models agree,"
+    },
+    {
+      "id": 49,
+      "start": 137.36,
+      "end": 141.0,
+      "text": "then this can improve your overall accuracy further."
+    },
+    {
+      "id": 50,
+      "start": 142.2,
+      "end": 143.28,
+      "text": "This is called code training."
+    },
+    {
+      "id": 51,
+      "start": 143.28,
+      "end": 148.28,
+      "text": "It was actually created by people at C and U as well."
+    },
+    {
+      "id": 52,
+      "start": 150.08,
+      "end": 152.64,
+      "text": "And another successful alternative"
+    },
+    {
+      "id": 53,
+      "start": 152.64,
+      "end": 155.6,
+      "text": "is adding noise to the input to match the noise"
+    },
+    {
+      "id": 54,
+      "start": 155.6,
+      "end": 156.68,
+      "text": "that you find in the output."
+    },
+    {
+      "id": 55,
+      "start": 156.68,
+      "end": 161.68,
+      "text": "So if you add like word based dropout"
+    },
+    {
+      "id": 56,
+      "start": 161.92,
+      "end": 162.92,
+      "text": "or other things like that,"
+    },
+    {
+      "id": 57,
+      "start": 162.92,
+      "end": 166.04,
+      "text": "this can also help accommodate these things."
+    },
+    {
+      "id": 58,
+      "start": 166.04,
+      "end": 170.68,
+      "text": "But anyway, so self training is useful,"
+    },
+    {
+      "id": 59,
+      "start": 170.68,
+      "end": 172.04,
+      "text": "but there are better alternatives"
+    },
+    {
+      "id": 60,
+      "start": 172.12,
+      "end": 173.64,
+      "text": "that you can get a reward function."
+    },
+    {
+      "id": 61,
+      "start": 174.64,
+      "end": 177.6,
+      "text": "So the simplest variety of this"
+    },
+    {
+      "id": 62,
+      "start": 177.6,
+      "end": 180.44,
+      "text": "is something called policy gradient to reinforce"
+    },
+    {
+      "id": 63,
+      "start": 180.44,
+      "end": 182.8,
+      "text": "or more specifically reinforce."
+    },
+    {
+      "id": 64,
+      "start": 182.8,
+      "end": 186.08,
+      "text": "And basically what this does is this adds a term"
+    },
+    {
+      "id": 65,
+      "start": 186.08,
+      "end": 189.6,
+      "text": "that scales the loss by the reward."
+    },
+    {
+      "id": 66,
+      "start": 189.6,
+      "end": 192.52,
+      "text": "So if you can get a reward for each output,"
+    },
+    {
+      "id": 67,
+      "start": 192.52,
+      "end": 194.36,
+      "text": "basically this,"
+    },
+    {
+      "id": 68,
+      "start": 196.56,
+      "end": 200.0,
+      "text": "you, instead of doing self training entirely by itself,"
+    },
+    {
+      "id": 69,
+      "start": 200.0,
+      "end": 201.52,
+      "text": "you multiply by a reward."
+    },
+    {
+      "id": 70,
+      "start": 202.24,
+      "end": 205.92,
+      "text": "And this allows you to increase the likelihood of things"
+    },
+    {
+      "id": 71,
+      "start": 205.92,
+      "end": 207.64,
+      "text": "I can a high reward, decrease the likelihood"
+    },
+    {
+      "id": 72,
+      "start": 207.64,
+      "end": 208.64,
+      "text": "of things I can allow."
+    },
+    {
+      "id": 73,
+      "start": 212.48,
+      "end": 215.08,
+      "text": "So a brief quiz here,"
+    },
+    {
+      "id": 74,
+      "start": 215.08,
+      "end": 218.88,
+      "text": "under what conditions is this equal equivalent to M only,"
+    },
+    {
+      "id": 75,
+      "start": 218.88,
+      "end": 221.64,
+      "text": "or essentially equivalent to maximum likelihood estimate?"
+    },
+    {
+      "id": 76,
+      "start": 223.84,
+      "end": 225.8,
+      "text": "And so like in order to make this quiz easier,"
+    },
+    {
+      "id": 77,
+      "start": 225.8,
+      "end": 228.48,
+      "text": "I'll go back to maximum likelihood estimation."
+    },
+    {
+      "id": 78,
+      "start": 228.48,
+      "end": 230.36,
+      "text": "So it looked a bit like this."
+    },
+    {
+      "id": 79,
+      "start": 230.36,
+      "end": 233.68,
+      "text": "You calculate the log probability of the true output."
+    },
+    {
+      "id": 80,
+      "start": 233.68,
+      "end": 235.84,
+      "text": "And now let me go to here."
+    },
+    {
+      "id": 81,
+      "start": 237.72,
+      "end": 238.56,
+      "text": "Any ideas?"
+    },
+    {
+      "id": 82,
+      "start": 239.76,
+      "end": 241.26,
+      "text": "Yep."
+    },
+    {
+      "id": 83,
+      "start": 241.26,
+      "end": 243.0,
+      "text": "When you're reward equals to one,"
+    },
+    {
+      "id": 84,
+      "start": 244.36,
+      "end": 246.6,
+      "text": "sometimes it's zero or other times one."
+    },
+    {
+      "id": 85,
+      "start": 252.04,
+      "end": 252.88,
+      "text": "Any ideas?"
+    },
+    {
+      "id": 86,
+      "start": 256.84,
+      "end": 259.68,
+      "text": "When does your reward need to be equal to one"
+    },
+    {
+      "id": 87,
+      "start": 259.68,
+      "end": 264.68,
+      "text": "in order to make this equation equivalent to this equation?"
+    },
+    {
+      "id": 88,
+      "start": 269.24,
+      "end": 271.16,
+      "text": "Yeah, when y and y had our same."
+    },
+    {
+      "id": 89,
+      "start": 271.16,
+      "end": 276.16,
+      "text": "So basically this objective is equivalent"
+    },
+    {
+      "id": 90,
+      "start": 278.28,
+      "end": 282.24,
+      "text": "to the M only objective when you're using a zero, one loss."
+    },
+    {
+      "id": 91,
+      "start": 285.16,
+      "end": 288.32,
+      "text": "You're using an evaluation function that gives you a score of one"
+    },
+    {
+      "id": 92,
+      "start": 288.6,
+      "end": 291.4,
+      "text": "that's exact match in zero when it's not exact match."
+    },
+    {
+      "id": 93,
+      "start": 291.4,
+      "end": 296.4,
+      "text": "So, but that also demonstrates that this can be more flexible"
+    },
+    {
+      "id": 94,
+      "start": 298.28,
+      "end": 301.2,
+      "text": "because you can have other rewards that are not just one"
+    },
+    {
+      "id": 95,
+      "start": 301.2,
+      "end": 302.64,
+      "text": "in zero for exact match,"
+    },
+    {
+      "id": 96,
+      "start": 302.64,
+      "end": 304.68,
+      "text": "but you can use things that could be partial credit,"
+    },
+    {
+      "id": 97,
+      "start": 304.68,
+      "end": 308.64,
+      "text": "you can use things that upway multiple potential,"
+    },
+    {
+      "id": 98,
+      "start": 308.64,
+      "end": 311.16,
+      "text": "potentially correct outputs and other things like that."
+    },
+    {
+      "id": 99,
+      "start": 313.04,
+      "end": 317.04,
+      "text": "So one problem with these methods is,"
+    },
+    {
+      "id": 100,
+      "start": 318.0,
+      "end": 322.04,
+      "text": "how do we know which action led to the reward?"
+    },
+    {
+      "id": 101,
+      "start": 322.04,
+      "end": 327.04,
+      "text": "So the best scenario is after each action, you get a reward."
+    },
+    {
+      "id": 102,
+      "start": 327.32,
+      "end": 329.44,
+      "text": "So after each token that you generated,"
+    },
+    {
+      "id": 103,
+      "start": 329.44,
+      "end": 333.12,
+      "text": "you get a thumbs up or a thumbs down from the user"
+    },
+    {
+      "id": 104,
+      "start": 333.12,
+      "end": 335.32,
+      "text": "about whether they like that token or not."
+    },
+    {
+      "id": 105,
+      "start": 336.32,
+      "end": 339.28,
+      "text": "And how much happier they are after you generated that token"
+    },
+    {
+      "id": 106,
+      "start": 339.28,
+      "end": 341.4,
+      "text": "than they were before you generated that token."
+    },
+    {
+      "id": 107,
+      "start": 342.36,
+      "end": 347.2,
+      "text": "The problem with this is that that's completely infeasible, right?"
+    },
+    {
+      "id": 108,
+      "start": 347.2,
+      "end": 348.72,
+      "text": "Like every time after you use strategy,"
+    },
+    {
+      "id": 109,
+      "start": 348.72,
+      "end": 351.24,
+      "text": "you're not going to press thumbs up and thumbs down after each token."
+    },
+    {
+      "id": 110,
+      "start": 351.24,
+      "end": 356.04,
+      "text": "So in reality, what we get is usually we get at the end"
+    },
+    {
+      "id": 111,
+      "start": 356.04,
+      "end": 359.48,
+      "text": "of roll out many, many different actions"
+    },
+    {
+      "id": 112,
+      "start": 359.48,
+      "end": 361.44,
+      "text": "and we're not sure which action is responsible"
+    },
+    {
+      "id": 113,
+      "start": 361.44,
+      "end": 362.56,
+      "text": "for giving us the reward."
+    },
+    {
+      "id": 114,
+      "start": 363.64,
+      "end": 369.12,
+      "text": "And so there's a few typical ways of dealing with this."
+    },
+    {
+      "id": 115,
+      "start": 370.12,
+      "end": 372.28,
+      "text": "The most typical way of dealing with this right now"
+    },
+    {
+      "id": 116,
+      "start": 372.28,
+      "end": 373.84,
+      "text": "is just not dealing with it."
+    },
+    {
+      "id": 117,
+      "start": 374.88,
+      "end": 378.68,
+      "text": "And just hoping that your optimization algorithm internally"
+    },
+    {
+      "id": 118,
+      "start": 378.68,
+      "end": 380.44,
+      "text": "will be able to do credit assignment."
+    },
+    {
+      "id": 119,
+      "start": 382.2,
+      "end": 386.56,
+      "text": "And so what that entails is essentially you"
+    },
+    {
+      "id": 120,
+      "start": 386.56,
+      "end": 390.52,
+      "text": "give an equal reward for each token in the output."
+    },
+    {
+      "id": 121,
+      "start": 390.52,
+      "end": 392.48,
+      "text": "Other ways that you can deal with it"
+    },
+    {
+      "id": 122,
+      "start": 392.48,
+      "end": 397.24,
+      "text": "are you can assign decaying rewards from future events."
+    },
+    {
+      "id": 123,
+      "start": 397.32,
+      "end": 401.64,
+      "text": "So let's say you're talking about a chatbot, for example,"
+    },
+    {
+      "id": 124,
+      "start": 401.64,
+      "end": 406.64,
+      "text": "on maybe this is the most intuitively of thinking about it."
+    },
+    {
+      "id": 125,
+      "start": 407.56,
+      "end": 412.44,
+      "text": "But you have a chatbot, you have like 20 chat turns"
+    },
+    {
+      "id": 126,
+      "start": 412.44,
+      "end": 415.56,
+      "text": "and you have the user give a thumbs up or a thumbs down"
+    },
+    {
+      "id": 127,
+      "start": 415.56,
+      "end": 417.68,
+      "text": "on the 20th chat turn."
+    },
+    {
+      "id": 128,
+      "start": 417.68,
+      "end": 421.84,
+      "text": "There you would assign a reward of, like, let's say"
+    },
+    {
+      "id": 129,
+      "start": 421.84,
+      "end": 423.24,
+      "text": "it gave a thumbs up."
+    },
+    {
+      "id": 130,
+      "start": 423.24,
+      "end": 425.52,
+      "text": "There you would assign a reward of one"
+    },
+    {
+      "id": 131,
+      "start": 425.52,
+      "end": 428.72,
+      "text": "for the previous chat turn, a reward of like 0.5"
+    },
+    {
+      "id": 132,
+      "start": 428.72,
+      "end": 432.88,
+      "text": "for the second previous chat turn, a reward of 0.25"
+    },
+    {
+      "id": 133,
+      "start": 432.88,
+      "end": 434.84,
+      "text": "for the third to previous chat turn."
+    },
+    {
+      "id": 134,
+      "start": 434.84,
+      "end": 438.44,
+      "text": "So basically say, yeah, like the user is feeling good"
+    },
+    {
+      "id": 135,
+      "start": 438.44,
+      "end": 440.08,
+      "text": "at the moment they gave the thumbs up"
+    },
+    {
+      "id": 136,
+      "start": 440.08,
+      "end": 443.12,
+      "text": "and that's probably more likely due to the things"
+    },
+    {
+      "id": 137,
+      "start": 443.12,
+      "end": 444.12,
+      "text": "that have been recently."
+    },
+    {
+      "id": 138,
+      "start": 444.12,
+      "end": 445.12,
+      "text": "So yeah."
+    },
+    {
+      "id": 139,
+      "start": 445.12,
+      "end": 446.52,
+      "text": "Try to think in future."
+    },
+    {
+      "id": 140,
+      "start": 447.48,
+      "end": 449.52,
+      "text": "We have a few different rewards."
+    },
+    {
+      "id": 141,
+      "start": 449.52,
+      "end": 452.44,
+      "text": "Like, we're not really going to do it."
+    },
+    {
+      "id": 142,
+      "start": 452.44,
+      "end": 456.68,
+      "text": "So the reward model can be any of the methods"
+    },
+    {
+      "id": 143,
+      "start": 456.68,
+      "end": 457.8,
+      "text": "that I talked about before."
+    },
+    {
+      "id": 144,
+      "start": 457.8,
+      "end": 459.68,
+      "text": "So it can be human feedback directly,"
+    },
+    {
+      "id": 145,
+      "start": 459.68,
+      "end": 460.92,
+      "text": "like the thumbs up or thumbs down."
+    },
+    {
+      "id": 146,
+      "start": 460.92,
+      "end": 465.0,
+      "text": "It could also be from a reward model that was pretrained."
+    },
+    {
+      "id": 147,
+      "start": 465.0,
+      "end": 468.36,
+      "text": "You could also theoretically learn the reward model"
+    },
+    {
+      "id": 148,
+      "start": 468.36,
+      "end": 471.72,
+      "text": "simultaneously, but you'd have to simultaneously"
+    },
+    {
+      "id": 149,
+      "start": 471.72,
+      "end": 473.4,
+      "text": "with the model itself."
+    },
+    {
+      "id": 150,
+      "start": 474.96,
+      "end": 479.24,
+      "text": "So yeah, I'm going to talk a little bit about DTO,"
+    },
+    {
+      "id": 151,
+      "start": 479.24,
+      "end": 481.04,
+      "text": "which kind of does that a little bit."
+    },
+    {
+      "id": 152,
+      "start": 481.04,
+      "end": 484.88,
+      "text": "But I would basically say that wherever you're getting"
+    },
+    {
+      "id": 153,
+      "start": 484.88,
+      "end": 486.68,
+      "text": "your reward is probably from one of the things"
+    },
+    {
+      "id": 154,
+      "start": 486.68,
+      "end": 488.04,
+      "text": "I talked about earlier today."
+    },
+    {
+      "id": 155,
+      "start": 490.68,
+      "end": 492.08,
+      "text": "Cool. Any other questions?"
+    },
+    {
+      "id": 156,
+      "start": 493.48,
+      "end": 494.32,
+      "text": "Okay."
+    },
+    {
+      "id": 157,
+      "start": 496.08,
+      "end": 499.76,
+      "text": "So that's the basic idea."
+    },
+    {
+      "id": 158,
+      "start": 499.76,
+      "end": 501.56,
+      "text": "The very simplest thing that you can do"
+    },
+    {
+      "id": 159,
+      "start": 501.56,
+      "end": 506.48,
+      "text": "is you can just sample, optimize the subjective function."
+    },
+    {
+      "id": 160,
+      "start": 506.48,
+      "end": 507.76,
+      "text": "This is dead easy."
+    },
+    {
+      "id": 161,
+      "start": 507.76,
+      "end": 509.96,
+      "text": "You, it's not hard to implement at all"
+    },
+    {
+      "id": 162,
+      "start": 509.96,
+      "end": 513.8,
+      "text": "as long as you have some source of reward signal."
+    },
+    {
+      "id": 163,
+      "start": 513.8,
+      "end": 515.88,
+      "text": "But the problem is reinforcement learning"
+    },
+    {
+      "id": 164,
+      "start": 515.88,
+      "end": 517.6,
+      "text": "can be very unstable."
+    },
+    {
+      "id": 165,
+      "start": 517.6,
+      "end": 521.16,
+      "text": "And it's hard to get it to work properly"
+    },
+    {
+      "id": 166,
+      "start": 521.16,
+      "end": 523.16,
+      "text": "if you don't do some additional tricks."
+    },
+    {
+      "id": 167,
+      "start": 523.16,
+      "end": 524.68,
+      "text": "So it likes to talk about this next."
+    },
+    {
+      "id": 168,
+      "start": 526.68,
+      "end": 527.52,
+      "text": "Oh, yes."
+    },
+    {
+      "id": 169,
+      "start": 533.04,
+      "end": 533.88,
+      "text": "Yeah."
+    },
+    {
+      "id": 170,
+      "start": 540.44,
+      "end": 541.44,
+      "text": "Yeah."
+    },
+    {
+      "id": 171,
+      "start": 546.44,
+      "end": 551.16,
+      "text": "Yeah, the typical ways you just have an exponential debate."
+    },
+    {
+      "id": 172,
+      "start": 551.16,
+      "end": 556.0,
+      "text": "So you both, why each time I was 0.5, 0.5,"
+    },
+    {
+      "id": 173,
+      "start": 556.0,
+      "end": 558.0,
+      "text": "is something like that."
+    },
+    {
+      "id": 174,
+      "start": 558.0,
+      "end": 560.44,
+      "text": "That's the basic thing."
+    },
+    {
+      "id": 175,
+      "start": 560.44,
+      "end": 561.32,
+      "text": "From A6 to A."
+    },
+    {
+      "id": 176,
+      "start": 565.28,
+      "end": 565.8,
+      "text": "Cool."
+    },
+    {
+      "id": 177,
+      "start": 565.8,
+      "end": 566.64,
+      "text": "Okay."
+    },
+    {
+      "id": 178,
+      "start": 566.64,
+      "end": 567.48,
+      "text": "So,"
+    },
+    {
+      "id": 179,
+      "start": 570.8,
+      "end": 572.92,
+      "text": "and that's one option."
+    },
+    {
+      "id": 180,
+      "start": 572.92,
+      "end": 574.44,
+      "text": "And sorry, just to clarify,"
+    },
+    {
+      "id": 181,
+      "start": 574.44,
+      "end": 577.12,
+      "text": "the most common option nowadays,"
+    },
+    {
+      "id": 182,
+      "start": 577.12,
+      "end": 579.44,
+      "text": "at least from the point of view of models"
+    },
+    {
+      "id": 183,
+      "start": 579.44,
+      "end": 580.96,
+      "text": "is not to decay at all"
+    },
+    {
+      "id": 184,
+      "start": 580.96,
+      "end": 583.36,
+      "text": "and just assign the same amount for each token."
+    },
+    {
+      "id": 185,
+      "start": 584.88,
+      "end": 587.76,
+      "text": "I'm not actually 100% sure what people are doing"
+    },
+    {
+      "id": 186,
+      "start": 587.76,
+      "end": 589.76,
+      "text": "with respect to like long chat things."
+    },
+    {
+      "id": 187,
+      "start": 589.76,
+      "end": 592.52,
+      "text": "I think probably they're only assigning it to the current,"
+    },
+    {
+      "id": 188,
+      "start": 592.52,
+      "end": 595.04,
+      "text": "like utterance and then not optimizing"
+    },
+    {
+      "id": 189,
+      "start": 595.04,
+      "end": 597.04,
+      "text": "to produce utterances."
+    },
+    {
+      "id": 190,
+      "start": 597.04,
+      "end": 599.32,
+      "text": "So we could think of a thumbs up or thumbs down signal"
+    },
+    {
+      "id": 191,
+      "start": 600.52,
+      "end": 603.36,
+      "text": "than they would assign an equivalent reward."
+    }
+  ],
+  "language": "en"
+}

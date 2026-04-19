@@ -1,0 +1,1199 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 3.32,
+      "text": "is like how many verbs are in this sentence?"
+    },
+    {
+      "id": 1,
+      "start": 3.32,
+      "end": 7.76,
+      "text": "Or how do you translate the sentence"
+    },
+    {
+      "id": 2,
+      "start": 7.76,
+      "end": 9.76,
+      "text": "into another language or something like that,"
+    },
+    {
+      "id": 3,
+      "start": 9.76,
+      "end": 12.36,
+      "text": "then you don't need an IRB approval?"
+    },
+    {
+      "id": 4,
+      "start": 12.36,
+      "end": 16.36,
+      "text": "But it could borderline you might want to check anyway."
+    },
+    {
+      "id": 5,
+      "start": 16.36,
+      "end": 18.2,
+      "text": "So that's something to be aware of."
+    },
+    {
+      "id": 6,
+      "start": 22.28,
+      "end": 25.2,
+      "text": "Next is assessing annotation quality."
+    },
+    {
+      "id": 7,
+      "start": 25.2,
+      "end": 29.0,
+      "text": "So one of my favorite ways to do this"
+    },
+    {
+      "id": 8,
+      "start": 29.0,
+      "end": 31.2,
+      "text": "is assess human performance."
+    },
+    {
+      "id": 9,
+      "start": 31.2,
+      "end": 34.68,
+      "text": "And so the way we do this is you double annotate some data,"
+    },
+    {
+      "id": 10,
+      "start": 34.68,
+      "end": 36.68,
+      "text": "and then you measure whatever metric you want"
+    },
+    {
+      "id": 11,
+      "start": 36.68,
+      "end": 39.92,
+      "text": "to measure for machines, just with respect"
+    },
+    {
+      "id": 12,
+      "start": 39.92,
+      "end": 41.44,
+      "text": "to human agreement."
+    },
+    {
+      "id": 13,
+      "start": 41.44,
+      "end": 43.8,
+      "text": "And so for translation, if you're using blue score"
+    },
+    {
+      "id": 14,
+      "start": 43.8,
+      "end": 46.4,
+      "text": "or a care app score or something like this,"
+    },
+    {
+      "id": 15,
+      "start": 46.4,
+      "end": 51.24,
+      "text": "then you would want to use this for assessment of the outputs."
+    },
+    {
+      "id": 16,
+      "start": 51.24,
+      "end": 57.2,
+      "text": "The advantage of doing this is that you get a human quality"
+    },
+    {
+      "id": 17,
+      "start": 57.2,
+      "end": 58.52,
+      "text": "score."
+    },
+    {
+      "id": 18,
+      "start": 58.52,
+      "end": 61.88,
+      "text": "And the human quality score is directly comparable"
+    },
+    {
+      "id": 19,
+      "start": 61.88,
+      "end": 63.64,
+      "text": "to the machine quality score."
+    },
+    {
+      "id": 20,
+      "start": 63.64,
+      "end": 66.12,
+      "text": "And so you can say, well, humans got the task right 90%"
+    },
+    {
+      "id": 21,
+      "start": 66.12,
+      "end": 69.08,
+      "text": "of the time, and GPT-4 got the task right 16% of the time."
+    },
+    {
+      "id": 22,
+      "start": 69.08,
+      "end": 72.0,
+      "text": "So humans are way better than GPT-4."
+    },
+    {
+      "id": 23,
+      "start": 72.0,
+      "end": 78.48,
+      "text": "Or humans got it right 80% of the time, and GPT-4 got it right 78%"
+    },
+    {
+      "id": 24,
+      "start": 78.48,
+      "end": 78.92,
+      "text": "of the time."
+    },
+    {
+      "id": 25,
+      "start": 78.92,
+      "end": 82.76,
+      "text": "So this task is this task, or maybe not necessarily"
+    },
+    {
+      "id": 26,
+      "start": 82.76,
+      "end": 85.8,
+      "text": "the task, but at least the data set is more or less"
+    },
+    {
+      "id": 27,
+      "start": 85.8,
+      "end": 87.48,
+      "text": "than solved by the strongest language models."
+    },
+    {
+      "id": 28,
+      "start": 87.48,
+      "end": 89.2,
+      "text": "And now we need to catch up with open source models,"
+    },
+    {
+      "id": 29,
+      "start": 89.2,
+      "end": 93.48,
+      "text": "since we're on two-second."
+    },
+    {
+      "id": 30,
+      "start": 93.48,
+      "end": 94.64,
+      "text": "There are things that you can measure."
+    },
+    {
+      "id": 31,
+      "start": 94.64,
+      "end": 96.6,
+      "text": "You can measure things like campus statistics."
+    },
+    {
+      "id": 32,
+      "start": 96.6,
+      "end": 100.2,
+      "text": "This is particularly useful for kind of just classification"
+    },
+    {
+      "id": 33,
+      "start": 100.2,
+      "end": 101.48,
+      "text": "tasks."
+    },
+    {
+      "id": 34,
+      "start": 101.48,
+      "end": 103.52,
+      "text": "And what this tells you is this tells you"
+    },
+    {
+      "id": 35,
+      "start": 103.52,
+      "end": 106.28,
+      "text": "how much higher is the agreement that you would get"
+    },
+    {
+      "id": 36,
+      "start": 106.28,
+      "end": 108.44,
+      "text": "than if you got it by chance."
+    },
+    {
+      "id": 37,
+      "start": 108.44,
+      "end": 113.76,
+      "text": "And so for example, let's say you're classifying span"
+    },
+    {
+      "id": 38,
+      "start": 113.76,
+      "end": 118.24,
+      "text": "or you're classifying toxic content or something like that."
+    },
+    {
+      "id": 39,
+      "start": 118.24,
+      "end": 125.2,
+      "text": "In 99% of your time, 99% of the time the content is not toxic."
+    },
+    {
+      "id": 40,
+      "start": 125.2,
+      "end": 129.88,
+      "text": "In 1% of the time the content is toxic."
+    },
+    {
+      "id": 41,
+      "start": 129.88,
+      "end": 135.4,
+      "text": "And then you hire some annotators, and you get 98% accuracy."
+    },
+    {
+      "id": 42,
+      "start": 135.4,
+      "end": 136.8,
+      "text": "That's kind of bad, right?"
+    },
+    {
+      "id": 43,
+      "start": 136.8,
+      "end": 141.08,
+      "text": "If you just send that toxic all the time, you get 99%."
+    },
+    {
+      "id": 44,
+      "start": 141.16,
+      "end": 144.28,
+      "text": "What the campus statistic does is it accounts for this."
+    },
+    {
+      "id": 45,
+      "start": 144.28,
+      "end": 147.92,
+      "text": "It says how much more like leases have"
+    },
+    {
+      "id": 46,
+      "start": 147.92,
+      "end": 148.44,
+      "text": "and chance."
+    },
+    {
+      "id": 47,
+      "start": 148.44,
+      "end": 150.92,
+      "text": "And if you just had chance accuracy, you would get zero."
+    },
+    {
+      "id": 48,
+      "start": 150.92,
+      "end": 153.6,
+      "text": "If you had perfect accuracy, you would get one."
+    },
+    {
+      "id": 49,
+      "start": 153.6,
+      "end": 155.44,
+      "text": "And you normally get some band between."
+    },
+    {
+      "id": 50,
+      "start": 158.6,
+      "end": 160.6,
+      "text": "So if it's low, you may need to revisit"
+    },
+    {
+      "id": 51,
+      "start": 160.6,
+      "end": 162.68,
+      "text": "guidelines higher about our annotators,"
+    },
+    {
+      "id": 52,
+      "start": 162.68,
+      "end": 166.72,
+      "text": "or rethink whether the task is possible at all or not."
+    },
+    {
+      "id": 53,
+      "start": 166.72,
+      "end": 169.12,
+      "text": "And some tasks are just impossible."
+    },
+    {
+      "id": 54,
+      "start": 169.84,
+      "end": 179.16,
+      "text": "I'm asking, well, they're very hard for annotators."
+    },
+    {
+      "id": 55,
+      "start": 179.16,
+      "end": 182.56,
+      "text": "So to give one example, annotators are really horrible"
+    },
+    {
+      "id": 56,
+      "start": 182.56,
+      "end": 185.36,
+      "text": "and identifying fake reviews."
+    },
+    {
+      "id": 57,
+      "start": 185.36,
+      "end": 189.92,
+      "text": "And so even if you hire annotators to identify fake reviews,"
+    },
+    {
+      "id": 58,
+      "start": 189.92,
+      "end": 190.8,
+      "text": "they're not doing that."
+    },
+    {
+      "id": 59,
+      "start": 190.8,
+      "end": 192.96,
+      "text": "So you're not likely to get a higher review."
+    },
+    {
+      "id": 60,
+      "start": 195.72,
+      "end": 197.8,
+      "text": "Well, I'm going to skip over this part"
+    },
+    {
+      "id": 61,
+      "start": 198.52,
+      "end": 201.52,
+      "text": "because I already talked about it."
+    },
+    {
+      "id": 62,
+      "start": 201.52,
+      "end": 204.76,
+      "text": "OK, any questions here?"
+    },
+    {
+      "id": 63,
+      "start": 207.64,
+      "end": 208.76,
+      "text": "Great, sensor."
+    },
+    {
+      "id": 64,
+      "start": 208.76,
+      "end": 211.4,
+      "text": "Next, I'd like to get into running experiments."
+    },
+    {
+      "id": 65,
+      "start": 211.4,
+      "end": 214.0,
+      "text": "So running experiments, one thing I find very helpful"
+    },
+    {
+      "id": 66,
+      "start": 214.0,
+      "end": 216.68,
+      "text": "is workflow automation."
+    },
+    {
+      "id": 67,
+      "start": 216.68,
+      "end": 219.88,
+      "text": "And basically, what I like to do is I"
+    },
+    {
+      "id": 68,
+      "start": 219.88,
+      "end": 223.48,
+      "text": "like to modularize each step of an experiment"
+    },
+    {
+      "id": 69,
+      "start": 223.48,
+      "end": 229.8,
+      "text": "into a directory where you have a directory,"
+    },
+    {
+      "id": 70,
+      "start": 229.8,
+      "end": 231.52,
+      "text": "a simple and a directory is output."
+    },
+    {
+      "id": 71,
+      "start": 234.64,
+      "end": 236.2,
+      "text": "This is my personal way of doing things."
+    },
+    {
+      "id": 72,
+      "start": 236.2,
+      "end": 238.2,
+      "text": "There are other ways of doing things that are also good."
+    },
+    {
+      "id": 73,
+      "start": 238.2,
+      "end": 241.36,
+      "text": "But very often, just to give an example,"
+    },
+    {
+      "id": 74,
+      "start": 241.36,
+      "end": 245.6,
+      "text": "you'll need to do pre-processing according to some."
+    },
+    {
+      "id": 75,
+      "start": 245.6,
+      "end": 249.16,
+      "text": "You'll need to do data selection."
+    },
+    {
+      "id": 76,
+      "start": 249.16,
+      "end": 251.88,
+      "text": "So you'll need to select which data sets you're training on."
+    },
+    {
+      "id": 77,
+      "start": 251.88,
+      "end": 253.68,
+      "text": "You'll need to do pre-processing of them"
+    },
+    {
+      "id": 78,
+      "start": 253.68,
+      "end": 255.6,
+      "text": "with the tokenization model."
+    },
+    {
+      "id": 79,
+      "start": 255.6,
+      "end": 259.64,
+      "text": "And then you will need to run an experiment."
+    },
+    {
+      "id": 80,
+      "start": 259.64,
+      "end": 261.84,
+      "text": "And then you'll need to do evaluation."
+    },
+    {
+      "id": 81,
+      "start": 261.84,
+      "end": 264.4,
+      "text": "And those are all kind of like discrete steps."
+    },
+    {
+      "id": 82,
+      "start": 264.4,
+      "end": 267.8,
+      "text": "Where the data selection takes in your big pool of data"
+    },
+    {
+      "id": 83,
+      "start": 267.8,
+      "end": 271.28,
+      "text": "and outputs a data set that's been selected."
+    },
+    {
+      "id": 84,
+      "start": 271.28,
+      "end": 276.12,
+      "text": "The tokenization will take a tokenizer model."
+    },
+    {
+      "id": 85,
+      "start": 276.12,
+      "end": 278.36,
+      "text": "Maybe train the tokenizer model and split it up"
+    },
+    {
+      "id": 86,
+      "start": 278.36,
+      "end": 280.28,
+      "text": "into different tokens."
+    },
+    {
+      "id": 87,
+      "start": 280.28,
+      "end": 282.12,
+      "text": "The training will train."
+    },
+    {
+      "id": 88,
+      "start": 282.12,
+      "end": 283.88,
+      "text": "It might output a whole bunch of checkpoints."
+    },
+    {
+      "id": 89,
+      "start": 283.88,
+      "end": 286.8,
+      "text": "And the evaluation will evaluate one checkpoint."
+    },
+    {
+      "id": 90,
+      "start": 286.8,
+      "end": 289.08,
+      "text": "And so those are all kind of modular."
+    },
+    {
+      "id": 91,
+      "start": 289.08,
+      "end": 290.68,
+      "text": "And you can actually think of each one of them"
+    },
+    {
+      "id": 92,
+      "start": 290.68,
+      "end": 293.6,
+      "text": "as like a function in your pipeline program."
+    },
+    {
+      "id": 93,
+      "start": 293.6,
+      "end": 300.12,
+      "text": "And you kind of want to avoid rerunning data set selection"
+    },
+    {
+      "id": 94,
+      "start": 300.12,
+      "end": 302.88,
+      "text": "and tokenization every time you do a new evaluation."
+    },
+    {
+      "id": 95,
+      "start": 302.88,
+      "end": 304.36,
+      "text": "Like that would be kind of silly."
+    },
+    {
+      "id": 96,
+      "start": 304.36,
+      "end": 306.84,
+      "text": "You definitely want to avoid rerunning training every time"
+    },
+    {
+      "id": 97,
+      "start": 306.84,
+      "end": 308.28,
+      "text": "you evaluate a checkpoint."
+    },
+    {
+      "id": 98,
+      "start": 308.28,
+      "end": 313.8,
+      "text": "So what I do is I often name directories by parameters"
+    },
+    {
+      "id": 99,
+      "start": 313.8,
+      "end": 318.84,
+      "text": "where it's like transformer layer 8, node 512,"
+    },
+    {
+      "id": 100,
+      "start": 318.84,
+      "end": 322.72,
+      "text": "drop out 0.5, label smooth 0.02."
+    },
+    {
+      "id": 101,
+      "start": 322.72,
+      "end": 325.24,
+      "text": "And so I have all the parameters in there."
+    },
+    {
+      "id": 102,
+      "start": 325.24,
+      "end": 332.56,
+      "text": "And then the training process will output a whole bunch"
+    },
+    {
+      "id": 103,
+      "start": 332.56,
+      "end": 334.28,
+      "text": "of checkpoints in here."
+    },
+    {
+      "id": 104,
+      "start": 334.28,
+      "end": 337.12,
+      "text": "And then for my evaluation, I have evaluation metrics."
+    },
+    {
+      "id": 105,
+      "start": 337.12,
+      "end": 338.8,
+      "text": "And I have the checkpoint I'm evaluating."
+    },
+    {
+      "id": 106,
+      "start": 338.8,
+      "end": 342.96,
+      "text": "So when I do evaluation, I will then"
+    },
+    {
+      "id": 107,
+      "start": 342.96,
+      "end": 348.04,
+      "text": "append checkpoint 6 metric F measure or something like that."
+    },
+    {
+      "id": 108,
+      "start": 348.04,
+      "end": 350.88,
+      "text": "And so I keep around all of the previous information"
+    },
+    {
+      "id": 109,
+      "start": 350.88,
+      "end": 353.44,
+      "text": "just append append append append."
+    },
+    {
+      "id": 110,
+      "start": 353.44,
+      "end": 357.2,
+      "text": "And so this allows you to avoid rerunning things"
+    },
+    {
+      "id": 111,
+      "start": 357.2,
+      "end": 360.12,
+      "text": "because you can just have your pipeline code check it."
+    },
+    {
+      "id": 112,
+      "start": 360.12,
+      "end": 363.24,
+      "text": "The directory already exists and already has been completed."
+    },
+    {
+      "id": 113,
+      "start": 363.24,
+      "end": 365.32,
+      "text": "And then read in the result that it already has been"
+    },
+    {
+      "id": 114,
+      "start": 365.32,
+      "end": 367.12,
+      "text": "or run the experiment."
+    },
+    {
+      "id": 115,
+      "start": 367.12,
+      "end": 370.6,
+      "text": "So you can write this in pure Python"
+    },
+    {
+      "id": 116,
+      "start": 370.6,
+      "end": 373.4,
+      "text": "by just adding some statements at the beginning"
+    },
+    {
+      "id": 117,
+      "start": 373.4,
+      "end": 377.24,
+      "text": "of the function, some if statements at some output statements"
+    },
+    {
+      "id": 118,
+      "start": 377.24,
+      "end": 379.44,
+      "text": "at the end of the function."
+    },
+    {
+      "id": 119,
+      "start": 379.44,
+      "end": 382.56,
+      "text": "There are more sophisticated models and methods."
+    },
+    {
+      "id": 120,
+      "start": 382.56,
+      "end": 385.24,
+      "text": "So there's a toolkit called duct tape"
+    },
+    {
+      "id": 121,
+      "start": 385.24,
+      "end": 387.6,
+      "text": "that was originally created here at CMU."
+    },
+    {
+      "id": 122,
+      "start": 387.6,
+      "end": 394.2,
+      "text": "And my student pet track is maintaining now at this link."
+    },
+    {
+      "id": 123,
+      "start": 394.2,
+      "end": 396.04,
+      "text": "So you can either just roll something on your own"
+    },
+    {
+      "id": 124,
+      "start": 396.04,
+      "end": 399.36,
+      "text": "or look into what are more complex workflow automation"
+    },
+    {
+      "id": 125,
+      "start": 399.36,
+      "end": 402.96,
+      "text": "things at the same time."
+    },
+    {
+      "id": 126,
+      "start": 402.96,
+      "end": 405.44,
+      "text": "OK, evaluation."
+    },
+    {
+      "id": 127,
+      "start": 405.44,
+      "end": 409.2,
+      "text": "So I talked about this to some extent."
+    },
+    {
+      "id": 128,
+      "start": 409.2,
+      "end": 412.52,
+      "text": "So I'll just skip over that."
+    },
+    {
+      "id": 129,
+      "start": 412.52,
+      "end": 417.16,
+      "text": "And result reporting."
+    },
+    {
+      "id": 130,
+      "start": 417.16,
+      "end": 418.88,
+      "text": "Four papers."
+    },
+    {
+      "id": 131,
+      "start": 418.88,
+      "end": 420.2,
+      "text": "One thing that I really like to do"
+    },
+    {
+      "id": 132,
+      "start": 420.2,
+      "end": 422.84,
+      "text": "is plan the result section in advance"
+    },
+    {
+      "id": 133,
+      "start": 422.84,
+      "end": 427.64,
+      "text": "or at least imagine the result section in advance."
+    },
+    {
+      "id": 134,
+      "start": 427.64,
+      "end": 433.2,
+      "text": "So what I think of is what experimental claims"
+    },
+    {
+      "id": 135,
+      "start": 433.2,
+      "end": 434.36,
+      "text": "would I like to make?"
+    },
+    {
+      "id": 136,
+      "start": 434.36,
+      "end": 437.68,
+      "text": "How am I going to support them by the experiments"
+    },
+    {
+      "id": 137,
+      "start": 437.68,
+      "end": 440.48,
+      "text": "that I'm going to show in the result section?"
+    },
+    {
+      "id": 138,
+      "start": 440.48,
+      "end": 443.64,
+      "text": "And this identifies unjustified experimental claims."
+    },
+    {
+      "id": 139,
+      "start": 443.64,
+      "end": 447.08,
+      "text": "So let's say your method is you're"
+    },
+    {
+      "id": 140,
+      "start": 447.08,
+      "end": 449.8,
+      "text": "saying something like this method improves"
+    },
+    {
+      "id": 141,
+      "start": 449.8,
+      "end": 451.6,
+      "text": "across a wide variety of languages."
+    },
+    {
+      "id": 142,
+      "start": 451.6,
+      "end": 453.52,
+      "text": "And then you realize that you only have one language"
+    },
+    {
+      "id": 143,
+      "start": 453.52,
+      "end": 455.92,
+      "text": "in your experiment section."
+    },
+    {
+      "id": 144,
+      "start": 455.92,
+      "end": 458.8,
+      "text": "That's a problem, obviously."
+    },
+    {
+      "id": 145,
+      "start": 458.8,
+      "end": 462.96,
+      "text": "Also, I really enjoy assuming that all of my experiments"
+    },
+    {
+      "id": 146,
+      "start": 462.96,
+      "end": 465.52,
+      "text": "are going really, really well."
+    },
+    {
+      "id": 147,
+      "start": 465.52,
+      "end": 469.92,
+      "text": "And none of my runs is crashed with CUDA out of memory"
+    },
+    {
+      "id": 148,
+      "start": 469.92,
+      "end": 475.56,
+      "text": "errors and all of the experiments appear as expected."
+    },
+    {
+      "id": 149,
+      "start": 475.56,
+      "end": 478.76,
+      "text": "And if you do something like that,"
+    },
+    {
+      "id": 150,
+      "start": 478.76,
+      "end": 480.8,
+      "text": "you can be ambitious and say, OK, how"
+    },
+    {
+      "id": 151,
+      "start": 480.8,
+      "end": 485.32,
+      "text": "can I make this research project really impactful?"
+    },
+    {
+      "id": 152,
+      "start": 485.32,
+      "end": 487.4,
+      "text": "And another thing that I like to ask my students"
+    },
+    {
+      "id": 153,
+      "start": 487.4,
+      "end": 489.12,
+      "text": "or people I'm working with recently"
+    },
+    {
+      "id": 154,
+      "start": 489.12,
+      "end": 493.92,
+      "text": "is who are three people in the world"
+    },
+    {
+      "id": 155,
+      "start": 493.92,
+      "end": 496.16,
+      "text": "who will be really excited by your paper,"
+    },
+    {
+      "id": 156,
+      "start": 496.16,
+      "end": 498.96,
+      "text": "named actual people?"
+    },
+    {
+      "id": 157,
+      "start": 498.96,
+      "end": 501.0,
+      "text": "And where do those people work?"
+    },
+    {
+      "id": 158,
+      "start": 501.0,
+      "end": 502.2,
+      "text": "What do they care about?"
+    },
+    {
+      "id": 159,
+      "start": 502.2,
+      "end": 504.28,
+      "text": "What sort of evidence would you need in your paper"
+    },
+    {
+      "id": 160,
+      "start": 504.28,
+      "end": 506.76,
+      "text": "to make them really excited about your paper?"
+    },
+    {
+      "id": 161,
+      "start": 506.76,
+      "end": 507.6,
+      "text": "Or something like that?"
+    },
+    {
+      "id": 162,
+      "start": 507.6,
+      "end": 510.36,
+      "text": "And very often people will reply to be like,"
+    },
+    {
+      "id": 163,
+      "start": 510.44,
+      "end": 514.44,
+      "text": "oh, I think people in Google will be very excited about this."
+    },
+    {
+      "id": 164,
+      "start": 514.44,
+      "end": 515.32,
+      "text": "And they're going to use it."
+    },
+    {
+      "id": 165,
+      "start": 515.32,
+      "end": 518.56,
+      "text": "And I'm like, well, you're writing all your code in PyTorch."
+    },
+    {
+      "id": 166,
+      "start": 518.56,
+      "end": 520.56,
+      "text": "And they don't use PyTorch."
+    },
+    {
+      "id": 167,
+      "start": 520.56,
+      "end": 523.2,
+      "text": "So how are you going to convince them to use your paper?"
+    },
+    {
+      "id": 168,
+      "start": 523.2,
+      "end": 525.04,
+      "text": "They're going to have to re-implemented it in Jax."
+    },
+    {
+      "id": 169,
+      "start": 525.04,
+      "end": 526.12,
+      "text": "And that's going to suck for them."
+    },
+    {
+      "id": 170,
+      "start": 526.12,
+      "end": 530.76,
+      "text": "So what are the barriers for them to actually using it?"
+    },
+    {
+      "id": 171,
+      "start": 530.76,
+      "end": 532.84,
+      "text": "And then maybe the people are like, oh, well, maybe actually,"
+    },
+    {
+      "id": 172,
+      "start": 532.84,
+      "end": 534.6,
+      "text": "I don't want people in Google to use this."
+    },
+    {
+      "id": 173,
+      "start": 534.6,
+      "end": 536.32,
+      "text": "And I can think of somebody else."
+    },
+    {
+      "id": 174,
+      "start": 536.32,
+      "end": 537.84,
+      "text": "And it's like, well, great."
+    },
+    {
+      "id": 175,
+      "start": 537.84,
+      "end": 539.24,
+      "text": "So now release it opens for us."
+    },
+    {
+      "id": 176,
+      "start": 539.24,
+      "end": 541.52,
+      "text": "And people will have it open source."
+    },
+    {
+      "id": 177,
+      "start": 541.52,
+      "end": 544.0,
+      "text": "So you can kind of think about the types of evidence"
+    },
+    {
+      "id": 178,
+      "start": 544.0,
+      "end": 546.08,
+      "text": "that you need to convince people to use your work"
+    },
+    {
+      "id": 179,
+      "start": 546.08,
+      "end": 548.6,
+      "text": "and that can result in your work being more impactful"
+    },
+    {
+      "id": 180,
+      "start": 548.6,
+      "end": 550.44,
+      "text": "in the long run."
+    },
+    {
+      "id": 181,
+      "start": 550.44,
+      "end": 552.08,
+      "text": "And if you think about it from the very beginning,"
+    },
+    {
+      "id": 182,
+      "start": 552.08,
+      "end": 553.64,
+      "text": "that also helps you plan your experiments."
+    },
+    {
+      "id": 183,
+      "start": 553.64,
+      "end": 555.24,
+      "text": "Like what sort of evidence is necessary"
+    },
+    {
+      "id": 184,
+      "start": 555.24,
+      "end": 559.92,
+      "text": "for people to get excited about it in the first place?"
+    },
+    {
+      "id": 185,
+      "start": 559.92,
+      "end": 562.32,
+      "text": "Another thing that I like to do with a result reporting"
+    },
+    {
+      "id": 186,
+      "start": 562.32,
+      "end": 565.0,
+      "text": "is result generation scripts."
+    },
+    {
+      "id": 187,
+      "start": 565.0,
+      "end": 570.68,
+      "text": "So I often generate paper latex directly from long files."
+    },
+    {
+      "id": 188,
+      "start": 570.68,
+      "end": 573.04,
+      "text": "There's two reasons why I do this."
+    },
+    {
+      "id": 189,
+      "start": 573.04,
+      "end": 576.28,
+      "text": "Number one, it's efficient and minimizes errors."
+    },
+    {
+      "id": 190,
+      "start": 576.28,
+      "end": 578.84,
+      "text": "Number two, it allows you to preemptively plan"
+    },
+    {
+      "id": 191,
+      "start": 578.84,
+      "end": 580.8,
+      "text": "experiments that you want to run."
+    },
+    {
+      "id": 192,
+      "start": 580.8,
+      "end": 584.28,
+      "text": "So like, for example, if we go back to the directory"
+    },
+    {
+      "id": 193,
+      "start": 584.28,
+      "end": 590.88,
+      "text": "that I talked about before, I can write a script that"
+    },
+    {
+      "id": 194,
+      "start": 590.88,
+      "end": 595.48,
+      "text": "reads in 20 evaluation results from 20 different directories"
+    },
+    {
+      "id": 195,
+      "start": 595.48,
+      "end": 596.96,
+      "text": "and fills in the table."
+    },
+    {
+      "id": 196,
+      "start": 596.96,
+      "end": 598.88,
+      "text": "And if that directorie doesn't exist yet,"
+    },
+    {
+      "id": 197,
+      "start": 598.88,
+      "end": 601.6,
+      "text": "it will put like TV or something like that in the table."
+    },
+    {
+      "id": 198,
+      "start": 601.6,
+      "end": 602.6,
+      "text": "So I can very quickly."
+    }
+  ],
+  "language": "en"
+}

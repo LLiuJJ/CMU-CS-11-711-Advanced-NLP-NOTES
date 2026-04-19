@@ -1,0 +1,1037 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 3.2,
+      "text": "So I'd like to go ahead with complex reasoning."
+    },
+    {
+      "id": 1,
+      "start": 3.2,
+      "end": 6.78,
+      "text": "And we've talked a little bit about reasoning"
+    },
+    {
+      "id": 2,
+      "start": 6.78,
+      "end": 9.8,
+      "text": "and language models up until now."
+    },
+    {
+      "id": 3,
+      "start": 9.8,
+      "end": 11.5,
+      "text": "And so I'm going to be talking about stuff"
+    },
+    {
+      "id": 4,
+      "start": 11.5,
+      "end": 14.24,
+      "text": "that we didn't talk about yet."
+    },
+    {
+      "id": 5,
+      "start": 14.24,
+      "end": 16.4,
+      "text": "This might be a little bit short because of that,"
+    },
+    {
+      "id": 6,
+      "start": 16.4,
+      "end": 18.84,
+      "text": "because I'm not talking about programs,"
+    },
+    {
+      "id": 7,
+      "start": 18.84,
+      "end": 21.0,
+      "text": "because we talked about that in the code generation class."
+    },
+    {
+      "id": 8,
+      "start": 21.0,
+      "end": 23.24,
+      "text": "And we already talked a little bit about some of the basics here."
+    },
+    {
+      "id": 9,
+      "start": 23.24,
+      "end": 26.08,
+      "text": "But if we have time at the end,"
+    },
+    {
+      "id": 10,
+      "start": 26.08,
+      "end": 29.76,
+      "text": "I'd be happy to discuss free form also."
+    },
+    {
+      "id": 11,
+      "start": 29.76,
+      "end": 32.92,
+      "text": "So what is reasoning?"
+    },
+    {
+      "id": 12,
+      "start": 32.92,
+      "end": 35.36,
+      "text": "The basic idea is using evidence and logic"
+    },
+    {
+      "id": 13,
+      "start": 35.36,
+      "end": 38.52,
+      "text": "to arrive at conclusions and make judgments."
+    },
+    {
+      "id": 14,
+      "start": 38.52,
+      "end": 43.56,
+      "text": "And what is it in language models"
+    },
+    {
+      "id": 15,
+      "start": 43.56,
+      "end": 47.76,
+      "text": "is a little bit less clear."
+    },
+    {
+      "id": 16,
+      "start": 47.76,
+      "end": 49.28,
+      "text": "But if we talk about it kind of like"
+    },
+    {
+      "id": 17,
+      "start": 49.28,
+      "end": 54.04,
+      "text": "from the philosophical standpoint, there are two varieties"
+    },
+    {
+      "id": 18,
+      "start": 54.04,
+      "end": 54.52,
+      "text": "of this."
+    },
+    {
+      "id": 19,
+      "start": 54.52,
+      "end": 57.0,
+      "text": "One is formal reasoning."
+    },
+    {
+      "id": 20,
+      "start": 57.0,
+      "end": 61.52,
+      "text": "And formal reasoning is mostly based on strict truth values."
+    },
+    {
+      "id": 21,
+      "start": 61.52,
+      "end": 65.12,
+      "text": "So it's kind of like you can definitely say this is true."
+    },
+    {
+      "id": 22,
+      "start": 65.12,
+      "end": 67.56,
+      "text": "You can definitely say this is not true."
+    },
+    {
+      "id": 23,
+      "start": 67.56,
+      "end": 72.96,
+      "text": "And in real life, there's very little actual formal reasoning"
+    },
+    {
+      "id": 24,
+      "start": 72.96,
+      "end": 75.04,
+      "text": "outside of like, for example, mathematics"
+    },
+    {
+      "id": 25,
+      "start": 75.04,
+      "end": 77.44,
+      "text": "or maybe algorithms, computer science,"
+    },
+    {
+      "id": 26,
+      "start": 77.44,
+      "end": 80.08,
+      "text": "and other things like that."
+    },
+    {
+      "id": 27,
+      "start": 80.08,
+      "end": 82.28,
+      "text": "And then separately from that, we have informal reasoning"
+    },
+    {
+      "id": 28,
+      "start": 82.28,
+      "end": 84.08,
+      "text": "based on experience and intuition."
+    },
+    {
+      "id": 29,
+      "start": 84.08,
+      "end": 89.6,
+      "text": "And actually, this was rather elusive"
+    },
+    {
+      "id": 30,
+      "start": 89.6,
+      "end": 92.16,
+      "text": "until large language models."
+    },
+    {
+      "id": 31,
+      "start": 92.16,
+      "end": 94.08,
+      "text": "People were working on it, but it was really hard."
+    },
+    {
+      "id": 32,
+      "start": 94.08,
+      "end": 96.2,
+      "text": "And this is like one of the big breakthroughs,"
+    },
+    {
+      "id": 33,
+      "start": 96.2,
+      "end": 99.56,
+      "text": "I think, of the past few years."
+    },
+    {
+      "id": 34,
+      "start": 99.56,
+      "end": 104.56,
+      "text": "I should note that this paper here, Huang and Chun,"
+    },
+    {
+      "id": 35,
+      "start": 104.56,
+      "end": 108.04,
+      "text": "is a kind of review survey paper"
+    },
+    {
+      "id": 36,
+      "start": 108.04,
+      "end": 109.68,
+      "text": "of reasoning in large language models."
+    },
+    {
+      "id": 37,
+      "start": 109.68,
+      "end": 110.72,
+      "text": "It's on the references."
+    },
+    {
+      "id": 38,
+      "start": 110.72,
+      "end": 114.04,
+      "text": "So if you're interested, you can take a look at that too."
+    },
+    {
+      "id": 39,
+      "start": 114.56,
+      "end": 117.6,
+      "text": "But there's three kinds of reasoning."
+    },
+    {
+      "id": 40,
+      "start": 117.6,
+      "end": 119.56,
+      "text": "There's many kinds of reasoning, but there's"
+    },
+    {
+      "id": 41,
+      "start": 119.56,
+      "end": 121.36,
+      "text": "three kinds of reasoning in particular"
+    },
+    {
+      "id": 42,
+      "start": 121.36,
+      "end": 126.04,
+      "text": "that I'd like to talk about from the point of view of today."
+    },
+    {
+      "id": 43,
+      "start": 126.04,
+      "end": 129.0,
+      "text": "And the first one is deductive reasoning."
+    },
+    {
+      "id": 44,
+      "start": 129.0,
+      "end": 131.2,
+      "text": "Ind deductive reasoning is basically using logic"
+    },
+    {
+      "id": 45,
+      "start": 131.2,
+      "end": 134.16,
+      "text": "to go from a premise to a conclusion."
+    },
+    {
+      "id": 46,
+      "start": 134.16,
+      "end": 137.8,
+      "text": "And this is largely what people, not entirely,"
+    },
+    {
+      "id": 47,
+      "start": 137.8,
+      "end": 140.32,
+      "text": "but largely what people talk about when they think about formal"
+    },
+    {
+      "id": 48,
+      "start": 140.32,
+      "end": 140.92,
+      "text": "reasoning."
+    },
+    {
+      "id": 49,
+      "start": 140.92,
+      "end": 144.72,
+      "text": "And so basically, you have several premises."
+    },
+    {
+      "id": 50,
+      "start": 144.72,
+      "end": 149.8,
+      "text": "Like all mammals have kidneys and all whales are mammals."
+    },
+    {
+      "id": 51,
+      "start": 149.8,
+      "end": 153.52,
+      "text": "And then from this, you can go to all whales have kidneys."
+    },
+    {
+      "id": 52,
+      "start": 156.48,
+      "end": 159.76,
+      "text": "And separately, there's inductive reasoning."
+    },
+    {
+      "id": 53,
+      "start": 159.76,
+      "end": 165.2,
+      "text": "And inductive reasoning is from observation,"
+    },
+    {
+      "id": 54,
+      "start": 165.2,
+      "end": 168.12,
+      "text": "predict a likely conclusion or predict a likely kind"
+    },
+    {
+      "id": 55,
+      "start": 168.12,
+      "end": 171.72,
+      "text": "of generalized conclusion."
+    },
+    {
+      "id": 56,
+      "start": 171.72,
+      "end": 173.68,
+      "text": "So this is one example."
+    },
+    {
+      "id": 57,
+      "start": 173.68,
+      "end": 176.12,
+      "text": "When we see a creature with wings, it is usually a bird."
+    },
+    {
+      "id": 58,
+      "start": 176.12,
+      "end": 177.44,
+      "text": "We see a creature with wings."
+    },
+    {
+      "id": 59,
+      "start": 177.44,
+      "end": 178.96,
+      "text": "The creature is likely to be a bird."
+    },
+    {
+      "id": 60,
+      "start": 178.96,
+      "end": 181.4,
+      "text": "So it's kind of, this is kind of like a soft version"
+    },
+    {
+      "id": 61,
+      "start": 181.4,
+      "end": 182.52,
+      "text": "of deduction."
+    },
+    {
+      "id": 62,
+      "start": 182.52,
+      "end": 185.8,
+      "text": "Another common thing is like every single creature"
+    },
+    {
+      "id": 63,
+      "start": 185.8,
+      "end": 188.52,
+      "text": "I have seen with wings is a bird."
+    },
+    {
+      "id": 64,
+      "start": 188.52,
+      "end": 196.72,
+      "text": "And then you can kind of induce that all creatures with wings"
+    },
+    {
+      "id": 65,
+      "start": 196.72,
+      "end": 197.52,
+      "text": "are birds."
+    },
+    {
+      "id": 66,
+      "start": 197.52,
+      "end": 198.96,
+      "text": "But that might not be true."
+    },
+    {
+      "id": 67,
+      "start": 198.96,
+      "end": 200.76,
+      "text": "It's not necessarily logically entailed."
+    },
+    {
+      "id": 68,
+      "start": 200.76,
+      "end": 206.84,
+      "text": "But you make that kind of logical conclusion"
+    },
+    {
+      "id": 69,
+      "start": 206.84,
+      "end": 211.12,
+      "text": "without it being formally correct or verifiable."
+    },
+    {
+      "id": 70,
+      "start": 211.12,
+      "end": 213.4,
+      "text": "And then the final one is abductive reasoning."
+    },
+    {
+      "id": 71,
+      "start": 213.4,
+      "end": 215.84,
+      "text": "And so this is from an observation."
+    },
+    {
+      "id": 72,
+      "start": 215.84,
+      "end": 218.92,
+      "text": "We predict the most likely explanation."
+    },
+    {
+      "id": 73,
+      "start": 218.92,
+      "end": 221.4,
+      "text": "And so for example, if we have something"
+    },
+    {
+      "id": 74,
+      "start": 221.4,
+      "end": 223.4,
+      "text": "like the car cannot start, and there"
+    },
+    {
+      "id": 75,
+      "start": 223.4,
+      "end": 226.72,
+      "text": "is a puddle liquid under the engine,"
+    },
+    {
+      "id": 76,
+      "start": 226.72,
+      "end": 229.48,
+      "text": "then we might have a likely explanation"
+    },
+    {
+      "id": 77,
+      "start": 229.48,
+      "end": 231.36,
+      "text": "that the car has a leak in the radiator."
+    },
+    {
+      "id": 78,
+      "start": 231.36,
+      "end": 237.16,
+      "text": "So we're going from kind of the car, you know,"
+    },
+    {
+      "id": 79,
+      "start": 237.16,
+      "end": 238.68,
+      "text": "these things."
+    },
+    {
+      "id": 80,
+      "start": 238.68,
+      "end": 241.28,
+      "text": "And then we try to predict the reason why this happens."
+    },
+    {
+      "id": 81,
+      "start": 241.28,
+      "end": 244.08,
+      "text": "So we're trying to predict like reverse causal links,"
+    },
+    {
+      "id": 82,
+      "start": 244.08,
+      "end": 246.24,
+      "text": "essentially."
+    },
+    {
+      "id": 83,
+      "start": 246.24,
+      "end": 247.84,
+      "text": "There's other types of reasoning"
+    },
+    {
+      "id": 84,
+      "start": 247.84,
+      "end": 249.12,
+      "text": "that I'm not going to talk about as much,"
+    },
+    {
+      "id": 85,
+      "start": 249.12,
+      "end": 251.68,
+      "text": "like analogical reasoning and things like this."
+    },
+    {
+      "id": 86,
+      "start": 251.68,
+      "end": 253.6,
+      "text": "But these are the three main ones"
+    },
+    {
+      "id": 87,
+      "start": 253.6,
+      "end": 256.6,
+      "text": "I want to talk about today."
+    },
+    {
+      "id": 88,
+      "start": 256.6,
+      "end": 259.28,
+      "text": "So one thing I should point out is even in philosophy,"
+    },
+    {
+      "id": 89,
+      "start": 259.28,
+      "end": 264.48,
+      "text": "or even when you read descriptions"
+    },
+    {
+      "id": 90,
+      "start": 264.48,
+      "end": 266.2,
+      "text": "about these various types of reasoning,"
+    },
+    {
+      "id": 91,
+      "start": 266.2,
+      "end": 267.96,
+      "text": "the types are a little bit vague."
+    },
+    {
+      "id": 92,
+      "start": 267.96,
+      "end": 276.48,
+      "text": "So take these as general directions and not strict rules,"
+    },
+    {
+      "id": 93,
+      "start": 276.48,
+      "end": 279.0,
+      "text": "because which falls under which category"
+    },
+    {
+      "id": 94,
+      "start": 279.0,
+      "end": 282.2,
+      "text": "also can be a little bit unclear"
+    },
+    {
+      "id": 95,
+      "start": 282.2,
+      "end": 283.6,
+      "text": "according to various definitions."
+    },
+    {
+      "id": 96,
+      "start": 284.48,
+      "end": 287.76,
+      "text": "Cool."
+    },
+    {
+      "id": 97,
+      "start": 287.76,
+      "end": 294.4,
+      "text": "So first, before getting into formal reasoning methods,"
+    },
+    {
+      "id": 98,
+      "start": 294.4,
+      "end": 296.0,
+      "text": "before getting into the bulk of the talk,"
+    },
+    {
+      "id": 99,
+      "start": 296.0,
+      "end": 297.64,
+      "text": "which is going to be about LLMs,"
+    },
+    {
+      "id": 100,
+      "start": 297.64,
+      "end": 301.04,
+      "text": "I want to talk about some pre-LLLM reasoning methods."
+    },
+    {
+      "id": 101,
+      "start": 301.04,
+      "end": 303.44,
+      "text": "And the first one is kind of like formal reasoning"
+    },
+    {
+      "id": 102,
+      "start": 303.44,
+      "end": 306.12,
+      "text": "within computational semantics."
+    },
+    {
+      "id": 103,
+      "start": 306.12,
+      "end": 309.16,
+      "text": "And this has been around for a really long time."
+    },
+    {
+      "id": 104,
+      "start": 309.16,
+      "end": 311.88,
+      "text": "It's also kind of what powered the things"
+    },
+    {
+      "id": 105,
+      "start": 311.88,
+      "end": 317.24,
+      "text": "that worked over knowledge bases and other things like this."
+    },
+    {
+      "id": 106,
+      "start": 317.24,
+      "end": 320.16,
+      "text": "And the way it works is it does"
+    },
+    {
+      "id": 107,
+      "start": 320.16,
+      "end": 329.84,
+      "text": "is derivational reasoning by, sorry, I can't read that in the back,"
+    },
+    {
+      "id": 108,
+      "start": 329.84,
+      "end": 332.96,
+      "text": "by starting out with certain premises"
+    },
+    {
+      "id": 109,
+      "start": 332.96,
+      "end": 337.0,
+      "text": "and getting to final conclusions."
+    },
+    {
+      "id": 110,
+      "start": 337.0,
+      "end": 340.44,
+      "text": "So there's ways that you can write this."
+    },
+    {
+      "id": 111,
+      "start": 340.44,
+      "end": 354.16,
+      "text": "So I think you might have seen this in another math class"
+    },
+    {
+      "id": 112,
+      "start": 354.16,
+      "end": 354.84,
+      "text": "or something."
+    },
+    {
+      "id": 113,
+      "start": 354.84,
+      "end": 360.8,
+      "text": "But we have symbols like all and exist."
+    },
+    {
+      "id": 114,
+      "start": 366.04,
+      "end": 369.32,
+      "text": "Yeah, we have things like all and exist."
+    },
+    {
+      "id": 115,
+      "start": 369.6,
+      "end": 379.6,
+      "text": "Like all x-die means like everything has died."
+    },
+    {
+      "id": 116,
+      "start": 379.6,
+      "end": 385.8,
+      "text": "And this implies that Mia and Z have died."
+    },
+    {
+      "id": 117,
+      "start": 385.8,
+      "end": 390.12,
+      "text": "So yeah, this is a, yeah, actually,"
+    },
+    {
+      "id": 118,
+      "start": 390.12,
+      "end": 392.12,
+      "text": "maybe I'll not go through this one."
+    },
+    {
+      "id": 119,
+      "start": 392.12,
+      "end": 395.72,
+      "text": "And let me go through, go to this one."
+    },
+    {
+      "id": 120,
+      "start": 395.72,
+      "end": 412.96,
+      "text": "So like, there would be something like for all x mammal,"
+    },
+    {
+      "id": 121,
+      "start": 412.96,
+      "end": 424.52,
+      "text": "all x implies have x, can be or something like that."
+    },
+    {
+      "id": 122,
+      "start": 424.52,
+      "end": 427.64,
+      "text": "And then you would have other rules."
+    },
+    {
+      "id": 123,
+      "start": 427.64,
+      "end": 431.68,
+      "text": "And you can go through derivations and other things like this."
+    },
+    {
+      "id": 124,
+      "start": 435.36,
+      "end": 440.88,
+      "text": "My favorite reference for this is this Blackburn and Buzz book"
+    },
+    {
+      "id": 125,
+      "start": 440.88,
+      "end": 441.36,
+      "text": "right here."
+    },
+    {
+      "id": 126,
+      "start": 441.36,
+      "end": 443.6,
+      "text": "It's really well written."
+    },
+    {
+      "id": 127,
+      "start": 443.6,
+      "end": 445.76,
+      "text": "And it has lots of good examples."
+    },
+    {
+      "id": 128,
+      "start": 445.76,
+      "end": 448.28,
+      "text": "It also explains how you go through derivations and other stuff"
+    },
+    {
+      "id": 129,
+      "start": 448.28,
+      "end": 448.8,
+      "text": "like that."
+    },
+    {
+      "id": 130,
+      "start": 451.36,
+      "end": 455.48,
+      "text": "And actually, neural networks can do this variety of reasoning"
+    },
+    {
+      "id": 131,
+      "start": 455.48,
+      "end": 456.76,
+      "text": "through chain of thought and other things"
+    },
+    {
+      "id": 132,
+      "start": 456.76,
+      "end": 457.76,
+      "text": "I'm going to talk about today."
+    },
+    {
+      "id": 133,
+      "start": 457.76,
+      "end": 459.36,
+      "text": "But it's a very rough approximation."
+    },
+    {
+      "id": 134,
+      "start": 459.36,
+      "end": 466.16,
+      "text": "And it doesn't work particularly well for saying all people"
+    },
+    {
+      "id": 135,
+      "start": 466.16,
+      "end": 471.84,
+      "text": "are of things that apply to all people"
+    },
+    {
+      "id": 136,
+      "start": 471.84,
+      "end": 475.0,
+      "text": "or things that apply to sets or other things like this."
+    },
+    {
+      "id": 137,
+      "start": 475.0,
+      "end": 481.48,
+      "text": "So within Prologue, you could take a knowledge base"
+    },
+    {
+      "id": 138,
+      "start": 481.48,
+      "end": 489.04,
+      "text": "and ask the knowledge base like, do all people who work"
+    },
+    {
+      "id": 139,
+      "start": 489.04,
+      "end": 493.8,
+      "text": "at CMU as professors have a PhD?"
+    },
+    {
+      "id": 140,
+      "start": 493.8,
+      "end": 496.8,
+      "text": "And you could actually examine that based on the knowledge"
+    },
+    {
+      "id": 141,
+      "start": 496.8,
+      "end": 502.84,
+      "text": "base, whereas even if you had a language model that had"
+    },
+    {
+      "id": 142,
+      "start": 502.84,
+      "end": 505.84,
+      "text": "access to everybody's CVs, it wouldn't necessarily"
+    },
+    {
+      "id": 143,
+      "start": 505.84,
+      "end": 507.08,
+      "text": "be able to answer that question."
+    },
+    {
+      "id": 144,
+      "start": 507.08,
+      "end": 509.12,
+      "text": "And especially wouldn't be able to answer that question"
+    },
+    {
+      "id": 145,
+      "start": 509.12,
+      "end": 515.24,
+      "text": "if you were, wouldn't be able to answer that question"
+    },
+    {
+      "id": 146,
+      "start": 515.24,
+      "end": 518.32,
+      "text": "if there were multiple steps."
+    },
+    {
+      "id": 147,
+      "start": 518.32,
+      "end": 523.52,
+      "text": "So did all people who are working at CMU"
+    },
+    {
+      "id": 148,
+      "start": 523.52,
+      "end": 530.4,
+      "text": "get their PhD after 1990 or something like that?"
+    },
+    {
+      "id": 149,
+      "start": 530.4,
+      "end": 532.4,
+      "text": "So in the answer to that is obviously no."
+    },
+    {
+      "id": 150,
+      "start": 532.4,
+      "end": 535.8,
+      "text": "But this would be able to find the counter evidence to that,"
+    },
+    {
+      "id": 151,
+      "start": 535.8,
+      "end": 539.92,
+      "text": "whereas LMS would not be guaranteed to be able to do that."
+    },
+    {
+      "id": 152,
+      "start": 539.92,
+      "end": 543.52,
+      "text": "So I think this is really a nice thing to know."
+    },
+    {
+      "id": 153,
+      "start": 543.52,
+      "end": 545.04,
+      "text": "But there's a couple of problems with it."
+    },
+    {
+      "id": 154,
+      "start": 545.04,
+      "end": 548.24,
+      "text": "The first thing is this really only traffic"
+    },
+    {
+      "id": 155,
+      "start": 548.24,
+      "end": 552.36,
+      "text": "and strictly true or strictly false statements."
+    },
+    {
+      "id": 156,
+      "start": 552.36,
+      "end": 557.04,
+      "text": "And that's a really big issue."
+    },
+    {
+      "id": 157,
+      "start": 557.04,
+      "end": 561.56,
+      "text": "So if anything soft, you start this formal reasoning"
+    },
+    {
+      "id": 158,
+      "start": 561.56,
+      "end": 562.96,
+      "text": "starts breaking down."
+    },
+    {
+      "id": 159,
+      "start": 562.96,
+      "end": 565.08,
+      "text": "The second thing, which actually is a really big problem,"
+    },
+    {
+      "id": 160,
+      "start": 565.08,
+      "end": 568.88,
+      "text": "is once you start dealing with more complex things,"
+    },
+    {
+      "id": 161,
+      "start": 568.88,
+      "end": 571.24,
+      "text": "you don't realize it, but there's always exceptions"
+    },
+    {
+      "id": 162,
+      "start": 571.24,
+      "end": 573.64,
+      "text": "and exceptions to exceptions and other things like that."
+    },
+    {
+      "id": 163,
+      "start": 573.64,
+      "end": 575.88,
+      "text": "And actually it becomes very computationally"
+    },
+    {
+      "id": 164,
+      "start": 575.88,
+      "end": 580.08,
+      "text": "expensive to prove anything that's kind of non-trivial."
+    },
+    {
+      "id": 165,
+      "start": 580.08,
+      "end": 582.4,
+      "text": "And so because of that, I'm not actually"
+    },
+    {
+      "id": 166,
+      "start": 582.4,
+      "end": 584.08,
+      "text": "going to cover it in the lecture today."
+    },
+    {
+      "id": 167,
+      "start": 584.08,
+      "end": 587.44,
+      "text": "But recently, there are search algorithms"
+    },
+    {
+      "id": 168,
+      "start": 587.44,
+      "end": 591.4,
+      "text": "through proof spaces that use neural models"
+    },
+    {
+      "id": 169,
+      "start": 591.4,
+      "end": 594.64,
+      "text": "to do to speed up the search by picking"
+    },
+    {
+      "id": 170,
+      "start": 594.64,
+      "end": 596.6,
+      "text": "the best and most promising hypotheses."
+    },
+    {
+      "id": 171,
+      "start": 596.6,
+      "end": 600.0,
+      "text": "And for example, Sean Wellack here at CMU."
+    }
+  ],
+  "language": "en"
+}

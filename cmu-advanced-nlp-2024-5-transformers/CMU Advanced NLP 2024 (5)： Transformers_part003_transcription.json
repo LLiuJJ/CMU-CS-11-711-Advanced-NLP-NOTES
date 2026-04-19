@@ -1,0 +1,761 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 4.8,
+      "text": "But the attention values from every other place in the sentence would be guaranteed to be"
+    },
+    {
+      "id": 1,
+      "start": 4.8,
+      "end": 6.44,
+      "text": "the same for big, right?"
+    },
+    {
+      "id": 2,
+      "start": 6.44,
+      "end": 11.24,
+      "text": "So you would always have the same attention value for these words because their vectors are"
+    },
+    {
+      "id": 3,
+      "start": 11.24,
+      "end": 12.24,
+      "text": "identical."
+    },
+    {
+      "id": 4,
+      "start": 12.24,
+      "end": 19.76,
+      "text": "And that's a problem, I guess, because like as I said, sometimes syntactic information"
+    },
+    {
+      "id": 5,
+      "start": 19.76,
+      "end": 22.88,
+      "text": "needs to be pulled in from like locally coherent context."
+    },
+    {
+      "id": 6,
+      "start": 22.88,
+      "end": 24.56,
+      "text": "So that's a problem."
+    },
+    {
+      "id": 7,
+      "start": 24.56,
+      "end": 26.24,
+      "text": "A couple ways you can fix this."
+    },
+    {
+      "id": 8,
+      "start": 26.24,
+      "end": 31.68,
+      "text": "The first way you could fix this is use something that is sensitive to position like an R&N."
+    },
+    {
+      "id": 9,
+      "start": 31.68,
+      "end": 36.12,
+      "text": "And an R&N looks at which words came before, which words came after and stuff like that."
+    },
+    {
+      "id": 10,
+      "start": 36.12,
+      "end": 37.92,
+      "text": "So that would solve your problem."
+    },
+    {
+      "id": 11,
+      "start": 37.92,
+      "end": 43.24,
+      "text": "But the whole point of transformers or attention is all you need is to not use R&Ns."
+    },
+    {
+      "id": 12,
+      "start": 43.24,
+      "end": 47.6,
+      "text": "So we need another way to fix this problem."
+    },
+    {
+      "id": 13,
+      "start": 47.6,
+      "end": 52.88,
+      "text": "So the way this is fixed is using something called positional encodings."
+    },
+    {
+      "id": 14,
+      "start": 52.88,
+      "end": 57.72,
+      "text": "And so positional encodings add another embedding that's based on the word position."
+    },
+    {
+      "id": 15,
+      "start": 57.72,
+      "end": 61.72,
+      "text": "And so in addition to having something that's based on the word identity, you have another"
+    },
+    {
+      "id": 16,
+      "start": 61.72,
+      "end": 63.4,
+      "text": "embedding that's based on the position."
+    },
+    {
+      "id": 17,
+      "start": 63.4,
+      "end": 70.32,
+      "text": "So then the word big appears in position two would be embedding a big plus embedding"
+    },
+    {
+      "id": 18,
+      "start": 70.32,
+      "end": 72.0,
+      "text": "a position two."
+    },
+    {
+      "id": 19,
+      "start": 72.0,
+      "end": 76.76,
+      "text": "And the word big that appears over here would be the embedding a big and then the embedding"
+    },
+    {
+      "id": 20,
+      "start": 76.76,
+      "end": 78.48,
+      "text": "a position eight, for example."
+    },
+    {
+      "id": 21,
+      "start": 78.48,
+      "end": 83.96,
+      "text": "So that would that kind of solves that problem."
+    },
+    {
+      "id": 22,
+      "start": 83.96,
+      "end": 89.4,
+      "text": "There's a number of different ways to make these the original transformer paper."
+    },
+    {
+      "id": 23,
+      "start": 89.4,
+      "end": 92.6,
+      "text": "They did it using something called sinusoidal encodings."
+    },
+    {
+      "id": 24,
+      "start": 92.6,
+      "end": 98.84,
+      "text": "This is kind of one of the, I don't know, when this paper came out and we were first"
+    },
+    {
+      "id": 25,
+      "start": 98.84,
+      "end": 103.08,
+      "text": "reading it when it first came out, it was like, they explained what they did and they"
+    },
+    {
+      "id": 26,
+      "start": 103.08,
+      "end": 104.76,
+      "text": "explained very briefly why they did it."
+    },
+    {
+      "id": 27,
+      "start": 104.76,
+      "end": 109.96,
+      "text": "It was kind of like a mystery like nobody actually understood what they wrote in the paper."
+    },
+    {
+      "id": 28,
+      "start": 109.96,
+      "end": 114.08,
+      "text": "Luckily now there's a lot of nice blogs that actually explain this."
+    },
+    {
+      "id": 29,
+      "start": 114.08,
+      "end": 122.24,
+      "text": "And so the way these work essentially is you have a sign like this."
+    },
+    {
+      "id": 30,
+      "start": 122.24,
+      "end": 131.24,
+      "text": "And the sign is this weight times the time step in the, in the output in every even numbered"
+    },
+    {
+      "id": 31,
+      "start": 131.24,
+      "end": 137.68,
+      "text": "embedding is uses a sign every odd numbered embedding uses the cosine."
+    },
+    {
+      "id": 32,
+      "start": 137.68,
+      "end": 147.72,
+      "text": "And this omega over here is a 10,000 to the two K divided by D. And so that's the value"
+    },
+    {
+      "id": 33,
+      "start": 147.72,
+      "end": 150.92,
+      "text": "and then this is the dimension size."
+    },
+    {
+      "id": 34,
+      "start": 150.92,
+      "end": 155.32,
+      "text": "And what these embeddings look like is something like this."
+    },
+    {
+      "id": 35,
+      "start": 155.32,
+      "end": 162.32,
+      "text": "So if you, sorry, this is very small and also I should acknowledge that comes from this"
+    },
+    {
+      "id": 36,
+      "start": 162.32,
+      "end": 164.4,
+      "text": "blog up here."
+    },
+    {
+      "id": 37,
+      "start": 164.4,
+      "end": 173.48,
+      "text": "But this is the position in the sentence and then this is the embedding size I believe."
+    },
+    {
+      "id": 38,
+      "start": 173.48,
+      "end": 176.76,
+      "text": "And so why did they choose to do it this way?"
+    },
+    {
+      "id": 39,
+      "start": 176.76,
+      "end": 182.52,
+      "text": "They chose to do it this way because if you multiply these positional encodings together,"
+    },
+    {
+      "id": 40,
+      "start": 182.52,
+      "end": 185.44,
+      "text": "you get something that looks a bit like this."
+    },
+    {
+      "id": 41,
+      "start": 185.44,
+      "end": 190.96,
+      "text": "And so if you multiply the two vectors together, you get something where if you're closer"
+    },
+    {
+      "id": 42,
+      "start": 190.96,
+      "end": 194.96,
+      "text": "together in position space, you get a higher number."
+    },
+    {
+      "id": 43,
+      "start": 194.96,
+      "end": 200.8,
+      "text": "And so that kind of gives you a bias to upgrading the attention values of things that are"
+    },
+    {
+      "id": 44,
+      "start": 200.8,
+      "end": 202.44,
+      "text": "closer together."
+    },
+    {
+      "id": 45,
+      "start": 202.44,
+      "end": 206.6,
+      "text": "At least right at the very beginning, like layers of the model where it's kind of more"
+    },
+    {
+      "id": 46,
+      "start": 206.6,
+      "end": 212.32,
+      "text": "important because you don't have that information calculated from the previous layers."
+    },
+    {
+      "id": 47,
+      "start": 213.32,
+      "end": 216.68,
+      "text": "So this is a basic idea."
+    },
+    {
+      "id": 48,
+      "start": 216.68,
+      "end": 220.84,
+      "text": "I think the thing on the right is the most important thing to know here, which is like this is the"
+    },
+    {
+      "id": 49,
+      "start": 220.84,
+      "end": 222.44,
+      "text": "reason why they chose to do it that way."
+    },
+    {
+      "id": 50,
+      "start": 222.44,
+      "end": 224.68,
+      "text": "But that's the main thing."
+    },
+    {
+      "id": 51,
+      "start": 224.68,
+      "end": 225.68,
+      "text": "Yeah."
+    },
+    {
+      "id": 52,
+      "start": 225.68,
+      "end": 248.64,
+      "text": "So which part would you like to know what the half of the one thing?"
+    },
+    {
+      "id": 53,
+      "start": 248.64,
+      "end": 255.68,
+      "text": "I guess in the end, they say the position is given based on the values."
+    },
+    {
+      "id": 54,
+      "start": 255.68,
+      "end": 259.52,
+      "text": "If it's the word, plus and so many, it has a benefit."
+    },
+    {
+      "id": 55,
+      "start": 259.52,
+      "end": 263.08,
+      "text": "You have to have an up to one thing and then it's a different thing."
+    },
+    {
+      "id": 56,
+      "start": 263.08,
+      "end": 264.08,
+      "text": "Yeah."
+    },
+    {
+      "id": 57,
+      "start": 264.08,
+      "end": 268.4,
+      "text": "So I'm going to talk about that in a second."
+    },
+    {
+      "id": 58,
+      "start": 268.4,
+      "end": 270.76,
+      "text": "Any other?"
+    },
+    {
+      "id": 59,
+      "start": 270.76,
+      "end": 273.76,
+      "text": "Okay."
+    },
+    {
+      "id": 60,
+      "start": 273.76,
+      "end": 276.16,
+      "text": "So this is what is done."
+    },
+    {
+      "id": 61,
+      "start": 276.16,
+      "end": 280.52,
+      "text": "Note that these are added right at the very beginning and then you pass this through"
+    },
+    {
+      "id": 62,
+      "start": 280.52,
+      "end": 281.52,
+      "text": "every layer."
+    },
+    {
+      "id": 63,
+      "start": 281.52,
+      "end": 286.8,
+      "text": "But basically at the very beginning layer, at the very first layer by using these positional"
+    },
+    {
+      "id": 64,
+      "start": 286.8,
+      "end": 291.6,
+      "text": "encodings, you can kind of disambiguate."
+    },
+    {
+      "id": 65,
+      "start": 291.6,
+      "end": 293.8,
+      "text": "You can disambiguate this case here."
+    },
+    {
+      "id": 66,
+      "start": 293.8,
+      "end": 297.92,
+      "text": "And then after you pass it through the first layer, you're combining together information"
+    },
+    {
+      "id": 67,
+      "start": 297.92,
+      "end": 298.92,
+      "text": "anyway."
+    },
+    {
+      "id": 68,
+      "start": 298.92,
+      "end": 301.88,
+      "text": "And then you can hold in information about the local context."
+    },
+    {
+      "id": 69,
+      "start": 301.88,
+      "end": 309.84,
+      "text": "And now like it's essentially, it's essentially already handled for you."
+    },
+    {
+      "id": 70,
+      "start": 309.84,
+      "end": 314.64,
+      "text": "Another thing is if you have residual connections, this gets passed into the following layers,"
+    },
+    {
+      "id": 71,
+      "start": 314.64,
+      "end": 319.04,
+      "text": "which I'll talk about the second."
+    },
+    {
+      "id": 72,
+      "start": 319.04,
+      "end": 326.0,
+      "text": "So the second thing that you could do is learning coding and learning coding is basically"
+    },
+    {
+      "id": 73,
+      "start": 326.0,
+      "end": 335.16,
+      "text": "what they do is they create a learnable embedding that you just add in."
+    },
+    {
+      "id": 74,
+      "start": 335.16,
+      "end": 338.08,
+      "text": "And this is super simple."
+    },
+    {
+      "id": 75,
+      "start": 338.08,
+      "end": 344.2,
+      "text": "So it's like just like just like you learn the embedding for W big, you learn the embedding"
+    },
+    {
+      "id": 76,
+      "start": 344.2,
+      "end": 348.8,
+      "text": "for W post to or plus six."
+    },
+    {
+      "id": 77,
+      "start": 348.8,
+      "end": 352.72,
+      "text": "And this is simpler like you don't need to think about signs and post signs and stuff"
+    },
+    {
+      "id": 78,
+      "start": 352.72,
+      "end": 353.72,
+      "text": "like that."
+    },
+    {
+      "id": 79,
+      "start": 353.72,
+      "end": 358.32,
+      "text": "It's also more flexible because the model can learn anything it needs to learn in order"
+    },
+    {
+      "id": 80,
+      "start": 358.32,
+      "end": 361.16,
+      "text": "to do a good job of minimizing the loss."
+    },
+    {
+      "id": 81,
+      "start": 361.16,
+      "end": 366.56,
+      "text": "But the biggest disadvantage is it makes it impossible to extrapolate to longer sequences"
+    },
+    {
+      "id": 82,
+      "start": 366.56,
+      "end": 368.8,
+      "text": "than you saw at training time."
+    },
+    {
+      "id": 83,
+      "start": 368.8,
+      "end": 377.72,
+      "text": "So because you have no learned embeddings for longer sequences, it's just at least"
+    },
+    {
+      "id": 84,
+      "start": 377.72,
+      "end": 382.44,
+      "text": "in principle impossible to extrapolate to longer sequences unless you do some sort of"
+    },
+    {
+      "id": 85,
+      "start": 382.44,
+      "end": 383.44,
+      "text": "fewer respects."
+    },
+    {
+      "id": 86,
+      "start": 383.44,
+      "end": 385.68,
+      "text": "And if you do with fewer respects, you don't really know what's going to happen."
+    },
+    {
+      "id": 87,
+      "start": 385.68,
+      "end": 390.36,
+      "text": "So that's the disadvantage to doing it this way."
+    },
+    {
+      "id": 88,
+      "start": 390.36,
+      "end": 394.8,
+      "text": "In contrast, you know this, you just make K larger in calculating this function and you"
+    },
+    {
+      "id": 89,
+      "start": 394.8,
+      "end": 397.6,
+      "text": "can theoretically extrapolate."
+    },
+    {
+      "id": 90,
+      "start": 397.6,
+      "end": 402.28,
+      "text": "But empirically models, even ones that use the sort of extrapolatable embedding don't"
+    },
+    {
+      "id": 91,
+      "start": 402.28,
+      "end": 409.92,
+      "text": "do super well at extrapolating to longer sequences."
+    },
+    {
+      "id": 92,
+      "start": 409.92,
+      "end": 415.16,
+      "text": "So going back to the question, there's a distinction between absolute versus relative"
+    },
+    {
+      "id": 93,
+      "start": 415.16,
+      "end": 417.44,
+      "text": "positional encodings."
+    },
+    {
+      "id": 94,
+      "start": 417.44,
+      "end": 420.88,
+      "text": "And absolute positional encodings are like what I said before."
+    },
+    {
+      "id": 95,
+      "start": 420.88,
+      "end": 429.68,
+      "text": "They're basically positional encodings where you add in a, you specifically add in an"
+    },
+    {
+      "id": 96,
+      "start": 429.68,
+      "end": 431.56,
+      "text": "encoding at each position."
+    },
+    {
+      "id": 97,
+      "start": 431.56,
+      "end": 437.8,
+      "text": "But you don't consider whether like one query vector is close to a key vector or far away"
+    },
+    {
+      "id": 98,
+      "start": 437.8,
+      "end": 439.72,
+      "text": "from a key vector or anything like that."
+    },
+    {
+      "id": 99,
+      "start": 439.72,
+      "end": 444.72,
+      "text": "You don't consider that directly."
+    },
+    {
+      "id": 100,
+      "start": 444.72,
+      "end": 451.4,
+      "text": "On the other hand, relative positional encodings explicitly encode the relative position."
+    },
+    {
+      "id": 101,
+      "start": 451.4,
+      "end": 458.8,
+      "text": "And so what this means is when you do attention, when you do attention, it explicitly thinks"
+    },
+    {
+      "id": 102,
+      "start": 458.8,
+      "end": 465.72,
+      "text": "about whether, you know, a particular embedding is not in position eight, but whether the key,"
+    },
+    {
+      "id": 103,
+      "start": 465.72,
+      "end": 471.68,
+      "text": "the query, sorry, whether the key embedding is like minus five from the query embedding or"
+    },
+    {
+      "id": 104,
+      "start": 471.68,
+      "end": 474.84,
+      "text": "minus eight from the query embedding."
+    },
+    {
+      "id": 105,
+      "start": 474.84,
+      "end": 481.04,
+      "text": "And the first paper that did this, they just learned relative positional encodings."
+    },
+    {
+      "id": 106,
+      "start": 481.04,
+      "end": 492.52,
+      "text": "And they learned that if I remember correctly, they basically learned a scalar."
+    },
+    {
+      "id": 107,
+      "start": 492.52,
+      "end": 495.08,
+      "text": "So you're centered at zero."
+    },
+    {
+      "id": 108,
+      "start": 495.08,
+      "end": 505.68,
+      "text": "And then you have like, you have like minus and you have minus and plus a certain distance."
+    },
+    {
+      "id": 109,
+      "start": 505.68,
+      "end": 515.6,
+      "text": "And then you also cut this off that might like minus 128 and plus 128 or something like this."
+    },
+    {
+      "id": 110,
+      "start": 515.6,
+      "end": 520.56,
+      "text": "So you have a fixed length vector and anything that's farther away from that gets the same embedding"
+    },
+    {
+      "id": 111,
+      "start": 520.56,
+      "end": 523.16,
+      "text": "distance."
+    },
+    {
+      "id": 112,
+      "start": 523.16,
+      "end": 528.16,
+      "text": "The problem with this is number one, it adds learnable parameters."
+    },
+    {
+      "id": 113,
+      "start": 528.16,
+      "end": 534.96,
+      "text": "Number two, it's a little bit more computationally expensive to apply this every time onto your attention"
+    },
+    {
+      "id": 114,
+      "start": 534.96,
+      "end": 536.76,
+      "text": "matrix."
+    },
+    {
+      "id": 115,
+      "start": 536.76,
+      "end": 542.6,
+      "text": "And because you need to apply this it everywhere, you need to apply this every time you do attention"
+    },
+    {
+      "id": 116,
+      "start": 542.6,
+      "end": 544.96,
+      "text": "the everywhere."
+    },
+    {
+      "id": 117,
+      "start": 544.96,
+      "end": 552.4,
+      "text": "So instead there was a really clever idea called rotary positional encodings and rotary positional"
+    },
+    {
+      "id": 118,
+      "start": 552.4,
+      "end": 561.68,
+      "text": "encodings are basically kind of like an absolute positional encoding with the, a lot of the"
+    },
+    {
+      "id": 119,
+      "start": 561.68,
+      "end": 567.24,
+      "text": "desirable qualities of relative positional encodings."
+    },
+    {
+      "id": 120,
+      "start": 567.24,
+      "end": 569.0,
+      "text": "And their basic idea was this."
+    },
+    {
+      "id": 121,
+      "start": 569.0,
+      "end": 577.24,
+      "text": "So their basic idea was that they wanted to come up with something where you have an embedding"
+    },
+    {
+      "id": 122,
+      "start": 577.24,
+      "end": 583.04,
+      "text": "encoding vector that takes in the actual vector and the position."
+    },
+    {
+      "id": 123,
+      "start": 583.04,
+      "end": 589.64,
+      "text": "And you have another encoding vector where you take in the absolute vector and the position."
+    },
+    {
+      "id": 124,
+      "start": 589.64,
+      "end": 599.48,
+      "text": "And the product of these two becomes another, another function that is a function only of"
+    },
+    {
+      "id": 125,
+      "start": 599.48,
+      "end": 602.24,
+      "text": "the two vectors and the relative."
+    }
+  ],
+  "language": "en"
+}

@@ -1,0 +1,1223 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 3.56,
+      "text": "that many different plausible formats that you try,"
+    },
+    {
+      "id": 1,
+      "start": 3.56,
+      "end": 5.92,
+      "text": "the average gives you a really low accuracy,"
+    },
+    {
+      "id": 2,
+      "start": 5.92,
+      "end": 7.76,
+      "text": "but there's a few outliers that give you"
+    },
+    {
+      "id": 3,
+      "start": 7.76,
+      "end": 8.68,
+      "text": "a really good accuracy."
+    },
+    {
+      "id": 4,
+      "start": 8.68,
+      "end": 10.32,
+      "text": "And these probably correspond to the things"
+    },
+    {
+      "id": 5,
+      "start": 10.32,
+      "end": 13.32,
+      "text": "that it was trained on, instruction tuned on,"
+    },
+    {
+      "id": 6,
+      "start": 13.32,
+      "end": 14.72,
+      "text": "or other things like this."
+    },
+    {
+      "id": 7,
+      "start": 14.72,
+      "end": 17.24,
+      "text": "So number one, make sure you're using"
+    },
+    {
+      "id": 8,
+      "start": 17.24,
+      "end": 20.52,
+      "text": "like the canonical prompt formatting for the model, for sure."
+    },
+    {
+      "id": 9,
+      "start": 20.52,
+      "end": 22.12,
+      "text": "Number two, you might want to do a little bit"
+    },
+    {
+      "id": 10,
+      "start": 22.12,
+      "end": 23.64,
+      "text": "of additional search to see if you can do"
+    },
+    {
+      "id": 11,
+      "start": 23.64,
+      "end": 24.64,
+      "text": "even better than that."
+    },
+    {
+      "id": 12,
+      "start": 24.64,
+      "end": 27.04,
+      "text": "So this is something to be very aware of."
+    },
+    {
+      "id": 13,
+      "start": 30.32,
+      "end": 31.32,
+      "text": "Okay."
+    },
+    {
+      "id": 14,
+      "start": 36.32,
+      "end": 37.32,
+      "text": "You have a question?"
+    },
+    {
+      "id": 15,
+      "start": 41.56,
+      "end": 43.92,
+      "text": "This is dependent on what it sees in training time."
+    },
+    {
+      "id": 16,
+      "start": 43.92,
+      "end": 48.92,
+      "text": "Another thing actually is this will definitely be tighter"
+    },
+    {
+      "id": 17,
+      "start": 49.24,
+      "end": 53.04,
+      "text": "for like a chat GPT or GPT4,"
+    },
+    {
+      "id": 18,
+      "start": 53.04,
+      "end": 54.84,
+      "text": "because it's been trained on many different formats"
+    },
+    {
+      "id": 19,
+      "start": 54.84,
+      "end": 55.76,
+      "text": "at training time."
+    },
+    {
+      "id": 20,
+      "start": 56.76,
+      "end": 60.6,
+      "text": "And so the better the model has been trained"
+    },
+    {
+      "id": 21,
+      "start": 60.6,
+      "end": 61.8,
+      "text": "on a lot of different formats,"
+    },
+    {
+      "id": 22,
+      "start": 61.8,
+      "end": 63.68,
+      "text": "the less this is going to have to be better."
+    },
+    {
+      "id": 23,
+      "start": 65.44,
+      "end": 66.88,
+      "text": "But you know, you're probably not going to be"
+    },
+    {
+      "id": 24,
+      "start": 66.88,
+      "end": 69.32,
+      "text": "retraining a model that somebody gives you."
+    },
+    {
+      "id": 25,
+      "start": 69.32,
+      "end": 71.56,
+      "text": "So like this is something to be very aware of"
+    },
+    {
+      "id": 26,
+      "start": 71.56,
+      "end": 73.4,
+      "text": "if you're just advanced reviews with a model,"
+    },
+    {
+      "id": 27,
+      "start": 73.4,
+      "end": 74.92,
+      "text": "especially in a resource name."
+    },
+    {
+      "id": 28,
+      "start": 77.04,
+      "end": 80.24,
+      "text": "Another thing is how do you give instructions to models?"
+    },
+    {
+      "id": 29,
+      "start": 81.48,
+      "end": 85.44,
+      "text": "Instructions should be clear, concise, and easy to understand."
+    },
+    {
+      "id": 30,
+      "start": 85.48,
+      "end": 90.44,
+      "text": "One very funny thing is I think now like actually"
+    },
+    {
+      "id": 31,
+      "start": 91.24,
+      "end": 93.6,
+      "text": "prompting language models is very similar to prompting"
+    },
+    {
+      "id": 32,
+      "start": 93.6,
+      "end": 96.92,
+      "text": "humans, especially if we're talking about like GPT4."
+    },
+    {
+      "id": 33,
+      "start": 96.92,
+      "end": 99.32,
+      "text": "So if you're not very good at explaining things to humans,"
+    },
+    {
+      "id": 34,
+      "start": 99.32,
+      "end": 100.8,
+      "text": "that might actually be bad."
+    },
+    {
+      "id": 35,
+      "start": 101.8,
+      "end": 103.28,
+      "text": "And you might want to practice that."
+    },
+    {
+      "id": 36,
+      "start": 103.28,
+      "end": 107.76,
+      "text": "And explaining things to models might be a good way"
+    },
+    {
+      "id": 37,
+      "start": 107.76,
+      "end": 108.88,
+      "text": "to practice that, right?"
+    },
+    {
+      "id": 38,
+      "start": 108.88,
+      "end": 112.16,
+      "text": "So you know, it actually could give you feedback"
+    },
+    {
+      "id": 39,
+      "start": 112.16,
+      "end": 115.04,
+      "text": "without annoying your friends by having you explain"
+    },
+    {
+      "id": 40,
+      "start": 115.04,
+      "end": 116.52,
+      "text": "things to them in several different ways"
+    },
+    {
+      "id": 41,
+      "start": 116.52,
+      "end": 117.48,
+      "text": "and seeing how they react."
+    },
+    {
+      "id": 42,
+      "start": 117.48,
+      "end": 121.56,
+      "text": "So but anyway, clear, concise, easy to understand is good."
+    },
+    {
+      "id": 43,
+      "start": 122.52,
+      "end": 126.12,
+      "text": "There is this prompting guide, which I can open."
+    },
+    {
+      "id": 44,
+      "start": 128.2,
+      "end": 130.2,
+      "text": "This has a prompt engineering guide."
+    },
+    {
+      "id": 45,
+      "start": 130.2,
+      "end": 135.2,
+      "text": "I like this site, but it does have a bit of"
+    },
+    {
+      "id": 46,
+      "start": 136.4,
+      "end": 139.0,
+      "text": "like variance and the importance of the information"
+    },
+    {
+      "id": 47,
+      "start": 139.0,
+      "end": 140.84,
+      "text": "that tells you, but like this particular page"
+    },
+    {
+      "id": 48,
+      "start": 140.84,
+      "end": 142.56,
+      "text": "is nice, I feel."
+    },
+    {
+      "id": 49,
+      "start": 142.56,
+      "end": 145.36,
+      "text": "So start simple, start with simple instructions."
+    },
+    {
+      "id": 50,
+      "start": 146.96,
+      "end": 151.2,
+      "text": "You should tell the model what it should be doing."
+    },
+    {
+      "id": 51,
+      "start": 151.2,
+      "end": 155.52,
+      "text": "So make sure you say right, classify, summarize, translate,"
+    },
+    {
+      "id": 52,
+      "start": 155.52,
+      "end": 159.12,
+      "text": "order, and things like this."
+    },
+    {
+      "id": 53,
+      "start": 160.12,
+      "end": 163.72,
+      "text": "It also gives some good examples of the level of specificity"
+    },
+    {
+      "id": 54,
+      "start": 163.72,
+      "end": 165.24,
+      "text": "that you should be giving."
+    },
+    {
+      "id": 55,
+      "start": 165.24,
+      "end": 169.08,
+      "text": "So something that's less precise is explaining the concept"
+    },
+    {
+      "id": 56,
+      "start": 169.08,
+      "end": 171.96,
+      "text": "of prompt engineering, deep explanation short,"
+    },
+    {
+      "id": 57,
+      "start": 171.96,
+      "end": 175.2,
+      "text": "only a few sentences and don't be too descriptive."
+    },
+    {
+      "id": 58,
+      "start": 176.56,
+      "end": 179.68,
+      "text": "It used two to three sentences to explain the concept"
+    },
+    {
+      "id": 59,
+      "start": 179.68,
+      "end": 181.68,
+      "text": "of prompt engineering through a high school student."
+    },
+    {
+      "id": 60,
+      "start": 181.68,
+      "end": 184.88,
+      "text": "So what this does is this tells you the level of read,"
+    },
+    {
+      "id": 61,
+      "start": 184.88,
+      "end": 186.16,
+      "text": "like the reading level."
+    },
+    {
+      "id": 62,
+      "start": 189.96,
+      "end": 192.32,
+      "text": "So this doesn't even tell you the reading level, I guess."
+    },
+    {
+      "id": 63,
+      "start": 192.32,
+      "end": 195.16,
+      "text": "And then two to three sentences is more precise"
+    },
+    {
+      "id": 64,
+      "start": 195.16,
+      "end": 197.76,
+      "text": "than keep it a few sentences, don't be too descriptive."
+    },
+    {
+      "id": 65,
+      "start": 197.76,
+      "end": 201.96,
+      "text": "So the more precise you can be, the better it is."
+    },
+    {
+      "id": 66,
+      "start": 203.16,
+      "end": 207.2,
+      "text": "One interesting thing is like, if you ask your friend"
+    },
+    {
+      "id": 67,
+      "start": 207.2,
+      "end": 208.76,
+      "text": "to do something and they don't know how to do it,"
+    },
+    {
+      "id": 68,
+      "start": 208.76,
+      "end": 210.44,
+      "text": "they'll complain to you."
+    },
+    {
+      "id": 69,
+      "start": 210.44,
+      "end": 213.96,
+      "text": "But right now, Alam's don't complain to you."
+    },
+    {
+      "id": 70,
+      "start": 213.96,
+      "end": 216.6,
+      "text": "They may in the future, that might be like actually"
+    },
+    {
+      "id": 71,
+      "start": 216.6,
+      "end": 218.12,
+      "text": "an interesting thing to find."
+    },
+    {
+      "id": 72,
+      "start": 220.24,
+      "end": 222.16,
+      "text": "Interesting methodological thing to look at"
+    },
+    {
+      "id": 73,
+      "start": 222.16,
+      "end": 224.12,
+      "text": "for a project or something like that."
+    },
+    {
+      "id": 74,
+      "start": 224.12,
+      "end": 226.68,
+      "text": "But right now you need to be precise"
+    },
+    {
+      "id": 75,
+      "start": 226.68,
+      "end": 229.48,
+      "text": "and like, it doesn't give you feedback"
+    },
+    {
+      "id": 76,
+      "start": 229.48,
+      "end": 230.48,
+      "text": "when you're not being precise."
+    },
+    {
+      "id": 77,
+      "start": 230.48,
+      "end": 231.68,
+      "text": "So you need to be there."
+    },
+    {
+      "id": 78,
+      "start": 234.16,
+      "end": 235.56,
+      "text": "Separately from this, there are methods"
+    },
+    {
+      "id": 79,
+      "start": 235.56,
+      "end": 237.16,
+      "text": "for automatic prompt engineering."
+    },
+    {
+      "id": 80,
+      "start": 237.16,
+      "end": 241.24,
+      "text": "So prompt paraphrasing, gradient-based discrete prompt search,"
+    },
+    {
+      "id": 81,
+      "start": 241.24,
+      "end": 242.92,
+      "text": "prompt tuning, prefix tuning."
+    },
+    {
+      "id": 82,
+      "start": 244.2,
+      "end": 247.72,
+      "text": "So prompt paraphrasing, this is a method"
+    },
+    {
+      "id": 83,
+      "start": 247.72,
+      "end": 252.72,
+      "text": "that we proposed a while ago to basically paraphrase"
+    },
+    {
+      "id": 84,
+      "start": 253.0,
+      "end": 256.12,
+      "text": "and existing prompt to get other candidates."
+    },
+    {
+      "id": 85,
+      "start": 256.64,
+      "end": 259.04,
+      "text": "Rather simple, basically you take a prompt,"
+    },
+    {
+      "id": 86,
+      "start": 259.04,
+      "end": 260.6,
+      "text": "you put it through a paraphrasing model"
+    },
+    {
+      "id": 87,
+      "start": 260.6,
+      "end": 262.76,
+      "text": "and it will give you new prompts."
+    },
+    {
+      "id": 88,
+      "start": 262.76,
+      "end": 265.48,
+      "text": "And this is good because it will tend to give you"
+    },
+    {
+      "id": 89,
+      "start": 265.48,
+      "end": 267.64,
+      "text": "things that are natural language."
+    },
+    {
+      "id": 90,
+      "start": 267.64,
+      "end": 270.04,
+      "text": "You can paraphrase 50 times, try all of them,"
+    },
+    {
+      "id": 91,
+      "start": 270.04,
+      "end": 271.8,
+      "text": "see which one gives you the highest accuracy"
+    },
+    {
+      "id": 92,
+      "start": 271.8,
+      "end": 273.28,
+      "text": "and then use that one."
+    },
+    {
+      "id": 93,
+      "start": 275.08,
+      "end": 277.8,
+      "text": "There's also an interesting paper"
+    },
+    {
+      "id": 94,
+      "start": 278.92,
+      "end": 281.64,
+      "text": "that demonstrates that you can do this iteratively."
+    },
+    {
+      "id": 95,
+      "start": 281.64,
+      "end": 285.56,
+      "text": "So you paraphrase once, you filter down"
+    },
+    {
+      "id": 96,
+      "start": 285.56,
+      "end": 286.84,
+      "text": "all the candidates that do well"
+    },
+    {
+      "id": 97,
+      "start": 286.84,
+      "end": 288.48,
+      "text": "and then you go in and paraphrase them again"
+    },
+    {
+      "id": 98,
+      "start": 288.48,
+      "end": 290.48,
+      "text": "and you just do this over and over again."
+    },
+    {
+      "id": 99,
+      "start": 290.48,
+      "end": 291.88,
+      "text": "And that can give you better results"
+    },
+    {
+      "id": 100,
+      "start": 291.88,
+      "end": 294.28,
+      "text": "than kind of one off paraphrasing."
+    },
+    {
+      "id": 101,
+      "start": 300.2,
+      "end": 301.4,
+      "text": "So that's very simple."
+    },
+    {
+      "id": 102,
+      "start": 301.4,
+      "end": 302.84,
+      "text": "You can even use a large language model"
+    },
+    {
+      "id": 103,
+      "start": 302.84,
+      "end": 304.68,
+      "text": "to do the paraphrasing for you."
+    },
+    {
+      "id": 104,
+      "start": 304.68,
+      "end": 307.48,
+      "text": "Another thing that you can do is gradient-based search."
+    },
+    {
+      "id": 105,
+      "start": 307.48,
+      "end": 311.24,
+      "text": "So the way this works is you need to have a model"
+    },
+    {
+      "id": 106,
+      "start": 311.24,
+      "end": 313.56,
+      "text": "that you can calculate gradients for."
+    },
+    {
+      "id": 107,
+      "start": 313.56,
+      "end": 318.24,
+      "text": "And what you do is you calculate,"
+    },
+    {
+      "id": 108,
+      "start": 318.24,
+      "end": 322.76,
+      "text": "you create a seed prompt and then you calculate gradients"
+    },
+    {
+      "id": 109,
+      "start": 322.76,
+      "end": 324.56,
+      "text": "into that seed prompt."
+    },
+    {
+      "id": 110,
+      "start": 324.56,
+      "end": 329.56,
+      "text": "So you treat each of the tokens here,"
+    },
+    {
+      "id": 111,
+      "start": 330.64,
+      "end": 335.64,
+      "text": "like T1, T2, T3, T4, T5, as their own embeddings."
+    },
+    {
+      "id": 112,
+      "start": 337.04,
+      "end": 338.96,
+      "text": "You do back-prop into those embeddings"
+    },
+    {
+      "id": 113,
+      "start": 338.96,
+      "end": 340.8,
+      "text": "and you optimize them to get high accuracy"
+    },
+    {
+      "id": 114,
+      "start": 340.8,
+      "end": 342.36,
+      "text": "on your data set."
+    },
+    {
+      "id": 115,
+      "start": 342.36,
+      "end": 344.52,
+      "text": "Then after you're done optimizing them"
+    },
+    {
+      "id": 116,
+      "start": 344.52,
+      "end": 346.8,
+      "text": "to get high accuracy on your data set,"
+    },
+    {
+      "id": 117,
+      "start": 346.8,
+      "end": 349.76,
+      "text": "you clamp them onto the nearest neighbor embedding"
+    },
+    {
+      "id": 118,
+      "start": 349.76,
+      "end": 350.76,
+      "text": "that you already have."
+    },
+    {
+      "id": 119,
+      "start": 350.76,
+      "end": 353.88,
+      "text": "So you basically say, okay, the nearest neighbor"
+    },
+    {
+      "id": 120,
+      "start": 353.88,
+      "end": 355.44,
+      "text": "to the embedding that I learned,"
+    },
+    {
+      "id": 121,
+      "start": 355.44,
+      "end": 360.44,
+      "text": "you is atmosphere than a lot, dialogue, clone, totally."
+    },
+    {
+      "id": 122,
+      "start": 360.44,
+      "end": 364.6,
+      "text": "And so this will actually give you better results"
+    },
+    {
+      "id": 123,
+      "start": 364.6,
+      "end": 366.12,
+      "text": "than paraphrasing in many cases"
+    },
+    {
+      "id": 124,
+      "start": 366.12,
+      "end": 368.56,
+      "text": "because the search space is less constrained."
+    },
+    {
+      "id": 125,
+      "start": 368.56,
+      "end": 372.08,
+      "text": "You can get these very unnatural prompts"
+    },
+    {
+      "id": 126,
+      "start": 372.08,
+      "end": 373.52,
+      "text": "that don't seem to make sense,"
+    },
+    {
+      "id": 127,
+      "start": 373.52,
+      "end": 375.24,
+      "text": "but actually work well."
+    },
+    {
+      "id": 128,
+      "start": 375.24,
+      "end": 379.0,
+      "text": "This has particularly been widely used"
+    },
+    {
+      "id": 129,
+      "start": 379.0,
+      "end": 382.64,
+      "text": "in adversarial effects on language models."
+    },
+    {
+      "id": 130,
+      "start": 382.64,
+      "end": 387.48,
+      "text": "So how can you come up with prompts"
+    },
+    {
+      "id": 131,
+      "start": 387.48,
+      "end": 392.48,
+      "text": "that cause language models to do things"
+    },
+    {
+      "id": 132,
+      "start": 392.6,
+      "end": 394.24,
+      "text": "that you don't want them to be doing?"
+    },
+    {
+      "id": 133,
+      "start": 395.2,
+      "end": 398.96,
+      "text": "And there's actually this nice paper also by people"
+    },
+    {
+      "id": 134,
+      "start": 399.0,
+      "end": 402.32,
+      "text": "at CMU called Universal and Transferable Adversarial"
+    },
+    {
+      "id": 135,
+      "start": 402.32,
+      "end": 404.8,
+      "text": "with the XOnLanguage models."
+    },
+    {
+      "id": 136,
+      "start": 404.8,
+      "end": 408.4,
+      "text": "And basically what they do is they try to optimize"
+    },
+    {
+      "id": 137,
+      "start": 410.88,
+      "end": 414.36,
+      "text": "they try to optimize the prompt to create a prompt"
+    },
+    {
+      "id": 138,
+      "start": 414.36,
+      "end": 418.36,
+      "text": "that causes a model to do bad things, basically."
+    },
+    {
+      "id": 139,
+      "start": 418.36,
+      "end": 420.0,
+      "text": "And they try to do it even on models"
+    },
+    {
+      "id": 140,
+      "start": 420.0,
+      "end": 422.48,
+      "text": "that have been trained to not do bad things."
+    },
+    {
+      "id": 141,
+      "start": 422.48,
+      "end": 424.84,
+      "text": "And they demonstrate that number one,"
+    },
+    {
+      "id": 142,
+      "start": 424.84,
+      "end": 426.88,
+      "text": "you can cause things like models like Lama"
+    },
+    {
+      "id": 143,
+      "start": 426.88,
+      "end": 430.4,
+      "text": "to do bad things like Apatoxic things"
+    },
+    {
+      "id": 144,
+      "start": 430.4,
+      "end": 433.12,
+      "text": "tell you how to build bonds, stuff like that."
+    },
+    {
+      "id": 145,
+      "start": 433.12,
+      "end": 438.12,
+      "text": "But also the same prompts also work on like GPD models,"
+    },
+    {
+      "id": 146,
+      "start": 438.24,
+      "end": 441.12,
+      "text": "which is kind of like interesting and very,"
+    },
+    {
+      "id": 147,
+      "start": 443.36,
+      "end": 444.8,
+      "text": "confusing in a way because you thought"
+    },
+    {
+      "id": 148,
+      "start": 444.8,
+      "end": 447.0,
+      "text": "this might be exploiting idiosyncrasies"
+    },
+    {
+      "id": 149,
+      "start": 447.0,
+      "end": 449.72,
+      "text": "of a particular language model that actually looks not."
+    },
+    {
+      "id": 150,
+      "start": 449.72,
+      "end": 452.08,
+      "text": "So I find this kind of frustrating."
+    },
+    {
+      "id": 151,
+      "start": 452.72,
+      "end": 454.72,
+      "text": "So if you take that a step further,"
+    },
+    {
+      "id": 152,
+      "start": 454.72,
+      "end": 457.24,
+      "text": "one thing that you can do is you can say,"
+    },
+    {
+      "id": 153,
+      "start": 457.24,
+      "end": 460.4,
+      "text": "oh, actually there's no reason why we need to clamp"
+    },
+    {
+      "id": 154,
+      "start": 460.4,
+      "end": 463.72,
+      "text": "these embeddings back to an existing embedding, right?"
+    },
+    {
+      "id": 155,
+      "start": 463.72,
+      "end": 466.92,
+      "text": "So we could just optimize the prompts,"
+    },
+    {
+      "id": 156,
+      "start": 466.92,
+      "end": 470.72,
+      "text": "the embeddings of the prompts that go for a task,"
+    },
+    {
+      "id": 157,
+      "start": 470.72,
+      "end": 473.2,
+      "text": "and not clamp them back to embeddings"
+    },
+    {
+      "id": 158,
+      "start": 473.2,
+      "end": 475.08,
+      "text": "and just keep them as is."
+    },
+    {
+      "id": 159,
+      "start": 475.08,
+      "end": 477.8,
+      "text": "So, I think that's a good thing."
+    },
+    {
+      "id": 160,
+      "start": 477.8,
+      "end": 480.36,
+      "text": "And back to embeddings and just keep them as is."
+    },
+    {
+      "id": 161,
+      "start": 480.36,
+      "end": 484.4,
+      "text": "So what I mean by that is like right here,"
+    },
+    {
+      "id": 162,
+      "start": 484.4,
+      "end": 487.76,
+      "text": "it's optimizing T1, T2, T3, T4, T5,"
+    },
+    {
+      "id": 163,
+      "start": 487.76,
+      "end": 489.8,
+      "text": "and then clamping that back to atmosphere"
+    },
+    {
+      "id": 164,
+      "start": 489.8,
+      "end": 491.68,
+      "text": "a lot dialogue flowing totally."
+    },
+    {
+      "id": 165,
+      "start": 491.68,
+      "end": 494.76,
+      "text": "But just keep them as is and don't worry about them"
+    },
+    {
+      "id": 166,
+      "start": 494.76,
+      "end": 497.08,
+      "text": "like actually being a token in the model"
+    },
+    {
+      "id": 167,
+      "start": 497.08,
+      "end": 499.32,
+      "text": "because if you have control over your model,"
+    },
+    {
+      "id": 168,
+      "start": 499.32,
+      "end": 500.8,
+      "text": "you can just add them as new elements"
+    },
+    {
+      "id": 169,
+      "start": 500.8,
+      "end": 503.88,
+      "text": "in the vocabulary in your time, right?"
+    },
+    {
+      "id": 170,
+      "start": 503.88,
+      "end": 507.56,
+      "text": "So what they demonstrate in this paper"
+    },
+    {
+      "id": 171,
+      "start": 507.56,
+      "end": 512.04,
+      "text": "is that instead of taking your 11 billion parameter model"
+    },
+    {
+      "id": 172,
+      "start": 512.04,
+      "end": 514.72,
+      "text": "and training the whole 11 billion parameter model"
+    },
+    {
+      "id": 173,
+      "start": 514.72,
+      "end": 518.04,
+      "text": "for many different tasks on many different data sets,"
+    },
+    {
+      "id": 174,
+      "start": 518.04,
+      "end": 520.12,
+      "text": "they just train these prompts,"
+    },
+    {
+      "id": 175,
+      "start": 520.12,
+      "end": 522.08,
+      "text": "which are like 20 paper amateurs each."
+    },
+    {
+      "id": 176,
+      "start": 522.08,
+      "end": 524.12,
+      "text": "I forget how long it is, it's like 10 tokens"
+    },
+    {
+      "id": 177,
+      "start": 524.12,
+      "end": 526.44,
+      "text": "or 20 tokens or something like that."
+    },
+    {
+      "id": 178,
+      "start": 526.44,
+      "end": 528.8,
+      "text": "I'm in training on all of the data sets here."
+    },
+    {
+      "id": 179,
+      "start": 528.8,
+      "end": 530.96,
+      "text": "And you don't actually need to do multi-task learning,"
+    },
+    {
+      "id": 180,
+      "start": 530.96,
+      "end": 532.88,
+      "text": "you don't need to train on multiple tasks at the same time,"
+    },
+    {
+      "id": 181,
+      "start": 532.88,
+      "end": 534.56,
+      "text": "you can just train on the single task."
+    },
+    {
+      "id": 182,
+      "start": 536.32,
+      "end": 540.48,
+      "text": "So now let's take that even a step further."
+    },
+    {
+      "id": 183,
+      "start": 540.48,
+      "end": 543.12,
+      "text": "So this is only training the embedding set you input"
+    },
+    {
+      "id": 184,
+      "start": 543.12,
+      "end": 544.64,
+      "text": "into the model."
+    },
+    {
+      "id": 185,
+      "start": 544.64,
+      "end": 547.32,
+      "text": "There's a method called prefix tuning"
+    },
+    {
+      "id": 186,
+      "start": 547.32,
+      "end": 550.36,
+      "text": "and the way prefix tuning works is instead of training"
+    },
+    {
+      "id": 187,
+      "start": 550.36,
+      "end": 552.8,
+      "text": "only the embedding set go into the model,"
+    },
+    {
+      "id": 188,
+      "start": 552.8,
+      "end": 554.96,
+      "text": "they actually train a prefix that you then"
+    },
+    {
+      "id": 189,
+      "start": 554.96,
+      "end": 558.2,
+      "text": "append to every layer of the model."
+    },
+    {
+      "id": 190,
+      "start": 558.2,
+      "end": 561.28,
+      "text": "So prompt tuning basically does this"
+    },
+    {
+      "id": 191,
+      "start": 561.28,
+      "end": 563.44,
+      "text": "for the first layer of the model."
+    },
+    {
+      "id": 192,
+      "start": 563.44,
+      "end": 565.6,
+      "text": "Prefix tuning does this for every layer of the model"
+    },
+    {
+      "id": 193,
+      "start": 565.6,
+      "end": 568.92,
+      "text": "and you append a prefix for every layer."
+    },
+    {
+      "id": 194,
+      "start": 568.92,
+      "end": 571.2,
+      "text": "So it's just a more expressive version"
+    },
+    {
+      "id": 195,
+      "start": 571.2,
+      "end": 572.52,
+      "text": "of prompt tuning essentially."
+    },
+    {
+      "id": 196,
+      "start": 574.04,
+      "end": 579.04,
+      "text": "So these are all kinds of gradual steps"
+    },
+    {
+      "id": 197,
+      "start": 579.2,
+      "end": 582.84,
+      "text": "from a human created prompt into something"
+    },
+    {
+      "id": 198,
+      "start": 582.84,
+      "end": 587.84,
+      "text": "that is basically training a prompt or a prefix to the model."
+    },
+    {
+      "id": 199,
+      "start": 588.72,
+      "end": 591.68,
+      "text": "So I would take questions,"
+    },
+    {
+      "id": 200,
+      "start": 591.68,
+      "end": 594.24,
+      "text": "but let me get to the end of this section also"
+    },
+    {
+      "id": 201,
+      "start": 594.24,
+      "end": 598.32,
+      "text": "because I think there's interesting analogies here."
+    },
+    {
+      "id": 202,
+      "start": 598.32,
+      "end": 600.8,
+      "text": "So in the next class,"
+    }
+  ],
+  "language": "en"
+}

@@ -1,0 +1,551 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 2.0,
+      "text": "Can everyone hear?"
+    },
+    {
+      "id": 1,
+      "start": 2.0,
+      "end": 3.0,
+      "text": "What's that?"
+    },
+    {
+      "id": 2,
+      "start": 3.0,
+      "end": 4.0,
+      "text": "Okay."
+    },
+    {
+      "id": 3,
+      "start": 4.0,
+      "end": 5.0,
+      "text": "Great."
+    },
+    {
+      "id": 4,
+      "start": 5.0,
+      "end": 10.0,
+      "text": "So today, I'll be talking about a tour of modern LLMs."
+    },
+    {
+      "id": 5,
+      "start": 10.0,
+      "end": 18.0,
+      "text": "And basically, the idea here is that there is many, many large language models available nowadays."
+    },
+    {
+      "id": 6,
+      "start": 18.0,
+      "end": 23.0,
+      "text": "But I wanted to go through some of the ones that are particularly interesting for various reasons."
+    },
+    {
+      "id": 7,
+      "start": 23.0,
+      "end": 30.0,
+      "text": "And it's either because they disclose a lot of information, you know, about exactly how they were trained."
+    },
+    {
+      "id": 8,
+      "start": 30.0,
+      "end": 34.0,
+      "text": "So we can get an idea about what is involved in training."
+    },
+    {
+      "id": 9,
+      "start": 34.0,
+      "end": 37.0,
+      "text": "I kind of stated the art large language model."
+    },
+    {
+      "id": 10,
+      "start": 37.0,
+      "end": 43.0,
+      "text": "Or because they're kind of the strongest models that you can download and use on your own."
+    },
+    {
+      "id": 11,
+      "start": 43.0,
+      "end": 46.0,
+      "text": "Like the best open weights language models that are available."
+    },
+    {
+      "id": 12,
+      "start": 46.0,
+      "end": 49.0,
+      "text": "Or because they're specialized to some particular topic."
+    },
+    {
+      "id": 13,
+      "start": 49.0,
+      "end": 52.0,
+      "text": "Or because they're the best closed language models."
+    },
+    {
+      "id": 14,
+      "start": 52.0,
+      "end": 55.0,
+      "text": "But I'm going to particularly focus on the first two."
+    },
+    {
+      "id": 15,
+      "start": 55.0,
+      "end": 63.0,
+      "text": "Just so like everybody has an idea about, you know, what is going into all the models that you're using for whatever."
+    },
+    {
+      "id": 16,
+      "start": 63.0,
+      "end": 70.0,
+      "text": "You know, tasks that you're kind of sold."
+    },
+    {
+      "id": 17,
+      "start": 70.0,
+      "end": 73.0,
+      "text": "So one important thing is what makes a model."
+    },
+    {
+      "id": 18,
+      "start": 73.0,
+      "end": 80.0,
+      "text": "So we talk about, you know, like llama to or mistroll or mixed roll or whatever else."
+    },
+    {
+      "id": 19,
+      "start": 80.0,
+      "end": 86.0,
+      "text": "And I think you know this already, but it's worth re iterating again here because I'm going to talk about it a lot today."
+    },
+    {
+      "id": 20,
+      "start": 86.0,
+      "end": 88.0,
+      "text": "But it's basically the model architecture."
+    },
+    {
+      "id": 21,
+      "start": 88.0,
+      "end": 91.0,
+      "text": "So what architecture do you decide to use?"
+    },
+    {
+      "id": 22,
+      "start": 91.0,
+      "end": 93.0,
+      "text": "What data do you decide to use?"
+    },
+    {
+      "id": 23,
+      "start": 93.0,
+      "end": 98.0,
+      "text": "And what training algorithm or training method do you decide to use?"
+    },
+    {
+      "id": 24,
+      "start": 98.0,
+      "end": 101.0,
+      "text": "And all of these are important."
+    },
+    {
+      "id": 25,
+      "start": 101.0,
+      "end": 112.0,
+      "text": "And there was actually a Twitter thread with a tumble whose I guess the CSL or CTO or something like that at hugging face."
+    },
+    {
+      "id": 26,
+      "start": 112.0,
+      "end": 122.0,
+      "text": "And basically what he was saying is a lot of people don't realize that the data is actually one of the most important parts."
+    },
+    {
+      "id": 27,
+      "start": 122.0,
+      "end": 126.0,
+      "text": "And the architectures are a lot less important nowadays."
+    },
+    {
+      "id": 28,
+      "start": 126.0,
+      "end": 129.0,
+      "text": "And I think that there's some truth to that."
+    },
+    {
+      "id": 29,
+      "start": 129.0,
+      "end": 134.0,
+      "text": "There's also some, you know, a counter argument to that."
+    },
+    {
+      "id": 30,
+      "start": 134.0,
+      "end": 145.0,
+      "text": "The truth to that, which you'll see today is that almost all of the models that we're using use very similar architectures like almost all of the models using architecture that's very similar dilemma."
+    },
+    {
+      "id": 31,
+      "start": 145.0,
+      "end": 154.0,
+      "text": "But despite the fact that they use very similar architectures, their accuracy is vastly different or their abilities are vastly different."
+    },
+    {
+      "id": 32,
+      "start": 154.0,
+      "end": 158.0,
+      "text": "So that must come from the data or the training decisions, right?"
+    },
+    {
+      "id": 33,
+      "start": 158.0,
+      "end": 162.0,
+      "text": "So that's an argument for the fact that architecture decisions are a lot less important."
+    },
+    {
+      "id": 34,
+      "start": 162.0,
+      "end": 169.0,
+      "text": "My counter argument to that is we spent nine to ten years fine tuning and finding the llama architecture."
+    },
+    {
+      "id": 35,
+      "start": 169.0,
+      "end": 172.0,
+      "text": "So now we have the llama architecture, which is a really good architecture."
+    },
+    {
+      "id": 36,
+      "start": 172.0,
+      "end": 176.0,
+      "text": "It works really well when training very large models and lots of data."
+    },
+    {
+      "id": 37,
+      "start": 176.0,
+      "end": 181.0,
+      "text": "And so now we don't need to use another architecture because architecture or using is good."
+    },
+    {
+      "id": 38,
+      "start": 181.0,
+      "end": 188.0,
+      "text": "But if we were trying to do the same thing with like LSTM from 2014, then none of this stuff we're doing today would work."
+    },
+    {
+      "id": 39,
+      "start": 188.0,
+      "end": 191.0,
+      "text": "So that's an argument in favor of, you know, architectures being important."
+    },
+    {
+      "id": 40,
+      "start": 191.0,
+      "end": 198.0,
+      "text": "Also architectures can make things faster and that's included in some decisions."
+    },
+    {
+      "id": 41,
+      "start": 198.0,
+      "end": 200.0,
+      "text": "So."
+    },
+    {
+      "id": 42,
+      "start": 200.0,
+      "end": 206.0,
+      "text": "The first thing I'd like to talk about before I get into any of the actual details is open versus closed access."
+    },
+    {
+      "id": 43,
+      "start": 206.0,
+      "end": 214.0,
+      "text": "This is not like modeling stuff, but I think it's important and also helps you understand the environment a little bit."
+    },
+    {
+      "id": 44,
+      "start": 214.0,
+      "end": 221.0,
+      "text": "So there's a nice blog by personally and others at, which is also in the reference."
+    },
+    {
+      "id": 45,
+      "start": 221.0,
+      "end": 230.0,
+      "text": "And they discuss several different varieties of like openness of release of language models in advanced AI systems."
+    },
+    {
+      "id": 46,
+      "start": 230.0,
+      "end": 233.0,
+      "text": "And there are some things that we can talk about."
+    },
+    {
+      "id": 47,
+      "start": 233.0,
+      "end": 247.0,
+      "text": "We can talk about the weights being open, described or closed inference code being open or inference methods being described where it being fully closed, training being open described or closed and data being open described or closed."
+    },
+    {
+      "id": 48,
+      "start": 247.0,
+      "end": 258.0,
+      "text": "And in general, we have like the open weights models that are on a hugging face. That might just mean the weights are open."
+    },
+    {
+      "id": 49,
+      "start": 258.0,
+      "end": 263.0,
+      "text": "The inference code also needs to be open because otherwise you can't do inference on them if they're on a hugging face."
+    },
+    {
+      "id": 50,
+      "start": 263.0,
+      "end": 268.0,
+      "text": "But that doesn't mean that the training code is open. It also doesn't mean that the data is open."
+    },
+    {
+      "id": 51,
+      "start": 268.0,
+      "end": 275.0,
+      "text": "And so there's various degrees of openness."
+    },
+    {
+      "id": 52,
+      "start": 275.0,
+      "end": 285.0,
+      "text": "And then of course there are things like GPT for or GPT models where basically all of this is closed and we don't know anything about it."
+    },
+    {
+      "id": 53,
+      "start": 285.0,
+      "end": 288.0,
+      "text": "Or no very little about it."
+    },
+    {
+      "id": 54,
+      "start": 288.0,
+      "end": 292.0,
+      "text": "Another thing is about licenses and permissiveness."
+    },
+    {
+      "id": 55,
+      "start": 292.0,
+      "end": 298.0,
+      "text": "And this is kind of important if you want to do a research project to know because it."
+    },
+    {
+      "id": 56,
+      "start": 298.0,
+      "end": 304.0,
+      "text": "And it means it has an impact on the things that you legally can do or can't do."
+    },
+    {
+      "id": 57,
+      "start": 304.0,
+      "end": 310.0,
+      "text": "In universities, I mean we should be following the law but we're maybe people think about this a little bit less."
+    },
+    {
+      "id": 58,
+      "start": 310.0,
+      "end": 316.0,
+      "text": "If you're in a big company, this is something that becomes really important. So it's important to think about."
+    },
+    {
+      "id": 59,
+      "start": 316.0,
+      "end": 324.0,
+      "text": "So I'm going to go through several degrees of licenses that if you've done anything in open source, you probably know."
+    },
+    {
+      "id": 60,
+      "start": 324.0,
+      "end": 330.0,
+      "text": "The, you probably know a lot of these. The first one is public domain or CC zero."
+    },
+    {
+      "id": 61,
+      "start": 330.0,
+      "end": 335.0,
+      "text": "And this basically means you can do anything with it. Like I could, I could download it."
+    },
+    {
+      "id": 62,
+      "start": 335.0,
+      "end": 343.0,
+      "text": "And this includes the download it and redistribute it. Not give you any credit. Modify it in any way I want."
+    },
+    {
+      "id": 63,
+      "start": 343.0,
+      "end": 349.0,
+      "text": "And this includes things like old copyrighted works and products of the US government workers."
+    },
+    {
+      "id": 64,
+      "start": 349.0,
+      "end": 355.0,
+      "text": "So if you work for the US government in seven capacities, anything you generate becomes public domain."
+    },
+    {
+      "id": 65,
+      "start": 355.0,
+      "end": 366.0,
+      "text": "So old copyrighted works on how old do you think they need to be before they become uncapitated."
+    },
+    {
+      "id": 66,
+      "start": 366.0,
+      "end": 368.0,
+      "text": "Yeah."
+    },
+    {
+      "id": 67,
+      "start": 368.0,
+      "end": 371.0,
+      "text": "I think that's pretty close."
+    },
+    {
+      "id": 68,
+      "start": 371.0,
+      "end": 375.0,
+      "text": "So."
+    },
+    {
+      "id": 69,
+      "start": 375.0,
+      "end": 378.0,
+      "text": "It's 70 years."
+    },
+    {
+      "id": 70,
+      "start": 378.0,
+      "end": 388.0,
+      "text": "Oh, sorry. The life of the author plus an additional 70 years. So like after the after the person is passed away 70 years, I guess it says."
+    },
+    {
+      "id": 71,
+      "start": 388.0,
+      "end": 394.0,
+      "text": "Does anyone know a work that just become became non copyrighted? Yeah."
+    },
+    {
+      "id": 72,
+      "start": 394.0,
+      "end": 399.0,
+      "text": "Mickey Mouse is still happy writing."
+    },
+    {
+      "id": 73,
+      "start": 399.0,
+      "end": 408.0,
+      "text": "So, uh, did it. I, okay. So that's some new news. Some other new news is Winnie the Pooh."
+    },
+    {
+      "id": 74,
+      "start": 408.0,
+      "end": 419.0,
+      "text": "So Winnie the Pooh just became non copyrighted. And actually I just heard last week that somebody made a horror movie where Winnie the Pooh was a killer."
+    },
+    {
+      "id": 75,
+      "start": 419.0,
+      "end": 432.0,
+      "text": "And a whole bunch of like bad movie awards in 2023. So that's the kind of things that can happen to your copyrighted works if they are really CC zero somebody can do anything they want with them."
+    },
+    {
+      "id": 76,
+      "start": 432.0,
+      "end": 436.0,
+      "text": "You know, so you need to be a little bit careful about that."
+    },
+    {
+      "id": 77,
+      "start": 436.0,
+      "end": 445.0,
+      "text": "Next are MIT and BSD. These are very common software licenses. You'll see them up on a lot of research projects. These have very few restrictions."
+    },
+    {
+      "id": 78,
+      "start": 445.0,
+      "end": 452.0,
+      "text": "Other than maybe maintaining the copyright notice for BSE, but that's about it. You can do just about anything you want with it."
+    },
+    {
+      "id": 79,
+      "start": 452.0,
+      "end": 463.0,
+      "text": "Actually, I'm not sure if people know this, but the Mac operating system is based on an old BSD operating operating system where they took the day they took the code."
+    },
+    {
+      "id": 80,
+      "start": 463.0,
+      "end": 475.0,
+      "text": "They made it private. They forked it made it private. And now it's the proprietary Mac operating system. So that's something you can do with them and that a tier of the S.D. license."
+    },
+    {
+      "id": 81,
+      "start": 475.0,
+      "end": 490.0,
+      "text": "There is also Apache and CC by here you must acknowledge the owner of the the original creator. So you need to say this person actually created this originally."
+    },
+    {
+      "id": 82,
+      "start": 490.0,
+      "end": 504.0,
+      "text": "Apache is also kind of interesting because they will give you a license to use that code and any cat needs that are associated with that code."
+    },
+    {
+      "id": 83,
+      "start": 504.0,
+      "end": 519.0,
+      "text": "Unless you assume the company who released it. So just to give an example, let's say Google released their code under the Apache license and that code implements transformers and Google has a patent time transformers."
+    },
+    {
+      "id": 84,
+      "start": 519.0,
+      "end": 534.0,
+      "text": "So if you use kind of jacks or tensor flow, a jacks or tensor flow implementation of transformers that was created by Google, you're okay, you're safe to use that because they've released it under under that license."
+    },
+    {
+      "id": 85,
+      "start": 534.0,
+      "end": 543.0,
+      "text": "But if you sue Google for anything related to intellectual property, Google could say don't you can't use transformers anymore."
+    },
+    {
+      "id": 86,
+      "start": 543.0,
+      "end": 553.0,
+      "text": "And so like if open AI ever sue Google for intellectual property infringement, Google will say, okay, you can't use transformers or word embeddings good luck."
+    },
+    {
+      "id": 87,
+      "start": 553.0,
+      "end": 571.0,
+      "text": "Open AI. So there's this interesting thing where all of these tech companies now are using patented patented things, a lot of Apache license software. And so none of them consume each other for patents and become basically mostly with this in big time."
+    },
+    {
+      "id": 88,
+      "start": 571.0,
+      "end": 584.0,
+      "text": "Moving on, there's also a GPL in CC by SA, these are licenses where if you use them, you need to reshare under that license."
+    },
+    {
+      "id": 89,
+      "start": 584.0,
+      "end": 592.0,
+      "text": "And so like if you create some software, it's gpl licensed and you build on it and build something new, you need to release it under the gpl license."
+    },
+    {
+      "id": 90,
+      "start": 592.0,
+      "end": 602.0,
+      "text": "So a lot of companies will not use will not use gpl software because that would mean that if they incorporated with their"
+    }
+  ],
+  "language": "en"
+}

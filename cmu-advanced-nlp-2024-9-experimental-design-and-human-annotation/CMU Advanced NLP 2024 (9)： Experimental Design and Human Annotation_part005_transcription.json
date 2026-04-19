@@ -1,0 +1,467 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 4.16,
+      "text": "you know, by like eyeballing the data or something like that."
+    },
+    {
+      "id": 1,
+      "start": 5.48,
+      "end": 10.48,
+      "text": "And then we think our model is going to get"
+    },
+    {
+      "id": 2,
+      "start": 11.36,
+      "end": 13.04,
+      "text": "93% accuracy."
+    },
+    {
+      "id": 3,
+      "start": 15.48,
+      "end": 18.56,
+      "text": "And we want a significant threshold,"
+    },
+    {
+      "id": 4,
+      "start": 18.56,
+      "end": 22.48,
+      "text": "significant threshold, the PSS and 0.05."
+    },
+    {
+      "id": 5,
+      "start": 24.28,
+      "end": 28.76,
+      "text": "Given these two quantities,"
+    },
+    {
+      "id": 6,
+      "start": 28.76,
+      "end": 31.4,
+      "text": "we can basically go in and say, okay, now we need"
+    },
+    {
+      "id": 7,
+      "start": 33.12,
+      "end": 36.88,
+      "text": "500 training, 500 test examples in order to"
+    },
+    {
+      "id": 8,
+      "start": 37.12,
+      "end": 39.88,
+      "text": "say with confidence that we will be able to"
+    },
+    {
+      "id": 9,
+      "start": 41.96,
+      "end": 46.0,
+      "text": "that we will be able to distinguish between two models with 90 and 93% accuracy."
+    },
+    {
+      "id": 10,
+      "start": 47.4,
+      "end": 53.6,
+      "text": "And I can go, I can show the algorithm that they have in this paper."
+    },
+    {
+      "id": 11,
+      "start": 59.76,
+      "end": 67.76,
+      "text": "But basically the way this works."
+    },
+    {
+      "id": 12,
+      "start": 77.76,
+      "end": 81.24,
+      "text": "Is you sample a data set,"
+    },
+    {
+      "id": 13,
+      "start": 81.76,
+      "end": 84.2,
+      "text": "compute the effect of interest on the sample,"
+    },
+    {
+      "id": 14,
+      "start": 84.56,
+      "end": 85.96,
+      "text": "I compute the p value."
+    },
+    {
+      "id": 15,
+      "start": 86.48,
+      "end": 88.68,
+      "text": "And then you can calculate the power"
+    },
+    {
+      "id": 16,
+      "start": 89.6,
+      "end": 95.6,
+      "text": "by basically checking the number of times that the p value is less than your threshold,"
+    },
+    {
+      "id": 17,
+      "start": 96.72,
+      "end": 100.52,
+      "text": "multiplied by the fact that the sign is in a particular direction."
+    },
+    {
+      "id": 18,
+      "start": 101.12,
+      "end": 106.76,
+      "text": "And by doing this, you can essentially, you can essentially calculate how much data you would need."
+    },
+    {
+      "id": 19,
+      "start": 107.24,
+      "end": 111.2,
+      "text": "Or sorry, you can calculate the statistical power."
+    },
+    {
+      "id": 20,
+      "start": 111.56,
+      "end": 114.08,
+      "text": "And then you can do this for various sizes of data sets."
+    },
+    {
+      "id": 21,
+      "start": 114.08,
+      "end": 118.0,
+      "text": "So you can gradually increase the size of the data set or decrease the size of the data set."
+    },
+    {
+      "id": 22,
+      "start": 118.52,
+      "end": 124.96,
+      "text": "And that allows you to figure out how big your data set needs to be in order to get us statistically"
+    },
+    {
+      "id": 23,
+      "start": 124.96,
+      "end": 127.36,
+      "text": "significantly back to the other data set."
+    },
+    {
+      "id": 24,
+      "start": 129.44,
+      "end": 133.44,
+      "text": "And so like many, many people ask me the question,"
+    },
+    {
+      "id": 25,
+      "start": 133.56,
+      "end": 135.36,
+      "text": "like how big of a data set do we need to make?"
+    },
+    {
+      "id": 26,
+      "start": 135.4,
+      "end": 137.48,
+      "text": "This is basically the statistically, like,"
+    },
+    {
+      "id": 27,
+      "start": 137.48,
+      "end": 139.68,
+      "text": "quote unquote correct answer for how you do this."
+    },
+    {
+      "id": 28,
+      "start": 140.2,
+      "end": 151.32,
+      "text": "And also for assignment two, we're going to ask you to justify your choice of creation of a data set of a particular size for testing based on this."
+    },
+    {
+      "id": 29,
+      "start": 151.32,
+      "end": 155.32,
+      "text": "So pay attention and please look to the office."
+    },
+    {
+      "id": 30,
+      "start": 159.56,
+      "end": 161.12,
+      "text": "Cool. Any questions?"
+    },
+    {
+      "id": 31,
+      "start": 163.64,
+      "end": 166.56,
+      "text": "I didn't go like really deeply into the formulas here."
+    },
+    {
+      "id": 32,
+      "start": 166.8,
+      "end": 170.32,
+      "text": "You'll probably have to look them up in the paper, but hopefully that can see the general idea."
+    },
+    {
+      "id": 33,
+      "start": 172.88,
+      "end": 174.04,
+      "text": "Okay, next."
+    },
+    {
+      "id": 34,
+      "start": 174.72,
+      "end": 176.2,
+      "text": "How much training data do I need?"
+    },
+    {
+      "id": 35,
+      "start": 177.52,
+      "end": 181.04,
+      "text": "So in general, more is usually better if you're fine tuning a model."
+    },
+    {
+      "id": 36,
+      "start": 181.88,
+      "end": 190.28,
+      "text": "So I can't tell you like you don't need to make more data because probably you do, if you're not happy with your performance."
+    },
+    {
+      "id": 37,
+      "start": 191.2,
+      "end": 199.4,
+      "text": "But recently, you can get very reasonable performance with few shot or zero shot or pre-trained models in prompting."
+    },
+    {
+      "id": 38,
+      "start": 199.92,
+      "end": 203.32,
+      "text": "And because of this, in some cases, maybe the answer is zero."
+    },
+    {
+      "id": 39,
+      "start": 203.72,
+      "end": 207.2,
+      "text": "Maybe you don't need any training data and you could just use a zero shot content model."
+    },
+    {
+      "id": 40,
+      "start": 207.2,
+      "end": 212.32,
+      "text": "So you need to choose like what your accuracy threshold is."
+    },
+    {
+      "id": 41,
+      "start": 213.08,
+      "end": 220.24,
+      "text": "You need to decide whether you want to be fine tuning a model to improve performance or doing other things like prompt engineering or other stuff like that."
+    },
+    {
+      "id": 42,
+      "start": 220.92,
+      "end": 223.92,
+      "text": "So basically, there's no correct answer to this."
+    },
+    {
+      "id": 43,
+      "start": 226.44,
+      "end": 243.12,
+      "text": "One thing to be aware of is sometimes if you select data intelligently, you can improve more quickly with something like active learning and active learning chooses representative and difficult data that you can be using."
+    },
+    {
+      "id": 44,
+      "start": 244.12,
+      "end": 253.12,
+      "text": "So when you sample data for fine tuning, what you want to be doing is you want to be sampling data that has good coverage of the domain state you want to cover."
+    },
+    {
+      "id": 45,
+      "start": 255.12,
+      "end": 261.12,
+      "text": "You also want to be covering, for example, language languages or language varieties or demographics abusers."
+    },
+    {
+      "id": 46,
+      "start": 262.12,
+      "end": 284.12,
+      "text": "And another thing is when you're doing this, it's often a good idea to document how you're creating data and there's this paper data statements for NLP by vendor and treatment, which suggests a bunch of different things that you can use to document your data collection and like why and how you collected the data."
+    },
+    {
+      "id": 47,
+      "start": 285.12,
+      "end": 290.12,
+      "text": "And this gives you some pieces of information that could be useful."
+    },
+    {
+      "id": 48,
+      "start": 290.12,
+      "end": 294.12,
+      "text": "This is been incorporated into the hugging face data sets data set cards."
+    },
+    {
+      "id": 49,
+      "start": 294.12,
+      "end": 304.12,
+      "text": "And now, hugging face data sets actually has lots of metadata that's kind of inspired by this, although it's been adjusted for more kind of practical industry use cases."
+    },
+    {
+      "id": 50,
+      "start": 305.12,
+      "end": 327.12,
+      "text": "Another thing is annotation guidelines. So if you're asking humans to do anything or for that matter, if you're asking GPT for to generate data for you, you need to tell people or GPT for in, you know, a clear manner, how you will like how it should be creating data."
+    },
+    {
+      "id": 51,
+      "start": 328.12,
+      "end": 335.12,
+      "text": "So the first thing is if you try to end the first thing that you can do is you can try to annotate yourself."
+    },
+    {
+      "id": 52,
+      "start": 336.12,
+      "end": 346.12,
+      "text": "And if you actually try to solve the annotation test yourself, then you'll realize that there's lots of corner cases that are hard to decide on other things like that."
+    },
+    {
+      "id": 53,
+      "start": 346.12,
+      "end": 352.12,
+      "text": "So like if you're annotating sentiment, what is the boundary between very positive and positive."
+    },
+    {
+      "id": 54,
+      "start": 353.12,
+      "end": 371.12,
+      "text": "If you're annotating question answering, like, for example, do you want to answer the whole sentence or do you want to answer with only a short concise answer, like these sorts of things you'll need to tell either an annotator or a model that you're asking to do annotation."
+    },
+    {
+      "id": 55,
+      "start": 371.12,
+      "end": 379.12,
+      "text": "To give some examples from Pension Bank, part of speech annotation guidelines, this is very old, it's from 1990."
+    },
+    {
+      "id": 56,
+      "start": 379.12,
+      "end": 394.12,
+      "text": "But basically they have like adverb, this category includes most words that end in LY as well as degree words like quite, etc, etc. It has other things for adverbs."
+    },
+    {
+      "id": 57,
+      "start": 395.12,
+      "end": 407.12,
+      "text": "And then it has like confusing parts of speech with examples. One thing that I found like really, really interesting is like if you look at these annotation guidelines, it's like prompts."
+    },
+    {
+      "id": 58,
+      "start": 407.12,
+      "end": 414.12,
+      "text": "So if you look at this, it's like these are your prompts, your zero shot prompts, and these are few shot examples."
+    },
+    {
+      "id": 59,
+      "start": 414.12,
+      "end": 422.12,
+      "text": "So like even for humans, we were doing few shot prompting with examples when they were doing annotations. So it's kind of fun."
+    },
+    {
+      "id": 60,
+      "start": 424.12,
+      "end": 437.12,
+      "text": "Timoring annotators. So like, let's say you want to actually build a data set and in people to do things for smaller scale projects. Very often you can just annotate yourself and that's fine."
+    },
+    {
+      "id": 61,
+      "start": 437.12,
+      "end": 446.12,
+      "text": "There's a fixed set of overhead to get other people to do something and train them and stuff. So, you know, I often just annotate things by self."
+    },
+    {
+      "id": 62,
+      "start": 446.12,
+      "end": 460.12,
+      "text": "You can also find friends or other students or co-workers who can help you out with things you can break them with pizza or whatever favorite treat or beverage that they like."
+    },
+    {
+      "id": 63,
+      "start": 460.12,
+      "end": 465.12,
+      "text": "Then for finding people online, there's a lot of things that you can do."
+    },
+    {
+      "id": 64,
+      "start": 465.12,
+      "end": 471.12,
+      "text": "I very often hire freelancers through platforms such as Upwork."
+    },
+    {
+      "id": 65,
+      "start": 471.12,
+      "end": 483.12,
+      "text": "This is good and bad. The bad thing about it is that this is often more expensive. The good thing about it is you get people who have pride in their work and accountability and motivation."
+    },
+    {
+      "id": 66,
+      "start": 483.12,
+      "end": 496.12,
+      "text": "Because like if they get rated poorly, they it's going to be harder to get work and often they're professionals in their fields. So like if you want to get a code generation data set, you can hire good freelancers."
+    },
+    {
+      "id": 67,
+      "start": 496.12,
+      "end": 509.12,
+      "text": "I've actually heard rumors that people like open AI, they hire people and pay them $60 an hour to do this annotation. They really want people who are very professional and do a very good job."
+    },
+    {
+      "id": 68,
+      "start": 509.12,
+      "end": 523.12,
+      "text": "I don't pay that much. But I do pay well more than minimum wage and, you know, like it's it. I pay a competitive price for these freelancers when I get to do that."
+    },
+    {
+      "id": 69,
+      "start": 523.12,
+      "end": 532.12,
+      "text": "Another thing you can do is crowd workers and this could be through sites like mechanical trick or prolific or other things like this. So that's another option."
+    },
+    {
+      "id": 70,
+      "start": 532.12,
+      "end": 540.12,
+      "text": "Quality control becomes very difficult and we're getting to the point where number one."
+    },
+    {
+      "id": 71,
+      "start": 540.12,
+      "end": 553.12,
+      "text": "If you don't aren't very careful with quality control, language models, they actually do a similarly good job as crowd workers and number two, all the crowd workers are using GPT for anyways. So you do need to be careful about that."
+    },
+    {
+      "id": 72,
+      "start": 553.12,
+      "end": 573.12,
+      "text": "One thing that I often do is I hire for a small job first to gauge timeliness and accuracy and then hire for a bigger job. So just hire people to do, you know, 50 examples or 20 examples first and then, you know, if they do a good job with it that I hire them to do 200 or 1000 examples."
+    },
+    {
+      "id": 73,
+      "start": 573.12,
+      "end": 583.12,
+      "text": "Another thing to note is that if you're doing research in a university, you might need to get approval from an institutional review board."
+    },
+    {
+      "id": 74,
+      "start": 583.12,
+      "end": 590.12,
+      "text": "And this is in particular the case for subjective tasks. So this is when you're asking people, how do you feel about this out?"
+    },
+    {
+      "id": 75,
+      "start": 590.12,
+      "end": 597.12,
+      "text": "Do you think this output is representative of your beliefs or things like that where it doesn't have a correct answer."
+    },
+    {
+      "id": 76,
+      "start": 597.12,
+      "end": 604.12,
+      "text": "If it's something like it does have a yes no answer, which is like how many verbs are in this sentence."
+    }
+  ],
+  "language": "en"
+}

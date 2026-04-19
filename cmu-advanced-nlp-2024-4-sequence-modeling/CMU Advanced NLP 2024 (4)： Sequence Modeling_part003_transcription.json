@@ -1,0 +1,767 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 3.52,
+      "text": "Typically, the problem with vanishing gradients is, like, let's say we have a prediction"
+    },
+    {
+      "id": 1,
+      "start": 3.52,
+      "end": 6.24,
+      "text": "task where we're calculating a regression."
+    },
+    {
+      "id": 2,
+      "start": 6.24,
+      "end": 10.24,
+      "text": "We're inputting a whole bunch of tokens and then calculating a regression at the very"
+    },
+    {
+      "id": 3,
+      "start": 10.24,
+      "end": 13.8,
+      "text": "end using a square error loss function."
+    },
+    {
+      "id": 4,
+      "start": 13.8,
+      "end": 21.68,
+      "text": "If we do something like this, the problem is, if we have a standard RNN, when we do back"
+    },
+    {
+      "id": 5,
+      "start": 21.68,
+      "end": 29.68,
+      "text": "prop, we'll have a big gradient, probably for the first RNN unit here."
+    },
+    {
+      "id": 6,
+      "start": 29.68,
+      "end": 37.0,
+      "text": "But every time because we're running this through some sort of nonlinearity, if we, for"
+    },
+    {
+      "id": 7,
+      "start": 37.0,
+      "end": 43.8,
+      "text": "example, if our nonlinearity is a tanH function, the gradient of the tanH function looks a"
+    },
+    {
+      "id": 8,
+      "start": 43.8,
+      "end": 47.96,
+      "text": "little bit like this."
+    },
+    {
+      "id": 9,
+      "start": 47.96,
+      "end": 56.16,
+      "text": "And here, if I am not mistaken, this peaks at 1 and everywhere else at 0."
+    },
+    {
+      "id": 10,
+      "start": 56.16,
+      "end": 62.72,
+      "text": "And so, because this is peaking at 1, everywhere else at 0, let's say we have an input way over"
+    },
+    {
+      "id": 11,
+      "start": 62.72,
+      "end": 65.92,
+      "text": "here, like minus 3 or something like that."
+    },
+    {
+      "id": 12,
+      "start": 65.92,
+      "end": 68.12,
+      "text": "If we have that, that basically destroys our gradient."
+    },
+    {
+      "id": 13,
+      "start": 68.12,
+      "end": 72.96,
+      "text": "Our gradient disappears for that particular unit."
+    },
+    {
+      "id": 14,
+      "start": 72.96,
+      "end": 80.52,
+      "text": "And maybe one thing that you might say is, oh, well, if this is getting so small because"
+    },
+    {
+      "id": 15,
+      "start": 80.52,
+      "end": 85.0,
+      "text": "this only goes up to 1, let's do like 100 times tanH."
+    },
+    {
+      "id": 16,
+      "start": 85.0,
+      "end": 89.12,
+      "text": "And as our activation function, we'll do 100 times tanH."
+    },
+    {
+      "id": 17,
+      "start": 89.12,
+      "end": 92.6,
+      "text": "So now this goes up to 100 and now our gradients are not going to disappear."
+    },
+    {
+      "id": 18,
+      "start": 92.6,
+      "end": 94.4,
+      "text": "But then you have the opposite problem."
+    },
+    {
+      "id": 19,
+      "start": 94.4,
+      "end": 98.4,
+      "text": "You have exploding gradients where it goes up by 100 every time."
+    },
+    {
+      "id": 20,
+      "start": 98.4,
+      "end": 101.52,
+      "text": "It gets on the managed mole and destroys your gradient descent itself."
+    },
+    {
+      "id": 21,
+      "start": 101.52,
+      "end": 107.72,
+      "text": "So basically, we have this problem because if you apply a function over and over again,"
+    },
+    {
+      "id": 22,
+      "start": 107.72,
+      "end": 112.0,
+      "text": "your gradient gets smaller and smaller every smaller and smaller and bigger and bigger every"
+    },
+    {
+      "id": 23,
+      "start": 112.0,
+      "end": 113.0,
+      "text": "time you do that."
+    },
+    {
+      "id": 24,
+      "start": 113.4,
+      "end": 118.12,
+      "text": "You have the vanishing gradient or exploding gradient problem."
+    },
+    {
+      "id": 25,
+      "start": 118.12,
+      "end": 120.24,
+      "text": "It's not just a problem with nonlinearities."
+    },
+    {
+      "id": 26,
+      "start": 120.24,
+      "end": 124.56,
+      "text": "So it also happens when you do your weight matrix multiplies and other stuff like that."
+    },
+    {
+      "id": 27,
+      "start": 124.56,
+      "end": 131.0,
+      "text": "Basically, anytime you modify the input into a different output, it will have a gradient"
+    },
+    {
+      "id": 28,
+      "start": 131.0,
+      "end": 136.8,
+      "text": "and so it will either be bigger than 1 or less."
+    },
+    {
+      "id": 29,
+      "start": 136.8,
+      "end": 139.24,
+      "text": "So I mentioned this is a problem for RNNs."
+    },
+    {
+      "id": 30,
+      "start": 139.24,
+      "end": 142.04,
+      "text": "And it's particularly a problem for RNNs over long sequences."
+    },
+    {
+      "id": 31,
+      "start": 142.04,
+      "end": 144.84,
+      "text": "But it's also a problem for any other model you use."
+    },
+    {
+      "id": 32,
+      "start": 144.84,
+      "end": 149.64,
+      "text": "And the reason why this is important to know is if there's important information in your"
+    },
+    {
+      "id": 33,
+      "start": 149.64,
+      "end": 154.6,
+      "text": "model, finding a way that you can get a direct path from that important information to wherever"
+    },
+    {
+      "id": 34,
+      "start": 154.6,
+      "end": 163.16,
+      "text": "you're making a prediction often is a way to improve your model, improve your model performance."
+    },
+    {
+      "id": 35,
+      "start": 163.16,
+      "end": 167.64,
+      "text": "And on the contrary, if there's unimportant information, if there's information that you"
+    },
+    {
+      "id": 36,
+      "start": 167.64,
+      "end": 171.88,
+      "text": "think is likely to be unimportant, putting it farther away or making it a more"
+    },
+    {
+      "id": 37,
+      "start": 171.88,
+      "end": 173.08,
+      "text": "indirect path."
+    },
+    {
+      "id": 38,
+      "start": 173.08,
+      "end": 177.68,
+      "text": "So the model has to work harder to use it is a good way to prevent the model from being"
+    },
+    {
+      "id": 39,
+      "start": 177.68,
+      "end": 183.68,
+      "text": "distracted by tons and tons of information, which may be irrelevant."
+    },
+    {
+      "id": 40,
+      "start": 183.68,
+      "end": 191.04,
+      "text": "So it's a good thing to know about in general for a model design."
+    },
+    {
+      "id": 41,
+      "start": 191.04,
+      "end": 197.76,
+      "text": "So how did RNNs solve this problem of the vanishing gradient?"
+    },
+    {
+      "id": 42,
+      "start": 197.76,
+      "end": 202.72,
+      "text": "There is a method called Wang short-term memory."
+    },
+    {
+      "id": 43,
+      "start": 202.72,
+      "end": 208.64,
+      "text": "And the basic idea is to make additive connections between time steps."
+    },
+    {
+      "id": 44,
+      "start": 208.64,
+      "end": 220.48,
+      "text": "And so addition is the only addition or kind of like the identity is the only thing that"
+    },
+    {
+      "id": 45,
+      "start": 220.48,
+      "end": 222.2,
+      "text": "does not change the gradient."
+    },
+    {
+      "id": 46,
+      "start": 222.2,
+      "end": 229.4,
+      "text": "It's guaranteed to not change the gradient because the identity function is like f of x equals"
+    },
+    {
+      "id": 47,
+      "start": 229.4,
+      "end": 230.4,
+      "text": "x."
+    },
+    {
+      "id": 48,
+      "start": 230.4,
+      "end": 233.32,
+      "text": "And if you take the derivative of this, it's one."
+    },
+    {
+      "id": 49,
+      "start": 233.32,
+      "end": 237.76,
+      "text": "So your guaranteed to always have a gradient of one according to this function."
+    },
+    {
+      "id": 50,
+      "start": 237.76,
+      "end": 245.52,
+      "text": "So Wang short-term memory makes sure that you have this additive input between time steps."
+    },
+    {
+      "id": 51,
+      "start": 245.52,
+      "end": 247.32,
+      "text": "And this is what it looks like."
+    },
+    {
+      "id": 52,
+      "start": 247.32,
+      "end": 251.04,
+      "text": "It's not super, super important to understand everything that's going on here, but just"
+    },
+    {
+      "id": 53,
+      "start": 251.04,
+      "end": 252.96,
+      "text": "to explain it very quickly."
+    },
+    {
+      "id": 54,
+      "start": 252.96,
+      "end": 258.08,
+      "text": "This C here is something called the memory cell."
+    },
+    {
+      "id": 55,
+      "start": 258.08,
+      "end": 261.4,
+      "text": "It's passed on linearly like this."
+    },
+    {
+      "id": 56,
+      "start": 261.4,
+      "end": 265.04,
+      "text": "And then you have some gates."
+    },
+    {
+      "id": 57,
+      "start": 265.04,
+      "end": 272.8,
+      "text": "The update gate is determining whether you update this hidden state or how much you update"
+    },
+    {
+      "id": 58,
+      "start": 272.8,
+      "end": 274.44,
+      "text": "given this hidden state."
+    },
+    {
+      "id": 59,
+      "start": 274.44,
+      "end": 279.0,
+      "text": "This input gate is deciding how much of the input you take in."
+    },
+    {
+      "id": 60,
+      "start": 279.0,
+      "end": 286.08,
+      "text": "And then the output gate is deciding how much of the output from the cell you basically"
+    },
+    {
+      "id": 61,
+      "start": 286.08,
+      "end": 288.44,
+      "text": "push out after using the cell."
+    },
+    {
+      "id": 62,
+      "start": 288.44,
+      "end": 292.36,
+      "text": "So I mean, it has these three gates that control the information flow and the model can learn"
+    },
+    {
+      "id": 63,
+      "start": 292.36,
+      "end": 295.08,
+      "text": "to turn them on or off or something like that."
+    },
+    {
+      "id": 64,
+      "start": 295.08,
+      "end": 298.88,
+      "text": "So that's the basic basic idea of the LSTM."
+    },
+    {
+      "id": 65,
+      "start": 298.88,
+      "end": 302.36,
+      "text": "And there's lots of other like variants of this like gated recurrent units that are a"
+    },
+    {
+      "id": 66,
+      "start": 302.36,
+      "end": 303.36,
+      "text": "little bit simpler."
+    },
+    {
+      "id": 67,
+      "start": 303.36,
+      "end": 308.88,
+      "text": "But the basic idea of an additive connection plus gating is something that appears a lot"
+    },
+    {
+      "id": 68,
+      "start": 308.88,
+      "end": 314.36,
+      "text": "in many different types of architectures."
+    },
+    {
+      "id": 69,
+      "start": 314.36,
+      "end": 317.88,
+      "text": "Any questions here?"
+    },
+    {
+      "id": 70,
+      "start": 317.88,
+      "end": 321.4,
+      "text": "Another thing I should mention that I just realized I don't have on my slides, but it's a good"
+    },
+    {
+      "id": 71,
+      "start": 321.4,
+      "end": 334.8,
+      "text": "thing to know is that this is also used in deep networks and multi-layer networks."
+    },
+    {
+      "id": 72,
+      "start": 334.8,
+      "end": 345.44,
+      "text": "So basically LSTMs, this is time."
+    },
+    {
+      "id": 73,
+      "start": 345.44,
+      "end": 353.8,
+      "text": "LSTMs have this additive connection between the memory cell where you're always adding this"
+    },
+    {
+      "id": 74,
+      "start": 353.8,
+      "end": 359.96,
+      "text": "into whatever input you get."
+    },
+    {
+      "id": 75,
+      "start": 359.96,
+      "end": 363.48,
+      "text": "And then you get an input and you add this in."
+    },
+    {
+      "id": 76,
+      "start": 363.48,
+      "end": 366.48,
+      "text": "You get an input."
+    },
+    {
+      "id": 77,
+      "start": 366.48,
+      "end": 372.72,
+      "text": "And so this makes sure you pass your gradients forward in time."
+    },
+    {
+      "id": 78,
+      "start": 372.72,
+      "end": 377.08,
+      "text": "There's also something called residual connections, which I think a lot of people have heard of"
+    },
+    {
+      "id": 79,
+      "start": 377.08,
+      "end": 379.2,
+      "text": "if you've done a deep learning class or something like that."
+    },
+    {
+      "id": 80,
+      "start": 379.2,
+      "end": 382.16,
+      "text": "But if you haven't, they're a good thing to know."
+    },
+    {
+      "id": 81,
+      "start": 382.16,
+      "end": 388.16,
+      "text": "Resigual connections are if you run your input through multiple layers."
+    },
+    {
+      "id": 82,
+      "start": 388.16,
+      "end": 404.96,
+      "text": "And if let's say you have a block here, let's call this an RNN for now because we know"
+    },
+    {
+      "id": 83,
+      "start": 404.96,
+      "end": 407.84,
+      "text": "about RNN already."
+    },
+    {
+      "id": 84,
+      "start": 407.84,
+      "end": 413.88,
+      "text": "So, this connection here is called the residual connection."
+    },
+    {
+      "id": 85,
+      "start": 413.88,
+      "end": 418.52,
+      "text": "And basically it's adding an additive connection before and after layers."
+    },
+    {
+      "id": 86,
+      "start": 418.52,
+      "end": 423.4,
+      "text": "So this allows you to pass information from the very beginning of a network to the very"
+    },
+    {
+      "id": 87,
+      "start": 423.4,
+      "end": 427.04,
+      "text": "end of a network through multiple layers."
+    },
+    {
+      "id": 88,
+      "start": 427.04,
+      "end": 430.48,
+      "text": "And it also is there to help prevent the gradient finishing problem."
+    },
+    {
+      "id": 89,
+      "start": 430.48,
+      "end": 439.32,
+      "text": "So in a way you can view LSTMs, what LSTMs are doing is preventing loss of gradient in time."
+    },
+    {
+      "id": 90,
+      "start": 439.32,
+      "end": 443.44,
+      "text": "And these are preventing loss of gradient as you go through multiple layers of the network."
+    },
+    {
+      "id": 91,
+      "start": 443.44,
+      "end": 444.56,
+      "text": "And this is super standard."
+    },
+    {
+      "id": 92,
+      "start": 444.56,
+      "end": 451.68,
+      "text": "This is used in all like transformer models and LAMA and GPT and whatever else."
+    },
+    {
+      "id": 93,
+      "start": 451.68,
+      "end": 452.68,
+      "text": "Cool."
+    },
+    {
+      "id": 94,
+      "start": 452.68,
+      "end": 456.24,
+      "text": "Any other questions about that?"
+    },
+    {
+      "id": 95,
+      "start": 456.24,
+      "end": 458.0,
+      "text": "Okay."
+    },
+    {
+      "id": 96,
+      "start": 458.0,
+      "end": 460.6,
+      "text": "Cool."
+    },
+    {
+      "id": 97,
+      "start": 460.6,
+      "end": 463.44,
+      "text": "So next I'd like you go into convolution."
+    },
+    {
+      "id": 98,
+      "start": 463.44,
+      "end": 469.32,
+      "text": "One thing I should mention is RNNs or RNN style models are used extensively in very long"
+    },
+    {
+      "id": 99,
+      "start": 469.32,
+      "end": 470.76,
+      "text": "sequence modeling."
+    },
+    {
+      "id": 100,
+      "start": 470.76,
+      "end": 473.48,
+      "text": "And we're going to talk more about like actual architecture."
+    },
+    {
+      "id": 101,
+      "start": 473.48,
+      "end": 480.0,
+      "text": "So people use to do this usually in combination with attention based models, but they're used"
+    },
+    {
+      "id": 102,
+      "start": 480.0,
+      "end": 482.24,
+      "text": "in very long sequence modeling."
+    },
+    {
+      "id": 103,
+      "start": 482.24,
+      "end": 489.8,
+      "text": "Confolutions tend to be used in a lot in speech and image processing."
+    },
+    {
+      "id": 104,
+      "start": 489.8,
+      "end": 496.84,
+      "text": "And the reason why they're used a lot in speech and image processing is because when we're"
+    },
+    {
+      "id": 105,
+      "start": 496.84,
+      "end": 509.28,
+      "text": "processing language, we have like this is wonderful."
+    },
+    {
+      "id": 106,
+      "start": 509.28,
+      "end": 513.52,
+      "text": "Like this is wonderful is three tokens in language."
+    },
+    {
+      "id": 107,
+      "start": 513.52,
+      "end": 523.2,
+      "text": "But if we look at it in speech, it's going to be like many, many frames."
+    },
+    {
+      "id": 108,
+      "start": 523.2,
+      "end": 532.64,
+      "text": "So kind of the semantics of language is already kind of like if you look at a single token,"
+    },
+    {
+      "id": 109,
+      "start": 532.64,
+      "end": 535.88,
+      "text": "you already get something semantically meaningful."
+    },
+    {
+      "id": 110,
+      "start": 535.88,
+      "end": 539.56,
+      "text": "But in contrast, if you're looking at like speech or you're looking at pixels and images"
+    },
+    {
+      "id": 111,
+      "start": 539.56,
+      "end": 543.24,
+      "text": "or something like that, you're not going to get something semantically meaningful."
+    },
+    {
+      "id": 112,
+      "start": 543.24,
+      "end": 545.8,
+      "text": "So convolution is used a lot in that case."
+    },
+    {
+      "id": 113,
+      "start": 545.8,
+      "end": 551.84,
+      "text": "And also you could create a convolutional model of our characters as well."
+    },
+    {
+      "id": 114,
+      "start": 551.84,
+      "end": 554.0,
+      "text": "So what is convolution in the first place?"
+    },
+    {
+      "id": 115,
+      "start": 554.0,
+      "end": 559.48,
+      "text": "As I mentioned before, basically you take the local window around an input and you run"
+    },
+    {
+      "id": 116,
+      "start": 559.48,
+      "end": 563.12,
+      "text": "it through basically a model."
+    },
+    {
+      "id": 117,
+      "start": 563.12,
+      "end": 569.92,
+      "text": "And a good way to think about it is it's essentially a feed forward network where you can catenate"
+    },
+    {
+      "id": 118,
+      "start": 569.92,
+      "end": 573.72,
+      "text": "all of the surrounding vectors together and run them through a linear transform like"
+    },
+    {
+      "id": 119,
+      "start": 573.72,
+      "end": 574.72,
+      "text": "this."
+    },
+    {
+      "id": 120,
+      "start": 574.72,
+      "end": 581.76,
+      "text": "So you can catenate xt-1, xt-xt-plus-1."
+    },
+    {
+      "id": 121,
+      "start": 581.76,
+      "end": 586.44,
+      "text": "And convolution can also be used in auto regressive models."
+    },
+    {
+      "id": 122,
+      "start": 586.44,
+      "end": 589.36,
+      "text": "And normally we think of it like this."
+    },
+    {
+      "id": 123,
+      "start": 589.36,
+      "end": 595.28,
+      "text": "So we think that we're taking the previous one, the current one, and the next one in making"
+    },
+    {
+      "id": 124,
+      "start": 595.28,
+      "end": 597.64,
+      "text": "a prediction based on this."
+    },
+    {
+      "id": 125,
+      "start": 597.64,
+      "end": 601.36,
+      "text": "But this would be good for something like sequence labeling, but it's not good for something"
+    },
+    {
+      "id": 126,
+      "start": 601.36,
+      "end": 604.52,
+      "text": "like language modeling because in language modeling we can't look at the future, right?"
+    }
+  ],
+  "language": "en"
+}

@@ -1,0 +1,377 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 3.0,
+      "text": "It is quite good at following instructions."
+    },
+    {
+      "id": 1,
+      "start": 5.08,
+      "end": 8.4,
+      "text": "And then there's also, excuse me, mixtureal instruct."
+    },
+    {
+      "id": 2,
+      "start": 8.4,
+      "end": 11.08,
+      "text": "And these are both decoder only models."
+    },
+    {
+      "id": 3,
+      "start": 11.28,
+      "end": 14.16,
+      "text": "Mixtrol is a decoder only mixture of experts model."
+    },
+    {
+      "id": 4,
+      "start": 14.8,
+      "end": 18.4,
+      "text": "Mixtrol is smaller and quite strong."
+    },
+    {
+      "id": 5,
+      "start": 18.4,
+      "end": 22.88,
+      "text": "So I would recommend that you consider this maybe as a default if you want a decoder only model."
+    },
+    {
+      "id": 6,
+      "start": 22.88,
+      "end": 26.76,
+      "text": "And then a flanty five if you allow an encoder to be coded back."
+    },
+    {
+      "id": 7,
+      "start": 31.0,
+      "end": 32.0,
+      "text": "Cool."
+    },
+    {
+      "id": 8,
+      "start": 33.0,
+      "end": 36.0,
+      "text": "The final thing I'd like to talk about a little bit."
+    },
+    {
+      "id": 9,
+      "start": 36.0,
+      "end": 41.0,
+      "text": "And then we're also going to talk about it a bit more in the distillation class is data set generation."
+    },
+    {
+      "id": 10,
+      "start": 41.0,
+      "end": 48.0,
+      "text": "So it's possible to automatically generate instruction training data sets in the first or typical example."
+    },
+    {
+      "id": 11,
+      "start": 48.0,
+      "end": 50.0,
+      "text": "This is self instruct."
+    },
+    {
+      "id": 12,
+      "start": 51.0,
+      "end": 60.0,
+      "text": "And the way self instruct works is you have a bunch of seed tasks that have one instruction in one instance per task."
+    },
+    {
+      "id": 13,
+      "start": 60.0,
+      "end": 62.0,
+      "text": "You throw them into the task pool."
+    },
+    {
+      "id": 14,
+      "start": 62.0,
+      "end": 69.0,
+      "text": "And then based on this, you do a prompting to try to generate new tasks basically."
+    },
+    {
+      "id": 15,
+      "start": 69.0,
+      "end": 75.0,
+      "text": "And you identify what type of what type of task it is."
+    },
+    {
+      "id": 16,
+      "start": 75.0,
+      "end": 81.0,
+      "text": "And then based on the task you generate inputs and outputs."
+    },
+    {
+      "id": 17,
+      "start": 81.0,
+      "end": 91.0,
+      "text": "And from these inputs and outputs, they do a little bit of minimal filtering to de duplicate the data set and also remove things that require like visual information and other stuff like that."
+    },
+    {
+      "id": 18,
+      "start": 91.0,
+      "end": 93.0,
+      "text": "And then feed that back into the task pool."
+    },
+    {
+      "id": 19,
+      "start": 93.0,
+      "end": 101.0,
+      "text": "So basically like they start with 175 examples and then they expand this data set to be very large cover many, many different tasks."
+    },
+    {
+      "id": 20,
+      "start": 102.0,
+      "end": 115.0,
+      "text": "So this is pretty influential and like one interesting thing that they showed here is that you can improve the model that was used to generate these itself."
+    },
+    {
+      "id": 21,
+      "start": 115.0,
+      "end": 121.0,
+      "text": "So basically they took this and they used it to fine tune GPT 3 basically."
+    },
+    {
+      "id": 22,
+      "start": 121.0,
+      "end": 130.0,
+      "text": "They used GPT 3 to generate the tests and they use it to find some other more recent examples are chain of thought."
+    },
+    {
+      "id": 23,
+      "start": 130.0,
+      "end": 133.0,
+      "text": "Tuning for chain of thought."
+    },
+    {
+      "id": 24,
+      "start": 133.0,
+      "end": 150.0,
+      "text": "So, um, orca is a nice example of this is something where they generated explanations for why, for why the model made a particular decision and then they use that to train models and improve their essentially recent."
+    },
+    {
+      "id": 25,
+      "start": 150.0,
+      "end": 153.0,
+      "text": "And then they also use the same examples."
+    },
+    {
+      "id": 26,
+      "start": 153.0,
+      "end": 166.0,
+      "text": "Another interesting example is something called evolve instruct and basically the idea here is they start out with a seed set of instructions from any data set that you want to be using."
+    },
+    {
+      "id": 27,
+      "start": 166.0,
+      "end": 169.0,
+      "text": "And they modify those instructions to make them more complex."
+    },
+    {
+      "id": 28,
+      "start": 169.0,
+      "end": 173.0,
+      "text": "So they say, okay, this is too easy. Let's make this harder."
+    },
+    {
+      "id": 29,
+      "start": 173.0,
+      "end": 179.0,
+      "text": "So it's possible to improve the ability of models to solve complex problems."
+    },
+    {
+      "id": 30,
+      "start": 179.0,
+      "end": 188.0,
+      "text": "So this is actually a really popular, you know, area overall nowadays I am not going to do it justice in one slide. So we'll talk a bit more about it later, but."
+    },
+    {
+      "id": 31,
+      "start": 188.0,
+      "end": 194.0,
+      "text": "This is the general idea."
+    },
+    {
+      "id": 32,
+      "start": 194.0,
+      "end": 208.0,
+      "text": "And yeah, that's all I have for today. Any questions?"
+    },
+    {
+      "id": 33,
+      "start": 208.0,
+      "end": 216.0,
+      "text": "Oh, yeah, yeah, sorry, sorry, very, very good question. And I actually wanted to put that on my slide, but I just realized I forgot. So thank you for pointing me."
+    },
+    {
+      "id": 34,
+      "start": 216.0,
+      "end": 223.0,
+      "text": "So when would you want to do basic single task by tuning versus instruction tuning."
+    },
+    {
+      "id": 35,
+      "start": 223.0,
+      "end": 234.0,
+      "text": "If you have a very carefully like if you have a very clear task definition and you have lots of training data doing full fine tuning can be good for a number of reasons."
+    },
+    {
+      "id": 36,
+      "start": 234.0,
+      "end": 242.0,
+      "text": "And you can get maybe slightly superior accuracy with bigger models, but you can get much superior accuracy with smaller models."
+    },
+    {
+      "id": 37,
+      "start": 242.0,
+      "end": 248.0,
+      "text": "Because smaller models don't have the capacity to like do really, really well on lots of different tasks."
+    },
+    {
+      "id": 38,
+      "start": 248.0,
+      "end": 259.0,
+      "text": "So I think you'll see, you know, some some improvement, maybe a somewhat marginal improvement on bigger models, but you'll see a big improvement on smaller models."
+    },
+    {
+      "id": 39,
+      "start": 259.0,
+      "end": 273.0,
+      "text": "And there have been some interesting results on this recently, like there's a really strong text to sequel model that is based on Mama 7B that was just trained on tons and tons of text to sequel data, for example."
+    },
+    {
+      "id": 40,
+      "start": 273.0,
+      "end": 285.0,
+      "text": "And so there's certain tasks where it's really important. Another example is on translation tasks."
+    },
+    {
+      "id": 41,
+      "start": 285.0,
+      "end": 294.0,
+      "text": "And there's a model called NLB, which is 3.3 billion parameters. And it's competitive with cheap before on very large."
+    },
+    {
+      "id": 42,
+      "start": 294.0,
+      "end": 299.0,
+      "text": "And very large languages with lots of printing data and way better than cheap before on languages with lots of printing data."
+    },
+    {
+      "id": 43,
+      "start": 299.0,
+      "end": 308.0,
+      "text": "So it just shows how like if you very carefully work on a special purpose model, even if it's very small compared to the bigger model, you can still do a really good job."
+    },
+    {
+      "id": 44,
+      "start": 308.0,
+      "end": 313.0,
+      "text": "So I think that's the biggest use."
+    },
+    {
+      "id": 45,
+      "start": 313.0,
+      "end": 323.0,
+      "text": "Another thing is another thing is if you have a very fixed format and you always want something in format, you might want to be doing that."
+    },
+    {
+      "id": 46,
+      "start": 324.0,
+      "end": 333.0,
+      "text": "And so you can write the structure and the structure."
+    },
+    {
+      "id": 47,
+      "start": 333.0,
+      "end": 337.0,
+      "text": "And then we have the structure then we have the noise."
+    },
+    {
+      "id": 48,
+      "start": 337.0,
+      "end": 339.0,
+      "text": "Right."
+    },
+    {
+      "id": 49,
+      "start": 339.0,
+      "end": 344.0,
+      "text": "Well, you are putting at least 175 seed ones."
+    },
+    {
+      "id": 50,
+      "start": 344.0,
+      "end": 349.0,
+      "text": "And, you know, you're sampling from the model."
+    },
+    {
+      "id": 51,
+      "start": 349.0,
+      "end": 363.0,
+      "text": "You're asking it to generate new instructions. So if you have a model that's good enough at following instructions, it will be able to generate something new."
+    },
+    {
+      "id": 52,
+      "start": 363.0,
+      "end": 365.0,
+      "text": "For this."
+    },
+    {
+      "id": 53,
+      "start": 365.0,
+      "end": 371.0,
+      "text": "Yeah, they have a question. I believe they have a classifier that says it will be what it used to."
+    },
+    {
+      "id": 54,
+      "start": 371.0,
+      "end": 377.0,
+      "text": "And then we have a kind of theory or even."
+    },
+    {
+      "id": 55,
+      "start": 377.0,
+      "end": 386.0,
+      "text": "Yeah, well, but also the."
+    },
+    {
+      "id": 56,
+      "start": 386.0,
+      "end": 394.0,
+      "text": "The seat test can be input person out the first and you're like generating a new instruction from the alarm."
+    },
+    {
+      "id": 57,
+      "start": 394.0,
+      "end": 396.0,
+      "text": "So this, this is from the past."
+    },
+    {
+      "id": 58,
+      "start": 396.0,
+      "end": 402.0,
+      "text": "Cool, but you're asking the alarm to generate a new instruction."
+    },
+    {
+      "id": 59,
+      "start": 402.0,
+      "end": 408.0,
+      "text": "Cool. Anything else?"
+    },
+    {
+      "id": 60,
+      "start": 408.0,
+      "end": 411.0,
+      "text": "Okay. Yeah, that's all we have for today."
+    },
+    {
+      "id": 61,
+      "start": 411.0,
+      "end": 414.0,
+      "text": "So."
+    }
+  ],
+  "language": "en"
+}

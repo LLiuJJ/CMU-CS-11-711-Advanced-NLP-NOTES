@@ -1,0 +1,383 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 6.24,
+      "text": "a bit of react, the front end framework, but I don't know a whole lot."
+    },
+    {
+      "id": 1,
+      "start": 7.36,
+      "end": 12.08,
+      "text": "But recently we've been working on an open source assisted coding app."
+    },
+    {
+      "id": 2,
+      "start": 12.92,
+      "end": 16.6,
+      "text": "And I, most of this was just written by pod."
+    },
+    {
+      "id": 3,
+      "start": 18.2,
+      "end": 27.24,
+      "text": "It's a, I said, I want an app that on the left side, it has a chat window and that on the right side, it has three, three pains."
+    },
+    {
+      "id": 4,
+      "start": 27.24,
+      "end": 30.4,
+      "text": "One is a criminal, one is a planner and one is a code editor."
+    },
+    {
+      "id": 5,
+      "start": 31.0,
+      "end": 33.84,
+      "text": "And so it gave me something, it was kind of ugly."
+    },
+    {
+      "id": 6,
+      "start": 33.84,
+      "end": 43.48,
+      "text": "So I said, okay, make the background black change the CSS file so that you have like a user icon in the robot icon and stuff like that."
+    },
+    {
+      "id": 7,
+      "start": 44.08,
+      "end": 47.32,
+      "text": "And after this, I wrote very little of this code."
+    },
+    {
+      "id": 8,
+      "start": 47.32,
+      "end": 53.68,
+      "text": "I wrote like 1% of this code or something like that and it's able to do these sorts of things for you."
+    },
+    {
+      "id": 9,
+      "start": 54.68,
+      "end": 71.68,
+      "text": "So if you don't like writing front ends, good luck or good, good news that you can come up with a passable front end without, without actually having to write it nonetheless, you know, good front end engineers will come up with something much more beautiful than that."
+    },
+    {
+      "id": 10,
+      "start": 72.68,
+      "end": 82.68,
+      "text": "So basically, why do I, why did I want to say this? I think GitHub co pilot and plot or GP4 serve very different purposes."
+    },
+    {
+      "id": 11,
+      "start": 84.0,
+      "end": 94.32,
+      "text": "GitHub co pilot is code completion and it mostly works for shorter things. So it's like completing your next thought in your code encode that you know pretty well."
+    },
+    {
+      "id": 12,
+      "start": 94.88,
+      "end": 98.76,
+      "text": "Something like plot or GP4 is much better for really long things."
+    },
+    {
+      "id": 13,
+      "start": 100.12,
+      "end": 103.4,
+      "text": "We're more to build like a full class or something like that."
+    },
+    {
+      "id": 14,
+      "start": 104.28,
+      "end": 114.72,
+      "text": "And I also have found that if you're coding in a language that you're very familiar with, co pilot might be more useful because you want fine grain control and you want it to fill out things to make it best or."
+    },
+    {
+      "id": 15,
+      "start": 115.2,
+      "end": 123.44,
+      "text": "Whereas if you're coding in a language that you're not very familiar with something like plot is good because you've been right a whole, you know, program. So these are the differences."
+    },
+    {
+      "id": 16,
+      "start": 123.8,
+      "end": 132.72,
+      "text": "Another thing is GitHub co pilot needs to be frighteningly fast because it needs to move at the speed that like programmers are thinking and programming next."
+    },
+    {
+      "id": 17,
+      "start": 133.2,
+      "end": 151.16,
+      "text": "We're something like plot. It doesn't, you know, using it in the way that I use cloud here doesn't really matter because I couldn't say programming me a, you know, a web app and then I can go and have dinner and come back and have a web app and I'd be perfectly happy with that. Right. So the latency requirements are also different."
+    },
+    {
+      "id": 18,
+      "start": 153.72,
+      "end": 156.32,
+      "text": "Cool. Any any questions here. Yeah."
+    },
+    {
+      "id": 19,
+      "start": 159.4,
+      "end": 162.44,
+      "text": "At debugging code. They are."
+    },
+    {
+      "id": 20,
+      "start": 164.72,
+      "end": 169.52,
+      "text": "The well, so co pilot. I haven't actually tried it that much."
+    },
+    {
+      "id": 21,
+      "start": 170.56,
+      "end": 183.4,
+      "text": "If I wanted to debug code, I'd probably use something like plot or or GP for just because actually I'll mention this in a second, but co pilot's a much smaller model because it needs to be very fast or what they're using in co pilot is a smaller model because it needs to be."
+    },
+    {
+      "id": 22,
+      "start": 183.44,
+      "end": 201.04,
+      "text": "Very fast. So I would probably use a bigger model for anything that required like good understanding. I think it's passable at debugging code, but it won't find the really difficult things and it probably won't find things that require spanning across multiple files, but I'm not 100% sure about that. Like I think it's worth testing."
+    },
+    {
+      "id": 23,
+      "start": 203.92,
+      "end": 205.0,
+      "text": "Any other questions."
+    },
+    {
+      "id": 24,
+      "start": 205.84,
+      "end": 221.0,
+      "text": "Okay, so if I haven't convinced you that as software developers, you should be using this hopefully this next this next slide will. So this was a study that was run by GitHub shortly after after co pilot came out."
+    },
+    {
+      "id": 25,
+      "start": 221.6,
+      "end": 228.8,
+      "text": "And so why do we do code generation? Why are people very excited about it? So the first is making software is an important."
+    },
+    {
+      "id": 26,
+      "start": 229.52,
+      "end": 249.76,
+      "text": "And I recently calculated what from some labor statistics and the total amount that software developers make in a year is $175 billion. So that's providing at least that much, you know, value. So it's a very high value profession. So if we could make it faster, you know, it would have even more value."
+    },
+    {
+      "id": 27,
+      "start": 250.76,
+      "end": 261.76,
+      "text": "Another thing is code generation leads to large improvements and productivity. So GitHub ran this study where they randomly assigned developers to groups who would either use co pilot or not use co pilot."
+    },
+    {
+      "id": 28,
+      "start": 262.28,
+      "end": 276.76,
+      "text": "And they assigned them the same task. And basically the people who use co pilot their rate of completion went up by 8% and they finished in about 40% of the time of the people who didn't use it."
+    },
+    {
+      "id": 29,
+      "start": 277.28,
+      "end": 279.88,
+      "text": "And so I think this is."
+    },
+    {
+      "id": 30,
+      "start": 281.24,
+      "end": 298.76,
+      "text": "Or yeah, they say 55% less time. So this is very impressive, but it's also not at all surprising if you're using a code like assisting coding assistive. It just makes you code faster. Also, if you don't like writing doc strings. It's really good at writing doc strings. So you can write documentation for your."
+    },
+    {
+      "id": 31,
+      "start": 299.68,
+      "end": 301.16,
+      "text": "So okay, cool."
+    },
+    {
+      "id": 32,
+      "start": 303.48,
+      "end": 304.12,
+      "text": "So."
+    },
+    {
+      "id": 33,
+      "start": 304.4,
+      "end": 318.12,
+      "text": "There are differences between code and natural language. And I've listed a few of them here and the differences between code and natural language also affect how we build models for this test."
+    },
+    {
+      "id": 34,
+      "start": 319.12,
+      "end": 326.12,
+      "text": "So the first one is that code has strict grammar. If you make a small mistake in your code grammar usually."
+    },
+    {
+      "id": 35,
+      "start": 326.64,
+      "end": 334.52,
+      "text": "It will just break in your program won't work. So you need to be very careful as opposed to natural language grammar where you can make small mistakes and it doesn't make a difference."
+    },
+    {
+      "id": 36,
+      "start": 335.6,
+      "end": 347.12,
+      "text": "Another thing is in code, you know the semantic flow of the code. And so we know that certain variables correspond to each other. We know that they're flowing through the program in a certain way."
+    },
+    {
+      "id": 37,
+      "start": 348.36,
+      "end": 354.8,
+      "text": "Another thing is code is executable. So we can actually execute it and observe the result unlike in natural language."
+    },
+    {
+      "id": 38,
+      "start": 356.2,
+      "end": 377.12,
+      "text": "And another important thing is code is created incrementally. So code is not, you know, unlike text text is also created incrementally, but it's not usually you write it once you might revise it a little bit and then you're done and you you don't need to touch it again. But in code you touch it over and over and over again as you develop a separate version."
+    },
+    {
+      "id": 39,
+      "start": 378.0,
+      "end": 386.12,
+      "text": "So if we look at code generation, I would like to talk a little bit about some tasks and data sets next."
+    },
+    {
+      "id": 40,
+      "start": 387.12,
+      "end": 392.12,
+      "text": "So the most famous data set for code generation nowadays is something called human of L."
+    },
+    {
+      "id": 41,
+      "start": 393.12,
+      "end": 395.12,
+      "text": "This is a very nice data set."
+    },
+    {
+      "id": 42,
+      "start": 395.12,
+      "end": 407.12,
+      "text": "For a number of reasons, I think it is used too much nonetheless. And I think there are better data sets that we maybe should be using more."
+    },
+    {
+      "id": 43,
+      "start": 408.12,
+      "end": 410.12,
+      "text": "But basically human of L is."
+    },
+    {
+      "id": 44,
+      "start": 412.12,
+      "end": 420.12,
+      "text": "It has examples of usage of the Python standard library or some are easier, some are harder. And just to give some examples."
+    },
+    {
+      "id": 45,
+      "start": 420.12,
+      "end": 439.12,
+      "text": "We're saying given a non empty list of integers, return to some of all the odd elements that are in even positions. So it's kind of like a elite code style, you know, program, but maybe one of the easier ones and then."
+    },
+    {
+      "id": 46,
+      "start": 440.12,
+      "end": 451.12,
+      "text": "In order to solve that, you find all of the elements in even positions and then you only return them if the value itself is odd."
+    },
+    {
+      "id": 47,
+      "start": 452.12,
+      "end": 458.12,
+      "text": "So like you can do that in a one minor, but you need to think about it a little bit. And then you have more."
+    },
+    {
+      "id": 48,
+      "start": 460.12,
+      "end": 465.12,
+      "text": "Returns included say fix and input string."
+    },
+    {
+      "id": 49,
+      "start": 469.12,
+      "end": 475.12,
+      "text": "Actually, sorry, this is from the paper. I didn't read it before a copyface in here, but yeah, that's a decoding one."
+    },
+    {
+      "id": 50,
+      "start": 476.12,
+      "end": 485.12,
+      "text": "And one one thing about this that's important to know is it only has 164 examples. So it's actually a relatively small number of examples."
+    },
+    {
+      "id": 51,
+      "start": 486.12,
+      "end": 492.12,
+      "text": "It's also just the Python standard libraries. So it's not testing usage of any other libraries."
+    },
+    {
+      "id": 52,
+      "start": 493.12,
+      "end": 511.12,
+      "text": "So these two things together and make it not the most realistic, you know, examination of your programming skills, just like lead code is not the most realistic examination of your programming skills, but you know, I don't know companies use it anyway. So maybe human if all is reasonable."
+    },
+    {
+      "id": 53,
+      "start": 512.12,
+      "end": 527.12,
+      "text": "So then we go into the inputs and outputs. They inputs and outputs usually include a doc string. Some input and output examples and then they have tests to verify the accuracy of your outputs."
+    },
+    {
+      "id": 54,
+      "start": 529.12,
+      "end": 537.12,
+      "text": "So the metric that's used to evaluate these systems is something called pass it K and the basic idea is."
+    },
+    {
+      "id": 55,
+      "start": 537.12,
+      "end": 543.12,
+      "text": "If we generate K examples will at least one of them pass the unit tests."
+    },
+    {
+      "id": 56,
+      "start": 544.12,
+      "end": 547.12,
+      "text": "And the idea here is that."
+    },
+    {
+      "id": 57,
+      "start": 548.12,
+      "end": 556.12,
+      "text": "If we have models, we might want to generate like well, there's a couple reasons why we care about this."
+    },
+    {
+      "id": 58,
+      "start": 556.12,
+      "end": 565.12,
+      "text": "Pass it one is kind of obvious because we generate one and then we measure how, you know, how likely it is to pass unit tests."
+    },
+    {
+      "id": 59,
+      "start": 566.12,
+      "end": 575.12,
+      "text": "But pass it five. Why would we care about pass it five. Well, number one, maybe you could show five programs to a person and they could choose the one that they like the best."
+    },
+    {
+      "id": 60,
+      "start": 575.12,
+      "end": 587.12,
+      "text": "Or maybe you could have unit right unit tests in advance and then generate five programs, check which one passed the unit tests and then use the ones only that passed the unit test or something like that."
+    },
+    {
+      "id": 61,
+      "start": 587.12,
+      "end": 596.12,
+      "text": "So there's also some interest in whether you can generate, you know, multiple examples and then pick one, a good one."
+    },
+    {
+      "id": 62,
+      "start": 597.12,
+      "end": 602.12,
+      "text": "There's a little bit of nuance and how this is actually calculated. So basically."
+    }
+  ],
+  "language": "en"
+}

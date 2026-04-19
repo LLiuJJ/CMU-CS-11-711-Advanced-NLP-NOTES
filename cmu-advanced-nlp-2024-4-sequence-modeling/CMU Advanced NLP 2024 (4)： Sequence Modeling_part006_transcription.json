@@ -1,0 +1,785 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 3.44,
+      "text": "Just because you don't have that bottleneck of doing things sequentially,"
+    },
+    {
+      "id": 1,
+      "start": 3.44,
+      "end": 8.12,
+      "text": "it can be way, way faster on a GPU because you're not wasting your time waiting"
+    },
+    {
+      "id": 2,
+      "start": 8.12,
+      "end": 9.64,
+      "text": "for the previous thing to be calculated."
+    },
+    {
+      "id": 3,
+      "start": 9.64,
+      "end": 13.88,
+      "text": "So that's actually why transformers are so fast."
+    },
+    {
+      "id": 4,
+      "start": 13.88,
+      "end": 18.72,
+      "text": "Un transformers and attention models are so fast."
+    },
+    {
+      "id": 5,
+      "start": 18.72,
+      "end": 24.48,
+      "text": "Another thing to note."
+    },
+    {
+      "id": 6,
+      "start": 24.48,
+      "end": 28.36,
+      "text": "So that's one of the big reasons why attention models are so popular nowadays"
+    },
+    {
+      "id": 7,
+      "start": 28.36,
+      "end": 31.16,
+      "text": "because they're fast to calculate on modern hardware."
+    },
+    {
+      "id": 8,
+      "start": 31.16,
+      "end": 34.84,
+      "text": "Another reason why attention models are popular nowadays."
+    },
+    {
+      "id": 9,
+      "start": 34.84,
+      "end": 40.96,
+      "text": "Does anyone have a, does anyone have an idea about another reason?"
+    },
+    {
+      "id": 10,
+      "start": 40.96,
+      "end": 42.92,
+      "text": "And it's based on how easy they are to learn."
+    },
+    {
+      "id": 11,
+      "start": 42.92,
+      "end": 46.2,
+      "text": "And there's a reason why and that reason why it has to do with,"
+    },
+    {
+      "id": 12,
+      "start": 48.84,
+      "end": 53.4,
+      "text": "that reason why it has to do with something I introduced in the lecture earlier."
+    },
+    {
+      "id": 13,
+      "start": 54.64,
+      "end": 55.44,
+      "text": "I'll give a hand."
+    },
+    {
+      "id": 14,
+      "start": 56.44,
+      "end": 58.2,
+      "text": "Gradients, yeah."
+    },
+    {
+      "id": 15,
+      "start": 58.2,
+      "end": 64.52,
+      "text": "More specifically, what's nice about attention with respect to gradients"
+    },
+    {
+      "id": 16,
+      "start": 64.52,
+      "end": 65.8,
+      "text": "or vanishing gradients?"
+    },
+    {
+      "id": 17,
+      "start": 69.28,
+      "end": 70.28,
+      "text": "Any ideas?"
+    },
+    {
+      "id": 18,
+      "start": 72.84,
+      "end": 84.4,
+      "text": "Let's say we have a really long sentence that's like x1, x2, x3, x4, x200 over here."
+    },
+    {
+      "id": 19,
+      "start": 84.4,
+      "end": 88.48,
+      "text": "And in order to predict x200, you need to pay attention to x3."
+    },
+    {
+      "id": 20,
+      "start": 91.52,
+      "end": 92.28,
+      "text": "Any ideas?"
+    },
+    {
+      "id": 21,
+      "start": 98.16,
+      "end": 99.28,
+      "text": "Another hint."
+    },
+    {
+      "id": 22,
+      "start": 99.28,
+      "end": 103.64,
+      "text": "How many nonlinearities do you have to pass through in order to pass that information"
+    },
+    {
+      "id": 23,
+      "start": 103.64,
+      "end": 105.36,
+      "text": "from x3 to x200?"
+    },
+    {
+      "id": 24,
+      "start": 106.64,
+      "end": 111.48,
+      "text": "In a recurrent network, in a recurrent network or attention."
+    },
+    {
+      "id": 25,
+      "start": 115.4,
+      "end": 119.4,
+      "text": "It's a very bad voltage should be a 997."
+    },
+    {
+      "id": 26,
+      "start": 119.4,
+      "end": 125.4,
+      "text": "Yeah, in a recurrent network, it's basically 197 or maybe 196, say, haven't paid attention."
+    },
+    {
+      "id": 27,
+      "start": 125.4,
+      "end": 133.2,
+      "text": "But every time you pass it to the hidden state, it has to go through a nonlinearity."
+    },
+    {
+      "id": 28,
+      "start": 133.2,
+      "end": 136.44,
+      "text": "So it goes through like 197 nonlinearities."
+    },
+    {
+      "id": 29,
+      "start": 136.44,
+      "end": 143.52,
+      "text": "And even if you're using an LSTM, it's still, the LSTM hidden cell is getting information"
+    },
+    {
+      "id": 30,
+      "start": 143.52,
+      "end": 146.32,
+      "text": "added to it and subtracted to it and other things like that."
+    },
+    {
+      "id": 31,
+      "start": 146.32,
+      "end": 147.92,
+      "text": "So it's still a bit tricky."
+    },
+    {
+      "id": 32,
+      "start": 149.56,
+      "end": 150.48,
+      "text": "What about attention?"
+    },
+    {
+      "id": 33,
+      "start": 153.16,
+      "end": 154.4,
+      "text": "Yeah, basically one time."
+    },
+    {
+      "id": 34,
+      "start": 154.64,
+      "end": 162.08,
+      "text": "So attention in the next layer here, you're passing it all the way."
+    },
+    {
+      "id": 35,
+      "start": 163.24,
+      "end": 166.56,
+      "text": "You're passing all of the information directly and the only"
+    },
+    {
+      "id": 36,
+      "start": 167.36,
+      "end": 170.28,
+      "text": "qualifying thing is that your weight has to be good."
+    },
+    {
+      "id": 37,
+      "start": 170.28,
+      "end": 172.88,
+      "text": "It has to find a good attention weight so that it's actually paying attention"
+    },
+    {
+      "id": 38,
+      "start": 172.92,
+      "end": 173.72,
+      "text": "to that information."
+    },
+    {
+      "id": 39,
+      "start": 173.72,
+      "end": 178.32,
+      "text": "So this is actually discussed in the Vasswani at all attention is all you need paper"
+    },
+    {
+      "id": 40,
+      "start": 178.32,
+      "end": 179.64,
+      "text": "that introduced transformers."
+    },
+    {
+      "id": 41,
+      "start": 180.56,
+      "end": 182.64,
+      "text": "Convolutions are kind of in the middle."
+    },
+    {
+      "id": 42,
+      "start": 183.08,
+      "end": 186.72,
+      "text": "So like, let's say you have a convolution of length 10."
+    },
+    {
+      "id": 43,
+      "start": 187.88,
+      "end": 189.48,
+      "text": "And then you have two layers of it."
+    },
+    {
+      "id": 44,
+      "start": 190.52,
+      "end": 192.4,
+      "text": "If you have a convolution of length 10."
+    },
+    {
+      "id": 45,
+      "start": 195.48,
+      "end": 199.16,
+      "text": "Yeah, let's say you have a convolution of length 10, you would need basically"
+    },
+    {
+      "id": 46,
+      "start": 200.0,
+      "end": 201.0,
+      "text": "10."
+    },
+    {
+      "id": 47,
+      "start": 201.0,
+      "end": 203.68,
+      "text": "You would pass from 10 previous ones."
+    },
+    {
+      "id": 48,
+      "start": 204.6,
+      "end": 207.68,
+      "text": "And then you would pass again from 10 previous ones and then you would have to go"
+    },
+    {
+      "id": 49,
+      "start": 207.68,
+      "end": 213.68,
+      "text": "through like 16 or like, I guess almost 20 layers of convolution in order to pass"
+    },
+    {
+      "id": 50,
+      "start": 213.68,
+      "end": 214.88,
+      "text": "that information along."
+    },
+    {
+      "id": 51,
+      "start": 214.88,
+      "end": 218.24,
+      "text": "So it's kind of in the middle of RNNs in LSTMs."
+    },
+    {
+      "id": 52,
+      "start": 219.92,
+      "end": 221.92,
+      "text": "Sorry, RNNs and attention models."
+    },
+    {
+      "id": 53,
+      "start": 224.24,
+      "end": 224.76,
+      "text": "Yeah."
+    },
+    {
+      "id": 54,
+      "start": 225.12,
+      "end": 231.12,
+      "text": "So regarding what you have to wait for one RNN to go to the Vasswani."
+    },
+    {
+      "id": 55,
+      "start": 231.12,
+      "end": 237.4,
+      "text": "And for one RNN, once it's done, even though the next one is getting off that one."
+    },
+    {
+      "id": 56,
+      "start": 238.8,
+      "end": 241.92,
+      "text": "Yes, yeah, you can do inference."
+    },
+    {
+      "id": 57,
+      "start": 243.52,
+      "end": 244.56,
+      "text": "You could as well."
+    },
+    {
+      "id": 58,
+      "start": 244.56,
+      "end": 246.6,
+      "text": "So as long as the"
+    },
+    {
+      "id": 59,
+      "start": 250.68,
+      "end": 253.04,
+      "text": "as long as the output doesn't affect the next input."
+    },
+    {
+      "id": 60,
+      "start": 253.04,
+      "end": 254.32,
+      "text": "So in this case,"
+    },
+    {
+      "id": 61,
+      "start": 255.76,
+      "end": 259.76,
+      "text": "in this case, because of language modeling or generation,"
+    },
+    {
+      "id": 62,
+      "start": 260.56,
+      "end": 265.0,
+      "text": "because the output doesn't affect the next, because the output affects the next input,"
+    },
+    {
+      "id": 63,
+      "start": 265.0,
+      "end": 266.8,
+      "text": "if you're predicting the output, you have to wait."
+    },
+    {
+      "id": 64,
+      "start": 267.52,
+      "end": 269.0,
+      "text": "If you know the output already,"
+    },
+    {
+      "id": 65,
+      "start": 270.88,
+      "end": 274.8,
+      "text": "if you know the output already, you could make the prediction at the same time,"
+    },
+    {
+      "id": 66,
+      "start": 274.8,
+      "end": 276.4,
+      "text": "is calculating this next hidden state."
+    },
+    {
+      "id": 67,
+      "start": 277.8,
+      "end": 279.92,
+      "text": "So if you're just calculating the probability, you could do that."
+    },
+    {
+      "id": 68,
+      "start": 279.92,
+      "end": 283.44,
+      "text": "And that's actually where transformers or attention models shine."
+    },
+    {
+      "id": 69,
+      "start": 284.0,
+      "end": 287.88,
+      "text": "Attention models actually aren't great for generation."
+    },
+    {
+      "id": 70,
+      "start": 288.84,
+      "end": 292.32,
+      "text": "And the reason why they're not great for generation is because they're,"
+    },
+    {
+      "id": 71,
+      "start": 294.24,
+      "end": 294.68,
+      "text": "like,"
+    },
+    {
+      "id": 72,
+      "start": 297.88,
+      "end": 301.68,
+      "text": "when you're generating the next token, you still need to wait."
+    },
+    {
+      "id": 73,
+      "start": 301.68,
+      "end": 306.96,
+      "text": "You can't calculate in parallel because you need to generate the next token before you can encode the next the previous."
+    },
+    {
+      "id": 74,
+      "start": 307.16,
+      "end": 307.52,
+      "text": "Sorry."
+    },
+    {
+      "id": 75,
+      "start": 307.68,
+      "end": 310.0,
+      "text": "You need to generate the next token before you can encode it."
+    },
+    {
+      "id": 76,
+      "start": 310.0,
+      "end": 312.04,
+      "text": "So you can't do everything in parallel."
+    },
+    {
+      "id": 77,
+      "start": 312.04,
+      "end": 314.4,
+      "text": "So transformers for generation are actually slow."
+    },
+    {
+      "id": 78,
+      "start": 315.24,
+      "end": 318.36,
+      "text": "And there are models."
+    },
+    {
+      "id": 79,
+      "start": 318.84,
+      "end": 321.2,
+      "text": "I don't know if people are using them super widely now,"
+    },
+    {
+      "id": 80,
+      "start": 321.2,
+      "end": 325.16,
+      "text": "but there were actually transform language model."
+    },
+    {
+      "id": 81,
+      "start": 326.04,
+      "end": 329.32,
+      "text": "Sorry, machine translation models that were in production, where they had a really big,"
+    },
+    {
+      "id": 82,
+      "start": 329.32,
+      "end": 334.48,
+      "text": "strong transformer encoder and then they had a tiny fast R&D coder."
+    },
+    {
+      "id": 83,
+      "start": 335.48,
+      "end": 344.48,
+      "text": "And if you want a actual reference."
+    },
+    {
+      "id": 84,
+      "start": 357.04,
+      "end": 362.2,
+      "text": "There's there's this deep encoder, shallow decoder."
+    },
+    {
+      "id": 85,
+      "start": 365.48,
+      "end": 370.48,
+      "text": "And then there's also the the Merian machine translation tool kit that supports,"
+    },
+    {
+      "id": 86,
+      "start": 370.48,
+      "end": 372.32,
+      "text": "supports those types of things as well."
+    },
+    {
+      "id": 87,
+      "start": 372.32,
+      "end": 377.48,
+      "text": "So it's also the reason why if you're using,"
+    },
+    {
+      "id": 88,
+      "start": 377.48,
+      "end": 383.12,
+      "text": "if you're using like the GPT models through the API that decoding is more expensive, right?"
+    },
+    {
+      "id": 89,
+      "start": 383.12,
+      "end": 384.64,
+      "text": "Like encoding."
+    },
+    {
+      "id": 90,
+      "start": 386.92,
+      "end": 394.36,
+      "text": "I forget exactly is it's 0.03 cents for a thousand tokens for encoding and 0.06 cents for a thousand tokens."
+    },
+    {
+      "id": 91,
+      "start": 394.36,
+      "end": 397.04,
+      "text": "For decoding and my GPT 4 or something like this."
+    },
+    {
+      "id": 92,
+      "start": 397.04,
+      "end": 401.8,
+      "text": "The reason why is precisely that just because it's so much more expensive to run the decoding."
+    },
+    {
+      "id": 93,
+      "start": 404.0,
+      "end": 404.84,
+      "text": "Cool."
+    },
+    {
+      "id": 94,
+      "start": 404.84,
+      "end": 407.84,
+      "text": "I have a few final things also about efficiency."
+    },
+    {
+      "id": 95,
+      "start": 407.84,
+      "end": 412.04,
+      "text": "So these go back to the efficiency things that I talked about last time."
+    },
+    {
+      "id": 96,
+      "start": 414.04,
+      "end": 415.24,
+      "text": "Handling mini batching."
+    },
+    {
+      "id": 97,
+      "start": 415.24,
+      "end": 418.08,
+      "text": "So what do we have to do when we're handling mini batching?"
+    },
+    {
+      "id": 98,
+      "start": 418.08,
+      "end": 422.36,
+      "text": "If we were handling mini batching in feed forward networks, it's actually relatively easy."
+    },
+    {
+      "id": 99,
+      "start": 424.4,
+      "end": 428.08,
+      "text": "Because we all of our computations are the same shape."
+    },
+    {
+      "id": 100,
+      "start": 428.08,
+      "end": 433.16,
+      "text": "So we just can catenate them all together into a big tensor and run run over it."
+    },
+    {
+      "id": 101,
+      "start": 433.16,
+      "end": 439.36,
+      "text": "We saw mini batching makes things much faster, but mini batching and sequence modeling is harder than in feed forward networks."
+    },
+    {
+      "id": 102,
+      "start": 439.36,
+      "end": 443.84,
+      "text": "One reason is in our lens, each word depends on the previous word."
+    },
+    {
+      "id": 103,
+      "start": 443.84,
+      "end": 447.72,
+      "text": "Also because sequences are various links."
+    },
+    {
+      "id": 104,
+      "start": 447.72,
+      "end": 453.4,
+      "text": "So what we do to handle this is we do padding and masking."
+    },
+    {
+      "id": 105,
+      "start": 453.4,
+      "end": 457.12,
+      "text": "So we can do padding like this."
+    },
+    {
+      "id": 106,
+      "start": 457.12,
+      "end": 462.52,
+      "text": "So we just add an extra token at the end to make all of the sequences at the same length."
+    },
+    {
+      "id": 107,
+      "start": 462.52,
+      "end": 469.48,
+      "text": "If we are doing an encoder decoder style model, where we have an input."
+    },
+    {
+      "id": 108,
+      "start": 469.48,
+      "end": 472.36,
+      "text": "And then we want to generate all the outputs based on the input."
+    },
+    {
+      "id": 109,
+      "start": 472.36,
+      "end": 475.76,
+      "text": "One of the easy things is to add pads to the beginning."
+    },
+    {
+      "id": 110,
+      "start": 475.76,
+      "end": 481.08,
+      "text": "And then so yeah, it doesn't really matter, but you can add pads to the beginning."
+    },
+    {
+      "id": 111,
+      "start": 481.08,
+      "end": 486.84,
+      "text": "So they're all starting at the same place, especially if you're using RNN style models."
+    },
+    {
+      "id": 112,
+      "start": 486.84,
+      "end": 496.72,
+      "text": "Then we calculate the loss over the output, for example, we multiply the loss by a mask to remove the loss over the token set we don't care about."
+    },
+    {
+      "id": 113,
+      "start": 496.72,
+      "end": 498.68,
+      "text": "And we take the sum of these."
+    },
+    {
+      "id": 114,
+      "start": 498.68,
+      "end": 504.6,
+      "text": "And so luckily, most of this is implemented in, for example, pytorch or a high-con case transformers already."
+    },
+    {
+      "id": 115,
+      "start": 504.6,
+      "end": 508.04,
+      "text": "So you don't need to worry about it, but it is a good idea to know what's going on under the hood."
+    },
+    {
+      "id": 116,
+      "start": 508.04,
+      "end": 510.52,
+      "text": "If you want to implement anything unusual."
+    },
+    {
+      "id": 117,
+      "start": 510.52,
+      "end": 520.6,
+      "text": "And also, it's good to know for the following reason also, which is bucketing and sorting."
+    },
+    {
+      "id": 118,
+      "start": 520.6,
+      "end": 530.48,
+      "text": "So if we use sentences of vastly different lengths and we put them in the same mini batch, this can waste a really large amount of computation."
+    },
+    {
+      "id": 119,
+      "start": 530.48,
+      "end": 535.2,
+      "text": "So like, let's say we're processing documents or movie reviews or something like that."
+    },
+    {
+      "id": 120,
+      "start": 535.2,
+      "end": 545.6,
+      "text": "And you have a most movie reviews are like 10 words long, but you have one movie review in your mini batch of a thousand words."
+    },
+    {
+      "id": 121,
+      "start": 545.6,
+      "end": 555.48,
+      "text": "So basically what that means is you're padding most of your sequences, 990 times, the process 10 sequences, which is like a lot of waste, right?"
+    },
+    {
+      "id": 122,
+      "start": 555.48,
+      "end": 559.08,
+      "text": "Because you're running them all for your GPU and other things like that."
+    },
+    {
+      "id": 123,
+      "start": 559.12,
+      "end": 562.12,
+      "text": "So one way to remedy this is to sort sentences."
+    },
+    {
+      "id": 124,
+      "start": 562.12,
+      "end": 565.36,
+      "text": "So similarly, link sentences are in the same batch."
+    },
+    {
+      "id": 125,
+      "start": 565.36,
+      "end": 577.08,
+      "text": "So you, you first sort before building all of your batches and then that makes it so that similarly size ones are in the same batch."
+    },
+    {
+      "id": 126,
+      "start": 578.08,
+      "end": 588.72,
+      "text": "This goes into the problem that I mentioned before, but only in passing, which is, let's say you're calculating your batch based on the number of sequences that you're processing."
+    },
+    {
+      "id": 127,
+      "start": 589.2,
+      "end": 593.36,
+      "text": "If you say, OK, I want 64 sequences in my mini batch."
+    },
+    {
+      "id": 128,
+      "start": 594.64,
+      "end": 598.48,
+      "text": "If most of the time those 64 sequences are 10 tokens, that's fine."
+    },
+    {
+      "id": 129,
+      "start": 598.48,
+      "end": 603.48,
+      "text": "But then when you get the one mini batch that has a thousand tokens in each sentence."
+    }
+  ],
+  "language": "en"
+}

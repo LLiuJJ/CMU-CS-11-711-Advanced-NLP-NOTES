@@ -1,0 +1,467 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 9.28,
+      "text": "good accuracy here. However, there's better support for biopoder style models in kind of standard"
+    },
+    {
+      "id": 1,
+      "start": 9.28,
+      "end": 17.2,
+      "text": "vector databases like FIS and Chroma and other things like that. So if you want a kind of easier"
+    },
+    {
+      "id": 2,
+      "start": 17.2,
+      "end": 21.68,
+      "text": "method to get started very quickly than using a biopoder is probably the best way to go."
+    },
+    {
+      "id": 3,
+      "start": 21.84,
+      "end": 33.2,
+      "text": "Okay, so now moving on to actual retrieval augmented generation models. We have retriever reader models."
+    },
+    {
+      "id": 4,
+      "start": 34.24,
+      "end": 42.48,
+      "text": "And the way these work is you basically, the simplest way they can work is you basically just"
+    },
+    {
+      "id": 5,
+      "start": 42.48,
+      "end": 47.84,
+      "text": "chain retrieval and reading together. So you use an out-of-box retriever in out-of-the-box"
+    },
+    {
+      "id": 6,
+      "start": 47.84,
+      "end": 55.04,
+      "text": "reader model and you have your query. You can for example look something up on Google,"
+    },
+    {
+      "id": 7,
+      "start": 55.04,
+      "end": 59.04,
+      "text": "get a whole bunch of passages and then feed them into a GPT model and get an answer."
+    },
+    {
+      "id": 8,
+      "start": 60.8,
+      "end": 68.88,
+      "text": "This overall is quite effective. It's easy to implement and it will give you decent results,"
+    },
+    {
+      "id": 9,
+      "start": 68.88,
+      "end": 74.56,
+      "text": "so definitely it's something to be worth thinking about. We're assigned it to in the"
+    },
+    {
+      "id": 10,
+      "start": 78.64,
+      "end": 86.8,
+      "text": "class. You're required to only use kind of public models or open source implementations, so you"
+    },
+    {
+      "id": 11,
+      "start": 86.8,
+      "end": 95.76,
+      "text": "could still replace that with Apache Lucine and then any standard LLM and that could be"
+    },
+    {
+      "id": 12,
+      "start": 95.76,
+      "end": 103.2,
+      "text": "Wama Chatt or Missrole or Mixedrole or something like that. So you could definitely feel free to"
+    },
+    {
+      "id": 13,
+      "start": 103.2,
+      "end": 112.0,
+      "text": "do something like that. Of course, the passages are concatenated to the context and so because"
+    },
+    {
+      "id": 14,
+      "start": 112.0,
+      "end": 116.64,
+      "text": "the passages are concatenated, the context can get relatively long and expensive and other things"
+    },
+    {
+      "id": 15,
+      "start": 116.64,
+      "end": 120.4,
+      "text": "like that, but it's just something you have to deal with when you're using RAD."
+    },
+    {
+      "id": 16,
+      "start": 123.76,
+      "end": 132.48,
+      "text": "There are methods also for retriever and generator and training. So this is the paper actually where"
+    },
+    {
+      "id": 17,
+      "start": 133.2,
+      "end": 140.4,
+      "text": "name RAD came from and all you said is an example here, but basically there are several methods"
+    },
+    {
+      "id": 18,
+      "start": 140.4,
+      "end": 146.88,
+      "text": "that propose to train the retriever and reader to improve accuracy. And specifically the"
+    },
+    {
+      "id": 19,
+      "start": 146.88,
+      "end": 153.92,
+      "text": "RAD paper by Lewis et al, the way it trained the reader was to maximize generation like we could"
+    },
+    {
+      "id": 20,
+      "start": 153.92,
+      "end": 160.48,
+      "text": "give an a single retrieved document and for the retriever it maximized overall like we could by"
+    },
+    {
+      "id": 21,
+      "start": 160.48,
+      "end": 166.8,
+      "text": "optimizing the mixture weight over documents. So here's kind of a schematic which is you have your"
+    },
+    {
+      "id": 22,
+      "start": 166.8,
+      "end": 174.72,
+      "text": "query and folder. You run the retriever with a maximum inner product search. It gives you"
+    },
+    {
+      "id": 23,
+      "start": 175.6,
+      "end": 183.6,
+      "text": "several documents and each document has a score and then based on the documents and the scores"
+    },
+    {
+      "id": 24,
+      "start": 184.4,
+      "end": 196.0,
+      "text": "you generate with each document in the context and then some together the probabilities multiplied"
+    },
+    {
+      "id": 25,
+      "start": 196.0,
+      "end": 200.08,
+      "text": "by the weights. And I have the actual equations here because I think it'll be a little bit easier"
+    },
+    {
+      "id": 26,
+      "start": 200.08,
+      "end": 207.92,
+      "text": "to understand after looking at the equations. So generation is a mixture model and you pick a"
+    },
+    {
+      "id": 27,
+      "start": 207.92,
+      "end": 216.72,
+      "text": "document and generate from the document. This p-a-daw-z given x is the probability of"
+    },
+    {
+      "id": 28,
+      "start": 216.72,
+      "end": 226.4,
+      "text": "kicking that document given the query x and then this p-theta x-z and all the previous tokens is"
+    },
+    {
+      "id": 29,
+      "start": 226.4,
+      "end": 233.36,
+      "text": "basically the probability of the next token given that you have this particular document."
+    },
+    {
+      "id": 30,
+      "start": 234.24,
+      "end": 239.52,
+      "text": "So you can see that this is basically linearly interpolating between the multiple documents."
+    },
+    {
+      "id": 31,
+      "start": 242.72,
+      "end": 247.68,
+      "text": "And if we look this can be considered the retriever and the generator or the retriever and the reader."
+    },
+    {
+      "id": 32,
+      "start": 252.0,
+      "end": 257.84,
+      "text": "One really important thing here that enables end-to-end training is they have this probability of"
+    },
+    {
+      "id": 33,
+      "start": 257.84,
+      "end": 265.28,
+      "text": "the retriever be based on embeddings. And so here we have the document embedded and the query"
+    },
+    {
+      "id": 34,
+      "start": 265.28,
+      "end": 272.96,
+      "text": "embedded and the probability is proportional to the inner product of these x-benedgated. So you're"
+    },
+    {
+      "id": 35,
+      "start": 272.96,
+      "end": 283.84,
+      "text": "basically taking a softmax over the inner product between the two. And this adjusts the retriever"
+    },
+    {
+      "id": 36,
+      "start": 283.84,
+      "end": 301.04,
+      "text": "to give higher similarities to helpful documents. And so because the probability of the retriever"
+    },
+    {
+      "id": 37,
+      "start": 301.04,
+      "end": 307.12,
+      "text": "model here is included in the end-to-end probability you don't actually need any annotations about"
+    },
+    {
+      "id": 38,
+      "start": 307.28,
+      "end": 314.32,
+      "text": "which documents are useful. You can just train all of this end-to-end and let back-prop do its thing"
+    },
+    {
+      "id": 39,
+      "start": 314.88,
+      "end": 324.72,
+      "text": "to update the retriever as well. One important issue when training models like this is that"
+    },
+    {
+      "id": 40,
+      "start": 324.72,
+      "end": 330.48,
+      "text": "the search index will be fun to steal. So what do I mean by this? If we go back to our previous"
+    },
+    {
+      "id": 41,
+      "start": 331.44,
+      "end": 342.72,
+      "text": "thing about dense models, creating this blue search index on the right side of the figure here"
+    },
+    {
+      "id": 42,
+      "start": 343.44,
+      "end": 349.76,
+      "text": "is very costly. So like let's say you want to embed a million documents or a billion documents"
+    },
+    {
+      "id": 43,
+      "start": 349.76,
+      "end": 359.68,
+      "text": "if you're a big search engine company. So doing this is very slow. And in contrast doing"
+    },
+    {
+      "id": 44,
+      "start": 359.68,
+      "end": 365.28,
+      "text": "lookup with these approximate nearest neighbor searches is sub linear time or even log time. So you"
+    },
+    {
+      "id": 45,
+      "start": 365.28,
+      "end": 374.4,
+      "text": "can do it relatively quickly. So it's fine to do lookup over this big index. But if you start"
+    },
+    {
+      "id": 46,
+      "start": 375.2,
+      "end": 379.6,
+      "text": "updating this document embedding you need to recreate the entire index and that would be"
+    },
+    {
+      "id": 47,
+      "start": 380.56,
+      "end": 388.48,
+      "text": "very computationally costly. So the solution to this proposed in this rare paper by Lewis"
+    },
+    {
+      "id": 48,
+      "start": 388.48,
+      "end": 395.12,
+      "text": "et al. is we only train the query embeddings and we keep the document embedding specs."
+    },
+    {
+      "id": 49,
+      "start": 396.8,
+      "end": 404.0,
+      "text": "There's other alternatives like there was a paper called Realm from early and retrieval base modeling"
+    },
+    {
+      "id": 50,
+      "start": 404.56,
+      "end": 410.96,
+      "text": "and in that method they basically had an asynchronous process that was going through and using"
+    },
+    {
+      "id": 51,
+      "start": 411.04,
+      "end": 419.68,
+      "text": "the most recent document embedder to re update the search index during training. But that is"
+    },
+    {
+      "id": 52,
+      "start": 421.04,
+      "end": 428.08,
+      "text": "kind of a very onerous process. So I think it's quite common to use kind of a fixed document embedding"
+    },
+    {
+      "id": 53,
+      "start": 428.08,
+      "end": 435.84,
+      "text": "an update only that queries. Another thing to think about is when do we do retrieval?"
+    },
+    {
+      "id": 54,
+      "start": 436.48,
+      "end": 442.48,
+      "text": "So there's a bunch of different methods. The rare paper that I mentioned before"
+    },
+    {
+      "id": 55,
+      "start": 442.48,
+      "end": 446.96,
+      "text": "did this only once right at the beginning of generation. It grabbed a single document and then"
+    },
+    {
+      "id": 56,
+      "start": 446.96,
+      "end": 454.24,
+      "text": "generated the entire output. This is the default method used by most systems. However there's"
+    },
+    {
+      "id": 57,
+      "start": 454.24,
+      "end": 459.2,
+      "text": "other options as well. You can retrieve several times during generation is necessary."
+    },
+    {
+      "id": 58,
+      "start": 459.84,
+      "end": 466.32,
+      "text": "And the way this works, we can do this either by generating a search token saying that we"
+    },
+    {
+      "id": 59,
+      "start": 466.32,
+      "end": 473.2,
+      "text": "should start searching or searching when the model is uncertain. And another way is to do this every"
+    },
+    {
+      "id": 60,
+      "start": 473.2,
+      "end": 478.96,
+      "text": "token. So we can do this by finding similar final embeddings and using this to influence the"
+    },
+    {
+      "id": 61,
+      "start": 478.96,
+      "end": 485.68,
+      "text": "probabilities or approximating attention with nearest neighbors. So I'm going to explain about each"
+    },
+    {
+      "id": 62,
+      "start": 485.68,
+      "end": 492.8,
+      "text": "of these in a bit more detail entry. So triggering retrieval with token embeddings"
+    },
+    {
+      "id": 63,
+      "start": 493.6,
+      "end": 501.6,
+      "text": "is was proposed by toolformer, shake it all. And the way it works is you generate tokens that"
+    },
+    {
+      "id": 64,
+      "start": 501.6,
+      "end": 508.88,
+      "text": "trigger retrieval or other tools. So in this particular method, it had several tools including"
+    },
+    {
+      "id": 65,
+      "start": 508.88,
+      "end": 514.56,
+      "text": "asking a QA model or getting a calculator or having a machine translation system. But with"
+    },
+    {
+      "id": 66,
+      "start": 514.56,
+      "end": 521.04,
+      "text": "respect to retrieval augmented generation, it had this essentially wiki search functionality that"
+    },
+    {
+      "id": 67,
+      "start": 521.04,
+      "end": 525.6,
+      "text": "would look up something in Wikipedia and then use that to influence the final probabilities."
+    },
+    {
+      "id": 68,
+      "start": 527.84,
+      "end": 536.4,
+      "text": "And the way this was trained is training was done in an iterative manner where it basically generated"
+    },
+    {
+      "id": 69,
+      "start": 536.56,
+      "end": 550.08,
+      "text": "examples of tools being useful. And when the tools improve the probability of the following"
+    },
+    {
+      "id": 70,
+      "start": 550.72,
+      "end": 558.48,
+      "text": "output, then that would be treated as a positive example and used to further train the model."
+    },
+    {
+      "id": 71,
+      "start": 559.2,
+      "end": 564.16,
+      "text": "So this was really influential. And in fact, this is how things are implemented in chat GPT."
+    },
+    {
+      "id": 72,
+      "start": 564.16,
+      "end": 572.08,
+      "text": "Now, a day is not only for doing retrieval, but also doing other tools like, for example,"
+    },
+    {
+      "id": 73,
+      "start": 572.8,
+      "end": 575.84,
+      "text": "generating code or generating images or other things like this."
+    },
+    {
+      "id": 74,
+      "start": 579.36,
+      "end": 585.6,
+      "text": "Another option is to trigger retrieval with uncertainty estimates. So,"
+    },
+    {
+      "id": 75,
+      "start": 585.6,
+      "end": 592.88,
+      "text": "if we're aware, this is a paper by my student, Shogbo Shon, where we try to generate content"
+    },
+    {
+      "id": 76,
+      "start": 593.52,
+      "end": 600.0,
+      "text": "and then do retrieval if the language model certainty is low. So here's a schematic."
+    }
+  ],
+  "language": "en"
+}

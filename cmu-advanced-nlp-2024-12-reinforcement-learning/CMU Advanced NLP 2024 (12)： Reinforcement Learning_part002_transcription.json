@@ -1,0 +1,587 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 6.56,
+      "text": "F measure and you can also use TF IDF waiting, like what I talked about in the rag lecture,"
+    },
+    {
+      "id": 1,
+      "start": 7.6,
+      "end": 12.48,
+      "text": "two upweight low frequency words because the low frequency words tend to be more content"
+    },
+    {
+      "id": 2,
+      "start": 12.48,
+      "end": 16.08,
+      "text": "for you. So I'm going back to my example, you know, if you make a mistake from Pittsburgh to"
+    },
+    {
+      "id": 3,
+      "start": 16.08,
+      "end": 21.92,
+      "text": "Tokyo, that's going to be more painful than making the mistake from this time. So actually, if you'll,"
+    },
+    {
+      "id": 4,
+      "start": 23.44,
+      "end": 27.28,
+      "text": "if you were paying close attention to the rag lecture, this looks really similar to the cold"
+    },
+    {
+      "id": 5,
+      "start": 27.28,
+      "end": 33.12,
+      "text": "air. The cold air retrieval objective that I'll talk about in the rag lecture. I don't think"
+    },
+    {
+      "id": 6,
+      "start": 33.12,
+      "end": 36.88,
+      "text": "it's a coincidence. They both came out around the same time. Some people were thinking about the"
+    },
+    {
+      "id": 7,
+      "start": 36.88,
+      "end": 44.0,
+      "text": "same thing, but this is one method that's pretty web-based. The birdscary code base is also really"
+    },
+    {
+      "id": 8,
+      "start": 44.0,
+      "end": 49.12,
+      "text": "nice and easy to use. So if you want to try that, you'll be able to take a look."
+    },
+    {
+      "id": 9,
+      "start": 49.52,
+      "end": 59.2,
+      "text": "Cool. The next one I'd like to talk about is regression based evaluation. And the way this works"
+    },
+    {
+      "id": 10,
+      "start": 59.2,
+      "end": 66.64,
+      "text": "is this is usually used in a supervised setting. So the way what you have to do is you have to"
+    },
+    {
+      "id": 11,
+      "start": 66.64,
+      "end": 75.76,
+      "text": "calculate a whole bunch of like actual human judgments. And usually these judgments can either be"
+    },
+    {
+      "id": 12,
+      "start": 75.84,
+      "end": 81.76,
+      "text": "direct assessment where you actually have a score or they can be pairwise judgments. And then"
+    },
+    {
+      "id": 13,
+      "start": 81.76,
+      "end": 86.32,
+      "text": "if you have direct assessment, you use a regression based loss like minimum square to error."
+    },
+    {
+      "id": 14,
+      "start": 86.88,
+      "end": 91.28,
+      "text": "If you have pairwise, you use a ranking based loss that tries to upweight the ones that are"
+    },
+    {
+      "id": 15,
+      "start": 91.28,
+      "end": 95.84,
+      "text": "higher scoring and down with the ones that are lower scoring. One typical example of this is"
+    },
+    {
+      "id": 16,
+      "start": 95.84,
+      "end": 100.56,
+      "text": "comment, which is or has been at least for a very long time, the state of the art and machine"
+    },
+    {
+      "id": 17,
+      "start": 100.56,
+      "end": 105.6,
+      "text": "translation evaluation. And the reason why it works so well is because we have a bunch of"
+    },
+    {
+      "id": 18,
+      "start": 105.6,
+      "end": 109.84,
+      "text": "evaluations for machine translation. They've been doing evaluation machine translation systems"
+    },
+    {
+      "id": 19,
+      "start": 109.84,
+      "end": 115.2,
+      "text": "for years and you can use that as lots of supervised training data. So basically you just take"
+    },
+    {
+      "id": 20,
+      "start": 115.76,
+      "end": 120.96,
+      "text": "these evaluation data, you have human annotations, you have the output according to a model like"
+    },
+    {
+      "id": 21,
+      "start": 120.96,
+      "end": 125.12,
+      "text": "comment, you calculate the difference between them and you update model parameters."
+    },
+    {
+      "id": 22,
+      "start": 127.36,
+      "end": 131.28,
+      "text": "The problem, this is great if you add lots of training data. The problem with this is for a"
+    },
+    {
+      "id": 23,
+      "start": 131.28,
+      "end": 136.56,
+      "text": "lot of tasks we don't have lots of training data. So training these is a little bit less feasible."
+    },
+    {
+      "id": 24,
+      "start": 139.6,
+      "end": 148.32,
+      "text": "And now recently what we have been moving into is a QA based evaluation, which is basically where"
+    },
+    {
+      "id": 25,
+      "start": 148.32,
+      "end": 154.48,
+      "text": "we ask a language model how good the output is. And so GEMBA is an example, one of the early"
+    },
+    {
+      "id": 26,
+      "start": 154.48,
+      "end": 160.16,
+      "text": "examples of this for machine translation evaluation where they basically just ask a GPG-4,"
+    },
+    {
+      "id": 27,
+      "start": 160.16,
+      "end": 164.96,
+      "text": "like score the following translation from a source language to target language with respect"
+    },
+    {
+      "id": 28,
+      "start": 164.96,
+      "end": 172.56,
+      "text": "to the human reference on a continuous scale from 0 to 100 where the score of 0 means no meaning"
+    },
+    {
+      "id": 29,
+      "start": 172.56,
+      "end": 178.0,
+      "text": "preserved in the score of 100 means a perfect meaning in grammar. You feed in the source,"
+    },
+    {
+      "id": 30,
+      "start": 178.96,
+      "end": 184.0,
+      "text": "you feed in the the human reference optionally if you have a human reference and then you feed in"
+    },
+    {
+      "id": 31,
+      "start": 184.0,
+      "end": 192.4,
+      "text": "the target and you get a score. And so this works pretty well, this can give you better results."
+    },
+    {
+      "id": 32,
+      "start": 193.52,
+      "end": 199.76,
+      "text": "There's a, especially if you have a strong language model, the problem is it's very unpredictable"
+    },
+    {
+      "id": 33,
+      "start": 199.76,
+      "end": 203.52,
+      "text": "whether this is going to work well and it's very dependent on the prompt that you're using."
+    },
+    {
+      "id": 34,
+      "start": 204.4,
+      "end": 209.84,
+      "text": "So right now a lot of people are using GPG-4 without actually validating whether it does a good"
+    },
+    {
+      "id": 35,
+      "start": 209.84,
+      "end": 218.4,
+      "text": "job at evaluation and my results are all across the board. It can be anywhere from very, very good"
+    },
+    {
+      "id": 36,
+      "start": 218.4,
+      "end": 223.12,
+      "text": "to very, very bad at evaluating particular tasks. So I would be at least a little bit suspicious"
+    },
+    {
+      "id": 37,
+      "start": 223.68,
+      "end": 228.72,
+      "text": "of whether GPG-4 is doing a good job at evaluating for your task, especially more complex tasks."
+    },
+    {
+      "id": 38,
+      "start": 231.2,
+      "end": 236.72,
+      "text": "I would especially be suspicious if you're doing two, any of the two following things."
+    },
+    {
+      "id": 39,
+      "start": 236.72,
+      "end": 242.64,
+      "text": "Number one, if you're comparing GPG-4 or any model against itself in another model,"
+    },
+    {
+      "id": 40,
+      "start": 242.96,
+      "end": 249.6,
+      "text": "because GPG-4 really likes GPG-4. It really likes its own outputs and there are papers,"
+    },
+    {
+      "id": 41,
+      "start": 249.6,
+      "end": 252.88,
+      "text": "sorry, I don't actually have the references here but I can follow up with people I hope to see them."
+    },
+    {
+      "id": 42,
+      "start": 252.88,
+      "end": 257.52,
+      "text": "But there are papers that demonstrate that GPG-4 likes its own outputs more than others."
+    },
+    {
+      "id": 43,
+      "start": 258.16,
+      "end": 262.48,
+      "text": "Also, if you're explicitly optimizing the outputs using RLH app,"
+    },
+    {
+      "id": 44,
+      "start": 263.36,
+      "end": 269.76,
+      "text": "there is something called Goodheart's Law which is basically any time you start optimizing"
+    },
+    {
+      "id": 45,
+      "start": 269.76,
+      "end": 275.68,
+      "text": "towards a metric, it becomes a bad metric and that also happens for GPG-4 based evaluations."
+    },
+    {
+      "id": 46,
+      "start": 275.68,
+      "end": 281.44,
+      "text": "So if you start optimizing for GPG-4 based evaluations, especially for reference list metrics that"
+    },
+    {
+      "id": 47,
+      "start": 281.44,
+      "end": 285.92,
+      "text": "don't use a reference output, then you start basically exploiting the metric."
+    },
+    {
+      "id": 48,
+      "start": 286.24,
+      "end": 293.68,
+      "text": "Another thing that you can do with QA-based evaluation is ask about fine-grade mistakes."
+    },
+    {
+      "id": 49,
+      "start": 293.68,
+      "end": 298.96,
+      "text": "And so this is a paper by Patrick Fernandez, who's a student who's working with me."
+    },
+    {
+      "id": 50,
+      "start": 298.96,
+      "end": 306.4,
+      "text": "And basically what we did is we asked the model to not give a particular score,"
+    },
+    {
+      "id": 51,
+      "start": 307.12,
+      "end": 312.0,
+      "text": "but actually identify the mistakes in the output. And when we asked it to identify the mistakes"
+    },
+    {
+      "id": 52,
+      "start": 312.08,
+      "end": 315.44,
+      "text": "in the output, we found that there's more consistent results."
+    },
+    {
+      "id": 53,
+      "start": 316.08,
+      "end": 322.0,
+      "text": "So kind of interestingly, we asked humans to identify as individual mistakes in the output,"
+    },
+    {
+      "id": 54,
+      "start": 322.0,
+      "end": 325.84,
+      "text": "that gets humans more consistent results. It's the same thing for GPG-4."
+    },
+    {
+      "id": 55,
+      "start": 325.84,
+      "end": 329.44,
+      "text": "So that's another big reason that they're interested in."
+    },
+    {
+      "id": 56,
+      "start": 332.96,
+      "end": 339.44,
+      "text": "Cool. So I mentioned that you could or could not trust, yes, are good."
+    },
+    {
+      "id": 57,
+      "start": 342.16,
+      "end": 348.08,
+      "text": "Do you have any more of the other questions you could be through?"
+    },
+    {
+      "id": 58,
+      "start": 349.2,
+      "end": 353.76,
+      "text": "Correct. So yeah, basically just what you do is you have the source."
+    },
+    {
+      "id": 59,
+      "start": 354.96,
+      "end": 358.64,
+      "text": "Ideally, you'll also have a reference output that was created by skilled humans."
+    },
+    {
+      "id": 60,
+      "start": 359.28,
+      "end": 362.64,
+      "text": "And then you put in the target, you know, the output basically."
+    },
+    {
+      "id": 61,
+      "start": 362.64,
+      "end": 370.24,
+      "text": "You have the input, ideally, a reference output created by skilled humans in like hypothesis."
+    },
+    {
+      "id": 62,
+      "start": 372.32,
+      "end": 376.32,
+      "text": "Is there really not extra specific to the results that any model in the hypothesis?"
+    },
+    {
+      "id": 63,
+      "start": 379.36,
+      "end": 387.52,
+      "text": "Yeah, I mean, it's a good question. And I don't know if we actually have a very clear empirical"
+    },
+    {
+      "id": 64,
+      "start": 388.8,
+      "end": 396.08,
+      "text": "like evidence of viruses, the case. But my hypothesis about this is, yes, we kind of would expect"
+    },
+    {
+      "id": 65,
+      "start": 396.08,
+      "end": 402.24,
+      "text": "models to be more biased towards their own outputs. And the reason why is because essentially,"
+    },
+    {
+      "id": 66,
+      "start": 402.24,
+      "end": 408.08,
+      "text": "you know, models are within their embeddings, they're encoding when they're in the high probability"
+    },
+    {
+      "id": 67,
+      "start": 408.08,
+      "end": 412.72,
+      "text": "part of the space and when they're in a low probability part of the space. And like the high"
+    },
+    {
+      "id": 68,
+      "start": 412.72,
+      "end": 419.92,
+      "text": "probability part of the space is going to be the high probability part of the space is going to be"
+    },
+    {
+      "id": 69,
+      "start": 419.92,
+      "end": 430.32,
+      "text": "associated with good outputs because like when models are more sure of their outputs,"
+    },
+    {
+      "id": 70,
+      "start": 430.32,
+      "end": 436.24,
+      "text": "they're more likely to be good. Just because that indicates that like they're close to the"
+    },
+    {
+      "id": 71,
+      "start": 436.24,
+      "end": 441.04,
+      "text": "training data that is gathered and not anything like that. So model probabilities are associated"
+    },
+    {
+      "id": 72,
+      "start": 441.12,
+      "end": 448.96,
+      "text": "with outputs with good outputs, like just correlated. Separately from that,"
+    },
+    {
+      "id": 73,
+      "start": 450.8,
+      "end": 456.16,
+      "text": "I believe a model can identify when it's in a high probability segment of the space and when"
+    },
+    {
+      "id": 74,
+      "start": 456.16,
+      "end": 460.8,
+      "text": "it's in a low probability segment of the space. And because of that, I expect that"
+    },
+    {
+      "id": 75,
+      "start": 463.68,
+      "end": 469.84,
+      "text": "I like there are segments of the emitting space where it's more likely to get to yaps about"
+    },
+    {
+      "id": 76,
+      "start": 469.84,
+      "end": 475.12,
+      "text": "something being better than that. And there's going to be associated with high probability"
+    },
+    {
+      "id": 77,
+      "start": 475.12,
+      "end": 481.12,
+      "text": "outputs as well. And also models are more likely to generate outputs at a high probability"
+    },
+    {
+      "id": 78,
+      "start": 481.12,
+      "end": 486.4,
+      "text": "according to their model by definition. So all three of those stacks together would basically go"
+    },
+    {
+      "id": 79,
+      "start": 486.4,
+      "end": 490.96,
+      "text": "into a model being by all these things. So how does it compare to down puts in another model?"
+    },
+    {
+      "id": 80,
+      "start": 490.96,
+      "end": 497.28,
+      "text": "But yeah, this is a very hand-bought explanation. But like putting the three together,"
+    },
+    {
+      "id": 81,
+      "start": 497.28,
+      "end": 502.56,
+      "text": "models output high probability things from their own probability space by definition."
+    },
+    {
+      "id": 82,
+      "start": 505.2,
+      "end": 508.0,
+      "text": "Things that are high probability are associated with being good,"
+    },
+    {
+      "id": 83,
+      "start": 508.8,
+      "end": 515.12,
+      "text": "just because otherwise a model would be outputting garbage. And the final thing which is more"
+    },
+    {
+      "id": 84,
+      "start": 515.12,
+      "end": 519.84,
+      "text": "tenuous is if the model is in a high probability segment of the space, it's more likely to output"
+    },
+    {
+      "id": 85,
+      "start": 519.84,
+      "end": 524.32,
+      "text": "yes according to a question of the view of it. And I think that's probably true, but I'm not"
+    },
+    {
+      "id": 86,
+      "start": 524.32,
+      "end": 534.32,
+      "text": "on the presenter about the value of the index. Maybe someone wants to examine that as a final"
+    },
+    {
+      "id": 87,
+      "start": 534.32,
+      "end": 541.12,
+      "text": "project. It seems like an interesting question. Cool. Were there any other questions about these"
+    },
+    {
+      "id": 88,
+      "start": 541.12,
+      "end": 551.36,
+      "text": "methods here? Okay, so when I say like an evaluation metric is good or not, what do I mean by"
+    },
+    {
+      "id": 89,
+      "start": 551.36,
+      "end": 560.16,
+      "text": "this being good or not or a reward model or whatever else? And basically the way we typically do"
+    },
+    {
+      "id": 90,
+      "start": 560.16,
+      "end": 564.08,
+      "text": "this is by doing something called meta evaluation. So it's called meta evaluation because it's"
+    },
+    {
+      "id": 91,
+      "start": 564.08,
+      "end": 573.12,
+      "text": "evaluation of the evaluation. And the way we do this is we have human scores and we have automatic"
+    },
+    {
+      "id": 92,
+      "start": 573.36,
+      "end": 582.0,
+      "text": "scores. And we usually calculate some sort of correlation between the scores. So typical ones"
+    },
+    {
+      "id": 93,
+      "start": 582.0,
+      "end": 591.44,
+      "text": "are rank correlations like Pearson's correlation or Kendall's pal. And so the more associated the"
+    },
+    {
+      "id": 94,
+      "start": 591.44,
+      "end": 595.76,
+      "text": "automatic scores are with the human scores, the higher these correlations are going to be."
+    },
+    {
+      "id": 95,
+      "start": 597.2,
+      "end": 601.76,
+      "text": "There's other things that you can calculate. So if you're trying to figure out whether a model"
+    },
+    {
+      "id": 96,
+      "start": 601.76,
+      "end": 603.36,
+      "text": "matrix human."
+    }
+  ],
+  "language": "en"
+}

@@ -1,0 +1,605 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 6.16,
+      "text": "individual tokens just for clarity. So maybe our outputs in order of probability are the cats"
+    },
+    {
+      "id": 1,
+      "start": 6.16,
+      "end": 12.24,
+      "text": "that down ran away, sprinted off, it got out of there, it's very small and it grew winds, right?"
+    },
+    {
+      "id": 2,
+      "start": 12.8,
+      "end": 16.72,
+      "text": "So we're definitely sure that the cats that down is a better output than the cat grew winds,"
+    },
+    {
+      "id": 3,
+      "start": 16.72,
+      "end": 21.28,
+      "text": "and if we were doing the most seeking search, we would find that is our most likely thing if we"
+    },
+    {
+      "id": 4,
+      "start": 21.28,
+      "end": 26.56,
+      "text": "if we do a good job searching and we'd return that as our output. But if you look at the rest"
+    },
+    {
+      "id": 5,
+      "start": 26.56,
+      "end": 32.08,
+      "text": "of this distribution, you see that there's actually a whole set of elephants after that that all"
+    },
+    {
+      "id": 6,
+      "start": 32.08,
+      "end": 36.88,
+      "text": "say something that kind of means the cat left the area, right? It's just that this probability is"
+    },
+    {
+      "id": 7,
+      "start": 36.88,
+      "end": 41.6,
+      "text": "split over these three different generations, and if you actually add up the probability mass of"
+    },
+    {
+      "id": 8,
+      "start": 41.6,
+      "end": 46.96,
+      "text": "all three of these sequences, this is double the probability mass of the cat sat down. But because"
+    },
+    {
+      "id": 9,
+      "start": 46.96,
+      "end": 50.96,
+      "text": "none of these individual sequences is higher probability, if you're doing most seeking search, you"
+    },
+    {
+      "id": 10,
+      "start": 51.28,
+      "end": 56.08,
+      "text": "wouldn't you wouldn't be able to see this effect, right? So do we really want to return the cat"
+    },
+    {
+      "id": 11,
+      "start": 56.08,
+      "end": 61.52,
+      "text": "sat down or do we want to return something that means the cat left the area? The question then is"
+    },
+    {
+      "id": 12,
+      "start": 61.52,
+      "end": 68.4,
+      "text": "if it's not probability that makes an output good, what if so we have this one output that's really"
+    },
+    {
+      "id": 13,
+      "start": 68.4,
+      "end": 73.52,
+      "text": "high probability, but it's very different from everything else in our set. And then we have a"
+    },
+    {
+      "id": 14,
+      "start": 73.52,
+      "end": 78.8,
+      "text": "couple of outputs that are all pretty high probability and similar to a bunch of other relatively"
+    },
+    {
+      "id": 15,
+      "start": 78.8,
+      "end": 84.0,
+      "text": "high probability things. So maybe it's sort of less risky to return one of these, right? Our"
+    },
+    {
+      "id": 16,
+      "start": 84.0,
+      "end": 88.08,
+      "text": "thing that's higher probability, but different than everything else could be different because it's"
+    },
+    {
+      "id": 17,
+      "start": 88.08,
+      "end": 92.64,
+      "text": "way better or it could be different because it's way worse. Another way to think about this is,"
+    },
+    {
+      "id": 18,
+      "start": 92.64,
+      "end": 97.6,
+      "text": "you know, maybe if you and your friends were cheating on a test, which you shouldn't do, but if"
+    },
+    {
+      "id": 19,
+      "start": 97.6,
+      "end": 101.84,
+      "text": "you were going to do it and all of your friends sent you their answers, maybe one of your friends"
+    },
+    {
+      "id": 20,
+      "start": 101.84,
+      "end": 105.84,
+      "text": "went a slightly higher score in the class than everyone else, but they sent the answer with"
+    },
+    {
+      "id": 21,
+      "start": 105.84,
+      "end": 109.84,
+      "text": "answer, and everyone else said the answer was being, right? You still might go with the answer"
+    },
+    {
+      "id": 22,
+      "start": 109.84,
+      "end": 115.52,
+      "text": "that everyone else said because like what there's, it sort of feels less risky, like maybe everyone"
+    },
+    {
+      "id": 23,
+      "start": 115.52,
+      "end": 119.92,
+      "text": "else got the answer, got that answer, and so your one friend could be right when everyone else is"
+    },
+    {
+      "id": 24,
+      "start": 119.92,
+      "end": 124.48,
+      "text": "wrong or they could have made a mistake that no one else is making. So this is sort of the same"
+    },
+    {
+      "id": 25,
+      "start": 124.48,
+      "end": 129.92,
+      "text": "concept, right? We want an output that's relatively high probability, but also relatively low risk."
+    },
+    {
+      "id": 26,
+      "start": 129.92,
+      "end": 136.88,
+      "text": "And so here, maybe if we were using this criteria, we'd return the cat ran away as our sort of"
+    },
+    {
+      "id": 27,
+      "start": 137.52,
+      "end": 142.72,
+      "text": "as our sort of single output. So how do you find something that's high probability and low risk?"
+    },
+    {
+      "id": 28,
+      "start": 143.84,
+      "end": 147.92,
+      "text": "There's sort of two questions here, right? We have to figure out how to estimate probability,"
+    },
+    {
+      "id": 29,
+      "start": 147.92,
+      "end": 152.72,
+      "text": "and if we're looking at a set of outputs like the six we saw before, maybe we can just do this"
+    },
+    {
+      "id": 30,
+      "start": 152.72,
+      "end": 156.56,
+      "text": "by counting, right? We could sample everything from the model and get exact probability,"
+    },
+    {
+      "id": 31,
+      "start": 157.2,
+      "end": 162.64,
+      "text": "or we could take a sample from the model and just look at probability in that set. And from there,"
+    },
+    {
+      "id": 32,
+      "start": 162.64,
+      "end": 167.84,
+      "text": "from that sample, sort of one reasonable thing you do is just count frequency, right? If something's"
+    },
+    {
+      "id": 33,
+      "start": 167.84,
+      "end": 172.72,
+      "text": "in our sample twice as often, we just say it's twice as frequent or which twice is probable."
+    },
+    {
+      "id": 34,
+      "start": 173.52,
+      "end": 178.96,
+      "text": "This is something called Monte Carlo sampling. If you do this enough times, like if you sample an"
+    },
+    {
+      "id": 35,
+      "start": 178.96,
+      "end": 184.88,
+      "text": "infinite set, this is going to give you exactly the model distribution. But for the sort of reasonable"
+    },
+    {
+      "id": 36,
+      "start": 184.88,
+      "end": 188.72,
+      "text": "size, that's where we're hanging it with maybe like a hundred samples. This gives us a sort of"
+    },
+    {
+      "id": 37,
+      "start": 188.72,
+      "end": 194.8,
+      "text": "reasonable approximation for what we need to do here at least. So we're just going to take a"
+    },
+    {
+      "id": 38,
+      "start": 194.8,
+      "end": 198.24,
+      "text": "sample to get probability and we're just going to count things in that sample to see how likely"
+    },
+    {
+      "id": 39,
+      "start": 198.24,
+      "end": 204.56,
+      "text": "it is there. That doesn't seem too bad. How do we estimate risk? The idea here is that we have a"
+    },
+    {
+      "id": 40,
+      "start": 204.56,
+      "end": 209.92,
+      "text": "bunch of other things in the set of outputs, and we can treat those as sort of like pseudo references,"
+    },
+    {
+      "id": 41,
+      "start": 209.92,
+      "end": 214.32,
+      "text": "right? We can evaluate the agreement between the thing we're looking at in each of those other"
+    },
+    {
+      "id": 42,
+      "start": 214.32,
+      "end": 218.64,
+      "text": "references. And this is sort of the same idea of calculating similarity in diverse beam"
+    },
+    {
+      "id": 43,
+      "start": 218.64,
+      "end": 222.72,
+      "text": "search. We're going to use some kind of metric to compare how similar these things are."
+    },
+    {
+      "id": 44,
+      "start": 223.6,
+      "end": 227.52,
+      "text": "This metric could be anything you use downstream. It could be like an end-gram overlap metric,"
+    },
+    {
+      "id": 45,
+      "start": 227.52,
+      "end": 233.6,
+      "text": "like root or blue, or it could also be something neural or semantic, like something on"
+    },
+    {
+      "id": 46,
+      "start": 233.6,
+      "end": 240.88,
+      "text": "birth score or birth score. And so this concept is a type of decoding called minimum-based"
+    },
+    {
+      "id": 47,
+      "start": 240.88,
+      "end": 245.6,
+      "text": "rescue coding. And what this equation captures is exactly the intuition that we were"
+    },
+    {
+      "id": 48,
+      "start": 246.4,
+      "end": 252.0,
+      "text": "sort of talking about just a slide ago where we're going to choose something that is low-risk,"
+    },
+    {
+      "id": 49,
+      "start": 252.0,
+      "end": 256.48,
+      "text": "which means similar to a lot of other things in the set of outputs we've sent bold. And we're"
+    },
+    {
+      "id": 50,
+      "start": 256.48,
+      "end": 260.48,
+      "text": "going to choose something that's relatively high probability, which means that sort of when we"
+    },
+    {
+      "id": 51,
+      "start": 260.48,
+      "end": 265.52,
+      "text": "sum up over this, if something occurs in our set a bunch of times, it's going to have pretty"
+    },
+    {
+      "id": 52,
+      "start": 265.52,
+      "end": 270.88,
+      "text": "strong weight in picking which of these outputs are similar, right? If sort of there's one thing"
+    },
+    {
+      "id": 53,
+      "start": 270.88,
+      "end": 274.56,
+      "text": "in the set that appears a bunch of times, it's going to have a strong weight of those things we"
+    },
+    {
+      "id": 54,
+      "start": 274.56,
+      "end": 282.72,
+      "text": "pick. And so that kind of captures high probability in this thing. So to see how this works,"
+    },
+    {
+      "id": 55,
+      "start": 282.72,
+      "end": 290.16,
+      "text": "we can look at an example in some relation. So we choose some metric, maybe we choose"
+    },
+    {
+      "id": 56,
+      "start": 290.4,
+      "end": 295.84,
+      "text": "Rouge, which is an end-groom over-lapt metric for summarization. And we say we're going to sample 100"
+    },
+    {
+      "id": 57,
+      "start": 295.84,
+      "end": 302.08,
+      "text": "things and we're going to use this equation to choose the one that has the sort of lowest risk"
+    },
+    {
+      "id": 58,
+      "start": 302.08,
+      "end": 309.84,
+      "text": "according to MBR. So if we do that and we look at this sort of table of results here,"
+    },
+    {
+      "id": 59,
+      "start": 310.72,
+      "end": 315.52,
+      "text": "you can see that this outperforms the other sampling methods that we've looked at before. So"
+    },
+    {
+      "id": 60,
+      "start": 315.52,
+      "end": 321.6,
+      "text": "3D coding here is just sampling a single most likely thing in each step. Beam search here is the"
+    },
+    {
+      "id": 61,
+      "start": 321.6,
+      "end": 329.44,
+      "text": "BS with five or ten beams and DVS is the diverse beam search we're talking about. If we use"
+    },
+    {
+      "id": 62,
+      "start": 329.44,
+      "end": 335.12,
+      "text": "minimum-based risk and we use Rouge as the sort of determiner of similarity, we do wave better"
+    },
+    {
+      "id": 63,
+      "start": 335.12,
+      "end": 338.72,
+      "text": "across all of our metrics, but we especially get really good at Ruby because that's sort of a metric"
+    },
+    {
+      "id": 64,
+      "start": 338.72,
+      "end": 343.76,
+      "text": "that we've been using to evaluate. And then if we swap this out for other metrics, you still see"
+    },
+    {
+      "id": 65,
+      "start": 344.24,
+      "end": 351.12,
+      "text": "performance improvement over these search methods here. What's the sort of catch here? The"
+    },
+    {
+      "id": 66,
+      "start": 351.12,
+      "end": 356.08,
+      "text": "catch here is that MBR requires you to sample 100 things and so this is a lot more expensive. It's a lot"
+    },
+    {
+      "id": 67,
+      "start": 356.08,
+      "end": 370.64,
+      "text": "slower at inference time. Yes. Why does the beam search for a larger lower of 20? The great question."
+    },
+    {
+      "id": 68,
+      "start": 370.72,
+      "end": 378.48,
+      "text": "Why does the beam search have more beams for form worse? This is a relatively well-known"
+    },
+    {
+      "id": 69,
+      "start": 378.48,
+      "end": 383.52,
+      "text": "phenomena called the cursive beam search, which is... Actually lost the light. So we can get"
+    },
+    {
+      "id": 70,
+      "start": 383.52,
+      "end": 387.84,
+      "text": "in your light and we can just be back there. Okay. Yeah. So this is called the cursive beam search."
+    },
+    {
+      "id": 71,
+      "start": 388.96,
+      "end": 392.72,
+      "text": "And the idea here is that beam search is like an approximate search, right? So if you add more"
+    },
+    {
+      "id": 72,
+      "start": 392.72,
+      "end": 397.36,
+      "text": "beams, you should be doing better and better at finding the maximum likelihood thing. And generally,"
+    },
+    {
+      "id": 73,
+      "start": 397.36,
+      "end": 402.64,
+      "text": "you are. You get something that is higher probability. But as you add more beams, you also often get"
+    },
+    {
+      "id": 74,
+      "start": 402.64,
+      "end": 425.28,
+      "text": "something that does worse on your downstream metrics. That back online. Yeah. Is that back... Is that any"
+    },
+    {
+      "id": 75,
+      "start": 425.28,
+      "end": 438.0,
+      "text": "louder? No. Oh, there we go. Is that better? Great. Yeah. So why does this happen? Why do you get"
+    },
+    {
+      "id": 76,
+      "start": 438.0,
+      "end": 443.76,
+      "text": "something that's higher likelihood? But lower performance downstream. And this is like another"
+    },
+    {
+      "id": 77,
+      "start": 444.8,
+      "end": 450.24,
+      "text": "sort of degeneracy of beam search that this idea that the thing that is the absolute highest likelihood"
+    },
+    {
+      "id": 78,
+      "start": 450.24,
+      "end": 455.6,
+      "text": "in your distribution might not actually be what you want downstream. This is sort of one of the other"
+    },
+    {
+      "id": 79,
+      "start": 456.64,
+      "end": 461.44,
+      "text": "things that people use to motivate why you might want to do something like MBR and STEM. And there's"
+    },
+    {
+      "id": 80,
+      "start": 461.44,
+      "end": 466.48,
+      "text": "a great paper about this problem called the inadequacy of the mode because beam search is looking"
+    },
+    {
+      "id": 81,
+      "start": 466.48,
+      "end": 472.72,
+      "text": "for the mode of the distribution. One other thing I'd like to mention is it also goes together with how"
+    },
+    {
+      "id": 82,
+      "start": 472.72,
+      "end": 478.32,
+      "text": "you train your models. Because most of our models are trained using maximum likelihood. Maximum likelihood"
+    },
+    {
+      "id": 83,
+      "start": 478.32,
+      "end": 484.16,
+      "text": "isn't explicitly maximizing our ability to get the best answer. It's explicitly maximizing"
+    },
+    {
+      "id": 84,
+      "start": 484.16,
+      "end": 494.72,
+      "text": "our ability to estimate the distribution of answers. So if I say... If you said like what is your"
+    },
+    {
+      "id": 85,
+      "start": 495.68,
+      "end": 501.44,
+      "text": "favorite hobby or something like that? What is your favorite hobby in a dialogue system? Often"
+    },
+    {
+      "id": 86,
+      "start": 501.44,
+      "end": 508.56,
+      "text": "you'll answer, I don't know, or something like that. Because it's more likely than answering"
+    },
+    {
+      "id": 87,
+      "start": 508.56,
+      "end": 514.88,
+      "text": "any specific hobby. It's more likely than answering basket-ball bowling, whatever else because you have"
+    },
+    {
+      "id": 88,
+      "start": 516.08,
+      "end": 521.92,
+      "text": "many, many different options. And so especially if it's something that's a little bit more complicated,"
+    },
+    {
+      "id": 89,
+      "start": 521.92,
+      "end": 528.32,
+      "text": "complicated, it will avoid answering that. And in particular it ends up answering very short things,"
+    },
+    {
+      "id": 90,
+      "start": 529.04,
+      "end": 534.56,
+      "text": "for example, or sometimes it ends up repeating itself over and over again or things like that."
+    },
+    {
+      "id": 91,
+      "start": 534.56,
+      "end": 537.52,
+      "text": "So it also goes together with like the training of the model."
+    },
+    {
+      "id": 92,
+      "start": 538.56,
+      "end": 545.12,
+      "text": "Yeah, and this is one of the... This is still a problem in modern systems. So if you actually look"
+    },
+    {
+      "id": 93,
+      "start": 545.12,
+      "end": 549.12,
+      "text": "at this thing, like if you put a numerator and everything and see the single most likely sequence,"
+    },
+    {
+      "id": 94,
+      "start": 549.12,
+      "end": 551.92,
+      "text": "it's often the empty sequence. It's just not opening any tomorrow."
+    },
+    {
+      "id": 95,
+      "start": 554.16,
+      "end": 557.84,
+      "text": "And so if that's your true mode in the distribution, then doing better at mode seeking in"
+    },
+    {
+      "id": 96,
+      "start": 557.84,
+      "end": 562.16,
+      "text": "that place, like how do I say it? Yes."
+    },
+    {
+      "id": 97,
+      "start": 571.2,
+      "end": 575.6,
+      "text": "Could this be influenced by the confidence problem? Like, Hasa."
+    },
+    {
+      "id": 98,
+      "start": 587.92,
+      "end": 597.76,
+      "text": "So, right, something like that, like my empty, empty object, my empty object."
+    },
+    {
+      "id": 99,
+      "start": 598.96,
+      "end": 604.4,
+      "text": "Right, I think I see what you're saying, which is that like the..."
+    }
+  ],
+  "language": "en"
+}

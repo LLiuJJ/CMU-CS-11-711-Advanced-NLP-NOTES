@@ -1,0 +1,557 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 5.0,
+      "text": "And so how do we extend distillation to this sequence labeling setting?"
+    },
+    {
+      "id": 1,
+      "start": 5.0,
+      "end": 9.0,
+      "text": "And so there's like kind of two obvious ways really."
+    },
+    {
+      "id": 2,
+      "start": 9.0,
+      "end": 13.0,
+      "text": "The first is that you want to predict."
+    },
+    {
+      "id": 3,
+      "start": 13.0,
+      "end": 21.0,
+      "text": "You want to match the distribution of words that the teacher suggested at each point in your generation process."
+    },
+    {
+      "id": 4,
+      "start": 21.0,
+      "end": 29.0,
+      "text": "So given a prefix like this movie is blank, you then see the teacher's distribution over the word."
+    },
+    {
+      "id": 5,
+      "start": 29.0,
+      "end": 34.0,
+      "text": "And you try to replicate that in your student model."
+    },
+    {
+      "id": 6,
+      "start": 34.0,
+      "end": 40.0,
+      "text": "And then the second idea is that you might now have."
+    },
+    {
+      "id": 7,
+      "start": 40.0,
+      "end": 48.0,
+      "text": "But the problem I think here is that the as you keep generating the text."
+    },
+    {
+      "id": 8,
+      "start": 48.0,
+      "end": 56.0,
+      "text": "I think this is related to an idea called exposure bias, which is that as you generate text, the teacher and the student might diverge dramatically."
+    },
+    {
+      "id": 9,
+      "start": 56.0,
+      "end": 61.0,
+      "text": "Like the teacher might be generating consistent text and it becomes."
+    },
+    {
+      "id": 10,
+      "start": 61.0,
+      "end": 65.0,
+      "text": "It starts to look very different than what the student could have possibly generated."
+    },
+    {
+      "id": 11,
+      "start": 65.0,
+      "end": 70.0,
+      "text": "So the second idea here is sequence level distillation, where you instead just."
+    },
+    {
+      "id": 12,
+      "start": 70.0,
+      "end": 73.0,
+      "text": "Generate a hard target from the teacher."
+    },
+    {
+      "id": 13,
+      "start": 73.0,
+      "end": 74.0,
+      "text": "So instead of using like that."
+    },
+    {
+      "id": 14,
+      "start": 74.0,
+      "end": 80.0,
+      "text": "So you use a soft targets at the word level and then at the teacher at the."
+    },
+    {
+      "id": 15,
+      "start": 80.0,
+      "end": 92.0,
+      "text": "And then you just want to maximize the probability of that like goal of the pseudo labeled gold sentence."
+    },
+    {
+      "id": 16,
+      "start": 92.0,
+      "end": 95.0,
+      "text": "And they show that if you combine these two objectives together, it's really effective."
+    },
+    {
+      "id": 17,
+      "start": 95.0,
+      "end": 109.0,
+      "text": "So I think that this is like this seems like the right way to distillation for like generating sequences of text."
+    },
+    {
+      "id": 18,
+      "start": 109.0,
+      "end": 117.0,
+      "text": "And one really popular distilled distilled model in NLP that I use all the time is called distillbert."
+    },
+    {
+      "id": 19,
+      "start": 117.0,
+      "end": 124.0,
+      "text": "It basically is just burnt, which at the time, bird came out, it was considered to be really big, which is kind of like."
+    },
+    {
+      "id": 20,
+      "start": 124.0,
+      "end": 127.0,
+      "text": "From you know, but."
+    },
+    {
+      "id": 21,
+      "start": 127.0,
+      "end": 135.0,
+      "text": "The idea here was like, can we reduce the size of bird in half and get the same performance."
+    },
+    {
+      "id": 22,
+      "start": 135.0,
+      "end": 138.0,
+      "text": "So they do this, they use a couple of tricks to do this."
+    },
+    {
+      "id": 23,
+      "start": 138.0,
+      "end": 141.0,
+      "text": "First, they just like took every other layer of birth."
+    },
+    {
+      "id": 24,
+      "start": 141.0,
+      "end": 144.0,
+      "text": "So if you had a 12 layer of birth model, it took six layers."
+    },
+    {
+      "id": 25,
+      "start": 144.0,
+      "end": 150.0,
+      "text": "And they initialize each layer from one of the layers of the initial bird model."
+    },
+    {
+      "id": 26,
+      "start": 150.0,
+      "end": 153.0,
+      "text": "So it's not like a random initialization."
+    },
+    {
+      "id": 27,
+      "start": 153.0,
+      "end": 159.0,
+      "text": "Then they did effectively soft target distillation, which was effective."
+    },
+    {
+      "id": 28,
+      "start": 159.0,
+      "end": 163.0,
+      "text": "They also tried in their paper and they they use them."
+    },
+    {
+      "id": 29,
+      "start": 163.0,
+      "end": 170.0,
+      "text": "They combine soft target distillation with like real supervised, a real supervised objective from language modeling."
+    },
+    {
+      "id": 30,
+      "start": 170.0,
+      "end": 181.0,
+      "text": "It's like they they masked tokens of text and they tried to train on both like what would actually behind the mask, but also what the teacher would have predicted for that mask."
+    },
+    {
+      "id": 31,
+      "start": 181.0,
+      "end": 186.0,
+      "text": "And they kind of find out found surprisingly, I think that."
+    },
+    {
+      "id": 32,
+      "start": 186.0,
+      "end": 194.0,
+      "text": "The supervised objective doesn't really help much at all. So if you have a good teacher that's probably enough for distillation."
+    },
+    {
+      "id": 33,
+      "start": 194.0,
+      "end": 204.0,
+      "text": "And then they did something else to make sure that the embedding space like had a similar geometry in the small model and the big model."
+    },
+    {
+      "id": 34,
+      "start": 204.0,
+      "end": 214.0,
+      "text": "The main finding here is that you can do this and get a model that is pretty much just as good or very close to it in most tasks as the big bird model."
+    },
+    {
+      "id": 35,
+      "start": 214.0,
+      "end": 218.0,
+      "text": "And this little bird is like super popular people use it all the time."
+    },
+    {
+      "id": 36,
+      "start": 218.0,
+      "end": 221.0,
+      "text": "Okay."
+    },
+    {
+      "id": 37,
+      "start": 221.0,
+      "end": 233.0,
+      "text": "So now I'm going to go a little bit off of this initial motivation of efficiency and talk about how distillation can be used like actually do things that you cannot do otherwise."
+    },
+    {
+      "id": 38,
+      "start": 233.0,
+      "end": 249.0,
+      "text": "Like unlocking capabilities and performance that are pretty much impossible using traditional learning before I do that any questions about distillation formula."
+    },
+    {
+      "id": 39,
+      "start": 249.0,
+      "end": 272.0,
+      "text": "I think it's you have a lot of flexibility and distillation unlike something like pruning."
+    },
+    {
+      "id": 40,
+      "start": 272.0,
+      "end": 289.0,
+      "text": "I think I've seen work that suggests that distillation is most effective when your student and teacher have like similar architectures like if you're for example, if your teacher is an auto regressive model, you might like a GPT two or three, you might want your student to be autoregressive but."
+    },
+    {
+      "id": 41,
+      "start": 289.0,
+      "end": 301.0,
+      "text": "But my intuition is that there's a lot of flexibility here and especially if you're doing a hard target distillation where you're generating sequences, you could just treat this as labels and then you could train any student model."
+    },
+    {
+      "id": 42,
+      "start": 301.0,
+      "end": 320.0,
+      "text": "So I don't think it's that constrained."
+    },
+    {
+      "id": 43,
+      "start": 320.0,
+      "end": 332.0,
+      "text": "I think the first like thing I'll talk about here in the sort of new age distillation world is self instruct which grandma already talked about two weeks ago, so I'll just touch on this."
+    },
+    {
+      "id": 44,
+      "start": 332.0,
+      "end": 346.0,
+      "text": "The idea here is that they're doing like self distillation started like this paper where they're taking a model, making it generate data and then training that same model on that data that's the basic idea."
+    },
+    {
+      "id": 45,
+      "start": 346.0,
+      "end": 356.0,
+      "text": "But here they're doing very specific where they take a vanilla language model that's just trained to like generate text and they're trying to teach it to follow instructions using instruction time to them."
+    },
+    {
+      "id": 46,
+      "start": 356.0,
+      "end": 375.0,
+      "text": "And the way they accomplish this is by having this vanilla language model first like generate instructions arbitrarily like right upon the dogs and then produce responses to those instructions like a poem by dogs and then training that same model to now."
+    },
+    {
+      "id": 47,
+      "start": 375.0,
+      "end": 380.0,
+      "text": "They're doing very model to now imitate its own behavior."
+    },
+    {
+      "id": 48,
+      "start": 380.0,
+      "end": 386.0,
+      "text": "And they use some tricks that like make this work."
+    },
+    {
+      "id": 49,
+      "start": 386.0,
+      "end": 396.0,
+      "text": "And I think one of the key tricks that I was hoping on here is that when you're doing data generation."
+    },
+    {
+      "id": 50,
+      "start": 396.0,
+      "end": 407.0,
+      "text": "The most obvious thing to do is you first generate the inputs, then you like pseudo label your outputs, but the issue here is that the quality of your labels is only as good as your as your teacher is."
+    },
+    {
+      "id": 51,
+      "start": 407.0,
+      "end": 409.0,
+      "text": "So if I am."
+    },
+    {
+      "id": 52,
+      "start": 409.0,
+      "end": 417.0,
+      "text": "If I first generate a text and then I generate the class that I think corresponds to that text."
+    },
+    {
+      "id": 53,
+      "start": 417.0,
+      "end": 428.0,
+      "text": "If this class label is like really bad and maybe in like very systematic ways as was mentioned earlier, then the train data will be really bad and you're not going to be able to learn anything useful."
+    },
+    {
+      "id": 54,
+      "start": 428.0,
+      "end": 434.0,
+      "text": "But when you're generating data, you don't need to actually do this linear process."
+    },
+    {
+      "id": 55,
+      "start": 434.0,
+      "end": 440.0,
+      "text": "You can instead first generate the class and then generate inputs condition on that class."
+    },
+    {
+      "id": 56,
+      "start": 440.0,
+      "end": 446.0,
+      "text": "So like this is kind of doing things backwards. And you can't do this when you're doing real prediction, because you don't know the class."
+    },
+    {
+      "id": 57,
+      "start": 446.0,
+      "end": 451.0,
+      "text": "Like this is not useful in practice when you're doing prediction."
+    },
+    {
+      "id": 58,
+      "start": 451.0,
+      "end": 454.0,
+      "text": "But for generating data, you don't need to do things linearly."
+    },
+    {
+      "id": 59,
+      "start": 454.0,
+      "end": 461.0,
+      "text": "And so I think that this idea to me is like really important in data generation."
+    },
+    {
+      "id": 60,
+      "start": 461.0,
+      "end": 470.0,
+      "text": "That you can decompose your task into different patterns or orders and then generate your data from like the ground up that way."
+    },
+    {
+      "id": 61,
+      "start": 470.0,
+      "end": 478.0,
+      "text": "And hopefully this way by like reducing a hard problem to an easy problem, you can do a lot better."
+    },
+    {
+      "id": 62,
+      "start": 478.0,
+      "end": 484.0,
+      "text": "This is related to one other paper that I did not put in the."
+    },
+    {
+      "id": 63,
+      "start": 484.0,
+      "end": 487.0,
+      "text": "In the slides."
+    },
+    {
+      "id": 64,
+      "start": 487.0,
+      "end": 491.0,
+      "text": "So in this paper, they call this idea."
+    },
+    {
+      "id": 65,
+      "start": 491.0,
+      "end": 494.0,
+      "text": "Task asymmetry."
+    },
+    {
+      "id": 66,
+      "start": 494.0,
+      "end": 503.0,
+      "text": "Where."
+    },
+    {
+      "id": 67,
+      "start": 503.0,
+      "end": 510.0,
+      "text": "If you have a task of going from X to Y that is really hard, but going from Y to X is easy."
+    },
+    {
+      "id": 68,
+      "start": 510.0,
+      "end": 514.0,
+      "text": "Then you can just start with a bunch of Ys generate synthetic X's."
+    },
+    {
+      "id": 69,
+      "start": 514.0,
+      "end": 519.0,
+      "text": "But because this direction is easy, you can probably do pretty good at this."
+    },
+    {
+      "id": 70,
+      "start": 519.0,
+      "end": 525.0,
+      "text": "And then you can now flip the data again and train your model generate X to generate Y from X."
+    },
+    {
+      "id": 71,
+      "start": 525.0,
+      "end": 527.0,
+      "text": "You have a lot of data that is like pretty good."
+    },
+    {
+      "id": 72,
+      "start": 527.0,
+      "end": 533.0,
+      "text": "And then you can do like really surprisingly well using this strategy."
+    },
+    {
+      "id": 73,
+      "start": 533.0,
+      "end": 538.0,
+      "text": "So in like this paper, they were doing information extraction where you had."
+    },
+    {
+      "id": 74,
+      "start": 538.0,
+      "end": 541.0,
+      "text": "You're given like sentences and you wanted to extract triples."
+    },
+    {
+      "id": 75,
+      "start": 541.0,
+      "end": 543.0,
+      "text": "Like you had."
+    },
+    {
+      "id": 76,
+      "start": 543.0,
+      "end": 546.0,
+      "text": "Watch film who is the what's the location of that film."
+    },
+    {
+      "id": 77,
+      "start": 546.0,
+      "end": 552.0,
+      "text": "And instead of and so during this sentence to information extraction is pretty hard."
+    },
+    {
+      "id": 78,
+      "start": 552.0,
+      "end": 557.0,
+      "text": "But it's pretty easy to get be given a bunch of entities and generate a sentence about those entities."
+    },
+    {
+      "id": 79,
+      "start": 557.0,
+      "end": 559.0,
+      "text": "That's like pretty trivial to do."
+    },
+    {
+      "id": 80,
+      "start": 559.0,
+      "end": 561.0,
+      "text": "I think with large language models."
+    },
+    {
+      "id": 81,
+      "start": 561.0,
+      "end": 567.0,
+      "text": "So they they went backwards and they just took a bunch of triples generated texts synthetically."
+    },
+    {
+      "id": 82,
+      "start": 567.0,
+      "end": 572.0,
+      "text": "And then used and then flipped the order of the labels and inputs."
+    },
+    {
+      "id": 83,
+      "start": 572.0,
+      "end": 578.0,
+      "text": "And then what they found is that in terms of the performance here."
+    },
+    {
+      "id": 84,
+      "start": 578.0,
+      "end": 581.0,
+      "text": "It's like."
+    },
+    {
+      "id": 85,
+      "start": 581.0,
+      "end": 586.0,
+      "text": "Double as good as the previous best model here, which was already really good for the time."
+    },
+    {
+      "id": 86,
+      "start": 586.0,
+      "end": 588.0,
+      "text": "So I think that."
+    },
+    {
+      "id": 87,
+      "start": 588.0,
+      "end": 593.0,
+      "text": "This is like sort of an idea that I want to pass on that I think is really nice."
+    },
+    {
+      "id": 88,
+      "start": 593.0,
+      "end": 596.0,
+      "text": "That was touched on by self instruct."
+    },
+    {
+      "id": 89,
+      "start": 596.0,
+      "end": 601.0,
+      "text": "Okay. And then the."
+    },
+    {
+      "id": 90,
+      "start": 601.0,
+      "end": 603.0,
+      "text": "Want to."
+    },
+    {
+      "id": 91,
+      "start": 603.0,
+      "end": 606.0,
+      "text": "Don't."
+    }
+  ],
+  "language": "en"
+}

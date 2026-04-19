@@ -1,0 +1,599 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 4.32,
+      "text": "of the question, which is context even necessary to translate well."
+    },
+    {
+      "id": 1,
+      "start": 4.84,
+      "end": 8.16,
+      "text": "You train a model with context and without context."
+    },
+    {
+      "id": 2,
+      "start": 8.64,
+      "end": 10.76,
+      "text": "You train a model with context and one without context."
+    },
+    {
+      "id": 3,
+      "start": 10.76,
+      "end": 12.72,
+      "text": "But what if your model of context is really bad?"
+    },
+    {
+      "id": 4,
+      "start": 14.12,
+      "end": 16.32,
+      "text": "You have the same model architecture."
+    },
+    {
+      "id": 5,
+      "start": 16.32,
+      "end": 18.96,
+      "text": "You have the same model architecture, but let's say your model architecture is"
+    },
+    {
+      "id": 6,
+      "start": 18.96,
+      "end": 20.4,
+      "text": "really bad at capturing context."
+    },
+    {
+      "id": 7,
+      "start": 20.4,
+      "end": 23.72,
+      "text": "So then maybe it's a problem if your model architecture in context is necessary,"
+    },
+    {
+      "id": 8,
+      "start": 23.72,
+      "end": 26.48,
+      "text": "you're helpful, but your model just isn't free of catch."
+    },
+    {
+      "id": 9,
+      "start": 28.32,
+      "end": 29.24,
+      "text": "Yeah, exactly."
+    },
+    {
+      "id": 10,
+      "start": 29.24,
+      "end": 30.92,
+      "text": "So this is one thing that people can do."
+    },
+    {
+      "id": 11,
+      "start": 30.92,
+      "end": 33.52,
+      "text": "So there was an interesting paper."
+    },
+    {
+      "id": 12,
+      "start": 34.04,
+      "end": 35.16,
+      "text": "Let me see if I can find it."
+    },
+    {
+      "id": 13,
+      "start": 43.68,
+      "end": 46.96,
+      "text": "So this is a paper from a long time ago."
+    },
+    {
+      "id": 14,
+      "start": 49.48,
+      "end": 51.36,
+      "text": "Where they did something like this."
+    },
+    {
+      "id": 15,
+      "start": 53.04,
+      "end": 57.16,
+      "text": "It's evaluating machine translation systems with second language proficiency tests."
+    },
+    {
+      "id": 16,
+      "start": 58.16,
+      "end": 64.16,
+      "text": "And basically what they did is they had these English proficiency tests for,"
+    },
+    {
+      "id": 17,
+      "start": 65.0,
+      "end": 68.48,
+      "text": "I think it was like middle schoolers or high schoolers or something like this."
+    },
+    {
+      "id": 18,
+      "start": 69.04,
+      "end": 72.48,
+      "text": "And then they used machine translation systems to translate them into"
+    },
+    {
+      "id": 19,
+      "start": 72.48,
+      "end": 76.28,
+      "text": "Japanese and then they asked Japanese students to solve them in Japanese."
+    },
+    {
+      "id": 20,
+      "start": 77.08,
+      "end": 80.8,
+      "text": "And so what they did is they asked"
+    },
+    {
+      "id": 21,
+      "start": 81.08,
+      "end": 83.08,
+      "text": "to translate them into Japanese."
+    },
+    {
+      "id": 22,
+      "start": 85.08,
+      "end": 89.08,
+      "text": "Anonymous system G and anonymous system Y, which are Google and Yahoo."
+    },
+    {
+      "id": 23,
+      "start": 92.84,
+      "end": 97.24,
+      "text": "And a human without context in the human with context to translate them."
+    },
+    {
+      "id": 24,
+      "start": 97.24,
+      "end": 100.84,
+      "text": "So they asked humans to translate each sentence without giving any context."
+    },
+    {
+      "id": 25,
+      "start": 101.4,
+      "end": 105.24,
+      "text": "And they asked humans to translate each sentence with giving context."
+    },
+    {
+      "id": 26,
+      "start": 105.96,
+      "end": 110.36,
+      "text": "And what they were able to find was in this case humans with context,"
+    },
+    {
+      "id": 27,
+      "start": 110.92,
+      "end": 113.96,
+      "text": "the Japanese students were able to answer the questions most of the time."
+    },
+    {
+      "id": 28,
+      "start": 115.08,
+      "end": 119.52,
+      "text": "Whereas if they translated without context like G and Y, we're doing it that time."
+    },
+    {
+      "id": 29,
+      "start": 119.84,
+      "end": 124.52,
+      "text": "Actually, why was almost as good as human translators, you know, achieving the task."
+    },
+    {
+      "id": 30,
+      "start": 124.72,
+      "end": 135.04,
+      "text": "So, but basically like the important thing here is they were able to confirm their, you know, idea that in this case humans with context were much better than humans without context."
+    },
+    {
+      "id": 31,
+      "start": 135.04,
+      "end": 137.28,
+      "text": "So that would verify your like some assumption, right?"
+    },
+    {
+      "id": 32,
+      "start": 138.0,
+      "end": 139.92,
+      "text": "And so this is just like one example."
+    },
+    {
+      "id": 33,
+      "start": 141.76,
+      "end": 144.16,
+      "text": "This is just one example of something that you can do."
+    },
+    {
+      "id": 34,
+      "start": 146.16,
+      "end": 152.04,
+      "text": "But the basic idea is like your final result is that you want to build a system that does better on some"
+    },
+    {
+      "id": 35,
+      "start": 152.04,
+      "end": 153.2,
+      "text": "benchmark that you care about."
+    },
+    {
+      "id": 36,
+      "start": 153.24,
+      "end": 160.88,
+      "text": "There's a bunch of things that go into whether it does better or not, your evaluation system, your model, your training data, your training, your evaluation data set."
+    },
+    {
+      "id": 37,
+      "start": 161.84,
+      "end": 162.8,
+      "text": "And things like that."
+    },
+    {
+      "id": 38,
+      "start": 162.8,
+      "end": 168.96,
+      "text": "So can you break that down into some questions that you could ask where you can verify that it's working or not."
+    },
+    {
+      "id": 39,
+      "start": 169.84,
+      "end": 181.12,
+      "text": "Based on whether this is another thing people do in an L oriented things is create a toy dataset where they know the phenomenon they're interested in exists and train their models on that and make sure that they work there."
+    },
+    {
+      "id": 40,
+      "start": 181.68,
+      "end": 183.72,
+      "text": "So that's another thing that you can do."
+    },
+    {
+      "id": 41,
+      "start": 186.76,
+      "end": 188.52,
+      "text": "Cool. Any questions about this?"
+    },
+    {
+      "id": 42,
+      "start": 191.88,
+      "end": 196.0,
+      "text": "So the next thing is running experiments."
+    },
+    {
+      "id": 43,
+      "start": 197.76,
+      "end": 208.96,
+      "text": "So in order to do this, you'll find data that will answer your research question, running experiments and calculate numbers, calculate significant differences and analyze effects."
+    },
+    {
+      "id": 44,
+      "start": 210.76,
+      "end": 214.44,
+      "text": "And so this is a basic pipeline that we want to follow."
+    },
+    {
+      "id": 45,
+      "start": 215.64,
+      "end": 217.04,
+      "text": "So obtaining test data."
+    },
+    {
+      "id": 46,
+      "start": 217.92,
+      "end": 221.68,
+      "text": "So in order to obtain test data, we would like to find data sets."
+    },
+    {
+      "id": 47,
+      "start": 223.44,
+      "end": 230.0,
+      "text": "So if you're building on previous work, the safest thing that you can do is start with the same data sets."
+    },
+    {
+      "id": 48,
+      "start": 230.84,
+      "end": 237.04,
+      "text": "If you're answering a new question, you can think about, can you repurpose other data sets to answer the question."
+    },
+    {
+      "id": 49,
+      "start": 237.04,
+      "end": 243.96,
+      "text": "So very often there will be a data set that is appropriate for answering your question and you can go and find that."
+    },
+    {
+      "id": 50,
+      "start": 244.96,
+      "end": 250.96,
+      "text": "Actually, our wonderful TAVJ has created a system called data finder that will automatically find it for you."
+    },
+    {
+      "id": 51,
+      "start": 250.96,
+      "end": 255.96,
+      "text": "So if you want to search for data sets, you can use the system or ask him about it."
+    },
+    {
+      "id": 52,
+      "start": 256.96,
+      "end": 261.96,
+      "text": "But if no appropriate data set exists, you can create your own."
+    },
+    {
+      "id": 53,
+      "start": 262.96,
+      "end": 269.96,
+      "text": "And particularly if for industry use cases, it's very common that you need to go in and create your own."
+    },
+    {
+      "id": 54,
+      "start": 269.96,
+      "end": 277.96,
+      "text": "Or if you're planning on doing research in academia afterwards, very often you'll come up with a research question where no data set exists. So you'll have to create your own anyway."
+    },
+    {
+      "id": 55,
+      "start": 277.96,
+      "end": 283.96,
+      "text": "So this is something that's really important to be able to do well in most cases."
+    },
+    {
+      "id": 56,
+      "start": 285.96,
+      "end": 287.96,
+      "text": "So I'll be talking about how to do all of this."
+    },
+    {
+      "id": 57,
+      "start": 288.96,
+      "end": 290.96,
+      "text": "So data set lists."
+    },
+    {
+      "id": 58,
+      "start": 290.96,
+      "end": 298.96,
+      "text": "The best one, I think by far in natural language processing nowadays is hugging face data sets."
+    },
+    {
+      "id": 59,
+      "start": 299.96,
+      "end": 302.96,
+      "text": "And there's also other data resources like."
+    },
+    {
+      "id": 60,
+      "start": 303.96,
+      "end": 310.96,
+      "text": "Elra is another one kind of by the more traditional natural language processing community."
+    },
+    {
+      "id": 61,
+      "start": 310.96,
+      "end": 314.96,
+      "text": "There's also the LDC, the linguistic data consortium."
+    },
+    {
+      "id": 62,
+      "start": 314.96,
+      "end": 319.96,
+      "text": "And there are some older, heavily annotated data sets that are only available through those."
+    },
+    {
+      "id": 63,
+      "start": 319.96,
+      "end": 323.96,
+      "text": "It's CMU, you have the ability to download things from LDC."
+    },
+    {
+      "id": 64,
+      "start": 323.96,
+      "end": 327.96,
+      "text": "So if you find an LDC data set and any papers that you're doing are online."
+    },
+    {
+      "id": 65,
+      "start": 327.96,
+      "end": 333.96,
+      "text": "You need to register for that and I'm the person who's in charge of it. So I'll give you access and then."
+    },
+    {
+      "id": 66,
+      "start": 333.96,
+      "end": 336.96,
+      "text": "And then you can use it."
+    },
+    {
+      "id": 67,
+      "start": 336.96,
+      "end": 345.96,
+      "text": "There's also things like papers with code and papers with code basically automatically extracts kind of like the names of data sets. So even some things that don't appear on the place will."
+    },
+    {
+      "id": 68,
+      "start": 349.96,
+      "end": 351.96,
+      "text": "So annotating data."
+    },
+    {
+      "id": 69,
+      "start": 352.96,
+      "end": 359.96,
+      "text": "When you annotate data, you first need to decide how much to annotate sample appropriate data, create annotation guidelines."
+    },
+    {
+      "id": 70,
+      "start": 359.96,
+      "end": 365.96,
+      "text": "Either annotate yourself for higher and supervised annotators in evaluate quality."
+    },
+    {
+      "id": 71,
+      "start": 365.96,
+      "end": 371.96,
+      "text": "So a very common problem that a lot of people ask me is how much test to data do you need."
+    },
+    {
+      "id": 72,
+      "start": 371.96,
+      "end": 386.96,
+      "text": "And I'm going to talk about statistical significance tests in a second, but basically you need to have enough to have a statistically significant difference between methods."
+    },
+    {
+      "id": 73,
+      "start": 386.96,
+      "end": 389.96,
+      "text": "And the way you do this."
+    },
+    {
+      "id": 74,
+      "start": 389.96,
+      "end": 396.96,
+      "text": "Actually, sorry, very quickly. Let me check."
+    },
+    {
+      "id": 75,
+      "start": 396.96,
+      "end": 401.96,
+      "text": "I rearrange my slides and I want to make sure that I didn't accidentally."
+    },
+    {
+      "id": 76,
+      "start": 401.96,
+      "end": 414.96,
+      "text": "I didn't accidentally remove the sides of statistical significance, which would be a problem."
+    },
+    {
+      "id": 77,
+      "start": 414.96,
+      "end": 418.96,
+      "text": "Okay."
+    },
+    {
+      "id": 78,
+      "start": 418.96,
+      "end": 423.96,
+      "text": "Sorry, hang on one second. I just realized that they don't have the size for statistical significance."
+    },
+    {
+      "id": 79,
+      "start": 423.96,
+      "end": 428.96,
+      "text": "I'm this presentation. So let me grab down from the last."
+    },
+    {
+      "id": 80,
+      "start": 428.96,
+      "end": 433.96,
+      "text": "For us."
+    },
+    {
+      "id": 81,
+      "start": 433.96,
+      "end": 436.96,
+      "text": "This is."
+    },
+    {
+      "id": 82,
+      "start": 454.96,
+      "end": 458.96,
+      "text": "Okay. So yeah, let me explain statistical significance here."
+    },
+    {
+      "id": 83,
+      "start": 458.96,
+      "end": 467.96,
+      "text": "So basically when we're doing statistical testing, let's say we have two models with similar accuracies."
+    },
+    {
+      "id": 84,
+      "start": 467.96,
+      "end": 475.96,
+      "text": "And these models with similar accuracies. Let's say model one is a generative model model two is a discriminative model."
+    },
+    {
+      "id": 85,
+      "start": 475.96,
+      "end": 485.96,
+      "text": "And we say on data set one, we have this result on data set two, we have another result on data set three, we have another result."
+    },
+    {
+      "id": 86,
+      "start": 485.96,
+      "end": 501.96,
+      "text": "And so then the question is how can we tell if the differences are due to consistent trends that will hold on other data sets or if they are kind of random noise due to the fact that we have one."
+    },
+    {
+      "id": 87,
+      "start": 501.96,
+      "end": 506.96,
+      "text": "And so the way we do this is through statistical significance testing."
+    },
+    {
+      "id": 88,
+      "start": 506.96,
+      "end": 519.96,
+      "text": "So I'm going to cover this briefly in this class, but you can see a drawer at all for an overview and also we're going to have a recitation on how to actually run statistical significance."
+    },
+    {
+      "id": 89,
+      "start": 519.96,
+      "end": 524.96,
+      "text": "So you can take a look at that there."
+    },
+    {
+      "id": 90,
+      "start": 524.96,
+      "end": 534.96,
+      "text": "And so the basic idea is given a quantity, we test certain values of uncertainty with respect to the quantity."
+    },
+    {
+      "id": 91,
+      "start": 534.96,
+      "end": 538.96,
+      "text": "So number one is a p value."
+    },
+    {
+      "id": 92,
+      "start": 538.96,
+      "end": 544.96,
+      "text": "And the p value is what is the probability that a difference with another quantity is by chance."
+    },
+    {
+      "id": 93,
+      "start": 544.96,
+      "end": 550.96,
+      "text": "And so a lower p value means more like we had a having a significant difference."
+    },
+    {
+      "id": 94,
+      "start": 550.96,
+      "end": 566.96,
+      "text": "Usually the threshold for saying that we have a significant difference is there's a 5% chance 0.05 that this difference between the models was due to chance or like data sampling or things like that."
+    },
+    {
+      "id": 95,
+      "start": 566.96,
+      "end": 574.96,
+      "text": "So p less than 0.05 is kind of a threshold for significance."
+    },
+    {
+      "id": 96,
+      "start": 574.96,
+      "end": 588.96,
+      "text": "Another thing that we can measure is confidence intervals and the confidence interval is what is the range under which we could expect another trial to fall and I'll talk about both of these."
+    },
+    {
+      "id": 97,
+      "start": 588.96,
+      "end": 593.96,
+      "text": "And this is another concept called paired versus unpaired tests."
+    },
+    {
+      "id": 98,
+      "start": 593.96,
+      "end": 602.96,
+      "text": "And in unpaired test, this means we compare the means of a quantity on two unrelated groups."
+    }
+  ],
+  "language": "en"
+}

@@ -1,0 +1,605 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 6.24,
+      "text": "Yeah, today I'll talk about fine tuning and instruction tuning."
+    },
+    {
+      "id": 1,
+      "start": 6.24,
+      "end": 13.08,
+      "text": "So this is kind of the first step in the pipeline of steps that people use to prepare models"
+    },
+    {
+      "id": 2,
+      "start": 13.08,
+      "end": 19.84,
+      "text": "to be ready to be used as champ bots, like what you see in chat GPD or Gemini or whatever"
+    },
+    {
+      "id": 3,
+      "start": 19.84,
+      "end": 24.2,
+      "text": "else you want to be using."
+    },
+    {
+      "id": 4,
+      "start": 24.2,
+      "end": 29.96,
+      "text": "And what this basically takes advantage of is that we have many, many different types"
+    },
+    {
+      "id": 5,
+      "start": 29.96,
+      "end": 34.52,
+      "text": "of different tasks that we can be solving in an LP."
+    },
+    {
+      "id": 6,
+      "start": 34.52,
+      "end": 38.28,
+      "text": "And each requires different varieties of data."
+    },
+    {
+      "id": 7,
+      "start": 38.28,
+      "end": 44.64,
+      "text": "So up until this point, we've talked a lot about the varieties and tasks that only require"
+    },
+    {
+      "id": 8,
+      "start": 44.64,
+      "end": 48.72,
+      "text": "text such as language modeling."
+    },
+    {
+      "id": 9,
+      "start": 48.72,
+      "end": 55.72,
+      "text": "And then we also have other varieties of tasks that require only naturally occurring data."
+    },
+    {
+      "id": 10,
+      "start": 55.72,
+      "end": 59.48,
+      "text": "So like data that we don't actually have to create by hand."
+    },
+    {
+      "id": 11,
+      "start": 59.48,
+      "end": 67.48,
+      "text": "And or that we don't have to create by hand for the purpose of training like language models"
+    },
+    {
+      "id": 12,
+      "start": 67.48,
+      "end": 69.96,
+      "text": "or an LP models."
+    },
+    {
+      "id": 13,
+      "start": 69.96,
+      "end": 72.32,
+      "text": "And this includes stuff like machine translation."
+    },
+    {
+      "id": 14,
+      "start": 72.32,
+      "end": 75.6,
+      "text": "And the reason why we have lots of machine translation data is people do translation"
+    },
+    {
+      "id": 15,
+      "start": 75.6,
+      "end": 80.68,
+      "text": "anyway, even if we didn't have like chat GPD or Google Translator something people"
+    },
+    {
+      "id": 16,
+      "start": 80.68,
+      "end": 81.68,
+      "text": "would be doing translation."
+    },
+    {
+      "id": 17,
+      "start": 81.68,
+      "end": 84.28,
+      "text": "And a lot of this data can be used to train models."
+    },
+    {
+      "id": 18,
+      "start": 85.28,
+      "end": 88.2,
+      "text": "Then other things are hand labeled data."
+    },
+    {
+      "id": 19,
+      "start": 88.2,
+      "end": 96.6,
+      "text": "And so this is like for a lot of things like question answering or other tasks that you"
+    },
+    {
+      "id": 20,
+      "start": 96.6,
+      "end": 101.48,
+      "text": "need to create data like name, density recognition or stuff like this, they are that data really"
+    },
+    {
+      "id": 21,
+      "start": 101.48,
+      "end": 103.52,
+      "text": "mostly isn't naturally occurring."
+    },
+    {
+      "id": 22,
+      "start": 103.52,
+      "end": 109.16,
+      "text": "So we need to go in and actually create it by hand in order to do training."
+    },
+    {
+      "id": 23,
+      "start": 109.16,
+      "end": 113.88,
+      "text": "So like one of the interesting things about you know the whole paradigm of training"
+    },
+    {
+      "id": 24,
+      "start": 113.88,
+      "end": 119.96,
+      "text": "language models over the past several years is that we have been remarkably successful"
+    },
+    {
+      "id": 25,
+      "start": 119.96,
+      "end": 127.08,
+      "text": "in getting models to work at a very large number of tasks by training only on text."
+    },
+    {
+      "id": 26,
+      "start": 127.08,
+      "end": 132.04,
+      "text": "So you know we trained something like Lamar, we trained something like the early GPD models"
+    },
+    {
+      "id": 27,
+      "start": 132.04,
+      "end": 138.04,
+      "text": "that were trained only on text without very much supervised training data."
+    },
+    {
+      "id": 28,
+      "start": 138.04,
+      "end": 142.44,
+      "text": "And the reason why is like what I mentioned last class which is like actually a lot of"
+    },
+    {
+      "id": 29,
+      "start": 142.44,
+      "end": 146.12,
+      "text": "data on the internet just occurs in this form anyway."
+    },
+    {
+      "id": 30,
+      "start": 146.12,
+      "end": 156.56,
+      "text": "So we have things like phrase books that appear online and these phrase books weren't explicitly"
+    },
+    {
+      "id": 31,
+      "start": 156.56,
+      "end": 161.72,
+      "text": "created its machine translation data or translation data even but they appear online."
+    },
+    {
+      "id": 32,
+      "start": 162.12,
+      "end": 173.16,
+      "text": "And there's actually a paper that examines this."
+    },
+    {
+      "id": 33,
+      "start": 179.64,
+      "end": 184.0,
+      "text": "That I didn't cite in the slides but it's a kind of interesting paper from AC all this"
+    },
+    {
+      "id": 34,
+      "start": 184.0,
+      "end": 191.64,
+      "text": "year where they find that despite the fact that there's a language model that was trained"
+    },
+    {
+      "id": 35,
+      "start": 192.28,
+      "end": 198.68,
+      "text": "just random data from the web they found over 30 million translation pairs across at least 44"
+    },
+    {
+      "id": 36,
+      "start": 198.68,
+      "end": 205.08,
+      "text": "languages in this data that was just like straight from the web not explicitly for translation."
+    },
+    {
+      "id": 37,
+      "start": 205.88,
+      "end": 212.36,
+      "text": "And so there's lots of other examples of this you know clustering answer pairs from FAQ pages"
+    },
+    {
+      "id": 38,
+      "start": 212.36,
+      "end": 219.96,
+      "text": "on sites or other things like that. So but anyway yeah getting back to the original the original"
+    },
+    {
+      "id": 39,
+      "start": 219.96,
+      "end": 225.64,
+      "text": "thing here in many cases your models will have already been exposed to some data."
+    },
+    {
+      "id": 40,
+      "start": 227.0,
+      "end": 232.28,
+      "text": "There's some naturally occurring data that you can harvesting curate in an appropriate way"
+    },
+    {
+      "id": 41,
+      "start": 232.28,
+      "end": 236.36,
+      "text": "and then sometimes if you really want models to do something well you can do them but that's"
+    },
+    {
+      "id": 42,
+      "start": 236.36,
+      "end": 239.0,
+      "text": "very expensive and you're not going to be able to create very much data."
+    },
+    {
+      "id": 43,
+      "start": 240.92,
+      "end": 249.16,
+      "text": "So one very funny thing is I was playing around with the GPK for translation and I asked"
+    },
+    {
+      "id": 44,
+      "start": 249.32,
+      "end": 256.6,
+      "text": "it to translate from English to Japanese and it did really well most of the time it didn't you know"
+    },
+    {
+      "id": 45,
+      "start": 256.6,
+      "end": 263.72,
+      "text": "very good translations and English to Japanese in like 900 out of the 1000 examples."
+    },
+    {
+      "id": 46,
+      "start": 263.72,
+      "end": 267.32,
+      "text": "Sometimes it just got it wrong because it sounded like a translation system but every once in a"
+    },
+    {
+      "id": 47,
+      "start": 267.32,
+      "end": 272.76,
+      "text": "while we're translating to Japanese which is in Japanese characters and then it would translate"
+    },
+    {
+      "id": 48,
+      "start": 273.32,
+      "end": 276.28,
+      "text": "Romanized Japanese into like the pronunciation."
+    },
+    {
+      "id": 49,
+      "start": 278.44,
+      "end": 283.96,
+      "text": "So no Japanese translate that you asked to translate into Japanese would ever do that."
+    },
+    {
+      "id": 50,
+      "start": 283.96,
+      "end": 288.04,
+      "text": "That would be like extremely unprofessional right you know you're saying translate this into"
+    },
+    {
+      "id": 51,
+      "start": 288.04,
+      "end": 293.72,
+      "text": "Japanese for Japanese speakers but why would GPK do this? Anyone have any ideas?"
+    },
+    {
+      "id": 52,
+      "start": 297.48,
+      "end": 302.44,
+      "text": "Yeah someone on the internet did it that way."
+    },
+    {
+      "id": 53,
+      "start": 302.44,
+      "end": 307.72,
+      "text": "So a lot of the times when you have incidental training data on the internet it would be from"
+    },
+    {
+      "id": 54,
+      "start": 307.72,
+      "end": 312.04,
+      "text": "like phrase books and people who are trying to teach Japanese for example. So every once in a while"
+    },
+    {
+      "id": 55,
+      "start": 312.68,
+      "end": 317.48,
+      "text": "like GPK got the idea that it should be translating like it did in the phrase book for Japanese"
+    },
+    {
+      "id": 56,
+      "start": 317.48,
+      "end": 323.48,
+      "text": "languages. Suppose the you know like actually English to Japanese translation. So the problem is"
+    },
+    {
+      "id": 57,
+      "start": 323.48,
+      "end": 328.92,
+      "text": "if you're learning only on this language modeling based text you might get exactly what you want"
+    },
+    {
+      "id": 58,
+      "start": 328.92,
+      "end": 332.84,
+      "text": "but every once in a while you get something completely crazy that you never expected to happen."
+    },
+    {
+      "id": 59,
+      "start": 332.84,
+      "end": 337.88,
+      "text": "So that's the problem with just relying on based language models."
+    },
+    {
+      "id": 60,
+      "start": 342.12,
+      "end": 348.6,
+      "text": "So the all the methods that I'm going to be talking about here fall in under the class of"
+    },
+    {
+      "id": 61,
+      "start": 348.6,
+      "end": 354.76,
+      "text": "multi-cast learning and so multi-cast learning is training models to do well on multiple tasks at once."
+    },
+    {
+      "id": 62,
+      "start": 355.72,
+      "end": 360.68,
+      "text": "Just to give an example you could have this as an example and you could be doing language modeling"
+    },
+    {
+      "id": 63,
+      "start": 360.68,
+      "end": 365.24,
+      "text": "on it you could also be training a model to do tagging on it and other things like this. And exactly"
+    },
+    {
+      "id": 64,
+      "start": 365.24,
+      "end": 373.48,
+      "text": "how you do this can be different but the important thing is that you have some shared parameters"
+    },
+    {
+      "id": 65,
+      "start": 373.48,
+      "end": 378.36,
+      "text": "between the models that are trained on all tasks and if you're just training a big language"
+    },
+    {
+      "id": 66,
+      "start": 378.36,
+      "end": 382.52,
+      "text": "model then you'll probably be sharing all of the parameters. If you're training a"
+    },
+    {
+      "id": 67,
+      "start": 382.92,
+      "end": 389.08,
+      "text": "something like BERT or like you're you're pre training in the then fine tuning you might train the"
+    },
+    {
+      "id": 68,
+      "start": 389.08,
+      "end": 394.28,
+      "text": "body of the model on multiple tasks but have a separate classification for different tasks. So"
+    },
+    {
+      "id": 69,
+      "start": 394.84,
+      "end": 399.32,
+      "text": "there's different ways you can do that but the basic idea is that you need to have lots of shared parameters."
+    },
+    {
+      "id": 70,
+      "start": 401.8,
+      "end": 409.16,
+      "text": "One easy way to do this the very simplest way to do this is to train the model in sample one"
+    },
+    {
+      "id": 71,
+      "start": 409.16,
+      "end": 414.04,
+      "text": "mini batch for one task another mini batch for another task and just alternate between them"
+    },
+    {
+      "id": 72,
+      "start": 414.68,
+      "end": 421.32,
+      "text": "alternate between them in sample four from one task and one from another task so it's often"
+    },
+    {
+      "id": 73,
+      "start": 421.32,
+      "end": 428.68,
+      "text": "as simple as that. Or you can just sorry or you can just mix all of the data together so if you're"
+    },
+    {
+      "id": 74,
+      "start": 428.68,
+      "end": 433.64,
+      "text": "doing like text everything is text-based then you don't even need to worry about mini batches."
+    },
+    {
+      "id": 75,
+      "start": 434.52,
+      "end": 443.24,
+      "text": "Cool so separately from this a pre-trained and fine tune so in pre-trained and fine tune you first"
+    },
+    {
+      "id": 76,
+      "start": 443.24,
+      "end": 448.92,
+      "text": "train on one task and then on another and the way this works is you first train for example language"
+    },
+    {
+      "id": 77,
+      "start": 448.92,
+      "end": 455.48,
+      "text": "modeling objective and then after you're done training the language modeling objective you train"
+    },
+    {
+      "id": 78,
+      "start": 455.48,
+      "end": 462.92,
+      "text": "on something else like tagging and there's several reasons why you might want to do this is"
+    },
+    {
+      "id": 79,
+      "start": 462.92,
+      "end": 468.36,
+      "text": "does anyone have an idea about why you might want to do this? It is opposed to something like"
+    },
+    {
+      "id": 80,
+      "start": 468.36,
+      "end": 473.8,
+      "text": "standard multitask learning where you do both of them at the same time. This is a straightforward"
+    },
+    {
+      "id": 81,
+      "start": 473.8,
+      "end": 481.8,
+      "text": "question perhaps but now when I say straightforward I don't mean easy I mean not a correct question."
+    },
+    {
+      "id": 82,
+      "start": 484.44,
+      "end": 485.08,
+      "text": "Any ideas?"
+    },
+    {
+      "id": 83,
+      "start": 485.16,
+      "end": 496.28,
+      "text": "Okay how many of you have trained a 70 billion parameter language model from scratch?"
+    },
+    {
+      "id": 84,
+      "start": 499.8,
+      "end": 505.8,
+      "text": "I see somebody saying maybe so that's actually pretty impressive but why not?"
+    },
+    {
+      "id": 85,
+      "start": 505.88,
+      "end": 515.96,
+      "text": "Yeah it's an unbelievable it's unbelievably expensive and a waste of resources yeah so like if"
+    },
+    {
+      "id": 86,
+      "start": 515.96,
+      "end": 520.92,
+      "text": "everybody was doing it it would be a waste of resources so we actually benefit a lot by a very"
+    },
+    {
+      "id": 87,
+      "start": 520.92,
+      "end": 527.88,
+      "text": "small number of people doing this pre-training and then the rest of us doing fine tuning on a"
+    },
+    {
+      "id": 88,
+      "start": 527.88,
+      "end": 534.12,
+      "text": "smaller amount of data so if you were doing all the multitasking from scratch then that could be a waste."
+    },
+    {
+      "id": 89,
+      "start": 535.96,
+      "end": 538.76,
+      "text": "Does anyone have an idea why you might not want to do this?"
+    },
+    {
+      "id": 90,
+      "start": 542.6,
+      "end": 547.8,
+      "text": "Or actually there's some other reasons why you might want to do this. Another reason why you might"
+    },
+    {
+      "id": 91,
+      "start": 547.8,
+      "end": 553.8,
+      "text": "want to do this is for example if your pre-training data is big and messy like for example if your"
+    },
+    {
+      "id": 92,
+      "start": 553.8,
+      "end": 559.8,
+      "text": "pre-training data is all of the internet and the internet contains like lots of toxic text"
+    },
+    {
+      "id": 93,
+      "start": 559.8,
+      "end": 564.28,
+      "text": "and text that's in a format that you don't want you can still train on it and learn from it"
+    },
+    {
+      "id": 94,
+      "start": 564.36,
+      "end": 570.44,
+      "text": "but then fine tuning can you know make your model safer or remove toxicity or other stuff like that as"
+    },
+    {
+      "id": 95,
+      "start": 570.44,
+      "end": 576.84,
+      "text": "well so does anyone have an idea why you might not want to do this? This is a trickier question."
+    },
+    {
+      "id": 96,
+      "start": 581.08,
+      "end": 581.8,
+      "text": "Any ideas?"
+    },
+    {
+      "id": 97,
+      "start": 586.2,
+      "end": 591.0,
+      "text": "Or to put it in a different way why you might want to do standard multitasking instead of this?"
+    },
+    {
+      "id": 98,
+      "start": 591.96,
+      "end": 597.08,
+      "text": "Yeah, just like that. So if you don't have to much something tracking data for example"
+    },
+    {
+      "id": 99,
+      "start": 597.56,
+      "end": 601.0,
+      "text": "and you might consider like doing this"
+    }
+  ],
+  "language": "en"
+}

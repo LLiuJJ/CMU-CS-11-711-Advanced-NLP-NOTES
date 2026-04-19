@@ -1,0 +1,1223 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 4.2,
+      "text": "start from there, you can look at what companies are doing"
+    },
+    {
+      "id": 1,
+      "start": 4.2,
+      "end": 8.0,
+      "text": "in their tech demos, because the tech demos might be nice,"
+    },
+    {
+      "id": 2,
+      "start": 8.0,
+      "end": 11.72,
+      "text": "but they almost never work as well as the tech demo"
+    },
+    {
+      "id": 3,
+      "start": 11.72,
+      "end": 12.92,
+      "text": "makes them seem like they work."
+    },
+    {
+      "id": 4,
+      "start": 12.92,
+      "end": 16.88,
+      "text": "So there could be another place to get ideas."
+    },
+    {
+      "id": 5,
+      "start": 16.88,
+      "end": 18.96,
+      "text": "Where you can look at papers in a related field,"
+    },
+    {
+      "id": 6,
+      "start": 18.96,
+      "end": 19.8,
+      "text": "like machine learning."
+    },
+    {
+      "id": 7,
+      "start": 19.8,
+      "end": 21.96,
+      "text": "Like let's say you're a machine learning oriented person,"
+    },
+    {
+      "id": 8,
+      "start": 21.96,
+      "end": 24.84,
+      "text": "and you really love math and stuff like that."
+    },
+    {
+      "id": 9,
+      "start": 24.84,
+      "end": 27.04,
+      "text": "So like, well, there's this good mathematical tool"
+    },
+    {
+      "id": 10,
+      "start": 27.04,
+      "end": 30.52,
+      "text": "that I think could be applicable to a certain problem"
+    },
+    {
+      "id": 11,
+      "start": 30.52,
+      "end": 31.8,
+      "text": "in all the years and stuff like that."
+    },
+    {
+      "id": 12,
+      "start": 31.8,
+      "end": 34.16,
+      "text": "So you can do that too."
+    },
+    {
+      "id": 13,
+      "start": 34.16,
+      "end": 36.68,
+      "text": "The final one comes with all the caveats"
+    },
+    {
+      "id": 14,
+      "start": 36.68,
+      "end": 38.16,
+      "text": "of doing tap down research, of course."
+    },
+    {
+      "id": 15,
+      "start": 38.16,
+      "end": 40.52,
+      "text": "So you need to make sure that that really"
+    },
+    {
+      "id": 16,
+      "start": 40.52,
+      "end": 42.76,
+      "text": "is a correct tool for whatever you want to sell."
+    },
+    {
+      "id": 17,
+      "start": 42.76,
+      "end": 47.28,
+      "text": "But indefinitely, this is something to think about."
+    },
+    {
+      "id": 18,
+      "start": 47.28,
+      "end": 50.68,
+      "text": "However, for assignment three, you need to do a survey."
+    },
+    {
+      "id": 19,
+      "start": 50.68,
+      "end": 53.92,
+      "text": "So I'm forcing you to do a survey for assignment three."
+    },
+    {
+      "id": 20,
+      "start": 53.92,
+      "end": 55.36,
+      "text": "So if you're going to do something like this,"
+    },
+    {
+      "id": 21,
+      "start": 55.36,
+      "end": 56.8,
+      "text": "you can do it before assignment three"
+    },
+    {
+      "id": 22,
+      "start": 56.8,
+      "end": 58.68,
+      "text": "and start thinking about what you want to be doing."
+    },
+    {
+      "id": 23,
+      "start": 58.68,
+      "end": 60.36,
+      "text": "So, it depends."
+    },
+    {
+      "id": 24,
+      "start": 60.36,
+      "end": 61.68,
+      "text": "It's a good thing."
+    },
+    {
+      "id": 25,
+      "start": 61.68,
+      "end": 63.92,
+      "text": "So, I'm concerned."
+    },
+    {
+      "id": 26,
+      "start": 63.92,
+      "end": 68.0,
+      "text": "Any questions or discussion about that part?"
+    },
+    {
+      "id": 27,
+      "start": 68.0,
+      "end": 68.68,
+      "text": "This is hard."
+    },
+    {
+      "id": 28,
+      "start": 68.68,
+      "end": 74.68,
+      "text": "I'm happy to discuss either now or in the office hours"
+    },
+    {
+      "id": 29,
+      "start": 74.68,
+      "end": 75.88,
+      "text": "or anything like this."
+    },
+    {
+      "id": 30,
+      "start": 78.84,
+      "end": 81.88,
+      "text": "OK, cool."
+    },
+    {
+      "id": 31,
+      "start": 81.88,
+      "end": 84.4,
+      "text": "So the next thing is a form hypothesis."
+    },
+    {
+      "id": 32,
+      "start": 84.4,
+      "end": 88.8,
+      "text": "So once you have done, you have a general idea"
+    },
+    {
+      "id": 33,
+      "start": 88.8,
+      "end": 93.16,
+      "text": "of what you want to do and you have done a survey of related work,"
+    },
+    {
+      "id": 34,
+      "start": 93.16,
+      "end": 97.08,
+      "text": "you can devise a final research question or hypothesis."
+    },
+    {
+      "id": 35,
+      "start": 97.08,
+      "end": 101.36,
+      "text": "And so a research question is one"
+    },
+    {
+      "id": 36,
+      "start": 101.36,
+      "end": 104.0,
+      "text": "or several explicit questions regarding the thing"
+    },
+    {
+      "id": 37,
+      "start": 104.0,
+      "end": 106.28,
+      "text": "that you want to know."
+    },
+    {
+      "id": 38,
+      "start": 106.28,
+      "end": 109.96,
+      "text": "And this is actually pretty hard for people."
+    },
+    {
+      "id": 39,
+      "start": 109.96,
+      "end": 112.04,
+      "text": "Like I asked people to write research questions."
+    },
+    {
+      "id": 40,
+      "start": 112.04,
+      "end": 114.32,
+      "text": "And very often, they don't write research questions"
+    },
+    {
+      "id": 41,
+      "start": 114.32,
+      "end": 115.16,
+      "text": "in this format."
+    },
+    {
+      "id": 42,
+      "start": 115.16,
+      "end": 118.56,
+      "text": "And they have to ask people to try to change them."
+    },
+    {
+      "id": 43,
+      "start": 118.56,
+      "end": 123.12,
+      "text": "And what they, I think they in general should be"
+    },
+    {
+      "id": 44,
+      "start": 123.12,
+      "end": 125.2,
+      "text": "are yes, no questions."
+    },
+    {
+      "id": 45,
+      "start": 125.2,
+      "end": 129.2,
+      "text": "So yes, no questions."
+    },
+    {
+      "id": 46,
+      "start": 129.2,
+      "end": 134.44,
+      "text": "And you have a hypothesis about what you think the answer"
+    },
+    {
+      "id": 47,
+      "start": 134.44,
+      "end": 136.84,
+      "text": "to the question may be a priori."
+    },
+    {
+      "id": 48,
+      "start": 136.84,
+      "end": 139.2,
+      "text": "And then a hypothesis should be falsified."
+    },
+    {
+      "id": 49,
+      "start": 139.2,
+      "end": 142.28,
+      "text": "So basically, if you get a certain result,"
+    },
+    {
+      "id": 50,
+      "start": 142.28,
+      "end": 144.76,
+      "text": "you can demonstrate that the answer to this question"
+    },
+    {
+      "id": 51,
+      "start": 144.76,
+      "end": 146.04,
+      "text": "is probably yes."
+    },
+    {
+      "id": 52,
+      "start": 146.04,
+      "end": 147.32,
+      "text": "If you get a different result, you"
+    },
+    {
+      "id": 53,
+      "start": 147.32,
+      "end": 149.76,
+      "text": "can demonstrate that the answer to the question is probably"
+    },
+    {
+      "id": 54,
+      "start": 149.76,
+      "end": 151.08,
+      "text": "no."
+    },
+    {
+      "id": 55,
+      "start": 151.08,
+      "end": 153.08,
+      "text": "And just to make this a little bit more"
+    },
+    {
+      "id": 56,
+      "start": 153.08,
+      "end": 157.08,
+      "text": "concrete, I can give a few curiosity-driven questions"
+    },
+    {
+      "id": 57,
+      "start": 157.08,
+      "end": 159.52,
+      "text": "and hypotheses."
+    },
+    {
+      "id": 58,
+      "start": 159.52,
+      "end": 162.76,
+      "text": "The curiosity-driven questions are a little bit easier."
+    },
+    {
+      "id": 59,
+      "start": 162.76,
+      "end": 166.88,
+      "text": "So we have the curiosity-driven question"
+    },
+    {
+      "id": 60,
+      "start": 166.88,
+      "end": 168.84,
+      "text": "of are all language models?"
+    },
+    {
+      "id": 61,
+      "start": 168.84,
+      "end": 171.96,
+      "text": "Are all languages equally hard to language model?"
+    },
+    {
+      "id": 62,
+      "start": 171.96,
+      "end": 178.28,
+      "text": "And they say it is unlikely that all languages are equally"
+    },
+    {
+      "id": 63,
+      "start": 178.28,
+      "end": 181.56,
+      "text": "easy or that methods are equally good in all languages."
+    },
+    {
+      "id": 64,
+      "start": 181.56,
+      "end": 183.52,
+      "text": "So that's their hypothesis."
+    },
+    {
+      "id": 65,
+      "start": 183.52,
+      "end": 186.76,
+      "text": "So they think a priori that that's the case."
+    },
+    {
+      "id": 66,
+      "start": 186.76,
+      "end": 189.96,
+      "text": "But that might be falsified by getting a very strong result"
+    },
+    {
+      "id": 67,
+      "start": 189.96,
+      "end": 193.8,
+      "text": "that says no matter which language you're modeling,"
+    },
+    {
+      "id": 68,
+      "start": 193.8,
+      "end": 199.84,
+      "text": "many models that we use get some results in."
+    },
+    {
+      "id": 69,
+      "start": 199.84,
+      "end": 202.96,
+      "text": "What makes a particular podcast broadly engaging?"
+    },
+    {
+      "id": 70,
+      "start": 202.96,
+      "end": 206.12,
+      "text": "So this was an analysis of podcasts"
+    },
+    {
+      "id": 71,
+      "start": 206.12,
+      "end": 211.4,
+      "text": "where they compared popular podcasts and unpopular podcasts"
+    },
+    {
+      "id": 72,
+      "start": 211.4,
+      "end": 214.4,
+      "text": "or engaging in unengaging podcasts."
+    },
+    {
+      "id": 73,
+      "start": 214.4,
+      "end": 216.88,
+      "text": "And it says, tips such as reducing filler"
+    },
+    {
+      "id": 74,
+      "start": 216.88,
+      "end": 220.12,
+      "text": "words and disfluencies or incorporating emotion"
+    },
+    {
+      "id": 75,
+      "start": 220.12,
+      "end": 222.36,
+      "text": "are things that people had anecdotally written"
+    },
+    {
+      "id": 76,
+      "start": 222.36,
+      "end": 225.16,
+      "text": "on the internet as tips to make a good podcast."
+    },
+    {
+      "id": 77,
+      "start": 225.16,
+      "end": 228.28,
+      "text": "But nobody had actually empirically validated that."
+    },
+    {
+      "id": 78,
+      "start": 228.28,
+      "end": 231.28,
+      "text": "So they wanted to actually go into invalidating that."
+    },
+    {
+      "id": 79,
+      "start": 231.28,
+      "end": 233.56,
+      "text": "So they came up with hypotheses and they"
+    },
+    {
+      "id": 80,
+      "start": 233.56,
+      "end": 234.96,
+      "text": "could demonstrate that those had going"
+    },
+    {
+      "id": 81,
+      "start": 234.96,
+      "end": 237.24,
+      "text": "to a bad correlation with the podcast being judged"
+    },
+    {
+      "id": 82,
+      "start": 237.24,
+      "end": 237.84,
+      "text": "as engaging."
+    },
+    {
+      "id": 83,
+      "start": 241.52,
+      "end": 243.64,
+      "text": "Application-driven questions in hypotheses"
+    },
+    {
+      "id": 84,
+      "start": 243.64,
+      "end": 245.12,
+      "text": "are a little bit harder."
+    },
+    {
+      "id": 85,
+      "start": 245.12,
+      "end": 252.32,
+      "text": "So here is an example."
+    },
+    {
+      "id": 86,
+      "start": 252.32,
+      "end": 255.76,
+      "text": "This is an example from a paper that I wrote previously,"
+    },
+    {
+      "id": 87,
+      "start": 255.76,
+      "end": 261.44,
+      "text": "which was where and why or how and why"
+    },
+    {
+      "id": 88,
+      "start": 261.44,
+      "end": 266.12,
+      "text": "do pre-trained word embeddings help neural machine"
+    },
+    {
+      "id": 89,
+      "start": 266.12,
+      "end": 267.52,
+      "text": "translation?"
+    },
+    {
+      "id": 90,
+      "start": 267.52,
+      "end": 270.08,
+      "text": "And this was back when pre-training was mostly"
+    },
+    {
+      "id": 91,
+      "start": 270.08,
+      "end": 271.0,
+      "text": "like word embeddings."
+    },
+    {
+      "id": 92,
+      "start": 271.0,
+      "end": 274.48,
+      "text": "We weren't pre-training the whole body of the neural net."
+    },
+    {
+      "id": 93,
+      "start": 274.48,
+      "end": 277.88,
+      "text": "So now the answers to this question"
+    },
+    {
+      "id": 94,
+      "start": 277.88,
+      "end": 279.0,
+      "text": "are a little bit different."
+    },
+    {
+      "id": 95,
+      "start": 279.0,
+      "end": 281.24,
+      "text": "But basically, the questions that we asked"
+    },
+    {
+      "id": 96,
+      "start": 281.24,
+      "end": 283.68,
+      "text": "is the behavior of pre-training affected"
+    },
+    {
+      "id": 97,
+      "start": 283.68,
+      "end": 286.8,
+      "text": "by language families and other linguistic features"
+    },
+    {
+      "id": 98,
+      "start": 286.8,
+      "end": 288.88,
+      "text": "of source and target languages."
+    },
+    {
+      "id": 99,
+      "start": 288.88,
+      "end": 294.2,
+      "text": "So we expected that the answer to this would be yes."
+    },
+    {
+      "id": 100,
+      "start": 294.2,
+      "end": 295.76,
+      "text": "It would vary across them."
+    },
+    {
+      "id": 101,
+      "start": 295.76,
+      "end": 297.44,
+      "text": "Do pre-trained embeddings help more"
+    },
+    {
+      "id": 102,
+      "start": 297.44,
+      "end": 299.0,
+      "text": "when the size of the training data is small?"
+    },
+    {
+      "id": 103,
+      "start": 299.0,
+      "end": 301.44,
+      "text": "We expected that this would be yes."
+    },
+    {
+      "id": 104,
+      "start": 301.44,
+      "end": 303.52,
+      "text": "How much does the similarity of the source and target"
+    },
+    {
+      "id": 105,
+      "start": 303.52,
+      "end": 307.32,
+      "text": "languages affect the efficacy of using pre-trained embeddings?"
+    },
+    {
+      "id": 106,
+      "start": 307.32,
+      "end": 311.56,
+      "text": "We didn't have a hypothesis about whether it would or not."
+    },
+    {
+      "id": 107,
+      "start": 311.56,
+      "end": 314.28,
+      "text": "And is it helpful to align the embedding spaces"
+    },
+    {
+      "id": 108,
+      "start": 314.28,
+      "end": 316.0,
+      "text": "between the source and target languages"
+    },
+    {
+      "id": 109,
+      "start": 316.0,
+      "end": 318.0,
+      "text": "we assume this would be yes?"
+    },
+    {
+      "id": 110,
+      "start": 318.0,
+      "end": 319.32,
+      "text": "And do pre-trained embeddings help"
+    },
+    {
+      "id": 111,
+      "start": 319.32,
+      "end": 322.28,
+      "text": "more in multilingual systems is compared to bilingual systems."
+    },
+    {
+      "id": 112,
+      "start": 322.28,
+      "end": 324.4,
+      "text": "And we didn't have a good hypothesis about that."
+    },
+    {
+      "id": 113,
+      "start": 324.4,
+      "end": 327.4,
+      "text": "That's right."
+    },
+    {
+      "id": 114,
+      "start": 327.4,
+      "end": 332.68,
+      "text": "Another one is, although research question of weather"
+    },
+    {
+      "id": 115,
+      "start": 332.68,
+      "end": 336.2,
+      "text": "and how contextual information benefits"
+    },
+    {
+      "id": 116,
+      "start": 336.2,
+      "end": 339.68,
+      "text": "end-to-end speech translation has received little attention."
+    },
+    {
+      "id": 117,
+      "start": 339.68,
+      "end": 344.4,
+      "text": "And so their guess was that it probably would help."
+    },
+    {
+      "id": 118,
+      "start": 344.4,
+      "end": 349.44,
+      "text": "So application-oriented questions are a little bit tricky."
+    },
+    {
+      "id": 119,
+      "start": 349.44,
+      "end": 353.84,
+      "text": "Because the obvious one is does make why better."
+    },
+    {
+      "id": 120,
+      "start": 353.84,
+      "end": 355.84,
+      "text": "And so you have a method."
+    },
+    {
+      "id": 121,
+      "start": 355.84,
+      "end": 358.2,
+      "text": "You think it's going to make the output better."
+    },
+    {
+      "id": 122,
+      "start": 358.2,
+      "end": 361.56,
+      "text": "And so that's kind of your obvious research question."
+    },
+    {
+      "id": 123,
+      "start": 361.56,
+      "end": 363.6,
+      "text": "But the problem is the above question"
+    },
+    {
+      "id": 124,
+      "start": 363.6,
+      "end": 366.64,
+      "text": "or hypothesis is natural, but it's very indirect."
+    },
+    {
+      "id": 125,
+      "start": 366.64,
+      "end": 368.6,
+      "text": "So normally, you also have the hypothesis"
+    },
+    {
+      "id": 126,
+      "start": 368.6,
+      "end": 372.24,
+      "text": "about why it will help or something like this."
+    },
+    {
+      "id": 127,
+      "start": 372.24,
+      "end": 376.72,
+      "text": "And so if the answer is no after your experiments,"
+    },
+    {
+      "id": 128,
+      "start": 376.72,
+      "end": 380.2,
+      "text": "why is the answer no?"
+    },
+    {
+      "id": 129,
+      "start": 380.2,
+      "end": 382.48,
+      "text": "It could be that your original assumption"
+    },
+    {
+      "id": 130,
+      "start": 382.48,
+      "end": 386.2,
+      "text": "about why a particular method would help was wrong,"
+    },
+    {
+      "id": 131,
+      "start": 386.2,
+      "end": 388.04,
+      "text": "which is the worst case scenario."
+    },
+    {
+      "id": 132,
+      "start": 388.04,
+      "end": 389.92,
+      "text": "But you also could just have a bug in your code"
+    },
+    {
+      "id": 133,
+      "start": 389.92,
+      "end": 394.88,
+      "text": "or your dataset, your test set might not be large enough."
+    },
+    {
+      "id": 134,
+      "start": 394.88,
+      "end": 397.0,
+      "text": "So you wouldn't be able to get a statistically significant"
+    },
+    {
+      "id": 135,
+      "start": 397.0,
+      "end": 400.64,
+      "text": "result based on the amount that it helped you improve"
+    },
+    {
+      "id": 136,
+      "start": 400.64,
+      "end": 402.52,
+      "text": "or other things like that."
+    },
+    {
+      "id": 137,
+      "start": 402.52,
+      "end": 406.36,
+      "text": "So what I like to do in this case is try"
+    },
+    {
+      "id": 138,
+      "start": 406.36,
+      "end": 411.12,
+      "text": "to come up with the information about why X will make Y better."
+    },
+    {
+      "id": 139,
+      "start": 411.12,
+      "end": 413.32,
+      "text": "And can you think of other research questions"
+    },
+    {
+      "id": 140,
+      "start": 413.32,
+      "end": 416.52,
+      "text": "or hypotheses that confirm or falsify these assumptions?"
+    },
+    {
+      "id": 141,
+      "start": 416.52,
+      "end": 422.36,
+      "text": "So some things that you can do are come up with like toy data"
+    },
+    {
+      "id": 142,
+      "start": 422.36,
+      "end": 425.2,
+      "text": "or come up with a subset of the data where you think"
+    },
+    {
+      "id": 143,
+      "start": 425.2,
+      "end": 426.84,
+      "text": "this might be correct."
+    },
+    {
+      "id": 144,
+      "start": 426.84,
+      "end": 429.24,
+      "text": "So just give an example."
+    },
+    {
+      "id": 145,
+      "start": 429.24,
+      "end": 432.0,
+      "text": "Let's say we have a translation model"
+    },
+    {
+      "id": 146,
+      "start": 432.0,
+      "end": 436.56,
+      "text": "and we have a hypothesis that improving entity translation"
+    },
+    {
+      "id": 147,
+      "start": 436.56,
+      "end": 440.04,
+      "text": "in low resource languages will improve translation accuracy."
+    },
+    {
+      "id": 148,
+      "start": 440.04,
+      "end": 442.12,
+      "text": "And we run an experiment or actually,"
+    },
+    {
+      "id": 149,
+      "start": 442.12,
+      "end": 444.16,
+      "text": "maybe this is an even better one."
+    },
+    {
+      "id": 150,
+      "start": 444.16,
+      "end": 448.04,
+      "text": "We have a hypothesis that incorporating contextual information"
+    },
+    {
+      "id": 151,
+      "start": 448.04,
+      "end": 452.28,
+      "text": "and speech translation will help translation results."
+    },
+    {
+      "id": 152,
+      "start": 452.28,
+      "end": 456.44,
+      "text": "So incorporating context in machine translation"
+    },
+    {
+      "id": 153,
+      "start": 456.44,
+      "end": 460.16,
+      "text": "has been a very old topic."
+    },
+    {
+      "id": 154,
+      "start": 460.16,
+      "end": 462.32,
+      "text": "When people have been trying to do this for a very long time,"
+    },
+    {
+      "id": 155,
+      "start": 462.32,
+      "end": 467.16,
+      "text": "but for a long time, the conclusion was that it essentially"
+    },
+    {
+      "id": 156,
+      "start": 467.16,
+      "end": 468.52,
+      "text": "wasn't helping translation."
+    },
+    {
+      "id": 157,
+      "start": 468.52,
+      "end": 470.8,
+      "text": "People would incorporate context through neural networks"
+    },
+    {
+      "id": 158,
+      "start": 470.8,
+      "end": 471.8,
+      "text": "or other things like that."
+    },
+    {
+      "id": 159,
+      "start": 471.8,
+      "end": 475.52,
+      "text": "It just wasn't improving the result significantly."
+    },
+    {
+      "id": 160,
+      "start": 475.52,
+      "end": 478.64,
+      "text": "And in the end, the reason why was because they're just"
+    },
+    {
+      "id": 161,
+      "start": 478.64,
+      "end": 482.4,
+      "text": "weren't enough examples where contextual information was"
+    },
+    {
+      "id": 162,
+      "start": 482.4,
+      "end": 484.56,
+      "text": "useful in the data sets that everybody was using."
+    },
+    {
+      "id": 163,
+      "start": 484.56,
+      "end": 489.72,
+      "text": "So people were using really long news sentences"
+    },
+    {
+      "id": 164,
+      "start": 489.72,
+      "end": 493.72,
+      "text": "to try to figure out whether context was helping."
+    },
+    {
+      "id": 165,
+      "start": 493.72,
+      "end": 496.16,
+      "text": "But really long news sentences have so much information"
+    },
+    {
+      "id": 166,
+      "start": 496.16,
+      "end": 498.16,
+      "text": "included in them that you can mostly translate"
+    },
+    {
+      "id": 167,
+      "start": 498.16,
+      "end": 503.08,
+      "text": "sentence by sentence and get it right like 95% of the time."
+    },
+    {
+      "id": 168,
+      "start": 503.08,
+      "end": 505.6,
+      "text": "So the problem wasn't that any of the methods"
+    },
+    {
+      "id": 169,
+      "start": 505.6,
+      "end": 507.12,
+      "text": "that people were proposing were bad."
+    },
+    {
+      "id": 170,
+      "start": 507.2,
+      "end": 510.92,
+      "text": "It was just that they weren't effective enough"
+    },
+    {
+      "id": 171,
+      "start": 510.92,
+      "end": 513.2,
+      "text": "to see big enough results."
+    },
+    {
+      "id": 172,
+      "start": 513.2,
+      "end": 515.04,
+      "text": "And so then people changed the data set"
+    },
+    {
+      "id": 173,
+      "start": 515.04,
+      "end": 517.12,
+      "text": "to like conversations or something like that."
+    },
+    {
+      "id": 174,
+      "start": 517.12,
+      "end": 519.52,
+      "text": "And in conversations, they're very contextual."
+    },
+    {
+      "id": 175,
+      "start": 519.52,
+      "end": 521.12,
+      "text": "You have very short utterances."
+    },
+    {
+      "id": 176,
+      "start": 521.12,
+      "end": 523.12,
+      "text": "And once you started doing things like that,"
+    },
+    {
+      "id": 177,
+      "start": 523.12,
+      "end": 525.92,
+      "text": "then the same methods, exactly the same methods"
+    },
+    {
+      "id": 178,
+      "start": 525.92,
+      "end": 531.4,
+      "text": "were helping when they weren't helping before."
+    },
+    {
+      "id": 179,
+      "start": 531.4,
+      "end": 535.92,
+      "text": "And so the underlying assumption about incorporating context"
+    },
+    {
+      "id": 180,
+      "start": 535.92,
+      "end": 538.64,
+      "text": "information is that context will be helpful."
+    },
+    {
+      "id": 181,
+      "start": 538.64,
+      "end": 545.16,
+      "text": "And or context is necessary to do translation well."
+    },
+    {
+      "id": 182,
+      "start": 545.16,
+      "end": 548.08,
+      "text": "So does anyone have an idea about how you could actually"
+    },
+    {
+      "id": 183,
+      "start": 548.08,
+      "end": 549.16,
+      "text": "verify that assumption?"
+    },
+    {
+      "id": 184,
+      "start": 555.64,
+      "end": 556.24,
+      "text": "Any idea?"
+    },
+    {
+      "id": 185,
+      "start": 556.24,
+      "end": 557.08,
+      "text": "Yeah."
+    },
+    {
+      "id": 186,
+      "start": 557.08,
+      "end": 559.96,
+      "text": "So it's way to do that data set."
+    },
+    {
+      "id": 187,
+      "start": 559.96,
+      "end": 562.52,
+      "text": "And then how the measure of the input"
+    },
+    {
+      "id": 188,
+      "start": 562.52,
+      "end": 565.88,
+      "text": "is more than an expert sign."
+    },
+    {
+      "id": 189,
+      "start": 565.88,
+      "end": 567.8,
+      "text": "And how would that verify the assumption"
+    },
+    {
+      "id": 190,
+      "start": 567.8,
+      "end": 570.2,
+      "text": "that context is necessary?"
+    },
+    {
+      "id": 191,
+      "start": 570.2,
+      "end": 573.16,
+      "text": "So we're asking the question, what are the consequences"
+    },
+    {
+      "id": 192,
+      "start": 573.16,
+      "end": 576.72,
+      "text": "helpful in the consequences?"
+    },
+    {
+      "id": 193,
+      "start": 576.72,
+      "end": 578.08,
+      "text": "We're asking whether."
+    },
+    {
+      "id": 194,
+      "start": 578.08,
+      "end": 582.76,
+      "text": "So we're asking time and time part."
+    },
+    {
+      "id": 195,
+      "start": 582.76,
+      "end": 585.24,
+      "text": "The main question is whether context is helpful,"
+    },
+    {
+      "id": 196,
+      "start": 585.24,
+      "end": 589.04,
+      "text": "given a particular experimental setup."
+    },
+    {
+      "id": 197,
+      "start": 589.04,
+      "end": 592.92,
+      "text": "So when training data set modeling method"
+    },
+    {
+      "id": 198,
+      "start": 592.92,
+      "end": 595.72,
+      "text": "and training algorithm and evaluation algorithm,"
+    },
+    {
+      "id": 199,
+      "start": 595.72,
+      "end": 598.88,
+      "text": "that's how the big final result that you want to get"
+    },
+    {
+      "id": 200,
+      "start": 598.88,
+      "end": 600.0,
+      "text": "in your paper."
+    },
+    {
+      "id": 201,
+      "start": 600.0,
+      "end": 602.4,
+      "text": "But there's kind of a summary question, which is,"
+    },
+    {
+      "id": 202,
+      "start": 602.4,
+      "end": 603.64,
+      "text": "is context even."
+    }
+  ],
+  "language": "en"
+}

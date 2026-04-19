@@ -1,0 +1,971 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 2.44,
+      "text": "you need to get training data from somewhere."
+    },
+    {
+      "id": 1,
+      "start": 2.44,
+      "end": 4.36,
+      "text": "So there's a rather clever paper."
+    },
+    {
+      "id": 2,
+      "start": 5.36,
+      "end": 7.24,
+      "text": "And again, if you're not interested"
+    },
+    {
+      "id": 3,
+      "start": 7.24,
+      "end": 9.0,
+      "text": "in relation extraction in particular,"
+    },
+    {
+      "id": 4,
+      "start": 9.0,
+      "end": 10.0,
+      "text": "I think this is one thing"
+    },
+    {
+      "id": 5,
+      "start": 10.0,
+      "end": 12.84,
+      "text": "that's still worth paying attention to,"
+    },
+    {
+      "id": 6,
+      "start": 12.84,
+      "end": 17.4,
+      "text": "which is they demonstrated that it's possible"
+    },
+    {
+      "id": 7,
+      "start": 17.4,
+      "end": 19.2,
+      "text": "to create relatively large data sets"
+    },
+    {
+      "id": 8,
+      "start": 19.2,
+      "end": 22.04,
+      "text": "by asking people simple questions."
+    },
+    {
+      "id": 9,
+      "start": 22.04,
+      "end": 26.24,
+      "text": "And in particular, they wanted to get"
+    },
+    {
+      "id": 10,
+      "start": 27.32,
+      "end": 29.24,
+      "text": "relation extraction data sets"
+    },
+    {
+      "id": 11,
+      "start": 29.24,
+      "end": 34.24,
+      "text": "that are like, who finished something?"
+    },
+    {
+      "id": 12,
+      "start": 34.24,
+      "end": 38.64,
+      "text": "Like UCD finished the 2006 championships."
+    },
+    {
+      "id": 13,
+      "start": 38.64,
+      "end": 41.68,
+      "text": "And if you ask people like, okay, select this span,"
+    },
+    {
+      "id": 14,
+      "start": 42.64,
+      "end": 46.52,
+      "text": "select the entity span, the relation span,"
+    },
+    {
+      "id": 15,
+      "start": 46.52,
+      "end": 49.28,
+      "text": "and the, in the second entity,"
+    },
+    {
+      "id": 16,
+      "start": 49.28,
+      "end": 51.92,
+      "text": "the head entity, the relation in the tail entity,"
+    },
+    {
+      "id": 17,
+      "start": 51.92,
+      "end": 53.72,
+      "text": "select it on this interface,"
+    },
+    {
+      "id": 18,
+      "start": 53.72,
+      "end": 56.56,
+      "text": "and then tell me is it this relation"
+    },
+    {
+      "id": 19,
+      "start": 56.56,
+      "end": 58.84,
+      "text": "or this relation or this relation?"
+    },
+    {
+      "id": 20,
+      "start": 58.84,
+      "end": 60.0,
+      "text": "That's actually pretty hard"
+    },
+    {
+      "id": 21,
+      "start": 60.0,
+      "end": 62.8,
+      "text": "in getting like crowd workers to start learning"
+    },
+    {
+      "id": 22,
+      "start": 62.8,
+      "end": 65.88,
+      "text": "how to do that task is a bit tricky"
+    },
+    {
+      "id": 23,
+      "start": 65.88,
+      "end": 67.52,
+      "text": "and it takes some, you know,"
+    },
+    {
+      "id": 24,
+      "start": 67.52,
+      "end": 70.92,
+      "text": "it takes some time to get them onboarded basically."
+    },
+    {
+      "id": 25,
+      "start": 70.92,
+      "end": 72.0,
+      "text": "But basically what they did was"
+    },
+    {
+      "id": 26,
+      "start": 72.0,
+      "end": 74.08,
+      "text": "I'm sure there's like a few people"
+    },
+    {
+      "id": 27,
+      "start": 74.08,
+      "end": 75.88,
+      "text": "at CMU who are somehow studying medicine"
+    },
+    {
+      "id": 28,
+      "start": 75.88,
+      "end": 77.92,
+      "text": "to originally, through a program or something like that."
+    },
+    {
+      "id": 29,
+      "start": 77.92,
+      "end": 81.04,
+      "text": "So, you know, like, it's very rare"
+    },
+    {
+      "id": 30,
+      "start": 81.04,
+      "end": 83.68,
+      "text": "that logic rules are hard and fast."
+    },
+    {
+      "id": 31,
+      "start": 83.68,
+      "end": 86.92,
+      "text": "And so basically what they do is they treat each path"
+    },
+    {
+      "id": 32,
+      "start": 86.92,
+      "end": 88.64,
+      "text": "as a comprehensive championship,"
+    },
+    {
+      "id": 33,
+      "start": 88.64,
+      "end": 91.88,
+      "text": "what did someone finish something as?"
+    },
+    {
+      "id": 34,
+      "start": 91.88,
+      "end": 96.24,
+      "text": "And basically, in doing this, they created"
+    },
+    {
+      "id": 35,
+      "start": 96.24,
+      "end": 97.8,
+      "text": "something called semantic roles,"
+    },
+    {
+      "id": 36,
+      "start": 97.8,
+      "end": 99.28,
+      "text": "which we're actually probably going to talk about"
+    },
+    {
+      "id": 37,
+      "start": 99.28,
+      "end": 101.4,
+      "text": "a little bit later, but you can take the semantic roles"
+    },
+    {
+      "id": 38,
+      "start": 101.4,
+      "end": 103.76,
+      "text": "and then you can use them to annotate"
+    },
+    {
+      "id": 39,
+      "start": 103.76,
+      "end": 106.16,
+      "text": "relation extraction data."
+    },
+    {
+      "id": 40,
+      "start": 106.16,
+      "end": 107.96,
+      "text": "And then they trained a supervised,"
+    },
+    {
+      "id": 41,
+      "start": 107.96,
+      "end": 109.96,
+      "text": "uneroll, staggered, things."
+    },
+    {
+      "id": 42,
+      "start": 109.96,
+      "end": 110.96,
+      "text": "Cool."
+    },
+    {
+      "id": 43,
+      "start": 110.96,
+      "end": 114.12,
+      "text": "So another thing I'd like to talk about is,"
+    },
+    {
+      "id": 44,
+      "start": 114.12,
+      "end": 116.96,
+      "text": "I talked about learning information about entities"
+    },
+    {
+      "id": 45,
+      "start": 116.96,
+      "end": 117.96,
+      "text": "from entity embeddings,"
+    },
+    {
+      "id": 46,
+      "start": 117.96,
+      "end": 120.96,
+      "text": "but you can actually learn information about relations"
+    },
+    {
+      "id": 47,
+      "start": 120.96,
+      "end": 123.96,
+      "text": "from information about other relations."
+    },
+    {
+      "id": 48,
+      "start": 123.96,
+      "end": 129.96,
+      "text": "And this can help solve the problem of like,"
+    },
+    {
+      "id": 49,
+      "start": 129.96,
+      "end": 134.96,
+      "text": "essentially the fact that open IE is not able to abstract"
+    },
+    {
+      "id": 50,
+      "start": 134.96,
+      "end": 136.96,
+      "text": "and generalize."
+    },
+    {
+      "id": 51,
+      "start": 136.96,
+      "end": 138.96,
+      "text": "So word embeddings are entity embeddings"
+    },
+    {
+      "id": 52,
+      "start": 138.96,
+      "end": 141.96,
+      "text": "given information of the word in context,"
+    },
+    {
+      "id": 53,
+      "start": 141.96,
+      "end": 146.96,
+      "text": "which can be indicative for a knowledge basis."
+    },
+    {
+      "id": 54,
+      "start": 146.96,
+      "end": 149.96,
+      "text": "But other relations or combinations there are"
+    },
+    {
+      "id": 55,
+      "start": 149.96,
+      "end": 151.96,
+      "text": "are also indicative of them."
+    },
+    {
+      "id": 56,
+      "start": 151.96,
+      "end": 155.96,
+      "text": "And if anybody is familiar with graphs or graph processing,"
+    },
+    {
+      "id": 57,
+      "start": 155.96,
+      "end": 158.96,
+      "text": "there's the whole idea of link prediction"
+    },
+    {
+      "id": 58,
+      "start": 158.96,
+      "end": 160.96,
+      "text": "where you're given like a specific,"
+    },
+    {
+      "id": 59,
+      "start": 160.96,
+      "end": 163.96,
+      "text": "a small number of links in a graph and you want to predict"
+    },
+    {
+      "id": 60,
+      "start": 163.96,
+      "end": 166.96,
+      "text": "what other links are likely to exist."
+    },
+    {
+      "id": 61,
+      "start": 166.96,
+      "end": 169.96,
+      "text": "And like as I said,"
+    },
+    {
+      "id": 62,
+      "start": 169.96,
+      "end": 172.96,
+      "text": "a lot of, you know,"
+    },
+    {
+      "id": 63,
+      "start": 172.96,
+      "end": 175.96,
+      "text": "very prominent AI researchers got their start"
+    },
+    {
+      "id": 64,
+      "start": 175.96,
+      "end": 178.96,
+      "text": "in relation extraction and IE asset scupper"
+    },
+    {
+      "id": 65,
+      "start": 178.96,
+      "end": 181.96,
+      "text": "is another one of them actually."
+    },
+    {
+      "id": 66,
+      "start": 181.96,
+      "end": 186.96,
+      "text": "And basically this 2009 paper proposed to use tensor decomposition"
+    },
+    {
+      "id": 67,
+      "start": 186.96,
+      "end": 188.96,
+      "text": "to do a lot of things."
+    },
+    {
+      "id": 68,
+      "start": 188.96,
+      "end": 193.96,
+      "text": "And so the tensor decomposition to do induction of relations."
+    },
+    {
+      "id": 69,
+      "start": 193.96,
+      "end": 198.96,
+      "text": "And the way it worked is you model relations"
+    },
+    {
+      "id": 70,
+      "start": 198.96,
+      "end": 201.96,
+      "text": "by decomposing a tensor containing entity relation entity"
+    },
+    {
+      "id": 71,
+      "start": 201.96,
+      "end": 203.96,
+      "text": "tuples."
+    },
+    {
+      "id": 72,
+      "start": 203.96,
+      "end": 205.96,
+      "text": "So you have the left entity,"
+    },
+    {
+      "id": 73,
+      "start": 205.96,
+      "end": 206.96,
+      "text": "the right entity,"
+    },
+    {
+      "id": 74,
+      "start": 206.96,
+      "end": 210.96,
+      "text": "and whether the relation exists is this big,"
+    },
+    {
+      "id": 75,
+      "start": 210.96,
+      "end": 215.96,
+      "text": "big tensor in the middle where these are embeddings"
+    },
+    {
+      "id": 76,
+      "start": 215.96,
+      "end": 216.96,
+      "text": "of the left entity."
+    },
+    {
+      "id": 77,
+      "start": 216.96,
+      "end": 221.96,
+      "text": "And then the depth of the tensor is like which relations exist."
+    },
+    {
+      "id": 78,
+      "start": 221.96,
+      "end": 223.96,
+      "text": "And so we know that some exist."
+    },
+    {
+      "id": 79,
+      "start": 223.96,
+      "end": 224.96,
+      "text": "So we give them a one."
+    },
+    {
+      "id": 80,
+      "start": 224.96,
+      "end": 226.96,
+      "text": "We know others exist."
+    },
+    {
+      "id": 81,
+      "start": 226.96,
+      "end": 227.96,
+      "text": "Don't exist."
+    },
+    {
+      "id": 82,
+      "start": 227.96,
+      "end": 229.96,
+      "text": "So we give them a zero."
+    },
+    {
+      "id": 83,
+      "start": 229.96,
+      "end": 233.96,
+      "text": "And then we do a low rank approximation of this tensor."
+    },
+    {
+      "id": 84,
+      "start": 233.96,
+      "end": 236.96,
+      "text": "And if we do a low rank approximation of the tensor,"
+    },
+    {
+      "id": 85,
+      "start": 236.96,
+      "end": 238.96,
+      "text": "we have reconstruction error basically."
+    },
+    {
+      "id": 86,
+      "start": 238.96,
+      "end": 240.96,
+      "text": "So when we reconstruct the tensor,"
+    },
+    {
+      "id": 87,
+      "start": 240.96,
+      "end": 243.96,
+      "text": "some things that were previously zero become one."
+    },
+    {
+      "id": 88,
+      "start": 243.96,
+      "end": 247.96,
+      "text": "And so the things that were previously zero and then become"
+    },
+    {
+      "id": 89,
+      "start": 247.96,
+      "end": 252.96,
+      "text": "close to one are the ones that we think like actually might exist."
+    },
+    {
+      "id": 90,
+      "start": 252.96,
+      "end": 253.96,
+      "text": "They might be real."
+    },
+    {
+      "id": 91,
+      "start": 253.96,
+      "end": 257.96,
+      "text": "They might be real relations that we were just missing because our"
+    },
+    {
+      "id": 92,
+      "start": 257.96,
+      "end": 259.96,
+      "text": "previous knowledge base was complete."
+    },
+    {
+      "id": 93,
+      "start": 259.96,
+      "end": 263.96,
+      "text": "And complete."
+    },
+    {
+      "id": 94,
+      "start": 263.96,
+      "end": 270.96,
+      "text": "And one thing that takes us a step further is."
+    },
+    {
+      "id": 95,
+      "start": 270.96,
+      "end": 273.96,
+      "text": "What if we actually do have a knowledge base or what if we even"
+    },
+    {
+      "id": 96,
+      "start": 273.96,
+      "end": 276.96,
+      "text": "have multiple knowledge bases like what if we have wiki data and we"
+    },
+    {
+      "id": 97,
+      "start": 276.96,
+      "end": 279.96,
+      "text": "have wordnet and we have."
+    },
+    {
+      "id": 98,
+      "start": 279.96,
+      "end": 281.96,
+      "text": "Other things like this."
+    },
+    {
+      "id": 99,
+      "start": 281.96,
+      "end": 284.96,
+      "text": "And in addition to that, we also have open i.e."
+    },
+    {
+      "id": 100,
+      "start": 284.96,
+      "end": 285.96,
+      "text": "Extractions."
+    },
+    {
+      "id": 101,
+      "start": 285.96,
+      "end": 289.96,
+      "text": "So there's an idea of something called universal schema."
+    },
+    {
+      "id": 102,
+      "start": 289.96,
+      "end": 293.96,
+      "text": "And what universal schema do is the embed relations from multiple schema"
+    },
+    {
+      "id": 103,
+      "start": 293.96,
+      "end": 297.96,
+      "text": "or a schema in the same space."
+    },
+    {
+      "id": 104,
+      "start": 297.96,
+      "end": 303.96,
+      "text": "And based on this, they then predict which ones exist or likely to exist"
+    },
+    {
+      "id": 105,
+      "start": 303.96,
+      "end": 306.96,
+      "text": "or which ones are not likely to exist."
+    },
+    {
+      "id": 106,
+      "start": 306.96,
+      "end": 309.96,
+      "text": "So here we might have a free base or wiki data."
+    },
+    {
+      "id": 107,
+      "start": 309.96,
+      "end": 313.96,
+      "text": "We might have another kind of relation extraction data set called"
+    },
+    {
+      "id": 108,
+      "start": 313.96,
+      "end": 314.96,
+      "text": "tack."
+    },
+    {
+      "id": 109,
+      "start": 314.96,
+      "end": 319.96,
+      "text": "And then on the training data set, we have like all of these things that"
+    },
+    {
+      "id": 110,
+      "start": 319.96,
+      "end": 323.96,
+      "text": "are like positive or negative or something like this."
+    },
+    {
+      "id": 111,
+      "start": 323.96,
+      "end": 329.96,
+      "text": "And then on the held out data set, we have only information about"
+    },
+    {
+      "id": 112,
+      "start": 329.96,
+      "end": 330.96,
+      "text": "like open i.e."
+    },
+    {
+      "id": 113,
+      "start": 330.96,
+      "end": 335.96,
+      "text": "For example, so for all of the entities that exist in the knowledge base,"
+    },
+    {
+      "id": 114,
+      "start": 335.96,
+      "end": 339.96,
+      "text": "we know, you know, whether the relations exist, but for all the entities that"
+    },
+    {
+      "id": 115,
+      "start": 339.96,
+      "end": 341.96,
+      "text": "don't exist in the database, we don't know."
+    },
+    {
+      "id": 116,
+      "start": 341.96,
+      "end": 346.96,
+      "text": "And so then just from the existence of open i.e. relations or non-existence"
+    },
+    {
+      "id": 117,
+      "start": 346.96,
+      "end": 350.96,
+      "text": "of open i.e. relations, we can predict that other relations might exist,"
+    },
+    {
+      "id": 118,
+      "start": 350.96,
+      "end": 351.96,
+      "text": "for example."
+    },
+    {
+      "id": 119,
+      "start": 351.96,
+      "end": 354.96,
+      "text": "So this is a great way to combine the two together."
+    },
+    {
+      "id": 120,
+      "start": 354.96,
+      "end": 357.96,
+      "text": "Like open i.e. you can run it over, you know, very large data sets."
+    },
+    {
+      "id": 121,
+      "start": 357.96,
+      "end": 362.96,
+      "text": "But it doesn't have a good schema free wiki data has a good schema,"
+    },
+    {
+      "id": 122,
+      "start": 362.96,
+      "end": 366.96,
+      "text": "but you can't, you know, it's all manually created so you can suggest other ones."
+    },
+    {
+      "id": 123,
+      "start": 366.96,
+      "end": 371.96,
+      "text": "And one other like interesting thing is you can suggest other things"
+    },
+    {
+      "id": 124,
+      "start": 371.96,
+      "end": 375.96,
+      "text": "that might exist in wiki data, but you could also track that back to"
+    },
+    {
+      "id": 125,
+      "start": 375.96,
+      "end": 379.96,
+      "text": "the original text that indicated that it might exist in wiki data."
+    },
+    {
+      "id": 126,
+      "start": 379.96,
+      "end": 383.96,
+      "text": "So then you could have a human go back and check it to make sure that that's"
+    },
+    {
+      "id": 127,
+      "start": 383.96,
+      "end": 390.96,
+      "text": "actually true and trust whether you know other things like that."
+    },
+    {
+      "id": 128,
+      "start": 390.96,
+      "end": 391.96,
+      "text": "Cool."
+    },
+    {
+      "id": 129,
+      "start": 391.96,
+      "end": 396.96,
+      "text": "So if you like, you like tensors or you like linear algebra or things like this."
+    },
+    {
+      "id": 130,
+      "start": 396.96,
+      "end": 401.96,
+      "text": "This is maybe something that you could take a look at and think a little bit more about."
+    },
+    {
+      "id": 131,
+      "start": 401.96,
+      "end": 407.96,
+      "text": "Any questions here?"
+    },
+    {
+      "id": 132,
+      "start": 407.96,
+      "end": 413.96,
+      "text": "Okay."
+    },
+    {
+      "id": 133,
+      "start": 413.96,
+      "end": 417.96,
+      "text": "So another thing I'd like to talk about is modeling relation paths."
+    },
+    {
+      "id": 134,
+      "start": 417.96,
+      "end": 425.96,
+      "text": "So this is a really nice idea, which is you can."
+    },
+    {
+      "id": 135,
+      "start": 425.96,
+      "end": 430.96,
+      "text": "Make inferences across multiple hops of relations."
+    },
+    {
+      "id": 136,
+      "start": 430.96,
+      "end": 434.96,
+      "text": "Based on particular relations existing."
+    },
+    {
+      "id": 137,
+      "start": 434.96,
+      "end": 440.96,
+      "text": "And so multi step paths can be informative for indicating whether individual relations exist."
+    },
+    {
+      "id": 138,
+      "start": 440.96,
+      "end": 448.96,
+      "text": "So for example, given the word given a particular word in a paper title,"
+    },
+    {
+      "id": 139,
+      "start": 448.96,
+      "end": 452.96,
+      "text": "recommend a venue in which to publish the paper."
+    },
+    {
+      "id": 140,
+      "start": 452.96,
+      "end": 456.96,
+      "text": "And so this is the problem that they were trying to solve."
+    },
+    {
+      "id": 141,
+      "start": 456.96,
+      "end": 459.96,
+      "text": "And then basically you have a word."
+    },
+    {
+      "id": 142,
+      "start": 459.96,
+      "end": 467.96,
+      "text": "And you find if you have that word in your paper title, you then find other papers that have that title,"
+    },
+    {
+      "id": 143,
+      "start": 467.96,
+      "end": 469.96,
+      "text": "have that word in their title."
+    },
+    {
+      "id": 144,
+      "start": 469.96,
+      "end": 471.96,
+      "text": "And those papers are in a journal."
+    },
+    {
+      "id": 145,
+      "start": 471.96,
+      "end": 480.96,
+      "text": "And that gets a highway with respect to like that your paper being, you know, relevant to that particular journal."
+    },
+    {
+      "id": 146,
+      "start": 480.96,
+      "end": 486.96,
+      "text": "You can also say, okay, I have a word find papers with that word in the title."
+    },
+    {
+      "id": 147,
+      "start": 486.96,
+      "end": 489.96,
+      "text": "Find the first author of that paper."
+    },
+    {
+      "id": 148,
+      "start": 489.96,
+      "end": 496.96,
+      "text": "Find another paper that had that author as a first author and then find the journal of it."
+    },
+    {
+      "id": 149,
+      "start": 496.96,
+      "end": 504.96,
+      "text": "And they demonstrate a way where you can like expand these paths and feed them into a prediction model and use that predict."
+    },
+    {
+      "id": 150,
+      "start": 504.96,
+      "end": 507.96,
+      "text": "You know, additional relations."
+    },
+    {
+      "id": 151,
+      "start": 507.96,
+      "end": 515.96,
+      "text": "So unlike this method here, this method was saying like other single relations are indicative of a particular relation existing."
+    },
+    {
+      "id": 152,
+      "start": 515.96,
+      "end": 525.96,
+      "text": "This paper is saying not just individual relations are indicative of another relation existing, but actually relation paths are indicative of a relation existing."
+    },
+    {
+      "id": 153,
+      "start": 525.96,
+      "end": 533.96,
+      "text": "So this is more expressive basically."
+    },
+    {
+      "id": 154,
+      "start": 533.96,
+      "end": 542.96,
+      "text": "And this follow up paper using different logic rules actually made all of this end to end trainable."
+    },
+    {
+      "id": 155,
+      "start": 542.96,
+      "end": 547.96,
+      "text": "So this allows you to consider whole paths in the differentiable framework."
+    },
+    {
+      "id": 156,
+      "start": 547.96,
+      "end": 556.96,
+      "text": "And so the way they did this is like if you have, you know, city and country and has office and country."
+    },
+    {
+      "id": 157,
+      "start": 556.96,
+      "end": 564.96,
+      "text": "That, or sorry, city and country and has office and city that indicates has office and country."
+    },
+    {
+      "id": 158,
+      "start": 564.96,
+      "end": 575.96,
+      "text": "And I am sure, you know, many people here have taught, like learned about logic and, you know, in induction from or deduction from logic rules and stuff like this."
+    },
+    {
+      "id": 159,
+      "start": 575.96,
+      "end": 594.96,
+      "text": "But the problem is deduction from logic rules is very fragile. Like there are cases where there are counter examples. So if you say that something is always true deductively, then that can cause problems. So in reality, it's like, if you have two pieces of information, something you can become much, much more likely."
+    },
+    {
+      "id": 160,
+      "start": 594.96,
+      "end": 604.96,
+      "text": "And so, you know, just give an example. Somebody studying studying at CMU makes it very likely."
+    }
+  ],
+  "language": "en"
+}

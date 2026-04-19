@@ -1,0 +1,401 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 12.0,
+      "text": "But one way that people work around this is if you're actual data distribution looks like this, like English,"
+    },
+    {
+      "id": 1,
+      "start": 12.0,
+      "end": 16.0,
+      "text": "English, Chinese,"
+    },
+    {
+      "id": 2,
+      "start": 22.0,
+      "end": 26.0,
+      "text": "actually sorry, I took up the Indian language, this is my example of apologies,"
+    },
+    {
+      "id": 3,
+      "start": 26.0,
+      "end": 30.0,
+      "text": "I've been in the Indian community for a while, otherwise it doesn't matter."
+    },
+    {
+      "id": 4,
+      "start": 30.0,
+      "end": 32.0,
+      "text": "So, I'll say we have to mean."
+    },
+    {
+      "id": 5,
+      "start": 32.0,
+      "end": 44.0,
+      "text": "What you do is you essentially create a different distribution that like downwards English a little bit and upwards,"
+    },
+    {
+      "id": 6,
+      "start": 44.0,
+      "end": 56.0,
+      "text": "upwards all the other languages so that you get more about your languages, so this is a common work around it."
+    },
+    {
+      "id": 7,
+      "start": 56.0,
+      "end": 66.0,
+      "text": "The second problem with these is arbitraryness."
+    },
+    {
+      "id": 8,
+      "start": 66.0,
+      "end": 78.0,
+      "text": "So, as you saw in my example with PPE, ES, S key and key and the board symbol all have the same, probably have the same frequency, right?"
+    },
+    {
+      "id": 9,
+      "start": 78.0,
+      "end": 86.0,
+      "text": "So, get to that point, do we segment ES or do we segment EST or do we segment EST?"
+    },
+    {
+      "id": 10,
+      "start": 86.0,
+      "end": 98.0,
+      "text": "And so, this is also a problem and it actually can affect your results, especially if you like don't have to really strong vocabulary for the language you're working in or you're working in a new domain."
+    },
+    {
+      "id": 11,
+      "start": 98.0,
+      "end": 121.0,
+      "text": "And so, there's a few work around for this, one work around for this is called sub word regularization and the way it works is instead of just having a single segmentation and getting the kind of maximally probable segmentation or the one degree one that you get out of PPE."
+    },
+    {
+      "id": 12,
+      "start": 121.0,
+      "end": 131.0,
+      "text": "Instead, you sample different segmentations in writing time and use a different segmentations and that makes your model more robust to this kind of variation."
+    },
+    {
+      "id": 13,
+      "start": 131.0,
+      "end": 141.0,
+      "text": "And that's also actually the reason why sentence piece was released was through this sub word regularization paper."
+    },
+    {
+      "id": 14,
+      "start": 141.0,
+      "end": 150.0,
+      "text": "So, that's also implemented in sentence piece of that something you're interested in trying."
+    },
+    {
+      "id": 15,
+      "start": 150.0,
+      "end": 156.0,
+      "text": "Cool, are there any questions or discussions about this?"
+    },
+    {
+      "id": 16,
+      "start": 156.0,
+      "end": 165.0,
+      "text": "Yeah."
+    },
+    {
+      "id": 17,
+      "start": 165.0,
+      "end": 175.0,
+      "text": "If we need one, I think the model of the model and the question is, can we use the sounds during the sentence piece?"
+    },
+    {
+      "id": 18,
+      "start": 175.0,
+      "end": 187.0,
+      "text": "Because, so, if it's in the case of the already seen one of the kinds of questions, so, if it's in the case of the model and the list, then it would be very significant in the sentence piece."
+    },
+    {
+      "id": 19,
+      "start": 187.0,
+      "end": 191.0,
+      "text": "So, if it's in the case of the list, then it's down, and it's in the list."
+    },
+    {
+      "id": 20,
+      "start": 191.0,
+      "end": 201.0,
+      "text": "Yeah, so this is a good question. Just to repeat the question, it was like, let's say we have a big multilingual sub word model."
+    },
+    {
+      "id": 21,
+      "start": 201.0,
+      "end": 206.0,
+      "text": "And we want to add a new language in some way."
+    },
+    {
+      "id": 22,
+      "start": 206.0,
+      "end": 211.0,
+      "text": "How can we reuse the existing model, but add a new language?"
+    },
+    {
+      "id": 23,
+      "start": 211.0,
+      "end": 217.0,
+      "text": "It's a good question. If you're only using it for sub word segmentation."
+    },
+    {
+      "id": 24,
+      "start": 217.0,
+      "end": 222.0,
+      "text": "One nice thing about the Unigram model."
+    },
+    {
+      "id": 25,
+      "start": 222.0,
+      "end": 225.0,
+      "text": "Here is this is kind of a probabilistic model."
+    },
+    {
+      "id": 26,
+      "start": 225.0,
+      "end": 234.0,
+      "text": "So, it's very easy to do the kind of standard things that we do with probabilistic models, which is, like, let's say we've had a build."
+    },
+    {
+      "id": 27,
+      "start": 234.0,
+      "end": 240.0,
+      "text": "In old vocabulary for this."
+    },
+    {
+      "id": 28,
+      "start": 240.0,
+      "end": 244.0,
+      "text": "We could just interpret."
+    },
+    {
+      "id": 29,
+      "start": 244.0,
+      "end": 262.0,
+      "text": "We could interpret like this and just, you know, combine the probabilities of the two and then use that to my probability in order to."
+    },
+    {
+      "id": 30,
+      "start": 262.0,
+      "end": 271.0,
+      "text": "Second, the new language on things like this have been done before, but I don't remember the exact preferences for them, but that that's what I would do here."
+    },
+    {
+      "id": 31,
+      "start": 271.0,
+      "end": 294.0,
+      "text": "Another interesting thing is, this might be getting a little ahead of myself, but there's a."
+    },
+    {
+      "id": 32,
+      "start": 294.0,
+      "end": 305.0,
+      "text": "There's a paper that talks about how you can take things that were trained with another vocabulary."
+    },
+    {
+      "id": 33,
+      "start": 305.0,
+      "end": 311.0,
+      "text": "And basically the idea is you pre-trained on whatever languages you have."
+    },
+    {
+      "id": 34,
+      "start": 311.0,
+      "end": 317.0,
+      "text": "And then you learn embedding in the new language. You freeze the body of the model and learn embedding in the new language."
+    },
+    {
+      "id": 35,
+      "start": 317.0,
+      "end": 327.0,
+      "text": "So that's another method that's used on the cross link opens for the environment for representations."
+    },
+    {
+      "id": 36,
+      "start": 327.0,
+      "end": 334.0,
+      "text": "And I'll probably talk about that in the last class of this thing so you can remember that."
+    },
+    {
+      "id": 37,
+      "start": 334.0,
+      "end": 344.0,
+      "text": "Cool, any other questions?"
+    },
+    {
+      "id": 38,
+      "start": 344.0,
+      "end": 349.0,
+      "text": "I beg of words, the first step to process your data if you want to do generation."
+    },
+    {
+      "id": 39,
+      "start": 349.0,
+      "end": 368.0,
+      "text": "Do you mean like a word based model or a separate based model?"
+    },
+    {
+      "id": 40,
+      "start": 368.0,
+      "end": 382.0,
+      "text": "The sub word segmentation is the first step of creating just about any model nowadays, like every model, every model uses us and they usually use us either to segment characters or bites."
+    },
+    {
+      "id": 41,
+      "start": 382.0,
+      "end": 394.0,
+      "text": "And characters are like unicode components. So they actually correspond to an actual visual character and then bites are many unicode characters are like three bites."
+    },
+    {
+      "id": 42,
+      "start": 394.0,
+      "end": 403.0,
+      "text": "It's like a Chinese character is three bites. So the bite based segmentation is nice because you don't even need to worry about your own."
+    },
+    {
+      "id": 43,
+      "start": 403.0,
+      "end": 411.0,
+      "text": "So you can just keep it like you can just segment the pile like literally as is. And so a lot of people do it that way too."
+    },
+    {
+      "id": 44,
+      "start": 411.0,
+      "end": 424.0,
+      "text": "Lama is far as I know is bites. I believe GPDs also bites. But previous to like three or four years for people use directly."
+    },
+    {
+      "id": 45,
+      "start": 424.0,
+      "end": 437.0,
+      "text": "Okay, so this is really, really important. It's not like super complex and practically you will just maybe maybe train or maybe just use a tokenizer."
+    },
+    {
+      "id": 46,
+      "start": 437.0,
+      "end": 441.0,
+      "text": "But that's an important thing."
+    },
+    {
+      "id": 47,
+      "start": 441.0,
+      "end": 446.0,
+      "text": "Cool, next I'd like to move on to continuous word and so."
+    },
+    {
+      "id": 48,
+      "start": 446.0,
+      "end": 457.0,
+      "text": "The basic idea is previously we represented words with a sparse vector with a single one also known as one type vector. So it looked a little bit like this."
+    },
+    {
+      "id": 49,
+      "start": 457.0,
+      "end": 471.0,
+      "text": "And instead what continuous word embedding stew is a look up a dense vector. And so you get a dense representation where the entire vector has continuous values in it."
+    },
+    {
+      "id": 50,
+      "start": 471.0,
+      "end": 486.0,
+      "text": "And I talked about a bag of words model, but we could also create a continuous bag of words model. And the way this works is you look up the values of each vector, the embedding of each vector."
+    },
+    {
+      "id": 51,
+      "start": 486.0,
+      "end": 495.0,
+      "text": "This gives you an embedding vector for the entire sequence. And then you multiply this by a weight matrix."
+    },
+    {
+      "id": 52,
+      "start": 495.0,
+      "end": 510.0,
+      "text": "And then you multiply this by a weight matrix, where the, so this is column. So the rows of the weight matrix correspond to the size of this continuous embedding."
+    },
+    {
+      "id": 53,
+      "start": 510.0,
+      "end": 515.0,
+      "text": "And the columns of the weight matrix would correspond to the overall."
+    },
+    {
+      "id": 54,
+      "start": 515.0,
+      "end": 520.0,
+      "text": "To the overall number of labels that you would have here. And then that would give us."
+    },
+    {
+      "id": 55,
+      "start": 520.0,
+      "end": 529.0,
+      "text": "Basically what this is saying is each vector now instead of having a single thing that represents which vocabulary item you're looking at."
+    },
+    {
+      "id": 56,
+      "start": 529.0,
+      "end": 546.0,
+      "text": "You would kind of hope that you would get vectors where words that are similar by some mention of by some concept of similar like syntax, syntax, semantics, whether they're in the same language or not are close in the vector space."
+    },
+    {
+      "id": 57,
+      "start": 546.0,
+      "end": 560.0,
+      "text": "And each vector element is a feature. So for example, each vector element corresponds to is this an animate object or is this a positive word or other vector, other things like that."
+    },
+    {
+      "id": 58,
+      "start": 560.0,
+      "end": 567.0,
+      "text": "So just to give an example here, this is totally made up. I just made it in keynote. So it's not an actual vector space."
+    },
+    {
+      "id": 59,
+      "start": 567.0,
+      "end": 573.0,
+      "text": "But they'll illustrate the concept I showed here. What if we had a two dimensional vector space."
+    },
+    {
+      "id": 60,
+      "start": 573.0,
+      "end": 580.0,
+      "text": "Where the two dimensional vector space, the x axis here is corresponding to whether it's an animate or not."
+    },
+    {
+      "id": 61,
+      "start": 580.0,
+      "end": 586.0,
+      "text": "And the y axis here is corresponding to whether it's like positive sentiment or not."
+    },
+    {
+      "id": 62,
+      "start": 586.0,
+      "end": 593.0,
+      "text": "And so this is kind of like our ideal goal."
+    },
+    {
+      "id": 63,
+      "start": 593.0,
+      "end": 596.0,
+      "text": "So I would be once you do that."
+    },
+    {
+      "id": 64,
+      "start": 596.0,
+      "end": 601.0,
+      "text": "I will start about the answers."
+    },
+    {
+      "id": 65,
+      "start": 601.0,
+      "end": 604.0,
+      "text": "And what do I get the one."
+    }
+  ],
+  "language": "en"
+}

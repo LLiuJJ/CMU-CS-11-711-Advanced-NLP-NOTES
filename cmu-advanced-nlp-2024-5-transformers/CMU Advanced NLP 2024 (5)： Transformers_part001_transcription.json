@@ -1,0 +1,413 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 3.0,
+      "text": "and stuff like that. So you can take a little bit of time."
+    },
+    {
+      "id": 1,
+      "start": 6.0,
+      "end": 8.0,
+      "text": "Any other questions?"
+    },
+    {
+      "id": 2,
+      "start": 10.0,
+      "end": 29.0,
+      "text": "Okay, so let's go into the details. So my goal of this by the end is that you have a very good grasp of, you know, all of the basic components I go in here and also some of the parts that llama is changing from the original architecture."
+    },
+    {
+      "id": 3,
+      "start": 29.0,
+      "end": 35.0,
+      "text": "And how why that's important. So that's kind of the main the main goal."
+    },
+    {
+      "id": 4,
+      "start": 38.0,
+      "end": 49.0,
+      "text": "Okay, so core transformer concepts. As I said, positional encodings are one core concept multi headed attention is another core concept."
+    },
+    {
+      "id": 5,
+      "start": 49.0,
+      "end": 54.0,
+      "text": "Masked attention is a core concept, which I kind of talked about last time, but I'll talk in a little more detail."
+    },
+    {
+      "id": 6,
+      "start": 55.0,
+      "end": 59.0,
+      "text": "Residual layers and layer normalization and the people."
+    },
+    {
+      "id": 7,
+      "start": 62.0,
+      "end": 69.0,
+      "text": "So inputs and embeddings are kind of boring, I guess, since we've already covered them."
+    },
+    {
+      "id": 8,
+      "start": 69.0,
+      "end": 78.0,
+      "text": "And inputs are generally split into sub words like this, like we talked about before embeddings normally you just look them up like we discussed in previous models."
+    },
+    {
+      "id": 9,
+      "start": 79.0,
+      "end": 96.0,
+      "text": "So it transform based models don't really do anything fancy here. The only big thing, I guess, is that they really when transformer models came out, they kind of like normalize the fact that you do sub word segmentation and like every major transformer based model does some of the segmentation now."
+    },
+    {
+      "id": 10,
+      "start": 97.0,
+      "end": 105.0,
+      "text": "So skipping over that briefly, the next thing I want to talk about is multi head attention. And this is kind of one of the big innovations in the transformer."
+    },
+    {
+      "id": 11,
+      "start": 107.0,
+      "end": 110.0,
+      "text": "So multi head attention."
+    },
+    {
+      "id": 12,
+      "start": 111.0,
+      "end": 122.0,
+      "text": "The basic intuition behind it is that information from different parts of the sentence or sequence that you're modeling can be useful in different ways."
+    },
+    {
+      "id": 13,
+      "start": 123.0,
+      "end": 141.0,
+      "text": "And if you are just doing attention, if you are just doing attention with a single attention head, basically a single attention vector, you might need to make hard decisions about which part of the sentence you pay attention to."
+    },
+    {
+      "id": 14,
+      "start": 142.0,
+      "end": 148.0,
+      "text": "So I wrote for examples of the word run here. Can anybody tell me how these are different."
+    },
+    {
+      "id": 15,
+      "start": 149.0,
+      "end": 154.0,
+      "text": "How are how are one and two different from three and four."
+    },
+    {
+      "id": 16,
+      "start": 155.0,
+      "end": 161.0,
+      "text": "Yeah, the first two are verbs in the second two are now."
+    },
+    {
+      "id": 17,
+      "start": 162.0,
+      "end": 166.0,
+      "text": "And so how is one different from two?"
+    },
+    {
+      "id": 18,
+      "start": 169.0,
+      "end": 175.0,
+      "text": "If you know another language, if you translate them into another language, are they translated the same way differently?"
+    },
+    {
+      "id": 19,
+      "start": 178.0,
+      "end": 188.0,
+      "text": "Yeah, the meaning the meanings are different. So this is also called the word sense or it's called semantics or it's called other other lexical semantics or something like this."
+    },
+    {
+      "id": 20,
+      "start": 189.0,
+      "end": 202.0,
+      "text": "But basically the meanings are different. Like if you translate these two into probably many other languages in the world, they have a different translation because they mean different things like physically, sorry, run run a business versus physically run."
+    },
+    {
+      "id": 21,
+      "start": 203.0,
+      "end": 207.0,
+      "text": "And say for three and four right run in a stack is very different."
+    },
+    {
+      "id": 22,
+      "start": 208.0,
+      "end": 210.0,
+      "text": "Making the rubber make me a lot better."
+    },
+    {
+      "id": 23,
+      "start": 211.0,
+      "end": 221.0,
+      "text": "Now, if you look at the information, you might not even think about it, but if you look at the information you use to disinviguate these things, it's pretty different."
+    },
+    {
+      "id": 24,
+      "start": 222.0,
+      "end": 225.0,
+      "text": "Usually person tactic things you can just tell from the nearby context."
+    },
+    {
+      "id": 25,
+      "start": 226.0,
+      "end": 232.0,
+      "text": "So for example, if you have a noun to the left, usually that means something is going to be a verb."
+    },
+    {
+      "id": 26,
+      "start": 233.0,
+      "end": 240.0,
+      "text": "On the other hand, if you have a determiner on the left, it's almost certain that that thing is going to be either an noun or an adjective."
+    },
+    {
+      "id": 27,
+      "start": 241.0,
+      "end": 245.0,
+      "text": "So you only really need to look at very local context to do the sort of disinviguation."
+    },
+    {
+      "id": 28,
+      "start": 246.0,
+      "end": 251.0,
+      "text": "But in order to disinviguate semantics, you need to look at farther context."
+    },
+    {
+      "id": 29,
+      "start": 252.0,
+      "end": 258.0,
+      "text": "One interesting thing is like let's say you want to learn embeddings of embeddings of words."
+    },
+    {
+      "id": 30,
+      "start": 258.0,
+      "end": 271.0,
+      "text": "There's actually a trick that you can use when training word embeddings where you only look at the local context and you can learn some Mexican embeddings or you don't look at the local context and you only look at the farther away context and you can learn semantic embeddings."
+    },
+    {
+      "id": 31,
+      "start": 271.0,
+      "end": 279.0,
+      "text": "So like you can actually use this to get like influence your models in interesting ways. But anyway, that's kind of an assigned."
+    },
+    {
+      "id": 32,
+      "start": 279.0,
+      "end": 286.0,
+      "text": "So the basic idea here though is different pieces of context can be useful for different purposes."
+    },
+    {
+      "id": 33,
+      "start": 286.0,
+      "end": 291.0,
+      "text": "And that's kind of what multi head attention is trying to try to get at."
+    },
+    {
+      "id": 34,
+      "start": 291.0,
+      "end": 300.0,
+      "text": "So it doesn't want to force you to decide whether to look at eye or to look at business, but it wants you to allow you to look at both of them for different ways."
+    },
+    {
+      "id": 35,
+      "start": 301.0,
+      "end": 328.0,
+      "text": "So how exactly does multi head attention work? I wrote the equation up here and actually I should point out that the reference on the web page for the annotated transformer is really nice like I got some of the equations directly from that and you can look through and see PyTorch code for all of these things too, which can be helpful."
+    },
+    {
+      "id": 36,
+      "start": 329.0,
+      "end": 342.0,
+      "text": "So anyway, we have the multi head of attention and it looks like this. I'm going to walk through the diagram that I have down here though because it might be a little bit easier to follow."
+    },
+    {
+      "id": 37,
+      "start": 342.0,
+      "end": 355.0,
+      "text": "So this diagram is a little bit different than what is presented in the attention is all you need paper, but I intentionally made the diagram closer to what you how you actually want to implement it in PyTorch."
+    },
+    {
+      "id": 38,
+      "start": 355.0,
+      "end": 365.0,
+      "text": "So the first thing that you do is you have a whole bunch of query vectors and a whole bunch of key vectors."
+    },
+    {
+      "id": 39,
+      "start": 365.0,
+      "end": 373.0,
+      "text": "So the query vectors here, I only have three of them, the key vectors and value vectors, I have four that's kind of intentional."
+    },
+    {
+      "id": 40,
+      "start": 373.0,
+      "end": 385.0,
+      "text": "So this would be, this is permissible. You must have the same number of key vectors and value vectors, but you can have a different number of query vectors if you want."
+    },
+    {
+      "id": 41,
+      "start": 385.0,
+      "end": 390.0,
+      "text": "So is that clear?"
+    },
+    {
+      "id": 42,
+      "start": 390.0,
+      "end": 397.0,
+      "text": "In which case can you have a different number of query vectors and key vectors?"
+    },
+    {
+      "id": 43,
+      "start": 397.0,
+      "end": 412.0,
+      "text": "So it's masked. You could do that. Yeah, that is true. I was thinking something else. Yeah."
+    },
+    {
+      "id": 44,
+      "start": 412.0,
+      "end": 419.0,
+      "text": "When you're decoding and you have a short sequence in your attending to a longer sequence. Yeah. That's basically it."
+    },
+    {
+      "id": 45,
+      "start": 419.0,
+      "end": 430.0,
+      "text": "Can you have this when it's cross attention? Because in cross attention, the sequence that you're attending to can be different than the sequence that you're using to attend."
+    },
+    {
+      "id": 46,
+      "start": 430.0,
+      "end": 439.0,
+      "text": "If you're doing self attention, these need to be the same because the sequences are the same. So the length of the sequence will also be the same. So."
+    },
+    {
+      "id": 47,
+      "start": 439.0,
+      "end": 443.0,
+      "text": "So yeah, that's one thing."
+    },
+    {
+      "id": 48,
+      "start": 443.0,
+      "end": 447.0,
+      "text": "I may be different. Just a demonstrate."
+    },
+    {
+      "id": 49,
+      "start": 447.0,
+      "end": 449.0,
+      "text": "So."
+    },
+    {
+      "id": 50,
+      "start": 449.0,
+      "end": 457.0,
+      "text": "The first thing that you do is you multiply by weights and you have three different weight matrices. The first."
+    },
+    {
+      "id": 51,
+      "start": 457.0,
+      "end": 467.0,
+      "text": "Actually, you have four different weight matrices overall, but here we're going to use three of them. The first one is the query matrix. So you multiply this input by the query matrix."
+    },
+    {
+      "id": 52,
+      "start": 467.0,
+      "end": 473.0,
+      "text": "Then you have your key matrix. You multiply them for the key weight matrix. And then you have the value matrix."
+    },
+    {
+      "id": 53,
+      "start": 473.0,
+      "end": 481.0,
+      "text": "The multiple value, the weights here. And that's what we have up here from the equation."
+    },
+    {
+      "id": 54,
+      "start": 481.0,
+      "end": 490.0,
+      "text": "Then the next thing that we do is we split and rearrange these into an attention inputs."
+    },
+    {
+      "id": 55,
+      "start": 490.0,
+      "end": 505.0,
+      "text": "And so the way we do this is we split these up like this. So we have one, two, three, four. We split them up into two of them of size two. So this is the case where you have two attention heads."
+    },
+    {
+      "id": 56,
+      "start": 505.0,
+      "end": 516.0,
+      "text": "And each attention head has a vector of size two. In reality, usually your vector will be size like five, 12 or 10, 24. And then you'll have eight attention heads or something like this."
+    },
+    {
+      "id": 57,
+      "start": 516.0,
+      "end": 527.0,
+      "text": "And or, you know, much more if you have a larger model. But here I'm just doing a simple example for all three of the purposes and we do this over all of these."
+    },
+    {
+      "id": 58,
+      "start": 527.0,
+      "end": 531.0,
+      "text": "Note that this is like a little bit different than the equation that you have here."
+    },
+    {
+      "id": 59,
+      "start": 531.0,
+      "end": 538.0,
+      "text": "So the equation that you have here, you're splitting up first and then doing the matrix multiply."
+    },
+    {
+      "id": 60,
+      "start": 538.0,
+      "end": 548.0,
+      "text": "So, so you would be doing the matrix multiply of this matrix resulting in this. Then you do the matrix multiply resulting in this."
+    },
+    {
+      "id": 61,
+      "start": 548.0,
+      "end": 557.0,
+      "text": "But in reality, we do the big matrix multiply all at once just because it's more efficient to do it that way because we want to do more big operations and do a bunch of operations up early."
+    },
+    {
+      "id": 62,
+      "start": 557.0,
+      "end": 566.0,
+      "text": "So this diagram here is closer to what you actually do in a hydrangea."
+    },
+    {
+      "id": 63,
+      "start": 567.0,
+      "end": 583.0,
+      "text": "So this is now a three dimensional pencil. So like at this, at this point here, you would have a three dimensional pencil where we have two rows in three columns."
+    },
+    {
+      "id": 64,
+      "start": 584.0,
+      "end": 589.0,
+      "text": "And we've already mentioned this too. So you can see it."
+    },
+    {
+      "id": 65,
+      "start": 589.0,
+      "end": 596.0,
+      "text": "And then we think our, we think our model is going to get 93% accuracy accuracy."
+    },
+    {
+      "id": 66,
+      "start": 596.0,
+      "end": 599.0,
+      "text": "accuracy."
+    },
+    {
+      "id": 67,
+      "start": 599.0,
+      "end": 607.0,
+      "text": "And we want a significant threshold significance threshold, significant threshold, the PSS and 0.05."
+    }
+  ],
+  "language": "en"
+}

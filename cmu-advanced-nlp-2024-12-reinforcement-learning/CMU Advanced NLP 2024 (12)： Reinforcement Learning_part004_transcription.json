@@ -1,0 +1,1127 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 2.88,
+      "text": "is differentiable basically."
+    },
+    {
+      "id": 1,
+      "start": 2.88,
+      "end": 7.0,
+      "text": "So we can easily do gradient-based optimization."
+    },
+    {
+      "id": 2,
+      "start": 7.0,
+      "end": 9.76,
+      "text": "That's true."
+    },
+    {
+      "id": 3,
+      "start": 9.76,
+      "end": 12.36,
+      "text": "The problem with this is it's differentiable,"
+    },
+    {
+      "id": 4,
+      "start": 12.36,
+      "end": 15.72,
+      "text": "but for text generation, for example,"
+    },
+    {
+      "id": 5,
+      "start": 15.72,
+      "end": 19.72,
+      "text": "the sum is intractable because we have"
+    },
+    {
+      "id": 6,
+      "start": 19.72,
+      "end": 24.84,
+      "text": "a combinatorially large number of potential outputs."
+    },
+    {
+      "id": 7,
+      "start": 24.84,
+      "end": 29.32,
+      "text": "Because if this is, we talked about this before,"
+    },
+    {
+      "id": 8,
+      "start": 29.32,
+      "end": 32.44,
+      "text": "but if this is like length, you know, 50,"
+    },
+    {
+      "id": 9,
+      "start": 32.44,
+      "end": 34.0,
+      "text": "and we have a 30,000 vocabulary,"
+    },
+    {
+      "id": 10,
+      "start": 34.0,
+      "end": 36.04,
+      "text": "that's 30,000 to 50 possibilities."
+    },
+    {
+      "id": 11,
+      "start": 36.04,
+      "end": 38.76,
+      "text": "We can take a sum of over that many possibilities."
+    },
+    {
+      "id": 12,
+      "start": 41.92,
+      "end": 46.92,
+      "text": "So minimum risk training tries to minimize risk."
+    },
+    {
+      "id": 13,
+      "start": 49.12,
+      "end": 52.64,
+      "text": "Reinforcement learning also, many of the models,"
+    },
+    {
+      "id": 14,
+      "start": 52.64,
+      "end": 54.28,
+      "text": "especially policy gradient models,"
+    },
+    {
+      "id": 15,
+      "start": 54.28,
+      "end": 56.04,
+      "text": "are trying to minimize risk as well."
+    },
+    {
+      "id": 16,
+      "start": 56.04,
+      "end": 60.76,
+      "text": "So the reason I wanted to talk about risk first"
+    },
+    {
+      "id": 17,
+      "start": 60.76,
+      "end": 63.16,
+      "text": "is because this is very simple to get to"
+    },
+    {
+      "id": 18,
+      "start": 63.16,
+      "end": 65.76,
+      "text": "from the point of view of all the things"
+    },
+    {
+      "id": 19,
+      "start": 65.76,
+      "end": 66.8,
+      "text": "that we've studied so far."
+    },
+    {
+      "id": 20,
+      "start": 66.8,
+      "end": 69.48,
+      "text": "So I think it's worth talking about that."
+    },
+    {
+      "id": 21,
+      "start": 74.04,
+      "end": 78.2,
+      "text": "One other thing that I should mention about is,"
+    },
+    {
+      "id": 22,
+      "start": 81.36,
+      "end": 83.92,
+      "text": "no, sorry, I'll talk about that later."
+    },
+    {
+      "id": 23,
+      "start": 83.92,
+      "end": 88.04,
+      "text": "So when we want to optimize risk,"
+    },
+    {
+      "id": 24,
+      "start": 88.04,
+      "end": 93.04,
+      "text": "what we do is we sample in order to make this tractable."
+    },
+    {
+      "id": 25,
+      "start": 93.2,
+      "end": 96.24,
+      "text": "So a very simple way to minimize risk"
+    },
+    {
+      "id": 26,
+      "start": 96.24,
+      "end": 101.24,
+      "text": "is instead of summing over all of the possible outputs,"
+    },
+    {
+      "id": 27,
+      "start": 102.76,
+      "end": 104.92,
+      "text": "we sum over a small number of possible outputs"
+    },
+    {
+      "id": 28,
+      "start": 104.92,
+      "end": 109.64,
+      "text": "and we upgrade and we, sorry, normalize"
+    },
+    {
+      "id": 29,
+      "start": 109.64,
+      "end": 111.88,
+      "text": "to make this all add up to one."
+    },
+    {
+      "id": 30,
+      "start": 112.84,
+      "end": 116.76,
+      "text": "And so this normalizer here is basically the sum"
+    },
+    {
+      "id": 31,
+      "start": 116.76,
+      "end": 119.52,
+      "text": "over all of the probabilities that we have"
+    },
+    {
+      "id": 32,
+      "start": 119.52,
+      "end": 120.68,
+      "text": "on the top part here."
+    },
+    {
+      "id": 33,
+      "start": 121.68,
+      "end": 125.72,
+      "text": "And these samples can be created either using sampling"
+    },
+    {
+      "id": 34,
+      "start": 125.72,
+      "end": 127.8,
+      "text": "or NBASS search."
+    },
+    {
+      "id": 35,
+      "start": 127.8,
+      "end": 131.08,
+      "text": "We don't need to have, from the point of view,"
+    },
+    {
+      "id": 36,
+      "start": 131.08,
+      "end": 134.2,
+      "text": "doing this sort of minimum risk training,"
+    },
+    {
+      "id": 37,
+      "start": 134.2,
+      "end": 137.84,
+      "text": "the kind of correct way of doing this"
+    },
+    {
+      "id": 38,
+      "start": 137.84,
+      "end": 141.32,
+      "text": "is sampling using ancestral sampling."
+    },
+    {
+      "id": 39,
+      "start": 141.32,
+      "end": 143.0,
+      "text": "Like we talked about before,"
+    },
+    {
+      "id": 40,
+      "start": 143.0,
+      "end": 147.4,
+      "text": "and in minimizing the output based on the samples."
+    },
+    {
+      "id": 41,
+      "start": 147.4,
+      "end": 149.92,
+      "text": "But the problem with that is,"
+    },
+    {
+      "id": 42,
+      "start": 149.92,
+      "end": 152.72,
+      "text": "as many of you also might have seen"
+    },
+    {
+      "id": 43,
+      "start": 152.72,
+      "end": 156.12,
+      "text": "when you were sampling from your language model,"
+    },
+    {
+      "id": 44,
+      "start": 156.12,
+      "end": 157.56,
+      "text": "from assignment one,"
+    },
+    {
+      "id": 45,
+      "start": 157.56,
+      "end": 159.04,
+      "text": "if you sample with temperature one,"
+    },
+    {
+      "id": 46,
+      "start": 159.04,
+      "end": 162.12,
+      "text": "it gives you a lot of like not very good outputs, right?"
+    },
+    {
+      "id": 47,
+      "start": 162.12,
+      "end": 164.96,
+      "text": "And so if you're sampling with temperature one,"
+    },
+    {
+      "id": 48,
+      "start": 166.04,
+      "end": 168.8,
+      "text": "you'll be exploring a very large part of the space"
+    },
+    {
+      "id": 49,
+      "start": 168.8,
+      "end": 170.84,
+      "text": "that actually isn't very good."
+    },
+    {
+      "id": 50,
+      "start": 170.88,
+      "end": 172.4,
+      "text": "And so because of this,"
+    },
+    {
+      "id": 51,
+      "start": 172.4,
+      "end": 174.24,
+      "text": "some other alternatives that you can use"
+    },
+    {
+      "id": 52,
+      "start": 174.24,
+      "end": 176.84,
+      "text": "is you can just do NBASS search to find the best output,"
+    },
+    {
+      "id": 53,
+      "start": 176.84,
+      "end": 178.6,
+      "text": "so you can sample with a temperature"
+    },
+    {
+      "id": 54,
+      "start": 178.6,
+      "end": 180.92,
+      "text": "that's not one or something like that."
+    },
+    {
+      "id": 55,
+      "start": 180.92,
+      "end": 184.92,
+      "text": "And basically create a list of possible hypotheses"
+    },
+    {
+      "id": 56,
+      "start": 184.92,
+      "end": 186.08,
+      "text": "and then normalize it again."
+    },
+    {
+      "id": 57,
+      "start": 186.08,
+      "end": 187.6,
+      "text": "So that's another option."
+    },
+    {
+      "id": 58,
+      "start": 187.6,
+      "end": 189.44,
+      "text": "And very often not using temperature one,"
+    },
+    {
+      "id": 59,
+      "start": 189.44,
+      "end": 190.68,
+      "text": "it's a better way to do it."
+    },
+    {
+      "id": 60,
+      "start": 192.64,
+      "end": 197.24,
+      "text": "If you're sampling with not temperature one,"
+    },
+    {
+      "id": 61,
+      "start": 197.24,
+      "end": 202.24,
+      "text": "and you are potentially getting multiple outputs,"
+    },
+    {
+      "id": 62,
+      "start": 203.28,
+      "end": 207.2,
+      "text": "you should try to deduplicate or sample without replacement"
+    },
+    {
+      "id": 63,
+      "start": 207.2,
+      "end": 209.24,
+      "text": "because if you get multiple outputs here,"
+    },
+    {
+      "id": 64,
+      "start": 209.24,
+      "end": 210.68,
+      "text": "it messes up your equation."
+    },
+    {
+      "id": 65,
+      "start": 210.68,
+      "end": 213.88,
+      "text": "So you basically have the same one in there multiple times."
+    },
+    {
+      "id": 66,
+      "start": 217.88,
+      "end": 218.72,
+      "text": "Cool."
+    },
+    {
+      "id": 67,
+      "start": 218.72,
+      "end": 221.0,
+      "text": "So this is a really simple example"
+    },
+    {
+      "id": 68,
+      "start": 221.0,
+      "end": 222.88,
+      "text": "of how you can do a minimum risk training,"
+    },
+    {
+      "id": 69,
+      "start": 222.88,
+      "end": 226.48,
+      "text": "but now I want to get into like reinforcement learning,"
+    },
+    {
+      "id": 70,
+      "start": 226.48,
+      "end": 231.36,
+      "text": "which is the training that most modern works about this,"
+    },
+    {
+      "id": 71,
+      "start": 231.36,
+      "end": 232.68,
+      "text": "Paula."
+    },
+    {
+      "id": 72,
+      "start": 232.68,
+      "end": 236.84,
+      "text": "One thing I should mention is there are actually other alternatives"
+    },
+    {
+      "id": 73,
+      "start": 236.84,
+      "end": 238.8,
+      "text": "to learning from human feedback,"
+    },
+    {
+      "id": 74,
+      "start": 238.8,
+      "end": 242.88,
+      "text": "including like margin based losses and other stuff like that."
+    },
+    {
+      "id": 75,
+      "start": 242.88,
+      "end": 245.48,
+      "text": "But most people nowadays use reinforcement learning,"
+    },
+    {
+      "id": 76,
+      "start": 245.48,
+      "end": 247.48,
+      "text": "so I'm only gonna cover that here."
+    },
+    {
+      "id": 77,
+      "start": 249.08,
+      "end": 251.28,
+      "text": "So what is reinforcement learning?"
+    },
+    {
+      "id": 78,
+      "start": 251.28,
+      "end": 253.48,
+      "text": "Learning reinforcement learning is learning"
+    },
+    {
+      "id": 79,
+      "start": 253.48,
+      "end": 256.88,
+      "text": "where we have an environment, X,"
+    },
+    {
+      "id": 80,
+      "start": 256.88,
+      "end": 260.68,
+      "text": "ability to make actions A and get a delayed reward R."
+    },
+    {
+      "id": 81,
+      "start": 261.64,
+      "end": 264.96,
+      "text": "And there's a really nice example."
+    },
+    {
+      "id": 82,
+      "start": 264.96,
+      "end": 267.92,
+      "text": "If you're not familiar with the basics of policy gradient"
+    },
+    {
+      "id": 83,
+      "start": 267.92,
+      "end": 272.96,
+      "text": "by Andre Carpapi, which I linked in the recommended reading,"
+    },
+    {
+      "id": 84,
+      "start": 272.96,
+      "end": 274.24,
+      "text": "so you can take a look at that."
+    },
+    {
+      "id": 85,
+      "start": 275.72,
+      "end": 280.88,
+      "text": "But in that example gives an example of Pong"
+    },
+    {
+      "id": 86,
+      "start": 280.88,
+      "end": 282.96,
+      "text": "where you're playing the game Pong,"
+    },
+    {
+      "id": 87,
+      "start": 282.96,
+      "end": 285.12,
+      "text": "where X is your observed image,"
+    },
+    {
+      "id": 88,
+      "start": 285.12,
+      "end": 288.72,
+      "text": "A is up or down, and R is the wind loss at the end of the game."
+    },
+    {
+      "id": 89,
+      "start": 290.2,
+      "end": 292.72,
+      "text": "Does anyone have an idea about what this looks like"
+    },
+    {
+      "id": 90,
+      "start": 292.72,
+      "end": 296.28,
+      "text": "for any arbitrary NLP task that we might want to be"
+    },
+    {
+      "id": 91,
+      "start": 296.28,
+      "end": 298.08,
+      "text": "reinforcement learning for?"
+    },
+    {
+      "id": 92,
+      "start": 298.08,
+      "end": 302.2,
+      "text": "So what is X, what is A, and what is R?"
+    },
+    {
+      "id": 93,
+      "start": 305.76,
+      "end": 308.0,
+      "text": "Pick your favorite, your favorite classic."
+    },
+    {
+      "id": 94,
+      "start": 311.72,
+      "end": 312.56,
+      "text": "Anybody?"
+    },
+    {
+      "id": 95,
+      "start": 315.88,
+      "end": 316.88,
+      "text": "Yeah."
+    },
+    {
+      "id": 96,
+      "start": 316.88,
+      "end": 319.88,
+      "text": "What's X first?"
+    },
+    {
+      "id": 97,
+      "start": 324.88,
+      "end": 326.88,
+      "text": "You have generated code form."
+    },
+    {
+      "id": 98,
+      "start": 326.88,
+      "end": 327.88,
+      "text": "Okay."
+    },
+    {
+      "id": 99,
+      "start": 327.88,
+      "end": 328.88,
+      "text": "And you have A to the next person."
+    },
+    {
+      "id": 100,
+      "start": 328.88,
+      "end": 329.88,
+      "text": "Okay."
+    },
+    {
+      "id": 101,
+      "start": 329.88,
+      "end": 332.88,
+      "text": "Or you can probably use the user type on whether or not"
+    },
+    {
+      "id": 102,
+      "start": 332.88,
+      "end": 334.88,
+      "text": "you have a code."
+    },
+    {
+      "id": 103,
+      "start": 334.88,
+      "end": 335.88,
+      "text": "Okay."
+    },
+    {
+      "id": 104,
+      "start": 335.88,
+      "end": 337.88,
+      "text": "Yeah, I think this is very close just to repeat."
+    },
+    {
+      "id": 105,
+      "start": 338.48,
+      "end": 341.24,
+      "text": "It's like X is what you've generated so far."
+    },
+    {
+      "id": 106,
+      "start": 341.24,
+      "end": 344.6,
+      "text": "A is the next token and R is the button that the user"
+    },
+    {
+      "id": 107,
+      "start": 344.6,
+      "end": 346.88,
+      "text": "clicks about whether it's good or not."
+    },
+    {
+      "id": 108,
+      "start": 346.88,
+      "end": 350.12,
+      "text": "I think that's reasonably good,"
+    },
+    {
+      "id": 109,
+      "start": 350.12,
+      "end": 352.48,
+      "text": "although I don't know if we'd expect them to click the button"
+    },
+    {
+      "id": 110,
+      "start": 352.48,
+      "end": 354.28,
+      "text": "every token we generate, right?"
+    },
+    {
+      "id": 111,
+      "start": 354.28,
+      "end": 359.48,
+      "text": "So it might be that X is the conversational history up till"
+    },
+    {
+      "id": 112,
+      "start": 359.48,
+      "end": 360.48,
+      "text": "this point."
+    },
+    {
+      "id": 113,
+      "start": 361.48,
+      "end": 366.48,
+      "text": "A could be a next token generation."
+    },
+    {
+      "id": 114,
+      "start": 366.88,
+      "end": 370.28,
+      "text": "And then R is a reward we get in an arbitrary time point."
+    },
+    {
+      "id": 115,
+      "start": 370.28,
+      "end": 373.24,
+      "text": "It might not be like immediately after generating the next"
+    },
+    {
+      "id": 116,
+      "start": 373.24,
+      "end": 374.48,
+      "text": "token, but it might be later."
+    },
+    {
+      "id": 117,
+      "start": 374.48,
+      "end": 377.48,
+      "text": "And that's actually really, really important from the point of"
+    },
+    {
+      "id": 118,
+      "start": 377.48,
+      "end": 378.68,
+      "text": "view of reinforcement learning."
+    },
+    {
+      "id": 119,
+      "start": 378.68,
+      "end": 380.88,
+      "text": "And I'll talk about that in a second."
+    },
+    {
+      "id": 120,
+      "start": 380.88,
+      "end": 384.88,
+      "text": "Anyone having an idea from, I don't know,"
+    },
+    {
+      "id": 121,
+      "start": 385.88,
+      "end": 389.48,
+      "text": "code generation or translation or some other thing."
+    },
+    {
+      "id": 122,
+      "start": 389.48,
+      "end": 390.48,
+      "text": "Great."
+    },
+    {
+      "id": 123,
+      "start": 390.48,
+      "end": 394.48,
+      "text": "So for generations, maybe actually the compiler or like the"
+    },
+    {
+      "id": 124,
+      "start": 394.48,
+      "end": 399.48,
+      "text": "JavaScript, I mean, the actual code."
+    },
+    {
+      "id": 125,
+      "start": 399.48,
+      "end": 402.48,
+      "text": "And the reward is whether it's actually the same."
+    },
+    {
+      "id": 126,
+      "start": 402.48,
+      "end": 403.48,
+      "text": "Yep."
+    },
+    {
+      "id": 127,
+      "start": 403.48,
+      "end": 407.28,
+      "text": "So X could be the compiler."
+    },
+    {
+      "id": 128,
+      "start": 407.28,
+      "end": 410.88,
+      "text": "It's probably the compiler and all of the surrounding code"
+    },
+    {
+      "id": 129,
+      "start": 410.88,
+      "end": 415.48,
+      "text": "context like what is the natural language output and it's also,"
+    },
+    {
+      "id": 130,
+      "start": 415.48,
+      "end": 418.88,
+      "text": "you know, what is the project that you're working on and stuff"
+    },
+    {
+      "id": 131,
+      "start": 418.88,
+      "end": 419.88,
+      "text": "like that?"
+    },
+    {
+      "id": 132,
+      "start": 420.48,
+      "end": 425.08,
+      "text": "A, I think typically we would treat each token and the code"
+    },
+    {
+      "id": 133,
+      "start": 425.08,
+      "end": 426.88,
+      "text": "to be an action."
+    },
+    {
+      "id": 134,
+      "start": 426.88,
+      "end": 430.68,
+      "text": "And then R would be the reward after a long sequence of actions."
+    },
+    {
+      "id": 135,
+      "start": 430.68,
+      "end": 432.68,
+      "text": "And it could be the reward from the compiler."
+    },
+    {
+      "id": 136,
+      "start": 432.68,
+      "end": 435.68,
+      "text": "It could be the reward from a code readability model."
+    },
+    {
+      "id": 137,
+      "start": 435.68,
+      "end": 439.68,
+      "text": "It could be the reward from a speed execution speed and stuff"
+    },
+    {
+      "id": 138,
+      "start": 439.68,
+      "end": 440.68,
+      "text": "like that."
+    },
+    {
+      "id": 139,
+      "start": 440.68,
+      "end": 442.48,
+      "text": "So like one of the interesting things about R is you can be"
+    },
+    {
+      "id": 140,
+      "start": 442.48,
+      "end": 448.28,
+      "text": "really creative about how you form R, which is not easy to do."
+    },
+    {
+      "id": 141,
+      "start": 448.28,
+      "end": 450.88,
+      "text": "If you're just doing maximum likelihood also."
+    },
+    {
+      "id": 142,
+      "start": 450.88,
+      "end": 453.88,
+      "text": "So you can come up with R that really matches with like what"
+    },
+    {
+      "id": 143,
+      "start": 453.88,
+      "end": 457.28,
+      "text": "you want, what you want and not."
+    },
+    {
+      "id": 144,
+      "start": 457.28,
+      "end": 461.08,
+      "text": "So why reinforcement learning and NLP?"
+    },
+    {
+      "id": 145,
+      "start": 461.08,
+      "end": 466.28,
+      "text": "And I think there's basically three, three answers."
+    },
+    {
+      "id": 146,
+      "start": 466.28,
+      "end": 468.68,
+      "text": "The first one is you have a typical reinforcement learning"
+    },
+    {
+      "id": 147,
+      "start": 468.68,
+      "end": 474.68,
+      "text": "scenario where you have a dialogue where you get lots of"
+    },
+    {
+      "id": 148,
+      "start": 474.68,
+      "end": 476.88,
+      "text": "responses and then you get a reward at the end."
+    },
+    {
+      "id": 149,
+      "start": 476.88,
+      "end": 479.68,
+      "text": "So the thumbs up and thumbs down from humans is a very"
+    },
+    {
+      "id": 150,
+      "start": 479.68,
+      "end": 484.88,
+      "text": "typical example of reinforcement learning because you get a"
+    },
+    {
+      "id": 151,
+      "start": 484.88,
+      "end": 488.68,
+      "text": "delayed reward at some point in the dialogue when a human"
+    },
+    {
+      "id": 152,
+      "start": 488.68,
+      "end": 490.68,
+      "text": "presses up or down."
+    },
+    {
+      "id": 153,
+      "start": 490.68,
+      "end": 494.08,
+      "text": "Another like actually more technical scenario where reinforcement"
+    },
+    {
+      "id": 154,
+      "start": 494.08,
+      "end": 498.68,
+      "text": "learning has been used for a long time is call centers."
+    },
+    {
+      "id": 155,
+      "start": 498.68,
+      "end": 501.88,
+      "text": "So we've had dialogue systems for call centers."
+    },
+    {
+      "id": 156,
+      "start": 501.88,
+      "end": 505.68,
+      "text": "And then if you complete a ticket purchase."
+    },
+    {
+      "id": 157,
+      "start": 505.68,
+      "end": 509.08,
+      "text": "Or you complete resolve a ticket without ever having to go"
+    },
+    {
+      "id": 158,
+      "start": 509.08,
+      "end": 512.08,
+      "text": "to a human operator, you get a really big reward."
+    },
+    {
+      "id": 159,
+      "start": 512.08,
+      "end": 516.48,
+      "text": "If you have to go to the human operator, you get maybe a"
+    },
+    {
+      "id": 160,
+      "start": 516.48,
+      "end": 517.98,
+      "text": "smaller reward."
+    },
+    {
+      "id": 161,
+      "start": 517.98,
+      "end": 521.58,
+      "text": "And if the person yells at you and hangs up, then you get a"
+    },
+    {
+      "id": 162,
+      "start": 521.58,
+      "end": 522.68,
+      "text": "really negative."
+    },
+    {
+      "id": 163,
+      "start": 522.68,
+      "end": 527.28,
+      "text": "So this is kind of the typical example reinforcement learning"
+    },
+    {
+      "id": 164,
+      "start": 527.28,
+      "end": 529.28,
+      "text": "has been used for a long time there."
+    },
+    {
+      "id": 165,
+      "start": 529.28,
+      "end": 532.88,
+      "text": "Another example is if you have like wait and variables,"
+    },
+    {
+      "id": 166,
+      "start": 532.88,
+      "end": 538.78,
+      "text": "change of thoughts where you decide the latent variable and"
+    },
+    {
+      "id": 167,
+      "start": 538.78,
+      "end": 543.78,
+      "text": "then get a reward, you get a reward based on how those latent"
+    },
+    {
+      "id": 168,
+      "start": 543.78,
+      "end": 545.68,
+      "text": "variables affect the output."
+    },
+    {
+      "id": 169,
+      "start": 545.68,
+      "end": 553.68,
+      "text": "So this is this is another example because the chain of thought"
+    },
+    {
+      "id": 170,
+      "start": 553.68,
+      "end": 556.98,
+      "text": "itself might not actually be good."
+    },
+    {
+      "id": 171,
+      "start": 556.98,
+      "end": 559.08,
+      "text": "You might have a bad chain of thought and still get the correct"
+    },
+    {
+      "id": 172,
+      "start": 559.08,
+      "end": 559.88,
+      "text": "answer."
+    },
+    {
+      "id": 173,
+      "start": 559.98,
+      "end": 563.18,
+      "text": "So you don't actually know for sure that chain of thought that"
+    },
+    {
+      "id": 174,
+      "start": 563.18,
+      "end": 565.28,
+      "text": "was automatically generated is good or not."
+    },
+    {
+      "id": 175,
+      "start": 565.28,
+      "end": 569.08,
+      "text": "But that so that kind of makes it a reinforcement learning"
+    },
+    {
+      "id": 176,
+      "start": 569.08,
+      "end": 570.48,
+      "text": "problem."
+    },
+    {
+      "id": 177,
+      "start": 570.48,
+      "end": 573.28,
+      "text": "And another thing is you might have a sequence level evaluation"
+    },
+    {
+      "id": 178,
+      "start": 573.28,
+      "end": 578.08,
+      "text": "metric so that you can't optimize the evaluation metric"
+    },
+    {
+      "id": 179,
+      "start": 578.08,
+      "end": 581.08,
+      "text": "without first generating the whole sequence."
+    },
+    {
+      "id": 180,
+      "start": 581.08,
+      "end": 583.88,
+      "text": "So that would be any of the evaluation metrics that I talked"
+    },
+    {
+      "id": 181,
+      "start": 583.88,
+      "end": 584.48,
+      "text": "about before."
+    },
+    {
+      "id": 182,
+      "start": 584.48,
+      "end": 587.88,
+      "text": "So these are three scenarios where you can use reinforcement"
+    },
+    {
+      "id": 183,
+      "start": 588.08,
+      "end": 589.08,
+      "text": "learning."
+    },
+    {
+      "id": 184,
+      "start": 589.08,
+      "end": 595.48,
+      "text": "So I'm going to make a few steps through but like let's start"
+    },
+    {
+      "id": 185,
+      "start": 595.48,
+      "end": 599.58,
+      "text": "again with our supervised MLE loss and that's just the"
+    },
+    {
+      "id": 186,
+      "start": 599.58,
+      "end": 604.68,
+      "text": "log probability here in the context of reinforcement learning."
+    }
+  ],
+  "language": "en"
+}

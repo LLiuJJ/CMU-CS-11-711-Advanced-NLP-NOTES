@@ -1,0 +1,533 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 7.0,
+      "text": "Are there any questions before we get started?"
+    },
+    {
+      "id": 1,
+      "start": 7.0,
+      "end": 14.0,
+      "text": "Okay, I don't see any, so I guess we can jump right in."
+    },
+    {
+      "id": 2,
+      "start": 14.0,
+      "end": 17.0,
+      "text": "This time, we'll be talking about sequence modeling."
+    },
+    {
+      "id": 3,
+      "start": 17.0,
+      "end": 18.0,
+      "text": "And, and,"
+    },
+    {
+      "id": 4,
+      "start": 18.0,
+      "end": 21.0,
+      "text": "I'm going to be talking about sequence modeling and,"
+    },
+    {
+      "id": 5,
+      "start": 21.0,
+      "end": 23.0,
+      "text": "number, first, I'm going to be talking about why,"
+    },
+    {
+      "id": 6,
+      "start": 23.0,
+      "end": 28.0,
+      "text": "why we do sequence modeling, what varieties of sequence modeling exist."
+    },
+    {
+      "id": 7,
+      "start": 28.0,
+      "end": 33.0,
+      "text": "And then, after that, I'm going to talk about kind of three basic techniques for sequence modeling,"
+    },
+    {
+      "id": 8,
+      "start": 33.0,
+      "end": 35.0,
+      "text": "namely, recurrent neural networks,"
+    },
+    {
+      "id": 9,
+      "start": 35.0,
+      "end": 40.0,
+      "text": "kind of, wishful networks and attention."
+    },
+    {
+      "id": 10,
+      "start": 40.0,
+      "end": 43.0,
+      "text": "So, when we talk about sequence modeling and NLP,"
+    },
+    {
+      "id": 11,
+      "start": 43.0,
+      "end": 46.0,
+      "text": "I've kind of already made the motivation for doing this,"
+    },
+    {
+      "id": 12,
+      "start": 46.0,
+      "end": 49.0,
+      "text": "but basically NLP is full of sequential data."
+    },
+    {
+      "id": 13,
+      "start": 49.0,
+      "end": 62.0,
+      "text": "And this can be everything from words and sentences or tokens and sentences to characters and words to sentences and a discourse or a paragraph or a document."
+    },
+    {
+      "id": 14,
+      "start": 62.0,
+      "end": 68.0,
+      "text": "It can also be multiple documents in time, multiple social media posts, whatever else you want."
+    },
+    {
+      "id": 15,
+      "start": 68.0,
+      "end": 73.0,
+      "text": "There is just, you know, sequences all over NLP."
+    },
+    {
+      "id": 16,
+      "start": 73.0,
+      "end": 78.0,
+      "text": "And I mentioned this last time also, but there's also a long distance to penances and language."
+    },
+    {
+      "id": 17,
+      "start": 78.0,
+      "end": 82.0,
+      "text": "So, just to give an example, there's agreement and number gender,"
+    },
+    {
+      "id": 18,
+      "start": 82.0,
+      "end": 86.0,
+      "text": "ETC. So, in order to create a fluent language model,"
+    },
+    {
+      "id": 19,
+      "start": 86.0,
+      "end": 88.0,
+      "text": "you'll have to handle this agreement."
+    },
+    {
+      "id": 20,
+      "start": 88.0,
+      "end": 91.0,
+      "text": "So, if we, you say he does not have very much confidence in,"
+    },
+    {
+      "id": 21,
+      "start": 91.0,
+      "end": 98.0,
+      "text": "it would have to be himself, but if you say she does not have very much confidence in it would have to be herself."
+    },
+    {
+      "id": 22,
+      "start": 98.0,
+      "end": 102.0,
+      "text": "And this is, this gender agreement is not super frequent in English,"
+    },
+    {
+      "id": 23,
+      "start": 102.0,
+      "end": 107.0,
+      "text": "but it's very frequent in other languages like French or, you know,"
+    },
+    {
+      "id": 24,
+      "start": 107.0,
+      "end": 112.0,
+      "text": "most languages in the world in some way or another."
+    },
+    {
+      "id": 25,
+      "start": 112.0,
+      "end": 117.0,
+      "text": "Then separately from that, you also have things like selectional preferences."
+    },
+    {
+      "id": 26,
+      "start": 117.0,
+      "end": 123.0,
+      "text": "Like the rain has lasted as long as the life of the queen and the rain has lasted as long as the life of the clouds."
+    },
+    {
+      "id": 27,
+      "start": 123.0,
+      "end": 132.0,
+      "text": "In American English, the only way you could know which word came beforehand if you were doing speech recognition is if you,"
+    },
+    {
+      "id": 28,
+      "start": 132.0,
+      "end": 140.0,
+      "text": "like had that kind of semantic idea of that these agree with each other in some way."
+    },
+    {
+      "id": 29,
+      "start": 140.0,
+      "end": 142.0,
+      "text": "And there's also factual knowledge."
+    },
+    {
+      "id": 30,
+      "start": 142.0,
+      "end": 149.0,
+      "text": "There's all kinds of other things that you need to carry over long contexts."
+    },
+    {
+      "id": 31,
+      "start": 149.0,
+      "end": 154.0,
+      "text": "These can be complicated, complicated. So this is a nice example."
+    },
+    {
+      "id": 32,
+      "start": 154.0,
+      "end": 158.0,
+      "text": "So if we try to figure out what it refers to here,"
+    },
+    {
+      "id": 33,
+      "start": 158.0,
+      "end": 163.0,
+      "text": "the trophy would not fit in the brown suitcase because it was too big."
+    },
+    {
+      "id": 34,
+      "start": 163.0,
+      "end": 167.0,
+      "text": "What is it here?"
+    },
+    {
+      "id": 35,
+      "start": 167.0,
+      "end": 175.0,
+      "text": "The trophy. Yeah. And then what about the trophy would not fit in the brown suitcase because it was too small."
+    },
+    {
+      "id": 36,
+      "start": 175.0,
+      "end": 177.0,
+      "text": "Okay. Right."
+    },
+    {
+      "id": 37,
+      "start": 177.0,
+      "end": 184.0,
+      "text": "Does anyone know what the name of something like this is?"
+    },
+    {
+      "id": 38,
+      "start": 184.0,
+      "end": 191.0,
+      "text": "Is anyone heard of this challenge before?"
+    },
+    {
+      "id": 39,
+      "start": 191.0,
+      "end": 197.0,
+      "text": "No one. Okay. This is called the Winnigrad schema challenge or these are called Winnigrad schemas."
+    },
+    {
+      "id": 40,
+      "start": 197.0,
+      "end": 204.0,
+      "text": "And basically Winnigrad schemas are a type of."
+    },
+    {
+      "id": 41,
+      "start": 204.0,
+      "end": 217.0,
+      "text": "The type of kind of linguistic challenge where you create two paired examples that you vary in very minimal ways where the answer differs between the two."
+    },
+    {
+      "id": 42,
+      "start": 217.0,
+      "end": 235.0,
+      "text": "And so there's lots of other examples about how you can create these things. And they're good for testing whether language models are able to do things because they're able to kind of control for the fact that you know, like the answer might be."
+    },
+    {
+      "id": 43,
+      "start": 235.0,
+      "end": 241.0,
+      "text": "The answer might be very."
+    },
+    {
+      "id": 44,
+      "start": 241.0,
+      "end": 251.0,
+      "text": "And so the language model could just pick that. So another example is we, we came up with a benchmark of."
+    },
+    {
+      "id": 45,
+      "start": 251.0,
+      "end": 256.0,
+      "text": "Figurative language where we tried to figure out whether language models would be able to."
+    },
+    {
+      "id": 46,
+      "start": 256.0,
+      "end": 264.0,
+      "text": "Interpret figure figure of language and I actually have the multilingual version on the suggested projects on the pizza."
+    },
+    {
+      "id": 47,
+      "start": 264.0,
+      "end": 270.0,
+      "text": "And that's one announcement posted a big list of suggested projects on Piazza. I think a lot of people saw it."
+    },
+    {
+      "id": 48,
+      "start": 270.0,
+      "end": 277.0,
+      "text": "You don't have to follow these, but if you're interested in them, feel free to talk to the contacts and we can give you more information about them."
+    },
+    {
+      "id": 49,
+      "start": 277.0,
+      "end": 286.0,
+      "text": "But anyway, so in this data set what we did is we came up with some figurative language like this movie had the depth of a waiting pool."
+    },
+    {
+      "id": 50,
+      "start": 286.0,
+      "end": 296.0,
+      "text": "And so then after that you would have two choices. This movie was this movie was very deep and interesting. This movie was not very deep and interesting."
+    },
+    {
+      "id": 51,
+      "start": 296.0,
+      "end": 307.0,
+      "text": "And so you have these like two pairs of questions and answers and you need to decide between them and depending on what the input is now will change."
+    },
+    {
+      "id": 52,
+      "start": 307.0,
+      "end": 312.0,
+      "text": "And so that's a good way to control for in test whether language models really understand something."
+    },
+    {
+      "id": 53,
+      "start": 312.0,
+      "end": 317.0,
+      "text": "So if you're interested in benchmarking or other things like that, it's a good time to think about it."
+    },
+    {
+      "id": 54,
+      "start": 317.0,
+      "end": 330.0,
+      "text": "Anyway, that's a little bit of an aside. So now I'd like to go on to types of sequential prediction problems and types of prediction problems in general binary and multi class."
+    },
+    {
+      "id": 55,
+      "start": 330.0,
+      "end": 340.0,
+      "text": "We already talked about that's when we're doing, for example, classification between two classes or classification between multiple classes."
+    },
+    {
+      "id": 56,
+      "start": 340.0,
+      "end": 351.0,
+      "text": "But there's also another variety of prediction called structured prediction. And structured prediction is when you have a very large number of labels. It's not, you know, a finite number of labels."
+    },
+    {
+      "id": 57,
+      "start": 351.0,
+      "end": 361.0,
+      "text": "And so that would be something like if you take in an input and you want to predict all of the parts of speech of all of the words and input."
+    },
+    {
+      "id": 58,
+      "start": 361.0,
+      "end": 373.0,
+      "text": "And if you had like 50 parts of speech, the number of labels that you would have for each sentence is any, any ideas."
+    },
+    {
+      "id": 59,
+      "start": 373.0,
+      "end": 381.0,
+      "text": "50, 50 parts of speech and like what's a four words."
+    },
+    {
+      "id": 60,
+      "start": 381.0,
+      "end": 384.0,
+      "text": "60."
+    },
+    {
+      "id": 61,
+      "start": 384.0,
+      "end": 392.0,
+      "text": "It's every combination of parts of speech for every word. So"
+    },
+    {
+      "id": 62,
+      "start": 392.0,
+      "end": 396.0,
+      "text": "close, but maybe the opposite. It's 50"
+    },
+    {
+      "id": 63,
+      "start": 396.0,
+      "end": 399.0,
+      "text": "50."
+    },
+    {
+      "id": 64,
+      "start": 399.0,
+      "end": 408.0,
+      "text": "Prepare models to be ready to be used as champats like, you know, what you see in chat, GPT or Gemini or whatever else whatever else you want to be using."
+    },
+    {
+      "id": 65,
+      "start": 408.0,
+      "end": 417.0,
+      "text": "Let's say you're talking about translation from English to Japanese. Now you don't really even have a finite number of choices because the length could be even longer."
+    },
+    {
+      "id": 66,
+      "start": 417.0,
+      "end": 420.0,
+      "text": "The length of that book could be even longer than that."
+    },
+    {
+      "id": 67,
+      "start": 420.0,
+      "end": 424.0,
+      "text": "I say, you know, I think you have to find the right."
+    },
+    {
+      "id": 68,
+      "start": 424.0,
+      "end": 429.0,
+      "text": "So follow up and then we'll say, you're not going to have to get together."
+    },
+    {
+      "id": 69,
+      "start": 429.0,
+      "end": 432.0,
+      "text": "Which way to make it like they were."
+    },
+    {
+      "id": 70,
+      "start": 432.0,
+      "end": 444.0,
+      "text": "Yeah, so really good question. So the question or the question or comment was if there are certain rules about one thing that ever being able to call the other, you can actually reduce the number."
+    },
+    {
+      "id": 71,
+      "start": 444.0,
+      "end": 450.0,
+      "text": "You could do that with the hard constraint and make things."
+    },
+    {
+      "id": 72,
+      "start": 450.0,
+      "end": 461.0,
+      "text": "And like actually cut off things that you know have zero probability, but in reality, what people do is they just trim high off. So you say have low probability. And so that has kind of the same."
+    },
+    {
+      "id": 73,
+      "start": 461.0,
+      "end": 466.0,
+      "text": "Like you almost never see a determiner after a determiner in English."
+    },
+    {
+      "id": 74,
+      "start": 466.0,
+      "end": 475.0,
+      "text": "And so yeah, we're going to talk about algorithms to do this in the generation section. So we can talk more about that."
+    },
+    {
+      "id": 75,
+      "start": 475.0,
+      "end": 482.0,
+      "text": "But anyway, the basic idea behind structured prediction is that you don't like language modeling."
+    },
+    {
+      "id": 76,
+      "start": 482.0,
+      "end": 486.0,
+      "text": "Like I said last time, you don't predict all of the whole sequence at once."
+    },
+    {
+      "id": 77,
+      "start": 486.0,
+      "end": 495.0,
+      "text": "You usually predict each element at once and then somehow calculate the conditional probability of the next element given the current element or other things like that."
+    },
+    {
+      "id": 78,
+      "start": 495.0,
+      "end": 500.0,
+      "text": "So that's how we solve structured prediction problems."
+    },
+    {
+      "id": 79,
+      "start": 500.0,
+      "end": 507.0,
+      "text": "Another thing is unconditioned versus condition prediction. So unconditioned prediction. We don't do this very often."
+    },
+    {
+      "id": 80,
+      "start": 507.0,
+      "end": 522.0,
+      "text": "But basically, we predict the probability of a single variable or generate a single variable in condition, prediction is predicting the probability of an output variable given in like this."
+    },
+    {
+      "id": 81,
+      "start": 522.0,
+      "end": 534.0,
+      "text": "So for unconditioned prediction, the way we can do this is left to right auto regressive models. And these are the ones that I talked about last time when I was talking about how we build language models."
+    },
+    {
+      "id": 82,
+      "start": 534.0,
+      "end": 542.0,
+      "text": "And these could be specifically this kind though is a kind that doesn't have any context limit."
+    },
+    {
+      "id": 83,
+      "start": 542.0,
+      "end": 552.0,
+      "text": "So it's looking all the way back to the beginning of the sequence. And this could be like an infinite length n-gram model, but practically we can't use those because they would have too many parameters."
+    },
+    {
+      "id": 84,
+      "start": 552.0,
+      "end": 561.0,
+      "text": "They would be two sparse for us to estimate the parameters. So what we do instead with n-gram models, which I talked about last time is we limit the time text length."
+    },
+    {
+      "id": 85,
+      "start": 561.0,
+      "end": 580.0,
+      "text": "So we have something like a tri-gram model where we don't actually reference all of the previous outputs when we make a prediction. Oh, and sorry, actually, I should explain how do we, how do we read this graph. So this would be we're predicting number one here."
+    },
+    {
+      "id": 86,
+      "start": 580.0,
+      "end": 592.0,
+      "text": "We're predicting word number one and we're conditioning we're not conditioning on anything after it. We're predicting word number two, we're conditioning on word number one, we're predicting word number three, we're conditioning on word number two."
+    },
+    {
+      "id": 87,
+      "start": 592.0,
+      "end": 600.0,
+      "text": "So here we would be predicting word number four conditioning on words number three and two, but not number one."
+    }
+  ],
+  "language": "en"
+}

@@ -1,0 +1,617 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 3.36,
+      "text": "a fashion where you calculate the probability of one token,"
+    },
+    {
+      "id": 1,
+      "start": 3.36,
+      "end": 7.2,
+      "text": "and then you calculate the probability of the next token given the previous token,"
+    },
+    {
+      "id": 2,
+      "start": 7.2,
+      "end": 11.04,
+      "text": "the probability of the third token given the previous two tokens."
+    },
+    {
+      "id": 3,
+      "start": 11.04,
+      "end": 16.64,
+      "text": "Almost always this happens left to right or start to finish."
+    },
+    {
+      "id": 4,
+      "start": 17.52,
+      "end": 20.32,
+      "text": "And so this is the next token here."
+    },
+    {
+      "id": 5,
+      "start": 20.32,
+      "end": 25.12,
+      "text": "This is a context where usually the context is the previous tokens."
+    },
+    {
+      "id": 6,
+      "start": 25.12,
+      "end": 32.32,
+      "text": "Can anyone think of a time when you might want to do right to left instead of left to right?"
+    },
+    {
+      "id": 7,
+      "start": 34.32,
+      "end": 34.72,
+      "text": "Yeah."
+    },
+    {
+      "id": 8,
+      "start": 34.72,
+      "end": 37.28,
+      "text": "So the language that we're in, saying right to left."
+    },
+    {
+      "id": 9,
+      "start": 38.32,
+      "end": 39.52,
+      "text": "Yeah."
+    },
+    {
+      "id": 10,
+      "start": 39.52,
+      "end": 42.16,
+      "text": "That's actually exactly what I was looking for."
+    },
+    {
+      "id": 11,
+      "start": 42.16,
+      "end": 44.24,
+      "text": "So if you have a language that's written from right to left,"
+    },
+    {
+      "id": 12,
+      "start": 44.88,
+      "end": 49.36,
+      "text": "actually things like Arabic and Hebrew are written right to left."
+    },
+    {
+      "id": 13,
+      "start": 49.36,
+      "end": 55.52,
+      "text": "So both of those are chronologically like earlier to later because,"
+    },
+    {
+      "id": 14,
+      "start": 55.52,
+      "end": 58.64,
+      "text": "you know, if you're thinking about how people speak,"
+    },
+    {
+      "id": 15,
+      "start": 59.84,
+      "end": 63.92,
+      "text": "the first word that an English speaker speaks is on the left just because that's when you write it."
+    },
+    {
+      "id": 16,
+      "start": 63.92,
+      "end": 67.44,
+      "text": "But the first word that an Arabic speaker speaks is on the right."
+    },
+    {
+      "id": 17,
+      "start": 67.44,
+      "end": 71.6,
+      "text": "It's chronologically this that's how it works."
+    },
+    {
+      "id": 18,
+      "start": 72.8,
+      "end": 74.96,
+      "text": "There's other reasons why you might want to do right to left,"
+    },
+    {
+      "id": 19,
+      "start": 74.96,
+      "end": 78.24,
+      "text": "but it's not really that left to right is important."
+    },
+    {
+      "id": 20,
+      "start": 78.24,
+      "end": 81.6,
+      "text": "It's that like start to finish is important in this open language."
+    },
+    {
+      "id": 21,
+      "start": 83.6,
+      "end": 90.8,
+      "text": "So one thing I should mention here is that this is just a rule of probability that if you have"
+    },
+    {
+      "id": 22,
+      "start": 90.8,
+      "end": 94.4,
+      "text": "multiple variables and you're calculating the joint probability of variables,"
+    },
+    {
+      "id": 23,
+      "start": 94.4,
+      "end": 99.12,
+      "text": "the probability of all of the variables together is equal to this probability here."
+    },
+    {
+      "id": 24,
+      "start": 99.84,
+      "end": 104.88,
+      "text": "So we're not making any approximations, we're not making any compromises in order to do this,"
+    },
+    {
+      "id": 25,
+      "start": 104.88,
+      "end": 109.44,
+      "text": "but it all hinges on whether we can predict this probability."
+    },
+    {
+      "id": 26,
+      "start": 112.56,
+      "end": 116.96,
+      "text": "Actually another question, does anybody know why we do this decomposition?"
+    },
+    {
+      "id": 27,
+      "start": 116.96,
+      "end": 120.56,
+      "text": "Why don't we just try to predict the probability of x directly?"
+    },
+    {
+      "id": 28,
+      "start": 123.92,
+      "end": 124.72,
+      "text": "Are you going to guess?"
+    },
+    {
+      "id": 29,
+      "start": 129.84,
+      "end": 134.48,
+      "text": "Of big acts, so why don't we try to calculate the probability of this is great"
+    },
+    {
+      "id": 30,
+      "start": 134.48,
+      "end": 138.0,
+      "text": "directly without deep, deep, sophisticated, and into this way?"
+    },
+    {
+      "id": 31,
+      "start": 147.44,
+      "end": 152.08,
+      "text": "It could be word salad if you did it in a particular way, yes."
+    },
+    {
+      "id": 32,
+      "start": 153.12,
+      "end": 154.32,
+      "text": "So that's a good point."
+    },
+    {
+      "id": 33,
+      "start": 154.4,
+      "end": 167.6,
+      "text": "So for example, we talked about models."
+    },
+    {
+      "id": 34,
+      "start": 169.76,
+      "end": 173.6,
+      "text": "I mentioned this briefly last time, I mean, you can mention it in more detail this time,"
+    },
+    {
+      "id": 35,
+      "start": 173.6,
+      "end": 176.96,
+      "text": "but this is great. We probably have never seen this before, right?"
+    },
+    {
+      "id": 36,
+      "start": 176.96,
+      "end": 183.44,
+      "text": "So if we predict only things that we've seen before, if we only assign the non-zero probability"
+    },
+    {
+      "id": 37,
+      "start": 183.44,
+      "end": 187.04,
+      "text": "to things we've seen before, there's going to be lots of sentences that we've never seen before,"
+    },
+    {
+      "id": 38,
+      "start": 187.04,
+      "end": 192.32,
+      "text": "it makes it super-stars. That's basically close to what I wanted to say. So"
+    },
+    {
+      "id": 39,
+      "start": 194.24,
+      "end": 200.08,
+      "text": "the reason why we don't typically do it with predicting the whole sentence directly is because"
+    },
+    {
+      "id": 40,
+      "start": 200.08,
+      "end": 205.2,
+      "text": "if we think about the size of the classification problem we need to solve in order to predict"
+    },
+    {
+      "id": 41,
+      "start": 205.2,
+      "end": 211.92,
+      "text": "the next word, it's v, where v is the size of the vocabulary, but the size of the classification"
+    },
+    {
+      "id": 42,
+      "start": 212.0,
+      "end": 219.6,
+      "text": "problem that we need to solve if we predict everything directly is v to the n, where n is the"
+    },
+    {
+      "id": 43,
+      "start": 219.6,
+      "end": 224.8,
+      "text": "length of the sequence, and that's just huge. The vocabulary is so big that it's hard to kind of"
+    },
+    {
+      "id": 44,
+      "start": 225.76,
+      "end": 232.64,
+      "text": "know how we handle that. So basically by doing the sort of decomposition, we decompose this into"
+    },
+    {
+      "id": 45,
+      "start": 233.68,
+      "end": 240.24,
+      "text": "n prediction problems of size v, and that's kind of just a lot more accessible from the point of"
+    },
+    {
+      "id": 46,
+      "start": 240.4,
+      "end": 248.08,
+      "text": "your own thing, no one has made it on this. That being said, there are other alternatives."
+    },
+    {
+      "id": 47,
+      "start": 249.6,
+      "end": 255.28,
+      "text": "Something very widely known, very widely used is called a mask language model. A mask language"
+    },
+    {
+      "id": 48,
+      "start": 255.28,
+      "end": 261.52,
+      "text": "model is something like Burt or DeBerta or Roberta or all of these models that you might have heard"
+    },
+    {
+      "id": 49,
+      "start": 262.24,
+      "end": 269.68,
+      "text": "if you've been in NLP for more than two years, I guess. Basically what they do is they predict"
+    },
+    {
+      "id": 50,
+      "start": 270.32,
+      "end": 279.76,
+      "text": "the mask out this word and they predict the middle word. So they mask out is and then try to predict"
+    },
+    {
+      "id": 51,
+      "start": 279.76,
+      "end": 286.8,
+      "text": "that given all the other words. The problem with these models is twofold. Number one, they don't"
+    },
+    {
+      "id": 52,
+      "start": 286.8,
+      "end": 295.28,
+      "text": "actually give you a good probability here, like a properly formed probability here, because"
+    },
+    {
+      "id": 53,
+      "start": 295.36,
+      "end": 301.68,
+      "text": "this is true only as long as you're only conditioning on things that you've previously generated."
+    },
+    {
+      "id": 54,
+      "start": 301.68,
+      "end": 306.96,
+      "text": "So they're not actually true language models from the point of view of being able to easily"
+    },
+    {
+      "id": 55,
+      "start": 306.96,
+      "end": 312.24,
+      "text": "predict the probability of a sequence. And also it's hard to generate from them because you need"
+    },
+    {
+      "id": 56,
+      "start": 312.24,
+      "end": 317.84,
+      "text": "to generate in some order and mask language models don't specify it. So they're good for"
+    },
+    {
+      "id": 57,
+      "start": 317.84,
+      "end": 321.68,
+      "text": "some things like calculating representations of the output, but they're not that useful."
+    },
+    {
+      "id": 58,
+      "start": 322.48,
+      "end": 327.52,
+      "text": "They're not as useful for generation. There's also energy-based language models which basically"
+    },
+    {
+      "id": 59,
+      "start": 327.52,
+      "end": 331.6,
+      "text": "create a scoring function that's not necessarily left to right or right to left or anything like that,"
+    },
+    {
+      "id": 60,
+      "start": 331.6,
+      "end": 336.48,
+      "text": "but that's very advanced. If you're interested then I can talk more about them, but let's get one for you."
+    },
+    {
+      "id": 61,
+      "start": 338.16,
+      "end": 344.56,
+      "text": "And also all of the language models that you hear about nowadays, GPT, Lama, whatever else are all"
+    },
+    {
+      "id": 62,
+      "start": 344.56,
+      "end": 351.92,
+      "text": "other ways. Cool. So I'm going to go into the very any questions about that. Yeah."
+    },
+    {
+      "id": 63,
+      "start": 361.52,
+      "end": 365.92,
+      "text": "Yeah. So in mass language models, the question was in mass language models, couldn't you just"
+    },
+    {
+      "id": 64,
+      "start": 365.92,
+      "end": 371.92,
+      "text": "mask out the last token and predict that? Sure, you could do that, but it's just not trained that"
+    },
+    {
+      "id": 65,
+      "start": 372.16,
+      "end": 376.56,
+      "text": "way. So it won't do a very good job. If you always trained it that way, it's an auto-regassive"
+    },
+    {
+      "id": 66,
+      "start": 376.56,
+      "end": 383.76,
+      "text": "language model. So you're back to where you were in this place. Cool. So now I'll talk about"
+    },
+    {
+      "id": 67,
+      "start": 383.76,
+      "end": 388.72,
+      "text": "unigram language models. And so the simplest language models are count-based unigram language"
+    },
+    {
+      "id": 68,
+      "start": 388.72,
+      "end": 396.56,
+      "text": "models. And the way they work is basically we want to calculate this probability condition"
+    },
+    {
+      "id": 69,
+      "start": 396.64,
+      "end": 403.2,
+      "text": "on all the previous ones. And the way we do this is we just say actually we're not going to worry"
+    },
+    {
+      "id": 70,
+      "start": 403.2,
+      "end": 409.44,
+      "text": "about the order at all. And we're just going to predict the probability of the next word,"
+    },
+    {
+      "id": 71,
+      "start": 411.04,
+      "end": 416.88,
+      "text": "independently of all the other words. So if you have something like this, it's actually"
+    },
+    {
+      "id": 72,
+      "start": 416.88,
+      "end": 423.04,
+      "text": "extremely easy to predict the probability of this word. And the way you do this is you just count"
+    },
+    {
+      "id": 73,
+      "start": 423.28,
+      "end": 430.96,
+      "text": "up the number of times this word appeared in the training data set and divide by the total"
+    },
+    {
+      "id": 74,
+      "start": 430.96,
+      "end": 435.28,
+      "text": "number of words in the plain data set. And now you have a language model. This is like language"
+    },
+    {
+      "id": 75,
+      "start": 435.28,
+      "end": 440.24,
+      "text": "model 101. It's the easiest possible language model you can write in three lines of Python basically."
+    },
+    {
+      "id": 76,
+      "start": 443.12,
+      "end": 450.56,
+      "text": "So it has a few problems. The first problem with this language model is handling unknown words."
+    },
+    {
+      "id": 77,
+      "start": 451.2,
+      "end": 458.4,
+      "text": "So what happens if you have a word that you've never seen before in this language model here?"
+    },
+    {
+      "id": 78,
+      "start": 460.64,
+      "end": 463.92,
+      "text": "What is the probability of any sequence that has a word that we've never seen before?"
+    },
+    {
+      "id": 79,
+      "start": 464.64,
+      "end": 469.68,
+      "text": "Yeah, the probability of this sequence gets zeros. So there might not be such a big problem for"
+    },
+    {
+      "id": 80,
+      "start": 469.68,
+      "end": 474.16,
+      "text": "generating things from the language model because maybe it's fine if you only generate words that"
+    },
+    {
+      "id": 81,
+      "start": 474.16,
+      "end": 478.8,
+      "text": "you've seen before. But it is definitely a problem of scoring things with the language model. And"
+    },
+    {
+      "id": 82,
+      "start": 478.8,
+      "end": 484.88,
+      "text": "it's also a problem of, for something like translation, if you get an unknown word when you're"
+    },
+    {
+      "id": 83,
+      "start": 484.88,
+      "end": 488.72,
+      "text": "translating something, then you would like to be able to translate it reasonably, but you can't"
+    },
+    {
+      "id": 84,
+      "start": 488.72,
+      "end": 496.16,
+      "text": "do that. So that's an issue. So how do we how do we fix this? There's a couple options. The first"
+    },
+    {
+      "id": 85,
+      "start": 496.16,
+      "end": 500.64,
+      "text": "option is to segment the characters and sub words. And this is now the preferred option that most"
+    },
+    {
+      "id": 86,
+      "start": 500.64,
+      "end": 506.56,
+      "text": "people use nowadays. Just for unsentents piece segment your vocabulary and you're also you're"
+    },
+    {
+      "id": 87,
+      "start": 507.12,
+      "end": 510.96,
+      "text": "you'll now no longer have any unknown words because all the unknown words get split into shorter"
+    },
+    {
+      "id": 88,
+      "start": 510.96,
+      "end": 518.24,
+      "text": "units. There's also other options that you can use if you're very interested in or serious about"
+    },
+    {
+      "id": 89,
+      "start": 518.24,
+      "end": 524.8,
+      "text": "this and want to handle this like is part of a research project or something like this. And"
+    },
+    {
+      "id": 90,
+      "start": 525.68,
+      "end": 530.8,
+      "text": "the way you can do this is you can build an unknown word model. And an unknown word model basically"
+    },
+    {
+      "id": 91,
+      "start": 530.8,
+      "end": 536.08,
+      "text": "what it does is it predicts the probability of unknown words using characters and embedded models"
+    },
+    {
+      "id": 92,
+      "start": 536.08,
+      "end": 541.76,
+      "text": "and probability of words using words. And so now you can you have kind of like a hierarchical"
+    },
+    {
+      "id": 93,
+      "start": 541.76,
+      "end": 545.2,
+      "text": "model where you first try to predict words and then if you can't predict words and predict unknown"
+    },
+    {
+      "id": 94,
+      "start": 545.2,
+      "end": 550.72,
+      "text": "words. So this isn't used as widely anymore, but it's worth thinking about or knowing about."
+    },
+    {
+      "id": 95,
+      "start": 553.68,
+      "end": 563.04,
+      "text": "Okay. So a second detail. A parameter. So parameterizing in blog space. So"
+    },
+    {
+      "id": 96,
+      "start": 563.68,
+      "end": 570.88,
+      "text": "the multiplication of probabilities can be re-expressed is the addition of log probabilities."
+    },
+    {
+      "id": 97,
+      "start": 572.0,
+      "end": 576.24,
+      "text": "So this is really important and this is widely used in all language models whether they're"
+    },
+    {
+      "id": 98,
+      "start": 576.24,
+      "end": 581.12,
+      "text": "unigrammed language models or neural language models. There's actually a very simple reason why"
+    },
+    {
+      "id": 99,
+      "start": 581.12,
+      "end": 584.72,
+      "text": "we why we do it this way. Does anybody know the answer?"
+    },
+    {
+      "id": 100,
+      "start": 585.44,
+      "end": 596.32,
+      "text": "What would happen if we multiplied let's say 30 tokens worth of probabilities together on"
+    },
+    {
+      "id": 101,
+      "start": 596.32,
+      "end": 600.48,
+      "text": "yes. Yeah, too small."
+    }
+  ],
+  "language": "en"
+}

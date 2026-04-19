@@ -1,0 +1,797 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 7.0,
+      "text": "is equal to P is equal to Q."
+    },
+    {
+      "id": 1,
+      "start": 7.0,
+      "end": 17.0,
+      "text": "So, I know this is a little bit hard to parse, I always took me like a few seconds to parse"
+    },
+    {
+      "id": 2,
+      "start": 17.0,
+      "end": 20.0,
+      "text": "before I, like when I looked at it."
+    },
+    {
+      "id": 3,
+      "start": 20.0,
+      "end": 28.0,
+      "text": "But basically, if the model says the probability of it being correct is 0.7."
+    },
+    {
+      "id": 4,
+      "start": 28.0,
+      "end": 33.0,
+      "text": "And the probability that the answer is correct is actually 0.7."
+    },
+    {
+      "id": 5,
+      "start": 33.0,
+      "end": 45.0,
+      "text": "So, you know, if it says the probability is 0.7 a hundred times, then it will be right 7."
+    },
+    {
+      "id": 6,
+      "start": 45.0,
+      "end": 56.0,
+      "text": "And so, the way we formalize this is by this, it was proposed by the seminal paper by Will at all in 2017."
+    },
+    {
+      "id": 7,
+      "start": 56.0,
+      "end": 70.0,
+      "text": "And unfortunately, this data itself is hard to collect because the model probability is always different, right?"
+    },
+    {
+      "id": 8,
+      "start": 70.0,
+      "end": 76.0,
+      "text": "And so, if the model probability is like, if the model probability was actually 0.7 that would be nice."
+    },
+    {
+      "id": 9,
+      "start": 76.0,
+      "end": 81.0,
+      "text": "But actually, it's 0.7932685."
+    },
+    {
+      "id": 10,
+      "start": 81.0,
+      "end": 85.0,
+      "text": "And do you never get another example where the probability is exactly the same?"
+    },
+    {
+      "id": 11,
+      "start": 85.0,
+      "end": 89.0,
+      "text": "So, what we do instead is we divide the model probabilities into buckets."
+    },
+    {
+      "id": 12,
+      "start": 89.0,
+      "end": 92.0,
+      "text": "So, we save the model probabilities in 0.1."
+    },
+    {
+      "id": 13,
+      "start": 92.0,
+      "end": 97.0,
+      "text": "We save the model probabilities between 0.1 and 0.2, 0.2 and 0.3."
+    },
+    {
+      "id": 14,
+      "start": 97.0,
+      "end": 100.0,
+      "text": "So, we create buckets like this, like these."
+    },
+    {
+      "id": 15,
+      "start": 100.0,
+      "end": 108.0,
+      "text": "And then, we looked at the model confidence, the average model confidence with in their bucket."
+    },
+    {
+      "id": 16,
+      "start": 108.0,
+      "end": 113.0,
+      "text": "So, maybe between 0.1 and 0.0."
+    },
+    {
+      "id": 17,
+      "start": 113.0,
+      "end": 119.0,
+      "text": "Between 0 and 0.1 the model confidence on average is 0.055 or something like that."
+    },
+    {
+      "id": 18,
+      "start": 119.0,
+      "end": 121.0,
+      "text": "So, there would be this comp here."
+    },
+    {
+      "id": 19,
+      "start": 121.0,
+      "end": 125.0,
+      "text": "And then the accuracy is how often did it actually get it from."
+    },
+    {
+      "id": 20,
+      "start": 125.0,
+      "end": 129.0,
+      "text": "And this can be plotted in the same column of reliability diagram."
+    },
+    {
+      "id": 21,
+      "start": 129.0,
+      "end": 136.0,
+      "text": "And the reliability diagram basically, the outputs,"
+    },
+    {
+      "id": 22,
+      "start": 136.0,
+      "end": 152.0,
+      "text": "the model, the model, the model, the model, the model, the model, the probability,"
+    },
+    {
+      "id": 23,
+      "start": 152.0,
+      "end": 159.0,
+      "text": "and then the blue, blue is actual probability."
+    },
+    {
+      "id": 24,
+      "start": 159.0,
+      "end": 167.0,
+      "text": "And the difference between the expected and the actual probability is kind of like a penalty,"
+    },
+    {
+      "id": 25,
+      "start": 167.0,
+      "end": 170.0,
+      "text": "it's how poorly tolerated it was."
+    },
+    {
+      "id": 26,
+      "start": 170.0,
+      "end": 178.0,
+      "text": "And one really important thing to know is that calibration in accuracy are not necessarily,"
+    },
+    {
+      "id": 27,
+      "start": 178.0,
+      "end": 179.0,
+      "text": "they don't go hand in hand."
+    },
+    {
+      "id": 28,
+      "start": 179.0,
+      "end": 184.0,
+      "text": "They do to some extent, but they don't necessarily go hand in hand."
+    },
+    {
+      "id": 29,
+      "start": 184.0,
+      "end": 193.0,
+      "text": "And the example of the left is a bad model, but a well calibrated."
+    },
+    {
+      "id": 30,
+      "start": 193.0,
+      "end": 199.0,
+      "text": "So, its accuracy is, it's errors 44.9%, but it's well calibrated."
+    },
+    {
+      "id": 31,
+      "start": 199.0,
+      "end": 203.0,
+      "text": "As you can see, like what it says in those answers, those answers, one and so,"
+    },
+    {
+      "id": 32,
+      "start": 203.0,
+      "end": 207.0,
+      "text": "this model on the other hand has better error."
+    },
+    {
+      "id": 33,
+      "start": 207.0,
+      "end": 210.0,
+      "text": "And, but where's calibration?"
+    },
+    {
+      "id": 34,
+      "start": 210.0,
+      "end": 214.0,
+      "text": "So the reason why is the model is very, very confident, all the time."
+    },
+    {
+      "id": 35,
+      "start": 214.0,
+      "end": 224.0,
+      "text": "And usually what happens is models that overfit to the data, especially when you do early stopping on something like accuracy,"
+    },
+    {
+      "id": 36,
+      "start": 224.0,
+      "end": 232.0,
+      "text": "when you stop training something with accuracy, will become very overconfident and give confidence estimates that are incorrect."
+    },
+    {
+      "id": 37,
+      "start": 232.0,
+      "end": 234.0,
+      "text": "So this is important to know."
+    },
+    {
+      "id": 38,
+      "start": 234.0,
+      "end": 237.0,
+      "text": "And the reason why it's important to know is actually because, you know,"
+    },
+    {
+      "id": 39,
+      "start": 237.0,
+      "end": 240.0,
+      "text": "those are very good at making up things that aren't actually correct."
+    },
+    {
+      "id": 40,
+      "start": 240.0,
+      "end": 242.0,
+      "text": "Now it is."
+    },
+    {
+      "id": 41,
+      "start": 242.0,
+      "end": 250.0,
+      "text": "And, but if you have a really well calibrated model, you could at least say with what confidence you had with our working."
+    },
+    {
+      "id": 42,
+      "start": 250.0,
+      "end": 252.0,
+      "text": "So how do you calculate the probability of any answer?"
+    },
+    {
+      "id": 43,
+      "start": 252.0,
+      "end": 257.0,
+      "text": "So, yes, yes, yes, yes, yes, please go."
+    },
+    {
+      "id": 44,
+      "start": 257.0,
+      "end": 266.0,
+      "text": "So, usually this would be a probability of the percentage."
+    },
+    {
+      "id": 45,
+      "start": 266.0,
+      "end": 275.0,
+      "text": "Usually, this would be for a generated output because you want to know the probability that the generated output is correct."
+    },
+    {
+      "id": 46,
+      "start": 275.0,
+      "end": 281.0,
+      "text": "Because you start with a confidence,"
+    },
+    {
+      "id": 47,
+      "start": 281.0,
+      "end": 286.0,
+      "text": "so that means that you can use it."
+    },
+    {
+      "id": 48,
+      "start": 287.0,
+      "end": 292.0,
+      "text": "So, I would say that you can use it."
+    },
+    {
+      "id": 49,
+      "start": 292.0,
+      "end": 295.0,
+      "text": "But I would say,"
+    },
+    {
+      "id": 50,
+      "start": 295.0,
+      "end": 298.0,
+      "text": "I would say,"
+    },
+    {
+      "id": 51,
+      "start": 298.0,
+      "end": 301.0,
+      "text": "you can use it."
+    },
+    {
+      "id": 52,
+      "start": 301.0,
+      "end": 303.0,
+      "text": "Great."
+    },
+    {
+      "id": 53,
+      "start": 303.0,
+      "end": 304.0,
+      "text": "That's fine."
+    },
+    {
+      "id": 54,
+      "start": 304.0,
+      "end": 305.0,
+      "text": "About the time."
+    },
+    {
+      "id": 55,
+      "start": 305.0,
+      "end": 306.0,
+      "text": "So perfect."
+    },
+    {
+      "id": 56,
+      "start": 306.0,
+      "end": 307.0,
+      "text": "Perfect question."
+    },
+    {
+      "id": 57,
+      "start": 307.0,
+      "end": 313.0,
+      "text": "So how do we calculate the answer probability or how do we calculate the confidence in an answer?"
+    },
+    {
+      "id": 58,
+      "start": 313.0,
+      "end": 319.0,
+      "text": "We're actually going to go into more detail about this in a later class."
+    },
+    {
+      "id": 59,
+      "start": 319.0,
+      "end": 321.0,
+      "text": "But the first thing is probability of the answer."
+    },
+    {
+      "id": 60,
+      "start": 321.0,
+      "end": 325.0,
+      "text": "And this is easy when there's a single answer."
+    },
+    {
+      "id": 61,
+      "start": 325.0,
+      "end": 332.0,
+      "text": "Like if there's only one correct answer and you want your model to be solving math problems."
+    },
+    {
+      "id": 62,
+      "start": 332.0,
+      "end": 336.0,
+      "text": "And you want it to return only the answer and nothing else."
+    },
+    {
+      "id": 63,
+      "start": 336.0,
+      "end": 338.0,
+      "text": "If it returns anything else."
+    },
+    {
+      "id": 64,
+      "start": 338.0,
+      "end": 341.0,
+      "text": "And if it returns something,"
+    },
+    {
+      "id": 65,
+      "start": 341.0,
+      "end": 344.0,
+      "text": "it won't work."
+    },
+    {
+      "id": 66,
+      "start": 344.0,
+      "end": 347.0,
+      "text": "Then you can just use the probability of the answer."
+    },
+    {
+      "id": 67,
+      "start": 347.0,
+      "end": 350.0,
+      "text": "But what if,"
+    },
+    {
+      "id": 68,
+      "start": 350.0,
+      "end": 359.0,
+      "text": "what if they're multiple acceptable answers and maybe a perfect example of that is like where CMU located."
+    },
+    {
+      "id": 69,
+      "start": 359.0,
+      "end": 362.0,
+      "text": "Or where,"
+    },
+    {
+      "id": 70,
+      "start": 362.0,
+      "end": 365.0,
+      "text": "where are we right now?"
+    },
+    {
+      "id": 71,
+      "start": 365.0,
+      "end": 368.0,
+      "text": "And so,"
+    },
+    {
+      "id": 72,
+      "start": 368.0,
+      "end": 371.0,
+      "text": "could be Pittsburgh."
+    },
+    {
+      "id": 73,
+      "start": 371.0,
+      "end": 373.0,
+      "text": "Could be CMU."
+    },
+    {
+      "id": 74,
+      "start": 373.0,
+      "end": 378.0,
+      "text": "Could be Carnegie Mellon."
+    },
+    {
+      "id": 75,
+      "start": 378.0,
+      "end": 383.0,
+      "text": "Could be other other things like this, right?"
+    },
+    {
+      "id": 76,
+      "start": 383.0,
+      "end": 385.0,
+      "text": "And so."
+    },
+    {
+      "id": 77,
+      "start": 385.0,
+      "end": 390.0,
+      "text": "Another way that you can calculate the confidence is calculating the probability of the answer."
+    },
+    {
+      "id": 78,
+      "start": 390.0,
+      "end": 393.0,
+      "text": "You know,"
+    },
+    {
+      "id": 79,
+      "start": 393.0,
+      "end": 396.0,
+      "text": "paraphrases of the answer or other other things like this."
+    },
+    {
+      "id": 80,
+      "start": 396.0,
+      "end": 399.0,
+      "text": "And so then you would just sum the probability over all the,"
+    },
+    {
+      "id": 81,
+      "start": 399.0,
+      "end": 403.0,
+      "text": "like acceptable answers."
+    },
+    {
+      "id": 82,
+      "start": 403.0,
+      "end": 408.0,
+      "text": "Another thing that you can do is,"
+    },
+    {
+      "id": 83,
+      "start": 408.0,
+      "end": 411.0,
+      "text": "sample multiple outputs and count the number of times you get a particular answer."
+    },
+    {
+      "id": 84,
+      "start": 411.0,
+      "end": 413.0,
+      "text": "This doesn't solve the problem of paraphrasing,"
+    },
+    {
+      "id": 85,
+      "start": 413.0,
+      "end": 416.0,
+      "text": "paraphrases existing."
+    },
+    {
+      "id": 86,
+      "start": 416.0,
+      "end": 419.0,
+      "text": "But it does solve the problem."
+    },
+    {
+      "id": 87,
+      "start": 419.0,
+      "end": 425.0,
+      "text": "Sometimes there are language models where you can't get probabilities out of them."
+    },
+    {
+      "id": 88,
+      "start": 425.0,
+      "end": 431.0,
+      "text": "This is not so much of a problem anymore with the GPT models because they're reintroducing the ability to get probabilities."
+    },
+    {
+      "id": 89,
+      "start": 431.0,
+      "end": 436.0,
+      "text": "But there are some models where you can just sample from them and you can't get probabilities out."
+    },
+    {
+      "id": 90,
+      "start": 436.0,
+      "end": 439.0,
+      "text": "But also more importantly,"
+    },
+    {
+      "id": 91,
+      "start": 439.0,
+      "end": 443.0,
+      "text": "sometimes when you're using things like chain of thought reasoning,"
+    },
+    {
+      "id": 92,
+      "start": 443.0,
+      "end": 445.0,
+      "text": "which we'll talk about in more detail,"
+    },
+    {
+      "id": 93,
+      "start": 445.0,
+      "end": 447.0,
+      "text": "like,"
+    },
+    {
+      "id": 94,
+      "start": 447.0,
+      "end": 450.0,
+      "text": "please solve this math problem and explain,"
+    },
+    {
+      "id": 95,
+      "start": 450.0,
+      "end": 452.0,
+      "text": "explain your solution."
+    },
+    {
+      "id": 96,
+      "start": 452.0,
+      "end": 453.0,
+      "text": "And then if it will do that,"
+    },
+    {
+      "id": 97,
+      "start": 453.0,
+      "end": 454.0,
+      "text": "it will generate, you know,"
+    },
+    {
+      "id": 98,
+      "start": 454.0,
+      "end": 459.0,
+      "text": "a really long explanation of how it got to the solution and then it will give you the answer at the very end."
+    },
+    {
+      "id": 99,
+      "start": 459.0,
+      "end": 465.0,
+      "text": "And so then you can't calculate the probability of the actual, like answer itself,"
+    },
+    {
+      "id": 100,
+      "start": 465.0,
+      "end": 471.0,
+      "text": "because there's this long reasoning chain in between and you have like all of these other,"
+    },
+    {
+      "id": 101,
+      "start": 471.0,
+      "end": 473.0,
+      "text": "all that other types there."
+    },
+    {
+      "id": 102,
+      "start": 473.0,
+      "end": 479.0,
+      "text": "So what you can do is you can sample those reasoning chains a hundred times and then see how many times you've got to put into the answer."
+    },
+    {
+      "id": 103,
+      "start": 479.0,
+      "end": 481.0,
+      "text": "And that's actually a pretty,"
+    },
+    {
+      "id": 104,
+      "start": 481.0,
+      "end": 488.0,
+      "text": "pretty reasonable way of getting a problem going on."
+    },
+    {
+      "id": 105,
+      "start": 488.0,
+      "end": 491.0,
+      "text": "This is my favorite one. I love how we can do this now."
+    },
+    {
+      "id": 106,
+      "start": 491.0,
+      "end": 493.0,
+      "text": "It's just absolutely ridiculous,"
+    },
+    {
+      "id": 107,
+      "start": 493.0,
+      "end": 496.0,
+      "text": "but you could ask the model of how confident it is."
+    },
+    {
+      "id": 108,
+      "start": 496.0,
+      "end": 500.0,
+      "text": "And it sometimes gives you a reasonable,"
+    },
+    {
+      "id": 109,
+      "start": 500.0,
+      "end": 502.0,
+      "text": "reasonable answer."
+    },
+    {
+      "id": 110,
+      "start": 502.0,
+      "end": 506.0,
+      "text": "There's a really nice comparison of different methods in this paper,"
+    },
+    {
+      "id": 111,
+      "start": 506.0,
+      "end": 508.0,
+      "text": "which is also on the website."
+    },
+    {
+      "id": 112,
+      "start": 508.0,
+      "end": 510.0,
+      "text": "And basically long story short,"
+    },
+    {
+      "id": 113,
+      "start": 510.0,
+      "end": 516.0,
+      "text": "the conclusion from this paper is the same point multiple outputs one is the best way to do it."
+    },
+    {
+      "id": 114,
+      "start": 516.0,
+      "end": 519.0,
+      "text": "You can't directly calculate probabilities."
+    },
+    {
+      "id": 115,
+      "start": 519.0,
+      "end": 524.0,
+      "text": "Another thing that I like people to pay very close attention to is in the generation."
+    },
+    {
+      "id": 116,
+      "start": 524.0,
+      "end": 526.0,
+      "text": "In the generation class,"
+    },
+    {
+      "id": 117,
+      "start": 526.0,
+      "end": 533.0,
+      "text": "we're going to be talking about minimum base risk, which is a criterion for deciding how risky and output is."
+    },
+    {
+      "id": 118,
+      "start": 533.0,
+      "end": 541.0,
+      "text": "And it's actually a really good confidence metric as well, but I'm going to leave that to discuss it more."
+    },
+    {
+      "id": 119,
+      "start": 541.0,
+      "end": 544.0,
+      "text": "Any any questions here?"
+    },
+    {
+      "id": 120,
+      "start": 544.0,
+      "end": 547.0,
+      "text": "Okay."
+    },
+    {
+      "id": 121,
+      "start": 547.0,
+      "end": 549.0,
+      "text": "So the other criterion."
+    },
+    {
+      "id": 122,
+      "start": 549.0,
+      "end": 553.0,
+      "text": "This is just yet another criterion that we would like language models to be good at."
+    },
+    {
+      "id": 123,
+      "start": 553.0,
+      "end": 561.0,
+      "text": "And so basically the model is easy to run unlimited hardware by some, you know,"
+    },
+    {
+      "id": 124,
+      "start": 561.0,
+      "end": 568.0,
+      "text": "metrics will be easy and some metrics that we like to talk about are parameter account."
+    },
+    {
+      "id": 125,
+      "start": 568.0,
+      "end": 573.0,
+      "text": "So often you will see, oh, this is the best model under."
+    },
+    {
+      "id": 126,
+      "start": 573.0,
+      "end": 578.0,
+      "text": "Three billion parameters or this is the best model under seven billion parameters or."
+    },
+    {
+      "id": 127,
+      "start": 578.0,
+      "end": 582.0,
+      "text": "We trained a model with one trillion parameters or something like that, you know."
+    },
+    {
+      "id": 128,
+      "start": 582.0,
+      "end": 590.0,
+      "text": "The thing is parameter count doesn't really mean that much from the point of view of like ease of using the model."
+    },
+    {
+      "id": 129,
+      "start": 590.0,
+      "end": 593.0,
+      "text": "Unless you also think about other."
+    },
+    {
+      "id": 130,
+      "start": 593.0,
+      "end": 599.0,
+      "text": "You know, does it not like just give one example, this is a parameter count."
+    },
+    {
+      "id": 131,
+      "start": 599.0,
+      "end": 603.0,
+      "text": "Let's say you have a parameter count of seven billion."
+    }
+  ],
+  "language": "en"
+}

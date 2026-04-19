@@ -1,0 +1,611 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 5.6,
+      "text": "And then on the right side, this is the types of quad machines that support these GPUs."
+    },
+    {
+      "id": 1,
+      "start": 5.6,
+      "end": 14.28,
+      "text": "And in this class, a lot of people are using Google Colab, I think, for your current assignment,"
+    },
+    {
+      "id": 2,
+      "start": 14.28,
+      "end": 19.16,
+      "text": "and soon we'll have AWS credits for everybody, so you can use AWS machines."
+    },
+    {
+      "id": 3,
+      "start": 19.16,
+      "end": 25.08,
+      "text": "So if you look at the GPUs that are available, we have things everywhere from 24 gigabytes,"
+    },
+    {
+      "id": 4,
+      "start": 25.08,
+      "end": 35.36,
+      "text": "32 gigabytes, 40 to 80 gigabytes, 48 gigabytes, or on your Mac, the GPU and CPU memory is shared."
+    },
+    {
+      "id": 5,
+      "start": 35.36,
+      "end": 43.8,
+      "text": "And basically, what we can see is that there's no GPU with 130 gigabytes in that version, right?"
+    },
+    {
+      "id": 6,
+      "start": 43.8,
+      "end": 48.56,
+      "text": "So none of them can do this with a single GPU."
+    },
+    {
+      "id": 7,
+      "start": 48.56,
+      "end": 53.0,
+      "text": "There's also a bunch of other hardware options like AMD GPUs, Google GPUs,"
+    },
+    {
+      "id": 8,
+      "start": 53.0,
+      "end": 57.84,
+      "text": "special purpose training things like Siri, Brass, AWS, Furnium, etc."
+    },
+    {
+      "id": 9,
+      "start": 57.84,
+      "end": 62.8,
+      "text": "But I think for the purpose of this class, you're probably going to use standard hardware like this."
+    },
+    {
+      "id": 10,
+      "start": 62.8,
+      "end": 72.6,
+      "text": "So anyway, like that model will not fit on any, or that fine tuning will not fit on any GPU that we have available to."
+    },
+    {
+      "id": 11,
+      "start": 72.6,
+      "end": 74.56,
+      "text": "Any questions about this?"
+    },
+    {
+      "id": 12,
+      "start": 77.52,
+      "end": 78.52,
+      "text": "Yeah."
+    },
+    {
+      "id": 13,
+      "start": 78.72,
+      "end": 81.72,
+      "text": "You can literally add a lot of stuff over here."
+    },
+    {
+      "id": 14,
+      "start": 81.72,
+      "end": 89.12,
+      "text": "So a lot of these are created specifically for training neural networks."
+    },
+    {
+      "id": 15,
+      "start": 89.12,
+      "end": 94.12,
+      "text": "So they're like really, really good at the things you need to be training neural networks for."
+    },
+    {
+      "id": 16,
+      "start": 94.12,
+      "end": 101.52,
+      "text": "I haven't actually used any of these, so I can't endorse or disindoors any of them,"
+    },
+    {
+      "id": 17,
+      "start": 101.52,
+      "end": 107.72,
+      "text": "but they're made to be like really good at training transformers or like the specific thing"
+    },
+    {
+      "id": 18,
+      "start": 107.72,
+      "end": 109.72,
+      "text": "that everybody wants to play in."
+    },
+    {
+      "id": 19,
+      "start": 109.72,
+      "end": 113.72,
+      "text": "The disadvantage is if you start wanting to be like a little bit more creative,"
+    },
+    {
+      "id": 20,
+      "start": 113.72,
+      "end": 116.92,
+      "text": "then you know what they imagined that might not support that."
+    },
+    {
+      "id": 21,
+      "start": 116.92,
+      "end": 120.72,
+      "text": "So that's also a problem with GPUs."
+    },
+    {
+      "id": 22,
+      "start": 120.72,
+      "end": 125.32,
+      "text": "TQs are very good at certain things like they're very good at like batch large operations,"
+    },
+    {
+      "id": 23,
+      "start": 125.32,
+      "end": 129.72,
+      "text": "but they're less than it and then believe executing dynamic computation graphs and stuff."
+    },
+    {
+      "id": 24,
+      "start": 129.72,
+      "end": 134.72,
+      "text": "So from that point of view, I think most people in research still use to use."
+    },
+    {
+      "id": 25,
+      "start": 137.72,
+      "end": 145.72,
+      "text": "One thing I should mention is the AMD, AMD GPUs, a lot of people have started using them in like 2023, 2024."
+    },
+    {
+      "id": 26,
+      "start": 145.72,
+      "end": 152.72,
+      "text": "Like I think previously it was kind of a Nvidia one first race, but I've heard more and more people using the amg."
+    },
+    {
+      "id": 27,
+      "start": 152.72,
+      "end": 155.72,
+      "text": "And they're not price match."
+    },
+    {
+      "id": 28,
+      "start": 155.72,
+      "end": 156.72,
+      "text": "Quite as much."
+    },
+    {
+      "id": 29,
+      "start": 156.72,
+      "end": 159.72,
+      "text": "Any other questions?"
+    },
+    {
+      "id": 30,
+      "start": 168.72,
+      "end": 179.72,
+      "text": "So training models, like if they're training pre training models, they're using like 1000, 1000, 2000, 4000 or something."
+    },
+    {
+      "id": 31,
+      "start": 179.72,
+      "end": 190.72,
+      "text": "Like, the meta just announced that they got 350,000 H100s or something like this."
+    },
+    {
+      "id": 32,
+      "start": 191.72,
+      "end": 201.72,
+      "text": "And in case you are too lazy to calculate, that's about 10 to 20 billion dollars."
+    },
+    {
+      "id": 33,
+      "start": 201.72,
+      "end": 203.72,
+      "text": "It's a lot of money."
+    },
+    {
+      "id": 34,
+      "start": 203.72,
+      "end": 210.72,
+      "text": "And I'm sure not all of them are being used to train a model, you know, a lot of them are used for models are being in stuff like that."
+    },
+    {
+      "id": 35,
+      "start": 210.72,
+      "end": 214.72,
+      "text": "So, but there's a reason why we're not all pre training models, right?"
+    },
+    {
+      "id": 36,
+      "start": 214.72,
+      "end": 217.72,
+      "text": "You know, it's a big, it's a big effort."
+    },
+    {
+      "id": 37,
+      "start": 217.72,
+      "end": 219.72,
+      "text": "It's very expensive."
+    },
+    {
+      "id": 38,
+      "start": 219.72,
+      "end": 225.72,
+      "text": "So, you know, any other, any other questions?"
+    },
+    {
+      "id": 39,
+      "start": 225.72,
+      "end": 226.72,
+      "text": "Cool."
+    },
+    {
+      "id": 40,
+      "start": 226.72,
+      "end": 227.72,
+      "text": "Okay."
+    },
+    {
+      "id": 41,
+      "start": 227.72,
+      "end": 229.72,
+      "text": "So how can we overcome this?"
+    },
+    {
+      "id": 42,
+      "start": 229.72,
+      "end": 235.72,
+      "text": "The first way we can overcome this is using things like multi GPU training."
+    },
+    {
+      "id": 43,
+      "start": 235.72,
+      "end": 243.72,
+      "text": "And one solution is just to throw more hardware at the models and distribute the models over multiple places."
+    },
+    {
+      "id": 44,
+      "start": 243.72,
+      "end": 254.72,
+      "text": "And the canonical or the most well known version of this that still many, many people use when they're retraining or pioneering language models is something called deep speed zero."
+    },
+    {
+      "id": 45,
+      "start": 254.72,
+      "end": 260.72,
+      "text": "And the way deep speed zero works is it works by partitioning optimization over different devices."
+    },
+    {
+      "id": 46,
+      "start": 260.72,
+      "end": 270.72,
+      "text": "And so there's different stages of deep speed, the first zero, the first one is this one right here."
+    },
+    {
+      "id": 47,
+      "start": 270.72,
+      "end": 277.72,
+      "text": "And this is two plus two plus K, where K is the size of the optimizer state that I had here."
+    },
+    {
+      "id": 48,
+      "start": 277.72,
+      "end": 285.72,
+      "text": "So two, two bytes, two bytes plus all of the bytes required for this."
+    },
+    {
+      "id": 49,
+      "start": 285.72,
+      "end": 291.72,
+      "text": "And the blue is the first two, the orange is the second two and the green is the third one."
+    },
+    {
+      "id": 50,
+      "start": 291.72,
+      "end": 297.72,
+      "text": "And so basically the baseline is you, you hold all of these on each GPU."
+    },
+    {
+      "id": 51,
+      "start": 297.72,
+      "end": 302.72,
+      "text": "The second thing is you partition the optimizer state across different GPUs."
+    },
+    {
+      "id": 52,
+      "start": 302.72,
+      "end": 307.72,
+      "text": "And because optimizer state is generally larger or at least as large as all of the others."
+    },
+    {
+      "id": 53,
+      "start": 307.72,
+      "end": 310.72,
+      "text": "This can reduce memory requirements significantly."
+    },
+    {
+      "id": 54,
+      "start": 310.72,
+      "end": 320.72,
+      "text": "So this went from 120 gigabytes for whatever model they were doing there to 31 gigabytes based on."
+    },
+    {
+      "id": 55,
+      "start": 320.72,
+      "end": 323.72,
+      "text": "So this was a 7.5 billion parameter model."
+    },
+    {
+      "id": 56,
+      "start": 323.72,
+      "end": 328.72,
+      "text": "So the seventh and they had, let's see, yeah, and they had 64 devices."
+    },
+    {
+      "id": 57,
+      "start": 328.72,
+      "end": 332.72,
+      "text": "So they went down from 120 to 31."
+    },
+    {
+      "id": 58,
+      "start": 332.72,
+      "end": 337.72,
+      "text": "This is with 12 bytes for their optimizer state, like I said here."
+    },
+    {
+      "id": 59,
+      "start": 337.72,
+      "end": 341.72,
+      "text": "But actually we can get away with four bytes for the optimizer state."
+    },
+    {
+      "id": 60,
+      "start": 341.72,
+      "end": 348.72,
+      "text": "So actually you can train a seven billion model reasonably easily on one or two devices."
+    },
+    {
+      "id": 61,
+      "start": 348.72,
+      "end": 353.72,
+      "text": "One or several devices now."
+    },
+    {
+      "id": 62,
+      "start": 353.72,
+      "end": 359.72,
+      "text": "So this is called stage one. This is partitioning the optimizer state stage two."
+    },
+    {
+      "id": 63,
+      "start": 359.72,
+      "end": 363.72,
+      "text": "This is partitioning the optimizer state and the gradients."
+    },
+    {
+      "id": 64,
+      "start": 363.72,
+      "end": 369.72,
+      "text": "The optimizer state is actually doing the optimizer state is actually relatively my harmless."
+    },
+    {
+      "id": 65,
+      "start": 369.72,
+      "end": 377.72,
+      "text": "It doesn't slow down too much partitioning the gradients gets a little bit more tricky because you start having to move."
+    },
+    {
+      "id": 66,
+      "start": 377.72,
+      "end": 380.72,
+      "text": "Things between devices a lot."
+    },
+    {
+      "id": 67,
+      "start": 380.72,
+      "end": 385.72,
+      "text": "And then if you do this for the parameters, you can."
+    },
+    {
+      "id": 68,
+      "start": 385.72,
+      "end": 386.72,
+      "text": "You can do even more."
+    },
+    {
+      "id": 69,
+      "start": 386.72,
+      "end": 398.72,
+      "text": "So you can get down to like ridiculously small values here, but this is going to be very expensive in terms of, you know, moving things around so that you can calculate your gradients."
+    },
+    {
+      "id": 70,
+      "start": 398.72,
+      "end": 409.72,
+      "text": "So I say that by default if you can go to deep speed with like stage one or stage two, you can spread this up across different devices and enter it."
+    },
+    {
+      "id": 71,
+      "start": 409.72,
+      "end": 410.72,
+      "text": "Yeah."
+    },
+    {
+      "id": 72,
+      "start": 410.72,
+      "end": 423.72,
+      "text": "Is this a general question that you think that you're centred about."
+    },
+    {
+      "id": 73,
+      "start": 423.72,
+      "end": 428.72,
+      "text": "Your central device basically be your CPU."
+    },
+    {
+      "id": 74,
+      "start": 428.72,
+      "end": 434.72,
+      "text": "When you say multi device, sorry, getting multi GPU or getting multi."
+    },
+    {
+      "id": 75,
+      "start": 434.72,
+      "end": 444.72,
+      "text": "So it's very much."
+    },
+    {
+      "id": 76,
+      "start": 444.72,
+      "end": 450.72,
+      "text": "I don't know anything so I mean it's been under implementation, but not theoretically."
+    },
+    {
+      "id": 77,
+      "start": 450.72,
+      "end": 453.72,
+      "text": "I can speak."
+    },
+    {
+      "id": 78,
+      "start": 453.72,
+      "end": 461.72,
+      "text": "Yeah, otherwise you'd have lots of trouble like getting the machine that had, you know, a thousand gigabytes."
+    },
+    {
+      "id": 79,
+      "start": 461.72,
+      "end": 473.72,
+      "text": "So yeah, I would suggest definitely using something like deep speed, but actually a lot of a lot of libraries use deep speed under the hood also so things like."
+    },
+    {
+      "id": 80,
+      "start": 473.72,
+      "end": 482.72,
+      "text": "Hugging face accelerate to the new apps, other things like this, they all interface many of them interface to deep speed or something similar to it."
+    },
+    {
+      "id": 81,
+      "start": 482.72,
+      "end": 488.72,
+      "text": "So whatever library you're using for training like this, you can do."
+    },
+    {
+      "id": 82,
+      "start": 488.72,
+      "end": 492.72,
+      "text": "I don't have a list, but there's a whole bunch of them."
+    },
+    {
+      "id": 83,
+      "start": 492.72,
+      "end": 497.72,
+      "text": "You can either use deep speed things like hugging face accelerator, TRL."
+    },
+    {
+      "id": 84,
+      "start": 497.72,
+      "end": 500.72,
+      "text": "I think we might have a TRL."
+    },
+    {
+      "id": 85,
+      "start": 500.72,
+      "end": 503.72,
+      "text": "I'm recitation later."
+    },
+    {
+      "id": 86,
+      "start": 503.72,
+      "end": 510.72,
+      "text": "Also, I haven't used it myself or worked with people of use it, but acts a lot of a lot of people are using."
+    },
+    {
+      "id": 87,
+      "start": 510.72,
+      "end": 518.72,
+      "text": "So maybe we can come up with a list of those."
+    },
+    {
+      "id": 88,
+      "start": 518.72,
+      "end": 521.72,
+      "text": "So."
+    },
+    {
+      "id": 89,
+      "start": 521.72,
+      "end": 527.72,
+      "text": "The first option that you can use is don't tune all of the parameters of the model, but just some of them."
+    },
+    {
+      "id": 90,
+      "start": 527.72,
+      "end": 544.72,
+      "text": "And this is really popular nowadays because this further improves your ability to train on many different, you know, data sets without huge GPUs or without many, many GPU devices."
+    },
+    {
+      "id": 91,
+      "start": 544.72,
+      "end": 550.72,
+      "text": "And so the first one is something like prefix tuning. So I already talked about this last time."
+    },
+    {
+      "id": 92,
+      "start": 550.72,
+      "end": 558.72,
+      "text": "Refix tuning is like a bridge between parameter efficient fine tuning and prompting right so it tunes one."
+    },
+    {
+      "id": 93,
+      "start": 558.72,
+      "end": 564.72,
+      "text": "Prefects for each of the layers."
+    },
+    {
+      "id": 94,
+      "start": 564.72,
+      "end": 570.72,
+      "text": "So the next one that I'd like to talk about is adapters and adapters are basically looked like this."
+    },
+    {
+      "id": 95,
+      "start": 570.72,
+      "end": 585.72,
+      "text": "So what you do is you have your standard transformer architecture, which has, you know, like multi-headed attention into other things like this."
+    },
+    {
+      "id": 96,
+      "start": 585.72,
+      "end": 588.72,
+      "text": "And."
+    },
+    {
+      "id": 97,
+      "start": 588.72,
+      "end": 594.72,
+      "text": "Yeah, this is written in a slightly different way than I wrote the transformer diagram, but it's saying the same things."
+    },
+    {
+      "id": 98,
+      "start": 594.72,
+      "end": 596.72,
+      "text": "So multi-headed attention."
+    },
+    {
+      "id": 99,
+      "start": 596.72,
+      "end": 599.72,
+      "text": "This is kind of your W your."
+    },
+    {
+      "id": 100,
+      "start": 599.72,
+      "end": 601.72,
+      "text": "QK."
+    }
+  ],
+  "language": "en"
+}

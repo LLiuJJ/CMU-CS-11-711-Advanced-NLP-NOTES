@@ -1,0 +1,539 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 5.0,
+      "text": "And you can even do it in whole models in an ensemble."
+    },
+    {
+      "id": 1,
+      "start": 5.0,
+      "end": 10.0,
+      "text": "So the first one, this can be optimized automatically by GPU."
+    },
+    {
+      "id": 2,
+      "start": 10.0,
+      "end": 17.0,
+      "text": "The second one, this often occurs in a sparse mixture of x-ray its models."
+    },
+    {
+      "id": 3,
+      "start": 17.0,
+      "end": 21.0,
+      "text": "And the final one, basically, you just don't need to even use the model in the ensemble."
+    },
+    {
+      "id": 4,
+      "start": 21.0,
+      "end": 27.0,
+      "text": "So if you somehow optimize an ensemble and it turns out that the probability of one of the models is zero,"
+    },
+    {
+      "id": 5,
+      "start": 27.0,
+      "end": 31.0,
+      "text": "you just can throw it out and not use it at all."
+    },
+    {
+      "id": 6,
+      "start": 31.0,
+      "end": 35.0,
+      "text": "So GPU-level sparsity support."
+    },
+    {
+      "id": 7,
+      "start": 35.0,
+      "end": 39.0,
+      "text": "And video GPUs support a bunch of different types of sparsity."
+    },
+    {
+      "id": 8,
+      "start": 39.0,
+      "end": 48.0,
+      "text": "And the people, the wonderful people at Nvidia have worked hard to make the support work to some extent anyway."
+    },
+    {
+      "id": 9,
+      "start": 48.0,
+      "end": 51.0,
+      "text": "And there's a library called CooSpares."
+    },
+    {
+      "id": 10,
+      "start": 51.0,
+      "end": 55.0,
+      "text": "And this is used in PyTorch and all these other things as well."
+    },
+    {
+      "id": 11,
+      "start": 55.0,
+      "end": 60.0,
+      "text": "And just to give an example, a vector matrix multiply with a sparse vector,"
+    },
+    {
+      "id": 12,
+      "start": 60.0,
+      "end": 63.0,
+      "text": "such as one that comes from a relu activation."
+    },
+    {
+      "id": 13,
+      "start": 63.0,
+      "end": 70.0,
+      "text": "Basically, what happens is, let's say you only have three parts of this vector that are active."
+    },
+    {
+      "id": 14,
+      "start": 70.0,
+      "end": 75.0,
+      "text": "You actually just don't need to calculate any of the columns."
+    },
+    {
+      "id": 15,
+      "start": 75.0,
+      "end": 81.0,
+      "text": "So that makes your life relatively easy."
+    },
+    {
+      "id": 16,
+      "start": 81.0,
+      "end": 86.0,
+      "text": "But the specific thing that I want to talk about is this sparsely gated mixture of experts layer,"
+    },
+    {
+      "id": 17,
+      "start": 86.0,
+      "end": 93.0,
+      "text": "because this is what is used in mixed role, and probably the GPD models as well."
+    },
+    {
+      "id": 18,
+      "start": 93.0,
+      "end": 98.0,
+      "text": "And what you do is you have a feed forward network."
+    },
+    {
+      "id": 19,
+      "start": 98.0,
+      "end": 105.0,
+      "text": "And normally a feed forward network and a transformer."
+    },
+    {
+      "id": 20,
+      "start": 105.0,
+      "end": 111.0,
+      "text": "And this is this like really wide thing."
+    },
+    {
+      "id": 21,
+      "start": 111.0,
+      "end": 115.0,
+      "text": "This huge white before network."
+    },
+    {
+      "id": 22,
+      "start": 115.0,
+      "end": 120.0,
+      "text": "That you use to extract a whole bunch of features at each layer."
+    },
+    {
+      "id": 23,
+      "start": 120.0,
+      "end": 125.0,
+      "text": "And that's where a lot of the computation and transformer happens."
+    },
+    {
+      "id": 24,
+      "start": 125.0,
+      "end": 134.0,
+      "text": "And what sparsely gated mixture experts layers do is the first head is gating network here."
+    },
+    {
+      "id": 25,
+      "start": 134.0,
+      "end": 137.0,
+      "text": "It calculates mixture probability."
+    },
+    {
+      "id": 26,
+      "start": 137.0,
+      "end": 139.0,
+      "text": "But the mixture probability is zero."
+    },
+    {
+      "id": 27,
+      "start": 139.0,
+      "end": 144.0,
+      "text": "And for many or most of the parts of this feed forward network."
+    },
+    {
+      "id": 28,
+      "start": 144.0,
+      "end": 150.0,
+      "text": "And so for the ones where it's zero, you just don't calculate it."
+    },
+    {
+      "id": 29,
+      "start": 150.0,
+      "end": 154.0,
+      "text": "And then when you mix them together, you use mixture."
+    },
+    {
+      "id": 30,
+      "start": 154.0,
+      "end": 157.0,
+      "text": "And this is actually really simple."
+    },
+    {
+      "id": 31,
+      "start": 157.0,
+      "end": 163.0,
+      "text": "It's like several lines of PyTorch code, maybe like seven or eight lines of PyTorch code."
+    },
+    {
+      "id": 32,
+      "start": 163.0,
+      "end": 172.0,
+      "text": "But the basic idea here is you have this gating function where you calculate the gating function based on input."
+    },
+    {
+      "id": 33,
+      "start": 172.0,
+      "end": 176.0,
+      "text": "And then you have this keep top K operation."
+    },
+    {
+      "id": 34,
+      "start": 176.0,
+      "end": 180.0,
+      "text": "And then you take the softmax over this."
+    },
+    {
+      "id": 35,
+      "start": 180.0,
+      "end": 186.0,
+      "text": "And the keep top K operation is if the value is within the top K, you just keep it."
+    },
+    {
+      "id": 36,
+      "start": 186.0,
+      "end": 189.0,
+      "text": "And if it's not in the top K, you don't keep it."
+    },
+    {
+      "id": 37,
+      "start": 189.0,
+      "end": 191.0,
+      "text": "So that's all basically."
+    },
+    {
+      "id": 38,
+      "start": 191.0,
+      "end": 196.0,
+      "text": "But what's great about this is then you don't have to calculate like many of them."
+    },
+    {
+      "id": 39,
+      "start": 196.0,
+      "end": 207.0,
+      "text": "And so for example, if you keep the top two out of eight, you reduce your calculation, your competition by four times for this part."
+    },
+    {
+      "id": 40,
+      "start": 207.0,
+      "end": 211.0,
+      "text": "Any any questions?"
+    },
+    {
+      "id": 41,
+      "start": 211.0,
+      "end": 214.0,
+      "text": "Yeah."
+    },
+    {
+      "id": 42,
+      "start": 221.0,
+      "end": 229.0,
+      "text": "Yeah."
+    },
+    {
+      "id": 43,
+      "start": 229.0,
+      "end": 234.0,
+      "text": "Yeah."
+    },
+    {
+      "id": 44,
+      "start": 234.0,
+      "end": 244.0,
+      "text": "Yeah."
+    },
+    {
+      "id": 45,
+      "start": 244.0,
+      "end": 249.0,
+      "text": "Sorry. What exactly do you mean by easy to parallelize? Are you talking about like a GPU?"
+    },
+    {
+      "id": 46,
+      "start": 249.0,
+      "end": 256.0,
+      "text": "Can you calculate lots of things at the same time? Yeah. So I think if you have a very small model."
+    },
+    {
+      "id": 47,
+      "start": 256.0,
+      "end": 262.0,
+      "text": "You're actually not going to get as much from this because you're not."
+    },
+    {
+      "id": 48,
+      "start": 262.0,
+      "end": 265.0,
+      "text": "You're essentially not bound by computation."
+    },
+    {
+      "id": 49,
+      "start": 265.0,
+      "end": 269.0,
+      "text": "Like you're bound more by memory movement and the GPU and other stuff like that."
+    },
+    {
+      "id": 50,
+      "start": 269.0,
+      "end": 273.0,
+      "text": "So once you start getting up to the bigger models, you actually are bound by computation."
+    },
+    {
+      "id": 51,
+      "start": 273.0,
+      "end": 280.0,
+      "text": "So reducing your competition by four is a big one. So it's a really, really good question."
+    },
+    {
+      "id": 52,
+      "start": 280.0,
+      "end": 286.0,
+      "text": "Any any other questions? Yeah."
+    },
+    {
+      "id": 53,
+      "start": 286.0,
+      "end": 295.0,
+      "text": "So this will probably be just."
+    },
+    {
+      "id": 54,
+      "start": 295.0,
+      "end": 305.0,
+      "text": "So sorry, I don't have this on here, but this will be often a linear layer followed by a soft."
+    },
+    {
+      "id": 55,
+      "start": 305.0,
+      "end": 314.0,
+      "text": "Or or actually, no, it doesn't even need to be followed by soft. It could just be a little."
+    },
+    {
+      "id": 56,
+      "start": 314.0,
+      "end": 320.0,
+      "text": "And I think actually I didn't put it on the slide, but I have the in the references on the website."
+    },
+    {
+      "id": 57,
+      "start": 320.0,
+      "end": 324.0,
+      "text": "I have the actual implementation and extra you can go in and look at it. It's really simple."
+    },
+    {
+      "id": 58,
+      "start": 324.0,
+      "end": 334.0,
+      "text": "One thing I didn't put on here, which actually relates to the question before is hardware wise, this implementation is tricky if you do batching."
+    },
+    {
+      "id": 59,
+      "start": 334.0,
+      "end": 343.0,
+      "text": "And the reason why it's tricky if you do batching is because different experts will be active for different like parts of the batch."
+    },
+    {
+      "id": 60,
+      "start": 343.0,
+      "end": 364.0,
+      "text": "So if you do that, you need to do some tricky stuff. There's this."
+    },
+    {
+      "id": 61,
+      "start": 364.0,
+      "end": 367.0,
+      "text": "So much."
+    },
+    {
+      "id": 62,
+      "start": 367.0,
+      "end": 376.0,
+      "text": "AI research nowadays, the best resource for this is social media."
+    },
+    {
+      "id": 63,
+      "start": 376.0,
+      "end": 382.0,
+      "text": "So this is there's a kind of interesting discussion of this."
+    },
+    {
+      "id": 64,
+      "start": 382.0,
+      "end": 392.0,
+      "text": "If you search for like GPT fast, mixed row on Twitter, it talks about this. But basically, there's a bunch of little little things you need to pay attention to."
+    },
+    {
+      "id": 65,
+      "start": 392.0,
+      "end": 401.0,
+      "text": "And ways that you can do tricks to make this work fast on GPU, which also kind of addresses the concerns. So you can work for us."
+    },
+    {
+      "id": 66,
+      "start": 401.0,
+      "end": 404.0,
+      "text": "Discussion."
+    },
+    {
+      "id": 67,
+      "start": 404.0,
+      "end": 408.0,
+      "text": "Cool."
+    },
+    {
+      "id": 68,
+      "start": 408.0,
+      "end": 414.0,
+      "text": "So the final thing I'd like to talk about in the last 10 minutes is pipeline systems."
+    },
+    {
+      "id": 69,
+      "start": 414.0,
+      "end": 424.0,
+      "text": "And pipeline systems are systems where we have models that basically the output of one model becomes input of another model."
+    },
+    {
+      "id": 70,
+      "start": 424.0,
+      "end": 437.0,
+      "text": "And to give an example of this, a cascaded system is basically a system like this where you take the output of one system and then you feed it into the input of another system."
+    },
+    {
+      "id": 71,
+      "start": 437.0,
+      "end": 442.0,
+      "text": "So a very stereotypical example of this is speech translation."
+    },
+    {
+      "id": 72,
+      "start": 442.0,
+      "end": 451.0,
+      "text": "Where you run speech and then you do speech recognition into text and then text you do machine translation into another language."
+    },
+    {
+      "id": 73,
+      "start": 451.0,
+      "end": 466.0,
+      "text": "And one of the frustrating things about speech translation is these systems are stubbornly better for a long time than many systems that try to do end to end."
+    },
+    {
+      "id": 74,
+      "start": 466.0,
+      "end": 478.0,
+      "text": "And like speech to text in another language. There's a couple reasons for this. Does anyone have an idea why what one of those reasons might be?"
+    },
+    {
+      "id": 75,
+      "start": 478.0,
+      "end": 481.0,
+      "text": "Yeah."
+    },
+    {
+      "id": 76,
+      "start": 481.0,
+      "end": 484.0,
+      "text": "The data that's like."
+    },
+    {
+      "id": 77,
+      "start": 484.0,
+      "end": 495.0,
+      "text": "Exactly. So data data availability is way better for speech to text in the same language and text to text in another language than it is for speech to text in another language."
+    },
+    {
+      "id": 78,
+      "start": 495.0,
+      "end": 511.0,
+      "text": "Because there are just aren't large data sets of speech and text in many languages. So there's a bunch of tricks that you can do to fix this, but still it's, you know, tricky."
+    },
+    {
+      "id": 79,
+      "start": 511.0,
+      "end": 522.0,
+      "text": "And there's a couple other reasons. Another reason is like actually speech to text in the same language is just a much more straightforward task."
+    },
+    {
+      "id": 80,
+      "start": 522.0,
+      "end": 527.0,
+      "text": "And so it's a bit easier to learn. Another thing is interpretability."
+    },
+    {
+      "id": 81,
+      "start": 527.0,
+      "end": 541.0,
+      "text": "And the reason why interpretability is important is basically like if I'm talking to you in a different language, like you speak a different language, I'm talking to you through speech translation system."
+    },
+    {
+      "id": 82,
+      "start": 541.0,
+      "end": 546.0,
+      "text": "I actually want to know if the speech recognition work."
+    },
+    {
+      "id": 83,
+      "start": 546.0,
+      "end": 555.0,
+      "text": "Because I know if the speech recognition didn't work, then I'm pretty sure that the translation didn't work either. Right. And I can verify the speech recognition, but I can't verify the translation."
+    },
+    {
+      "id": 84,
+      "start": 555.0,
+      "end": 564.0,
+      "text": "There's other reasons why you might want to cascade system other than just like accuracy or other things like that. This is a thing we definitely do."
+    },
+    {
+      "id": 85,
+      "start": 564.0,
+      "end": 582.0,
+      "text": "There's another idea of stacking and stacking is very similar to cascading, but it allows you to take two different models for the same task, but with predictions in different ways. So just taking another example."
+    },
+    {
+      "id": 86,
+      "start": 582.0,
+      "end": 588.0,
+      "text": "Actually, maybe maybe ignore the example I have here, but we could just take the example of speech translation."
+    },
+    {
+      "id": 87,
+      "start": 588.0,
+      "end": 596.0,
+      "text": "The speech translation model. We would first do speech recognition until like let's say English."
+    },
+    {
+      "id": 88,
+      "start": 596.0,
+      "end": 601.0,
+      "text": "And then we would do translation in the input of the translation model would be speech."
+    }
+  ],
+  "language": "en"
+}

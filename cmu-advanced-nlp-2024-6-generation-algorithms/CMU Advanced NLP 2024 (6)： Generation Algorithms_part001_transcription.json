@@ -1,0 +1,527 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 4.6,
+      "text": "We could also choose to modify this sort of peakiness of the distribution."
+    },
+    {
+      "id": 1,
+      "start": 4.6,
+      "end": 7.8,
+      "text": "So if you look here at the middle of these diagrams,"
+    },
+    {
+      "id": 2,
+      "start": 7.8,
+      "end": 10.6,
+      "text": "say this is your original distribution of our next tokens."
+    },
+    {
+      "id": 3,
+      "start": 10.6,
+      "end": 14.6,
+      "text": "And maybe you want to modify some properties of this distribution."
+    },
+    {
+      "id": 4,
+      "start": 14.6,
+      "end": 18.8,
+      "text": "Like you'd say, I want an output that's really diverse and interesting and open-ended."
+    },
+    {
+      "id": 5,
+      "start": 18.8,
+      "end": 21.8,
+      "text": "Like maybe this is something like story generation where you want to have"
+    },
+    {
+      "id": 6,
+      "start": 21.8,
+      "end": 24.8,
+      "text": "sort of a lot of maybe surprising things in your output."
+    },
+    {
+      "id": 7,
+      "start": 24.8,
+      "end": 29.2,
+      "text": "You could say, I want to sort of distribute my probability mass more over the token space."
+    },
+    {
+      "id": 8,
+      "start": 29.2,
+      "end": 33.2,
+      "text": "And you can do this by sort of flattening this distribution."
+    },
+    {
+      "id": 9,
+      "start": 33.2,
+      "end": 39.8,
+      "text": "Like you see on the right here, where now there's sort of more probability mass"
+    },
+    {
+      "id": 10,
+      "start": 39.8,
+      "end": 43.4,
+      "text": "spread over this wider set of tokens."
+    },
+    {
+      "id": 11,
+      "start": 43.4,
+      "end": 44.8,
+      "text": "You could also say the opposite, right?"
+    },
+    {
+      "id": 12,
+      "start": 44.8,
+      "end": 49.6,
+      "text": "You could say maybe I'm doing something like math where there shouldn't really be a lot of correct answers."
+    },
+    {
+      "id": 13,
+      "start": 49.6,
+      "end": 54.8,
+      "text": "There should be really only one or maybe only a few potential reasonable next answers."
+    },
+    {
+      "id": 14,
+      "start": 54.8,
+      "end": 57.6,
+      "text": "And so you can make your distribution keep here or shorter."
+    },
+    {
+      "id": 15,
+      "start": 57.6,
+      "end": 61.2,
+      "text": "So that more of the probability mass is on the things at the very top."
+    },
+    {
+      "id": 16,
+      "start": 61.2,
+      "end": 65.0,
+      "text": "The way you do this is you modify your,"
+    },
+    {
+      "id": 17,
+      "start": 65.0,
+      "end": 68.8,
+      "text": "what is your outputs of the last layer of the model before you apply softmax."
+    },
+    {
+      "id": 18,
+      "start": 68.8,
+      "end": 72.8,
+      "text": "So when you're predicting you get your outputs of the last layer of the model."
+    },
+    {
+      "id": 19,
+      "start": 72.8,
+      "end": 76.2,
+      "text": "And then you apply softmax, which turns those outputs into a distribution, right?"
+    },
+    {
+      "id": 20,
+      "start": 76.2,
+      "end": 81.8,
+      "text": "They all sum up the mass over all the capillary tokens, some to one."
+    },
+    {
+      "id": 21,
+      "start": 81.8,
+      "end": 84.6,
+      "text": "And so that is sort of a distribution you could sample from."
+    },
+    {
+      "id": 22,
+      "start": 84.8,
+      "end": 89.4,
+      "text": "If you divide those lines by some number before you apply that softmax,"
+    },
+    {
+      "id": 23,
+      "start": 89.4,
+      "end": 93.4,
+      "text": "you can make that distribution flatter by using a number greater than one."
+    },
+    {
+      "id": 24,
+      "start": 93.4,
+      "end": 95.8,
+      "text": "Or peak here by using a number less than one."
+    },
+    {
+      "id": 25,
+      "start": 95.8,
+      "end": 99.2,
+      "text": "And this is this primer parameter is called temperature."
+    },
+    {
+      "id": 26,
+      "start": 99.2,
+      "end": 103.2,
+      "text": "You can apply this with any of the other methods for sort of cutting off the long tail."
+    },
+    {
+      "id": 27,
+      "start": 103.2,
+      "end": 107.8,
+      "text": "But what people will often do is justify a temperature and then stable from that distribution."
+    },
+    {
+      "id": 28,
+      "start": 107.8,
+      "end": 111.2,
+      "text": "And that's what we call temperature sampling."
+    },
+    {
+      "id": 29,
+      "start": 111.2,
+      "end": 116.6,
+      "text": "So these, I think most of you might already have been at least a little bit familiar with some of these methods."
+    },
+    {
+      "id": 30,
+      "start": 116.6,
+      "end": 121.4,
+      "text": "I want to touch briefly on a couple of other ideas for modifying this distribution."
+    },
+    {
+      "id": 31,
+      "start": 121.4,
+      "end": 124.0,
+      "text": "Maybe some more complex, more recent ideas."
+    },
+    {
+      "id": 32,
+      "start": 124.0,
+      "end": 128.8,
+      "text": "And the one that I want to talk about in more detail is something called contrast of decoding."
+    },
+    {
+      "id": 33,
+      "start": 128.8,
+      "end": 139.0,
+      "text": "So the idea here is that we could incorporate some extra information at decoding time using some other distributions, some other data or in this case some other model."
+    },
+    {
+      "id": 34,
+      "start": 139.0,
+      "end": 143.8,
+      "text": "So if you've ever played around with a really like relatively small language model,"
+    },
+    {
+      "id": 35,
+      "start": 143.8,
+      "end": 146.2,
+      "text": "maybe something like GBT2 small."
+    },
+    {
+      "id": 36,
+      "start": 146.2,
+      "end": 153.8,
+      "text": "You probably notice you try to give it some inputs and maybe it degenerates into just repeating the same sequence over and over."
+    },
+    {
+      "id": 37,
+      "start": 153.8,
+      "end": 156.4,
+      "text": "Maybe it gives you outputs that are completely incorrect."
+    },
+    {
+      "id": 38,
+      "start": 156.4,
+      "end": 159.2,
+      "text": "If you ask a factual question and it gets it wrong."
+    },
+    {
+      "id": 39,
+      "start": 159.2,
+      "end": 164.0,
+      "text": "And you don't see those problems if you look at sort of a larger model, this train on more data."
+    },
+    {
+      "id": 40,
+      "start": 164.0,
+      "end": 171.0,
+      "text": "So the question here is, can you use what that smaller model is getting wrong to make your larger model even better?"
+    },
+    {
+      "id": 41,
+      "start": 171.0,
+      "end": 180.8,
+      "text": "And the way we do this is by sort of the intuition that if the smaller model doesn't have a lot of probability on some answer, but the larger model does."
+    },
+    {
+      "id": 42,
+      "start": 180.8,
+      "end": 185.4,
+      "text": "It's likely because that larger model has learned something that the smaller model didn't know."
+    },
+    {
+      "id": 43,
+      "start": 185.4,
+      "end": 193.6,
+      "text": "And so here we modify the probability distribution coming out of the larger model to choose outputs that that model things are very likely."
+    },
+    {
+      "id": 44,
+      "start": 193.6,
+      "end": 198.4,
+      "text": "And the amateur or the weaker model things are not likely."
+    },
+    {
+      "id": 45,
+      "start": 198.4,
+      "end": 211.2,
+      "text": "So in this example here from their paper, if you have sort of a input life Barack Obama was born in Hawaii, he was born in life."
+    },
+    {
+      "id": 46,
+      "start": 211.2,
+      "end": 223.0,
+      "text": "The smaller model would often do something like start repeating and actually if you sample sort of naive leaf from the larger model, you can wind up in these situations as well."
+    },
+    {
+      "id": 47,
+      "start": 223.0,
+      "end": 230.2,
+      "text": "So if you just choose the most likely thing at each step, you wind up in this loop where it's like he was born in Hawaii, he's born in Hawaii."
+    },
+    {
+      "id": 48,
+      "start": 230.2,
+      "end": 233.2,
+      "text": "And this is behavior in we generally don't want."
+    },
+    {
+      "id": 49,
+      "start": 233.2,
+      "end": 242.4,
+      "text": "If you do something like nucleus or top piece sampling, you can mind up things that are actually completely impressed that she was born in Washington DC."
+    },
+    {
+      "id": 50,
+      "start": 242.4,
+      "end": 252.0,
+      "text": "But if you use contrastive decoding, you take the outputs coming out of your expert model here, and you subtract out the probabilities coming out of the weaker model."
+    },
+    {
+      "id": 51,
+      "start": 252.0,
+      "end": 270.6,
+      "text": "And you can wind up with things that higher model the stronger model of sky probability to, but the weaker model did not likely because these are sort of facts about larger model knows of the smaller model is not to hear we actually get the year of Barack Obama was born, which is maybe a fact that the larger model knows the smaller model didn't know."
+    },
+    {
+      "id": 52,
+      "start": 270.6,
+      "end": 281.4,
+      "text": "And so this is just one of sort of a broad class of methods, we can use external information to improve your decoding by modifying this distribution and so."
+    },
+    {
+      "id": 53,
+      "start": 281.4,
+      "end": 288.4,
+      "text": "Those are sort of a brief tour of a couple of different sampling methods before we were going to search yet."
+    },
+    {
+      "id": 54,
+      "start": 288.4,
+      "end": 292.4,
+      "text": "Yeah, yeah."
+    },
+    {
+      "id": 55,
+      "start": 292.4,
+      "end": 298.4,
+      "text": "Yeah, it generally does."
+    },
+    {
+      "id": 56,
+      "start": 298.4,
+      "end": 319.4,
+      "text": "And the intuition for why this might be I think is that there are sort of these degenerate cases like just repeating over and over that both the expert and the week model would give relatively high probability to maybe the expert model is like slightly less likely to do these things, but it's still like sort of easy case for the model to learn."
+    },
+    {
+      "id": 57,
+      "start": 319.4,
+      "end": 327.4,
+      "text": "And so both of those models will have high probability for those things, but the things that are genuinely like good outputs that only the expert would get right."
+    },
+    {
+      "id": 58,
+      "start": 327.4,
+      "end": 336.4,
+      "text": "Those will have low probability and the week model and so you're sort of subtracting out of the degenerate behaviors and keeping only the little bit of this."
+    },
+    {
+      "id": 59,
+      "start": 336.4,
+      "end": 345.4,
+      "text": "If you're a generation longer sequence with this concept, and helping know which staff you want to bring the right."
+    },
+    {
+      "id": 60,
+      "start": 345.4,
+      "end": 351.4,
+      "text": "This is the great question. So for this particular case."
+    },
+    {
+      "id": 61,
+      "start": 351.4,
+      "end": 359.4,
+      "text": "Oh, yeah, sorry. So this one is if you're doing contrast of decoding over a really long sequence, like when do you choose to bring in the expert right."
+    },
+    {
+      "id": 62,
+      "start": 359.4,
+      "end": 373.4,
+      "text": "And for contrastive decoding, we're actually going to do this at every individual time step. So we're going to use the expert model to depode and we're going to bring in the amateur to sort of subtract out probabilities at each next token prediction."
+    },
+    {
+      "id": 63,
+      "start": 373.4,
+      "end": 385.4,
+      "text": "So we're going to have to do. I think that's that's what they do in the paper. You could also decide to only do this sort of a few high uncertainty or something, but you don't have a really show probability distribution."
+    },
+    {
+      "id": 64,
+      "start": 385.4,
+      "end": 399.4,
+      "text": "Yeah, yeah, how weak should the week predictor be in the paper, what they're looking at is actually not a huge difference between the two models. So you can see here, this is QBHU excel and small."
+    },
+    {
+      "id": 65,
+      "start": 399.4,
+      "end": 409.4,
+      "text": "So there's a difference in perimeter counts and like a bit of a difference in data, I think here. But these are actually not like GBD to excel is certainly not like a super scrum model now."
+    },
+    {
+      "id": 66,
+      "start": 409.4,
+      "end": 423.4,
+      "text": "I think they try a couple of different settings and the general intuition, I think if I'm remembering it correctly, is that you want a model that's not like so close in performance to your expert that you're basically just subtracting out useful things."
+    },
+    {
+      "id": 67,
+      "start": 423.4,
+      "end": 433.4,
+      "text": "But you also don't want a model that's like so degenerate that it is not done learning anything useful about your task at all. So I think it might depend on what task it would be met."
+    },
+    {
+      "id": 68,
+      "start": 433.4,
+      "end": 447.4,
+      "text": "Yes, this is her inference. So actually everything we look at today will not require any training."
+    },
+    {
+      "id": 69,
+      "start": 447.4,
+      "end": 459.4,
+      "text": "So now we're going to step into sort of a slightly different set of strategies here, which is maybe we don't just want something from the model distribution or something from modified distribution."
+    },
+    {
+      "id": 70,
+      "start": 459.4,
+      "end": 465.4,
+      "text": "Maybe we actually just want the quote unquote best thing, the single most likely output given our end book. Right."
+    },
+    {
+      "id": 71,
+      "start": 465.4,
+      "end": 475.4,
+      "text": "And here this would be the why hat the single sequence that satisfies the highest score PY given X for the X that we gave the model."
+    },
+    {
+      "id": 72,
+      "start": 475.4,
+      "end": 489.4,
+      "text": "This is this section is called both seeking search because recently mode of the distribution over outputs if you sampled a huge huge number of times, you looked at the single most likely sequence you got, it would be this why act."
+    },
+    {
+      "id": 73,
+      "start": 489.4,
+      "end": 492.4,
+      "text": "And so how do we find this?"
+    },
+    {
+      "id": 74,
+      "start": 492.4,
+      "end": 499.4,
+      "text": "Well, one idea is we know the distribution at each individual set can we just pick the most likely thing from that distribution."
+    },
+    {
+      "id": 75,
+      "start": 499.4,
+      "end": 513.4,
+      "text": "And so in really depoting we take the art max, the single highest probably token at each step and we continue generating until the single highest most part, the single highest probability token is the stop token right the end of sequence."
+    },
+    {
+      "id": 76,
+      "start": 513.4,
+      "end": 522.4,
+      "text": "For an individual token, right, if we only want a single token output, this is exactly what we want. This is the single most likely output."
+    },
+    {
+      "id": 77,
+      "start": 522.4,
+      "end": 531.4,
+      "text": "And that's great. But if we're looking at something that is maybe several tokens long, are we actually going to get the highest probability thing."
+    },
+    {
+      "id": 78,
+      "start": 531.4,
+      "end": 545.4,
+      "text": "And if you kind of squint at this, you can see that maybe we have a problem here where the highest probability sequence that you get from multiplying across multiple steps doesn't necessarily start with the token that was highest probability at time step one, right."
+    },
+    {
+      "id": 79,
+      "start": 545.4,
+      "end": 558.4,
+      "text": "Maybe if you're doing something like unconditional generation, the highest probability at the time step one is always the, but there could be a really probable sentence that just doesn't happen to start with the word the and you would never find it using really depot."
+    },
+    {
+      "id": 80,
+      "start": 558.4,
+      "end": 564.4,
+      "text": "So this isn't going to give us the highest probability output over a sequence that's more than one token."
+    },
+    {
+      "id": 81,
+      "start": 564.4,
+      "end": 569.4,
+      "text": "Can we do anything better to try to find this output it."
+    },
+    {
+      "id": 82,
+      "start": 569.4,
+      "end": 576.4,
+      "text": "And here we get into sort of one of the most popularly putting methods, the one that you maybe heard it before, which is beam search."
+    },
+    {
+      "id": 83,
+      "start": 576.4,
+      "end": 583.4,
+      "text": "The idea here is that we don't want to miss a high probability token that's hidden behind the lower probability of prefix."
+    },
+    {
+      "id": 84,
+      "start": 583.4,
+      "end": 592.4,
+      "text": "So we want to kind of search through a couple of different options so that we don't discard something too early that might have high probability later on in generation."
+    },
+    {
+      "id": 85,
+      "start": 592.4,
+      "end": 597.4,
+      "text": "This is a type of breadth for search. So we're going to look at a wide variety of options at a given time step."
+    },
+    {
+      "id": 86,
+      "start": 597.4,
+      "end": 604.4,
+      "text": "We're going to pick some set of them to continue and then we're going to look at a wide variety of options for the next time step instead of generating all the way through a sequence."
+    }
+  ],
+  "language": "en"
+}

@@ -1,0 +1,1061 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 2.28,
+      "text": "is in three, it's effectively just using int4,"
+    },
+    {
+      "id": 1,
+      "start": 2.28,
+      "end": 5.24,
+      "text": "and then you're not getting a speed up there."
+    },
+    {
+      "id": 2,
+      "start": 5.24,
+      "end": 8.08,
+      "text": "And then PyTorch has its own requirements."
+    },
+    {
+      "id": 3,
+      "start": 8.08,
+      "end": 10.04,
+      "text": "PyTorch doesn't have int4."
+    },
+    {
+      "id": 4,
+      "start": 10.04,
+      "end": 13.76,
+      "text": "A lot of modules don't support quantization at all"
+    },
+    {
+      "id": 5,
+      "start": 13.76,
+      "end": 18.2,
+      "text": "in PyTorch, like something like an RNN,"
+    },
+    {
+      "id": 6,
+      "start": 18.2,
+      "end": 21.36,
+      "text": "which is now becoming popular again."
+    },
+    {
+      "id": 7,
+      "start": 21.36,
+      "end": 24.8,
+      "text": "It's not really supporting quantization right now."
+    },
+    {
+      "id": 8,
+      "start": 24.8,
+      "end": 26.84,
+      "text": "So you definitely, if you're trying"
+    },
+    {
+      "id": 9,
+      "start": 26.84,
+      "end": 29.8,
+      "text": "to go this route for a practical application,"
+    },
+    {
+      "id": 10,
+      "start": 29.8,
+      "end": 31.64,
+      "text": "you'll want to know what your hardware is,"
+    },
+    {
+      "id": 11,
+      "start": 31.64,
+      "end": 34.28,
+      "text": "what your framework is, and what you can actually support"
+    },
+    {
+      "id": 12,
+      "start": 34.28,
+      "end": 38.12,
+      "text": "with the ways you want to compress to your modules."
+    },
+    {
+      "id": 13,
+      "start": 43.64,
+      "end": 47.04,
+      "text": "And one last thing I'll say is that both of the methods"
+    },
+    {
+      "id": 14,
+      "start": 47.04,
+      "end": 50.6,
+      "text": "I showed so far, they both have to,"
+    },
+    {
+      "id": 15,
+      "start": 50.6,
+      "end": 54.16,
+      "text": "they have their own customized hardware accelerators"
+    },
+    {
+      "id": 16,
+      "start": 54.16,
+      "end": 56.8,
+      "text": "that they wrote to make those things work."
+    },
+    {
+      "id": 17,
+      "start": 56.8,
+      "end": 58.16,
+      "text": "And this is like a lot of work,"
+    },
+    {
+      "id": 18,
+      "start": 58.16,
+      "end": 61.4,
+      "text": "and most people probably don't have the time to do this."
+    },
+    {
+      "id": 19,
+      "start": 61.4,
+      "end": 64.04,
+      "text": "So there are methods that I haven't shown here"
+    },
+    {
+      "id": 20,
+      "start": 64.04,
+      "end": 67.8,
+      "text": "that do quantization in a way that is effective"
+    },
+    {
+      "id": 21,
+      "start": 67.8,
+      "end": 70.72,
+      "text": "without having to rewrite your framework"
+    },
+    {
+      "id": 22,
+      "start": 70.72,
+      "end": 72.96,
+      "text": "or your hardware accelerator."
+    },
+    {
+      "id": 23,
+      "start": 72.96,
+      "end": 77.52,
+      "text": "But this is definitely something to consider with quantization."
+    },
+    {
+      "id": 24,
+      "start": 77.52,
+      "end": 79.24,
+      "text": "OK, so now I think I've motivated"
+    },
+    {
+      "id": 25,
+      "start": 79.24,
+      "end": 82.44,
+      "text": "why post-training quantization is hard,"
+    },
+    {
+      "id": 26,
+      "start": 82.44,
+      "end": 84.52,
+      "text": "because you're throwing away precision, which"
+    },
+    {
+      "id": 27,
+      "start": 84.52,
+      "end": 89.32,
+      "text": "can make it hard to get the most out of the network"
+    },
+    {
+      "id": 28,
+      "start": 89.32,
+      "end": 92.32,
+      "text": "that you have trained."
+    },
+    {
+      "id": 29,
+      "start": 92.32,
+      "end": 97.44,
+      "text": "So attempting IDEA here is now, let's say we know"
+    },
+    {
+      "id": 30,
+      "start": 97.44,
+      "end": 98.76,
+      "text": "we're going to quantize our model."
+    },
+    {
+      "id": 31,
+      "start": 98.76,
+      "end": 102.6,
+      "text": "Let's train the model with quantization in mind."
+    },
+    {
+      "id": 32,
+      "start": 102.6,
+      "end": 104.04,
+      "text": "And now we can revisit the example I"
+    },
+    {
+      "id": 33,
+      "start": 104.04,
+      "end": 108.76,
+      "text": "showed before of binarized neural networks, which didn't work."
+    },
+    {
+      "id": 34,
+      "start": 108.76,
+      "end": 112.0,
+      "text": "But it actually can work if you train with the binarization"
+    },
+    {
+      "id": 35,
+      "start": 112.0,
+      "end": 113.0,
+      "text": "in mind."
+    },
+    {
+      "id": 36,
+      "start": 113.0,
+      "end": 117.16,
+      "text": "So a paper in 2016, they consider the case"
+    },
+    {
+      "id": 37,
+      "start": 117.16,
+      "end": 120.6,
+      "text": "where all of your weights were negative 1 or 1."
+    },
+    {
+      "id": 38,
+      "start": 120.6,
+      "end": 124.32,
+      "text": "Activations were also negative 1 or 1."
+    },
+    {
+      "id": 39,
+      "start": 124.32,
+      "end": 128.84,
+      "text": "And they do some clever statistics to make that work."
+    },
+    {
+      "id": 40,
+      "start": 128.84,
+      "end": 131.88,
+      "text": "And then the gradients that you back propagate through the model"
+    },
+    {
+      "id": 41,
+      "start": 131.88,
+      "end": 133.04,
+      "text": "are also negative."
+    },
+    {
+      "id": 42,
+      "start": 133.04,
+      "end": 135.04,
+      "text": "They're also discrete."
+    },
+    {
+      "id": 43,
+      "start": 135.04,
+      "end": 141.36,
+      "text": "And so it's probably kind of surprising that this works."
+    },
+    {
+      "id": 44,
+      "start": 141.36,
+      "end": 145.64,
+      "text": "But they basically are using the core mechanisms"
+    },
+    {
+      "id": 45,
+      "start": 145.64,
+      "end": 147.32,
+      "text": "that we use to train neural networks"
+    },
+    {
+      "id": 46,
+      "start": 147.32,
+      "end": 153.08,
+      "text": "and using fancy statistics to make this work for binary values."
+    },
+    {
+      "id": 47,
+      "start": 153.08,
+      "end": 157.8,
+      "text": "And by doing this, they get kind of shockingly good results."
+    },
+    {
+      "id": 48,
+      "start": 157.8,
+      "end": 160.88,
+      "text": "Like on C-FAR 10, which was a very popular image classification"
+    },
+    {
+      "id": 49,
+      "start": 160.88,
+      "end": 169.56,
+      "text": "data set for a while, they get a 10% test set error."
+    },
+    {
+      "id": 50,
+      "start": 169.64,
+      "end": 172.36,
+      "text": "And at the time, like a state of the art method"
+    },
+    {
+      "id": 51,
+      "start": 172.36,
+      "end": 176.44,
+      "text": "was at a little under 12%."
+    },
+    {
+      "id": 52,
+      "start": 176.44,
+      "end": 181.44,
+      "text": "So they're basically matching or beating"
+    },
+    {
+      "id": 53,
+      "start": 181.44,
+      "end": 185.08,
+      "text": "some of these extremely strong models at that time."
+    },
+    {
+      "id": 54,
+      "start": 185.08,
+      "end": 188.12,
+      "text": "And they used effectively the same architecture"
+    },
+    {
+      "id": 55,
+      "start": 188.12,
+      "end": 190.4,
+      "text": "from some of these models, but just binarized."
+    },
+    {
+      "id": 56,
+      "start": 190.4,
+      "end": 193.32,
+      "text": "So this was sort of a proof of concept"
+    },
+    {
+      "id": 57,
+      "start": 193.32,
+      "end": 197.44,
+      "text": "that if you quantize during training,"
+    },
+    {
+      "id": 58,
+      "start": 197.44,
+      "end": 201.56,
+      "text": "you can match performance and get a much smaller model,"
+    },
+    {
+      "id": 59,
+      "start": 201.56,
+      "end": 203.56,
+      "text": "which I think was a really surprising finding."
+    },
+    {
+      "id": 60,
+      "start": 206.84,
+      "end": 210.36,
+      "text": "And then a more recent work that I think is really cool"
+    },
+    {
+      "id": 61,
+      "start": 210.36,
+      "end": 215.56,
+      "text": "is that for doing quantization,"
+    },
+    {
+      "id": 62,
+      "start": 215.56,
+      "end": 216.56,
+      "text": "one of the things you can do is you"
+    },
+    {
+      "id": 63,
+      "start": 216.56,
+      "end": 222.16,
+      "text": "can start with your model that is full precision, not quantized."
+    },
+    {
+      "id": 64,
+      "start": 222.16,
+      "end": 226.56,
+      "text": "And then you can basically train each layer, one layer at a time,"
+    },
+    {
+      "id": 65,
+      "start": 226.56,
+      "end": 230.24,
+      "text": "to replicate its counterpart in the full precision space."
+    },
+    {
+      "id": 66,
+      "start": 230.24,
+      "end": 232.88,
+      "text": "So you can run inputs through the full precision model."
+    },
+    {
+      "id": 67,
+      "start": 232.88,
+      "end": 238.64,
+      "text": "You get the output, the probability is of each word, for example."
+    },
+    {
+      "id": 68,
+      "start": 238.64,
+      "end": 240.6,
+      "text": "And then you replicate your quantized model"
+    },
+    {
+      "id": 69,
+      "start": 240.6,
+      "end": 245.04,
+      "text": "to reproduce, to get very close to those same weights."
+    },
+    {
+      "id": 70,
+      "start": 245.04,
+      "end": 246.28,
+      "text": "And then you do the second layer."
+    },
+    {
+      "id": 71,
+      "start": 246.28,
+      "end": 251.28,
+      "text": "So now you have the logits from the hidden states"
+    },
+    {
+      "id": 72,
+      "start": 251.28,
+      "end": 253.24,
+      "text": "from the second to last layer."
+    },
+    {
+      "id": 73,
+      "start": 253.24,
+      "end": 254.72,
+      "text": "And then you train your quantized layer"
+    },
+    {
+      "id": 74,
+      "start": 254.72,
+      "end": 257.92,
+      "text": "to match those hidden states."
+    },
+    {
+      "id": 75,
+      "start": 257.92,
+      "end": 259.28,
+      "text": "And you keep doing that all the way down."
+    },
+    {
+      "id": 76,
+      "start": 259.28,
+      "end": 263.72,
+      "text": "And I think the intuition here is that by doing a layer"
+    },
+    {
+      "id": 77,
+      "start": 263.72,
+      "end": 267.28,
+      "text": "by layer distillation, you're sort of replicating"
+    },
+    {
+      "id": 78,
+      "start": 267.28,
+      "end": 269.92,
+      "text": "not just the output, which is kind of sparse and hard"
+    },
+    {
+      "id": 79,
+      "start": 269.92,
+      "end": 275.08,
+      "text": "to replicate, but even the flow of data"
+    },
+    {
+      "id": 80,
+      "start": 275.08,
+      "end": 277.08,
+      "text": "throughout the whole model step by step."
+    },
+    {
+      "id": 81,
+      "start": 277.08,
+      "end": 280.16,
+      "text": "And you can replicate that into the quantized model,"
+    },
+    {
+      "id": 82,
+      "start": 281.12,
+      "end": 284.96,
+      "text": "which may run into issues when training just end to end."
+    },
+    {
+      "id": 83,
+      "start": 289.64,
+      "end": 292.24,
+      "text": "And then the last work here, which Kram already talked"
+    },
+    {
+      "id": 84,
+      "start": 292.24,
+      "end": 294.88,
+      "text": "about two lectures ago, is Kulora."
+    },
+    {
+      "id": 85,
+      "start": 294.88,
+      "end": 299.08,
+      "text": "So here, they use parameter-efficient fine tuning"
+    },
+    {
+      "id": 86,
+      "start": 299.08,
+      "end": 304.48,
+      "text": "to train a highly quantized, like, four-bit model."
+    },
+    {
+      "id": 87,
+      "start": 304.48,
+      "end": 306.12,
+      "text": "And they do a bunch of other fancy tricks."
+    },
+    {
+      "id": 88,
+      "start": 306.12,
+      "end": 307.96,
+      "text": "And Kulora is like super popular right now."
+    },
+    {
+      "id": 89,
+      "start": 307.96,
+      "end": 310.84,
+      "text": "So this is probably the, if you're"
+    },
+    {
+      "id": 90,
+      "start": 310.84,
+      "end": 312.56,
+      "text": "going to use the quantization method today,"
+    },
+    {
+      "id": 91,
+      "start": 312.56,
+      "end": 313.6,
+      "text": "this probably would be it."
+    },
+    {
+      "id": 92,
+      "start": 316.6,
+      "end": 319.28,
+      "text": "OK, I think I'm going to move on to pruning now."
+    },
+    {
+      "id": 93,
+      "start": 319.28,
+      "end": 320.36,
+      "text": "So any questions here?"
+    },
+    {
+      "id": 94,
+      "start": 320.36,
+      "end": 339.0,
+      "text": "OK, so pruning is pretty different than quantization."
+    },
+    {
+      "id": 95,
+      "start": 339.0,
+      "end": 341.08,
+      "text": "In quantization, you were sort of like chipping away"
+    },
+    {
+      "id": 96,
+      "start": 341.08,
+      "end": 343.24,
+      "text": "at every parameter in your model."
+    },
+    {
+      "id": 97,
+      "start": 343.24,
+      "end": 346.36,
+      "text": "Instead in pruning, you're like completely eliminating"
+    },
+    {
+      "id": 98,
+      "start": 346.36,
+      "end": 350.04,
+      "text": "some parameters and completely not changing everything else."
+    },
+    {
+      "id": 99,
+      "start": 353.4,
+      "end": 355.72,
+      "text": "So a number of parameters set to zero"
+    },
+    {
+      "id": 100,
+      "start": 355.72,
+      "end": 357.12,
+      "text": "and the rest are completely unchanged."
+    },
+    {
+      "id": 101,
+      "start": 360.04,
+      "end": 364.12,
+      "text": "And the most intuitive way to do this"
+    },
+    {
+      "id": 102,
+      "start": 364.12,
+      "end": 368.6,
+      "text": "is this idea that if you have a bunch of parameters,"
+    },
+    {
+      "id": 103,
+      "start": 368.6,
+      "end": 371.08,
+      "text": "some of them are probably close to zero, in which case,"
+    },
+    {
+      "id": 104,
+      "start": 371.08,
+      "end": 372.2,
+      "text": "they're not doing anything anyways."
+    },
+    {
+      "id": 105,
+      "start": 372.2,
+      "end": 374.68,
+      "text": "So just make them completely set to zero."
+    },
+    {
+      "id": 106,
+      "start": 374.68,
+      "end": 378.0,
+      "text": "That way, you can ignore those parameters effectively."
+    },
+    {
+      "id": 107,
+      "start": 378.0,
+      "end": 380.12,
+      "text": "They effectively are not doing anything."
+    },
+    {
+      "id": 108,
+      "start": 380.12,
+      "end": 383.36,
+      "text": "And it's as if they don't exist."
+    },
+    {
+      "id": 109,
+      "start": 383.36,
+      "end": 387.6,
+      "text": "So in magnitude pruning, you set to zero,"
+    },
+    {
+      "id": 110,
+      "start": 387.6,
+      "end": 392.52,
+      "text": "some percentage of parameters that have the least magnitude."
+    },
+    {
+      "id": 111,
+      "start": 392.52,
+      "end": 396.32,
+      "text": "And in machine translation, people"
+    },
+    {
+      "id": 112,
+      "start": 396.32,
+      "end": 399.52,
+      "text": "have seen that you can remove almost half the parameters"
+    },
+    {
+      "id": 113,
+      "start": 399.52,
+      "end": 402.56,
+      "text": "in a model and get almost zero change"
+    },
+    {
+      "id": 114,
+      "start": 402.56,
+      "end": 404.6,
+      "text": "in your downstream performance."
+    },
+    {
+      "id": 115,
+      "start": 404.6,
+      "end": 406.44,
+      "text": "Which I think goes back to the earlier point"
+    },
+    {
+      "id": 116,
+      "start": 406.44,
+      "end": 408.52,
+      "text": "about overparaporation."
+    },
+    {
+      "id": 117,
+      "start": 408.52,
+      "end": 409.88,
+      "text": "Like you need a lot of these parameters"
+    },
+    {
+      "id": 118,
+      "start": 409.88,
+      "end": 411.56,
+      "text": "for training the model."
+    },
+    {
+      "id": 119,
+      "start": 411.56,
+      "end": 414.16,
+      "text": "But in practice, they're not really doing too much."
+    },
+    {
+      "id": 120,
+      "start": 414.16,
+      "end": 416.0,
+      "text": "And so you can just get rid of them."
+    },
+    {
+      "id": 121,
+      "start": 418.0,
+      "end": 420.08,
+      "text": "And so this is a type of unstructured pruning"
+    },
+    {
+      "id": 122,
+      "start": 420.08,
+      "end": 427.08,
+      "text": "where you're just removing parameters throughout the model"
+    },
+    {
+      "id": 123,
+      "start": 427.08,
+      "end": 428.88,
+      "text": "anywhere you see fit."
+    },
+    {
+      "id": 124,
+      "start": 428.88,
+      "end": 431.2,
+      "text": "There's no structure to how you're doing the pruning."
+    },
+    {
+      "id": 125,
+      "start": 431.92,
+      "end": 437.44,
+      "text": "And this is related to the lottery ticket hypothesis,"
+    },
+    {
+      "id": 126,
+      "start": 437.44,
+      "end": 442.44,
+      "text": "which was this idea that when you train a full model,"
+    },
+    {
+      "id": 127,
+      "start": 443.76,
+      "end": 445.44,
+      "text": "there are randomly initially,"
+    },
+    {
+      "id": 128,
+      "start": 445.44,
+      "end": 448.96,
+      "text": "there are subnet works of that model that,"
+    },
+    {
+      "id": 129,
+      "start": 449.2,
+      "end": 453.96,
+      "text": "the idea is that when you're training a big model,"
+    },
+    {
+      "id": 130,
+      "start": 453.96,
+      "end": 457.28,
+      "text": "there are subnet works that are actually a better initialization"
+    },
+    {
+      "id": 131,
+      "start": 457.28,
+      "end": 458.68,
+      "text": "than the initial model."
+    },
+    {
+      "id": 132,
+      "start": 458.68,
+      "end": 461.0,
+      "text": "So it doesn't, it's a little bit unintuitive,"
+    },
+    {
+      "id": 133,
+      "start": 461.0,
+      "end": 463.64,
+      "text": "that if you have, let's say, a model with 100,"
+    },
+    {
+      "id": 134,
+      "start": 463.64,
+      "end": 465.64,
+      "text": "with 100 billion parameters,"
+    },
+    {
+      "id": 135,
+      "start": 465.64,
+      "end": 468.16,
+      "text": "there's subnet works of this model"
+    },
+    {
+      "id": 136,
+      "start": 468.16,
+      "end": 470.52,
+      "text": "with even if you randomly initialize them,"
+    },
+    {
+      "id": 137,
+      "start": 470.52,
+      "end": 472.4,
+      "text": "that might say have a bigger,"
+    },
+    {
+      "id": 138,
+      "start": 472.4,
+      "end": 474.68,
+      "text": "but that's not the only way to do that."
+    },
+    {
+      "id": 139,
+      "start": 474.68,
+      "end": 476.6,
+      "text": "So it's not the only way to do that."
+    },
+    {
+      "id": 140,
+      "start": 476.6,
+      "end": 478.0,
+      "text": "If you randomly initialize them,"
+    },
+    {
+      "id": 141,
+      "start": 478.0,
+      "end": 479.8,
+      "text": "that might say have a billion parameters,"
+    },
+    {
+      "id": 142,
+      "start": 479.8,
+      "end": 483.4,
+      "text": "like 1% of the size, that are actually better"
+    },
+    {
+      "id": 143,
+      "start": 483.4,
+      "end": 484.4,
+      "text": "than the full model."
+    },
+    {
+      "id": 144,
+      "start": 485.36,
+      "end": 487.2,
+      "text": "And so this is related to pruning,"
+    },
+    {
+      "id": 145,
+      "start": 487.2,
+      "end": 491.76,
+      "text": "but here they prune the model and they retrain it,"
+    },
+    {
+      "id": 146,
+      "start": 491.76,
+      "end": 494.6,
+      "text": "and they find that surprisingly,"
+    },
+    {
+      "id": 147,
+      "start": 494.6,
+      "end": 497.08,
+      "text": "which here a model is 20% the size."
+    },
+    {
+      "id": 148,
+      "start": 497.08,
+      "end": 501.2,
+      "text": "So it's pruned to 20% of the original models parameters,"
+    },
+    {
+      "id": 149,
+      "start": 501.2,
+      "end": 505.24,
+      "text": "and then retrained is actually more effective"
+    },
+    {
+      "id": 150,
+      "start": 505.24,
+      "end": 507.88,
+      "text": "and generalizes better than your original model."
+    },
+    {
+      "id": 151,
+      "start": 508.88,
+      "end": 511.12,
+      "text": "So the idea here is basically finding like,"
+    },
+    {
+      "id": 152,
+      "start": 511.12,
+      "end": 514.2,
+      "text": "really good initializations of these subnet works"
+    },
+    {
+      "id": 153,
+      "start": 514.2,
+      "end": 519.52,
+      "text": "can be better than like the most intuitive random"
+    },
+    {
+      "id": 154,
+      "start": 519.52,
+      "end": 520.88,
+      "text": "and misalization of a big model."
+    },
+    {
+      "id": 155,
+      "start": 521.96,
+      "end": 525.24,
+      "text": "And so this is sort of a step beyond pruning,"
+    },
+    {
+      "id": 156,
+      "start": 525.24,
+      "end": 526.24,
+      "text": "where you're pruning a model,"
+    },
+    {
+      "id": 157,
+      "start": 526.24,
+      "end": 527.32,
+      "text": "then training on top of that,"
+    },
+    {
+      "id": 158,
+      "start": 527.32,
+      "end": 528.96,
+      "text": "and that can improve performance."
+    },
+    {
+      "id": 159,
+      "start": 531.96,
+      "end": 533.16,
+      "text": "But generally pruning, I think,"
+    },
+    {
+      "id": 160,
+      "start": 533.16,
+      "end": 534.84,
+      "text": "is not a method to improve performance,"
+    },
+    {
+      "id": 161,
+      "start": 534.84,
+      "end": 536.24,
+      "text": "it's a method to maintain performance"
+    },
+    {
+      "id": 162,
+      "start": 536.24,
+      "end": 541.24,
+      "text": "while improving the efficiency and the size of your model."
+    },
+    {
+      "id": 163,
+      "start": 543.8,
+      "end": 547.4,
+      "text": "And so there's been like a lot of cool work in pruning,"
+    },
+    {
+      "id": 164,
+      "start": 547.4,
+      "end": 549.8,
+      "text": "coming out of CMU recently."
+    },
+    {
+      "id": 165,
+      "start": 549.8,
+      "end": 553.72,
+      "text": "This paper called Wanda, which came from folks in MLD."
+    },
+    {
+      "id": 166,
+      "start": 555.56,
+      "end": 559.52,
+      "text": "The idea here is that magnitude pruning presumes"
+    },
+    {
+      "id": 167,
+      "start": 559.52,
+      "end": 562.28,
+      "text": "that you can just decide which parameters"
+    },
+    {
+      "id": 168,
+      "start": 562.28,
+      "end": 564.92,
+      "text": "you wanna throw away based on how big they are."
+    },
+    {
+      "id": 169,
+      "start": 564.92,
+      "end": 567.32,
+      "text": "But it doesn't consider the fact that"
+    },
+    {
+      "id": 170,
+      "start": 567.32,
+      "end": 570.84,
+      "text": "there are systematic differences in the size of inputs"
+    },
+    {
+      "id": 171,
+      "start": 570.84,
+      "end": 572.28,
+      "text": "that come in."
+    },
+    {
+      "id": 172,
+      "start": 572.28,
+      "end": 574.92,
+      "text": "So in the paper, they gave a nice example,"
+    },
+    {
+      "id": 173,
+      "start": 574.92,
+      "end": 578.0,
+      "text": "which maybe I'll write on the whiteboard here,"
+    },
+    {
+      "id": 174,
+      "start": 578.0,
+      "end": 578.84,
+      "text": "which is that."
+    },
+    {
+      "id": 175,
+      "start": 592.28,
+      "end": 597.28,
+      "text": "If you're, let's say your model was just..."
+    }
+  ],
+  "language": "en"
+}

@@ -1,0 +1,191 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 5.0,
+      "text": "And so we can create these multi-op questions, right?"
+    },
+    {
+      "id": 1,
+      "start": 5.0,
+      "end": 16.0,
+      "text": "And just follow the relation links and then we know the answer to the multi-op question by following the link and we can generate, you know, the question given a template."
+    },
+    {
+      "id": 2,
+      "start": 17.0,
+      "end": 24.0,
+      "text": "So we did this and it had like question one, which is return the artists who recorded party eight over."
+    },
+    {
+      "id": 3,
+      "start": 24.0,
+      "end": 27.0,
+      "text": "And then we're in Georgia does usher live."
+    },
+    {
+      "id": 4,
+      "start": 27.0,
+      "end": 35.0,
+      "text": "And then we can turn this into a question, which part of Georgia, in which part of Georgia does the artist that recorded the party eight over live."
+    },
+    {
+      "id": 5,
+      "start": 35.0,
+      "end": 38.0,
+      "text": "And so we now have a multi multi-hop question."
+    },
+    {
+      "id": 6,
+      "start": 38.0,
+      "end": 53.0,
+      "text": "And what we did is we measured whether the model was able to answer the first question, the second question and the compound like compound question."
+    },
+    {
+      "id": 7,
+      "start": 53.0,
+      "end": 58.0,
+      "text": "And what we found is like what we would expect."
+    },
+    {
+      "id": 8,
+      "start": 58.0,
+      "end": 67.0,
+      "text": "And if models were like perfect knowledge processors, right, is we have like."
+    },
+    {
+      "id": 9,
+      "start": 67.0,
+      "end": 71.0,
+      "text": "Yes, on the first question, no."
+    },
+    {
+      "id": 10,
+      "start": 71.0,
+      "end": 74.0,
+      "text": "Yes."
+    },
+    {
+      "id": 11,
+      "start": 74.0,
+      "end": 80.0,
+      "text": "Yes, on the first question and no on the first question."
+    },
+    {
+      "id": 12,
+      "start": 80.0,
+      "end": 85.0,
+      "text": "And we would expect that basically."
+    },
+    {
+      "id": 13,
+      "start": 85.0,
+      "end": 90.0,
+      "text": "If it knew both of the answers to the first question, the second question, it would get the compound question, right."
+    },
+    {
+      "id": 14,
+      "start": 90.0,
+      "end": 95.0,
+      "text": "And if it got like either of them wrong, it would get it wrong, right."
+    },
+    {
+      "id": 15,
+      "start": 95.0,
+      "end": 106.0,
+      "text": "You know, in the in the ideal world where the knowledge of the two subquestions is necessary to answer the composite, composite question and the model is the perfect knowledge processor."
+    },
+    {
+      "id": 16,
+      "start": 106.0,
+      "end": 110.0,
+      "text": "And so basically what we found, we tried a whole bunch of different types of questions."
+    },
+    {
+      "id": 17,
+      "start": 110.0,
+      "end": 116.0,
+      "text": "And what we found is this is totally not the case, like it's not the case at all."
+    },
+    {
+      "id": 18,
+      "start": 116.0,
+      "end": 129.0,
+      "text": "And what we found instead is if it's able to answer the second question correctly, it was much more likely to be able to answer the composite question."
+    },
+    {
+      "id": 19,
+      "start": 129.0,
+      "end": 135.0,
+      "text": "And we can answer the first question that has almost no relation with whether it could answer the composite question at all."
+    },
+    {
+      "id": 20,
+      "start": 135.0,
+      "end": 141.0,
+      "text": "So it's more like somehow from the answer to the second question, it was able to get the answer right."
+    },
+    {
+      "id": 21,
+      "start": 141.0,
+      "end": 152.0,
+      "text": "And it kind of makes sense actually because like, let's say the answer to the second question is some like really long list, like who are all the presidents of the United States."
+    },
+    {
+      "id": 22,
+      "start": 152.0,
+      "end": 155.0,
+      "text": "And so like that, that's just hard to answer."
+    },
+    {
+      "id": 23,
+      "start": 155.0,
+      "end": 162.0,
+      "text": "So if I said who are all the presidents of the country where Washington DC is located in."
+    },
+    {
+      "id": 24,
+      "start": 162.0,
+      "end": 169.0,
+      "text": "You know, like the second question is really hard. So that's hard to get. But if I say,"
+    },
+    {
+      "id": 25,
+      "start": 169.0,
+      "end": 179.0,
+      "text": "what, what is the capital, what is the capital of the country."
+    },
+    {
+      "id": 26,
+      "start": 179.0,
+      "end": 193.0,
+      "text": "What is the capital of the country where the most people live or something like that, even if you weren't sure about the country where the most people live, you could pick a random capital and get it right."
+    },
+    {
+      "id": 27,
+      "start": 193.0,
+      "end": 208.0,
+      "text": "Some of the time or something like that. So that's what we found in this paper. And I think like another nice thing about knowledge basis is they allow you to ask like really interesting questions of like this about what language models know or what language models don't know in a structured way."
+    },
+    {
+      "id": 28,
+      "start": 208.0,
+      "end": 219.0,
+      "text": "So I think if you're interested in probing not language models and what they know and what they can infer what logic they can do. That's good."
+    },
+    {
+      "id": 29,
+      "start": 219.0,
+      "end": 222.0,
+      "text": "Cool. Yeah, that's all I have for today."
+    },
+    {
+      "id": 30,
+      "start": 222.0,
+      "end": 229.0,
+      "text": "Are there any questions or discussion or things like that or happy to talk up here too."
+    }
+  ],
+  "language": "en"
+}

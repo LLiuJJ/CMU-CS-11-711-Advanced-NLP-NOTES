@@ -1,0 +1,821 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 7.12,
+      "text": "Let me see what you're saying, which is that the confidence gives you the confidence of"
+    },
+    {
+      "id": 1,
+      "start": 7.12,
+      "end": 14.32,
+      "text": "a single exact sequence, not the actual sort of semantic space."
+    },
+    {
+      "id": 2,
+      "start": 14.32,
+      "end": 20.4,
+      "text": "And so, yeah, if you look at just the probability score, if you get the probability of an exact"
+    },
+    {
+      "id": 3,
+      "start": 20.4,
+      "end": 25.36,
+      "text": "string, what you actually care about with confidence is the probability of things that"
+    },
+    {
+      "id": 4,
+      "start": 25.36,
+      "end": 26.96,
+      "text": "mean the same thing."
+    },
+    {
+      "id": 5,
+      "start": 26.96,
+      "end": 30.96,
+      "text": "This is part of why it was calibration is really part of the long sequences."
+    },
+    {
+      "id": 6,
+      "start": 30.96,
+      "end": 33.96,
+      "text": "Right."
+    },
+    {
+      "id": 7,
+      "start": 33.96,
+      "end": 43.28,
+      "text": "So, we're going to test sort of briefly a couple of other things that are in sort of always"
+    },
+    {
+      "id": 8,
+      "start": 43.28,
+      "end": 46.92,
+      "text": "explicitly described in the framework, but that you can think of as variance of minimum"
+    },
+    {
+      "id": 9,
+      "start": 46.92,
+      "end": 47.92,
+      "text": "base risk."
+    },
+    {
+      "id": 10,
+      "start": 47.92,
+      "end": 53.48,
+      "text": "And if you're interested in the analysis, I think as Graham mentioned earlier, Alex Zee"
+    },
+    {
+      "id": 11,
+      "start": 53.48,
+      "end": 59.16,
+      "text": "is a first year MLT, and I wrote a paper about this, which you can check out if you're interested."
+    },
+    {
+      "id": 12,
+      "start": 59.16,
+      "end": 66.92,
+      "text": "So the two that I really want to touch on here are other sort of inference time things you"
+    },
+    {
+      "id": 13,
+      "start": 66.92,
+      "end": 71.32,
+      "text": "can consider, which might look a little bit different on the first ones."
+    },
+    {
+      "id": 14,
+      "start": 71.32,
+      "end": 73.12,
+      "text": "The first thing is output ensemble."
+    },
+    {
+      "id": 15,
+      "start": 73.12,
+      "end": 77.44,
+      "text": "So say you have multiple different models, and you get outputs from all of them."
+    },
+    {
+      "id": 16,
+      "start": 77.44,
+      "end": 82.0,
+      "text": "And now you need to choose a best output among that set."
+    },
+    {
+      "id": 17,
+      "start": 82.0,
+      "end": 86.5,
+      "text": "One of the sort of common ways to do this is to compare like an embedding similarity"
+    },
+    {
+      "id": 18,
+      "start": 86.5,
+      "end": 87.5,
+      "text": "across models."
+    },
+    {
+      "id": 19,
+      "start": 87.5,
+      "end": 91.88,
+      "text": "Like does model one think these two things are really similar to model two things, these"
+    },
+    {
+      "id": 20,
+      "start": 91.88,
+      "end": 97.84,
+      "text": "two things are really similar and try to choose something that the has really had similarity"
+    },
+    {
+      "id": 21,
+      "start": 97.84,
+      "end": 100.64,
+      "text": "with a lot of other outputs."
+    },
+    {
+      "id": 22,
+      "start": 100.64,
+      "end": 104.76,
+      "text": "Of course, now that we've just recently been talking about NBR, you can see that you can"
+    },
+    {
+      "id": 23,
+      "start": 104.76,
+      "end": 110.36,
+      "text": "probably see that this is the same general formulation just rather than summing over a"
+    },
+    {
+      "id": 24,
+      "start": 110.36,
+      "end": 112.12,
+      "text": "set of outputs from a single model."
+    },
+    {
+      "id": 25,
+      "start": 112.12,
+      "end": 115.2,
+      "text": "Now you're looking at outputs over a whole set of models."
+    },
+    {
+      "id": 26,
+      "start": 115.2,
+      "end": 121.08,
+      "text": "So some types of ensembling fall into this category of minimum base risk numbers."
+    },
+    {
+      "id": 27,
+      "start": 121.08,
+      "end": 127.44,
+      "text": "Another thing in this category is a sort of recent decoding method called self-consistency."
+    },
+    {
+      "id": 28,
+      "start": 127.44,
+      "end": 133.08,
+      "text": "And the idea here is that you want to do something like mathematical reasoning, and you really"
+    },
+    {
+      "id": 29,
+      "start": 133.08,
+      "end": 134.72,
+      "text": "care about getting the final answer, right?"
+    },
+    {
+      "id": 30,
+      "start": 134.72,
+      "end": 139.52,
+      "text": "You don't necessarily care about getting all the reasoning steps in between, right?"
+    },
+    {
+      "id": 31,
+      "start": 139.52,
+      "end": 144.16,
+      "text": "So you promise the model for an answer using something like chain of thought, right?"
+    },
+    {
+      "id": 32,
+      "start": 144.16,
+      "end": 147.64,
+      "text": "You ask it to sort of talk through the steps it's going to do, and then give you a final"
+    },
+    {
+      "id": 33,
+      "start": 147.64,
+      "end": 149.36,
+      "text": "answer."
+    },
+    {
+      "id": 34,
+      "start": 149.36,
+      "end": 154.48,
+      "text": "You sample many outputs using this, and then you completely throw away the chains of thought"
+    },
+    {
+      "id": 35,
+      "start": 154.48,
+      "end": 158.68,
+      "text": "and you just take the answer from each output."
+    },
+    {
+      "id": 36,
+      "start": 158.68,
+      "end": 162.96,
+      "text": "To have that set of answers, maybe have like 20, 30, 100 answers, you just turn the one"
+    },
+    {
+      "id": 37,
+      "start": 162.96,
+      "end": 165.92,
+      "text": "that was most frequently generated."
+    },
+    {
+      "id": 38,
+      "start": 165.92,
+      "end": 172.8,
+      "text": "What this is doing is a type of MBR where the metric that you actually care about is exact"
+    },
+    {
+      "id": 39,
+      "start": 172.8,
+      "end": 174.76,
+      "text": "match of this answer, right?"
+    },
+    {
+      "id": 40,
+      "start": 174.76,
+      "end": 177.56,
+      "text": "Ignoring the rest of the generation."
+    },
+    {
+      "id": 41,
+      "start": 177.56,
+      "end": 182.88,
+      "text": "And so here we have sort of the same intuition that we want an output that is high probability,"
+    },
+    {
+      "id": 42,
+      "start": 182.88,
+      "end": 183.88,
+      "text": "right?"
+    },
+    {
+      "id": 43,
+      "start": 183.88,
+      "end": 188.36,
+      "text": "We're getting it generated a lot, but also low risk, not a lot of the other outputs in our"
+    },
+    {
+      "id": 44,
+      "start": 188.36,
+      "end": 191.64,
+      "text": "set disagree with this answer."
+    },
+    {
+      "id": 45,
+      "start": 191.64,
+      "end": 195.72,
+      "text": "So those are a couple of different variants of methods where we're sort of sampling a"
+    },
+    {
+      "id": 46,
+      "start": 195.72,
+      "end": 199.52,
+      "text": "wide set of sequences and trying to choose the best one."
+    },
+    {
+      "id": 47,
+      "start": 199.52,
+      "end": 205.56,
+      "text": "MBR is one set is one type of sort of sequence set re-ranking method."
+    },
+    {
+      "id": 48,
+      "start": 205.56,
+      "end": 209.8,
+      "text": "You could do other things to re-rank sets as well, but this is sort of one representative"
+    },
+    {
+      "id": 49,
+      "start": 209.8,
+      "end": 212.64,
+      "text": "class of these methods."
+    },
+    {
+      "id": 50,
+      "start": 212.64,
+      "end": 218.88,
+      "text": "Before we get into constrained generation, those are sort of the three broad categories"
+    },
+    {
+      "id": 51,
+      "start": 218.88,
+      "end": 224.12,
+      "text": "of inference methods we'll discuss, which is sort of sampling from some distribution,"
+    },
+    {
+      "id": 52,
+      "start": 224.12,
+      "end": 230.72,
+      "text": "searching over some space of distributions, and doing some kind of analysis over a set"
+    },
+    {
+      "id": 53,
+      "start": 230.72,
+      "end": 232.72,
+      "text": "of samples to choose which one they return."
+    },
+    {
+      "id": 54,
+      "start": 232.72,
+      "end": 236.72,
+      "text": "Does anyone have any questions for this point?"
+    },
+    {
+      "id": 55,
+      "start": 236.72,
+      "end": 237.72,
+      "text": "Yeah."
+    },
+    {
+      "id": 56,
+      "start": 237.72,
+      "end": 238.72,
+      "text": "Yeah."
+    },
+    {
+      "id": 57,
+      "start": 238.72,
+      "end": 239.72,
+      "text": "Yeah."
+    },
+    {
+      "id": 58,
+      "start": 239.72,
+      "end": 247.72,
+      "text": "So in the particular mention that average and money rates cannot be dropped over MBR."
+    },
+    {
+      "id": 59,
+      "start": 247.72,
+      "end": 250.72,
+      "text": "What is the increasing demand rate?"
+    },
+    {
+      "id": 60,
+      "start": 250.72,
+      "end": 251.72,
+      "text": "Yeah."
+    },
+    {
+      "id": 61,
+      "start": 251.72,
+      "end": 254.72,
+      "text": "Why is averaging model weights not MBR?"
+    },
+    {
+      "id": 62,
+      "start": 254.72,
+      "end": 262.96,
+      "text": "I think it's not MBR because the key thing that I think really makes a method MBR is a"
+    },
+    {
+      "id": 63,
+      "start": 262.96,
+      "end": 268.44,
+      "text": "concept of comparing between multiple pseudo references."
+    },
+    {
+      "id": 64,
+      "start": 268.44,
+      "end": 271.72,
+      "text": "And there you don't have the same, like you average model weight and you wind up with"
+    },
+    {
+      "id": 65,
+      "start": 271.72,
+      "end": 277.8,
+      "text": "sort of a single output in the end that maybe is like using like information from these"
+    },
+    {
+      "id": 66,
+      "start": 277.8,
+      "end": 283.04,
+      "text": "two model distributions that you sort of smushed together, but it's not the same concept"
+    },
+    {
+      "id": 67,
+      "start": 283.04,
+      "end": 290.04,
+      "text": "of like comparing against pseudo references or rewriting this."
+    },
+    {
+      "id": 68,
+      "start": 290.04,
+      "end": 291.04,
+      "text": "Right."
+    },
+    {
+      "id": 69,
+      "start": 291.04,
+      "end": 301.04,
+      "text": "So now this is sort of a, this is a wide variety of methods to try to find an output that's"
+    },
+    {
+      "id": 70,
+      "start": 301.04,
+      "end": 302.04,
+      "text": "just sort of good, right?"
+    },
+    {
+      "id": 71,
+      "start": 302.04,
+      "end": 305.04,
+      "text": "We want an output that is nice out of our model."
+    },
+    {
+      "id": 72,
+      "start": 305.04,
+      "end": 309.04,
+      "text": "But now we'd like to maybe include a few additional screens."
+    },
+    {
+      "id": 73,
+      "start": 309.04,
+      "end": 314.04,
+      "text": "So say I'm asking your model for some hobbies I could use to stay in shape."
+    },
+    {
+      "id": 74,
+      "start": 314.04,
+      "end": 317.04,
+      "text": "And no matter what, I don't want the model to recommend climbing."
+    },
+    {
+      "id": 75,
+      "start": 317.04,
+      "end": 319.04,
+      "text": "Like I just, I don't want this as an option."
+    },
+    {
+      "id": 76,
+      "start": 319.04,
+      "end": 321.04,
+      "text": "I've tried it and not a fan."
+    },
+    {
+      "id": 77,
+      "start": 321.04,
+      "end": 324.04,
+      "text": "How do I get the model to stop suggesting climbing to it?"
+    },
+    {
+      "id": 78,
+      "start": 324.04,
+      "end": 329.04,
+      "text": "And if you sort of played around with some of the more recent LLM, you'd say maybe this is easy, right?"
+    },
+    {
+      "id": 79,
+      "start": 329.04,
+      "end": 333.04,
+      "text": "You just tell the model in the instruction that you don't want to talk about climbing."
+    },
+    {
+      "id": 80,
+      "start": 333.04,
+      "end": 337.04,
+      "text": "And having talked to board recently, I can tell you unfortunately that it's not that easy."
+    },
+    {
+      "id": 81,
+      "start": 337.04,
+      "end": 340.04,
+      "text": "So I tell the model I don't want to talk about climbing."
+    },
+    {
+      "id": 82,
+      "start": 340.04,
+      "end": 341.04,
+      "text": "It does okay for a little bit."
+    },
+    {
+      "id": 83,
+      "start": 341.04,
+      "end": 345.04,
+      "text": "And then it's like, all right, but maybe you want to try a rap climbing."
+    },
+    {
+      "id": 84,
+      "start": 345.04,
+      "end": 348.04,
+      "text": "And so we could continue trying to instruction to your model."
+    },
+    {
+      "id": 85,
+      "start": 348.04,
+      "end": 352.04,
+      "text": "But maybe there's sort of a way to impose this constraint on the decoding side instead."
+    },
+    {
+      "id": 86,
+      "start": 352.04,
+      "end": 356.04,
+      "text": "And so I'd say, all right, I'm going to do something dramatic, right?"
+    },
+    {
+      "id": 87,
+      "start": 356.04,
+      "end": 359.04,
+      "text": "I know I can manipulate the probability distribution."
+    },
+    {
+      "id": 88,
+      "start": 359.04,
+      "end": 361.04,
+      "text": "I'm just going to set the probability of climbing to be zero."
+    },
+    {
+      "id": 89,
+      "start": 361.04,
+      "end": 362.04,
+      "text": "I don't want to see this."
+    },
+    {
+      "id": 90,
+      "start": 362.04,
+      "end": 364.04,
+      "text": "Like I'm completely over it."
+    },
+    {
+      "id": 91,
+      "start": 364.04,
+      "end": 368.04,
+      "text": "And that's a sort of nice in some sense because this is pretty easy to do."
+    },
+    {
+      "id": 92,
+      "start": 368.04,
+      "end": 373.04,
+      "text": "Remember, we're doing a softmax over the outputs to choose this probability distribution."
+    },
+    {
+      "id": 93,
+      "start": 373.04,
+      "end": 378.04,
+      "text": "And so if we add a huge negative number to the logic for climbing before we do the softmax,"
+    },
+    {
+      "id": 94,
+      "start": 378.04,
+      "end": 382.04,
+      "text": "it's probability is going to be basically zero and we're never going to see it as an effort."
+    },
+    {
+      "id": 95,
+      "start": 382.04,
+      "end": 385.04,
+      "text": "But this doesn't seem like a perfect solution, right?"
+    },
+    {
+      "id": 96,
+      "start": 385.04,
+      "end": 388.04,
+      "text": "Because, you know, what if the model recommends bolder into me?"
+    },
+    {
+      "id": 97,
+      "start": 388.04,
+      "end": 392.04,
+      "text": "Do I have to write like a sort of a list of every possible climbing."
+    },
+    {
+      "id": 98,
+      "start": 392.04,
+      "end": 396.04,
+      "text": "And what if there's sort of an allowable way to use this token?"
+    },
+    {
+      "id": 99,
+      "start": 396.04,
+      "end": 401.04,
+      "text": "Like I want the model to suggest hiking because climbing up a mountain to see a good views relaxing."
+    },
+    {
+      "id": 100,
+      "start": 401.04,
+      "end": 405.04,
+      "text": "But that's a use of the word climbing and we just said that we can't use the word climbing."
+    },
+    {
+      "id": 101,
+      "start": 405.04,
+      "end": 410.04,
+      "text": "And or what if we sort of generate other related terms before we get to the restricted terms?"
+    },
+    {
+      "id": 102,
+      "start": 410.04,
+      "end": 415.04,
+      "text": "Like the model starts suggesting maybe you can work out by going to an indoor rock."
+    },
+    {
+      "id": 103,
+      "start": 415.04,
+      "end": 416.04,
+      "text": "And then what are we going to say?"
+    },
+    {
+      "id": 104,
+      "start": 416.04,
+      "end": 418.04,
+      "text": "There's not we can't say rock climbing."
+    },
+    {
+      "id": 105,
+      "start": 418.04,
+      "end": 423.04,
+      "text": "So maybe the model suggests rock climbing or rock collecting is a hobby to stay in shape."
+    },
+    {
+      "id": 106,
+      "start": 423.04,
+      "end": 425.04,
+      "text": "And that doesn't sound good either."
+    },
+    {
+      "id": 107,
+      "start": 425.04,
+      "end": 430.04,
+      "text": "You could continue like sort of engineering more and more complicated wings here."
+    },
+    {
+      "id": 108,
+      "start": 430.04,
+      "end": 432.04,
+      "text": "But maybe we could do something that's a little simple."
+    },
+    {
+      "id": 109,
+      "start": 432.04,
+      "end": 435.04,
+      "text": "So what if I just sample a bunch of outputs from the model?"
+    },
+    {
+      "id": 110,
+      "start": 435.04,
+      "end": 439.04,
+      "text": "And then I check if they're about climbing and I get rid of them that they are, right?"
+    },
+    {
+      "id": 111,
+      "start": 439.04,
+      "end": 445.04,
+      "text": "This is sort of the advantage that it's pretty easy to check after the fact if the sequence is satisfied this constraint."
+    },
+    {
+      "id": 112,
+      "start": 445.04,
+      "end": 450.04,
+      "text": "You know, we could train some smaller model to guess if the topic of a sentence is about climbing."
+    },
+    {
+      "id": 113,
+      "start": 450.04,
+      "end": 456.04,
+      "text": "We can check for keywords. We can have a friend who's willing to see this content like filter fruit and throw everything out."
+    },
+    {
+      "id": 114,
+      "start": 456.04,
+      "end": 459.04,
+      "text": "That's not about climate, but is about climbing."
+    },
+    {
+      "id": 115,
+      "start": 459.04,
+      "end": 461.04,
+      "text": "But if this model."
+    },
+    {
+      "id": 116,
+      "start": 461.04,
+      "end": 467.04,
+      "text": "I was really highly likely to this like if this model was trained on you know data from CS PhD students."
+    },
+    {
+      "id": 117,
+      "start": 467.04,
+      "end": 470.04,
+      "text": "It's going to be an extremely high likelihood suggestion."
+    },
+    {
+      "id": 118,
+      "start": 470.04,
+      "end": 476.04,
+      "text": "So we might need to regenerate hundreds of thousands of sequences to find something that's not about climate."
+    },
+    {
+      "id": 119,
+      "start": 476.04,
+      "end": 479.04,
+      "text": "And that feels a little bit inefficient, right?"
+    },
+    {
+      "id": 120,
+      "start": 479.04,
+      "end": 483.04,
+      "text": "So is there something that we can do that's a little bit better than that?"
+    },
+    {
+      "id": 121,
+      "start": 483.04,
+      "end": 499.04,
+      "text": "Well, really, we'd like to guess at some point during our generation if the sequence is going to be about climbing and maybe like re calorie or you know we could even restart or sort of shape our generations so that we don't wind up with the sequence that's about climbing in the first place."
+    },
+    {
+      "id": 122,
+      "start": 499.04,
+      "end": 504.04,
+      "text": "One of the methods that will discuss the units is a method called fudge."
+    },
+    {
+      "id": 123,
+      "start": 504.04,
+      "end": 518.04,
+      "text": "And unfortunately in their paper, they don't have the same anti climbing bias. I do so this example is actually about formalities that the idea here is that we want a sequence output of the model that is sort of satisfied this constraint of being formal."
+    },
+    {
+      "id": 124,
+      "start": 518.04,
+      "end": 522.04,
+      "text": "And the way we're going to do this is that each step of prediction."
+    },
+    {
+      "id": 125,
+      "start": 522.04,
+      "end": 529.04,
+      "text": "We get the outputs of what the model predicts is the next token right this sort of distribution here in bloom."
+    },
+    {
+      "id": 126,
+      "start": 529.04,
+      "end": 536.04,
+      "text": "And we also have some second distribution, which says give them sort of what we have so far."
+    },
+    {
+      "id": 127,
+      "start": 536.04,
+      "end": 539.04,
+      "text": "How likely is this to be a formal sentence at the end right."
+    },
+    {
+      "id": 128,
+      "start": 539.04,
+      "end": 546.04,
+      "text": "The sentence that starts do you want to have a high likelihood of being formal versus the sentence that starts do you prefer."
+    },
+    {
+      "id": 129,
+      "start": 546.04,
+      "end": 559.04,
+      "text": "And so this sort of guess at what will be formal at the end of the generation will have high likelihood of things that results in really formal sentences like do you prefer or do you less."
+    },
+    {
+      "id": 130,
+      "start": 559.04,
+      "end": 565.04,
+      "text": "Whereas the original model might have higher likelihood of things that are maybe more commonly said, but do you want."
+    },
+    {
+      "id": 131,
+      "start": 565.04,
+      "end": 580.04,
+      "text": "So we combine these two distributions, you can just multiply them together and then we sample from this modified distribution, which now has some sort of high weight on things that the model things are likely, but also takes into account the likelihood of satisfying a constraint."
+    },
+    {
+      "id": 132,
+      "start": 580.04,
+      "end": 586.04,
+      "text": "This is another sort of method of modifying or sampling distribution with some external information here."
+    },
+    {
+      "id": 133,
+      "start": 586.04,
+      "end": 597.04,
+      "text": "And so this results in sequences that wind up being sort of more likely to be formal without having to sample a whole bunch of sentences reject along that we think don't satisfy this."
+    },
+    {
+      "id": 134,
+      "start": 597.04,
+      "end": 601.04,
+      "text": "So how do we get sort of a guess of what will be formal at the end of generation."
+    },
+    {
+      "id": 135,
+      "start": 601.04,
+      "end": 604.04,
+      "text": "This is where the name comes from the FUD."
+    }
+  ],
+  "language": "en"
+}

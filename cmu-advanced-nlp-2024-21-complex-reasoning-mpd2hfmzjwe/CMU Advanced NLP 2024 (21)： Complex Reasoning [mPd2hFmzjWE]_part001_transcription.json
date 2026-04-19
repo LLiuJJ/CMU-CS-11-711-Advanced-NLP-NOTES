@@ -1,0 +1,749 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 3.96,
+      "text": "Here at CMU is working on that for neural theorem proving where you have"
+    },
+    {
+      "id": 1,
+      "start": 4.52,
+      "end": 10.18,
+      "text": "Like mathematical theorem proving and then you use a neural network to pick the best paths through logical"
+    },
+    {
+      "id": 2,
+      "start": 11.28,
+      "end": 13.28,
+      "text": "operations so"
+    },
+    {
+      "id": 3,
+      "start": 13.8,
+      "end": 18.86,
+      "text": "That's kind of a combination of the more classical and modern methods"
+    },
+    {
+      "id": 4,
+      "start": 20.92,
+      "end": 22.24,
+      "text": "Then"
+    },
+    {
+      "id": 5,
+      "start": 22.24,
+      "end": 26.3,
+      "text": "Another thing that's useful to talk about I think this isn't"
+    },
+    {
+      "id": 6,
+      "start": 26.66,
+      "end": 30.8,
+      "text": "Very popular right now, but I think it might be become more popular"
+    },
+    {
+      "id": 7,
+      "start": 31.58,
+      "end": 40.7,
+      "text": "In the future as we start hitting the limits of out you know what we can fit into long context windows for neural models and stuff like this is memory networks"
+    },
+    {
+      "id": 8,
+      "start": 41.66,
+      "end": 44.98,
+      "text": "And basically the way that memory networks work is"
+    },
+    {
+      "id": 9,
+      "start": 46.5,
+      "end": 47.74,
+      "text": "they"
+    },
+    {
+      "id": 10,
+      "start": 47.74,
+      "end": 48.62,
+      "text": "have"
+    },
+    {
+      "id": 11,
+      "start": 48.62,
+      "end": 52.5,
+      "text": "Right they have the ability to write and read from memory and"
+    },
+    {
+      "id": 12,
+      "start": 53.9,
+      "end": 55.5,
+      "text": "so this"
+    },
+    {
+      "id": 13,
+      "start": 55.5,
+      "end": 58.22,
+      "text": "Figure is a little bit complex here, but basically"
+    },
+    {
+      "id": 14,
+      "start": 58.98,
+      "end": 62.66,
+      "text": "You have a query and then you get the embedding of the query"
+    },
+    {
+      "id": 15,
+      "start": 63.42,
+      "end": 68.46,
+      "text": "You take the inner product you get the softmax of the inner product so this looks like attention"
+    },
+    {
+      "id": 16,
+      "start": 68.7,
+      "end": 74.42,
+      "text": "You look up in beddings and you take the weighted some of the embeddings and you get the like summary of the memory"
+    },
+    {
+      "id": 17,
+      "start": 74.42,
+      "end": 77.86,
+      "text": "So this is basically attention over a big memory base"
+    },
+    {
+      "id": 18,
+      "start": 79.3,
+      "end": 83.58,
+      "text": "But then memory networks also have the ability to go in and update the memory"
+    },
+    {
+      "id": 19,
+      "start": 83.62,
+      "end": 87.66,
+      "text": "So they also have right operations so you can read and write from"
+    },
+    {
+      "id": 20,
+      "start": 89.18,
+      "end": 91.66,
+      "text": "from the memory base and"
+    },
+    {
+      "id": 21,
+      "start": 93.06,
+      "end": 97.58,
+      "text": "So the reason why I say this might become more popular is like one of the big"
+    },
+    {
+      "id": 22,
+      "start": 98.66,
+      "end": 100.66,
+      "text": "Issues with"
+    },
+    {
+      "id": 23,
+      "start": 100.66,
+      "end": 104.98,
+      "text": "Large language models nowadays is they don't get like to continually update their memory"
+    },
+    {
+      "id": 24,
+      "start": 105.62,
+      "end": 110.22,
+      "text": "And like one way you can do that is you can just add text to the memory"
+    },
+    {
+      "id": 25,
+      "start": 110.62,
+      "end": 115.42,
+      "text": "But there are certain limits to that right you know text isn't necessarily the best way to"
+    },
+    {
+      "id": 26,
+      "start": 116.22,
+      "end": 122.34,
+      "text": "Encode all of the things that you've seen in the past so I feel like this kind of architecture might be"
+    },
+    {
+      "id": 27,
+      "start": 123.02,
+      "end": 127.94,
+      "text": "How to pin these sorts of architectures and to language models might be an interesting research direction for the future"
+    },
+    {
+      "id": 28,
+      "start": 131.82,
+      "end": 135.1,
+      "text": "Another thing which I am not going to talk about very much"
+    },
+    {
+      "id": 29,
+      "start": 135.7,
+      "end": 138.7,
+      "text": "But because we kind of already talked about it in the code generation"
+    },
+    {
+      "id": 30,
+      "start": 140.74,
+      "end": 144.54,
+      "text": "Area, but it's actually been around for a while is solving"
+    },
+    {
+      "id": 31,
+      "start": 145.5,
+      "end": 150.86,
+      "text": "questions with sort of symbolic reasoning and the way it works is"
+    },
+    {
+      "id": 32,
+      "start": 152.54,
+      "end": 154.54,
+      "text": "For example, you would have a"
+    },
+    {
+      "id": 33,
+      "start": 158.3,
+      "end": 160.86,
+      "text": "You would have a text here and"
+    },
+    {
+      "id": 34,
+      "start": 161.94,
+      "end": 166.3,
+      "text": "Based on the text you can run these sort of symbolic operations like find"
+    },
+    {
+      "id": 35,
+      "start": 166.94,
+      "end": 175.2,
+      "text": "In filter and find the max number and relocate in other things like this and this explicitly manipulates"
+    },
+    {
+      "id": 36,
+      "start": 176.58,
+      "end": 179.14,
+      "text": "kind of the attention and the"
+    },
+    {
+      "id": 37,
+      "start": 180.58,
+      "end": 184.34,
+      "text": "You can do things like filtering down to find the most"
+    },
+    {
+      "id": 38,
+      "start": 186.42,
+      "end": 191.22,
+      "text": "Like highest largest number for example or other things like this"
+    },
+    {
+      "id": 39,
+      "start": 191.22,
+      "end": 196.06,
+      "text": "And this is kind of interesting because like some of the things that neural networks are bad at are"
+    },
+    {
+      "id": 40,
+      "start": 197.26,
+      "end": 199.82,
+      "text": "Finding the largest number in a big data set or"
+    },
+    {
+      "id": 41,
+      "start": 200.82,
+      "end": 205.62,
+      "text": "Finding all of the things where something applies and throwing out all the things where something doesn't apply"
+    },
+    {
+      "id": 42,
+      "start": 206.18,
+      "end": 211.06,
+      "text": "So again, this isn't used super widely in large language models right now because I feel like"
+    },
+    {
+      "id": 43,
+      "start": 211.86,
+      "end": 213.86,
+      "text": "people have been focusing on prompting"
+    },
+    {
+      "id": 44,
+      "start": 214.34,
+      "end": 215.62,
+      "text": "techniques"
+    },
+    {
+      "id": 45,
+      "start": 215.62,
+      "end": 220.5,
+      "text": "In order to do this sort of reasoning, but I think this is another thing that's worth"
+    },
+    {
+      "id": 46,
+      "start": 220.78,
+      "end": 227.18,
+      "text": "Thinking about taking a close another look at and seeing if there are ways to incorporate it with the current models because"
+    },
+    {
+      "id": 47,
+      "start": 227.66,
+      "end": 236.74,
+      "text": "Like basically what I wanted to say is like all of the things that I decided to introduce here in this section are things that current models are still not particularly good at like"
+    },
+    {
+      "id": 48,
+      "start": 238.3,
+      "end": 241.22,
+      "text": "Taking many steps over sets of inputs"
+    },
+    {
+      "id": 49,
+      "start": 242.98,
+      "end": 248.42,
+      "text": "Reading and writing from memory so that you can remember things over long periods and also"
+    },
+    {
+      "id": 50,
+      "start": 249.42,
+      "end": 255.34,
+      "text": "filtering down large pieces of text into smaller pieces of text to find relevant information so"
+    },
+    {
+      "id": 51,
+      "start": 255.74,
+      "end": 261.58,
+      "text": "If any of those things sound interesting you can take a look at this, but after this I'd like to go kind of into the"
+    },
+    {
+      "id": 52,
+      "start": 262.22,
+      "end": 266.94,
+      "text": "You know main event where I talk about the stuff that people are actually using a lot notice"
+    },
+    {
+      "id": 53,
+      "start": 268.1,
+      "end": 270.1,
+      "text": "Any questions about these three"
+    },
+    {
+      "id": 54,
+      "start": 273.66,
+      "end": 275.66,
+      "text": "Okay, cool"
+    },
+    {
+      "id": 55,
+      "start": 276.02,
+      "end": 282.02,
+      "text": "So now I'd like to go into chain of thought and variance and I actually have already talked about chain of thought"
+    },
+    {
+      "id": 56,
+      "start": 282.02,
+      "end": 287.86,
+      "text": "In fact, we've mentioned it a couple times, but just you know to wrap mind everybody the basic idea is"
+    },
+    {
+      "id": 57,
+      "start": 288.66,
+      "end": 291.3,
+      "text": "Compared to standard prompting where we have like a question"
+    },
+    {
+      "id": 58,
+      "start": 292.1,
+      "end": 297.86,
+      "text": "And an answer in chain of thought we have a question and then we have a"
+    },
+    {
+      "id": 59,
+      "start": 298.7,
+      "end": 302.5,
+      "text": "Derivation for the question so like Roger started with five balls"
+    },
+    {
+      "id": 60,
+      "start": 302.5,
+      "end": 304.5,
+      "text": "two"
+    },
+    {
+      "id": 61,
+      "start": 304.5,
+      "end": 305.5,
+      "text": "ten"
+    },
+    {
+      "id": 62,
+      "start": 305.5,
+      "end": 311.82,
+      "text": "Five balls two kinds of pretentious balls each is six tennis balls five balls six equals eleven answers eleven"
+    },
+    {
+      "id": 63,
+      "start": 312.34,
+      "end": 314.14,
+      "text": "so"
+    },
+    {
+      "id": 64,
+      "start": 314.14,
+      "end": 322.14,
+      "text": "You add this to the prompt and by adding this to the prompt you get the model to also do these derivations at test time and this greatly improves"
+    },
+    {
+      "id": 65,
+      "start": 322.94,
+      "end": 328.7,
+      "text": "Some tests it improves tests where we can't like immediately predict the answer directly and"
+    },
+    {
+      "id": 66,
+      "start": 329.58,
+      "end": 335.02,
+      "text": "Then I also previously talked about zero shot chain of thought reasoning where we just prompt the model to"
+    },
+    {
+      "id": 67,
+      "start": 335.34,
+      "end": 340.18,
+      "text": "With something like let's think step by step and then the model becomes able to do this"
+    },
+    {
+      "id": 68,
+      "start": 341.1,
+      "end": 343.1,
+      "text": "chain of thought recently"
+    },
+    {
+      "id": 69,
+      "start": 344.26,
+      "end": 349.3,
+      "text": "Okay, so that was review and now I'd like to talk about some of like more"
+    },
+    {
+      "id": 70,
+      "start": 350.14,
+      "end": 352.94,
+      "text": "advanced methods that people use for"
+    },
+    {
+      "id": 71,
+      "start": 353.38,
+      "end": 355.38,
+      "text": "reasoning as well and"
+    },
+    {
+      "id": 72,
+      "start": 355.74,
+      "end": 359.22,
+      "text": "this is by no means an exhaustive list"
+    },
+    {
+      "id": 73,
+      "start": 359.22,
+      "end": 365.94,
+      "text": "They're just some of the ones that I found interesting so if you know other ones that you'd like to talk about or introduce to the class is something like that"
+    },
+    {
+      "id": 74,
+      "start": 365.94,
+      "end": 367.54,
+      "text": "I'd also be happy to"
+    },
+    {
+      "id": 75,
+      "start": 367.54,
+      "end": 370.74,
+      "text": "To hear which ones you like or have heard about"
+    },
+    {
+      "id": 76,
+      "start": 371.3,
+      "end": 380.22,
+      "text": "But the first one is self-ask and one of the issues with large language models nowadays is that they're not"
+    },
+    {
+      "id": 77,
+      "start": 381.22,
+      "end": 386.78,
+      "text": "Very good at asking follow-up questions or maybe not that they're not very good at it"
+    },
+    {
+      "id": 78,
+      "start": 386.78,
+      "end": 391.58,
+      "text": "But just they're not trained to do it so like if you play around with chat GPT"
+    },
+    {
+      "id": 79,
+      "start": 391.58,
+      "end": 399.1,
+      "text": "I have never had chat GPT SPF follow-up question. I don't think it's like it's not because large language models aren't capable of doing it"
+    },
+    {
+      "id": 80,
+      "start": 399.1,
+      "end": 401.1,
+      "text": "It's just that they like"
+    },
+    {
+      "id": 81,
+      "start": 401.98,
+      "end": 406.38,
+      "text": "Open AI must think it's a bad user experience to have a language model that asks you follow up questions"
+    },
+    {
+      "id": 82,
+      "start": 406.54,
+      "end": 409.82,
+      "text": "That's only like you know reason I can think about it"
+    },
+    {
+      "id": 83,
+      "start": 411.9,
+      "end": 419.42,
+      "text": "But basically what self-ask does is it explicitly prompts the model to ask the ask if there are follow-up questions so"
+    },
+    {
+      "id": 84,
+      "start": 420.94,
+      "end": 425.26,
+      "text": "Here's an example on the left where the question is who live blogger"
+    },
+    {
+      "id": 85,
+      "start": 426.3,
+      "end": 430.94,
+      "text": "The Adore Haker or Harry von Watkins and"
+    },
+    {
+      "id": 86,
+      "start": 431.9,
+      "end": 437.58,
+      "text": "Basically it says our follow-up questions needed here. Yes, and then the follow-up is how old was"
+    },
+    {
+      "id": 87,
+      "start": 437.9,
+      "end": 443.5,
+      "text": "The Adore Haker when he died in the intermediate answer is a theater Haker was 65 years old"
+    },
+    {
+      "id": 88,
+      "start": 444.3,
+      "end": 446.3,
+      "text": "How old was Harry von Watkins?"
+    },
+    {
+      "id": 89,
+      "start": 447.42,
+      "end": 452.22,
+      "text": "Harry von Watkins was 69 years old. That's so the final answer is Harry von Watkins and"
+    },
+    {
+      "id": 90,
+      "start": 453.18,
+      "end": 455.02,
+      "text": "In this particular paper"
+    },
+    {
+      "id": 91,
+      "start": 455.34,
+      "end": 459.34,
+      "text": "This is just like another variety of chain of thought. It's like"
+    },
+    {
+      "id": 92,
+      "start": 460.3,
+      "end": 466.62,
+      "text": "Not using it to incorporate any external information or anything like that. It's just"
+    },
+    {
+      "id": 93,
+      "start": 467.66,
+      "end": 469.66,
+      "text": "trying to more directly elicit"
+    },
+    {
+      "id": 94,
+      "start": 471.26,
+      "end": 473.26,
+      "text": "Information from the model"
+    },
+    {
+      "id": 95,
+      "start": 473.26,
+      "end": 481.18,
+      "text": "But nonetheless they demonstrate that this is useful and then there's also other methods that actually try to look up the information explicitly to answer these questions"
+    },
+    {
+      "id": 96,
+      "start": 482.38,
+      "end": 484.38,
+      "text": "Which are even more powerful than what we have here"
+    },
+    {
+      "id": 97,
+      "start": 484.86,
+      "end": 486.86,
+      "text": "So"
+    },
+    {
+      "id": 98,
+      "start": 489.82,
+      "end": 492.86,
+      "text": "That's what I'd like to introduce next and basically the idea"
+    },
+    {
+      "id": 99,
+      "start": 494.06,
+      "end": 496.62,
+      "text": "Here is this is a method that"
+    },
+    {
+      "id": 100,
+      "start": 497.34,
+      "end": 501.9,
+      "text": "Instead of just doing chain of thought it retrieves relevant sentences"
+    },
+    {
+      "id": 101,
+      "start": 502.7,
+      "end": 505.82,
+      "text": "When you're doing the chain of thought so like here"
+    },
+    {
+      "id": 102,
+      "start": 507.26,
+      "end": 509.26,
+      "text": "um"
+    },
+    {
+      "id": 103,
+      "start": 509.98,
+      "end": 514.38,
+      "text": "We have the follow up our follow-ups needed here. Yes, and then this is the follow-up"
+    },
+    {
+      "id": 104,
+      "start": 514.46,
+      "end": 519.26,
+      "text": "But if the model itself doesn't know how old somebody was when they died then it won't be able to answer this"
+    },
+    {
+      "id": 105,
+      "start": 520.14,
+      "end": 527.02,
+      "text": "So what they do in order to make this happen is they um do bm25 based retrieval over wiki pdia"
+    },
+    {
+      "id": 106,
+      "start": 527.58,
+      "end": 529.58,
+      "text": "For each of the chain of thought"
+    },
+    {
+      "id": 107,
+      "start": 529.58,
+      "end": 531.5,
+      "text": "Answers and then they use the retrieve"
+    },
+    {
+      "id": 108,
+      "start": 532.06,
+      "end": 537.18,
+      "text": "I think it's like 10 documents or something like that multiple retrieve documents to prompt the model"
+    },
+    {
+      "id": 109,
+      "start": 537.82,
+      "end": 538.78,
+      "text": "Um"
+    },
+    {
+      "id": 110,
+      "start": 538.78,
+      "end": 543.26,
+      "text": "To basically follow up with its chain of thought so this is another"
+    },
+    {
+      "id": 111,
+      "start": 544.14,
+      "end": 547.26,
+      "text": "Variety of things that you can do in order to improve"
+    },
+    {
+      "id": 112,
+      "start": 552.62,
+      "end": 554.62,
+      "text": "Well"
+    },
+    {
+      "id": 113,
+      "start": 554.78,
+      "end": 555.98,
+      "text": "um"
+    },
+    {
+      "id": 114,
+      "start": 558.3,
+      "end": 563.1,
+      "text": "Then another one that I'd like to talk about is a multilingual chain of thought reasoning"
+    },
+    {
+      "id": 115,
+      "start": 563.18,
+      "end": 567.02,
+      "text": "I'm going to be talking more about multilingual things in the multilingual class in a week"
+    },
+    {
+      "id": 116,
+      "start": 567.9,
+      "end": 572.62,
+      "text": "But the interesting thing about multilingual chain of thought is"
+    },
+    {
+      "id": 117,
+      "start": 573.74,
+      "end": 576.7,
+      "text": "We have a design decision right like do we want to"
+    },
+    {
+      "id": 118,
+      "start": 577.74,
+      "end": 581.02,
+      "text": "Just answer questions in the language that we"
+    },
+    {
+      "id": 119,
+      "start": 582.3,
+      "end": 586.94,
+      "text": "Are asking questions in like so if I ask a question in Japanese am I going to"
+    },
+    {
+      "id": 120,
+      "start": 587.66,
+      "end": 592.22,
+      "text": "Have it go through the whole chain of thought process in Japanese and then answer my question in Japanese"
+    },
+    {
+      "id": 121,
+      "start": 592.86,
+      "end": 594.86,
+      "text": "Or do I want it to"
+    },
+    {
+      "id": 122,
+      "start": 595.42,
+      "end": 599.42,
+      "text": "Somehow go through English because the model has been trained on lots of English and it has better"
+    },
+    {
+      "id": 123,
+      "start": 600.14,
+      "end": 602.14,
+      "text": "It's like a better way"
+    }
+  ],
+  "language": "en"
+}

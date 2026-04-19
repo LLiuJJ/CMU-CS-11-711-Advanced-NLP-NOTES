@@ -1,0 +1,1043 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 4.8,
+      "text": "You first train a full model with all of its parameters,"
+    },
+    {
+      "id": 1,
+      "start": 4.8,
+      "end": 6.92,
+      "text": "and then you apply pruning methods,"
+    },
+    {
+      "id": 2,
+      "start": 6.92,
+      "end": 10.16,
+      "text": "kind of like managed to pruning I showed before,"
+    },
+    {
+      "id": 3,
+      "start": 10.16,
+      "end": 15.2,
+      "text": "to find like a good subnetwork that is still a pretty effective after training."
+    },
+    {
+      "id": 4,
+      "start": 15.2,
+      "end": 16.92,
+      "text": "But then they do something weird,"
+    },
+    {
+      "id": 5,
+      "start": 16.92,
+      "end": 22.88,
+      "text": "which is then they then restore that subnetwork to its initial random initialization."
+    },
+    {
+      "id": 6,
+      "start": 22.88,
+      "end": 25.88,
+      "text": "So in the beginning you had,"
+    },
+    {
+      "id": 7,
+      "start": 30.0,
+      "end": 32.0,
+      "text": "the beginning you had,"
+    },
+    {
+      "id": 8,
+      "start": 50.0,
+      "end": 52.2,
+      "text": "so you train this model and you get,"
+    },
+    {
+      "id": 9,
+      "start": 52.2,
+      "end": 54.6,
+      "text": "you're initially initialize it randomly,"
+    },
+    {
+      "id": 10,
+      "start": 54.6,
+      "end": 59.2,
+      "text": "so you might have just random values at each parameter."
+    },
+    {
+      "id": 11,
+      "start": 60.2,
+      "end": 63.4,
+      "text": "You then train the model as it is,"
+    },
+    {
+      "id": 12,
+      "start": 63.4,
+      "end": 65.28,
+      "text": "so these parameters are all changed,"
+    },
+    {
+      "id": 13,
+      "start": 65.28,
+      "end": 68.48,
+      "text": "and they become, they serve the task."
+    },
+    {
+      "id": 14,
+      "start": 68.48,
+      "end": 71.28,
+      "text": "Then they identify a good subnetwork here,"
+    },
+    {
+      "id": 15,
+      "start": 71.28,
+      "end": 73.8,
+      "text": "so you might throw away this node,"
+    },
+    {
+      "id": 16,
+      "start": 73.8,
+      "end": 75.92,
+      "text": "you might throw away this node,"
+    },
+    {
+      "id": 17,
+      "start": 75.92,
+      "end": 78.32,
+      "text": "maybe this node."
+    },
+    {
+      "id": 18,
+      "start": 78.32,
+      "end": 79.36,
+      "text": "And then you say, okay,"
+    },
+    {
+      "id": 19,
+      "start": 79.36,
+      "end": 83.32,
+      "text": "what was the initial initialization at these exact parameters,"
+    },
+    {
+      "id": 20,
+      "start": 83.32,
+      "end": 84.4,
+      "text": "which I've since learned,"
+    },
+    {
+      "id": 21,
+      "start": 84.4,
+      "end": 85.76,
+      "text": "I've since learned better parameters,"
+    },
+    {
+      "id": 22,
+      "start": 85.76,
+      "end": 88.36,
+      "text": "but what was the initial value here"
+    },
+    {
+      "id": 23,
+      "start": 88.36,
+      "end": 91.12,
+      "text": "at the start of the optimization process?"
+    },
+    {
+      "id": 24,
+      "start": 91.12,
+      "end": 94.64,
+      "text": "They then go back to those initial values,"
+    },
+    {
+      "id": 25,
+      "start": 94.64,
+      "end": 97.16,
+      "text": "retrain the model on this task,"
+    },
+    {
+      "id": 26,
+      "start": 97.16,
+      "end": 98.64,
+      "text": "and it becomes even better."
+    },
+    {
+      "id": 27,
+      "start": 100.24,
+      "end": 102.08,
+      "text": "Which I think it's,"
+    },
+    {
+      "id": 28,
+      "start": 102.08,
+      "end": 105.44,
+      "text": "there's been a lot of like theory about this since this paper came out,"
+    },
+    {
+      "id": 29,
+      "start": 105.44,
+      "end": 108.88,
+      "text": "it was kind of a very influential paper."
+    },
+    {
+      "id": 30,
+      "start": 108.88,
+      "end": 109.88,
+      "text": "I think the,"
+    },
+    {
+      "id": 31,
+      "start": 111.88,
+      "end": 114.4,
+      "text": "to me this shows that the very least the importance of initialization"
+    },
+    {
+      "id": 32,
+      "start": 114.4,
+      "end": 116.68,
+      "text": "and how much like randomness there is in,"
+    },
+    {
+      "id": 33,
+      "start": 118.84,
+      "end": 120.32,
+      "text": "in your network training,"
+    },
+    {
+      "id": 34,
+      "start": 120.32,
+      "end": 122.32,
+      "text": "and how you can take it down to that."
+    },
+    {
+      "id": 35,
+      "start": 130.64,
+      "end": 131.64,
+      "text": "Yeah, far so right,"
+    },
+    {
+      "id": 36,
+      "start": 142.12,
+      "end": 148.12,
+      "text": "so I think you can see dropout as a version of pruning,"
+    },
+    {
+      "id": 37,
+      "start": 148.28,
+      "end": 151.84,
+      "text": "where at each step of optimization,"
+    },
+    {
+      "id": 38,
+      "start": 151.84,
+      "end": 153.56,
+      "text": "you perform a random pruning,"
+    },
+    {
+      "id": 39,
+      "start": 153.56,
+      "end": 156.12,
+      "text": "you like randomly prune your network at each,"
+    },
+    {
+      "id": 40,
+      "start": 156.12,
+      "end": 156.96,
+      "text": "for each update,"
+    },
+    {
+      "id": 41,
+      "start": 156.96,
+      "end": 157.56,
+      "text": "and then you,"
+    },
+    {
+      "id": 42,
+      "start": 159.04,
+      "end": 160.28,
+      "text": "then train the,"
+    },
+    {
+      "id": 43,
+      "start": 160.28,
+      "end": 162.92,
+      "text": "you update the parameters that have not been dropped out."
+    },
+    {
+      "id": 44,
+      "start": 163.92,
+      "end": 165.2,
+      "text": "But then in the next step,"
+    },
+    {
+      "id": 45,
+      "start": 165.2,
+      "end": 168.64,
+      "text": "you have a totally different prune network."
+    },
+    {
+      "id": 46,
+      "start": 168.64,
+      "end": 170.72,
+      "text": "So here you're doing pruning once,"
+    },
+    {
+      "id": 47,
+      "start": 170.72,
+      "end": 174.08,
+      "text": "and then you're training this fixed prune network"
+    },
+    {
+      "id": 48,
+      "start": 174.08,
+      "end": 175.48,
+      "text": "for all of the iterations,"
+    },
+    {
+      "id": 49,
+      "start": 175.48,
+      "end": 177.44,
+      "text": "whereas dropout you're doing like"
+    },
+    {
+      "id": 50,
+      "start": 177.44,
+      "end": 178.92,
+      "text": "random pruning each time."
+    },
+    {
+      "id": 51,
+      "start": 180.08,
+      "end": 182.64,
+      "text": "And they serve different purposes is the main difference"
+    },
+    {
+      "id": 52,
+      "start": 182.64,
+      "end": 187.0,
+      "text": "where pruning is primarily for reducing the size of your model,"
+    },
+    {
+      "id": 53,
+      "start": 187.0,
+      "end": 191.04,
+      "text": "whereas dropout is primarily for regularizing your model"
+    },
+    {
+      "id": 54,
+      "start": 191.04,
+      "end": 193.16,
+      "text": "to avoid overfitting certain,"
+    },
+    {
+      "id": 55,
+      "start": 193.16,
+      "end": 196.12,
+      "text": "like to individual weights,"
+    },
+    {
+      "id": 56,
+      "start": 199.84,
+      "end": 202.48,
+      "text": "like to avoid individual weights having too much correlation"
+    },
+    {
+      "id": 57,
+      "start": 202.48,
+      "end": 203.4,
+      "text": "with the label."
+    },
+    {
+      "id": 58,
+      "start": 207.96,
+      "end": 210.96,
+      "text": "So I'll move on now to the final piece here, which is,"
+    },
+    {
+      "id": 59,
+      "start": 217.84,
+      "end": 229.48,
+      "text": "yeah, so the last slide I forgot to show here is that,"
+    },
+    {
+      "id": 60,
+      "start": 229.48,
+      "end": 231.64,
+      "text": "which I think is kind of a summarization"
+    },
+    {
+      "id": 61,
+      "start": 231.64,
+      "end": 234.8,
+      "text": "of everything I've taught so far with pruning,"
+    },
+    {
+      "id": 62,
+      "start": 234.8,
+      "end": 238.36,
+      "text": "is that Wanda, which is this unstructured pruning way"
+    },
+    {
+      "id": 63,
+      "start": 238.36,
+      "end": 239.48,
+      "text": "that I showed earlier,"
+    },
+    {
+      "id": 64,
+      "start": 240.48,
+      "end": 245.28,
+      "text": "even though it achieves the same number of parameters"
+    },
+    {
+      "id": 65,
+      "start": 245.28,
+      "end": 247.12,
+      "text": "as like a structured pruning method,"
+    },
+    {
+      "id": 66,
+      "start": 247.12,
+      "end": 250.84,
+      "text": "which is bonsai, the one from Graham,"
+    },
+    {
+      "id": 67,
+      "start": 251.96,
+      "end": 255.92,
+      "text": "it actually achieves much less of a speedup,"
+    },
+    {
+      "id": 68,
+      "start": 255.92,
+      "end": 257.88,
+      "text": "potentially like a negative speedup."
+    },
+    {
+      "id": 69,
+      "start": 259.4,
+      "end": 264.4,
+      "text": "And whereas a structured pruning method,"
+    },
+    {
+      "id": 70,
+      "start": 264.88,
+      "end": 267.92,
+      "text": "with the same amount of parameters can be like a lot faster,"
+    },
+    {
+      "id": 71,
+      "start": 267.92,
+      "end": 269.64,
+      "text": "like 50% speedup is huge."
+    },
+    {
+      "id": 72,
+      "start": 269.64,
+      "end": 273.0,
+      "text": "So I think that this shows that unstructured pruning"
+    },
+    {
+      "id": 73,
+      "start": 273.0,
+      "end": 278.0,
+      "text": "can be pretty ineffective if it's done naively."
+    },
+    {
+      "id": 74,
+      "start": 281.76,
+      "end": 283.64,
+      "text": "Okay, so now I'll move on to the final piece here,"
+    },
+    {
+      "id": 75,
+      "start": 283.64,
+      "end": 285.84,
+      "text": "which is distillation."
+    },
+    {
+      "id": 76,
+      "start": 289.28,
+      "end": 292.28,
+      "text": "So in distillation, the core idea here is"
+    },
+    {
+      "id": 77,
+      "start": 292.28,
+      "end": 296.72,
+      "text": "that you're training one model to replicate the behavior"
+    },
+    {
+      "id": 78,
+      "start": 296.72,
+      "end": 297.64,
+      "text": "of another model."
+    },
+    {
+      "id": 79,
+      "start": 300.92,
+      "end": 303.72,
+      "text": "And this is pretty fundamentally different"
+    },
+    {
+      "id": 80,
+      "start": 303.72,
+      "end": 305.88,
+      "text": "than the other two methods we talked about so far."
+    },
+    {
+      "id": 81,
+      "start": 307.44,
+      "end": 310.76,
+      "text": "In distillation, you're probably changing every parameter"
+    },
+    {
+      "id": 82,
+      "start": 310.76,
+      "end": 311.88,
+      "text": "in your model."
+    },
+    {
+      "id": 83,
+      "start": 311.88,
+      "end": 315.32,
+      "text": "You might even be having a totally different architecture."
+    },
+    {
+      "id": 84,
+      "start": 315.32,
+      "end": 318.36,
+      "text": "In the other two methods, in quantization,"
+    },
+    {
+      "id": 85,
+      "start": 318.36,
+      "end": 321.72,
+      "text": "you're like kind of not changing any of your parameters"
+    },
+    {
+      "id": 86,
+      "start": 321.84,
+      "end": 323.52,
+      "text": "up to a certain amount of precision."
+    },
+    {
+      "id": 87,
+      "start": 323.52,
+      "end": 326.28,
+      "text": "And in pruning, you are keeping a set of your parameters"
+    },
+    {
+      "id": 88,
+      "start": 326.28,
+      "end": 328.08,
+      "text": "completely fixed."
+    },
+    {
+      "id": 89,
+      "start": 328.08,
+      "end": 331.2,
+      "text": "Whereas in distillation, you're like changing everything,"
+    },
+    {
+      "id": 90,
+      "start": 331.2,
+      "end": 333.88,
+      "text": "but hopefully doing it in a way that requires"
+    },
+    {
+      "id": 91,
+      "start": 333.88,
+      "end": 335.56,
+      "text": "many fewer parameters."
+    },
+    {
+      "id": 92,
+      "start": 340.92,
+      "end": 345.0,
+      "text": "And distillation is related to a really cool idea"
+    },
+    {
+      "id": 93,
+      "start": 345.0,
+      "end": 348.6,
+      "text": "that is more a classic machine learning called weak supervision,"
+    },
+    {
+      "id": 94,
+      "start": 349.56,
+      "end": 352.8,
+      "text": "which is the idea that if you have unlabeled text"
+    },
+    {
+      "id": 95,
+      "start": 352.8,
+      "end": 357.0,
+      "text": "or it could be images or whatever data you want to process,"
+    },
+    {
+      "id": 96,
+      "start": 358.04,
+      "end": 361.52,
+      "text": "you can produce like things that are like labels"
+    },
+    {
+      "id": 97,
+      "start": 361.52,
+      "end": 363.16,
+      "text": "that you could use like labels,"
+    },
+    {
+      "id": 98,
+      "start": 363.16,
+      "end": 365.6,
+      "text": "but maybe are not actually written by humans."
+    },
+    {
+      "id": 99,
+      "start": 366.76,
+      "end": 369.64,
+      "text": "And then you can train on these as if they were labels"
+    },
+    {
+      "id": 100,
+      "start": 369.64,
+      "end": 371.6,
+      "text": "and actually get pretty good performance."
+    },
+    {
+      "id": 101,
+      "start": 373.04,
+      "end": 378.04,
+      "text": "So this, a few really famous examples of this"
+    },
+    {
+      "id": 102,
+      "start": 378.52,
+      "end": 383.36,
+      "text": "is one is self-training where you initialize like a model,"
+    },
+    {
+      "id": 103,
+      "start": 383.4,
+      "end": 388.4,
+      "text": "maybe with a handful of points, like three or five examples."
+    },
+    {
+      "id": 104,
+      "start": 389.48,
+      "end": 392.28,
+      "text": "You train a classifier on that very small number of points,"
+    },
+    {
+      "id": 105,
+      "start": 392.28,
+      "end": 393.44,
+      "text": "which is going to be really bad,"
+    },
+    {
+      "id": 106,
+      "start": 393.44,
+      "end": 395.88,
+      "text": "because it's not enough data to learn."
+    },
+    {
+      "id": 107,
+      "start": 395.88,
+      "end": 399.32,
+      "text": "Then you have that model make its own predictions,"
+    },
+    {
+      "id": 108,
+      "start": 399.32,
+      "end": 400.72,
+      "text": "which are probably pretty, pretty bad"
+    },
+    {
+      "id": 109,
+      "start": 400.72,
+      "end": 402.76,
+      "text": "on a bunch of unlabeled text."
+    },
+    {
+      "id": 110,
+      "start": 402.76,
+      "end": 406.8,
+      "text": "You use those pseudo labels to update the model again,"
+    },
+    {
+      "id": 111,
+      "start": 406.8,
+      "end": 408.16,
+      "text": "and you can do this iteratively."
+    },
+    {
+      "id": 112,
+      "start": 408.16,
+      "end": 411.76,
+      "text": "So you're basically using a model to produce its own train data,"
+    },
+    {
+      "id": 113,
+      "start": 411.76,
+      "end": 414.04,
+      "text": "to train itself, and you do this over and over."
+    },
+    {
+      "id": 114,
+      "start": 415.36,
+      "end": 418.92,
+      "text": "And this is like a pretty classic method at this point."
+    },
+    {
+      "id": 115,
+      "start": 418.92,
+      "end": 422.28,
+      "text": "It's like 30 years old, and that's self-training."
+    },
+    {
+      "id": 116,
+      "start": 424.28,
+      "end": 426.48,
+      "text": "And then there's a few others that I won't go into,"
+    },
+    {
+      "id": 117,
+      "start": 427.48,
+      "end": 430.48,
+      "text": "just not to be too dense, but that are related to this."
+    },
+    {
+      "id": 118,
+      "start": 431.48,
+      "end": 433.68,
+      "text": "And this is all pseudo labels are also used"
+    },
+    {
+      "id": 119,
+      "start": 434.64,
+      "end": 437.88,
+      "text": "when you, let's say you don't have the ability"
+    },
+    {
+      "id": 120,
+      "start": 437.88,
+      "end": 439.4,
+      "text": "to annotate thousands of examples,"
+    },
+    {
+      "id": 121,
+      "start": 439.4,
+      "end": 441.48,
+      "text": "but you can write like a basic rule."
+    },
+    {
+      "id": 122,
+      "start": 441.48,
+      "end": 445.48,
+      "text": "So you might say, if you see a movie review that says awesome,"
+    },
+    {
+      "id": 123,
+      "start": 445.48,
+      "end": 446.8,
+      "text": "it's positive."
+    },
+    {
+      "id": 124,
+      "start": 446.8,
+      "end": 449.88,
+      "text": "And if you see, if it says, I hated it, it's negative."
+    },
+    {
+      "id": 125,
+      "start": 449.88,
+      "end": 452.64,
+      "text": "This is probably not a good rule to apply"
+    },
+    {
+      "id": 126,
+      "start": 452.64,
+      "end": 456.12,
+      "text": "for the actual classifier, because as Granted showed earlier,"
+    },
+    {
+      "id": 127,
+      "start": 456.12,
+      "end": 459.6,
+      "text": "this is like really brittle, where requires a lot of work."
+    },
+    {
+      "id": 128,
+      "start": 459.6,
+      "end": 462.64,
+      "text": "But you can use these rules to construct pseudo labels"
+    },
+    {
+      "id": 129,
+      "start": 462.76,
+      "end": 466.48,
+      "text": "that you then train like an actual full vocabulary model on."
+    },
+    {
+      "id": 130,
+      "start": 467.44,
+      "end": 469.12,
+      "text": "And if you have enough of these pseudo labels"
+    },
+    {
+      "id": 131,
+      "start": 469.12,
+      "end": 472.88,
+      "text": "with enough of these rules, you can actually get pretty far."
+    },
+    {
+      "id": 132,
+      "start": 472.88,
+      "end": 475.0,
+      "text": "And so that idea I just described is called,"
+    },
+    {
+      "id": 133,
+      "start": 475.0,
+      "end": 478.72,
+      "text": "is like, this is not called snarkle that does that,"
+    },
+    {
+      "id": 134,
+      "start": 480.08,
+      "end": 482.84,
+      "text": "and they have a bunch of papers about this idea as well."
+    },
+    {
+      "id": 135,
+      "start": 483.8,
+      "end": 488.52,
+      "text": "So, yeah, so I'm mentioning weak supervision"
+    },
+    {
+      "id": 136,
+      "start": 488.52,
+      "end": 492.0,
+      "text": "because this, to me, forms the basis of knowledge installation,"
+    },
+    {
+      "id": 137,
+      "start": 492.64,
+      "end": 497.64,
+      "text": "you train a small model to just replicate the predictions"
+    },
+    {
+      "id": 138,
+      "start": 498.48,
+      "end": 499.84,
+      "text": "of a big model."
+    },
+    {
+      "id": 139,
+      "start": 499.84,
+      "end": 504.08,
+      "text": "So the big model is producing pseudo labels on unlabeled text,"
+    },
+    {
+      "id": 140,
+      "start": 505.48,
+      "end": 509.6,
+      "text": "and then that becomes the target for your small model to match."
+    },
+    {
+      "id": 141,
+      "start": 509.6,
+      "end": 511.92,
+      "text": "The one requirement here that I think is really important"
+    },
+    {
+      "id": 142,
+      "start": 511.92,
+      "end": 514.2,
+      "text": "to note is that you do need unlabeled text"
+    },
+    {
+      "id": 143,
+      "start": 514.2,
+      "end": 517.88,
+      "text": "that matches what you expect as input."
+    },
+    {
+      "id": 144,
+      "start": 517.88,
+      "end": 521.04,
+      "text": "So let's say you're doing a movie review classification,"
+    },
+    {
+      "id": 145,
+      "start": 521.04,
+      "end": 525.44,
+      "text": "you definitely would need to somehow find thousands"
+    },
+    {
+      "id": 146,
+      "start": 525.44,
+      "end": 528.0,
+      "text": "of movie reviews that look like the kinds that your model"
+    },
+    {
+      "id": 147,
+      "start": 528.0,
+      "end": 529.04,
+      "text": "is gonna expect."
+    },
+    {
+      "id": 148,
+      "start": 529.96,
+      "end": 534.96,
+      "text": "And that's most of these methods require that to work."
+    },
+    {
+      "id": 149,
+      "start": 535.24,
+      "end": 536.12,
+      "text": "Okay, so,"
+    },
+    {
+      "id": 150,
+      "start": 538.32,
+      "end": 539.16,
+      "text": "the,"
+    },
+    {
+      "id": 151,
+      "start": 545.04,
+      "end": 547.16,
+      "text": "there's broadly like two kinds of ways"
+    },
+    {
+      "id": 152,
+      "start": 547.16,
+      "end": 548.84,
+      "text": "you can train knowledge distillation."
+    },
+    {
+      "id": 153,
+      "start": 549.08,
+      "end": 551.56,
+      "text": "The first is like the most obvious,"
+    },
+    {
+      "id": 154,
+      "start": 551.56,
+      "end": 553.64,
+      "text": "which is called hard targets,"
+    },
+    {
+      "id": 155,
+      "start": 553.64,
+      "end": 555.32,
+      "text": "where you take your unlabeled text,"
+    },
+    {
+      "id": 156,
+      "start": 555.32,
+      "end": 558.16,
+      "text": "you produce a label from your teacher model,"
+    },
+    {
+      "id": 157,
+      "start": 558.16,
+      "end": 560.08,
+      "text": "and then you now use that predicted,"
+    },
+    {
+      "id": 158,
+      "start": 560.08,
+      "end": 562.76,
+      "text": "like that the teacher's prediction as the target"
+    },
+    {
+      "id": 159,
+      "start": 562.76,
+      "end": 564.84,
+      "text": "for your, for your model."
+    },
+    {
+      "id": 160,
+      "start": 564.84,
+      "end": 566.36,
+      "text": "So you might say,"
+    },
+    {
+      "id": 161,
+      "start": 566.36,
+      "end": 568.72,
+      "text": "Lama 70 billion predicted positive for this review,"
+    },
+    {
+      "id": 162,
+      "start": 568.72,
+      "end": 571.84,
+      "text": "therefore I'm gonna say the label here is positive."
+    },
+    {
+      "id": 163,
+      "start": 572.76,
+      "end": 574.68,
+      "text": "This is like really easy, it's convenient,"
+    },
+    {
+      "id": 164,
+      "start": 574.68,
+      "end": 576.76,
+      "text": "it's very intuitive."
+    },
+    {
+      "id": 165,
+      "start": 576.8,
+      "end": 580.88,
+      "text": "But another type of distillation that's even more effective,"
+    },
+    {
+      "id": 166,
+      "start": 580.88,
+      "end": 585.8,
+      "text": "pretty consistently is called soft target distillation,"
+    },
+    {
+      "id": 167,
+      "start": 585.84,
+      "end": 588.84,
+      "text": "which is that instead of trying to match,"
+    },
+    {
+      "id": 168,
+      "start": 588.84,
+      "end": 590.68,
+      "text": "to do a supervised learning objective,"
+    },
+    {
+      "id": 169,
+      "start": 590.68,
+      "end": 593.04,
+      "text": "where you're just trying to match the label"
+    },
+    {
+      "id": 170,
+      "start": 593.04,
+      "end": 594.28,
+      "text": "predicted by your teacher,"
+    },
+    {
+      "id": 171,
+      "start": 595.44,
+      "end": 597.6,
+      "text": "you instead want your student model to produce"
+    },
+    {
+      "id": 172,
+      "start": 597.6,
+      "end": 600.24,
+      "text": "probabilities over the full distribution of,"
+    }
+  ],
+  "language": "en"
+}

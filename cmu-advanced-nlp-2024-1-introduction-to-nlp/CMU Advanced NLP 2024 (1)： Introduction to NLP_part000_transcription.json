@@ -1,0 +1,329 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 6.0,
+      "text": "So, the class today is introduction to natural language processing."
+    },
+    {
+      "id": 1,
+      "start": 6.0,
+      "end": 12.0,
+      "text": "And I'll be talking a little bit about, you know, what is natural language processing, why we're motivated to do it."
+    },
+    {
+      "id": 2,
+      "start": 12.0,
+      "end": 16.0,
+      "text": "And also some of the difficulties that we encounter."
+    },
+    {
+      "id": 3,
+      "start": 16.0,
+      "end": 23.0,
+      "text": "And then also be talking about class logistics. So you can ask any logistics questions at that time."
+    },
+    {
+      "id": 4,
+      "start": 23.0,
+      "end": 31.0,
+      "text": "So if we talk about what is NLP anyway, does anyone have any opinions about the definition of what natural language processing would be?"
+    },
+    {
+      "id": 5,
+      "start": 31.0,
+      "end": 40.0,
+      "text": "Oh, one other thing I should mention is I am recording the class. I put the class on YouTube afterwards. I will not take pictures or video of any of you."
+    },
+    {
+      "id": 6,
+      "start": 40.0,
+      "end": 45.0,
+      "text": "But if you talk, your voice might come in the background. So just be aware of that."
+    },
+    {
+      "id": 7,
+      "start": 45.0,
+      "end": 55.0,
+      "text": "Usually not it's a directional mic. So I try to repeat the questions after everybody. But for the people who are recordings listening to the recordings."
+    },
+    {
+      "id": 8,
+      "start": 55.0,
+      "end": 67.0,
+      "text": "So anyway, what is NLP anyway? Does anybody have any ideas about the definition of what NLP might be?"
+    },
+    {
+      "id": 9,
+      "start": 67.0,
+      "end": 74.0,
+      "text": "Yes."
+    },
+    {
+      "id": 10,
+      "start": 75.0,
+      "end": 83.0,
+      "text": "Okay. So the answer was it helps machines understand language better."
+    },
+    {
+      "id": 11,
+      "start": 83.0,
+      "end": 94.0,
+      "text": "So to facilitate human human and human machine interactions. I think that's very good. It's almost similar to what I have written on my slide here."
+    },
+    {
+      "id": 12,
+      "start": 94.0,
+      "end": 109.0,
+      "text": "But in addition to natural language understanding, there's one major other segment of NLP. Does anyone have an idea what that might be?"
+    },
+    {
+      "id": 13,
+      "start": 109.0,
+      "end": 122.0,
+      "text": "We often have a dichotomy between two major segments, natural language understanding and natural language generation. Yeah, exactly. So I would say that's almost perfect if he had said understand and generate. So very good."
+    },
+    {
+      "id": 14,
+      "start": 122.0,
+      "end": 132.0,
+      "text": "So I say natural link technology to handle human language usually text using computers to aid human machine communication."
+    },
+    {
+      "id": 15,
+      "start": 132.0,
+      "end": 141.0,
+      "text": "And this can include things like question answering dialogue or generation of code that can be executed with computers."
+    },
+    {
+      "id": 16,
+      "start": 141.0,
+      "end": 150.0,
+      "text": "It can also aid human human communication and this can include things like machine translation or spell checking or assisted writing."
+    },
+    {
+      "id": 17,
+      "start": 150.0,
+      "end": 157.0,
+      "text": "And then a final segment that people might think about a little bit less is analyzing and understanding a language."
+    },
+    {
+      "id": 18,
+      "start": 157.0,
+      "end": 164.0,
+      "text": "And this includes things like syntactic analysis, text classification, entity recognition and linking."
+    },
+    {
+      "id": 19,
+      "start": 164.0,
+      "end": 178.0,
+      "text": "And these can be used for various reasons, not necessarily for direct human machine communication, but also for like aggregating information across large things for scientific studies and other things like that. I'll give a few examples."
+    },
+    {
+      "id": 20,
+      "start": 178.0,
+      "end": 191.0,
+      "text": "We now use NLP many times a day, sometimes without even knowing it. So whenever you're typing a doc in Google docs, there's, you know, spell checking and grammar checking going on behind."
+    },
+    {
+      "id": 21,
+      "start": 191.0,
+      "end": 203.0,
+      "text": "It's gotten frightened and frighteningly good recently that where it checks like most of my mistakes and rarely flags things that are not mistakes. So obviously they have powerful models running behind that."
+    },
+    {
+      "id": 22,
+      "start": 203.0,
+      "end": 206.0,
+      "text": "So."
+    },
+    {
+      "id": 23,
+      "start": 206.0,
+      "end": 219.0,
+      "text": "And it can do things like answer questions. So I asked chat GPT who is the current president of Carnegie Mellon University and chat GPT said I did a quick search for more information here."
+    },
+    {
+      "id": 24,
+      "start": 219.0,
+      "end": 231.0,
+      "text": "What I found the current president of Carnegie Mellon University is from in Johanian. He has been serving since July 1st, etc, etc. So as far as I can tell that's correct."
+    },
+    {
+      "id": 25,
+      "start": 231.0,
+      "end": 250.0,
+      "text": "At the same time, I asked how many layers are included in the GP 3.5 turbo architecture. And it said to me, GPT 3.5 turbo, which is an optimized version of GPT 3.5 for faster responses doesn't have a specific layer structure like the traditional GPT 3 models."
+    },
+    {
+      "id": 26,
+      "start": 250.0,
+      "end": 264.0,
+      "text": "And I don't know if this is true or not, but I'm pretty sure it's not true. I'm pretty sure that you know GPT is a model that's much like other models. So it basically just made up this fact because it didn't have any information on the internet or contact."
+    },
+    {
+      "id": 27,
+      "start": 264.0,
+      "end": 277.0,
+      "text": "So another thing is an LP can translate text pretty well. So I ran Google translate on Japanese."
+    },
+    {
+      "id": 28,
+      "start": 277.0,
+      "end": 295.0,
+      "text": "This example is a little bit old. It's from a few years ago about COVID, but I retranslated it a few days ago. And it comes up pretty good. You could basically understand what's going on here. It's not perfect, but you can understand the general just."
+    },
+    {
+      "id": 29,
+      "start": 295.0,
+      "end": 301.0,
+      "text": "And at the same time, if I put in a relatively low resource language, this is Kurdish."
+    },
+    {
+      "id": 30,
+      "start": 301.0,
+      "end": 313.0,
+      "text": "It has a number of problems when you try to understand it. And just to give an example, this is talking about some paleontology discovery."
+    },
+    {
+      "id": 31,
+      "start": 313.0,
+      "end": 320.0,
+      "text": "It called this person a fossil scientist, instead of the kind of obvious English term paleontologist."
+    },
+    {
+      "id": 32,
+      "start": 320.0,
+      "end": 334.0,
+      "text": "So I think about three different T-Rex species, how T-Rex should actually be split with the three species where T-Rex does thing of ferocious lizards in paradise as emperor of sandwich lizards and T-Rigina means clean of rocious snail."
+    },
+    {
+      "id": 33,
+      "start": 334.0,
+      "end": 343.0,
+      "text": "I'm pretty sure that's not snail. I'm pretty sure that's lizard. So you can see that this is not perfect."
+    },
+    {
+      "id": 34,
+      "start": 343.0,
+      "end": 357.0,
+      "text": "I'll be thinking why Google translate and why not GPT? Well, it turns out, according to one of the recent studies in the gun GP is even worse at the slow resource languages. So I use the best thing."
+    },
+    {
+      "id": 35,
+      "start": 357.0,
+      "end": 366.0,
+      "text": "Another thing is language analysis can aid scientific inquiry. So this is an example that I've been using for a long time. It's actually from Martin Sap, another faculty member here."
+    },
+    {
+      "id": 36,
+      "start": 366.0,
+      "end": 378.0,
+      "text": "But I have been using it since like before he joined. And this is an example from computational social science answering questions about society given observational data."
+    },
+    {
+      "id": 37,
+      "start": 378.0,
+      "end": 391.0,
+      "text": "And their question was do movie scripts portray female or male characters with more power or agency and movie script films. So it's asking kind of a societal question by using an LP technology."
+    },
+    {
+      "id": 38,
+      "start": 391.0,
+      "end": 409.0,
+      "text": "And they did it is they basically analyze text trying to find the agents and patients in a particular text, which are the things that are doing things and the things that things are being done to."
+    },
+    {
+      "id": 39,
+      "start": 409.0,
+      "end": 432.0,
+      "text": "But you can see that essentially male characters in these movie scripts were given more power and agency and female characters were given less power and agency and they were able to do this because they had an LP technology that analyzed and extracted useful data and made turn it into a very easy form to do kind of analysis of the variety that they want."
+    },
+    {
+      "id": 40,
+      "start": 432.0,
+      "end": 445.0,
+      "text": "I think that's a major use case of NLP technology that does language analysis nowadays turn it into a form that allows you to very quickly do aggregate queries and other things like this."
+    },
+    {
+      "id": 41,
+      "start": 445.0,
+      "end": 461.0,
+      "text": "But at the same time language analysis tools fail at very basic tasks. So these are some things that I ran through a name to and to recognize her and these were kind of very nice name to do recognizes that a lot of people were using."
+    },
+    {
+      "id": 42,
+      "start": 461.0,
+      "end": 475.0,
+      "text": "For example Stanford for NLP and spacey and both of them I just turned the first thing that I found on the New York Times at the time and it basically made at least one mistake in the first sentence."
+    },
+    {
+      "id": 43,
+      "start": 475.0,
+      "end": 482.0,
+      "text": "And here it recognizes that and raises an organization and here it recognized her can eat as an organization."
+    },
+    {
+      "id": 44,
+      "start": 482.0,
+      "end": 491.0,
+      "text": "So like even these things that we expect should work pretty well make pretty so."
+    },
+    {
+      "id": 45,
+      "start": 491.0,
+      "end": 502.0,
+      "text": "So in the class basically what I want to cover is what goes into building state of the art and LP systems that work really well on a wide variety of tasks."
+    },
+    {
+      "id": 46,
+      "start": 502.0,
+      "end": 507.0,
+      "text": "Where do current systems fail?"
+    },
+    {
+      "id": 47,
+      "start": 507.0,
+      "end": 522.0,
+      "text": "And how can we make it appropriate improvements and achieve whatever we want to do with NLP and this set of questions that I'm asking here is exactly the same as the set of questions that I was asking two years ago before chat GPT."
+    },
+    {
+      "id": 48,
+      "start": 522.0,
+      "end": 536.0,
+      "text": "I still think they're important questions, but I think the answers to these questions is very different and because of that we're updating the class materials to try to cover you know the answers to these questions and kind of the era of large language models and other things like that."
+    },
+    {
+      "id": 49,
+      "start": 536.0,
+      "end": 549.0,
+      "text": "So that's all I have for the intro maybe maybe pretty straightforward are there any questions or comments so far it's not all just going."
+    },
+    {
+      "id": 50,
+      "start": 549.0,
+      "end": 551.0,
+      "text": "Okay, great."
+    },
+    {
+      "id": 51,
+      "start": 551.0,
+      "end": 566.0,
+      "text": "So I want to first go into a very high level overview of NLP system building in most of the stuff that I want to do today is to set the stage for what I'm going to be talking about in more detail over the rest of the class."
+    },
+    {
+      "id": 52,
+      "start": 566.0,
+      "end": 595.0,
+      "text": "And we can think of NLP systems through this kind of general framework where we want to create a function to math and input X into an output why where X and or Y involve language and do some people have favorite NLP tasks or NLP tasks that you want to want to be handling in some way or maybe what do you think are the most popular and important NLP tasks nowadays."
+    },
+    {
+      "id": 53,
+      "start": 595.0,
+      "end": 603.0,
+      "text": "Is it a stillோ."
+    }
+  ],
+  "language": "en"
+}

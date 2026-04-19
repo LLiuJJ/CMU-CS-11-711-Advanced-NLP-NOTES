@@ -1,0 +1,1199 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 2.84,
+      "text": "incorporated into their system, their whole system,"
+    },
+    {
+      "id": 1,
+      "start": 2.84,
+      "end": 6.28,
+      "text": "like for example, Google, like all of Google"
+    },
+    {
+      "id": 2,
+      "start": 6.28,
+      "end": 8.6,
+      "text": "would have to be GPL license in release."
+    },
+    {
+      "id": 3,
+      "start": 8.6,
+      "end": 12.44,
+      "text": "So, and I'm kind of simplifying these licenses."
+    },
+    {
+      "id": 4,
+      "start": 12.44,
+      "end": 13.8,
+      "text": "I'm just giving you the gist."
+    },
+    {
+      "id": 5,
+      "start": 13.8,
+      "end": 17.12,
+      "text": "CC by SA, and sorry, CC licenses are more for data."
+    },
+    {
+      "id": 6,
+      "start": 17.12,
+      "end": 20.8,
+      "text": "So MIT, BSC, Apache, and GPL are more per software."
+    },
+    {
+      "id": 7,
+      "start": 20.8,
+      "end": 23.52,
+      "text": "CC Creative Commons licenses are for data."
+    },
+    {
+      "id": 8,
+      "start": 23.52,
+      "end": 28.52,
+      "text": "So, for example, Wikipedia is CC by SA, I believe?"
+    },
+    {
+      "id": 9,
+      "start": 30.64,
+      "end": 32.92,
+      "text": "Let me make sure that I'm not lying there."
+    },
+    {
+      "id": 10,
+      "start": 43.84,
+      "end": 45.64,
+      "text": "Yeah, CC by SA."
+    },
+    {
+      "id": 11,
+      "start": 45.64,
+      "end": 48.84,
+      "text": "And so that means that if you make any derivative work"
+    },
+    {
+      "id": 12,
+      "start": 48.84,
+      "end": 51.76,
+      "text": "of Wikipedia, you need to share it"
+    },
+    {
+      "id": 13,
+      "start": 53.04,
+      "end": 54.88,
+      "text": "the same way that Wikipedia is."
+    },
+    {
+      "id": 14,
+      "start": 54.88,
+      "end": 56.92,
+      "text": "So you need to give it the same license."
+    },
+    {
+      "id": 15,
+      "start": 57.92,
+      "end": 61.92,
+      "text": "There's also Creative Commons non-commercial licenses"
+    },
+    {
+      "id": 16,
+      "start": 61.92,
+      "end": 63.64,
+      "text": "or software non-commercial licenses."
+    },
+    {
+      "id": 17,
+      "start": 63.64,
+      "end": 66.52,
+      "text": "CC, you can't use them for commercial purposes."
+    },
+    {
+      "id": 18,
+      "start": 66.52,
+      "end": 69.6,
+      "text": "All the ones above, you can use for commercial purposes."
+    },
+    {
+      "id": 19,
+      "start": 69.6,
+      "end": 71.24,
+      "text": "Once you start getting down here,"
+    },
+    {
+      "id": 20,
+      "start": 71.24,
+      "end": 73.8,
+      "text": "this is often no longer called open source."
+    },
+    {
+      "id": 21,
+      "start": 73.8,
+      "end": 75.96,
+      "text": "So the open source initiative says anything"
+    },
+    {
+      "id": 22,
+      "start": 75.96,
+      "end": 78.68,
+      "text": "with a restriction on the way that you can use it"
+    },
+    {
+      "id": 23,
+      "start": 78.68,
+      "end": 80.32,
+      "text": "is no longer open source."
+    },
+    {
+      "id": 24,
+      "start": 80.32,
+      "end": 83.48,
+      "text": "And so that means if you say, you can't use this"
+    },
+    {
+      "id": 25,
+      "start": 83.48,
+      "end": 86.76,
+      "text": "for commercial purposes, or you can't use this"
+    },
+    {
+      "id": 26,
+      "start": 86.76,
+      "end": 88.64,
+      "text": "in military systems, for example,"
+    },
+    {
+      "id": 27,
+      "start": 88.64,
+      "end": 91.36,
+      "text": "which some language models say that nowadays."
+    },
+    {
+      "id": 28,
+      "start": 91.36,
+      "end": 93.6,
+      "text": "Those are no longer called open source,"
+    },
+    {
+      "id": 29,
+      "start": 93.6,
+      "end": 95.2,
+      "text": "according to the open source initiative."
+    },
+    {
+      "id": 30,
+      "start": 95.2,
+      "end": 97.36,
+      "text": "So that's a thing to know about."
+    },
+    {
+      "id": 31,
+      "start": 99.0,
+      "end": 101.84,
+      "text": "Then separately, there are these licenses"
+    },
+    {
+      "id": 32,
+      "start": 101.84,
+      "end": 104.72,
+      "text": "that a lot of people like Meta or Hugging Face"
+    },
+    {
+      "id": 33,
+      "start": 104.72,
+      "end": 108.76,
+      "text": "come up with for their models recently."
+    },
+    {
+      "id": 34,
+      "start": 108.76,
+      "end": 112.16,
+      "text": "So the LAMMA license, how many people are using LAMMA?"
+    },
+    {
+      "id": 35,
+      "start": 113.36,
+      "end": 114.64,
+      "text": "In your projects?"
+    },
+    {
+      "id": 36,
+      "start": 114.64,
+      "end": 116.24,
+      "text": "How many people read the license?"
+    },
+    {
+      "id": 37,
+      "start": 117.76,
+      "end": 121.56,
+      "text": "So are you sure you can use it in your project?"
+    },
+    {
+      "id": 38,
+      "start": 123.36,
+      "end": 126.88,
+      "text": "So you're probably in luck in your project"
+    },
+    {
+      "id": 39,
+      "start": 126.88,
+      "end": 127.88,
+      "text": "if you're using it."
+    },
+    {
+      "id": 40,
+      "start": 127.88,
+      "end": 129.84,
+      "text": "The LAMMA license, you can read into it"
+    },
+    {
+      "id": 41,
+      "start": 129.84,
+      "end": 131.52,
+      "text": "to see what it actually allows,"
+    },
+    {
+      "id": 42,
+      "start": 131.52,
+      "end": 134.0,
+      "text": "but it has, the original LAMMA license"
+    },
+    {
+      "id": 43,
+      "start": 134.0,
+      "end": 136.48,
+      "text": "has some interesting things."
+    },
+    {
+      "id": 44,
+      "start": 136.48,
+      "end": 139.68,
+      "text": "Number one, you cannot use LAMMA to train any language model"
+    },
+    {
+      "id": 45,
+      "start": 139.68,
+      "end": 141.76,
+      "text": "that is not derived from LAMMA."
+    },
+    {
+      "id": 46,
+      "start": 141.76,
+      "end": 145.88,
+      "text": "So you can't generate data from LAMMA in trained misto."
+    },
+    {
+      "id": 47,
+      "start": 145.88,
+      "end": 148.64,
+      "text": "That's not a lot of it, according to LAMMA license."
+    },
+    {
+      "id": 48,
+      "start": 148.64,
+      "end": 153.08,
+      "text": "Another thing is you can't use it for military purposes."
+    },
+    {
+      "id": 49,
+      "start": 153.08,
+      "end": 156.4,
+      "text": "So you can't use it in building a misto system"
+    },
+    {
+      "id": 50,
+      "start": 156.4,
+      "end": 157.24,
+      "text": "or something like that."
+    },
+    {
+      "id": 51,
+      "start": 157.24,
+      "end": 159.72,
+      "text": "Hopefully none of you are doing that for your project."
+    },
+    {
+      "id": 52,
+      "start": 160.92,
+      "end": 163.56,
+      "text": "And you also need to get a license from Meta."
+    },
+    {
+      "id": 53,
+      "start": 163.56,
+      "end": 166.84,
+      "text": "If you have something more than 300 million active users"
+    },
+    {
+      "id": 54,
+      "start": 166.84,
+      "end": 168.88,
+      "text": "on your social networks, so this."
+    },
+    {
+      "id": 55,
+      "start": 168.88,
+      "end": 171.6,
+      "text": "So if you're Google or"
+    },
+    {
+      "id": 56,
+      "start": 172.6,
+      "end": 177.0,
+      "text": "you know, X or Twitter or whatever else,"
+    },
+    {
+      "id": 57,
+      "start": 177.0,
+      "end": 179.8,
+      "text": "you need to get a license from Meta before you can start using LAMMA."
+    },
+    {
+      "id": 58,
+      "start": 179.8,
+      "end": 182.92,
+      "text": "So basically they created that license"
+    },
+    {
+      "id": 59,
+      "start": 182.92,
+      "end": 184.8,
+      "text": "so their competitors don't take their language model"
+    },
+    {
+      "id": 60,
+      "start": 184.8,
+      "end": 185.96,
+      "text": "and just use it for free."
+    },
+    {
+      "id": 61,
+      "start": 188.68,
+      "end": 190.32,
+      "text": "And then the final thing is no license."
+    },
+    {
+      "id": 62,
+      "start": 190.32,
+      "end": 193.96,
+      "text": "So like let's say you have some code that you upload to GitHub"
+    },
+    {
+      "id": 63,
+      "start": 193.96,
+      "end": 196.2,
+      "text": "and you don't put a license on your code."
+    },
+    {
+      "id": 64,
+      "start": 196.2,
+      "end": 201.08,
+      "text": "This means that you have only agreed to the GitHub licensing terms,"
+    },
+    {
+      "id": 65,
+      "start": 201.08,
+      "end": 204.12,
+      "text": "which means that actually nobody can use your code."
+    },
+    {
+      "id": 66,
+      "start": 204.12,
+      "end": 208.12,
+      "text": "They can view it possibly, but they can't download it, use it."
+    },
+    {
+      "id": 67,
+      "start": 208.12,
+      "end": 213.12,
+      "text": "They can't like, they can't incorporate it into their own system."
+    },
+    {
+      "id": 68,
+      "start": 213.12,
+      "end": 215.84,
+      "text": "So actually if you release research code,"
+    },
+    {
+      "id": 69,
+      "start": 215.84,
+      "end": 219.48,
+      "text": "I would highly encourage you to use MIT or BSE"
+    },
+    {
+      "id": 70,
+      "start": 219.48,
+      "end": 221.16,
+      "text": "or one of these permissive licenses"
+    },
+    {
+      "id": 71,
+      "start": 221.16,
+      "end": 223.16,
+      "text": "so other people can use it and follow up"
+    },
+    {
+      "id": 72,
+      "start": 223.16,
+      "end": 224.68,
+      "text": "and your code can be impactful."
+    },
+    {
+      "id": 73,
+      "start": 224.68,
+      "end": 227.24,
+      "text": "So this is an important thing to know about."
+    },
+    {
+      "id": 74,
+      "start": 227.24,
+      "end": 228.96,
+      "text": "There's obviously lots more to know about."
+    },
+    {
+      "id": 75,
+      "start": 231.96,
+      "end": 235.2,
+      "text": "So then my question, my next question is,"
+    },
+    {
+      "id": 76,
+      "start": 235.2,
+      "end": 239.36,
+      "text": "what is most of the text on the internet?"
+    },
+    {
+      "id": 77,
+      "start": 239.36,
+      "end": 240.92,
+      "text": "The majority of the text on the internet"
+    },
+    {
+      "id": 78,
+      "start": 240.92,
+      "end": 243.16,
+      "text": "falls into one of these categories."
+    },
+    {
+      "id": 79,
+      "start": 243.16,
+      "end": 244.16,
+      "text": "Any idea which one?"
+    },
+    {
+      "id": 80,
+      "start": 247.16,
+      "end": 249.52,
+      "text": "So Wikipedia is CC by SA."
+    },
+    {
+      "id": 81,
+      "start": 249.52,
+      "end": 252.36,
+      "text": "What about most of the text on the internet?"
+    },
+    {
+      "id": 82,
+      "start": 256.04,
+      "end": 258.88,
+      "text": "Yeah, it's not maybe not no license, but all rights reserved."
+    },
+    {
+      "id": 83,
+      "start": 258.88,
+      "end": 262.72,
+      "text": "So basically you can't use it without having permission"
+    },
+    {
+      "id": 84,
+      "start": 262.72,
+      "end": 264.92,
+      "text": "from the copyright holders."
+    },
+    {
+      "id": 85,
+      "start": 264.92,
+      "end": 270.92,
+      "text": "And so because of that, the idea of fair use"
+    },
+    {
+      "id": 86,
+      "start": 270.96,
+      "end": 272.08,
+      "text": "becomes very important."
+    },
+    {
+      "id": 87,
+      "start": 272.08,
+      "end": 274.64,
+      "text": "This is a US-specific thing."
+    },
+    {
+      "id": 88,
+      "start": 274.64,
+      "end": 276.64,
+      "text": "And the rules in other countries are different."
+    },
+    {
+      "id": 89,
+      "start": 276.64,
+      "end": 279.08,
+      "text": "They're not the same as the US, but in the US,"
+    },
+    {
+      "id": 90,
+      "start": 279.08,
+      "end": 280.88,
+      "text": "we have rules about where you can use"
+    },
+    {
+      "id": 91,
+      "start": 280.88,
+      "end": 282.72,
+      "text": "particular types of data."
+    },
+    {
+      "id": 92,
+      "start": 283.72,
+      "end": 286.04,
+      "text": "So the US-Fear use doctrine is basically"
+    },
+    {
+      "id": 93,
+      "start": 286.04,
+      "end": 289.32,
+      "text": "that you can use copyrighted material in some cases."
+    },
+    {
+      "id": 94,
+      "start": 289.32,
+      "end": 293.8,
+      "text": "So as a gross simplification,"
+    },
+    {
+      "id": 95,
+      "start": 296.0,
+      "end": 301.2,
+      "text": "quoting a small amount of material in like a textbook"
+    },
+    {
+      "id": 96,
+      "start": 301.28,
+      "end": 305.64,
+      "text": "or slides or something like this, this is likely okay."
+    },
+    {
+      "id": 97,
+      "start": 306.64,
+      "end": 308.52,
+      "text": "There are going to be very few cases"
+    },
+    {
+      "id": 98,
+      "start": 308.52,
+      "end": 311.76,
+      "text": "where this is not going to, you know,"
+    },
+    {
+      "id": 99,
+      "start": 311.76,
+      "end": 314.64,
+      "text": "where you're gonna get the trouble for this."
+    },
+    {
+      "id": 100,
+      "start": 314.64,
+      "end": 317.08,
+      "text": "Another important judgment criteria"
+    },
+    {
+      "id": 101,
+      "start": 317.08,
+      "end": 318.8,
+      "text": "for whether this is fair use"
+    },
+    {
+      "id": 102,
+      "start": 318.8,
+      "end": 321.48,
+      "text": "is that it doesn't diminish the value of the original work."
+    },
+    {
+      "id": 103,
+      "start": 321.48,
+      "end": 324.76,
+      "text": "So if I quote something in my,"
+    },
+    {
+      "id": 104,
+      "start": 324.76,
+      "end": 328.56,
+      "text": "like let's say I quoted all of Harry Potter in a textbook,"
+    },
+    {
+      "id": 105,
+      "start": 328.56,
+      "end": 331.48,
+      "text": "and then I sold my textbook for $3."
+    },
+    {
+      "id": 106,
+      "start": 331.48,
+      "end": 332.96,
+      "text": "Anybody could take my textbook"
+    },
+    {
+      "id": 107,
+      "start": 332.96,
+      "end": 334.76,
+      "text": "and read all of Harry Potter for $3"
+    },
+    {
+      "id": 108,
+      "start": 334.76,
+      "end": 336.4,
+      "text": "and the money wouldn't go to JK Rowland."
+    },
+    {
+      "id": 109,
+      "start": 336.4,
+      "end": 337.56,
+      "text": "And that would not be fair use"
+    },
+    {
+      "id": 110,
+      "start": 337.56,
+      "end": 340.04,
+      "text": "because it's diminishing the value of the book."
+    },
+    {
+      "id": 111,
+      "start": 340.04,
+      "end": 342.88,
+      "text": "Similarly, if I create a big corpus of books"
+    },
+    {
+      "id": 112,
+      "start": 342.88,
+      "end": 345.2,
+      "text": "and I upload them to a site where anyone can browse them,"
+    },
+    {
+      "id": 113,
+      "start": 345.2,
+      "end": 347.0,
+      "text": "that would also probably not be fair use"
+    },
+    {
+      "id": 114,
+      "start": 347.0,
+      "end": 349.76,
+      "text": "because the authors would not get paid for it."
+    },
+    {
+      "id": 115,
+      "start": 351.12,
+      "end": 353.56,
+      "text": "Another judgment criteria is whether it's"
+    },
+    {
+      "id": 116,
+      "start": 353.56,
+      "end": 355.4,
+      "text": "for nine commercial purposes or not."
+    },
+    {
+      "id": 117,
+      "start": 355.4,
+      "end": 359.48,
+      "text": "So like in universities where actually held to,"
+    },
+    {
+      "id": 118,
+      "start": 359.48,
+      "end": 361.96,
+      "text": "probably held to a more lenient standard of fair use"
+    },
+    {
+      "id": 119,
+      "start": 361.96,
+      "end": 363.68,
+      "text": "if we're doing nine commercial research,"
+    },
+    {
+      "id": 120,
+      "start": 363.68,
+      "end": 365.28,
+      "text": "compared to a company that's doing it."
+    },
+    {
+      "id": 121,
+      "start": 365.28,
+      "end": 370.2,
+      "text": "So most data on the internet is copyrighted."
+    },
+    {
+      "id": 122,
+      "start": 370.2,
+      "end": 372.96,
+      "text": "So right now most model training,"
+    },
+    {
+      "id": 123,
+      "start": 372.96,
+      "end": 374.96,
+      "text": "not all model training, but most model training"
+    },
+    {
+      "id": 124,
+      "start": 374.96,
+      "end": 378.2,
+      "text": "is done assuming fair use,"
+    },
+    {
+      "id": 125,
+      "start": 378.2,
+      "end": 382.04,
+      "text": "which means that training and AI model on copyrighted data"
+    },
+    {
+      "id": 126,
+      "start": 383.72,
+      "end": 388.48,
+      "text": "is number one, it cannot reproduce the material easily."
+    },
+    {
+      "id": 127,
+      "start": 388.48,
+      "end": 391.88,
+      "text": "So it's instead of quoting material directly,"
+    },
+    {
+      "id": 128,
+      "start": 391.88,
+      "end": 394.56,
+      "text": "it's kind of combining the material together"
+    },
+    {
+      "id": 129,
+      "start": 394.56,
+      "end": 396.24,
+      "text": "to create a new thing."
+    },
+    {
+      "id": 130,
+      "start": 396.24,
+      "end": 397.64,
+      "text": "They're saying it doesn't diminish"
+    },
+    {
+      "id": 131,
+      "start": 397.64,
+      "end": 400.16,
+      "text": "the commercial value of the original data."
+    },
+    {
+      "id": 132,
+      "start": 401.24,
+      "end": 402.88,
+      "text": "And then the nine commercial purposes"
+    },
+    {
+      "id": 133,
+      "start": 402.88,
+      "end": 405.56,
+      "text": "is maybe a secondary concern since the first two hold."
+    },
+    {
+      "id": 134,
+      "start": 407.0,
+      "end": 408.68,
+      "text": "But there are lawsuits about this."
+    },
+    {
+      "id": 135,
+      "start": 408.68,
+      "end": 412.4,
+      "text": "And so this is a clip from the New York Times"
+    },
+    {
+      "id": 136,
+      "start": 412.4,
+      "end": 415.68,
+      "text": "where the New York Times is suing open AI in Microsoft"
+    },
+    {
+      "id": 137,
+      "start": 415.68,
+      "end": 419.32,
+      "text": "over them training on New York Times articles."
+    },
+    {
+      "id": 138,
+      "start": 419.32,
+      "end": 421.44,
+      "text": "And they do a lot of things like they demonstrate"
+    },
+    {
+      "id": 139,
+      "start": 421.44,
+      "end": 423.96,
+      "text": "that you can get GPT-4 to reproduce"
+    },
+    {
+      "id": 140,
+      "start": 424.96,
+      "end": 427.44,
+      "text": "like New York Times articles"
+    },
+    {
+      "id": 141,
+      "start": 427.44,
+      "end": 431.6,
+      "text": "and they also argue that people are using this GPT-4"
+    },
+    {
+      "id": 142,
+      "start": 431.6,
+      "end": 434.12,
+      "text": "is a source of news instead of going to the New York Times site."
+    },
+    {
+      "id": 143,
+      "start": 434.12,
+      "end": 435.68,
+      "text": "So they're losing money from advertising"
+    },
+    {
+      "id": 144,
+      "start": 435.68,
+      "end": 437.52,
+      "text": "and like other things like that."
+    },
+    {
+      "id": 145,
+      "start": 438.8,
+      "end": 440.8,
+      "text": "Another example is GitHub Copilot"
+    },
+    {
+      "id": 146,
+      "start": 440.8,
+      "end": 444.48,
+      "text": "was sued by people who uploaded software to GitHub"
+    },
+    {
+      "id": 147,
+      "start": 444.48,
+      "end": 447.72,
+      "text": "and said that basically GitHub didn't have the right"
+    },
+    {
+      "id": 148,
+      "start": 447.72,
+      "end": 452.72,
+      "text": "to use a template from it and diminish their money."
+    },
+    {
+      "id": 149,
+      "start": 453.4,
+      "end": 456.72,
+      "text": "So notably on the slide, I'm using fair use."
+    },
+    {
+      "id": 150,
+      "start": 456.72,
+      "end": 458.44,
+      "text": "I don't know if you've noticed."
+    },
+    {
+      "id": 151,
+      "start": 458.44,
+      "end": 463.44,
+      "text": "Like I copy pasted an image from somebody's website"
+    },
+    {
+      "id": 152,
+      "start": 464.96,
+      "end": 467.2,
+      "text": "and used it here, that's copyrighted material"
+    },
+    {
+      "id": 153,
+      "start": 467.2,
+      "end": 469.76,
+      "text": "but I'm using it because I'm quoting a small amount"
+    },
+    {
+      "id": 154,
+      "start": 469.76,
+      "end": 471.88,
+      "text": "of material and I'm not diminishing the commercial value."
+    },
+    {
+      "id": 155,
+      "start": 471.88,
+      "end": 474.92,
+      "text": "So fair use is very ubiquitous."
+    },
+    {
+      "id": 156,
+      "start": 474.92,
+      "end": 477.16,
+      "text": "It's very important so we can do things like this"
+    },
+    {
+      "id": 157,
+      "start": 477.16,
+      "end": 480.56,
+      "text": "but also it's currently under dispute with respect to matters."
+    },
+    {
+      "id": 158,
+      "start": 483.2,
+      "end": 486.68,
+      "text": "So then another question is why restrict model access?"
+    },
+    {
+      "id": 159,
+      "start": 486.68,
+      "end": 490.52,
+      "text": "Why do we, number one, make models closed?"
+    },
+    {
+      "id": 160,
+      "start": 490.52,
+      "end": 495.52,
+      "text": "Number two, maybe not even describe what we did in our models."
+    },
+    {
+      "id": 161,
+      "start": 496.16,
+      "end": 498.84,
+      "text": "And I think there's three main reasons."
+    },
+    {
+      "id": 162,
+      "start": 498.84,
+      "end": 501.52,
+      "text": "The first reason is commercial concerns"
+    },
+    {
+      "id": 163,
+      "start": 501.52,
+      "end": 503.36,
+      "text": "and so they want to make money from the model."
+    },
+    {
+      "id": 164,
+      "start": 503.36,
+      "end": 507.48,
+      "text": "So OpenAI makes money from the OpenAI API, Gemini makes,"
+    },
+    {
+      "id": 165,
+      "start": 507.48,
+      "end": 509.72,
+      "text": "sorry, Google makes money from the Gemini API"
+    },
+    {
+      "id": 166,
+      "start": 511.36,
+      "end": 513.88,
+      "text": "and Anthropic makes money from the cloud API."
+    },
+    {
+      "id": 167,
+      "start": 513.88,
+      "end": 516.64,
+      "text": "These are our models that I'm going to talk about."
+    },
+    {
+      "id": 168,
+      "start": 516.76,
+      "end": 518.04,
+      "text": "Number two, safety."
+    },
+    {
+      "id": 169,
+      "start": 518.04,
+      "end": 520.2,
+      "text": "I think there are very legitimate concerns"
+    },
+    {
+      "id": 170,
+      "start": 520.2,
+      "end": 522.16,
+      "text": "where if you release strong models,"
+    },
+    {
+      "id": 171,
+      "start": 522.16,
+      "end": 523.88,
+      "text": "people might use them for bad things."
+    },
+    {
+      "id": 172,
+      "start": 523.88,
+      "end": 527.12,
+      "text": "So creating fake content online"
+    },
+    {
+      "id": 173,
+      "start": 527.12,
+      "end": 530.04,
+      "text": "or doing spearfishing attacks against people"
+    },
+    {
+      "id": 174,
+      "start": 530.04,
+      "end": 532.8,
+      "text": "and trying to scam them out of money or things like that."
+    },
+    {
+      "id": 175,
+      "start": 532.8,
+      "end": 535.56,
+      "text": "So I think there are legitimate concerns about this."
+    },
+    {
+      "id": 176,
+      "start": 536.6,
+      "end": 538.8,
+      "text": "And then the final one is legal liability."
+    },
+    {
+      "id": 177,
+      "start": 538.8,
+      "end": 540.76,
+      "text": "So training models on copyrighted data"
+    },
+    {
+      "id": 178,
+      "start": 540.76,
+      "end": 543.68,
+      "text": "is a legal gray area as I just mentioned."
+    },
+    {
+      "id": 179,
+      "start": 543.68,
+      "end": 545.76,
+      "text": "So they don't want to say what data they trained on"
+    },
+    {
+      "id": 180,
+      "start": 545.76,
+      "end": 547.8,
+      "text": "because if they say what data they trained on,"
+    },
+    {
+      "id": 181,
+      "start": 547.8,
+      "end": 549.72,
+      "text": "then they might get sued."
+    },
+    {
+      "id": 182,
+      "start": 549.72,
+      "end": 552.36,
+      "text": "So these are the three main concerns."
+    },
+    {
+      "id": 183,
+      "start": 553.8,
+      "end": 558.84,
+      "text": "So anyway, this is a preface"
+    },
+    {
+      "id": 184,
+      "start": 558.84,
+      "end": 561.2,
+      "text": "and then I want to go into like the actual models."
+    },
+    {
+      "id": 185,
+      "start": 561.2,
+      "end": 562.84,
+      "text": "Are there any questions about this?"
+    },
+    {
+      "id": 186,
+      "start": 566.68,
+      "end": 570.44,
+      "text": "So if any of you are working at a company"
+    },
+    {
+      "id": 187,
+      "start": 570.44,
+      "end": 573.08,
+      "text": "or starting a company, thinking about working at a company"
+    },
+    {
+      "id": 188,
+      "start": 573.08,
+      "end": 573.88,
+      "text": "or starting a company,"
+    },
+    {
+      "id": 189,
+      "start": 573.88,
+      "end": 576.4,
+      "text": "this is something you should be aware of."
+    },
+    {
+      "id": 190,
+      "start": 576.4,
+      "end": 579.36,
+      "text": "You should also be aware of the fact that, you know,"
+    },
+    {
+      "id": 191,
+      "start": 579.36,
+      "end": 581.68,
+      "text": "open AI has been doing sketchy things for a long time"
+    },
+    {
+      "id": 192,
+      "start": 581.68,
+      "end": 583.8,
+      "text": "and look where they are."
+    },
+    {
+      "id": 193,
+      "start": 583.8,
+      "end": 587.64,
+      "text": "So, you know, it's like,"
+    },
+    {
+      "id": 194,
+      "start": 587.64,
+      "end": 589.32,
+      "text": "this is very much a legal gray area"
+    },
+    {
+      "id": 195,
+      "start": 589.32,
+      "end": 593.0,
+      "text": "and people are moving through that gray area,"
+    },
+    {
+      "id": 196,
+      "start": 593.0,
+      "end": 595.6,
+      "text": "but anyway, it's worth knowing that."
+    },
+    {
+      "id": 197,
+      "start": 595.6,
+      "end": 597.64,
+      "text": "So next I'm gonna talk about open models."
+    },
+    {
+      "id": 198,
+      "start": 598.76,
+      "end": 601.08,
+      "text": "So first, a bird's eye view, I'm gonna talk."
+    }
+  ],
+  "language": "en"
+}

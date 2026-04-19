@@ -1,0 +1,371 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 7.0,
+      "text": "Okay, so I'm here substituting for Graham today because he's that traveling."
+    },
+    {
+      "id": 1,
+      "start": 7.0,
+      "end": 13.0,
+      "text": "And yeah, we can just go right into it."
+    },
+    {
+      "id": 2,
+      "start": 13.0,
+      "end": 21.0,
+      "text": "So as everyone here knows, NLP models now are like really deployed at a large scale."
+    },
+    {
+      "id": 3,
+      "start": 21.0,
+      "end": 25.0,
+      "text": "And we all know that training big models is expensive."
+    },
+    {
+      "id": 4,
+      "start": 25.0,
+      "end": 35.0,
+      "text": "I'm sure that you've experienced that in homework one and in any time you trade a network, a deep network, you need GP resources."
+    },
+    {
+      "id": 5,
+      "start": 35.0,
+      "end": 38.0,
+      "text": "And this is something that we all understand."
+    },
+    {
+      "id": 6,
+      "start": 38.0,
+      "end": 41.0,
+      "text": "But something that I think is overlooked is that inference."
+    },
+    {
+      "id": 7,
+      "start": 41.0,
+      "end": 49.0,
+      "text": "So once you have a train model now deploying it and making predictions for users is arguably even more expensive."
+    },
+    {
+      "id": 8,
+      "start": 49.0,
+      "end": 59.0,
+      "text": "Like if you look at the lifetime of a model, it probably exceeds the training costs, according to this analysis within just one week of use."
+    },
+    {
+      "id": 9,
+      "start": 59.0,
+      "end": 71.0,
+      "text": "And so if your model is being used for months or years or many people, the cost will like greatly eclipse the training costs, which is more of a one time cost."
+    },
+    {
+      "id": 10,
+      "start": 71.0,
+      "end": 85.0,
+      "text": "And this is a problem because if we want to make AI systems able to help lots of different people in different places, people without as much resources or access power."
+    },
+    {
+      "id": 11,
+      "start": 85.0,
+      "end": 93.0,
+      "text": "We want to be able to reduce the cost of serving AI systems to the public."
+    },
+    {
+      "id": 12,
+      "start": 93.0,
+      "end": 99.0,
+      "text": "And this is also getting harder because models are getting bigger."
+    },
+    {
+      "id": 13,
+      "start": 99.0,
+      "end": 113.0,
+      "text": "And like maybe a slight shift towards reducing model size a little bit in the last maybe two years, but these models are still like billions of parameters in size and that is expensive to serve."
+    },
+    {
+      "id": 14,
+      "start": 113.0,
+      "end": 128.0,
+      "text": "So the main question of this that we'll be talking about in today's lecture is how can we cheaply, efficiently and equitably deploy NLP systems without sacrificing performance."
+    },
+    {
+      "id": 15,
+      "start": 128.0,
+      "end": 146.0,
+      "text": "There's like a clear answer here that I'm kind of leading towards, which is model compression and model compression here basically means taking a trained model and then reducing the size of that model before deploying it."
+    },
+    {
+      "id": 16,
+      "start": 146.0,
+      "end": 153.0,
+      "text": "And there's three high level ways that we'll talk about in today's lecture for how we can compress models."
+    },
+    {
+      "id": 17,
+      "start": 153.0,
+      "end": 165.0,
+      "text": "The first is quantization, which is you basically don't really change the architecture parameters of the model up to a certain amount of precision and then you throw away the remainder of the position."
+    },
+    {
+      "id": 18,
+      "start": 165.0,
+      "end": 173.0,
+      "text": "And the second is pruning so throwing out entire components or parameters of a model."
+    },
+    {
+      "id": 19,
+      "start": 173.0,
+      "end": 188.0,
+      "text": "And the third is distillation where you might change all of the parameters, but you're basically condensing the knowledge of a big model into a smaller model that is retrained often from scratch to replicate the behavior of the big model."
+    },
+    {
+      "id": 20,
+      "start": 188.0,
+      "end": 193.0,
+      "text": "So I'll go into much more detail with all these things."
+    },
+    {
+      "id": 21,
+      "start": 219.0,
+      "end": 227.0,
+      "text": "I think the mic stop working so I'm going to speak up if anyone's having trouble hearing me just please raise your hand."
+    },
+    {
+      "id": 22,
+      "start": 229.0,
+      "end": 242.0,
+      "text": "Okay, so I've motivated this idea of model compression, which is very tempting right just take a model make it smaller get the same performance and it's just cheaper to serve right nothing nothing about that seems bad."
+    },
+    {
+      "id": 23,
+      "start": 242.0,
+      "end": 258.0,
+      "text": "So I think there's a natural question of why isn't it's even possible and specifically I think a natural question is instead of taking a big model and making it smaller why not just start with a small model and train it as such like that seems a little more intuitive."
+    },
+    {
+      "id": 24,
+      "start": 258.0,
+      "end": 263.0,
+      "text": "So that's the first question is why not just start with a small model to be trained."
+    },
+    {
+      "id": 25,
+      "start": 263.0,
+      "end": 276.0,
+      "text": "And then the second question would be why is it possible to take the big model and throw pieces of it away without sacrificing accuracy that does not seem like a like a given that that should be even possible."
+    },
+    {
+      "id": 26,
+      "start": 276.0,
+      "end": 281.0,
+      "text": "And I'll just give you a little intuition for why this is possible."
+    },
+    {
+      "id": 27,
+      "start": 281.0,
+      "end": 284.0,
+      "text": "So."
+    },
+    {
+      "id": 28,
+      "start": 284.0,
+      "end": 292.0,
+      "text": "So this term over parameterize means how people are familiar with this term you can raise your hand."
+    },
+    {
+      "id": 29,
+      "start": 292.0,
+      "end": 309.0,
+      "text": "The basic meat the meaning of this term is that you have a model that has usually more parameters than you have training data or more casual terms you just have a lot of parameters like way more than statistical machine learning would say you need."
+    },
+    {
+      "id": 30,
+      "start": 309.0,
+      "end": 320.0,
+      "text": "So for example, a GPT three the original GPT three model had 170 billion parameters, which is like definitely over parameterize."
+    },
+    {
+      "id": 31,
+      "start": 320.0,
+      "end": 332.0,
+      "text": "And so there's been a lot of work in the theory community of ML that shows that over parameterized models models that have a huge number parameters are actually much easier to train."
+    },
+    {
+      "id": 32,
+      "start": 332.0,
+      "end": 354.0,
+      "text": "And so that's not especially for very complicated tasks and the basic idea is that training deep neural networks for for most tasks requires optimizing a non convex objective, which is not guaranteed to you're not guaranteed to find the global optimum of a non convex objective."
+    },
+    {
+      "id": 33,
+      "start": 354.0,
+      "end": 371.0,
+      "text": "And so you have a bunch of parameters and you're trying to basically tune the parameters to find the best value of your objective having a lot of parameters sort of let's see side step around saddle points or local optimal that are not global optimal."
+    },
+    {
+      "id": 34,
+      "start": 371.0,
+      "end": 385.0,
+      "text": "So basically I take sort of shortcuts around barriers in the optimization space. This is sort of the intuition and the CMU's context optimization class goes into a lot more detail for this kind of thing."
+    },
+    {
+      "id": 35,
+      "start": 385.0,
+      "end": 393.0,
+      "text": "Anyways, I think the intuition here is that models with a lot of parameters are easier to train and they lead to better models."
+    },
+    {
+      "id": 36,
+      "start": 393.0,
+      "end": 399.0,
+      "text": "You don't probably you probably don't need all those parameters for inference. They're more of a training time trick."
+    },
+    {
+      "id": 37,
+      "start": 399.0,
+      "end": 402.0,
+      "text": "Okay, so now."
+    },
+    {
+      "id": 38,
+      "start": 402.0,
+      "end": 414.0,
+      "text": "Before I move on any questions about the motivation here."
+    },
+    {
+      "id": 39,
+      "start": 415.0,
+      "end": 427.0,
+      "text": "Okay, so we'll start with quantization and the most obvious way to do this is post training quantization. So you train a model as big as you want."
+    },
+    {
+      "id": 40,
+      "start": 427.0,
+      "end": 433.0,
+      "text": "And then you just reduce the precision of say all of the weights in that model."
+    },
+    {
+      "id": 41,
+      "start": 433.0,
+      "end": 445.0,
+      "text": "So for example, where we can revisit this slide the gram had shown to collect like years ago on if you have a 65 billion parameter model like llama to."
+    },
+    {
+      "id": 42,
+      "start": 445.0,
+      "end": 452.0,
+      "text": "And you have say four bit precision so four bytes of precision so like 32 bit floats."
+    },
+    {
+      "id": 43,
+      "start": 452.0,
+      "end": 464.0,
+      "text": "Just loading that model into memory would take 260 gigabytes of GPU memory, which is more than most single GPUs that you could buy have."
+    },
+    {
+      "id": 44,
+      "start": 464.0,
+      "end": 477.0,
+      "text": "But if you instead reduce the precision of the parameters of the weights in that model, you see like a pretty massive decrease, which is linear to the reduction precision."
+    },
+    {
+      "id": 45,
+      "start": 477.0,
+      "end": 484.0,
+      "text": "At the most extreme case, if you replaced each float 32 with a single bit so zero or one."
+    },
+    {
+      "id": 46,
+      "start": 484.0,
+      "end": 492.0,
+      "text": "Then you would only have like an eight gigabyte model, which you could probably load into most GPUs."
+    },
+    {
+      "id": 47,
+      "start": 492.0,
+      "end": 499.0,
+      "text": "And so I think there's clearly an attractive proposition here in terms of the cost."
+    },
+    {
+      "id": 48,
+      "start": 499.0,
+      "end": 515.0,
+      "text": "But before we go into some of the nitty gritty here, just a refresher from computer systems. So neural nets are typically represent weights as floating point numbers in order to express."
+    },
+    {
+      "id": 49,
+      "start": 515.0,
+      "end": 525.0,
+      "text": "To have a broader range of values in the model. And so floating points in at least in like the IEEE standard, which is the most common."
+    },
+    {
+      "id": 50,
+      "start": 525.0,
+      "end": 531.0,
+      "text": "So you have three pieces, you have like a sign bit, which says positive or negative."
+    },
+    {
+      "id": 51,
+      "start": 531.0,
+      "end": 540.0,
+      "text": "A fractional bit, which a fractional piece, which specifies sort of the."
+    },
+    {
+      "id": 52,
+      "start": 540.0,
+      "end": 550.0,
+      "text": "Which specifies it specifies the range of the values and then the exponent, which scales how big or small the float is."
+    },
+    {
+      "id": 53,
+      "start": 550.0,
+      "end": 555.0,
+      "text": "So we can give an example here. So here."
+    },
+    {
+      "id": 54,
+      "start": 555.0,
+      "end": 564.0,
+      "text": "We have we can do float 16 where we have like 10 bits of fraction. So this gives a lot more range of."
+    },
+    {
+      "id": 55,
+      "start": 564.0,
+      "end": 572.0,
+      "text": "Of what the number could be, then the exponent bit is five. So you have up to like two to the power of five or two power negative five."
+    },
+    {
+      "id": 56,
+      "start": 572.0,
+      "end": 579.0,
+      "text": "As like the scaling factor here. And then the sign, which is positive one or negative one."
+    },
+    {
+      "id": 57,
+      "start": 579.0,
+      "end": 582.0,
+      "text": "And so."
+    },
+    {
+      "id": 58,
+      "start": 582.0,
+      "end": 585.0,
+      "text": "Float 16 is."
+    },
+    {
+      "id": 59,
+      "start": 585.0,
+      "end": 597.0,
+      "text": "It's pretty common, but for machine learning, it's often not enough because in, especially when you're trying to train a neural net, you often have very small or very big values like underflow or overflow."
+    },
+    {
+      "id": 60,
+      "start": 597.0,
+      "end": 602.0,
+      "text": "And therefore a really popular data type."
+    }
+  ],
+  "language": "en"
+}

@@ -1,0 +1,497 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 6.0,
+      "text": "to pick the second one because the second one has a very low score here so that would be not really right."
+    },
+    {
+      "id": 1,
+      "start": 6.0,
+      "end": 9.0,
+      "text": "Well, yeah."
+    },
+    {
+      "id": 2,
+      "start": 20.0,
+      "end": 22.0,
+      "text": "Yeah, so if."
+    },
+    {
+      "id": 3,
+      "start": 23.0,
+      "end": 40.0,
+      "text": "Yeah, and if there's any chance of assigning zero probability according to a language model, then really you can't even test that language model on that on that test set."
+    },
+    {
+      "id": 4,
+      "start": 41.0,
+      "end": 46.0,
+      "text": "So the issue becomes like let's say you have two models with different vocabulary."
+    },
+    {
+      "id": 5,
+      "start": 46.0,
+      "end": 53.0,
+      "text": "If you have two models with different vocabulary, it becomes very tricky how to reconcile those two, but you could do linear interpolation between them."
+    },
+    {
+      "id": 6,
+      "start": 53.0,
+      "end": 61.0,
+      "text": "Like match the vocabulary, the output vocabulary said they do have and then just not worry about the fact that the vocabulary said destroyed."
+    },
+    {
+      "id": 7,
+      "start": 62.0,
+      "end": 70.0,
+      "text": "And because one will assign a zero probability to those vocabulary items, but the other one is fine so you can just do that."
+    },
+    {
+      "id": 8,
+      "start": 70.0,
+      "end": 79.0,
+      "text": "If you're in general, it will be very tricky to try to get two models with different vocabulary to play together nicely."
+    },
+    {
+      "id": 9,
+      "start": 79.0,
+      "end": 87.0,
+      "text": "So I would suggest thinking about thinking seriously about whether you need to do that or not before you start out."
+    },
+    {
+      "id": 10,
+      "start": 92.0,
+      "end": 109.0,
+      "text": "And you can definitely, so the question is, are there any other types of interpolation that have other types of logical components like X or a north."
+    },
+    {
+      "id": 11,
+      "start": 109.0,
+      "end": 112.0,
+      "text": "You can definitely come up with one."
+    },
+    {
+      "id": 12,
+      "start": 112.0,
+      "end": 117.0,
+      "text": "I am struggling a little bit to think about when you want to do that."
+    },
+    {
+      "id": 13,
+      "start": 118.0,
+      "end": 132.0,
+      "text": "So I just say, is there any other things that the errors are not clearly used?"
+    },
+    {
+      "id": 14,
+      "start": 132.0,
+      "end": 136.0,
+      "text": "So what if the errors are not, what if the errors are correlated?"
+    },
+    {
+      "id": 15,
+      "start": 136.0,
+      "end": 145.0,
+      "text": "So think about what happens if the errors are perfectly correlated, which is when you're using the same model into parts of the like on top."
+    },
+    {
+      "id": 16,
+      "start": 145.0,
+      "end": 153.0,
+      "text": "So literally these model one and model two are the same model."
+    },
+    {
+      "id": 17,
+      "start": 153.0,
+      "end": 157.0,
+      "text": "If that's the case, nothing happens. It doesn't get worse."
+    },
+    {
+      "id": 18,
+      "start": 157.0,
+      "end": 174.0,
+      "text": "And so of course, because this is machine learning, there's no guarantee like, you know, unless we make some assumptions about the relationship between like the training set and the test set or the model's errors and the test set."
+    },
+    {
+      "id": 19,
+      "start": 174.0,
+      "end": 178.0,
+      "text": "You can always do something that will make your accuracy worse."
+    },
+    {
+      "id": 20,
+      "start": 178.0,
+      "end": 184.0,
+      "text": "Like let's say we flip the labels of a binary classification problem, no matter what you do, you're going to make your accuracy worse."
+    },
+    {
+      "id": 21,
+      "start": 184.0,
+      "end": 194.0,
+      "text": "But, or no matter what the normal thing you would do is it would make your act, if it would improve accuracy normally, it would decrease the accuracy."
+    },
+    {
+      "id": 22,
+      "start": 194.0,
+      "end": 201.0,
+      "text": "But like under pretty reasonable assumptions, it's mostly going to be the case that there is a need for a little bit to such extent."
+    },
+    {
+      "id": 23,
+      "start": 201.0,
+      "end": 218.0,
+      "text": "So, yeah, being because of that on some what usually helps."
+    },
+    {
+      "id": 24,
+      "start": 218.0,
+      "end": 237.0,
+      "text": "About which one which."
+    },
+    {
+      "id": 25,
+      "start": 237.0,
+      "end": 250.0,
+      "text": "So, in my example."
+    },
+    {
+      "id": 26,
+      "start": 250.0,
+      "end": 258.0,
+      "text": "Yeah, yeah."
+    },
+    {
+      "id": 27,
+      "start": 258.0,
+      "end": 265.0,
+      "text": "So, this is where the images fire when this is one."
+    },
+    {
+      "id": 28,
+      "start": 265.0,
+      "end": 271.0,
+      "text": "Cool. Any other any other questions."
+    },
+    {
+      "id": 29,
+      "start": 271.0,
+      "end": 272.0,
+      "text": "Okay."
+    },
+    {
+      "id": 30,
+      "start": 272.0,
+      "end": 283.0,
+      "text": "So, another thing I should point out is that we don't necessarily need to use models only as positive evidence."
+    },
+    {
+      "id": 31,
+      "start": 283.0,
+      "end": 290.0,
+      "text": "If you're using log linear interpolation, actually your interpolation coefficients do not need to be positive."
+    },
+    {
+      "id": 32,
+      "start": 290.0,
+      "end": 299.0,
+      "text": "They can also be negative and you can have things where you penalize the probability is given by a particular model."
+    },
+    {
+      "id": 33,
+      "start": 299.0,
+      "end": 307.0,
+      "text": "And this is actually been used for a long time. It was actually used in machine translations since like 2005 or something like this."
+    },
+    {
+      "id": 34,
+      "start": 307.0,
+      "end": 314.0,
+      "text": "So, basic idea is that you have some models that serve as negative evidence."
+    },
+    {
+      "id": 35,
+      "start": 314.0,
+      "end": 320.0,
+      "text": "So, you have kind of a core model. This might be a really strong general purpose language model."
+    },
+    {
+      "id": 36,
+      "start": 320.0,
+      "end": 331.0,
+      "text": "You have a positive model, which is the model that you want to kind of boost up and improve in a negative model, which you want to decrease."
+    },
+    {
+      "id": 37,
+      "start": 331.0,
+      "end": 337.0,
+      "text": "One example of this is in a paper that we did in 2019."
+    },
+    {
+      "id": 38,
+      "start": 337.0,
+      "end": 341.0,
+      "text": "The core was a machine translation model."
+    },
+    {
+      "id": 39,
+      "start": 341.0,
+      "end": 345.0,
+      "text": "And the negative model is an out of domain language model."
+    },
+    {
+      "id": 40,
+      "start": 345.0,
+      "end": 348.0,
+      "text": "And the positive model is an end domain language model."
+    },
+    {
+      "id": 41,
+      "start": 348.0,
+      "end": 353.0,
+      "text": "And so the idea behind this is a machine translation model."
+    },
+    {
+      "id": 42,
+      "start": 353.0,
+      "end": 362.0,
+      "text": "You have to train it on machine translation data and machine translation data is not very easy to get for particular domains, for example."
+    },
+    {
+      "id": 43,
+      "start": 362.0,
+      "end": 371.0,
+      "text": "You might only have machine translation data in the news domain and you actually want to be doing translation in the medical domain or something."
+    },
+    {
+      "id": 44,
+      "start": 371.0,
+      "end": 378.0,
+      "text": "So, what you do is you have your positive model here. This could be a new, this is a machine translation model."
+    },
+    {
+      "id": 45,
+      "start": 378.0,
+      "end": 383.0,
+      "text": "This could be a news domain or sorry, this could be a medical domain language model."
+    },
+    {
+      "id": 46,
+      "start": 383.0,
+      "end": 392.0,
+      "text": "And this could be a news domain language model. So, you're subtracting out the news domain probabilities and adding a medical domain probabilities."
+    },
+    {
+      "id": 47,
+      "start": 392.0,
+      "end": 399.0,
+      "text": "Another example of this is something called the experts or dexperts."
+    },
+    {
+      "id": 48,
+      "start": 399.0,
+      "end": 406.0,
+      "text": "And the idea here is here you have a strong language model is your core."
+    },
+    {
+      "id": 49,
+      "start": 406.0,
+      "end": 410.0,
+      "text": "And then as negative you have a weak toxic language model."
+    },
+    {
+      "id": 50,
+      "start": 410.0,
+      "end": 414.0,
+      "text": "So, it was trained on lots of like bad text that you don't want to be generating."
+    },
+    {
+      "id": 51,
+      "start": 414.0,
+      "end": 422.0,
+      "text": "And the positive is a weak non-taxic language model that was trained on lots of like innocuous posts."
+    },
+    {
+      "id": 52,
+      "start": 422.0,
+      "end": 427.0,
+      "text": "So, that would help you de-taxify the outputs of the language model."
+    },
+    {
+      "id": 53,
+      "start": 427.0,
+      "end": 436.0,
+      "text": "So, there's lots of examples of things like this that we can do."
+    },
+    {
+      "id": 54,
+      "start": 436.0,
+      "end": 443.0,
+      "text": "Yeah."
+    },
+    {
+      "id": 55,
+      "start": 443.0,
+      "end": 450.0,
+      "text": "So, the positive in the machine translation example, this is a, so this is a machine translation model."
+    },
+    {
+      "id": 56,
+      "start": 450.0,
+      "end": 457.0,
+      "text": "Where the input is like in less and output is in that."
+    },
+    {
+      "id": 57,
+      "start": 457.0,
+      "end": 465.0,
+      "text": "This is only trained on Japanese, but it's trained on like medical Japanese, for example, it's in a civil domain one."
+    },
+    {
+      "id": 58,
+      "start": 465.0,
+      "end": 470.0,
+      "text": "This is a language model that was trained on like used domain."
+    },
+    {
+      "id": 59,
+      "start": 470.0,
+      "end": 477.0,
+      "text": "Yeah, it's or it would even literally just be trained on the right side of the machine."
+    },
+    {
+      "id": 60,
+      "start": 477.0,
+      "end": 485.0,
+      "text": "So, it's trying to remove out the language model and people from the machine business."
+    },
+    {
+      "id": 61,
+      "start": 485.0,
+      "end": 487.0,
+      "text": "It's cool."
+    },
+    {
+      "id": 62,
+      "start": 487.0,
+      "end": 490.0,
+      "text": "Okay."
+    },
+    {
+      "id": 63,
+      "start": 490.0,
+      "end": 499.0,
+      "text": "So, another thing that I didn't actually put it on the slides is there's a lot of other ways to get multiple models."
+    },
+    {
+      "id": 64,
+      "start": 499.0,
+      "end": 504.0,
+      "text": "And I think a lot of people are probably familiar with dropout."
+    },
+    {
+      "id": 65,
+      "start": 504.0,
+      "end": 508.0,
+      "text": "It's a method for regularizing."
+    },
+    {
+      "id": 66,
+      "start": 508.0,
+      "end": 515.0,
+      "text": "It's a method for regularizing neural networks of deep learning models in general."
+    },
+    {
+      "id": 67,
+      "start": 515.0,
+      "end": 519.0,
+      "text": "The idea is every once in a while."
+    },
+    {
+      "id": 68,
+      "start": 519.0,
+      "end": 527.0,
+      "text": "During training, you drop out some portion of the, like nodes in the neural network model."
+    },
+    {
+      "id": 69,
+      "start": 527.0,
+      "end": 532.0,
+      "text": "And you can actually drop out."
+    },
+    {
+      "id": 70,
+      "start": 532.0,
+      "end": 537.0,
+      "text": "And normally what you do is it test time, then you just don't drop out anything and you use a whole neural network model."
+    },
+    {
+      "id": 71,
+      "start": 537.0,
+      "end": 547.0,
+      "text": "But another thing you can do is you can drop out at test time, drop out five times in combined those different models together through ensemble."
+    },
+    {
+      "id": 72,
+      "start": 547.0,
+      "end": 554.0,
+      "text": "And that's actually something that people tried in the, in the dropout paper."
+    },
+    {
+      "id": 73,
+      "start": 554.0,
+      "end": 559.0,
+      "text": "And this is one way to get multiple models."
+    },
+    {
+      "id": 74,
+      "start": 559.0,
+      "end": 568.0,
+      "text": "Actually, you can demonstrate that this helps the original motivation behind dropout was precisely coming from this idea of ensembleing."
+    },
+    {
+      "id": 75,
+      "start": 568.0,
+      "end": 574.0,
+      "text": "Another method there has been around for a very long time."
+    },
+    {
+      "id": 76,
+      "start": 574.0,
+      "end": 578.0,
+      "text": "It's another unsubbling method is begging."
+    },
+    {
+      "id": 77,
+      "start": 578.0,
+      "end": 587.0,
+      "text": "And basically the way bagging works is you have a data set."
+    },
+    {
+      "id": 78,
+      "start": 587.0,
+      "end": 590.0,
+      "text": "And you just re sample the data set."
+    },
+    {
+      "id": 79,
+      "start": 590.0,
+      "end": 597.0,
+      "text": "So you sample all the output with replacement and you get another data set of equal size."
+    },
+    {
+      "id": 80,
+      "start": 597.0,
+      "end": 599.0,
+      "text": "And then you train on this."
+    },
+    {
+      "id": 81,
+      "start": 599.0,
+      "end": 604.0,
+      "text": "But you do that like 10 times and you train 10 different models."
+    }
+  ],
+  "language": "en"
+}

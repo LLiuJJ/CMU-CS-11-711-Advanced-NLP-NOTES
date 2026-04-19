@@ -1,0 +1,1199 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 2.28,
+      "text": "to get information from it."
+    },
+    {
+      "id": 1,
+      "start": 2.28,
+      "end": 6.08,
+      "text": "I know so youth action tools to take action"
+    },
+    {
+      "id": 2,
+      "start": 6.08,
+      "end": 7.92,
+      "text": "on the environment."
+    },
+    {
+      "id": 3,
+      "start": 7.92,
+      "end": 10.44,
+      "text": "But there's a caveat here that, for example,"
+    },
+    {
+      "id": 4,
+      "start": 10.44,
+      "end": 13.56,
+      "text": "at one of the small note that only uses competition tools"
+    },
+    {
+      "id": 5,
+      "start": 13.56,
+      "end": 15.88,
+      "text": "but do not use perception action tools"
+    },
+    {
+      "id": 6,
+      "start": 15.88,
+      "end": 18.92,
+      "text": "actually do not fall into the category of agents"
+    },
+    {
+      "id": 7,
+      "start": 18.92,
+      "end": 20.52,
+      "text": "at least by the definition."
+    },
+    {
+      "id": 8,
+      "start": 24.96,
+      "end": 29.0,
+      "text": "So for example, it's a perception tool"
+    },
+    {
+      "id": 9,
+      "start": 29.0,
+      "end": 31.44,
+      "text": "that's sort of difficult to explore."
+    },
+    {
+      "id": 10,
+      "start": 31.44,
+      "end": 32.84,
+      "text": "When we're looking at the tools,"
+    },
+    {
+      "id": 11,
+      "start": 32.84,
+      "end": 34.72,
+      "text": "I can either use the little source,"
+    },
+    {
+      "id": 12,
+      "start": 34.72,
+      "end": 36.44,
+      "text": "use it, and I'm trying to learn it"
+    },
+    {
+      "id": 13,
+      "start": 36.44,
+      "end": 38.6,
+      "text": "or when is that the right thing to do?"
+    },
+    {
+      "id": 14,
+      "start": 38.6,
+      "end": 40.24,
+      "text": "So we can."
+    },
+    {
+      "id": 15,
+      "start": 40.24,
+      "end": 41.96,
+      "text": "Yeah, that's a good question."
+    },
+    {
+      "id": 16,
+      "start": 41.96,
+      "end": 46.96,
+      "text": "I think for now, the tool using build is not very mature."
+    },
+    {
+      "id": 17,
+      "start": 49.84,
+      "end": 53.76,
+      "text": "Yeah, so mostly the data that's only"
+    },
+    {
+      "id": 18,
+      "start": 53.76,
+      "end": 56.16,
+      "text": "to put multi-term tool usage."
+    },
+    {
+      "id": 19,
+      "start": 56.16,
+      "end": 58.76,
+      "text": "So you can put a cloud into multiple tasks"
+    },
+    {
+      "id": 20,
+      "start": 58.76,
+      "end": 61.88,
+      "text": "but multiple tasks that you should have only use one tool."
+    },
+    {
+      "id": 21,
+      "start": 61.88,
+      "end": 64.16,
+      "text": "There's not necessarily a lot of interaction"
+    },
+    {
+      "id": 22,
+      "start": 64.16,
+      "end": 66.12,
+      "text": "between the certain tools."
+    },
+    {
+      "id": 23,
+      "start": 66.12,
+      "end": 69.24,
+      "text": "Yeah, but that could be an interesting direction to move forward."
+    },
+    {
+      "id": 24,
+      "start": 74.52,
+      "end": 77.56,
+      "text": "So that's the basic tools."
+    },
+    {
+      "id": 25,
+      "start": 77.56,
+      "end": 80.52,
+      "text": "So we'll dive into more detail"
+    },
+    {
+      "id": 26,
+      "start": 80.52,
+      "end": 83.6,
+      "text": "like what scenarios and what tasks can we apply this in."
+    },
+    {
+      "id": 27,
+      "start": 84.6,
+      "end": 88.2,
+      "text": "So we start with like a basic tool using paradigm."
+    },
+    {
+      "id": 28,
+      "start": 88.2,
+      "end": 92.16,
+      "text": "So how that can like one of the models use it to."
+    },
+    {
+      "id": 29,
+      "start": 92.16,
+      "end": 95.28,
+      "text": "So first, it worked in a nutshell,"
+    },
+    {
+      "id": 30,
+      "start": 95.28,
+      "end": 98.56,
+      "text": "it's basically a shift in between task generation"
+    },
+    {
+      "id": 31,
+      "start": 98.56,
+      "end": 100.8,
+      "text": "and tool execution models."
+    },
+    {
+      "id": 32,
+      "start": 100.8,
+      "end": 103.8,
+      "text": "So for example, in the example on the right"
+    },
+    {
+      "id": 33,
+      "start": 103.8,
+      "end": 107.76,
+      "text": "that a user asks how the weather today."
+    },
+    {
+      "id": 34,
+      "start": 107.76,
+      "end": 109.88,
+      "text": "So the language model started with the standard"
+    },
+    {
+      "id": 35,
+      "start": 110.0,
+      "end": 113.16,
+      "text": "texture and should process, generally it is."
+    },
+    {
+      "id": 36,
+      "start": 113.16,
+      "end": 115.92,
+      "text": "And when the model feels like needing like extra"
+    },
+    {
+      "id": 37,
+      "start": 115.92,
+      "end": 118.0,
+      "text": "helpful tools, it starts to generate"
+    },
+    {
+      "id": 38,
+      "start": 118.0,
+      "end": 121.96,
+      "text": "tokens that forms the call expression to that tool."
+    },
+    {
+      "id": 39,
+      "start": 121.96,
+      "end": 125.32,
+      "text": "For example, the call text weather here."
+    },
+    {
+      "id": 40,
+      "start": 125.32,
+      "end": 128.2,
+      "text": "And after this expression is completed,"
+    },
+    {
+      "id": 41,
+      "start": 128.2,
+      "end": 131.32,
+      "text": "this completed expression will trigger"
+    },
+    {
+      "id": 42,
+      "start": 131.32,
+      "end": 133.92,
+      "text": "your mode to execution server,"
+    },
+    {
+      "id": 43,
+      "start": 133.92,
+      "end": 136.0,
+      "text": "which is the weather server here."
+    },
+    {
+      "id": 44,
+      "start": 136.0,
+      "end": 139.32,
+      "text": "And then we'll shift to the two execution nodes."
+    },
+    {
+      "id": 45,
+      "start": 139.32,
+      "end": 142.68,
+      "text": "Weather server will execute the call and return to result,"
+    },
+    {
+      "id": 46,
+      "start": 142.68,
+      "end": 146.92,
+      "text": "which is sunny here and return that back to the local model."
+    },
+    {
+      "id": 47,
+      "start": 146.92,
+      "end": 149.8,
+      "text": "And when the model replicates the API call"
+    },
+    {
+      "id": 48,
+      "start": 149.8,
+      "end": 154.8,
+      "text": "by the return execution output and continue a shift back"
+    },
+    {
+      "id": 49,
+      "start": 154.8,
+      "end": 156.28,
+      "text": "to the texture and return mode,"
+    },
+    {
+      "id": 50,
+      "start": 156.28,
+      "end": 159.8,
+      "text": "and continue generating the rest of the tokens."
+    },
+    {
+      "id": 51,
+      "start": 159.8,
+      "end": 161.56,
+      "text": "And after we finish all this process,"
+    },
+    {
+      "id": 52,
+      "start": 161.56,
+      "end": 163.64,
+      "text": "we will return the final response and"
+    },
+    {
+      "id": 53,
+      "start": 163.64,
+      "end": 165.96,
+      "text": "it will send it today to the original user."
+    },
+    {
+      "id": 54,
+      "start": 166.96,
+      "end": 170.0,
+      "text": "And this process is not as pretty like,"
+    },
+    {
+      "id": 55,
+      "start": 171.0,
+      "end": 172.2,
+      "text": "into it all."
+    },
+    {
+      "id": 56,
+      "start": 172.2,
+      "end": 175.84,
+      "text": "And the method for current methods to use,"
+    },
+    {
+      "id": 57,
+      "start": 175.84,
+      "end": 178.68,
+      "text": "like teach model to use tool like this"
+    },
+    {
+      "id": 58,
+      "start": 178.68,
+      "end": 180.48,
+      "text": "is so pretty straightforward."
+    },
+    {
+      "id": 59,
+      "start": 180.48,
+      "end": 184.28,
+      "text": "So there are two categories of approaches."
+    },
+    {
+      "id": 60,
+      "start": 184.28,
+      "end": 187.28,
+      "text": "One is inference time counting."
+    },
+    {
+      "id": 61,
+      "start": 187.28,
+      "end": 189.88,
+      "text": "So basically, you can provide, for example,"
+    },
+    {
+      "id": 62,
+      "start": 189.88,
+      "end": 191.84,
+      "text": "natural language instructions and"
+    },
+    {
+      "id": 63,
+      "start": 191.84,
+      "end": 194.72,
+      "text": "instruct the model to do this kind of process."
+    },
+    {
+      "id": 64,
+      "start": 195.0,
+      "end": 197.2,
+      "text": "Also in context examples,"
+    },
+    {
+      "id": 65,
+      "start": 197.2,
+      "end": 199.72,
+      "text": "with natural language employed and also"
+    },
+    {
+      "id": 66,
+      "start": 199.72,
+      "end": 202.0,
+      "text": "two involved solution outputs."
+    },
+    {
+      "id": 67,
+      "start": 202.0,
+      "end": 203.88,
+      "text": "And also there are other works that"
+    },
+    {
+      "id": 68,
+      "start": 203.88,
+      "end": 208.04,
+      "text": "like documentation of tools to help models understand this tool."
+    },
+    {
+      "id": 69,
+      "start": 208.04,
+      "end": 210.56,
+      "text": "And the second category is learning by training,"
+    },
+    {
+      "id": 70,
+      "start": 210.56,
+      "end": 214.6,
+      "text": "which is where you can just turn on examples"
+    },
+    {
+      "id": 71,
+      "start": 214.6,
+      "end": 217.8,
+      "text": "of natural language queries and two in all solutions."
+    },
+    {
+      "id": 72,
+      "start": 221.36,
+      "end": 223.16,
+      "text": "And even this method,"
+    },
+    {
+      "id": 73,
+      "start": 223.2,
+      "end": 228.2,
+      "text": "many people have applied tools in many scenarios."
+    },
+    {
+      "id": 74,
+      "start": 228.48,
+      "end": 231.28,
+      "text": "And here are the major five scenarios"
+    },
+    {
+      "id": 75,
+      "start": 231.28,
+      "end": 232.88,
+      "text": "you have some of."
+    },
+    {
+      "id": 76,
+      "start": 232.88,
+      "end": 235.88,
+      "text": "The first is knowledge axles."
+    },
+    {
+      "id": 77,
+      "start": 235.88,
+      "end": 239.16,
+      "text": "So that's in to solve like the limited knowledge"
+    },
+    {
+      "id": 78,
+      "start": 239.16,
+      "end": 242.84,
+      "text": "and models can memorize or store during the training time."
+    },
+    {
+      "id": 79,
+      "start": 242.84,
+      "end": 245.08,
+      "text": "For example, current time is probably not involved"
+    },
+    {
+      "id": 80,
+      "start": 245.08,
+      "end": 246.84,
+      "text": "in the training data."
+    },
+    {
+      "id": 81,
+      "start": 246.84,
+      "end": 251.84,
+      "text": "And one, there could be like many sources"
+    },
+    {
+      "id": 82,
+      "start": 251.84,
+      "end": 254.08,
+      "text": "that the model can access knowledge from."
+    },
+    {
+      "id": 83,
+      "start": 254.08,
+      "end": 257.32,
+      "text": "One of structured knowledge basis from knowledge grads."
+    },
+    {
+      "id": 84,
+      "start": 257.32,
+      "end": 259.4,
+      "text": "If people can use people executable,"
+    },
+    {
+      "id": 85,
+      "start": 259.4,
+      "end": 261.52,
+      "text": "respectful executor to execute"
+    },
+    {
+      "id": 86,
+      "start": 261.52,
+      "end": 264.2,
+      "text": "over the structured data to get them,"
+    },
+    {
+      "id": 87,
+      "start": 264.2,
+      "end": 265.92,
+      "text": "kind of result."
+    },
+    {
+      "id": 88,
+      "start": 265.92,
+      "end": 268.64,
+      "text": "And more generally like curriculum tasks,"
+    },
+    {
+      "id": 89,
+      "start": 268.64,
+      "end": 271.28,
+      "text": "people are using like search engines to search"
+    },
+    {
+      "id": 90,
+      "start": 271.28,
+      "end": 275.6,
+      "text": "over the internet and get the information that it wants."
+    },
+    {
+      "id": 91,
+      "start": 275.6,
+      "end": 278.56,
+      "text": "And more generally, maybe a relate to"
+    },
+    {
+      "id": 92,
+      "start": 278.56,
+      "end": 279.44,
+      "text": "what we should all know,"
+    },
+    {
+      "id": 93,
+      "start": 279.44,
+      "end": 282.56,
+      "text": "and the generation, even out of all,"
+    },
+    {
+      "id": 94,
+      "start": 282.56,
+      "end": 285.04,
+      "text": "all like the retrieval models can be"
+    },
+    {
+      "id": 95,
+      "start": 285.04,
+      "end": 287.76,
+      "text": "being as like knowledge access and literature."
+    },
+    {
+      "id": 96,
+      "start": 289.6,
+      "end": 293.4,
+      "text": "And the second category is competition activities."
+    },
+    {
+      "id": 97,
+      "start": 293.4,
+      "end": 297.12,
+      "text": "So there's also this aims to solve the issue"
+    },
+    {
+      "id": 98,
+      "start": 297.12,
+      "end": 300.92,
+      "text": "that for complex requires a required complex training,"
+    },
+    {
+      "id": 99,
+      "start": 300.92,
+      "end": 303.88,
+      "text": "models that help we not get at it."
+    },
+    {
+      "id": 100,
+      "start": 303.88,
+      "end": 307.56,
+      "text": "Like solving cannot solve the problem very efficiently"
+    },
+    {
+      "id": 101,
+      "start": 307.56,
+      "end": 308.92,
+      "text": "or accurately."
+    },
+    {
+      "id": 102,
+      "start": 308.92,
+      "end": 312.16,
+      "text": "So for example, there are people that use calculator"
+    },
+    {
+      "id": 103,
+      "start": 312.16,
+      "end": 314.2,
+      "text": "to solve math patterns."
+    },
+    {
+      "id": 104,
+      "start": 314.2,
+      "end": 317.24,
+      "text": "Or more generally for more complex operations,"
+    },
+    {
+      "id": 105,
+      "start": 317.24,
+      "end": 318.92,
+      "text": "so you type in a template,"
+    },
+    {
+      "id": 106,
+      "start": 318.92,
+      "end": 321.84,
+      "text": "or maybe like more complex pattern programs."
+    },
+    {
+      "id": 107,
+      "start": 321.84,
+      "end": 324.0,
+      "text": "And lastly, there are also like,"
+    },
+    {
+      "id": 108,
+      "start": 324.0,
+      "end": 326.0,
+      "text": "you can also leverage existence software,"
+    },
+    {
+      "id": 109,
+      "start": 326.0,
+      "end": 330.48,
+      "text": "like Google works, Google sheet,"
+    },
+    {
+      "id": 110,
+      "start": 330.48,
+      "end": 331.92,
+      "text": "where it looks especially neat"
+    },
+    {
+      "id": 111,
+      "start": 331.92,
+      "end": 333.92,
+      "text": "and like take the actions from there"
+    },
+    {
+      "id": 112,
+      "start": 333.92,
+      "end": 335.64,
+      "text": "and with their questions."
+    },
+    {
+      "id": 113,
+      "start": 337.64,
+      "end": 340.68,
+      "text": "And the third category is interacting with the world."
+    },
+    {
+      "id": 114,
+      "start": 340.68,
+      "end": 343.56,
+      "text": "So what language models can seem"
+    },
+    {
+      "id": 115,
+      "start": 343.56,
+      "end": 346.0,
+      "text": "is pretty limited in its training data."
+    },
+    {
+      "id": 116,
+      "start": 346.0,
+      "end": 348.8,
+      "text": "And how do we leverage a language model"
+    },
+    {
+      "id": 117,
+      "start": 348.8,
+      "end": 351.16,
+      "text": "to, for example, navigating the web?"
+    },
+    {
+      "id": 118,
+      "start": 351.16,
+      "end": 354.36,
+      "text": "So a lot of, we're like getting access"
+    },
+    {
+      "id": 119,
+      "start": 354.36,
+      "end": 356.36,
+      "text": "to read what information."
+    },
+    {
+      "id": 120,
+      "start": 356.36,
+      "end": 358.72,
+      "text": "So there are some things for example,"
+    },
+    {
+      "id": 121,
+      "start": 358.72,
+      "end": 361.36,
+      "text": "getting whether or get location"
+    },
+    {
+      "id": 122,
+      "start": 361.36,
+      "end": 364.92,
+      "text": "to get the current information in the current time"
+    },
+    {
+      "id": 123,
+      "start": 364.92,
+      "end": 367.04,
+      "text": "when you're location."
+    },
+    {
+      "id": 124,
+      "start": 367.04,
+      "end": 371.64,
+      "text": "So it can also manipulate your calendar event"
+    },
+    {
+      "id": 125,
+      "start": 371.64,
+      "end": 375.04,
+      "text": "to help all of the math year work."
+    },
+    {
+      "id": 126,
+      "start": 375.04,
+      "end": 378.04,
+      "text": "Or also it can also help manage it email."
+    },
+    {
+      "id": 127,
+      "start": 380.08,
+      "end": 383.64,
+      "text": "The fourth category is non-caxio-malbalities."
+    },
+    {
+      "id": 128,
+      "start": 383.64,
+      "end": 385.8,
+      "text": "So this is targeting another language"
+    },
+    {
+      "id": 129,
+      "start": 385.8,
+      "end": 387.24,
+      "text": "from the language models path."
+    },
+    {
+      "id": 130,
+      "start": 387.24,
+      "end": 391.0,
+      "text": "As there are like, mainly processing tests,"
+    },
+    {
+      "id": 131,
+      "start": 391.0,
+      "end": 392.32,
+      "text": "they can only take tests"
+    },
+    {
+      "id": 132,
+      "start": 392.32,
+      "end": 395.36,
+      "text": "and go in a generate text output."
+    },
+    {
+      "id": 133,
+      "start": 395.36,
+      "end": 399.32,
+      "text": "But if we provide like tools that match with other model"
+    },
+    {
+      "id": 134,
+      "start": 399.32,
+      "end": 401.52,
+      "text": "needs, we can't enable a language model"
+    },
+    {
+      "id": 135,
+      "start": 401.52,
+      "end": 405.48,
+      "text": "to access other model, data from other model needs"
+    },
+    {
+      "id": 136,
+      "start": 405.48,
+      "end": 407.68,
+      "text": "for interact with them."
+    },
+    {
+      "id": 137,
+      "start": 407.68,
+      "end": 410.92,
+      "text": "For example, there are HDI for example,"
+    },
+    {
+      "id": 138,
+      "start": 410.92,
+      "end": 412.36,
+      "text": "talk a lot in measure."
+    },
+    {
+      "id": 139,
+      "start": 412.36,
+      "end": 414.44,
+      "text": "You can't access images of chat"
+    },
+    {
+      "id": 140,
+      "start": 414.44,
+      "end": 417.32,
+      "text": "or to read them."
+    },
+    {
+      "id": 141,
+      "start": 417.32,
+      "end": 420.96,
+      "text": "And so you can't listen to audio's by,"
+    },
+    {
+      "id": 142,
+      "start": 420.96,
+      "end": 424.72,
+      "text": "even with Spotify, play music, ad."
+    },
+    {
+      "id": 143,
+      "start": 424.72,
+      "end": 429.72,
+      "text": "Or also, like, beyond just viewing where it's implemented"
+    },
+    {
+      "id": 144,
+      "start": 430.76,
+      "end": 432.48,
+      "text": "when you're using data,"
+    },
+    {
+      "id": 145,
+      "start": 432.48,
+      "end": 434.68,
+      "text": "you can also, like, use, for example,"
+    },
+    {
+      "id": 146,
+      "start": 434.68,
+      "end": 437.84,
+      "text": "visual QA tool, which probably involves familiar"
+    },
+    {
+      "id": 147,
+      "start": 437.84,
+      "end": 442.08,
+      "text": "to answer questions about data and other model needs."
+    },
+    {
+      "id": 148,
+      "start": 443.84,
+      "end": 448.04,
+      "text": "And lastly, there's a special category part"
+    },
+    {
+      "id": 149,
+      "start": 448.04,
+      "end": 451.96,
+      "text": "that use tools based on your model."
+    },
+    {
+      "id": 150,
+      "start": 451.96,
+      "end": 456.32,
+      "text": "So, for example, you can load a QA model"
+    },
+    {
+      "id": 151,
+      "start": 456.32,
+      "end": 461.32,
+      "text": "and assign QA tags specifically to this model."
+    },
+    {
+      "id": 152,
+      "start": 461.48,
+      "end": 466.48,
+      "text": "And also another example is the translation model"
+    },
+    {
+      "id": 153,
+      "start": 467.0,
+      "end": 468.8,
+      "text": "where you can load a new model template"
+    },
+    {
+      "id": 154,
+      "start": 468.8,
+      "end": 471.56,
+      "text": "and say, from do translation series."
+    },
+    {
+      "id": 155,
+      "start": 471.56,
+      "end": 474.0,
+      "text": "And also, like, for the visual query here,"
+    },
+    {
+      "id": 156,
+      "start": 474.0,
+      "end": 476.96,
+      "text": "it's a close to like a VQA model from Pugging Fee"
+    },
+    {
+      "id": 157,
+      "start": 476.96,
+      "end": 480.28,
+      "text": "and do the things that you want to do."
+    },
+    {
+      "id": 158,
+      "start": 480.72,
+      "end": 485.28,
+      "text": "So, yeah, these are also again, like tools can't fall"
+    },
+    {
+      "id": 159,
+      "start": 485.88,
+      "end": 487.4,
+      "text": "into a model category."
+    },
+    {
+      "id": 160,
+      "start": 487.4,
+      "end": 490.0,
+      "text": "For example, visual query can be both a special"
+    },
+    {
+      "id": 161,
+      "start": 490.0,
+      "end": 494.16,
+      "text": "built one model, also like nine touchable allowings to."
+    },
+    {
+      "id": 162,
+      "start": 499.56,
+      "end": 502.24,
+      "text": "Another limitation, maybe not a limitation,"
+    },
+    {
+      "id": 163,
+      "start": 502.24,
+      "end": 505.16,
+      "text": "but just like shared property of this tools are,"
+    },
+    {
+      "id": 164,
+      "start": 505.16,
+      "end": 507.32,
+      "text": "they're all designed by human experts"
+    },
+    {
+      "id": 165,
+      "start": 507.32,
+      "end": 509.44,
+      "text": "before we even tackle the test."
+    },
+    {
+      "id": 166,
+      "start": 509.44,
+      "end": 513.16,
+      "text": "So, like with all this tools pretty on,"
+    },
+    {
+      "id": 167,
+      "start": 513.16,
+      "end": 515.48,
+      "text": "we can, we want to tackle as fast"
+    },
+    {
+      "id": 168,
+      "start": 515.48,
+      "end": 518.52,
+      "text": "and just adopt those tools at use."
+    },
+    {
+      "id": 169,
+      "start": 518.52,
+      "end": 521.16,
+      "text": "But there are also tags that don't have"
+    },
+    {
+      "id": 170,
+      "start": 521.16,
+      "end": 523.28,
+      "text": "this pre-designed tools available."
+    },
+    {
+      "id": 171,
+      "start": 523.28,
+      "end": 527.8,
+      "text": "So another question is, can we automatically make tools?"
+    },
+    {
+      "id": 172,
+      "start": 527.8,
+      "end": 529.52,
+      "text": "For example, using multiple models"
+    },
+    {
+      "id": 173,
+      "start": 529.52,
+      "end": 532.16,
+      "text": "without like relying on some experts."
+    },
+    {
+      "id": 174,
+      "start": 533.32,
+      "end": 536.44,
+      "text": "So, in our previous work, we explored this a bit"
+    },
+    {
+      "id": 175,
+      "start": 536.44,
+      "end": 537.92,
+      "text": "on color model type."
+    },
+    {
+      "id": 176,
+      "start": 537.92,
+      "end": 540.36,
+      "text": "And our answer is yes."
+    },
+    {
+      "id": 177,
+      "start": 540.36,
+      "end": 543.84,
+      "text": "So, to give a brief overview,"
+    },
+    {
+      "id": 178,
+      "start": 543.84,
+      "end": 548.52,
+      "text": "so for the standard way of solving program meta tasks,"
+    },
+    {
+      "id": 179,
+      "start": 548.52,
+      "end": 551.6,
+      "text": "though maybe with like a plain meta task,"
+    },
+    {
+      "id": 180,
+      "start": 551.6,
+      "end": 554.16,
+      "text": "like you've given an actual language problem"
+    },
+    {
+      "id": 181,
+      "start": 554.16,
+      "end": 557.0,
+      "text": "and you ask the language model to generate a program,"
+    },
+    {
+      "id": 182,
+      "start": 557.0,
+      "end": 560.0,
+      "text": "then you execute the result to get the final answer."
+    },
+    {
+      "id": 183,
+      "start": 561.2,
+      "end": 562.64,
+      "text": "So, the standard way of doing this,"
+    },
+    {
+      "id": 184,
+      "start": 562.64,
+      "end": 565.4,
+      "text": "you have a stream of tags, for example,"
+    },
+    {
+      "id": 185,
+      "start": 565.4,
+      "end": 567.96,
+      "text": "you pass that into the code language model"
+    },
+    {
+      "id": 186,
+      "start": 567.96,
+      "end": 571.96,
+      "text": "and usually generate solutions for each of this program."
+    },
+    {
+      "id": 187,
+      "start": 571.96,
+      "end": 573.96,
+      "text": "But they usually look like that."
+    },
+    {
+      "id": 188,
+      "start": 573.96,
+      "end": 576.32,
+      "text": "So, maybe much younger than that,"
+    },
+    {
+      "id": 189,
+      "start": 576.32,
+      "end": 578.36,
+      "text": "but it's usually a long program."
+    },
+    {
+      "id": 190,
+      "start": 579.28,
+      "end": 580.28,
+      "text": "What is your plan?"
+    },
+    {
+      "id": 191,
+      "start": 580.28,
+      "end": 582.96,
+      "text": "Besides, it may be called to error,"
+    },
+    {
+      "id": 192,
+      "start": 582.96,
+      "end": 585.8,
+      "text": "for example, here it like, just like,"
+    },
+    {
+      "id": 193,
+      "start": 585.8,
+      "end": 587.92,
+      "text": "mistype one character that calls"
+    },
+    {
+      "id": 194,
+      "start": 587.92,
+      "end": 590.64,
+      "text": "entire program solution to the problem."
+    },
+    {
+      "id": 195,
+      "start": 590.64,
+      "end": 594.12,
+      "text": "The other motivation is, what if we ask code language models"
+    },
+    {
+      "id": 196,
+      "start": 594.12,
+      "end": 597.04,
+      "text": "to additionally generate a two bot?"
+    },
+    {
+      "id": 197,
+      "start": 597.04,
+      "end": 600.32,
+      "text": "And now, with, for example,"
+    },
+    {
+      "id": 198,
+      "start": 600.32,
+      "end": 602.76,
+      "text": "you have like a calculate rate of change tool."
+    }
+  ],
+  "language": "en"
+}

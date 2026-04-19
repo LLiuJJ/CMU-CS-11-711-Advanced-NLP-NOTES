@@ -1,0 +1,1133 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 1.2,
+      "text": "in the graph."
+    },
+    {
+      "id": 1,
+      "start": 1.2,
+      "end": 3.6,
+      "text": "And then the edges are pointing,"
+    },
+    {
+      "id": 2,
+      "start": 4.9,
+      "end": 7.8,
+      "text": "the edges are labeled with like instance of,"
+    },
+    {
+      "id": 3,
+      "start": 7.8,
+      "end": 10.52,
+      "text": "and then the next node is research group."
+    },
+    {
+      "id": 4,
+      "start": 10.52,
+      "end": 13.32,
+      "text": "So research group is like another node in the graph."
+    },
+    {
+      "id": 5,
+      "start": 13.32,
+      "end": 15.44,
+      "text": "And so you can click through this"
+    },
+    {
+      "id": 6,
+      "start": 15.44,
+      "end": 19.44,
+      "text": "and it has its own ID and other things like this."
+    },
+    {
+      "id": 7,
+      "start": 20.72,
+      "end": 23.4,
+      "text": "Also you'll notice that research group is translated"
+    },
+    {
+      "id": 8,
+      "start": 23.4,
+      "end": 25.08,
+      "text": "into lots of different languages in the world."
+    },
+    {
+      "id": 9,
+      "start": 25.08,
+      "end": 27.2,
+      "text": "So you can use it multilingually"
+    },
+    {
+      "id": 10,
+      "start": 27.6,
+      "end": 29.88,
+      "text": "and in other things like that."
+    },
+    {
+      "id": 11,
+      "start": 32.28,
+      "end": 35.0,
+      "text": "Even minor entities like Graham Newbig"
+    },
+    {
+      "id": 12,
+      "start": 36.08,
+      "end": 37.36,
+      "text": "are included in this."
+    },
+    {
+      "id": 13,
+      "start": 37.36,
+      "end": 41.48,
+      "text": "And it has a little bit of like information about me"
+    },
+    {
+      "id": 14,
+      "start": 41.48,
+      "end": 44.2,
+      "text": "like my PhD was in Kyoto University in 2012."
+    },
+    {
+      "id": 15,
+      "start": 44.2,
+      "end": 45.16,
+      "text": "I am a human."
+    },
+    {
+      "id": 16,
+      "start": 47.64,
+      "end": 52.0,
+      "text": "I am male and first name, last name,"
+    },
+    {
+      "id": 17,
+      "start": 52.0,
+      "end": 53.64,
+      "text": "University Teacher, Computer Scientist,"
+    },
+    {
+      "id": 18,
+      "start": 53.64,
+      "end": 54.76,
+      "text": "Natural Language for Us, the same."
+    },
+    {
+      "id": 19,
+      "start": 54.76,
+      "end": 56.8,
+      "text": "This is all right."
+    },
+    {
+      "id": 20,
+      "start": 56.8,
+      "end": 58.56,
+      "text": "Because this is mostly hand curated."
+    },
+    {
+      "id": 21,
+      "start": 58.56,
+      "end": 61.24,
+      "text": "It even has the IDs of my advisor."
+    },
+    {
+      "id": 22,
+      "start": 61.24,
+      "end": 62.8,
+      "text": "Advisors."
+    },
+    {
+      "id": 23,
+      "start": 62.8,
+      "end": 65.88,
+      "text": "The reason why it has all of this stuff"
+    },
+    {
+      "id": 24,
+      "start": 65.88,
+      "end": 68.88,
+      "text": "actually is because like 15 years ago,"
+    },
+    {
+      "id": 25,
+      "start": 68.88,
+      "end": 70.36,
+      "text": "or like 10 years ago,"
+    },
+    {
+      "id": 26,
+      "start": 70.36,
+      "end": 74.48,
+      "text": "I entered in my information into the mathematical genealogy"
+    },
+    {
+      "id": 27,
+      "start": 74.48,
+      "end": 77.56,
+      "text": "project, which is this project about who your advisors were"
+    },
+    {
+      "id": 28,
+      "start": 77.56,
+      "end": 80.64,
+      "text": "because I wanted to see like who my mathematical"
+    },
+    {
+      "id": 29,
+      "start": 80.64,
+      "end": 82.8,
+      "text": "like siblings were and stuff like that."
+    },
+    {
+      "id": 30,
+      "start": 82.8,
+      "end": 84.96,
+      "text": "And somehow they managed to pull that out"
+    },
+    {
+      "id": 31,
+      "start": 84.96,
+      "end": 86.56,
+      "text": "and keep this like 10 years later."
+    },
+    {
+      "id": 32,
+      "start": 86.56,
+      "end": 89.52,
+      "text": "So basically they're pulling information"
+    },
+    {
+      "id": 33,
+      "start": 89.52,
+      "end": 92.04,
+      "text": "from like many, many different structured data sources"
+    },
+    {
+      "id": 34,
+      "start": 92.04,
+      "end": 94.48,
+      "text": "that they can use so they can pull it in there."
+    },
+    {
+      "id": 35,
+      "start": 94.48,
+      "end": 96.16,
+      "text": "I don't know where they got that I'm human,"
+    },
+    {
+      "id": 36,
+      "start": 96.16,
+      "end": 100.48,
+      "text": "but maybe that was inferred from some piece of data"
+    },
+    {
+      "id": 37,
+      "start": 100.48,
+      "end": 101.48,
+      "text": "somewhere online."
+    },
+    {
+      "id": 38,
+      "start": 101.48,
+      "end": 104.24,
+      "text": "I guess it's cool."
+    },
+    {
+      "id": 39,
+      "start": 104.24,
+      "end": 106.84,
+      "text": "Another good thing about this that actually I didn't mention"
+    },
+    {
+      "id": 40,
+      "start": 106.84,
+      "end": 111.84,
+      "text": "directly in the lecture note or slides."
+    },
+    {
+      "id": 41,
+      "start": 116.76,
+      "end": 120.2,
+      "text": "Is that there's a query language for this."
+    },
+    {
+      "id": 42,
+      "start": 120.2,
+      "end": 124.52,
+      "text": "And a query language, this query language is called Sparkle."
+    },
+    {
+      "id": 43,
+      "start": 124.52,
+      "end": 128.76,
+      "text": "So there's a SQL for querying relational databases."
+    },
+    {
+      "id": 44,
+      "start": 128.76,
+      "end": 133.76,
+      "text": "And Sparkle is for querying these knowledge bases."
+    },
+    {
+      "id": 45,
+      "start": 134.76,
+      "end": 140.32,
+      "text": "And let me see if I can, I asked chat GPT"
+    },
+    {
+      "id": 46,
+      "start": 140.32,
+      "end": 144.76,
+      "text": "to write me a Sparkle query to find all presidents"
+    },
+    {
+      "id": 47,
+      "start": 144.76,
+      "end": 146.28,
+      "text": "of Carnegie Mellon University."
+    },
+    {
+      "id": 48,
+      "start": 146.44,
+      "end": 149.2,
+      "text": "Let's see if chat GPT is capable of doing that."
+    },
+    {
+      "id": 49,
+      "start": 156.56,
+      "end": 158.48,
+      "text": "Okay, that's a problem."
+    },
+    {
+      "id": 50,
+      "start": 158.48,
+      "end": 159.32,
+      "text": "Let me see."
+    },
+    {
+      "id": 51,
+      "start": 163.28,
+      "end": 164.92,
+      "text": "Okay, there's an error in there,"
+    },
+    {
+      "id": 52,
+      "start": 164.92,
+      "end": 167.92,
+      "text": "but like if I could find a,"
+    },
+    {
+      "id": 53,
+      "start": 167.92,
+      "end": 169.32,
+      "text": "I don't want a waste timing class"
+    },
+    {
+      "id": 54,
+      "start": 169.32,
+      "end": 170.72,
+      "text": "like finding out working query,"
+    },
+    {
+      "id": 55,
+      "start": 170.72,
+      "end": 172.72,
+      "text": "but basically you can put a new query."
+    },
+    {
+      "id": 56,
+      "start": 172.72,
+      "end": 174.2,
+      "text": "And it allows you to do a lot of things"
+    },
+    {
+      "id": 57,
+      "start": 174.2,
+      "end": 176.92,
+      "text": "that are similar to what you can do in SQL."
+    },
+    {
+      "id": 58,
+      "start": 176.92,
+      "end": 181.52,
+      "text": "So you can find like all of the edges of nodes"
+    },
+    {
+      "id": 59,
+      "start": 181.52,
+      "end": 183.48,
+      "text": "that satisfy a particular relation."
+    },
+    {
+      "id": 60,
+      "start": 183.48,
+      "end": 186.92,
+      "text": "So you could say, I want for Carnegie Mellon University"
+    },
+    {
+      "id": 61,
+      "start": 186.92,
+      "end": 191.28,
+      "text": "to find all things that follow the like president of relation."
+    },
+    {
+      "id": 62,
+      "start": 191.28,
+      "end": 194.68,
+      "text": "And that would give me all, you know,"
+    },
+    {
+      "id": 63,
+      "start": 194.68,
+      "end": 196.72,
+      "text": "all presidents of Carnegie Mellon University."
+    },
+    {
+      "id": 64,
+      "start": 196.72,
+      "end": 201.08,
+      "text": "You can also like filter, filter by their start date"
+    },
+    {
+      "id": 65,
+      "start": 201.08,
+      "end": 201.92,
+      "text": "and then date."
+    },
+    {
+      "id": 66,
+      "start": 201.92,
+      "end": 203.72,
+      "text": "All of the presidents between a certain time"
+    },
+    {
+      "id": 67,
+      "start": 203.72,
+      "end": 205.96,
+      "text": "and another time or things like that."
+    },
+    {
+      "id": 68,
+      "start": 207.72,
+      "end": 212.72,
+      "text": "So this is good if you want to get like high reliability"
+    },
+    {
+      "id": 69,
+      "start": 214.08,
+      "end": 216.52,
+      "text": "data in a scalable way,"
+    },
+    {
+      "id": 70,
+      "start": 216.52,
+      "end": 219.16,
+      "text": "because like if I asked chat GPT,"
+    },
+    {
+      "id": 71,
+      "start": 219.16,
+      "end": 222.72,
+      "text": "like one of my favorite queries for chat GPT"
+    },
+    {
+      "id": 72,
+      "start": 222.72,
+      "end": 227.72,
+      "text": "is like name all of the, name all of the presidents"
+    },
+    {
+      "id": 73,
+      "start": 227.76,
+      "end": 230.92,
+      "text": "that were born east of the Mississippi River."
+    },
+    {
+      "id": 74,
+      "start": 231.84,
+      "end": 234.56,
+      "text": "And I've never successfully gotten chat GPT"
+    },
+    {
+      "id": 75,
+      "start": 234.56,
+      "end": 236.2,
+      "text": "to be able to do this,"
+    },
+    {
+      "id": 76,
+      "start": 236.2,
+      "end": 238.04,
+      "text": "because there's lots of presidents"
+    },
+    {
+      "id": 77,
+      "start": 238.04,
+      "end": 239.72,
+      "text": "who are born east of the Mississippi River"
+    },
+    {
+      "id": 78,
+      "start": 239.72,
+      "end": 241.16,
+      "text": "and it starts counting them."
+    },
+    {
+      "id": 79,
+      "start": 241.16,
+      "end": 244.84,
+      "text": "It can't distinguish what position is east of the Mississippi"
+    },
+    {
+      "id": 80,
+      "start": 244.84,
+      "end": 247.24,
+      "text": "and what position is the west of the Mississippi."
+    },
+    {
+      "id": 81,
+      "start": 247.24,
+      "end": 250.96,
+      "text": "But if you write a like a sparkle query,"
+    },
+    {
+      "id": 82,
+      "start": 250.96,
+      "end": 252.56,
+      "text": "it's not that hard to do that."
+    },
+    {
+      "id": 83,
+      "start": 252.56,
+      "end": 255.6,
+      "text": "So there are, you know,"
+    },
+    {
+      "id": 84,
+      "start": 255.6,
+      "end": 257.04,
+      "text": "there are certain types of questions,"
+    },
+    {
+      "id": 85,
+      "start": 257.04,
+      "end": 259.0,
+      "text": "especially information aggregation"
+    },
+    {
+      "id": 86,
+      "start": 259.0,
+      "end": 260.56,
+      "text": "and complex relations and stuff"
+    },
+    {
+      "id": 87,
+      "start": 260.56,
+      "end": 262.72,
+      "text": "that language models are not very good at."
+    },
+    {
+      "id": 88,
+      "start": 264.84,
+      "end": 266.36,
+      "text": "Cool."
+    },
+    {
+      "id": 89,
+      "start": 266.36,
+      "end": 268.36,
+      "text": "So that's kind of an intro to knowledge bases"
+    },
+    {
+      "id": 90,
+      "start": 268.36,
+      "end": 270.32,
+      "text": "why you might want to think about them."
+    },
+    {
+      "id": 91,
+      "start": 270.32,
+      "end": 273.4,
+      "text": "Any questions so far for discussion?"
+    },
+    {
+      "id": 92,
+      "start": 276.64,
+      "end": 279.36,
+      "text": "Okay, I will move on next."
+    },
+    {
+      "id": 93,
+      "start": 279.36,
+      "end": 280.8,
+      "text": "So the next thing I'd like to talk about"
+    },
+    {
+      "id": 94,
+      "start": 280.8,
+      "end": 284.12,
+      "text": "is learning representations for knowledge bases."
+    },
+    {
+      "id": 95,
+      "start": 284.12,
+      "end": 285.36,
+      "text": "So knowledge bases are great,"
+    },
+    {
+      "id": 96,
+      "start": 285.36,
+      "end": 289.92,
+      "text": "but one problem is they're like inherently incomplete."
+    },
+    {
+      "id": 97,
+      "start": 289.92,
+      "end": 293.2,
+      "text": "And even with extremely large scale,"
+    },
+    {
+      "id": 98,
+      "start": 293.2,
+      "end": 296.92,
+      "text": "it becomes impossible to have them be complete."
+    },
+    {
+      "id": 99,
+      "start": 296.92,
+      "end": 300.52,
+      "text": "And the reason why is, for example,"
+    },
+    {
+      "id": 100,
+      "start": 300.52,
+      "end": 304.0,
+      "text": "in free base, which was the predecessor to wiki data,"
+    },
+    {
+      "id": 101,
+      "start": 304.0,
+      "end": 306.56,
+      "text": "71% of humans didn't have a date of birth."
+    },
+    {
+      "id": 102,
+      "start": 308.24,
+      "end": 311.64,
+      "text": "And probably every human actually has a date of birth, right?"
+    },
+    {
+      "id": 103,
+      "start": 311.64,
+      "end": 313.16,
+      "text": "You know, we're pretty much guaranteed"
+    },
+    {
+      "id": 104,
+      "start": 313.16,
+      "end": 314.68,
+      "text": "for that to be the case."
+    },
+    {
+      "id": 105,
+      "start": 314.68,
+      "end": 318.44,
+      "text": "So the issue is like for very famous entities,"
+    },
+    {
+      "id": 106,
+      "start": 318.44,
+      "end": 320.04,
+      "text": "you want lots of detailed information."
+    },
+    {
+      "id": 107,
+      "start": 320.04,
+      "end": 322.44,
+      "text": "Like you can know absolutely everything about Joe Biden"
+    },
+    {
+      "id": 108,
+      "start": 322.44,
+      "end": 324.76,
+      "text": "or Barack Obama, but you know,"
+    },
+    {
+      "id": 109,
+      "start": 324.76,
+      "end": 326.92,
+      "text": "at the same time for less major entities,"
+    },
+    {
+      "id": 110,
+      "start": 326.92,
+      "end": 328.24,
+      "text": "you still want them in the knowledge base,"
+    },
+    {
+      "id": 111,
+      "start": 328.24,
+      "end": 330.28,
+      "text": "but you're not going to be able to get all that information"
+    },
+    {
+      "id": 112,
+      "start": 330.28,
+      "end": 333.48,
+      "text": "nor should you for privacy purposes."
+    },
+    {
+      "id": 113,
+      "start": 333.48,
+      "end": 337.64,
+      "text": "And so the idea is for information that's written"
+    },
+    {
+      "id": 114,
+      "start": 337.64,
+      "end": 338.56,
+      "text": "on the internet somewhere,"
+    },
+    {
+      "id": 115,
+      "start": 338.56,
+      "end": 340.8,
+      "text": "can you perform relation extraction,"
+    },
+    {
+      "id": 116,
+      "start": 340.8,
+      "end": 343.96,
+      "text": "which essentially allows you to extract this information"
+    },
+    {
+      "id": 117,
+      "start": 343.96,
+      "end": 346.72,
+      "text": "and create your own knowledge bases and stuff like this."
+    },
+    {
+      "id": 118,
+      "start": 346.72,
+      "end": 348.56,
+      "text": "And this can also be useful if you want to create it"
+    },
+    {
+      "id": 119,
+      "start": 348.56,
+      "end": 351.96,
+      "text": "for like a specialized domain or other stuff like that."
+    },
+    {
+      "id": 120,
+      "start": 354.36,
+      "end": 357.36,
+      "text": "So there's a bunch of ways that people do this."
+    },
+    {
+      "id": 121,
+      "start": 358.32,
+      "end": 362.52,
+      "text": "And one kind of popular way that people"
+    },
+    {
+      "id": 122,
+      "start": 362.52,
+      "end": 365.92,
+      "text": "have tried to do relation extraction"
+    },
+    {
+      "id": 123,
+      "start": 365.92,
+      "end": 370.92,
+      "text": "is through leveraging consistency in embedding space."
+    },
+    {
+      "id": 124,
+      "start": 371.08,
+      "end": 375.56,
+      "text": "And so this is the most famous example from WordDevac"
+    },
+    {
+      "id": 125,
+      "start": 375.56,
+      "end": 379.88,
+      "text": "what seems like ages ago in 2013."
+    },
+    {
+      "id": 126,
+      "start": 379.88,
+      "end": 384.68,
+      "text": "And in the WordDevac paper, one of the big exciting things"
+    },
+    {
+      "id": 127,
+      "start": 384.68,
+      "end": 388.04,
+      "text": "was essentially they demonstrated that vectors"
+    },
+    {
+      "id": 128,
+      "start": 388.04,
+      "end": 392.24,
+      "text": "in embedding space had kind of inherent meaning."
+    },
+    {
+      "id": 129,
+      "start": 392.24,
+      "end": 394.08,
+      "text": "And actually the vectors in embedding space"
+    },
+    {
+      "id": 130,
+      "start": 394.08,
+      "end": 396.08,
+      "text": "could correspond to relations between embedding."
+    },
+    {
+      "id": 131,
+      "start": 396.08,
+      "end": 399.56,
+      "text": "So like we would have man pointing to women"
+    },
+    {
+      "id": 132,
+      "start": 399.56,
+      "end": 401.28,
+      "text": "in approximately the same direction"
+    },
+    {
+      "id": 133,
+      "start": 401.28,
+      "end": 404.92,
+      "text": "that we had on coal pointing to ant and king pointing to queen."
+    },
+    {
+      "id": 134,
+      "start": 404.92,
+      "end": 409.76,
+      "text": "And so then you could do things like you could take kings,"
+    },
+    {
+      "id": 135,
+      "start": 409.76,
+      "end": 413.68,
+      "text": "subtract out the vector that corresponded to plurality,"
+    },
+    {
+      "id": 136,
+      "start": 413.68,
+      "end": 415.92,
+      "text": "add the vector that corresponded to,"
+    },
+    {
+      "id": 137,
+      "start": 419.24,
+      "end": 421.68,
+      "text": "going from masculine to feminine words"
+    },
+    {
+      "id": 138,
+      "start": 421.68,
+      "end": 426.0,
+      "text": "and then like read the vector that were plural"
+    },
+    {
+      "id": 139,
+      "start": 426.0,
+      "end": 427.56,
+      "text": "and you'd be able to identify the plural"
+    },
+    {
+      "id": 140,
+      "start": 427.56,
+      "end": 429.68,
+      "text": "by just knowing these two vectors,"
+    },
+    {
+      "id": 141,
+      "start": 429.68,
+      "end": 431.88,
+      "text": "the plural of queen by just knowing those two vectors."
+    },
+    {
+      "id": 142,
+      "start": 435.96,
+      "end": 440.96,
+      "text": "But it turns out that you can either learn embeddings"
+    },
+    {
+      "id": 143,
+      "start": 444.16,
+      "end": 447.72,
+      "text": "from like you can either learn embeddings from text"
+    },
+    {
+      "id": 144,
+      "start": 447.72,
+      "end": 451.52,
+      "text": "or you can use the fact that you have a big knowledge base"
+    },
+    {
+      "id": 145,
+      "start": 451.52,
+      "end": 453.8,
+      "text": "that was curated by humans like wiki data"
+    },
+    {
+      "id": 146,
+      "start": 453.8,
+      "end": 458.04,
+      "text": "to improve the embeddings of a neural model itself."
+    },
+    {
+      "id": 147,
+      "start": 458.04,
+      "end": 461.92,
+      "text": "And so another pretty large research area"
+    },
+    {
+      "id": 148,
+      "start": 461.92,
+      "end": 463.96,
+      "text": "that a lot of people have focused on is"
+    },
+    {
+      "id": 149,
+      "start": 463.96,
+      "end": 467.88,
+      "text": "how do you get good embeddings of a knowledge graph?"
+    },
+    {
+      "id": 150,
+      "start": 467.88,
+      "end": 470.0,
+      "text": "And this is important if you want to do any sort of"
+    },
+    {
+      "id": 151,
+      "start": 470.0,
+      "end": 472.44,
+      "text": "like knowledge graph search or other things like this."
+    },
+    {
+      "id": 152,
+      "start": 472.44,
+      "end": 474.72,
+      "text": "Like for example, one of the really nice things"
+    },
+    {
+      "id": 153,
+      "start": 474.72,
+      "end": 477.52,
+      "text": "about knowledge graphs is they have information"
+    },
+    {
+      "id": 154,
+      "start": 477.52,
+      "end": 479.96,
+      "text": "about a whole bunch of really sparse entities"
+    },
+    {
+      "id": 155,
+      "start": 479.96,
+      "end": 483.2,
+      "text": "that aren't mentioned very much on the internet, for example."
+    },
+    {
+      "id": 156,
+      "start": 483.2,
+      "end": 487.2,
+      "text": "And so because of that, you can leverage the knowledge"
+    },
+    {
+      "id": 157,
+      "start": 487.2,
+      "end": 488.92,
+      "text": "graph structure together with text"
+    },
+    {
+      "id": 158,
+      "start": 488.92,
+      "end": 490.4,
+      "text": "to learn better embeddings overall."
+    },
+    {
+      "id": 159,
+      "start": 493.12,
+      "end": 497.72,
+      "text": "And so this particular paper is one example of it."
+    },
+    {
+      "id": 160,
+      "start": 498.8,
+      "end": 502.08,
+      "text": "And the way they do this is they express knowledge graph"
+    },
+    {
+      "id": 161,
+      "start": 502.08,
+      "end": 505.24,
+      "text": "triples is additive transformations."
+    },
+    {
+      "id": 162,
+      "start": 505.24,
+      "end": 509.44,
+      "text": "And they minimize the distance of existing triples"
+    },
+    {
+      "id": 163,
+      "start": 509.44,
+      "end": 511.72,
+      "text": "with a margin based loss."
+    },
+    {
+      "id": 164,
+      "start": 511.72,
+      "end": 517.04,
+      "text": "So the way they do this is they have the head in the tail."
+    },
+    {
+      "id": 165,
+      "start": 517.04,
+      "end": 520.68,
+      "text": "And L is the vector corresponding to like the length"
+    },
+    {
+      "id": 166,
+      "start": 520.68,
+      "end": 523.48,
+      "text": "between the things that corresponds to a relation."
+    },
+    {
+      "id": 167,
+      "start": 524.68,
+      "end": 530.0,
+      "text": "And so you go, you have H and T."
+    },
+    {
+      "id": 168,
+      "start": 530.0,
+      "end": 534.12,
+      "text": "And here, like this is L, but here it's written as R"
+    },
+    {
+      "id": 169,
+      "start": 534.12,
+      "end": 535.96,
+      "text": "because they got this from a different paper."
+    },
+    {
+      "id": 170,
+      "start": 535.96,
+      "end": 538.96,
+      "text": "And basically you try to go from H to T"
+    },
+    {
+      "id": 171,
+      "start": 538.96,
+      "end": 541.72,
+      "text": "according to the relation vector R."
+    },
+    {
+      "id": 172,
+      "start": 542.84,
+      "end": 547.12,
+      "text": "And you use a hinge loss where for the hinge loss,"
+    },
+    {
+      "id": 173,
+      "start": 547.12,
+      "end": 549.28,
+      "text": "you have a hinge parameter."
+    },
+    {
+      "id": 174,
+      "start": 549.28,
+      "end": 553.6,
+      "text": "And then you try to up weight the example of a true triple"
+    },
+    {
+      "id": 175,
+      "start": 553.6,
+      "end": 556.8,
+      "text": "and down weight the example of a false triple."
+    },
+    {
+      "id": 176,
+      "start": 557.88,
+      "end": 560.08,
+      "text": "So this could be one that was like randomly sampled"
+    },
+    {
+      "id": 177,
+      "start": 560.08,
+      "end": 561.68,
+      "text": "to be incorrect for example."
+    },
+    {
+      "id": 178,
+      "start": 566.84,
+      "end": 568.88,
+      "text": "One interesting thing about knowledge graph"
+    },
+    {
+      "id": 179,
+      "start": 568.88,
+      "end": 572.08,
+      "text": "embeddings is like a lot of famous AI researchers"
+    },
+    {
+      "id": 180,
+      "start": 572.08,
+      "end": 573.88,
+      "text": "got their start in knowledge graph embeddings."
+    },
+    {
+      "id": 181,
+      "start": 573.88,
+      "end": 576.16,
+      "text": "And so Richard Socher is one of them."
+    },
+    {
+      "id": 182,
+      "start": 576.16,
+      "end": 580.04,
+      "text": "If you know he's the CEO of u.com search engine now."
+    },
+    {
+      "id": 183,
+      "start": 581.68,
+      "end": 586.68,
+      "text": "And this was a first attempt at predicting relations."
+    },
+    {
+      "id": 184,
+      "start": 587.08,
+      "end": 590.72,
+      "text": "They basically created a MLP that tries to predict"
+    },
+    {
+      "id": 185,
+      "start": 590.72,
+      "end": 592.8,
+      "text": "whether a relation exists."
+    },
+    {
+      "id": 186,
+      "start": 592.8,
+      "end": 597.88,
+      "text": "So they have a matrix for a certain kind of a"
+    },
+    {
+      "id": 187,
+      "start": 598.88,
+      "end": 601.04,
+      "text": "the left side of the relation a matrix."
+    }
+  ],
+  "language": "en"
+}

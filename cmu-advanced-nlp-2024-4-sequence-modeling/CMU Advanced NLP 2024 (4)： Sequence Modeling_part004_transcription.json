@@ -1,0 +1,563 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 4.4,
+      "text": "But it's not good for something like language modeling because in language modeling, we can't look at the future, right?"
+    },
+    {
+      "id": 1,
+      "start": 4.88,
+      "end": 6.88,
+      "text": "But there's a super simple"
+    },
+    {
+      "id": 2,
+      "start": 7.68,
+      "end": 13.28,
+      "text": "solution to this which is you have a convolution that just looks at the past"
+    },
+    {
+      "id": 3,
+      "start": 14.0,
+      "end": 17.2,
+      "text": "basically and predicts the next word based on the"
+    },
+    {
+      "id": 4,
+      "start": 17.84,
+      "end": 21.28,
+      "text": "you know current word in the past. So here you would be predicting the word movie"
+    },
+    {
+      "id": 5,
+      "start": 22.08,
+      "end": 26.24,
+      "text": "um, this is actually essentially equivalent to the feed forward language model that I talked about"
+    },
+    {
+      "id": 6,
+      "start": 27.04,
+      "end": 33.44,
+      "text": "West time. So you can also think of that as a convolution, a convolutional language model."
+    },
+    {
+      "id": 7,
+      "start": 34.64,
+      "end": 38.56,
+      "text": "So whenever you say feed forward or convolutional language model, they're basically the same"
+    },
+    {
+      "id": 8,
+      "start": 38.56,
+      "end": 44.0,
+      "text": "uh, much low. Some uh, some details about striding and stuff which I'm going to talk about"
+    },
+    {
+      "id": 9,
+      "start": 44.0,
+      "end": 45.04,
+      "text": "at the end of the class today."
+    },
+    {
+      "id": 10,
+      "start": 48.32,
+      "end": 54.96,
+      "text": "Cool um, I covered convolution very briefly because it's also the least used of the three uh"
+    },
+    {
+      "id": 11,
+      "start": 54.96,
+      "end": 58.56,
+      "text": "sequence modeling things and it'll be nowadays. But um, are there any questions there?"
+    },
+    {
+      "id": 12,
+      "start": 58.56,
+      "end": 60.08,
+      "text": "Or can I just run into attention?"
+    },
+    {
+      "id": 13,
+      "start": 63.36,
+      "end": 65.36,
+      "text": "Okay, cool. I'll go into attention next."
+    },
+    {
+      "id": 14,
+      "start": 66.24,
+      "end": 76.8,
+      "text": "So the basic idea about attention um, is that we encode uh each token in the sequence into a vector"
+    },
+    {
+      "id": 15,
+      "start": 78.0,
+      "end": 84.64,
+      "text": "um, or so we have input, an input sequence that we'd like to"
+    },
+    {
+      "id": 16,
+      "start": 84.72,
+      "end": 90.72,
+      "text": "encode over and we perform a linear combination of the vectors uh, weighted by attention weights"
+    },
+    {
+      "id": 17,
+      "start": 92.08,
+      "end": 98.72,
+      "text": "and there's two varieties of attention uh, they're good to know about. The first one is cross"
+    },
+    {
+      "id": 18,
+      "start": 98.72,
+      "end": 104.32,
+      "text": "attention. Uh, where each element in a sequence attends to elements of another sequence."
+    },
+    {
+      "id": 19,
+      "start": 104.32,
+      "end": 109.68,
+      "text": "And this is widely used in encoder decoder models uh, where you have one encoder and you have a"
+    },
+    {
+      "id": 20,
+      "start": 109.68,
+      "end": 116.24,
+      "text": "separate decoder um, these models, the popular models that are like this that people still use a"
+    },
+    {
+      "id": 21,
+      "start": 116.24,
+      "end": 122.48,
+      "text": "lot. Our T5 uh, is an example of an encoder decoder model or uh, M-barc is another example of"
+    },
+    {
+      "id": 22,
+      "start": 122.48,
+      "end": 130.56,
+      "text": "encoder decoder model. Um, but basically the uh, the way cross attention works is we have for"
+    },
+    {
+      "id": 23,
+      "start": 130.56,
+      "end": 138.8,
+      "text": "example in English uh, sentence here and we want to translate it into uh, into a Japanese sentence"
+    },
+    {
+      "id": 24,
+      "start": 139.36,
+      "end": 148.56,
+      "text": "and so when we output the first word, we would mostly uh, upweight this, or sorry, we have a,"
+    },
+    {
+      "id": 25,
+      "start": 148.56,
+      "end": 153.2,
+      "text": "we have a Japanese sentence and we would like to translate it into an English sentence for example."
+    },
+    {
+      "id": 26,
+      "start": 153.2,
+      "end": 159.92,
+      "text": "So when we generate the first word uh, coordinate in Japanese means this. So in order to output the"
+    },
+    {
+      "id": 27,
+      "start": 159.92,
+      "end": 166.0,
+      "text": "first word, we would first uh, do a weighted sum of all of the embeddings of the Japanese sentence"
+    },
+    {
+      "id": 28,
+      "start": 166.72,
+      "end": 173.76,
+      "text": "and we would focus probably most on this word up here uh, coordinate because it corresponds to the"
+    },
+    {
+      "id": 29,
+      "start": 173.76,
+      "end": 184.72,
+      "text": "word this. In the next step of generating an output, uh, we would uh, attempt to different words"
+    },
+    {
+      "id": 30,
+      "start": 184.72,
+      "end": 189.52,
+      "text": "because different words correspond to is so you would attempt to desu which course is"
+    },
+    {
+      "id": 31,
+      "start": 189.6,
+      "end": 196.72,
+      "text": "um, when you output and actually there's no word in the Japanese sentence that corresponds to"
+    },
+    {
+      "id": 32,
+      "start": 196.72,
+      "end": 203.84,
+      "text": "answer, you might get a very like blob like uh, in a tension weight that doesn't look very uh,"
+    },
+    {
+      "id": 33,
+      "start": 203.84,
+      "end": 208.08,
+      "text": "that looks very smooth and that very spiky and then when you do example, you'd have strong"
+    },
+    {
+      "id": 34,
+      "start": 208.08,
+      "end": 213.6,
+      "text": "attention on uh, on the word that corresponds to example. There's also self-attention"
+    },
+    {
+      "id": 35,
+      "start": 214.56,
+      "end": 219.52,
+      "text": "and um, self-attention basically what it does is each element in a sequence attends to"
+    },
+    {
+      "id": 36,
+      "start": 219.52,
+      "end": 224.64,
+      "text": "elements of the same sequence and so this is a good way of doing sequence encoding just like we"
+    },
+    {
+      "id": 37,
+      "start": 224.64,
+      "end": 231.2,
+      "text": "used RNNs, ByRNs, uh, convolutional neural networks and so um, the reason why you would want to do"
+    },
+    {
+      "id": 38,
+      "start": 231.2,
+      "end": 236.72,
+      "text": "something like this, just give an example, let's say we wanted to run this, we wanted to"
+    },
+    {
+      "id": 39,
+      "start": 236.72,
+      "end": 242.16,
+      "text": "encode the English sentence before doing something like translation into Japanese and if we did that,"
+    },
+    {
+      "id": 40,
+      "start": 243.12,
+      "end": 247.2,
+      "text": "um, this maybe we don't need to attend to a whole lot of other things because it's kind of clear"
+    },
+    {
+      "id": 41,
+      "start": 247.2,
+      "end": 255.04,
+      "text": "what this means but um, is the way you would translate it would be rather heavily dependent on"
+    },
+    {
+      "id": 42,
+      "start": 255.04,
+      "end": 258.72,
+      "text": "the other words in the sentence so you might want to attend to all the other words in this sentence say,"
+    },
+    {
+      "id": 43,
+      "start": 258.72,
+      "end": 266.24,
+      "text": "oh, this is is co-, co-, co-, co-occurring with this end example and so if that's the case then"
+    },
+    {
+      "id": 44,
+      "start": 266.24,
+      "end": 271.68,
+      "text": "well, we would need to translate it in this way or we need to handle it in this way and that's exactly"
+    },
+    {
+      "id": 45,
+      "start": 271.68,
+      "end": 279.84,
+      "text": "the same for you know any other sort of disambiguation, uh, uh, style task so uh, yeah we do something"
+    },
+    {
+      "id": 46,
+      "start": 279.84,
+      "end": 284.0,
+      "text": "similar like this so basically cross-attention is attending to a different sequence self-attention is"
+    },
+    {
+      "id": 47,
+      "start": 284.0,
+      "end": 291.2,
+      "text": "attending to the same sequence so how do we do this mechanistically in the first place so like let's"
+    },
+    {
+      "id": 48,
+      "start": 291.2,
+      "end": 296.8,
+      "text": "say we're translating from Japanese to English um, we would have uh, and we're doing it with an"
+    },
+    {
+      "id": 49,
+      "start": 296.8,
+      "end": 304.96,
+      "text": "encoder decoder model where we have already encoded the input sequence and now we're generating"
+    },
+    {
+      "id": 50,
+      "start": 304.96,
+      "end": 310.72,
+      "text": "the output sequence with a, for example, a recurrent neural network um, and so if that's the case we have"
+    },
+    {
+      "id": 51,
+      "start": 311.28,
+      "end": 319.12,
+      "text": "i, i, hate uh, like this and we want to predict the next word so what we would do is we would take"
+    },
+    {
+      "id": 52,
+      "start": 319.12,
+      "end": 326.24,
+      "text": "the current state here and uh, we use something called a query vector and the query vector is essentially"
+    },
+    {
+      "id": 53,
+      "start": 326.24,
+      "end": 333.04,
+      "text": "the vector that we want to use to decide what to attend to. We then have key vectors and the key"
+    },
+    {
+      "id": 54,
+      "start": 333.04,
+      "end": 340.64,
+      "text": "vectors are the vectors that we would like to use to decide which ones we should be attending to"
+    },
+    {
+      "id": 55,
+      "start": 342.8,
+      "end": 350.4,
+      "text": "and then for each query key pair we calculate a weight and we do it like this um, this gear here"
+    },
+    {
+      "id": 56,
+      "start": 350.4,
+      "end": 356.0,
+      "text": "is some function that takes in the uh, query vector and the key vector and outputs away."
+    },
+    {
+      "id": 57,
+      "start": 356.56,
+      "end": 361.92,
+      "text": "And notably we use the same function every single time. This is really important again because like"
+    },
+    {
+      "id": 58,
+      "start": 361.92,
+      "end": 369.44,
+      "text": "RNN said allows us to extrapolate uh, unlimited length sequences because uh, we only have one set of"
+    },
+    {
+      "id": 59,
+      "start": 369.44,
+      "end": 374.72,
+      "text": "you know, we only have one function no matter how long the sequence gets so we can just apply it"
+    },
+    {
+      "id": 60,
+      "start": 374.72,
+      "end": 381.84,
+      "text": "over and over and over again. Once we calculate these values we normalize so that they add up to"
+    },
+    {
+      "id": 61,
+      "start": 381.84,
+      "end": 389.44,
+      "text": "one using the softmax function and um, basically in this case that would be like 0.76 uh, etc etc."
+    },
+    {
+      "id": 62,
+      "start": 393.12,
+      "end": 402.72,
+      "text": "So step number two is once we have this uh, these attention uh, values here, notably these values"
+    },
+    {
+      "id": 63,
+      "start": 402.72,
+      "end": 407.12,
+      "text": "aren't really probabilities, despite the fact that they're between 0 and 1 and they add up to 1"
+    },
+    {
+      "id": 64,
+      "start": 407.12,
+      "end": 413.36,
+      "text": "because all we're doing is we're using them to uh, to combine together uh, multiple vectors. So I,"
+    },
+    {
+      "id": 65,
+      "start": 413.36,
+      "end": 418.16,
+      "text": "we don't really normally call them attention probabilities or anything like that. I just call them"
+    },
+    {
+      "id": 66,
+      "start": 418.16,
+      "end": 425.68,
+      "text": "attention values or normalized attention values um, but once we have these uh, attention, uh, attention"
+    },
+    {
+      "id": 67,
+      "start": 425.68,
+      "end": 431.84,
+      "text": "weights we have value vectors and these value vectors are the vectors that we would actually like to"
+    },
+    {
+      "id": 68,
+      "start": 431.84,
+      "end": 437.92,
+      "text": "combine together to get the uh, encoding here. And so we take these vectors, we do a weighted"
+    },
+    {
+      "id": 69,
+      "start": 437.92,
+      "end": 446.08,
+      "text": "sum of the vectors and get a final uh, final sum here. And we can take this uh, some and use it in"
+    },
+    {
+      "id": 70,
+      "start": 446.08,
+      "end": 452.48,
+      "text": "any part of the model that we would like um, and so attention is very broad it can be used in any way."
+    },
+    {
+      "id": 71,
+      "start": 452.48,
+      "end": 457.6,
+      "text": "Now the most common way to do use it is just have lots of self attention players like in uh,"
+    },
+    {
+      "id": 72,
+      "start": 457.6,
+      "end": 462.72,
+      "text": "something in a transformer, but um, you can also use it in uh, decoder or other things like that as well."
+    },
+    {
+      "id": 73,
+      "start": 465.44,
+      "end": 470.56,
+      "text": "This is an actual graphical example from the original attention paper. I'm going to give some"
+    },
+    {
+      "id": 74,
+      "start": 470.56,
+      "end": 476.8,
+      "text": "other examples from transformers in the next class, but uh, basically you can see that the attention"
+    },
+    {
+      "id": 75,
+      "start": 476.8,
+      "end": 482.8,
+      "text": "weights uh, for this English to French, I think it's English to French translation tasks, basically"
+    },
+    {
+      "id": 76,
+      "start": 483.76,
+      "end": 488.56,
+      "text": "overlap with what you would expect uh, if you can read English in French, it's kind of the word"
+    },
+    {
+      "id": 77,
+      "start": 488.56,
+      "end": 494.24,
+      "text": "setter is semantically similar to each other. Um, it even learns to do this reordering uh, in,"
+    },
+    {
+      "id": 78,
+      "start": 494.24,
+      "end": 500.16,
+      "text": "an appropriate way here. And all of this is completely unsupervised, so you never actually give the"
+    },
+    {
+      "id": 79,
+      "start": 500.16,
+      "end": 504.16,
+      "text": "model information about what it should be attending to. It's all learned through gradient"
+    },
+    {
+      "id": 80,
+      "start": 504.16,
+      "end": 508.72,
+      "text": "percent and the model uh, learns to do this by making the embeddings of the key inquiry vectors"
+    },
+    {
+      "id": 81,
+      "start": 508.8,
+      "end": 523.84,
+      "text": "closer together. Cool. Um, any questions? Okay. So um, next I'd like to go a little bit into how we"
+    },
+    {
+      "id": 82,
+      "start": 523.84,
+      "end": 528.24,
+      "text": "actually calculate the attention square functions. So that's the little gear that I had on my uh,"
+    },
+    {
+      "id": 83,
+      "start": 530.08,
+      "end": 538.64,
+      "text": "my slide before. So here Q is sequery in K is the key. Um, the original attention paper"
+    },
+    {
+      "id": 84,
+      "start": 539.04,
+      "end": 544.48,
+      "text": "used a multi-layer uh, a multi-layer neural network to calculate this. So basically what it did"
+    },
+    {
+      "id": 85,
+      "start": 544.48,
+      "end": 551.12,
+      "text": "is it concatenated the query and key vector together. Um, multiplied it by a weight matrix calculated"
+    },
+    {
+      "id": 86,
+      "start": 551.12,
+      "end": 562.08,
+      "text": "a ten-n-h and then uh, ran it through a weight vector. So this is essentially very expressive."
+    },
+    {
+      "id": 87,
+      "start": 562.64,
+      "end": 568.24,
+      "text": "Um, uh, it's flexible. It's often good with large data, but it adds extra"
+    },
+    {
+      "id": 88,
+      "start": 568.24,
+      "end": 575.44,
+      "text": "parameters and computation time to your calculations here. So it's not as widely used anymore."
+    },
+    {
+      "id": 89,
+      "start": 576.8,
+      "end": 583.2,
+      "text": "The other thing which was proposed by a long et al is a bi-linear function. Um,"
+    },
+    {
+      "id": 90,
+      "start": 584.4,
+      "end": 590.0,
+      "text": "and a bi-linear function basically what it does is it has your key vector, it has your query vector"
+    },
+    {
+      "id": 91,
+      "start": 590.0,
+      "end": 596.0,
+      "text": "and it has a matrix in between them like this. And uh, then you calculate uh, you can't"
+    },
+    {
+      "id": 92,
+      "start": 596.0,
+      "end": 610.48,
+      "text": "calculate the other one. So this is uh, nice because it basically um,"
+    }
+  ],
+  "language": "en"
+}

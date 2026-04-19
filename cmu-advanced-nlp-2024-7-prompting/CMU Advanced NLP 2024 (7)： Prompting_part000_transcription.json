@@ -1,0 +1,521 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 4.0,
+      "text": "Today, I want to talk about prompting."
+    },
+    {
+      "id": 1,
+      "start": 4.0,
+      "end": 11.0,
+      "text": "And prompting is kind of a new paradigm as of a few years ago with interacting with models."
+    },
+    {
+      "id": 2,
+      "start": 11.0,
+      "end": 15.0,
+      "text": "It's now kind of the standard in doing so."
+    },
+    {
+      "id": 3,
+      "start": 15.0,
+      "end": 23.0,
+      "text": "And basically what we do is we encourage a pre-trained model to make predictions by providing a textural prompt, specifying the task to be done."
+    },
+    {
+      "id": 4,
+      "start": 23.0,
+      "end": 28.0,
+      "text": "This is how you always interact with chat GPT or anything else like this."
+    },
+    {
+      "id": 5,
+      "start": 28.0,
+      "end": 39.0,
+      "text": "So prompting fundamentals, the way that basic prompting works is you append a textural string to the beginning of the output."
+    },
+    {
+      "id": 6,
+      "start": 39.0,
+      "end": 41.0,
+      "text": "And you complete it."
+    },
+    {
+      "id": 7,
+      "start": 41.0,
+      "end": 48.0,
+      "text": "And exactly how you can complete it can be based on any of the generation methods that we talked about in the previous class."
+    },
+    {
+      "id": 8,
+      "start": 48.0,
+      "end": 56.0,
+      "text": "You know beam search, it can be sampling, it can be MBR or self consistency or whatever else."
+    },
+    {
+      "id": 9,
+      "start": 56.0,
+      "end": 72.0,
+      "text": "So I put in when a dog sees a squirrel, it will usually into GPT 2 small, which is a very small language model, says be afraid of anything unusual as an exception that's when a squirrel is usually afraid to bite."
+    },
+    {
+      "id": 10,
+      "start": 72.0,
+      "end": 79.0,
+      "text": "So as you can see if the model is not super great, you get a kind of not very, very response also."
+    },
+    {
+      "id": 11,
+      "start": 79.0,
+      "end": 88.0,
+      "text": "But then I cut it into GPT 2 XL and what it says when a dog sees a squirrel, it will usually with the squirrel."
+    },
+    {
+      "id": 12,
+      "start": 88.0,
+      "end": 95.0,
+      "text": "We'll also touch its nose to the squirrel on the tail and nose if it can, which might be true."
+    },
+    {
+      "id": 13,
+      "start": 95.0,
+      "end": 103.0,
+      "text": "One thing I should note is when I generated these, I used like actual regular ancestral sampling."
+    },
+    {
+      "id": 14,
+      "start": 103.0,
+      "end": 108.0,
+      "text": "So I said the temperature to one, I didn't do top feed, didn't do top K or anything like this."
+    },
+    {
+      "id": 15,
+      "start": 108.0,
+      "end": 113.0,
+      "text": "So this is a raw view of what the language model thinks is like actually a reasonable answer."
+    },
+    {
+      "id": 16,
+      "start": 113.0,
+      "end": 121.0,
+      "text": "If I modified the code to do something else, actually maybe I can do that right now."
+    },
+    {
+      "id": 17,
+      "start": 121.0,
+      "end": 132.0,
+      "text": "But if I modified the code to use a different output, we can actually see the different result that you get."
+    },
+    {
+      "id": 18,
+      "start": 132.0,
+      "end": 137.0,
+      "text": "So I have it here anyway."
+    },
+    {
+      "id": 19,
+      "start": 137.0,
+      "end": 145.0,
+      "text": "Actually, sorry, I'll need to modify the code on my screen here."
+    },
+    {
+      "id": 20,
+      "start": 145.0,
+      "end": 153.0,
+      "text": "So I will set a top K to 50 and top P to 0.95."
+    },
+    {
+      "id": 21,
+      "start": 153.0,
+      "end": 160.0,
+      "text": "So you see I changed the generation parameters here."
+    },
+    {
+      "id": 22,
+      "start": 160.0,
+      "end": 165.0,
+      "text": "I'll run all of them."
+    },
+    {
+      "id": 23,
+      "start": 165.0,
+      "end": 169.0,
+      "text": "We can see the result that we get, you know, a little bit."
+    },
+    {
+      "id": 24,
+      "start": 169.0,
+      "end": 173.0,
+      "text": "But basically, so this is a standard method for prompting."
+    },
+    {
+      "id": 25,
+      "start": 173.0,
+      "end": 179.0,
+      "text": "I intentionally use GPT 2 small and GPT 2 XL here because these are raw based language models."
+    },
+    {
+      "id": 26,
+      "start": 179.0,
+      "end": 181.0,
+      "text": "So we're just pretrained as language models."
+    },
+    {
+      "id": 27,
+      "start": 181.0,
+      "end": 189.0,
+      "text": "And so when we prompt them, we're getting language model that was just trained on lots of texts view of what is likely next path."
+    },
+    {
+      "id": 28,
+      "start": 189.0,
+      "end": 195.0,
+      "text": "There are other ways to train language models like instruction tuning in RLHF, which I'm going to be talking in future classes."
+    },
+    {
+      "id": 29,
+      "start": 195.0,
+      "end": 199.0,
+      "text": "And if that's the case, you might get a different response here."
+    },
+    {
+      "id": 30,
+      "start": 199.0,
+      "end": 203.0,
+      "text": "When a dog sees a squirrel will usually get angry scratch the squirrel and run off."
+    },
+    {
+      "id": 31,
+      "start": 203.0,
+      "end": 210.0,
+      "text": "Some dogs may also attempt to capture the squirrel or attempt to eat it dogs will often pick up the squirrel and even post."
+    },
+    {
+      "id": 32,
+      "start": 210.0,
+      "end": 218.0,
+      "text": "It was more violent than I expected."
+    },
+    {
+      "id": 33,
+      "start": 218.0,
+      "end": 221.0,
+      "text": "So."
+    },
+    {
+      "id": 34,
+      "start": 221.0,
+      "end": 231.0,
+      "text": "But anyway, I think that like actually you can see that when I use the different generation parameters, it actually gave me something that was maybe more typical than lick."
+    },
+    {
+      "id": 35,
+      "start": 231.0,
+      "end": 235.0,
+      "text": "So lick is maybe a kind of unusual answer here."
+    },
+    {
+      "id": 36,
+      "start": 235.0,
+      "end": 238.0,
+      "text": "Cool."
+    },
+    {
+      "id": 37,
+      "start": 238.0,
+      "end": 240.0,
+      "text": "So."
+    },
+    {
+      "id": 38,
+      "start": 240.0,
+      "end": 243.0,
+      "text": "That's a basic idea of prompting."
+    },
+    {
+      "id": 39,
+      "start": 243.0,
+      "end": 248.0,
+      "text": "So I tend to use prompting to try to solve problems also."
+    },
+    {
+      "id": 40,
+      "start": 248.0,
+      "end": 253.0,
+      "text": "So it's not just to complete text, although completing text is useful and important."
+    },
+    {
+      "id": 41,
+      "start": 253.0,
+      "end": 257.0,
+      "text": "Like I complete text in my Gmail all the time."
+    },
+    {
+      "id": 42,
+      "start": 257.0,
+      "end": 261.0,
+      "text": "You know, it's constantly giving the suggestions about what I should write next."
+    },
+    {
+      "id": 43,
+      "start": 261.0,
+      "end": 263.0,
+      "text": "And I do tab auto complete."
+    },
+    {
+      "id": 44,
+      "start": 263.0,
+      "end": 268.0,
+      "text": "You know, on your phone, you're doing that that's also using a language model."
+    },
+    {
+      "id": 45,
+      "start": 268.0,
+      "end": 273.0,
+      "text": "But very often we'll use prompting to do things other than just completing text."
+    },
+    {
+      "id": 46,
+      "start": 273.0,
+      "end": 288.0,
+      "text": "And when we do this, this is kind of the standard workflow for how we solve NLP tasks with prompting the way we do this is we fill in a prompt template predict the answer in post process the answer in some way."
+    },
+    {
+      "id": 47,
+      "start": 288.0,
+      "end": 295.0,
+      "text": "So prompt templates are templates where you will actually that you will fill in with an actual input."
+    },
+    {
+      "id": 48,
+      "start": 295.0,
+      "end": 307.0,
+      "text": "So if we have an input X, which is something like I love this movie, our template will be something like X overall it was Z or overall it was."
+    },
+    {
+      "id": 49,
+      "start": 307.0,
+      "end": 317.0,
+      "text": "And so if we do that when we actually want to make a prediction, we will convert this into the actual prompt we feed into the language model by filling into template."
+    },
+    {
+      "id": 50,
+      "start": 317.0,
+      "end": 321.0,
+      "text": "I love this movie overall it was blank."
+    },
+    {
+      "id": 51,
+      "start": 321.0,
+      "end": 327.0,
+      "text": "So we will just fill this continuation."
+    },
+    {
+      "id": 52,
+      "start": 327.0,
+      "end": 335.0,
+      "text": "A particular variety that we use very broadly nowadays because a lot of models are trained as chat box."
+    },
+    {
+      "id": 53,
+      "start": 335.0,
+      "end": 342.0,
+      "text": "But actually, even if they're not trained as chat box, this still works to some extent is a chat front."
+    },
+    {
+      "id": 54,
+      "start": 342.0,
+      "end": 352.0,
+      "text": "And so usually the way we we do this is we specify inputs in a format called the open AI messages format."
+    },
+    {
+      "id": 55,
+      "start": 352.0,
+      "end": 366.0,
+      "text": "And this is this is what it looks like each we have a list of outputs each list is given a role and content."
+    },
+    {
+      "id": 56,
+      "start": 366.0,
+      "end": 373.0,
+      "text": "And here is so we have the role of system and the content is please classified movie reviews is positive or negative."
+    },
+    {
+      "id": 57,
+      "start": 373.0,
+      "end": 378.0,
+      "text": "Then we have the role user this movie is a banger."
+    },
+    {
+      "id": 58,
+      "start": 378.0,
+      "end": 383.0,
+      "text": "And then we have roles system message."
+    },
+    {
+      "id": 59,
+      "start": 383.0,
+      "end": 391.0,
+      "text": "So it's the roles we have the system and the system is a message provided to the system to influence its behavior."
+    },
+    {
+      "id": 60,
+      "start": 391.0,
+      "end": 395.0,
+      "text": "And then we have the role of the system to explain to it."
+    },
+    {
+      "id": 61,
+      "start": 395.0,
+      "end": 399.0,
+      "text": "Like how it should be working."
+    },
+    {
+      "id": 62,
+      "start": 399.0,
+      "end": 408.0,
+      "text": "And so you can see that this is explaining to the system how it should be working user is the message input by the user."
+    },
+    {
+      "id": 63,
+      "start": 408.0,
+      "end": 411.0,
+      "text": "And so this could be just a single message."
+    },
+    {
+      "id": 64,
+      "start": 411.0,
+      "end": 420.0,
+      "text": "And it can be like user and then assistant and then user and then assistant and then user and then assistant and that makes it clear that it's a multi current dialogue."
+    },
+    {
+      "id": 65,
+      "start": 420.0,
+      "end": 428.0,
+      "text": "So if you have a multi current dialogue and chat GPT that's how they're feeding it into the system."
+    },
+    {
+      "id": 66,
+      "start": 428.0,
+      "end": 432.0,
+      "text": "So what's happening behind the scenes with these chat prompts."
+    },
+    {
+      "id": 67,
+      "start": 432.0,
+      "end": 437.0,
+      "text": "Basically they're being converted into token strings and then fed into the model."
+    },
+    {
+      "id": 68,
+      "start": 437.0,
+      "end": 448.0,
+      "text": "So despite the fact that this is fed in in this format and it makes you think that maybe something special is going on actually in most cases these are just being fed into the model as a prompt."
+    },
+    {
+      "id": 69,
+      "start": 448.0,
+      "end": 453.0,
+      "text": "So these are just kind of a special version of a template."
+    },
+    {
+      "id": 70,
+      "start": 453.0,
+      "end": 460.0,
+      "text": "So here we have this is what the llama template looks like so basically you have."
+    },
+    {
+      "id": 71,
+      "start": 460.0,
+      "end": 465.0,
+      "text": "Square bracket inst and then for the system message it's like."
+    },
+    {
+      "id": 72,
+      "start": 465.0,
+      "end": 473.0,
+      "text": "Like angle bracket angle bracket system closing angle bracket closing bracket bracket and then the actual system message."
+    },
+    {
+      "id": 73,
+      "start": 473.0,
+      "end": 478.0,
+      "text": "And then you have this closing out the system message this closing out the instruction."
+    },
+    {
+      "id": 74,
+      "start": 478.0,
+      "end": 485.0,
+      "text": "Then the user is surrounded by inst and then the assistant is just like a regular string."
+    },
+    {
+      "id": 75,
+      "start": 485.0,
+      "end": 491.0,
+      "text": "So this is what the actual textual string that's fed into llama chat models is."
+    },
+    {
+      "id": 76,
+      "start": 491.0,
+      "end": 497.0,
+      "text": "We can contrast that to some other models so alpaca looks like this."
+    },
+    {
+      "id": 77,
+      "start": 497.0,
+      "end": 499.0,
+      "text": "So we have like."
+    },
+    {
+      "id": 78,
+      "start": 499.0,
+      "end": 510.0,
+      "text": "Cash hash hash instruction colon and then the instruction for the user there there's no distinction between system and user so it's like cash hash hash instruction and then the user message."
+    },
+    {
+      "id": 79,
+      "start": 510.0,
+      "end": 527.0,
+      "text": "And then cash hash response and then the assistant so it's not super important which one we use here the important thing is that this matches with what the model is trying to know show you some example you know I'll talk about that more deeper."
+    },
+    {
+      "id": 80,
+      "start": 527.0,
+      "end": 534.0,
+      "text": "And we have a reference that I got this from."
+    },
+    {
+      "id": 81,
+      "start": 534.0,
+      "end": 553.0,
+      "text": "And there's this toolkit that I am I rather like recently it's called light l o m it makes it very easy to query different l o m's and kind of a unified thing so basically you can query many different types of l m's like open AI or open source models or other things like that."
+    },
+    {
+      "id": 82,
+      "start": 553.0,
+      "end": 567.0,
+      "text": "And what happens behind the scene is it basically takes the opening i messages format and converts it into the appropriate prompt format for whatever model you're using or the appropriate API calls for whatever thing you're using but."
+    },
+    {
+      "id": 83,
+      "start": 567.0,
+      "end": 575.0,
+      "text": "This here basically if you click through this like shows you okay this is what it looks like for alpaca."
+    },
+    {
+      "id": 84,
+      "start": 575.0,
+      "end": 584.0,
+      "text": "So you have the instruction instruction response this is what it looks like for llama to chat this is what it looks like for the olamma."
+    },
+    {
+      "id": 85,
+      "start": 584.0,
+      "end": 598.0,
+      "text": "For olamma this is what it looks like for mistral and other things like that so you see all of these are very similar but they're like slightly different and getting these right is actually kind of important for the model doing the job."
+    }
+  ],
+  "language": "en"
+}

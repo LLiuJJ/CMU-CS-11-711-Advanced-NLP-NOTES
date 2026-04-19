@@ -1,0 +1,1283 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 2.4,
+      "text": "word models, other things like that."
+    },
+    {
+      "id": 1,
+      "start": 2.4,
+      "end": 6.16,
+      "text": "Then go deeper into language modeling, how do we do it,"
+    },
+    {
+      "id": 2,
+      "start": 6.16,
+      "end": 9.6,
+      "text": "how do we evaluate it, other things."
+    },
+    {
+      "id": 3,
+      "start": 9.6,
+      "end": 11.56,
+      "text": "Sequencing coding."
+    },
+    {
+      "id": 4,
+      "start": 11.56,
+      "end": 16.36,
+      "text": "And this is going to cover things like transformers,"
+    },
+    {
+      "id": 5,
+      "start": 16.36,
+      "end": 18.88,
+      "text": "self-attentioned models, but also very quickly"
+    },
+    {
+      "id": 6,
+      "start": 18.88,
+      "end": 24.04,
+      "text": "CNNs and RNNs, which are useful in some cases."
+    },
+    {
+      "id": 7,
+      "start": 24.04,
+      "end": 26.44,
+      "text": "And then we're going to specifically go very deep into the"
+    },
+    {
+      "id": 8,
+      "start": 26.44,
+      "end": 28.92,
+      "text": "transformer architecture and also talk a little bit about"
+    },
+    {
+      "id": 9,
+      "start": 28.92,
+      "end": 31.48,
+      "text": "some of the modern improvements to the transformer"
+    },
+    {
+      "id": 10,
+      "start": 31.48,
+      "end": 32.16,
+      "text": "architecture."
+    },
+    {
+      "id": 11,
+      "start": 32.16,
+      "end": 36.0,
+      "text": "So the transformer we're using nowadays is very different"
+    },
+    {
+      "id": 12,
+      "start": 36.0,
+      "end": 39.2,
+      "text": "than the transformer that was invented in 2017."
+    },
+    {
+      "id": 13,
+      "start": 39.2,
+      "end": 41.36,
+      "text": "So we're going to talk, well, I wouldn't say very different,"
+    },
+    {
+      "id": 14,
+      "start": 41.36,
+      "end": 42.88,
+      "text": "but different enough that it's important."
+    },
+    {
+      "id": 15,
+      "start": 42.88,
+      "end": 46.56,
+      "text": "So we're going to talk about some of those things."
+    },
+    {
+      "id": 16,
+      "start": 46.56,
+      "end": 48.8,
+      "text": "Second thing I'd like to talk about is training and inference"
+    },
+    {
+      "id": 17,
+      "start": 48.8,
+      "end": 49.28,
+      "text": "methods."
+    },
+    {
+      "id": 18,
+      "start": 49.28,
+      "end": 52.36,
+      "text": "So this includes generation algorithms."
+    },
+    {
+      "id": 19,
+      "start": 52.36,
+      "end": 56.36,
+      "text": "So we're going to have a whole class on how we generate text"
+    },
+    {
+      "id": 20,
+      "start": 56.4,
+      "end": 61.16,
+      "text": "in different ways, prompting how we can prompt things."
+    },
+    {
+      "id": 21,
+      "start": 61.16,
+      "end": 63.96,
+      "text": "I hear world class prompt engineers make a lot of money"
+    },
+    {
+      "id": 22,
+      "start": 63.96,
+      "end": 64.56,
+      "text": "nowadays."
+    },
+    {
+      "id": 23,
+      "start": 64.56,
+      "end": 69.04,
+      "text": "So you'll want to pay attention to that one."
+    },
+    {
+      "id": 24,
+      "start": 69.04,
+      "end": 70.8,
+      "text": "And instruction tuning."
+    },
+    {
+      "id": 25,
+      "start": 70.8,
+      "end": 75.52,
+      "text": "So how do we train models to handle a lot of different tasks"
+    },
+    {
+      "id": 26,
+      "start": 75.52,
+      "end": 76.72,
+      "text": "and reinforcement learning?"
+    },
+    {
+      "id": 27,
+      "start": 76.72,
+      "end": 82.2,
+      "text": "So how do we actually generate outputs, kind of judge them"
+    },
+    {
+      "id": 28,
+      "start": 82.2,
+      "end": 85.12,
+      "text": "and then learn from that?"
+    },
+    {
+      "id": 29,
+      "start": 85.12,
+      "end": 87.76,
+      "text": "Also experimental design and evaluation."
+    },
+    {
+      "id": 30,
+      "start": 87.76,
+      "end": 89.96,
+      "text": "So experimental design."
+    },
+    {
+      "id": 31,
+      "start": 89.96,
+      "end": 93.48,
+      "text": "So how do we design and experiment well so that it backs up"
+    },
+    {
+      "id": 32,
+      "start": 93.48,
+      "end": 95.88,
+      "text": "what we want to be our conclusions that we"
+    },
+    {
+      "id": 33,
+      "start": 95.88,
+      "end": 97.48,
+      "text": "want to be backing up?"
+    },
+    {
+      "id": 34,
+      "start": 97.48,
+      "end": 100.96,
+      "text": "How do we do human annotation of data in a reliable way?"
+    },
+    {
+      "id": 35,
+      "start": 100.96,
+      "end": 102.52,
+      "text": "This is getting harder and harder."
+    },
+    {
+      "id": 36,
+      "start": 102.52,
+      "end": 103.64,
+      "text": "Is models get better and better?"
+    },
+    {
+      "id": 37,
+      "start": 103.64,
+      "end": 107.72,
+      "text": "Because getting humans who don't care very much about the"
+    },
+    {
+      "id": 38,
+      "start": 107.72,
+      "end": 110.12,
+      "text": "annotation tasks, they might do worse than GP4s."
+    },
+    {
+      "id": 39,
+      "start": 110.12,
+      "end": 113.64,
+      "text": "So you need to be careful of that."
+    },
+    {
+      "id": 40,
+      "start": 113.64,
+      "end": 115.8,
+      "text": "Also debugging and interpretation techniques."
+    },
+    {
+      "id": 41,
+      "start": 115.8,
+      "end": 117.76,
+      "text": "So what are some of the automatic techniques that you can do"
+    },
+    {
+      "id": 42,
+      "start": 117.76,
+      "end": 120.36,
+      "text": "to quickly figure out what's going on with your models"
+    },
+    {
+      "id": 43,
+      "start": 120.36,
+      "end": 122.84,
+      "text": "and improve them?"
+    },
+    {
+      "id": 44,
+      "start": 122.84,
+      "end": 125.04,
+      "text": "And bias and fairness considerations."
+    },
+    {
+      "id": 45,
+      "start": 125.04,
+      "end": 128.32,
+      "text": "So it's really, really important nowadays that models"
+    },
+    {
+      "id": 46,
+      "start": 128.32,
+      "end": 130.64,
+      "text": "are being deployed to real people in the real world"
+    },
+    {
+      "id": 47,
+      "start": 130.64,
+      "end": 133.92,
+      "text": "and actually causing harm to people in some cases"
+    },
+    {
+      "id": 48,
+      "start": 133.92,
+      "end": 136.92,
+      "text": "that we need to be worried about that."
+    },
+    {
+      "id": 49,
+      "start": 136.92,
+      "end": 139.32,
+      "text": "Advanced training and architectures."
+    },
+    {
+      "id": 50,
+      "start": 139.32,
+      "end": 143.08,
+      "text": "So we're going to talk about distillation and quantization."
+    },
+    {
+      "id": 51,
+      "start": 143.08,
+      "end": 145.96,
+      "text": "How can we make small language models that actually"
+    },
+    {
+      "id": 52,
+      "start": 145.96,
+      "end": 147.76,
+      "text": "still work well, like not large."
+    },
+    {
+      "id": 53,
+      "start": 147.76,
+      "end": 148.92,
+      "text": "You can run them on your phone."
+    },
+    {
+      "id": 54,
+      "start": 148.92,
+      "end": 153.04,
+      "text": "You can run them on your local laptop."
+    },
+    {
+      "id": 55,
+      "start": 153.04,
+      "end": 155.52,
+      "text": "Ensembling in mixtures of experts, how can we combine"
+    },
+    {
+      "id": 56,
+      "start": 155.52,
+      "end": 158.2,
+      "text": "together multiple models in order to create models that"
+    },
+    {
+      "id": 57,
+      "start": 158.2,
+      "end": 161.04,
+      "text": "are better than the sum of their partners?"
+    },
+    {
+      "id": 58,
+      "start": 161.04,
+      "end": 166.08,
+      "text": "And retrieval and retrieval augment to generation."
+    },
+    {
+      "id": 59,
+      "start": 166.08,
+      "end": 168.08,
+      "text": "Long sequence models."
+    },
+    {
+      "id": 60,
+      "start": 168.08,
+      "end": 171.8,
+      "text": "So how do we handle long outputs?"
+    },
+    {
+      "id": 61,
+      "start": 171.8,
+      "end": 175.52,
+      "text": "And we're going to talk about applications"
+    },
+    {
+      "id": 62,
+      "start": 175.52,
+      "end": 180.04,
+      "text": "to complex reasoning tasks, code generation, language agents,"
+    },
+    {
+      "id": 63,
+      "start": 180.04,
+      "end": 183.04,
+      "text": "and knowledge-based QA and information extraction."
+    },
+    {
+      "id": 64,
+      "start": 183.04,
+      "end": 189.2,
+      "text": "I picked these because they seem to be maybe the most"
+    },
+    {
+      "id": 65,
+      "start": 189.2,
+      "end": 192.0,
+      "text": "important, at least in research nowadays."
+    },
+    {
+      "id": 66,
+      "start": 192.0,
+      "end": 194.96,
+      "text": "And also they cover the things that, when"
+    },
+    {
+      "id": 67,
+      "start": 194.96,
+      "end": 197.92,
+      "text": "I talk to people in industry, are most interested in."
+    },
+    {
+      "id": 68,
+      "start": 197.92,
+      "end": 199.56,
+      "text": "So hopefully it'll be useful regardless"
+    },
+    {
+      "id": 69,
+      "start": 200.44,
+      "end": 203.6,
+      "text": "whether you plan on doing research or plan on doing industry"
+    },
+    {
+      "id": 70,
+      "start": 203.6,
+      "end": 205.08,
+      "text": "related things."
+    },
+    {
+      "id": 71,
+      "start": 205.08,
+      "end": 207.44,
+      "text": "By the way, the two things that, when"
+    },
+    {
+      "id": 72,
+      "start": 207.44,
+      "end": 209.48,
+      "text": "I talk to people in industry, they're most interested in our"
+    },
+    {
+      "id": 73,
+      "start": 209.48,
+      "end": 213.76,
+      "text": "rag and code generation at the moment for now."
+    },
+    {
+      "id": 74,
+      "start": 213.76,
+      "end": 217.56,
+      "text": "So those are ones that you'll have to pay attention to."
+    },
+    {
+      "id": 75,
+      "start": 217.56,
+      "end": 220.08,
+      "text": "And then finally, we have a few lectures on linguistics"
+    },
+    {
+      "id": 76,
+      "start": 220.08,
+      "end": 222.88,
+      "text": "and multilinguality."
+    },
+    {
+      "id": 77,
+      "start": 222.88,
+      "end": 227.6,
+      "text": "I love linguistics, but to be honest, at the moment, most of our"
+    },
+    {
+      "id": 78,
+      "start": 227.6,
+      "end": 230.36,
+      "text": "cutting-edge models don't explicitly use linguistics"
+    },
+    {
+      "id": 79,
+      "start": 230.36,
+      "end": 231.92,
+      "text": "structure."
+    },
+    {
+      "id": 80,
+      "start": 231.92,
+      "end": 234.52,
+      "text": "But I still think it's useful to know about it, especially"
+    },
+    {
+      "id": 81,
+      "start": 234.52,
+      "end": 237.0,
+      "text": "if you're working on multilingual things, especially if you're"
+    },
+    {
+      "id": 82,
+      "start": 237.0,
+      "end": 239.84,
+      "text": "interested in very robust generalization to new models."
+    },
+    {
+      "id": 83,
+      "start": 239.84,
+      "end": 242.8,
+      "text": "So we're going to talk a little bit about that."
+    },
+    {
+      "id": 84,
+      "start": 242.8,
+      "end": 247.64,
+      "text": "And also multilinguality and great-grandma nature."
+    },
+    {
+      "id": 85,
+      "start": 247.64,
+      "end": 250.48,
+      "text": "So also, if you have any suggestions,"
+    },
+    {
+      "id": 86,
+      "start": 250.48,
+      "end": 254.68,
+      "text": "we have two guest lecture slots still open that I'm"
+    },
+    {
+      "id": 87,
+      "start": 254.68,
+      "end": 255.32,
+      "text": "trying to fill."
+    },
+    {
+      "id": 88,
+      "start": 255.32,
+      "end": 258.64,
+      "text": "So if you have anything that you really want to hear about,"
+    },
+    {
+      "id": 89,
+      "start": 258.64,
+      "end": 263.04,
+      "text": "I could either add them to the existing content"
+    },
+    {
+      "id": 90,
+      "start": 263.04,
+      "end": 265.84,
+      "text": "or I could invite a guest lecture who's working on that topic."
+    },
+    {
+      "id": 91,
+      "start": 265.84,
+      "end": 269.92,
+      "text": "So please feel free to tell me."
+    },
+    {
+      "id": 92,
+      "start": 269.92,
+      "end": 274.32,
+      "text": "The McClass format and structure of the class content."
+    },
+    {
+      "id": 93,
+      "start": 274.32,
+      "end": 277.12,
+      "text": "My goal is to learn in detail about building"
+    },
+    {
+      "id": 94,
+      "start": 277.12,
+      "end": 279.32,
+      "text": "NLP systems from your research perspective."
+    },
+    {
+      "id": 95,
+      "start": 279.32,
+      "end": 282.16,
+      "text": "So this is a 700 level course."
+    },
+    {
+      "id": 96,
+      "start": 282.16,
+      "end": 285.36,
+      "text": "So it's aiming to be for people who really"
+    },
+    {
+      "id": 97,
+      "start": 285.36,
+      "end": 288.88,
+      "text": "want to try new and innovative things"
+    },
+    {
+      "id": 98,
+      "start": 288.88,
+      "end": 292.68,
+      "text": "in natural language processing."
+    },
+    {
+      "id": 99,
+      "start": 292.68,
+      "end": 295.64,
+      "text": "It's not going to focus solely on re-implementing things"
+    },
+    {
+      "id": 100,
+      "start": 295.64,
+      "end": 297.6,
+      "text": "that have been done before, including in the project."
+    },
+    {
+      "id": 101,
+      "start": 297.6,
+      "end": 298.96,
+      "text": "I'm going to be expecting everybody"
+    },
+    {
+      "id": 102,
+      "start": 298.96,
+      "end": 302.48,
+      "text": "to do something that's new, whether it's"
+    },
+    {
+      "id": 103,
+      "start": 302.48,
+      "end": 304.88,
+      "text": "coming up with a new method or applying existing methods"
+    },
+    {
+      "id": 104,
+      "start": 304.88,
+      "end": 307.12,
+      "text": "to a place where they haven't been used before,"
+    },
+    {
+      "id": 105,
+      "start": 307.12,
+      "end": 309.28,
+      "text": "or building out things for a new language or something"
+    },
+    {
+      "id": 106,
+      "start": 309.28,
+      "end": 309.8,
+      "text": "like that."
+    },
+    {
+      "id": 107,
+      "start": 309.8,
+      "end": 314.36,
+      "text": "So that's kind of one of the major goals of this class."
+    },
+    {
+      "id": 108,
+      "start": 314.36,
+      "end": 316.4,
+      "text": "Learn basic and advanced topics in machine learning"
+    },
+    {
+      "id": 109,
+      "start": 316.4,
+      "end": 318.72,
+      "text": "approaches to NLP and language models."
+    },
+    {
+      "id": 110,
+      "start": 318.72,
+      "end": 322.6,
+      "text": "Learn some basic linguistic knowledge useful in NLP."
+    },
+    {
+      "id": 111,
+      "start": 322.6,
+      "end": 325.6,
+      "text": "See case studies of NLP applications"
+    },
+    {
+      "id": 112,
+      "start": 325.6,
+      "end": 328.76,
+      "text": "and learn how to identify unique problems for each."
+    },
+    {
+      "id": 113,
+      "start": 328.76,
+      "end": 331.56,
+      "text": "One thing I'd like to point out is I'm not"
+    },
+    {
+      "id": 114,
+      "start": 331.56,
+      "end": 334.68,
+      "text": "going to cover every NLP application ever"
+    },
+    {
+      "id": 115,
+      "start": 334.68,
+      "end": 336.32,
+      "text": "because that would be absolutely impossible."
+    },
+    {
+      "id": 116,
+      "start": 336.32,
+      "end": 339.56,
+      "text": "NLP is being used in so many different areas nowadays."
+    },
+    {
+      "id": 117,
+      "start": 339.56,
+      "end": 341.24,
+      "text": "But what I want people to pay attention to,"
+    },
+    {
+      "id": 118,
+      "start": 341.24,
+      "end": 344.2,
+      "text": "like even if you're not super interested in code generation,"
+    },
+    {
+      "id": 119,
+      "start": 344.2,
+      "end": 347.12,
+      "text": "for example, what you can do is you can look at code generation,"
+    },
+    {
+      "id": 120,
+      "start": 347.12,
+      "end": 349.44,
+      "text": "look at how people identify problems,"
+    },
+    {
+      "id": 121,
+      "start": 349.44,
+      "end": 350.96,
+      "text": "look at the methods that people have proposed"
+    },
+    {
+      "id": 122,
+      "start": 350.96,
+      "end": 354.96,
+      "text": "to solve those unique problems, and then kind of map that,"
+    },
+    {
+      "id": 123,
+      "start": 354.96,
+      "end": 357.64,
+      "text": "try to do some generalization on to your own problems"
+    },
+    {
+      "id": 124,
+      "start": 357.64,
+      "end": 358.16,
+      "text": "of interest."
+    },
+    {
+      "id": 125,
+      "start": 358.16,
+      "end": 362.96,
+      "text": "So that's kind of the goal of the NLP applications."
+    },
+    {
+      "id": 126,
+      "start": 362.96,
+      "end": 366.72,
+      "text": "Finally, learning how to debug when and where NLP systems fail"
+    },
+    {
+      "id": 127,
+      "start": 366.72,
+      "end": 368.32,
+      "text": "and build an agreement space on this."
+    },
+    {
+      "id": 128,
+      "start": 368.36,
+      "end": 372.36,
+      "text": "So ever since I was a graduate student,"
+    },
+    {
+      "id": 129,
+      "start": 372.36,
+      "end": 375.12,
+      "text": "this has been one of the really important things."
+    },
+    {
+      "id": 130,
+      "start": 375.12,
+      "end": 380.48,
+      "text": "And I feel like I've done well or done better than some other people."
+    },
+    {
+      "id": 131,
+      "start": 380.48,
+      "end": 382.0,
+      "text": "And I feel like it's a really good way"
+    },
+    {
+      "id": 132,
+      "start": 382.0,
+      "end": 385.08,
+      "text": "to, like even if you're only interested in improving accuracy,"
+    },
+    {
+      "id": 133,
+      "start": 385.08,
+      "end": 386.72,
+      "text": "knowing why your system's failing still"
+    },
+    {
+      "id": 134,
+      "start": 386.72,
+      "end": 387.96,
+      "text": "is the best way to do that."
+    },
+    {
+      "id": 135,
+      "start": 387.96,
+      "end": 392.88,
+      "text": "So I'm going to put a lot of emphasis on that."
+    },
+    {
+      "id": 136,
+      "start": 392.88,
+      "end": 396.6,
+      "text": "In terms of the class format, before class for some classes,"
+    },
+    {
+      "id": 137,
+      "start": 396.6,
+      "end": 401.32,
+      "text": "that are recommended reading, this can be helpful to read."
+    },
+    {
+      "id": 138,
+      "start": 401.32,
+      "end": 403.8,
+      "text": "I'm never going to expect you to definitely have read it"
+    },
+    {
+      "id": 139,
+      "start": 403.8,
+      "end": 406.0,
+      "text": "before the class, but I would suggest that maybe you'll get"
+    },
+    {
+      "id": 140,
+      "start": 406.0,
+      "end": 408.8,
+      "text": "more out of the class if you do that."
+    },
+    {
+      "id": 141,
+      "start": 408.8,
+      "end": 413.48,
+      "text": "During class, we'll have the lecture in discussion with everybody."
+    },
+    {
+      "id": 142,
+      "start": 413.48,
+      "end": 417.52,
+      "text": "Sometimes we'll have a code or data walk."
+    },
+    {
+      "id": 143,
+      "start": 417.52,
+      "end": 419.72,
+      "text": "Actually, this is a little bit old."
+    },
+    {
+      "id": 144,
+      "start": 419.72,
+      "end": 421.44,
+      "text": "I have this slide."
+    },
+    {
+      "id": 145,
+      "start": 421.44,
+      "end": 426.12,
+      "text": "We're this year, we're going to be adding more code and data"
+    },
+    {
+      "id": 146,
+      "start": 426.12,
+      "end": 427.96,
+      "text": "walks during office hours."
+    },
+    {
+      "id": 147,
+      "start": 427.96,
+      "end": 431.36,
+      "text": "And the way it will work is one of the TAs."
+    },
+    {
+      "id": 148,
+      "start": 431.36,
+      "end": 434.16,
+      "text": "We have seven TAs, so I'm going to introduce a very soon."
+    },
+    {
+      "id": 149,
+      "start": 434.16,
+      "end": 437.72,
+      "text": "But one of the TAs will be doing this kind of recitation"
+    },
+    {
+      "id": 150,
+      "start": 437.72,
+      "end": 440.96,
+      "text": "where we go over a library."
+    },
+    {
+      "id": 151,
+      "start": 440.96,
+      "end": 442.48,
+      "text": "So if you're not familiar with the library,"
+    },
+    {
+      "id": 152,
+      "start": 442.48,
+      "end": 444.12,
+      "text": "and you want to be more familiar with the library,"
+    },
+    {
+      "id": 153,
+      "start": 444.12,
+      "end": 445.44,
+      "text": "you can join this."
+    },
+    {
+      "id": 154,
+      "start": 445.44,
+      "end": 447.64,
+      "text": "And then we'll be able to do this."
+    },
+    {
+      "id": 155,
+      "start": 447.64,
+      "end": 450.84,
+      "text": "And this will cover things like high-court and sentence"
+    },
+    {
+      "id": 156,
+      "start": 450.84,
+      "end": 452.2,
+      "text": "piece."
+    },
+    {
+      "id": 157,
+      "start": 452.2,
+      "end": 456.52,
+      "text": "We're going to start out with hugging-face, inference, stuff"
+    },
+    {
+      "id": 158,
+      "start": 456.52,
+      "end": 463.04,
+      "text": "like VLLAM debugging software, like Cino."
+    },
+    {
+      "id": 159,
+      "start": 463.04,
+      "end": 464.12,
+      "text": "What were the other ones?"
+    },
+    {
+      "id": 160,
+      "start": 467.2,
+      "end": 470.68,
+      "text": "Oh, the OpenAI API in LightLLAM, other stuff like that."
+    },
+    {
+      "id": 161,
+      "start": 470.68,
+      "end": 472.12,
+      "text": "So we have lots of them planned."
+    },
+    {
+      "id": 162,
+      "start": 472.12,
+      "end": 476.04,
+      "text": "We'll update that."
+    },
+    {
+      "id": 163,
+      "start": 476.04,
+      "end": 480.28,
+      "text": "And then after class, almost every class will have a quiz."
+    },
+    {
+      "id": 164,
+      "start": 480.28,
+      "end": 483.04,
+      "text": "And the quiz is intended to just make sure"
+    },
+    {
+      "id": 165,
+      "start": 483.04,
+      "end": 485.56,
+      "text": "that you pay attention to the material"
+    },
+    {
+      "id": 166,
+      "start": 485.56,
+      "end": 488.08,
+      "text": "and are able to answer questions about it."
+    },
+    {
+      "id": 167,
+      "start": 488.08,
+      "end": 491.8,
+      "text": "We will aim to release it on the day of the course,"
+    },
+    {
+      "id": 168,
+      "start": 491.8,
+      "end": 493.4,
+      "text": "the day of the actual lecture."
+    },
+    {
+      "id": 169,
+      "start": 493.4,
+      "end": 496.08,
+      "text": "And it will be due at the end of the following day"
+    },
+    {
+      "id": 170,
+      "start": 496.08,
+      "end": 496.88,
+      "text": "of the lectures."
+    },
+    {
+      "id": 171,
+      "start": 496.88,
+      "end": 500.0,
+      "text": "So it will be three questions that probably"
+    },
+    {
+      "id": 172,
+      "start": 500.0,
+      "end": 501.16,
+      "text": "shouldn't take a whole lot of time."
+    },
+    {
+      "id": 173,
+      "start": 501.16,
+      "end": 505.96,
+      "text": "But yeah, so we'll hit that."
+    },
+    {
+      "id": 174,
+      "start": 505.96,
+      "end": 508.04,
+      "text": "In terms of assignments, assignment one"
+    },
+    {
+      "id": 175,
+      "start": 508.04,
+      "end": 510.36,
+      "text": "is going to be build your own LAMMA."
+    },
+    {
+      "id": 176,
+      "start": 510.36,
+      "end": 512.84,
+      "text": "And so what this is going to look like"
+    },
+    {
+      "id": 177,
+      "start": 512.84,
+      "end": 515.36,
+      "text": "is we're going to give you a partial implementation"
+    },
+    {
+      "id": 178,
+      "start": 515.36,
+      "end": 518.32,
+      "text": "of LAMMA, which is kind of the most popular open source"
+    },
+    {
+      "id": 179,
+      "start": 518.32,
+      "end": 520.0,
+      "text": "language model nowadays."
+    },
+    {
+      "id": 180,
+      "start": 520.0,
+      "end": 524.12,
+      "text": "And ask you to fill in the parts."
+    },
+    {
+      "id": 181,
+      "start": 524.12,
+      "end": 527.04,
+      "text": "We're going to train a very small version of LAMMA"
+    },
+    {
+      "id": 182,
+      "start": 527.04,
+      "end": 529.04,
+      "text": "on a small data set."
+    },
+    {
+      "id": 183,
+      "start": 529.04,
+      "end": 530.24,
+      "text": "And I get it to work."
+    },
+    {
+      "id": 184,
+      "start": 530.24,
+      "end": 531.4,
+      "text": "And the reason why it's very small"
+    },
+    {
+      "id": 185,
+      "start": 531.4,
+      "end": 533.4,
+      "text": "is because the smallest actual version of LAMMA"
+    },
+    {
+      "id": 186,
+      "start": 533.4,
+      "end": 536.12,
+      "text": "is 7 billion parameters."
+    },
+    {
+      "id": 187,
+      "start": 536.12,
+      "end": 538.88,
+      "text": "And that might be a little bit difficult to train with"
+    },
+    {
+      "id": 188,
+      "start": 538.88,
+      "end": 541.44,
+      "text": "resources."
+    },
+    {
+      "id": 189,
+      "start": 541.44,
+      "end": 543.16,
+      "text": "For assignment two, we're going to try"
+    },
+    {
+      "id": 190,
+      "start": 543.16,
+      "end": 545.84,
+      "text": "to do an NLP test from scratch."
+    },
+    {
+      "id": 191,
+      "start": 545.84,
+      "end": 549.0,
+      "text": "And so the wave is will work is we're"
+    },
+    {
+      "id": 192,
+      "start": 549.0,
+      "end": 552.04,
+      "text": "going to give you an assignment, which we're not"
+    },
+    {
+      "id": 193,
+      "start": 552.04,
+      "end": 554.16,
+      "text": "going to give you an actual data set."
+    },
+    {
+      "id": 194,
+      "start": 554.16,
+      "end": 555.92,
+      "text": "And instead, we're going to ask you"
+    },
+    {
+      "id": 195,
+      "start": 555.92,
+      "end": 558.96,
+      "text": "to perform data creation, modeling, and evaluation"
+    },
+    {
+      "id": 196,
+      "start": 558.96,
+      "end": 560.92,
+      "text": "for a specified test."
+    },
+    {
+      "id": 197,
+      "start": 560.92,
+      "end": 564.2,
+      "text": "And so we're going to tell you what to do."
+    },
+    {
+      "id": 198,
+      "start": 564.2,
+      "end": 566.32,
+      "text": "But we're not going to tell you exactly how to do it."
+    },
+    {
+      "id": 199,
+      "start": 566.32,
+      "end": 570.48,
+      "text": "But we're going to try to give as concrete directions"
+    },
+    {
+      "id": 200,
+      "start": 570.48,
+      "end": 571.8,
+      "text": "as we can."
+    },
+    {
+      "id": 201,
+      "start": 571.8,
+      "end": 574.8,
+      "text": "Yeah."
+    },
+    {
+      "id": 202,
+      "start": 574.8,
+      "end": 577.04,
+      "text": "Well, you get be given a parameter limit on model."
+    },
+    {
+      "id": 203,
+      "start": 577.04,
+      "end": 580.0,
+      "text": "So that's a good question, or like an expense"
+    },
+    {
+      "id": 204,
+      "start": 580.0,
+      "end": 582.12,
+      "text": "limit or something like that."
+    },
+    {
+      "id": 205,
+      "start": 582.12,
+      "end": 584.64,
+      "text": "Maybe actually I should take a break from the assignments"
+    },
+    {
+      "id": 206,
+      "start": 584.64,
+      "end": 585.56,
+      "text": "and talk about compute."
+    },
+    {
+      "id": 207,
+      "start": 585.56,
+      "end": 589.92,
+      "text": "So right now, for assignment one, we're"
+    },
+    {
+      "id": 208,
+      "start": 589.92,
+      "end": 593.52,
+      "text": "planning on having this be able to be done either on a Mac"
+    },
+    {
+      "id": 209,
+      "start": 593.52,
+      "end": 596.32,
+      "text": "laptop with an M1 or M2 processor, which I think a lot of"
+    },
+    {
+      "id": 210,
+      "start": 596.32,
+      "end": 599.12,
+      "text": "people have, or Google Colab."
+    },
+    {
+      "id": 211,
+      "start": 599.12,
+      "end": 604.08,
+      "text": "So it should be like sufficient to use free computational"
+    },
+    {
+      "id": 212,
+      "start": 604.08,
+      "end": 605.08,
+      "text": "research."
+    }
+  ],
+  "language": "en"
+}

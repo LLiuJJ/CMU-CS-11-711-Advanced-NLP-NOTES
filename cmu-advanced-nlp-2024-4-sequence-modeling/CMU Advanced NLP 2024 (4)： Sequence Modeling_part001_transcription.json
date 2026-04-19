@@ -1,0 +1,569 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 5.12,
+      "text": "word number four, conditioning on words number three and two, but not number one. So that would be like a"
+    },
+    {
+      "id": 1,
+      "start": 5.12,
+      "end": 17.28,
+      "text": "trigger and bottle. So the, what is this zero robot? Well, I can write somewhere."
+    },
+    {
+      "id": 2,
+      "start": 19.28,
+      "end": 27.2,
+      "text": "Howard real. Okay, okay. Be a lot more fun as it was a robot. So the things we're going to talk"
+    },
+    {
+      "id": 3,
+      "start": 27.2,
+      "end": 33.84,
+      "text": "about today are largely going to be ones that have unlimited blanks of context. And so we can,"
+    },
+    {
+      "id": 4,
+      "start": 33.84,
+      "end": 40.0,
+      "text": "we'll talk about some examples here. And then there's also independent predictions. So this"
+    },
+    {
+      "id": 5,
+      "start": 40.0,
+      "end": 44.32,
+      "text": "would be something like a unigram model where you would just not condition on an e-crevious"
+    },
+    {
+      "id": 6,
+      "start": 44.32,
+      "end": 51.84,
+      "text": "context. There's also bidirectional prediction where basically when you predict each element,"
+    },
+    {
+      "id": 7,
+      "start": 51.84,
+      "end": 57.84,
+      "text": "you predict based on all of the other elements, not the element itself. This could be something"
+    },
+    {
+      "id": 8,
+      "start": 57.84,
+      "end": 66.88,
+      "text": "like a mask to language model. But nope, here that I put a slash through here, because this is not"
+    },
+    {
+      "id": 9,
+      "start": 66.88,
+      "end": 73.04,
+      "text": "a well-formed probability because I mentioned last time. In order to have a well-formed probability,"
+    },
+    {
+      "id": 10,
+      "start": 73.04,
+      "end": 77.68,
+      "text": "you need to predict the elements based on all the elements that you predicted before and you can't"
+    },
+    {
+      "id": 11,
+      "start": 77.68,
+      "end": 82.56,
+      "text": "predict based on future elements. So this is not actually a problem with the list of model, but"
+    },
+    {
+      "id": 12,
+      "start": 82.56,
+      "end": 88.08,
+      "text": "sometimes people use this to kind of learn representations that could be used downstream for some"
+    },
+    {
+      "id": 13,
+      "start": 88.08,
+      "end": 94.24,
+      "text": "use. Cool. Is this clear any questions, comments? Yeah."
+    },
+    {
+      "id": 14,
+      "start": 98.48,
+      "end": 106.08,
+      "text": "So these are all not conditioning on any prior context. Yeah. So when you predict each word,"
+    },
+    {
+      "id": 15,
+      "start": 106.08,
+      "end": 111.44,
+      "text": "it's conditioning on context that you previously generated or previously predicted."
+    },
+    {
+      "id": 16,
+      "start": 112.56,
+      "end": 118.56,
+      "text": "Yeah. So and if I go to the conditioned ones, these are where you have like a source X,"
+    },
+    {
+      "id": 17,
+      "start": 119.44,
+      "end": 124.24,
+      "text": "where you're given this and then you want to calculate the conditional probability of something else."
+    },
+    {
+      "id": 18,
+      "start": 124.24,
+      "end": 135.04,
+      "text": "So to give some examples of this, this is auto-regressive condition prediction. And this could be like a"
+    },
+    {
+      "id": 19,
+      "start": 135.76,
+      "end": 140.32,
+      "text": "standard sequence, a sequence model or it could be a language model where you're given a prompt"
+    },
+    {
+      "id": 20,
+      "start": 140.32,
+      "end": 145.36,
+      "text": "and you want to predict the following output. Like we have to do with chat GPT or something like this."
+    },
+    {
+      "id": 21,
+      "start": 146.16,
+      "end": 151.12,
+      "text": "And so yeah, I don't think you can..."
+    },
+    {
+      "id": 22,
+      "start": 154.96,
+      "end": 159.92,
+      "text": "Yeah, I don't know if any way you can do chat GPT without any conditioning context."
+    },
+    {
+      "id": 23,
+      "start": 160.32,
+      "end": 165.84,
+      "text": "But there were people who were sending... I saw this about a week or two ago. There were people"
+    },
+    {
+      "id": 24,
+      "start": 165.84,
+      "end": 174.8,
+      "text": "who were sending things to the GPT 3.5 or GPT 4 API with no input and it would randomly output random"
+    },
+    {
+      "id": 25,
+      "start": 174.8,
+      "end": 178.8,
+      "text": "questions or something like that. So that's what happens when you send things to"
+    },
+    {
+      "id": 26,
+      "start": 179.68,
+      "end": 184.08,
+      "text": "to chat GPT without any prior conditioning context. But normally what you do is you put in,"
+    },
+    {
+      "id": 27,
+      "start": 184.08,
+      "end": 188.16,
+      "text": "you know, your prompt and then it follows up with your prompt and that would be in this in this"
+    },
+    {
+      "id": 28,
+      "start": 188.16,
+      "end": 195.44,
+      "text": "period. There's also something called non-auto-regressive condition prediction."
+    },
+    {
+      "id": 29,
+      "start": 196.96,
+      "end": 203.36,
+      "text": "And this can be used for something like sequence labeling or non-auto-regressive machine translation."
+    },
+    {
+      "id": 30,
+      "start": 203.36,
+      "end": 208.0,
+      "text": "I'll talk about the first one in this slide and I'll talk about the second one maybe later."
+    },
+    {
+      "id": 31,
+      "start": 208.56,
+      "end": 212.96,
+      "text": "It's kind of a minor topic now. It used to be popular a few years ago, so I'm not sure whether"
+    },
+    {
+      "id": 32,
+      "start": 212.96,
+      "end": 222.8,
+      "text": "they're all over it, but yeah. Cool. So the basic modeling paradigm that we use for things"
+    },
+    {
+      "id": 33,
+      "start": 222.8,
+      "end": 228.16,
+      "text": "like this is extracting features and predicting. So this is exactly the same as the bag of words model,"
+    },
+    {
+      "id": 34,
+      "start": 228.16,
+      "end": 233.28,
+      "text": "right? The bag of words model that I talked about the first time. We extracted features based on"
+    },
+    {
+      "id": 35,
+      "start": 233.28,
+      "end": 237.52,
+      "text": "those features we made predictions. So it's no different when we do sequence modeling."
+    },
+    {
+      "id": 36,
+      "start": 238.48,
+      "end": 243.76,
+      "text": "But the methods that we use for feature extraction is different. So given an input text x,"
+    },
+    {
+      "id": 37,
+      "start": 244.56,
+      "end": 252.24,
+      "text": "we extract features h and predict labels y. And for something like text classification,"
+    },
+    {
+      "id": 38,
+      "start": 252.24,
+      "end": 258.8,
+      "text": "what we do is we, so for example, we have text classification or sequence labeling."
+    },
+    {
+      "id": 39,
+      "start": 259.52,
+      "end": 264.64,
+      "text": "And for text classification, usually what we would do is we would have a feature extractor from"
+    },
+    {
+      "id": 40,
+      "start": 264.64,
+      "end": 269.04,
+      "text": "this feature extractor. We take the sequence and we convert it into a single vector. And then"
+    },
+    {
+      "id": 41,
+      "start": 269.04,
+      "end": 274.48,
+      "text": "based on this vector, we make a prediction. So that's what we do for classification."
+    },
+    {
+      "id": 42,
+      "start": 276.16,
+      "end": 281.76,
+      "text": "For sequence labeling, normally what we do is we extract one vector for each thing that we would"
+    },
+    {
+      "id": 43,
+      "start": 281.76,
+      "end": 289.52,
+      "text": "like to predict about. So here, that might be one vector for each word. And then based on this,"
+    },
+    {
+      "id": 44,
+      "start": 289.52,
+      "end": 294.32,
+      "text": "we would predict something for each word. So this is an example of part of speech tagging,"
+    },
+    {
+      "id": 45,
+      "start": 294.32,
+      "end": 301.68,
+      "text": "but there's a lot of other sequence labeling tasks also. And what tasks exist for something"
+    },
+    {
+      "id": 46,
+      "start": 301.68,
+      "end": 311.04,
+      "text": "like sequence labeling? So sequence labeling is a pretty big subset of NLP tasks. You can express"
+    },
+    {
+      "id": 47,
+      "start": 311.04,
+      "end": 316.64,
+      "text": "a lot of things as sequence labeling. And basically given an input text x, we predict an output"
+    },
+    {
+      "id": 48,
+      "start": 316.64,
+      "end": 322.4,
+      "text": "label sequence y of equal length. So this can be used for things like part of speech tagging to"
+    },
+    {
+      "id": 49,
+      "start": 322.4,
+      "end": 328.0,
+      "text": "get the parts of speech of each word. It can also be used for something like limitization. And"
+    },
+    {
+      "id": 50,
+      "start": 328.0,
+      "end": 332.72,
+      "text": "limitization, basically what that is, is it is predicting the base form of each word."
+    },
+    {
+      "id": 51,
+      "start": 334.0,
+      "end": 338.88,
+      "text": "And this can be used for normalization if you want to find like, for example, all instances of"
+    },
+    {
+      "id": 52,
+      "start": 338.88,
+      "end": 344.88,
+      "text": "a particular verb being used or all instances of a particular noun being used. This is a little"
+    },
+    {
+      "id": 53,
+      "start": 344.88,
+      "end": 349.68,
+      "text": "bit different than something like stemming. So stemming, normally what the stemming would do is it"
+    },
+    {
+      "id": 54,
+      "start": 349.68,
+      "end": 356.32,
+      "text": "would chop off the plural here. It would chop off s. But it wouldn't be able to do things like"
+    },
+    {
+      "id": 55,
+      "start": 356.32,
+      "end": 363.2,
+      "text": "normalize saw and to see because stemming just removes suffixes. It doesn't do any sort of normalization."
+    },
+    {
+      "id": 56,
+      "start": 363.2,
+      "end": 366.48,
+      "text": "So that's the difference between limitization and stemming."
+    },
+    {
+      "id": 57,
+      "start": 368.48,
+      "end": 374.4,
+      "text": "There's also something called morphological tagging. In morphological tagging, basically what"
+    },
+    {
+      "id": 58,
+      "start": 374.4,
+      "end": 381.68,
+      "text": "this is doing is this is a more advanced version of part of speech tagging that predicts things like,"
+    },
+    {
+      "id": 59,
+      "start": 381.68,
+      "end": 389.04,
+      "text": "okay, this is a past tense verb. This is a plural. This is a particular verb form and you have"
+    },
+    {
+      "id": 60,
+      "start": 389.04,
+      "end": 393.76,
+      "text": "multiple tags here. This is less interesting in English because English is kind of a boring"
+    },
+    {
+      "id": 61,
+      "start": 393.76,
+      "end": 398.0,
+      "text": "language morphologically. It doesn't have a lot of conjugation and other stuff, but it's a lot"
+    },
+    {
+      "id": 62,
+      "start": 398.0,
+      "end": 403.44,
+      "text": "more interesting and more complex languages like Japanese or Hindi or other things like that."
+    },
+    {
+      "id": 63,
+      "start": 404.88,
+      "end": 410.88,
+      "text": "Chinese is even more boring than English, so if you're interested in Chinese, you don't need to worry"
+    },
+    {
+      "id": 64,
+      "start": 410.88,
+      "end": 418.4,
+      "text": "about that. Cool. But actually what's maybe more widely used from the sequence labeling perspective"
+    },
+    {
+      "id": 65,
+      "start": 418.4,
+      "end": 426.48,
+      "text": "is span labeling. Here you want to predict spans and labels. This could be named entity recognition."
+    },
+    {
+      "id": 66,
+      "start": 426.48,
+      "end": 431.6,
+      "text": "So if you say Graham Newbig is teaching a Carnegie Mellon University, you would want to identify each"
+    },
+    {
+      "id": 67,
+      "start": 431.6,
+      "end": 436.64,
+      "text": "entity as being like a person organization, place, governmental entity, other stuff like that."
+    },
+    {
+      "id": 68,
+      "start": 438.0,
+      "end": 445.6,
+      "text": "There's also things like syntactic chunking where you want to find all noun phrases and verb"
+    },
+    {
+      "id": 69,
+      "start": 445.6,
+      "end": 453.6,
+      "text": "phrases. Also semantic role labeling, where semantic role labeling is demonstrating who did what to"
+    },
+    {
+      "id": 70,
+      "start": 453.6,
+      "end": 460.08,
+      "text": "whom. So it's saying this is the actor, the person who did the thing, this is the thing that is being"
+    },
+    {
+      "id": 71,
+      "start": 460.08,
+      "end": 465.12,
+      "text": "done and this is the place where it's being done. So this can be useful if you want to do any sort"
+    },
+    {
+      "id": 72,
+      "start": 465.12,
+      "end": 473.2,
+      "text": "of analysis about who does what to whom other things like that. There's also a more complicated thing"
+    },
+    {
+      "id": 73,
+      "start": 473.2,
+      "end": 478.16,
+      "text": "called entity linking, which isn't really a span linking task, but it's basically named entity"
+    },
+    {
+      "id": 74,
+      "start": 478.16,
+      "end": 485.92,
+      "text": "recognition. And you link it to, and you link it to like a database like wiki data or wiki"
+    },
+    {
+      "id": 75,
+      "start": 486.08,
+      "end": 492.56,
+      "text": "deer or something like this. And this doesn't seem very glamorous, perhaps, you know, a lot of people"
+    },
+    {
+      "id": 76,
+      "start": 492.56,
+      "end": 500.0,
+      "text": "might not, you might not sound like immediately, be immediately excited by entity linking, but"
+    },
+    {
+      "id": 77,
+      "start": 500.0,
+      "end": 504.16,
+      "text": "actually it's super, super important for things like news, aggregation, and other stuff like that."
+    },
+    {
+      "id": 78,
+      "start": 504.16,
+      "end": 509.12,
+      "text": "Find all the news articles about this celebrity or something like this. Find all of the mentions"
+    },
+    {
+      "id": 79,
+      "start": 509.2,
+      "end": 515.36,
+      "text": "of our product, our company's product and social media or things. So it's actually a really"
+    },
+    {
+      "id": 80,
+      "start": 515.36,
+      "end": 523.84,
+      "text": "widely used technology. And then finally, a span labeling can also be created as sequence labeling."
+    },
+    {
+      "id": 81,
+      "start": 523.84,
+      "end": 529.44,
+      "text": "In the way we normally do this is we use something called biotags. And here you predict the"
+    },
+    {
+      "id": 82,
+      "start": 529.44,
+      "end": 535.68,
+      "text": "beginning in out tags for each word or span. So if we have this example of spans, we just convert"
+    },
+    {
+      "id": 83,
+      "start": 535.68,
+      "end": 542.64,
+      "text": "this into tags where you say begin person in person. Oh, means it's not an entity, begin"
+    },
+    {
+      "id": 84,
+      "start": 542.64,
+      "end": 548.72,
+      "text": "organization in organization. And then you can convert that back into into these spans. So this"
+    },
+    {
+      "id": 85,
+      "start": 548.72,
+      "end": 553.12,
+      "text": "makes it relatively easy to kind of do the span prediction."
+    },
+    {
+      "id": 86,
+      "start": 556.24,
+      "end": 561.28,
+      "text": "Cool. So now you know, now you know what to do if you want to predict entities or other things"
+    },
+    {
+      "id": 87,
+      "start": 561.36,
+      "end": 565.6,
+      "text": "like that. There's a lot of models on like hugging face, for example, that allow you to do these"
+    },
+    {
+      "id": 88,
+      "start": 565.6,
+      "end": 575.44,
+      "text": "things. Are there any questions before I move on? Okay, cool. I'll just go forward then."
+    },
+    {
+      "id": 89,
+      "start": 576.4,
+      "end": 581.2,
+      "text": "So now I'm going to talk about how we actually model these in machine learning models."
+    },
+    {
+      "id": 90,
+      "start": 581.84,
+      "end": 586.64,
+      "text": "And there's three major types of sequence models. There are other types of sequence models,"
+    },
+    {
+      "id": 91,
+      "start": 586.64,
+      "end": 590.72,
+      "text": "but I'd say the great majority of work uses one of these three different types."
+    },
+    {
+      "id": 92,
+      "start": 591.68,
+      "end": 597.44,
+      "text": "And the first one is recurrence. What recurrence does it is it conditions on"
+    },
+    {
+      "id": 93,
+      "start": 598.08,
+      "end": 604.72,
+      "text": "representations on an encoding of the history. And so the way this works is essentially you"
+    }
+  ],
+  "language": "en"
+}

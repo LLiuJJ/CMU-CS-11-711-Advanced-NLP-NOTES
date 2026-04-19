@@ -1,0 +1,377 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 14.0,
+      "text": "So basically if you generate only K, like if you if you sample only one example, there's a lot of variance in whether you get it right or not. So what they actually do is they generate like 10 outputs or 200 outputs."
+    },
+    {
+      "id": 1,
+      "start": 14.0,
+      "end": 28.0,
+      "text": "And then they calculate the expected number of those that the expected number of cases where that would pass by just doing a little bit of like math, calculating the number of combinations where one passes or one doesn't."
+    },
+    {
+      "id": 2,
+      "start": 28.0,
+      "end": 40.0,
+      "text": "And here K and it's the total number you generate C is the number of correct answers in K is your passive K value."
+    },
+    {
+      "id": 3,
+      "start": 40.0,
+      "end": 42.0,
+      "text": "Cool."
+    },
+    {
+      "id": 4,
+      "start": 42.0,
+      "end": 46.0,
+      "text": "So any any questions about these?"
+    },
+    {
+      "id": 5,
+      "start": 46.0,
+      "end": 56.0,
+      "text": "You'll you'll see a bunch of people evaluating on this human of L with pass at K, including all of the new L ones that come out. It's a very standard bench."
+    },
+    {
+      "id": 6,
+      "start": 56.0,
+      "end": 65.0,
+      "text": "Yeah."
+    },
+    {
+      "id": 7,
+      "start": 65.0,
+      "end": 74.0,
+      "text": "That's a good question. I think I'm going to cover that a little bit later, but I might as well say it now. So LLMs are."
+    },
+    {
+      "id": 8,
+      "start": 74.0,
+      "end": 81.0,
+      "text": "LMs are good at code because they intentionally include a lot of code training data and LLM training and the reason for that is twofold."
+    },
+    {
+      "id": 9,
+      "start": 81.0,
+      "end": 94.0,
+      "text": "The first one is that code generation is a huge application of LLMs right now. And like if you had an LLM that couldn't do code generation and be kind of embarrassing. So everybody includes us."
+    },
+    {
+      "id": 10,
+      "start": 94.0,
+      "end": 103.0,
+      "text": "Number two code has been shown to improve kind of the reasoning abilities of LLMs and because of that people and quick code for that. So yeah."
+    },
+    {
+      "id": 11,
+      "start": 103.0,
+      "end": 109.0,
+      "text": "It's not that LLMs are inherently good at code or anything. It's that they have lots of lots of code training."
+    },
+    {
+      "id": 12,
+      "start": 109.0,
+      "end": 114.0,
+      "text": "And I'll explain exactly how they construct this."
+    },
+    {
+      "id": 13,
+      "start": 114.0,
+      "end": 124.0,
+      "text": "And actually, if you remember last time, I talked about the pile, which was not last time, but when I talked about the core of large language bottles."
+    },
+    {
+      "id": 14,
+      "start": 124.0,
+      "end": 129.0,
+      "text": "I talked about the pile and the pile is almost half code."
+    },
+    {
+      "id": 15,
+      "start": 129.0,
+      "end": 135.0,
+      "text": "Well, any other questions?"
+    },
+    {
+      "id": 16,
+      "start": 135.0,
+      "end": 138.0,
+      "text": "So another."
+    },
+    {
+      "id": 17,
+      "start": 138.0,
+      "end": 147.0,
+      "text": "A first improvement or at least change that we can make to human a Val is going to broader domains, and covering a broader variety of libraries."
+    },
+    {
+      "id": 18,
+      "start": 147.0,
+      "end": 160.0,
+      "text": "And this is a data set that we created actually a long time ago, but we recently added execution based evaluation to it. It's called Kona la and the execution based evaluation one is called Odets."
+    },
+    {
+      "id": 19,
+      "start": 160.0,
+      "end": 169.0,
+      "text": "And basically what we did here is we scraped data from staff overflow, including inputs and output solutions."
+    },
+    {
+      "id": 20,
+      "start": 169.0,
+      "end": 183.0,
+      "text": "And based on this script data, we did some manual curation to turn these into like actual questions in answers about how you could solve programming problems."
+    },
+    {
+      "id": 21,
+      "start": 183.0,
+      "end": 195.0,
+      "text": "And because this is great from staff overflow, there's no restriction that this is from the Python standard library, which also means that it can cover a very wide variety of libraries."
+    },
+    {
+      "id": 22,
+      "start": 195.0,
+      "end": 204.0,
+      "text": "Approximately according to the popularity of the libraries because we took popular posts. So that's a good thing."
+    },
+    {
+      "id": 23,
+      "start": 204.0,
+      "end": 210.0,
+      "text": "You know, it is a reasonable way to come up with a realistic distribution of libraries that you should be looking at."
+    },
+    {
+      "id": 24,
+      "start": 210.0,
+      "end": 221.0,
+      "text": "Odets adds execution based evaluation. Previously, what we had was we only had this snippet that was able to solve the problem is opposed to."
+    },
+    {
+      "id": 25,
+      "start": 221.0,
+      "end": 225.0,
+      "text": "As opposed to being able to execute unit tests."
+    },
+    {
+      "id": 26,
+      "start": 225.0,
+      "end": 238.0,
+      "text": "And just to show how this has a broader variety of libraries on the top, we have the distribution of Odets is libraries and we can see about half of them use libraries."
+    },
+    {
+      "id": 27,
+      "start": 238.0,
+      "end": 244.0,
+      "text": "And this includes a variety of things, including pandas, numpy."
+    },
+    {
+      "id": 28,
+      "start": 244.0,
+      "end": 250.0,
+      "text": "Regacts, last elections, you know, all of these should be libraries that look familiar to you."
+    },
+    {
+      "id": 29,
+      "start": 250.0,
+      "end": 258.0,
+      "text": "In contrast, if we look at human of all human is right here."
+    },
+    {
+      "id": 30,
+      "start": 258.0,
+      "end": 265.0,
+      "text": "So you can see almost all of the questions require no libraries and all the other ones require a library set were included in the Python standard libraries."
+    },
+    {
+      "id": 31,
+      "start": 265.0,
+      "end": 280.0,
+      "text": "And in reality, this is probably more what your programming queries are going to look like they're not going to look like we could they're going to look like using it."
+    },
+    {
+      "id": 32,
+      "start": 280.0,
+      "end": 290.0,
+      "text": "So originally when we did conella, we didn't use execution based evaluation because creating unit tests for lots of stack over post is hard."
+    },
+    {
+      "id": 33,
+      "start": 290.0,
+      "end": 299.0,
+      "text": "Specifically, there's two issues. The first one is that it requires that code be easily executable."
+    },
+    {
+      "id": 34,
+      "start": 299.0,
+      "end": 304.0,
+      "text": "Now think about how you would do that for mat plotland."
+    },
+    {
+      "id": 35,
+      "start": 304.0,
+      "end": 311.0,
+      "text": "For example, how would you create a unit test to test whether mat plotland successfully created a bar chart for something."
+    },
+    {
+      "id": 36,
+      "start": 311.0,
+      "end": 319.0,
+      "text": "It's kind of tough, right? You like you would have to get the image and you'd have to confirm that the image was a bar chart and other things like that."
+    },
+    {
+      "id": 37,
+      "start": 319.0,
+      "end": 332.0,
+      "text": "So even worse, what if it was kind of like a server framework like a jango, how would you confirm that a jango, you know, server is working appropriately and that's kind of tricky."
+    },
+    {
+      "id": 38,
+      "start": 332.0,
+      "end": 338.0,
+      "text": "So actually coming up with realistic unit tests for real programs can be difficult."
+    },
+    {
+      "id": 39,
+      "start": 338.0,
+      "end": 348.0,
+      "text": "Another problem with execution based evaluation is it ignores stylistic considerations. So I could write very spaghetti, like very spaghetti code."
+    },
+    {
+      "id": 40,
+      "start": 348.0,
+      "end": 362.0,
+      "text": "And as long as it executed properly, it would still be judged as correct and sometimes that's actually an issue. So usually it's not a problem because language bottles right reasonably good code, but sometimes you want to match the style or other things like that."
+    },
+    {
+      "id": 41,
+      "start": 363.0,
+      "end": 379.0,
+      "text": "Some alternatives are a blue score, which we've talked about before. It's basically calculating the end gram overlap between a gold standard human implementation and a system output."
+    },
+    {
+      "id": 42,
+      "start": 380.0,
+      "end": 388.0,
+      "text": "And there's also specifically adapted methods for evaluating code. And so there's a method called code blue."
+    },
+    {
+      "id": 43,
+      "start": 388.0,
+      "end": 400.0,
+      "text": "And basically the way code blue works is it also considers the syntax and semantic flow of the code. So it measures overlap between strings."
+    },
+    {
+      "id": 44,
+      "start": 400.0,
+      "end": 412.0,
+      "text": "In the original code, but it also considers overlap between the syntax trees of the code and whether the."
+    },
+    {
+      "id": 45,
+      "start": 412.0,
+      "end": 422.0,
+      "text": "These like semantic information flow graphs looks similar. So all of these things work together to calculate the code blue."
+    },
+    {
+      "id": 46,
+      "start": 422.0,
+      "end": 439.0,
+      "text": "One thing I should mention is how do we get these syntax trees in the first place? For example, if we're talking about Python, there's a Python AST library for Mstrec syntax tree. It's just part of the standard library and it's necessary to run the Python interpreter."
+    },
+    {
+      "id": 47,
+      "start": 439.0,
+      "end": 451.0,
+      "text": "So you can just get these trees directly from the Python AST library, not hard to do. For this, I forget what they did in the code blue thing, but there are analyzers that allow you to analyze this control."
+    },
+    {
+      "id": 48,
+      "start": 451.0,
+      "end": 459.0,
+      "text": "So this is taking advantage of the fact that code is, you know, predictable. It has pretty close syntax and you can you can."
+    },
+    {
+      "id": 49,
+      "start": 459.0,
+      "end": 477.0,
+      "text": "When disadvantage of blue and code blue, of course, is that, you know, you can write two very different looking programs that actually are both correct and blue will underestimate the goodness of those programs. So maybe using both of them together is, is appropriate."
+    },
+    {
+      "id": 50,
+      "start": 477.0,
+      "end": 482.0,
+      "text": "If if you can write your test."
+    },
+    {
+      "id": 51,
+      "start": 482.0,
+      "end": 496.0,
+      "text": "Another one, which I'll just cover very briefly, we talked about bird score before when I was talking about evaluation of, you know, generated text and there's also code bird score, which we created here at CMU."
+    },
+    {
+      "id": 52,
+      "start": 496.0,
+      "end": 501.0,
+      "text": "And it's basically an embedding based metric to compare code."
+    },
+    {
+      "id": 53,
+      "start": 501.0,
+      "end": 511.0,
+      "text": "And so bird score, if you remember, basically what it did is it calculated the cosine similarity between each of the tokens between a generated text and a reference text."
+    },
+    {
+      "id": 54,
+      "start": 511.0,
+      "end": 522.0,
+      "text": "We do exactly the same thing for code. So we calculate the symbol cosine similarity between tokens for a reference code and generated code."
+    },
+    {
+      "id": 55,
+      "start": 522.0,
+      "end": 540.0,
+      "text": "And we released a model called code bird, which was basically bird, but continued trained on lots of lots of code that allowed us to do that. And basically, we were able to demonstrate that this gave better correlation, both with final execution accuracy."
+    },
+    {
+      "id": 56,
+      "start": 540.0,
+      "end": 554.0,
+      "text": "And with human judgments of whether the code was correct. And so some people created a data set of human correctness judgments and we were able to correlate better with that as well."
+    },
+    {
+      "id": 57,
+      "start": 554.0,
+      "end": 560.0,
+      "text": "Why do we care about correlation with execution accuracy?"
+    },
+    {
+      "id": 58,
+      "start": 560.0,
+      "end": 573.0,
+      "text": "This is important in the cases when we can't create unit tests or when creating unit tests would be too expensive. So this gives us a better approximation for what we would get if we ran unit tests."
+    },
+    {
+      "id": 59,
+      "start": 573.0,
+      "end": 583.0,
+      "text": "So"
+    },
+    {
+      "id": 60,
+      "start": 583.0,
+      "end": 597.0,
+      "text": "So we did not we did not consider code structure here would different variable names affected. Yes, different variable names would affect it, but not as much as the other metrics, which is why it's better play against."
+    },
+    {
+      "id": 61,
+      "start": 597.0,
+      "end": 626.0,
+      "text": "And like, for example, code bird, I imagine probably gives very similar."
+    }
+  ],
+  "language": "en"
+}

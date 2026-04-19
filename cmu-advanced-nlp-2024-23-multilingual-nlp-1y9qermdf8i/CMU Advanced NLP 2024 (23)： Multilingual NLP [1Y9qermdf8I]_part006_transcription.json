@@ -1,0 +1,1271 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 2.88,
+      "text": "Enslate the data if you don't have these sorts of annotations,"
+    },
+    {
+      "id": 1,
+      "start": 2.88,
+      "end": 4.08,
+      "text": "or if you have these annotations,"
+    },
+    {
+      "id": 2,
+      "start": 4.08,
+      "end": 6.56,
+      "text": "you need to do some more tricky stuff, basically."
+    },
+    {
+      "id": 3,
+      "start": 10.12,
+      "end": 13.92,
+      "text": "Actually, I'm sorry, I forgot to talk about word alignment."
+    },
+    {
+      "id": 4,
+      "start": 13.92,
+      "end": 15.0,
+      "text": "This is kind of important,"
+    },
+    {
+      "id": 5,
+      "start": 15.0,
+      "end": 19.76,
+      "text": "so I'll just talk about this briefly."
+    },
+    {
+      "id": 6,
+      "start": 19.76,
+      "end": 22.06,
+      "text": "So word alignment, basically what it does,"
+    },
+    {
+      "id": 7,
+      "start": 24.52,
+      "end": 26.04,
+      "text": "is going back"
+    },
+    {
+      "id": 8,
+      "start": 26.88,
+      "end": 30.28,
+      "text": "to the example here."
+    },
+    {
+      "id": 9,
+      "start": 35.6,
+      "end": 37.72,
+      "text": "Word alignment is basically getting these alignments"
+    },
+    {
+      "id": 10,
+      "start": 37.72,
+      "end": 40.76,
+      "text": "between the individual words in the sentence."
+    },
+    {
+      "id": 11,
+      "start": 40.76,
+      "end": 45.76,
+      "text": "And so the input is a sentence in one language,"
+    },
+    {
+      "id": 12,
+      "start": 45.76,
+      "end": 47.96,
+      "text": "and a sentence in another language,"
+    },
+    {
+      "id": 13,
+      "start": 47.96,
+      "end": 52.96,
+      "text": "and the output is like 0, 0, 1, 1, 2, 2, 3, 4, 4, 3,"
+    },
+    {
+      "id": 14,
+      "start": 56.96,
+      "end": 59.4,
+      "text": "and kind of like the matching indices"
+    },
+    {
+      "id": 15,
+      "start": 59.4,
+      "end": 61.2,
+      "text": "between the languages."
+    },
+    {
+      "id": 16,
+      "start": 61.2,
+      "end": 63.88,
+      "text": "And there's two ways to do this."
+    },
+    {
+      "id": 17,
+      "start": 63.88,
+      "end": 66.96,
+      "text": "One way is unsupervised."
+    },
+    {
+      "id": 18,
+      "start": 66.96,
+      "end": 69.52,
+      "text": "And unsupervised word alignment just uses"
+    },
+    {
+      "id": 19,
+      "start": 69.52,
+      "end": 73.6,
+      "text": "co-occurrence statistics between different languages."
+    },
+    {
+      "id": 20,
+      "start": 75.12,
+      "end": 79.0,
+      "text": "And the most famous method for this,"
+    },
+    {
+      "id": 21,
+      "start": 79.0,
+      "end": 80.68,
+      "text": "sorry, I should have a slide about this."
+    },
+    {
+      "id": 22,
+      "start": 80.68,
+      "end": 84.52,
+      "text": "I just realized now that I did not prepare a slide."
+    },
+    {
+      "id": 23,
+      "start": 86.6,
+      "end": 91.6,
+      "text": "So the kind of older version of this that was used forever"
+    },
+    {
+      "id": 24,
+      "start": 93.12,
+      "end": 94.88,
+      "text": "is something called Giza++."
+    },
+    {
+      "id": 25,
+      "start": 94.88,
+      "end": 99.84,
+      "text": "It uses co-occurrence statistics over a large purpose"
+    },
+    {
+      "id": 26,
+      "start": 99.84,
+      "end": 102.04,
+      "text": "to do annotation."
+    },
+    {
+      "id": 27,
+      "start": 102.04,
+      "end": 106.28,
+      "text": "A more modern version of this is something called similine."
+    },
+    {
+      "id": 28,
+      "start": 107.96,
+      "end": 112.96,
+      "text": "And the way this works is you basically do multi-lingual"
+    },
+    {
+      "id": 29,
+      "start": 113.48,
+      "end": 115.76,
+      "text": "birth between these different languages."
+    },
+    {
+      "id": 30,
+      "start": 115.76,
+      "end": 120.76,
+      "text": "And you find the representations that are the most similar"
+    },
+    {
+      "id": 31,
+      "start": 121.08,
+      "end": 123.64,
+      "text": "between the languages, and you treat those as alignment links"
+    },
+    {
+      "id": 32,
+      "start": 123.64,
+      "end": 125.24,
+      "text": "between the words and the languages."
+    },
+    {
+      "id": 33,
+      "start": 126.28,
+      "end": 129.84,
+      "text": "And then there's also supervised alignment."
+    },
+    {
+      "id": 34,
+      "start": 129.84,
+      "end": 132.52,
+      "text": "And supervised alignment, you have a very small amount"
+    },
+    {
+      "id": 35,
+      "start": 132.52,
+      "end": 134.68,
+      "text": "of data, and you try to train a model"
+    },
+    {
+      "id": 36,
+      "start": 134.68,
+      "end": 139.68,
+      "text": "so that the alignment links match with the supervised."
+    },
+    {
+      "id": 37,
+      "start": 143.08,
+      "end": 147.96,
+      "text": "And this was created by us, but I do think it's the best option"
+    },
+    {
+      "id": 38,
+      "start": 147.96,
+      "end": 149.96,
+      "text": "from the point of view of supervised alignment."
+    },
+    {
+      "id": 39,
+      "start": 149.96,
+      "end": 152.96,
+      "text": "And basically the way it works is you have a multi-lingual"
+    },
+    {
+      "id": 40,
+      "start": 152.96,
+      "end": 153.96,
+      "text": "abert model."
+    },
+    {
+      "id": 41,
+      "start": 153.96,
+      "end": 157.96,
+      "text": "And based on this, you try to find,"
+    },
+    {
+      "id": 42,
+      "start": 157.96,
+      "end": 160.96,
+      "text": "like, which links match together, but it's also trained"
+    },
+    {
+      "id": 43,
+      "start": 160.96,
+      "end": 163.96,
+      "text": "using a contrast of an objective where you try to upweight"
+    },
+    {
+      "id": 44,
+      "start": 163.96,
+      "end": 166.96,
+      "text": "the correct links and downweight the incorrect links"
+    },
+    {
+      "id": 45,
+      "start": 166.96,
+      "end": 167.96,
+      "text": "on supervised data."
+    },
+    {
+      "id": 46,
+      "start": 167.96,
+      "end": 170.96,
+      "text": "So it tends to be quite a bit more accurate."
+    },
+    {
+      "id": 47,
+      "start": 170.96,
+      "end": 171.96,
+      "text": "Then the alternatives."
+    },
+    {
+      "id": 48,
+      "start": 171.96,
+      "end": 175.96,
+      "text": "Another option, if you want, is to ask GPT-4."
+    },
+    {
+      "id": 49,
+      "start": 175.96,
+      "end": 180.96,
+      "text": "And you could ask GPT-4 to do that, but it's expensive"
+    },
+    {
+      "id": 50,
+      "start": 180.96,
+      "end": 183.96,
+      "text": "and not a whole lot better than using one of these"
+    },
+    {
+      "id": 51,
+      "start": 183.96,
+      "end": 185.96,
+      "text": "like trained alignment tools."
+    },
+    {
+      "id": 52,
+      "start": 185.96,
+      "end": 187.96,
+      "text": "So I would suggest probably using this"
+    },
+    {
+      "id": 53,
+      "start": 187.96,
+      "end": 190.96,
+      "text": "if you want to find alignments between words."
+    },
+    {
+      "id": 54,
+      "start": 190.96,
+      "end": 192.96,
+      "text": "And this can be useful for a lot of things."
+    },
+    {
+      "id": 55,
+      "start": 192.96,
+      "end": 197.96,
+      "text": "It can also be useful for visualization or better understanding"
+    },
+    {
+      "id": 56,
+      "start": 197.96,
+      "end": 200.96,
+      "text": "of how cross-lingual models are working and stuff like that."
+    },
+    {
+      "id": 57,
+      "start": 200.96,
+      "end": 204.96,
+      "text": "So it comes in handy for a lot of different things."
+    },
+    {
+      "id": 58,
+      "start": 204.96,
+      "end": 215.96,
+      "text": "Cool. Any questions here?"
+    },
+    {
+      "id": 59,
+      "start": 215.96,
+      "end": 216.96,
+      "text": "Yeah."
+    },
+    {
+      "id": 60,
+      "start": 216.96,
+      "end": 218.96,
+      "text": "So just looking at the alignment,"
+    },
+    {
+      "id": 61,
+      "start": 218.96,
+      "end": 222.96,
+      "text": "it seems to be pretty crazy for like English and Japanese."
+    },
+    {
+      "id": 62,
+      "start": 222.96,
+      "end": 223.96,
+      "text": "Yeah."
+    },
+    {
+      "id": 63,
+      "start": 223.96,
+      "end": 226.96,
+      "text": "So it's a bit more difficult to work where you try to"
+    },
+    {
+      "id": 64,
+      "start": 226.96,
+      "end": 227.96,
+      "text": "pop between languages."
+    },
+    {
+      "id": 65,
+      "start": 227.96,
+      "end": 229.96,
+      "text": "Where you try to pivot between languages."
+    },
+    {
+      "id": 66,
+      "start": 229.96,
+      "end": 230.96,
+      "text": "Yeah."
+    },
+    {
+      "id": 67,
+      "start": 230.96,
+      "end": 233.96,
+      "text": "It's called pivot pivoting."
+    },
+    {
+      "id": 68,
+      "start": 233.96,
+      "end": 237.96,
+      "text": "And there's a fair amount of work on this."
+    },
+    {
+      "id": 69,
+      "start": 237.96,
+      "end": 241.96,
+      "text": "The."
+    },
+    {
+      "id": 70,
+      "start": 241.96,
+      "end": 243.96,
+      "text": "There's a bunch of different ways you can pivot."
+    },
+    {
+      "id": 71,
+      "start": 243.96,
+      "end": 245.96,
+      "text": "You can pivot for word alignment."
+    },
+    {
+      "id": 72,
+      "start": 245.96,
+      "end": 248.96,
+      "text": "And pivoting is particularly useful when you have a low resource"
+    },
+    {
+      "id": 73,
+      "start": 248.96,
+      "end": 251.96,
+      "text": "language that's very similar to a high resource language,"
+    },
+    {
+      "id": 74,
+      "start": 251.96,
+      "end": 254.96,
+      "text": "and you can also use it as a data."
+    },
+    {
+      "id": 75,
+      "start": 254.96,
+      "end": 259.96,
+      "text": "The other thing is like pivot translation is a thing."
+    },
+    {
+      "id": 76,
+      "start": 259.96,
+      "end": 261.96,
+      "text": "And so, for example,"
+    },
+    {
+      "id": 77,
+      "start": 261.96,
+      "end": 263.96,
+      "text": "I don't know if Google does this anymore,"
+    },
+    {
+      "id": 78,
+      "start": 263.96,
+      "end": 264.96,
+      "text": "but for a long time,"
+    },
+    {
+      "id": 79,
+      "start": 264.96,
+      "end": 267.96,
+      "text": "Google would actually be translating through English"
+    },
+    {
+      "id": 80,
+      "start": 267.96,
+      "end": 269.96,
+      "text": "to get into other languages."
+    },
+    {
+      "id": 81,
+      "start": 269.96,
+      "end": 270.96,
+      "text": "And it was all a black box,"
+    },
+    {
+      "id": 82,
+      "start": 270.96,
+      "end": 273.96,
+      "text": "but you could tell they were doing it because you would suddenly"
+    },
+    {
+      "id": 83,
+      "start": 273.96,
+      "end": 276.96,
+      "text": "get English words when you translate from Chinese to Arabic"
+    },
+    {
+      "id": 84,
+      "start": 276.96,
+      "end": 277.96,
+      "text": "or something like this."
+    },
+    {
+      "id": 85,
+      "start": 277.96,
+      "end": 279.96,
+      "text": "And so, like,"
+    },
+    {
+      "id": 86,
+      "start": 279.96,
+      "end": 283.96,
+      "text": "that's also done for translation and other multilingual tests too."
+    },
+    {
+      "id": 87,
+      "start": 283.96,
+      "end": 286.96,
+      "text": "Another thing that I should mention is,"
+    },
+    {
+      "id": 88,
+      "start": 286.96,
+      "end": 288.96,
+      "text": "I talked about translate train."
+    },
+    {
+      "id": 89,
+      "start": 288.96,
+      "end": 292.96,
+      "text": "There's also translate test."
+    },
+    {
+      "id": 90,
+      "start": 292.96,
+      "end": 294.96,
+      "text": "So translate train."
+    },
+    {
+      "id": 91,
+      "start": 294.96,
+      "end": 297.96,
+      "text": "Basically, you translate your training data."
+    },
+    {
+      "id": 92,
+      "start": 297.96,
+      "end": 299.96,
+      "text": "And translate test."
+    },
+    {
+      "id": 93,
+      "start": 299.96,
+      "end": 301.96,
+      "text": "You translate."
+    },
+    {
+      "id": 94,
+      "start": 301.96,
+      "end": 302.96,
+      "text": "Test time."
+    },
+    {
+      "id": 95,
+      "start": 302.96,
+      "end": 303.96,
+      "text": "So basically, like,"
+    },
+    {
+      "id": 96,
+      "start": 303.96,
+      "end": 306.96,
+      "text": "let's say you want to answer questions that were posed in Japanese"
+    },
+    {
+      "id": 97,
+      "start": 306.96,
+      "end": 307.96,
+      "text": "or something,"
+    },
+    {
+      "id": 98,
+      "start": 307.96,
+      "end": 310.96,
+      "text": "you translate the Japanese questions into English and answer the question"
+    },
+    {
+      "id": 99,
+      "start": 310.96,
+      "end": 312.96,
+      "text": "using an English QA system,"
+    },
+    {
+      "id": 100,
+      "start": 312.96,
+      "end": 315.96,
+      "text": "and then translate the answer back into Japanese."
+    },
+    {
+      "id": 101,
+      "start": 315.96,
+      "end": 317.96,
+      "text": "And it's good to an extent."
+    },
+    {
+      "id": 102,
+      "start": 317.96,
+      "end": 320.96,
+      "text": "Like, it's usually better than a bad multilingual system,"
+    },
+    {
+      "id": 103,
+      "start": 320.96,
+      "end": 322.96,
+      "text": "but worse than a good multilingual system."
+    },
+    {
+      "id": 104,
+      "start": 322.96,
+      "end": 327.96,
+      "text": "If you put like a lot of effort into building a strong multilingual system."
+    },
+    {
+      "id": 105,
+      "start": 327.96,
+      "end": 328.96,
+      "text": "Although,"
+    },
+    {
+      "id": 106,
+      "start": 328.96,
+      "end": 332.96,
+      "text": "maybe for some of the really like difficult tasks,"
+    },
+    {
+      "id": 107,
+      "start": 332.96,
+      "end": 334.96,
+      "text": "like reasoning and stuff like that,"
+    },
+    {
+      "id": 108,
+      "start": 334.96,
+      "end": 335.96,
+      "text": "or reason in English,"
+    },
+    {
+      "id": 109,
+      "start": 335.96,
+      "end": 339.96,
+      "text": "like I talked about multilingual chain of thought reasoning."
+    },
+    {
+      "id": 110,
+      "start": 339.96,
+      "end": 341.96,
+      "text": "Cool."
+    },
+    {
+      "id": 111,
+      "start": 341.96,
+      "end": 344.96,
+      "text": "So, yeah."
+    },
+    {
+      "id": 112,
+      "start": 344.96,
+      "end": 345.96,
+      "text": "Another thing is,"
+    },
+    {
+      "id": 113,
+      "start": 345.96,
+      "end": 347.96,
+      "text": "if you're translating from,"
+    },
+    {
+      "id": 114,
+      "start": 347.96,
+      "end": 350.96,
+      "text": "if you're transferring from another language,"
+    },
+    {
+      "id": 115,
+      "start": 350.96,
+      "end": 351.96,
+      "text": "which language to use,"
+    },
+    {
+      "id": 116,
+      "start": 351.96,
+      "end": 352.96,
+      "text": "as I mentioned,"
+    },
+    {
+      "id": 117,
+      "start": 352.96,
+      "end": 356.96,
+      "text": "it should be a similar to the target language in a data rich language."
+    },
+    {
+      "id": 118,
+      "start": 356.96,
+      "end": 358.96,
+      "text": "We actually have a study,"
+    },
+    {
+      "id": 119,
+      "start": 358.96,
+      "end": 363.96,
+      "text": "where we tried to figure out what variety of similarity is the best,"
+    },
+    {
+      "id": 120,
+      "start": 363.96,
+      "end": 366.96,
+      "text": "for transferring."
+    },
+    {
+      "id": 121,
+      "start": 366.96,
+      "end": 367.96,
+      "text": "So, like,"
+    },
+    {
+      "id": 122,
+      "start": 367.96,
+      "end": 371.96,
+      "text": "let's say you want to train a good language for, you know,"
+    },
+    {
+      "id": 123,
+      "start": 371.96,
+      "end": 372.96,
+      "text": "high."
+    },
+    {
+      "id": 124,
+      "start": 372.96,
+      "end": 375.96,
+      "text": "It's hard to come up with which language you should be using."
+    },
+    {
+      "id": 125,
+      "start": 375.96,
+      "end": 378.96,
+      "text": "One of the interesting things we found in this paper is,"
+    },
+    {
+      "id": 126,
+      "start": 378.96,
+      "end": 382.96,
+      "text": "we actually trained a model to try to predict which language"
+    },
+    {
+      "id": 127,
+      "start": 382.96,
+      "end": 384.96,
+      "text": "would be the best to transfer from."
+    },
+    {
+      "id": 128,
+      "start": 384.96,
+      "end": 390.96,
+      "text": "But the most useful feature overall was how close the languages are on the globe."
+    },
+    {
+      "id": 129,
+      "start": 390.96,
+      "end": 392.96,
+      "text": "Which is kind of weird, right?"
+    },
+    {
+      "id": 130,
+      "start": 392.96,
+      "end": 395.96,
+      "text": "Just because languages are close on the globe doesn't mean they're similar."
+    },
+    {
+      "id": 131,
+      "start": 395.96,
+      "end": 396.96,
+      "text": "Like, you come up with,"
+    },
+    {
+      "id": 132,
+      "start": 396.96,
+      "end": 397.96,
+      "text": "um,"
+    },
+    {
+      "id": 133,
+      "start": 397.96,
+      "end": 398.96,
+      "text": "bass in Spanish,"
+    },
+    {
+      "id": 134,
+      "start": 398.96,
+      "end": 401.96,
+      "text": "which are very, very different in every way."
+    },
+    {
+      "id": 135,
+      "start": 401.96,
+      "end": 402.96,
+      "text": "Um,"
+    },
+    {
+      "id": 136,
+      "start": 402.96,
+      "end": 404.96,
+      "text": "but,"
+    },
+    {
+      "id": 137,
+      "start": 404.96,
+      "end": 409.96,
+      "text": "languages that are close on the globe tend to be similar with respect to both vocabulary and syntax on average."
+    },
+    {
+      "id": 138,
+      "start": 409.96,
+      "end": 410.96,
+      "text": "And so because of that,"
+    },
+    {
+      "id": 139,
+      "start": 410.96,
+      "end": 413.96,
+      "text": "it's a pretty good indicator that a language would be a good,"
+    },
+    {
+      "id": 140,
+      "start": 413.96,
+      "end": 418.96,
+      "text": "uh, transfer language."
+    },
+    {
+      "id": 141,
+      "start": 418.96,
+      "end": 420.96,
+      "text": "Um, if languages don't share the same script,"
+    },
+    {
+      "id": 142,
+      "start": 420.96,
+      "end": 421.96,
+      "text": "actually,"
+    },
+    {
+      "id": 143,
+      "start": 421.96,
+      "end": 423.96,
+      "text": "I have an example of pivoting here, uh,"
+    },
+    {
+      "id": 144,
+      "start": 423.96,
+      "end": 424.96,
+      "text": "where we can pivot, uh,"
+    },
+    {
+      "id": 145,
+      "start": 424.96,
+      "end": 425.96,
+      "text": "from,"
+    },
+    {
+      "id": 146,
+      "start": 425.96,
+      "end": 426.96,
+      "text": "uh,"
+    },
+    {
+      "id": 147,
+      "start": 426.96,
+      "end": 431.96,
+      "text": "Marathi into Hindi and then into another language for linking across entities."
+    },
+    {
+      "id": 148,
+      "start": 431.96,
+      "end": 433.96,
+      "text": "And so, um,"
+    },
+    {
+      "id": 149,
+      "start": 433.96,
+      "end": 435.96,
+      "text": "we demonstrated that you could pivot."
+    },
+    {
+      "id": 150,
+      "start": 435.96,
+      "end": 438.96,
+      "text": "Um, another thing that you can do, like, um,"
+    },
+    {
+      "id": 151,
+      "start": 438.96,
+      "end": 440.96,
+      "text": "as we mentioned in the last class,"
+    },
+    {
+      "id": 152,
+      "start": 440.96,
+      "end": 442.96,
+      "text": "or, Linda mentioned in the last class,"
+    },
+    {
+      "id": 153,
+      "start": 442.96,
+      "end": 444.96,
+      "text": "there's an idea of IPA,"
+    },
+    {
+      "id": 154,
+      "start": 444.96,
+      "end": 446.96,
+      "text": "um, the international phonetic alphabet,"
+    },
+    {
+      "id": 155,
+      "start": 446.96,
+      "end": 450.96,
+      "text": "which kind of gives you an idea of how things are pronounced."
+    },
+    {
+      "id": 156,
+      "start": 450.96,
+      "end": 452.96,
+      "text": "And in some cases,"
+    },
+    {
+      "id": 157,
+      "start": 452.96,
+      "end": 454.96,
+      "text": "languages might have a different script,"
+    },
+    {
+      "id": 158,
+      "start": 454.96,
+      "end": 456.96,
+      "text": "but if you normalize them into IPA,"
+    },
+    {
+      "id": 159,
+      "start": 456.96,
+      "end": 458.96,
+      "text": "you could normalize them into the pronunciation,"
+    },
+    {
+      "id": 160,
+      "start": 458.96,
+      "end": 463.96,
+      "text": "and actually things are pronounced rather similarly in a lot of, uh, related languages."
+    },
+    {
+      "id": 161,
+      "start": 463.96,
+      "end": 465.96,
+      "text": "One thing you need to be careful about though,"
+    },
+    {
+      "id": 162,
+      "start": 465.96,
+      "end": 468.96,
+      "text": "is we actually found this hurt accuracy in a lot of languages."
+    },
+    {
+      "id": 163,
+      "start": 468.96,
+      "end": 471.96,
+      "text": "Uh, to give an example, English and French."
+    },
+    {
+      "id": 164,
+      "start": 471.96,
+      "end": 474.96,
+      "text": "So if anybody has studied French,"
+    },
+    {
+      "id": 165,
+      "start": 474.96,
+      "end": 476.96,
+      "text": "you know that,"
+    },
+    {
+      "id": 166,
+      "start": 476.96,
+      "end": 481.96,
+      "text": "if anybody has studied French as a second language speaker after studying English,"
+    },
+    {
+      "id": 167,
+      "start": 481.96,
+      "end": 483.96,
+      "text": "you know that even though you can read the characters,"
+    },
+    {
+      "id": 168,
+      "start": 483.96,
+      "end": 486.96,
+      "text": "you have no idea how they're pronounced if you're not a very good French speaker."
+    },
+    {
+      "id": 169,
+      "start": 486.96,
+      "end": 488.96,
+      "text": "And so basically, um,"
+    },
+    {
+      "id": 170,
+      "start": 488.96,
+      "end": 491.96,
+      "text": "the way it's written is closer than the way it's pronounced."
+    },
+    {
+      "id": 171,
+      "start": 491.96,
+      "end": 495.96,
+      "text": "So you can't just normalize everything into pronunciation and just hope it works."
+    },
+    {
+      "id": 172,
+      "start": 495.96,
+      "end": 496.96,
+      "text": "So, um,"
+    },
+    {
+      "id": 173,
+      "start": 496.96,
+      "end": 500.96,
+      "text": "that's another technique that you use."
+    },
+    {
+      "id": 174,
+      "start": 500.96,
+      "end": 506.96,
+      "text": "Um, I'd also like to talk a little bit about how we share parameters between languages."
+    },
+    {
+      "id": 175,
+      "start": 506.96,
+      "end": 508.96,
+      "text": "And, um,"
+    },
+    {
+      "id": 176,
+      "start": 508.96,
+      "end": 510.96,
+      "text": "there is a bunch of different ways we can do this."
+    },
+    {
+      "id": 177,
+      "start": 510.96,
+      "end": 513.96,
+      "text": "Um, one is sharing all parameters."
+    },
+    {
+      "id": 178,
+      "start": 513.96,
+      "end": 518.96,
+      "text": "So, uh, just have a single model that where all of the parameters are the same."
+    },
+    {
+      "id": 179,
+      "start": 518.96,
+      "end": 519.96,
+      "text": "Um,"
+    },
+    {
+      "id": 180,
+      "start": 519.96,
+      "end": 526.96,
+      "text": "previously there were methods that shared only like an encoder or an attention mechanism."
+    },
+    {
+      "id": 181,
+      "start": 526.96,
+      "end": 531.96,
+      "text": "Um, also sharing some matrices of the transformer model."
+    },
+    {
+      "id": 182,
+      "start": 531.96,
+      "end": 535.96,
+      "text": "Um, using a parameter generator to generate parameters per language."
+    },
+    {
+      "id": 183,
+      "start": 535.96,
+      "end": 536.96,
+      "text": "This is,"
+    },
+    {
+      "id": 184,
+      "start": 536.96,
+      "end": 537.96,
+      "text": "I like this paper."
+    },
+    {
+      "id": 185,
+      "start": 537.96,
+      "end": 539.96,
+      "text": "It's one of my papers."
+    },
+    {
+      "id": 186,
+      "start": 539.96,
+      "end": 540.96,
+      "text": "I like this paper,"
+    },
+    {
+      "id": 187,
+      "start": 540.96,
+      "end": 541.96,
+      "text": "but it's not super practical."
+    },
+    {
+      "id": 188,
+      "start": 541.96,
+      "end": 545.96,
+      "text": "But basically we used a neural network to generate the parameters of the multilingual model."
+    },
+    {
+      "id": 189,
+      "start": 545.96,
+      "end": 546.96,
+      "text": "Um,"
+    },
+    {
+      "id": 190,
+      "start": 546.96,
+      "end": 550.96,
+      "text": "and we fed in things like information about what type of language it was and stuff like that."
+    },
+    {
+      "id": 191,
+      "start": 550.96,
+      "end": 551.96,
+      "text": "Um,"
+    },
+    {
+      "id": 192,
+      "start": 551.96,
+      "end": 552.96,
+      "text": "so kind of ambitious,"
+    },
+    {
+      "id": 193,
+      "start": 552.96,
+      "end": 553.96,
+      "text": "but not, uh,"
+    },
+    {
+      "id": 194,
+      "start": 553.96,
+      "end": 555.96,
+      "text": "it requires a lot of parameters."
+    },
+    {
+      "id": 195,
+      "start": 555.96,
+      "end": 556.96,
+      "text": "So it's not super practical."
+    },
+    {
+      "id": 196,
+      "start": 556.96,
+      "end": 557.96,
+      "text": "But the more, um,"
+    },
+    {
+      "id": 197,
+      "start": 557.96,
+      "end": 564.96,
+      "text": "common thing that people are using now are, uh, things like language experts or adapters."
+    },
+    {
+      "id": 198,
+      "start": 564.96,
+      "end": 570.96,
+      "text": "And so the idea here about language experts is basically, um,"
+    },
+    {
+      "id": 199,
+      "start": 570.96,
+      "end": 576.96,
+      "text": "it's a layer that you insert into a particular part of the,"
+    },
+    {
+      "id": 200,
+      "start": 576.96,
+      "end": 577.96,
+      "text": "uh,"
+    },
+    {
+      "id": 201,
+      "start": 577.96,
+      "end": 581.96,
+      "text": "into a particular part of the model."
+    },
+    {
+      "id": 202,
+      "start": 581.96,
+      "end": 586.96,
+      "text": "And this is a kind of adapter style parameter efficient training layer,"
+    },
+    {
+      "id": 203,
+      "start": 586.96,
+      "end": 588.96,
+      "text": "where you, uh,"
+    },
+    {
+      "id": 204,
+      "start": 588.96,
+      "end": 590.96,
+      "text": "down weight and up weight,"
+    },
+    {
+      "id": 205,
+      "start": 590.96,
+      "end": 591.96,
+      "text": "um,"
+    },
+    {
+      "id": 206,
+      "start": 591.96,
+      "end": 592.96,
+      "text": "sorry, down,"
+    },
+    {
+      "id": 207,
+      "start": 592.96,
+      "end": 593.96,
+      "text": "uh,"
+    },
+    {
+      "id": 208,
+      "start": 593.96,
+      "end": 595.96,
+      "text": "down sample and up samples."
+    },
+    {
+      "id": 209,
+      "start": 595.96,
+      "end": 598.96,
+      "text": "So it's kind of like Laura or in adapter or something like that."
+    },
+    {
+      "id": 210,
+      "start": 598.96,
+      "end": 600.96,
+      "text": "So few parameters for the language."
+    }
+  ],
+  "language": "en"
+}

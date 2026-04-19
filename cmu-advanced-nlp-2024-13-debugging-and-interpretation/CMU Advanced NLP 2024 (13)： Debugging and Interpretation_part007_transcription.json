@@ -1,0 +1,953 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 4.12,
+      "text": "it is minus positive and we got the taste is unpleasant."
+    },
+    {
+      "id": 1,
+      "start": 4.12,
+      "end": 9.64,
+      "text": "And similarly, in the reverse directions,"
+    },
+    {
+      "id": 2,
+      "start": 9.64,
+      "end": 11.64,
+      "text": "it turns out that the magnitude matters"
+    },
+    {
+      "id": 3,
+      "start": 11.64,
+      "end": 15.92,
+      "text": "because for every single sequence,"
+    },
+    {
+      "id": 4,
+      "start": 15.92,
+      "end": 18.6,
+      "text": "there's kind of an end-dimensional ball"
+    },
+    {
+      "id": 5,
+      "start": 18.6,
+      "end": 20.96,
+      "text": "around that steering vector that we found"
+    },
+    {
+      "id": 6,
+      "start": 20.96,
+      "end": 24.56,
+      "text": "that also decodes that specific sequence."
+    },
+    {
+      "id": 7,
+      "start": 24.56,
+      "end": 27.6,
+      "text": "And so that shows that the space is kind of reasonably"
+    },
+    {
+      "id": 8,
+      "start": 27.6,
+      "end": 28.32,
+      "text": "well-formed."
+    },
+    {
+      "id": 9,
+      "start": 28.32,
+      "end": 33.6,
+      "text": "There is, of course, a lot of weird sort of areas."
+    },
+    {
+      "id": 10,
+      "start": 33.6,
+      "end": 36.24,
+      "text": "And so if you've got to poke around in steering vector space"
+    },
+    {
+      "id": 11,
+      "start": 36.24,
+      "end": 38.8,
+      "text": "and sort of try to sample from it,"
+    },
+    {
+      "id": 12,
+      "start": 38.8,
+      "end": 40.88,
+      "text": "eventually you'll find some weird edge cases"
+    },
+    {
+      "id": 13,
+      "start": 40.88,
+      "end": 46.04,
+      "text": "and some garbage and repeated text in the left and right."
+    },
+    {
+      "id": 14,
+      "start": 46.04,
+      "end": 48.76,
+      "text": "Any questions here before I kind of rapid-fire through"
+    },
+    {
+      "id": 15,
+      "start": 48.76,
+      "end": 50.64,
+      "text": "the last few things?"
+    },
+    {
+      "id": 16,
+      "start": 53.56,
+      "end": 56.76,
+      "text": "Yeah, I wanted to like, measure shear force."
+    },
+    {
+      "id": 17,
+      "start": 56.96,
+      "end": 58.96,
+      "text": "So you went beyond this."
+    },
+    {
+      "id": 18,
+      "start": 58.96,
+      "end": 61.76,
+      "text": "Yeah, so you went beyond this."
+    },
+    {
+      "id": 19,
+      "start": 61.76,
+      "end": 65.88,
+      "text": "There was, so in these specific experiments,"
+    },
+    {
+      "id": 20,
+      "start": 65.88,
+      "end": 68.68,
+      "text": "we looked at the middle of GPT-2."
+    },
+    {
+      "id": 21,
+      "start": 68.68,
+      "end": 71.08,
+      "text": "So this was of layer six, layer seven,"
+    },
+    {
+      "id": 22,
+      "start": 71.08,
+      "end": 72.56,
+      "text": "and at the first time step."
+    },
+    {
+      "id": 23,
+      "start": 72.56,
+      "end": 76.32,
+      "text": "We didn't do any of the magnitude scaling."
+    },
+    {
+      "id": 24,
+      "start": 76.32,
+      "end": 79.4,
+      "text": "And so you can imagine if you put a giant vector in there,"
+    },
+    {
+      "id": 25,
+      "start": 79.4,
+      "end": 81.44,
+      "text": "the model's never, the rest of the model"
+    },
+    {
+      "id": 26,
+      "start": 81.44,
+      "end": 83.52,
+      "text": "has never seen something of that magnitude."
+    },
+    {
+      "id": 27,
+      "start": 83.52,
+      "end": 86.48,
+      "text": "So it's now in a weird state"
+    },
+    {
+      "id": 28,
+      "start": 86.48,
+      "end": 87.56,
+      "text": "and it's just going to break."
+    },
+    {
+      "id": 29,
+      "start": 87.56,
+      "end": 89.0,
+      "text": "So if you put this to like,"
+    },
+    {
+      "id": 30,
+      "start": 89.0,
+      "end": 91.64,
+      "text": "I don't know, 500 or something like this, it breaks."
+    },
+    {
+      "id": 31,
+      "start": 91.64,
+      "end": 92.8,
+      "text": "It just has no idea."
+    },
+    {
+      "id": 32,
+      "start": 92.8,
+      "end": 94.48,
+      "text": "So I could basically like,"
+    },
+    {
+      "id": 33,
+      "start": 94.48,
+      "end": 95.96,
+      "text": "tell you how a shear model,"
+    },
+    {
+      "id": 34,
+      "start": 95.96,
+      "end": 98.0,
+      "text": "a, it's like a completely untrained model."
+    },
+    {
+      "id": 35,
+      "start": 98.0,
+      "end": 100.16,
+      "text": "We looked similar to like random perfect."
+    },
+    {
+      "id": 36,
+      "start": 100.16,
+      "end": 103.12,
+      "text": "You get, repeat something like this."
+    },
+    {
+      "id": 37,
+      "start": 103.12,
+      "end": 106.32,
+      "text": "Smaller you end up staying in this ball for the sequence."
+    },
+    {
+      "id": 38,
+      "start": 106.32,
+      "end": 108.0,
+      "text": "Two seemed pretty reasonable,"
+    },
+    {
+      "id": 39,
+      "start": 108.0,
+      "end": 110.12,
+      "text": "but we didn't spend a lot of time."
+    },
+    {
+      "id": 40,
+      "start": 110.12,
+      "end": 113.68,
+      "text": "It's like the day before the paper was doing the work."
+    },
+    {
+      "id": 41,
+      "start": 113.68,
+      "end": 115.08,
+      "text": "Two seems reasonable."
+    },
+    {
+      "id": 42,
+      "start": 115.08,
+      "end": 118.2,
+      "text": "We went to three, we went to five, 10 broke,"
+    },
+    {
+      "id": 43,
+      "start": 118.2,
+      "end": 120.92,
+      "text": "five, some were two seems reasonable."
+    },
+    {
+      "id": 44,
+      "start": 123.88,
+      "end": 125.16,
+      "text": "Different signs, hopefully."
+    },
+    {
+      "id": 45,
+      "start": 126.36,
+      "end": 127.2,
+      "text": "Cool."
+    },
+    {
+      "id": 46,
+      "start": 127.2,
+      "end": 129.8,
+      "text": "So I'll talk about a similar type of work"
+    },
+    {
+      "id": 47,
+      "start": 129.8,
+      "end": 133.56,
+      "text": "came out more recently on different time interventions."
+    },
+    {
+      "id": 48,
+      "start": 133.56,
+      "end": 135.28,
+      "text": "So basically they used some of the ideas"
+    },
+    {
+      "id": 49,
+      "start": 135.28,
+      "end": 138.28,
+      "text": "that we talked about earlier, they used linear probes."
+    },
+    {
+      "id": 50,
+      "start": 138.28,
+      "end": 141.68,
+      "text": "To find attention had that correspond to a desired attribute,"
+    },
+    {
+      "id": 51,
+      "start": 141.68,
+      "end": 143.0,
+      "text": "they did this for truthful QA."
+    },
+    {
+      "id": 52,
+      "start": 143.0,
+      "end": 146.4,
+      "text": "So their hope was to find truthful directions"
+    },
+    {
+      "id": 53,
+      "start": 146.4,
+      "end": 147.32,
+      "text": "in latent space."
+    },
+    {
+      "id": 54,
+      "start": 148.32,
+      "end": 151.32,
+      "text": "And then they shifted the attention had activations"
+    },
+    {
+      "id": 55,
+      "start": 152.52,
+      "end": 156.12,
+      "text": "during inference along the directions determined by the preps."
+    },
+    {
+      "id": 56,
+      "start": 156.12,
+      "end": 159.92,
+      "text": "So what this kind of looks like is you take your attention heads,"
+    },
+    {
+      "id": 57,
+      "start": 159.92,
+      "end": 162.96,
+      "text": "you probe them, so you stick a classifier on top,"
+    },
+    {
+      "id": 58,
+      "start": 162.96,
+      "end": 164.8,
+      "text": "this classifier learns a disentangle,"
+    },
+    {
+      "id": 59,
+      "start": 164.8,
+      "end": 167.12,
+      "text": "sort of truthful and untrustful."
+    },
+    {
+      "id": 60,
+      "start": 167.12,
+      "end": 170.72,
+      "text": "And now you have a hyperplane"
+    },
+    {
+      "id": 61,
+      "start": 170.72,
+      "end": 173.56,
+      "text": "and then you can move orthogonally to the hyperplane"
+    },
+    {
+      "id": 62,
+      "start": 173.56,
+      "end": 176.8,
+      "text": "in the direction depending on which way you wanna shift."
+    },
+    {
+      "id": 63,
+      "start": 176.8,
+      "end": 179.08,
+      "text": "So if you wanna move towards truthful,"
+    },
+    {
+      "id": 64,
+      "start": 179.08,
+      "end": 181.56,
+      "text": "you can move that direction or away."
+    },
+    {
+      "id": 65,
+      "start": 182.96,
+      "end": 185.44,
+      "text": "And they do this, it works pretty well."
+    },
+    {
+      "id": 66,
+      "start": 185.44,
+      "end": 187.92,
+      "text": "But I think they do this for GPT model"
+    },
+    {
+      "id": 67,
+      "start": 187.92,
+      "end": 190.4,
+      "text": "and maybe a Lama model,"
+    },
+    {
+      "id": 68,
+      "start": 190.4,
+      "end": 192.88,
+      "text": "can't remember the exact details."
+    },
+    {
+      "id": 69,
+      "start": 192.88,
+      "end": 197.16,
+      "text": "And it's a similar intervention that basically"
+    },
+    {
+      "id": 70,
+      "start": 197.16,
+      "end": 200.92,
+      "text": "had this vector that they followed."
+    },
+    {
+      "id": 71,
+      "start": 200.92,
+      "end": 204.4,
+      "text": "And they have a little note on scaling,"
+    },
+    {
+      "id": 72,
+      "start": 204.4,
+      "end": 208.44,
+      "text": "if they scale, if the magnitude of the thing is too much,"
+    },
+    {
+      "id": 73,
+      "start": 208.44,
+      "end": 212.72,
+      "text": "things break so they have a hyperparameter search"
+    },
+    {
+      "id": 74,
+      "start": 212.72,
+      "end": 215.04,
+      "text": "for the magnitude of activation."
+    },
+    {
+      "id": 75,
+      "start": 217.28,
+      "end": 220.28,
+      "text": "But it's sort of a very similar approach to what we did"
+    },
+    {
+      "id": 76,
+      "start": 220.28,
+      "end": 223.2,
+      "text": "with this focus is on specific attention heads."
+    },
+    {
+      "id": 77,
+      "start": 223.2,
+      "end": 224.96,
+      "text": "And they don't do this for all the attention then."
+    },
+    {
+      "id": 78,
+      "start": 224.96,
+      "end": 226.8,
+      "text": "So back to your question earlier,"
+    },
+    {
+      "id": 79,
+      "start": 226.8,
+      "end": 228.2,
+      "text": "do attention heads specialize?"
+    },
+    {
+      "id": 80,
+      "start": 228.2,
+      "end": 229.52,
+      "text": "It seems like they do."
+    },
+    {
+      "id": 81,
+      "start": 229.52,
+      "end": 234.52,
+      "text": "And so there are many of them that have no probing accuracy"
+    },
+    {
+      "id": 82,
+      "start": 234.56,
+      "end": 239.24,
+      "text": "or limited probing accuracy and actually are like distractors"
+    },
+    {
+      "id": 83,
+      "start": 239.24,
+      "end": 240.48,
+      "text": "in the truthful direction."
+    },
+    {
+      "id": 84,
+      "start": 242.12,
+      "end": 242.96,
+      "text": "Any questions?"
+    },
+    {
+      "id": 85,
+      "start": 248.96,
+      "end": 251.64,
+      "text": "So more activation manipulations."
+    },
+    {
+      "id": 86,
+      "start": 251.64,
+      "end": 256.16,
+      "text": "There's some work recently on contrastive steering vectors."
+    },
+    {
+      "id": 87,
+      "start": 256.16,
+      "end": 259.88,
+      "text": "So the way we did this sentiment steering"
+    },
+    {
+      "id": 88,
+      "start": 259.88,
+      "end": 261.68,
+      "text": "was we had some positive sentences,"
+    },
+    {
+      "id": 89,
+      "start": 261.68,
+      "end": 262.72,
+      "text": "some negative sentences."
+    },
+    {
+      "id": 90,
+      "start": 262.72,
+      "end": 264.92,
+      "text": "They weren't tied together in any reason of the way"
+    },
+    {
+      "id": 91,
+      "start": 264.92,
+      "end": 267.08,
+      "text": "we found their steering vectors separately."
+    },
+    {
+      "id": 92,
+      "start": 267.08,
+      "end": 270.08,
+      "text": "You can imagine the case in maybe a more useful case"
+    },
+    {
+      "id": 93,
+      "start": 271.16,
+      "end": 274.48,
+      "text": "with two prompts that you can design"
+    },
+    {
+      "id": 94,
+      "start": 274.48,
+      "end": 276.48,
+      "text": "that go two different ways."
+    },
+    {
+      "id": 95,
+      "start": 276.48,
+      "end": 279.32,
+      "text": "You can sort of find their representations"
+    },
+    {
+      "id": 96,
+      "start": 279.32,
+      "end": 282.44,
+      "text": "and do the manipulation, the differences here,"
+    },
+    {
+      "id": 97,
+      "start": 284.04,
+      "end": 288.28,
+      "text": "like individually, rather than for a whole concept"
+    },
+    {
+      "id": 98,
+      "start": 288.28,
+      "end": 290.32,
+      "text": "or a whole attribute."
+    },
+    {
+      "id": 99,
+      "start": 290.32,
+      "end": 295.08,
+      "text": "And the value here is your context is preserved."
+    },
+    {
+      "id": 100,
+      "start": 295.08,
+      "end": 297.0,
+      "text": "So if you're doing something like,"
+    },
+    {
+      "id": 101,
+      "start": 297.0,
+      "end": 299.12,
+      "text": "you're doing retrieval-based things now,"
+    },
+    {
+      "id": 102,
+      "start": 299.12,
+      "end": 300.48,
+      "text": "you have some sort of document"
+    },
+    {
+      "id": 103,
+      "start": 300.48,
+      "end": 301.92,
+      "text": "and then you have a question."
+    },
+    {
+      "id": 104,
+      "start": 301.92,
+      "end": 303.68,
+      "text": "If your question sort of,"
+    },
+    {
+      "id": 105,
+      "start": 304.6,
+      "end": 306.28,
+      "text": "if you wanna ask it in two different ways"
+    },
+    {
+      "id": 106,
+      "start": 306.28,
+      "end": 308.4,
+      "text": "for two different things,"
+    },
+    {
+      "id": 107,
+      "start": 308.4,
+      "end": 310.08,
+      "text": "this would be a much better approach"
+    },
+    {
+      "id": 108,
+      "start": 310.08,
+      "end": 312.84,
+      "text": "if you wanna use steering vectors than the stuff I was doing."
+    },
+    {
+      "id": 109,
+      "start": 314.68,
+      "end": 316.96,
+      "text": "And it seems to work a little bit better."
+    },
+    {
+      "id": 110,
+      "start": 316.96,
+      "end": 318.8,
+      "text": "They didn't compare against our things"
+    },
+    {
+      "id": 111,
+      "start": 318.8,
+      "end": 320.76,
+      "text": "because it's not like an apple-sables comparison,"
+    },
+    {
+      "id": 112,
+      "start": 320.76,
+      "end": 323.68,
+      "text": "but it seems to work better and be more general"
+    },
+    {
+      "id": 113,
+      "start": 323.68,
+      "end": 324.68,
+      "text": "and be more useful."
+    },
+    {
+      "id": 114,
+      "start": 327.08,
+      "end": 328.16,
+      "text": "Any questions?"
+    },
+    {
+      "id": 115,
+      "start": 334.08,
+      "end": 334.92,
+      "text": "Cool."
+    },
+    {
+      "id": 116,
+      "start": 334.92,
+      "end": 338.36,
+      "text": "So what can model interpretability give off?"
+    },
+    {
+      "id": 117,
+      "start": 339.32,
+      "end": 340.64,
+      "text": "These are my concluding remarks."
+    },
+    {
+      "id": 118,
+      "start": 340.64,
+      "end": 343.28,
+      "text": "So hopefully we get a better understanding"
+    },
+    {
+      "id": 119,
+      "start": 343.28,
+      "end": 345.08,
+      "text": "of how language models work."
+    },
+    {
+      "id": 120,
+      "start": 345.08,
+      "end": 347.88,
+      "text": "They're internals, they're structured."
+    },
+    {
+      "id": 121,
+      "start": 347.88,
+      "end": 352.24,
+      "text": "You get to understand kind of why they do really well."
+    },
+    {
+      "id": 122,
+      "start": 352.24,
+      "end": 354.32,
+      "text": "This is still like very, very unclear."
+    },
+    {
+      "id": 123,
+      "start": 355.8,
+      "end": 358.0,
+      "text": "And hopefully we find lightweight methods"
+    },
+    {
+      "id": 124,
+      "start": 358.0,
+      "end": 359.72,
+      "text": "to control and steer models."
+    },
+    {
+      "id": 125,
+      "start": 359.72,
+      "end": 361.96,
+      "text": "As models become more and more useful"
+    },
+    {
+      "id": 126,
+      "start": 361.96,
+      "end": 365.16,
+      "text": "and impact more users,"
+    },
+    {
+      "id": 127,
+      "start": 365.16,
+      "end": 368.28,
+      "text": "we need better ways to control and steer them."
+    },
+    {
+      "id": 128,
+      "start": 368.8,
+      "end": 373.8,
+      "text": "And it's unclear how much industry will devote to these things."
+    },
+    {
+      "id": 129,
+      "start": 374.84,
+      "end": 378.64,
+      "text": "So it might be the role of academia to do more science"
+    },
+    {
+      "id": 130,
+      "start": 378.64,
+      "end": 381.88,
+      "text": "in order to figure out how to control and steer these better."
+    },
+    {
+      "id": 131,
+      "start": 383.84,
+      "end": 387.08,
+      "text": "And hopefully we can also find potential alternatives"
+    },
+    {
+      "id": 132,
+      "start": 387.08,
+      "end": 390.28,
+      "text": "or complimentary methods to do alignment."
+    },
+    {
+      "id": 133,
+      "start": 391.6,
+      "end": 395.64,
+      "text": "Our LHF is kind of expensive."
+    },
+    {
+      "id": 134,
+      "start": 395.64,
+      "end": 398.52,
+      "text": "And if we could do this with limited data"
+    },
+    {
+      "id": 135,
+      "start": 398.52,
+      "end": 401.88,
+      "text": "and exploit structure and information"
+    },
+    {
+      "id": 136,
+      "start": 401.88,
+      "end": 403.2,
+      "text": "that's already in the model,"
+    },
+    {
+      "id": 137,
+      "start": 403.2,
+      "end": 405.52,
+      "text": "Marcel, then in these methods,"
+    },
+    {
+      "id": 138,
+      "start": 407.08,
+      "end": 409.32,
+      "text": "maybe we can align them better."
+    },
+    {
+      "id": 139,
+      "start": 409.32,
+      "end": 412.24,
+      "text": "And these things don't have to be alternatives."
+    },
+    {
+      "id": 140,
+      "start": 412.24,
+      "end": 414.92,
+      "text": "They can be complimentary to our LHF."
+    },
+    {
+      "id": 141,
+      "start": 417.12,
+      "end": 418.24,
+      "text": "Here's some resources."
+    },
+    {
+      "id": 142,
+      "start": 418.24,
+      "end": 421.36,
+      "text": "This is an extremely incomplete group,"
+    },
+    {
+      "id": 143,
+      "start": 421.36,
+      "end": 424.08,
+      "text": "but here's some folks that work on model interpretability."
+    },
+    {
+      "id": 144,
+      "start": 424.08,
+      "end": 425.2,
+      "text": "There's many of these,"
+    },
+    {
+      "id": 145,
+      "start": 426.84,
+      "end": 429.32,
+      "text": "aside some marks from some of these teams,"
+    },
+    {
+      "id": 146,
+      "start": 429.32,
+      "end": 431.72,
+      "text": "but there's a lot of people working on it"
+    },
+    {
+      "id": 147,
+      "start": 431.72,
+      "end": 435.6,
+      "text": "in the last year, there's been an explosion,"
+    },
+    {
+      "id": 148,
+      "start": 435.6,
+      "end": 438.84,
+      "text": "especially in the mechanistic interpretability kind of world."
+    },
+    {
+      "id": 149,
+      "start": 438.84,
+      "end": 443.32,
+      "text": "Sasha Rush had a recent tweet that asked,"
+    },
+    {
+      "id": 150,
+      "start": 443.32,
+      "end": 445.08,
+      "text": "like, prospective grad students,"
+    },
+    {
+      "id": 151,
+      "start": 445.08,
+      "end": 447.36,
+      "text": "what is the topic that they're most excited about"
+    },
+    {
+      "id": 152,
+      "start": 447.36,
+      "end": 448.92,
+      "text": "when mechanistic interpretability"
+    },
+    {
+      "id": 153,
+      "start": 448.92,
+      "end": 451.0,
+      "text": "was a thing that seemed to have won out."
+    },
+    {
+      "id": 154,
+      "start": 452.0,
+      "end": 457.0,
+      "text": "So I heard you to kind of dive into this literature"
+    },
+    {
+      "id": 155,
+      "start": 457.0,
+      "end": 461.0,
+      "text": "and read some of the papers if you're excited about it."
+    },
+    {
+      "id": 156,
+      "start": 461.0,
+      "end": 464.0,
+      "text": "And yes, thanks for your attention."
+    },
+    {
+      "id": 157,
+      "start": 464.0,
+      "end": 465.0,
+      "text": "For our content."
+    }
+  ],
+  "language": "en"
+}

@@ -1,0 +1,665 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 4.0,
+      "text": "This is the probability according to the model M."
+    },
+    {
+      "id": 1,
+      "start": 4.0,
+      "end": 9.0,
+      "text": "So this is just the probability of the next token according to model M."
+    },
+    {
+      "id": 2,
+      "start": 9.0,
+      "end": 13.0,
+      "text": "This is the probability of selecting model M."
+    },
+    {
+      "id": 3,
+      "start": 13.0,
+      "end": 17.0,
+      "text": "So you talked a little bit about the Bayesian approach to this."
+    },
+    {
+      "id": 4,
+      "start": 17.0,
+      "end": 25.0,
+      "text": "And this is basically saying what is the probability that the parameters of model M are."
+    },
+    {
+      "id": 5,
+      "start": 25.0,
+      "end": 30.0,
+      "text": "The ones that we want to be choosing in this particular time step."
+    },
+    {
+      "id": 6,
+      "start": 30.0,
+      "end": 33.0,
+      "text": "And then we will we will calculate this."
+    },
+    {
+      "id": 7,
+      "start": 33.0,
+      "end": 41.0,
+      "text": "And so then you take the sum over this and this gives you the next probability."
+    },
+    {
+      "id": 8,
+      "start": 41.0,
+      "end": 45.0,
+      "text": "For the second term, you can do this in two ways."
+    },
+    {
+      "id": 9,
+      "start": 45.0,
+      "end": 49.0,
+      "text": "The most common way to do this is just have this be a constant."
+    },
+    {
+      "id": 10,
+      "start": 49.0,
+      "end": 54.0,
+      "text": "So you basically define."
+    },
+    {
+      "id": 11,
+      "start": 54.0,
+      "end": 58.0,
+      "text": "mixture weights."
+    },
+    {
+      "id": 12,
+      "start": 58.0,
+      "end": 61.0,
+      "text": "Which are like."
+    },
+    {
+      "id": 13,
+      "start": 61.0,
+      "end": 73.0,
+      "text": "Where the sum of the mixture weights is equal to one."
+    },
+    {
+      "id": 14,
+      "start": 73.0,
+      "end": 76.0,
+      "text": "And this is always between zero and one."
+    },
+    {
+      "id": 15,
+      "start": 76.0,
+      "end": 82.0,
+      "text": "And so if you do this, then this is just constantly you can interpolate them together constantly."
+    },
+    {
+      "id": 16,
+      "start": 82.0,
+      "end": 93.0,
+      "text": "But you can also actually explicitly model this probability and say, oh, I'm currently in a situation where I really think model M will do a good job of, you know, predicting the probability."
+    },
+    {
+      "id": 17,
+      "start": 93.0,
+      "end": 96.0,
+      "text": "So I want to put most of my probability on model M."
+    },
+    {
+      "id": 18,
+      "start": 96.0,
+      "end": 100.0,
+      "text": "So you can actually learn this dynamically as well."
+    },
+    {
+      "id": 19,
+      "start": 100.0,
+      "end": 112.0,
+      "text": "And so you have this actually is rather practical and easy to do because what you can do is you can just calculate the probability according to each model at each time step."
+    },
+    {
+      "id": 20,
+      "start": 112.0,
+      "end": 117.0,
+      "text": "And train this model separately without loading these models into memory at the time of training."
+    },
+    {
+      "id": 21,
+      "start": 117.0,
+      "end": 119.0,
+      "text": "So."
+    },
+    {
+      "id": 22,
+      "start": 119.0,
+      "end": 123.0,
+      "text": "Yeah, this is something you can do as well."
+    },
+    {
+      "id": 23,
+      "start": 123.0,
+      "end": 129.0,
+      "text": "Any questions about this."
+    },
+    {
+      "id": 24,
+      "start": 129.0,
+      "end": 134.0,
+      "text": "Cool. So the other option is log linear interpolation."
+    },
+    {
+      "id": 25,
+      "start": 134.0,
+      "end": 141.0,
+      "text": "And so linear interpolation, you're taking a linear combination of the probabilities of each model."
+    },
+    {
+      "id": 26,
+      "start": 141.0,
+      "end": 148.0,
+      "text": "Log linear interpolation, you're combining together the log probabilities of each model."
+    },
+    {
+      "id": 27,
+      "start": 148.0,
+      "end": 155.0,
+      "text": "And then re normalizing so that you get that you get an actual probability of the list."
+    },
+    {
+      "id": 28,
+      "start": 155.0,
+      "end": 161.0,
+      "text": "So basically what you do is you have this interpolation coefficient like I had before."
+    },
+    {
+      "id": 29,
+      "start": 161.0,
+      "end": 167.0,
+      "text": "But you're combining together the log probabilities."
+    },
+    {
+      "id": 30,
+      "start": 167.0,
+      "end": 173.0,
+      "text": "And so here we need to take the softmats."
+    },
+    {
+      "id": 31,
+      "start": 173.0,
+      "end": 181.0,
+      "text": "Thinking back here, I didn't take the softmats. Does anyone have an idea why I didn't take the softmats."
+    },
+    {
+      "id": 32,
+      "start": 181.0,
+      "end": 190.0,
+      "text": "Or why I didn't need to."
+    },
+    {
+      "id": 33,
+      "start": 190.0,
+      "end": 199.0,
+      "text": "Why why I need to."
+    },
+    {
+      "id": 34,
+      "start": 199.0,
+      "end": 205.0,
+      "text": "Yeah, so."
+    },
+    {
+      "id": 35,
+      "start": 205.0,
+      "end": 210.0,
+      "text": "This probability is guaranteed to be zero zero and one and add up to one."
+    },
+    {
+      "id": 36,
+      "start": 210.0,
+      "end": 214.0,
+      "text": "This probability is also guaranteed to be zero and one and add up to one."
+    },
+    {
+      "id": 37,
+      "start": 214.0,
+      "end": 218.0,
+      "text": "And then when you multiply those together, I do a little bit of math and that is very bad."
+    },
+    {
+      "id": 38,
+      "start": 218.0,
+      "end": 222.0,
+      "text": "That was open thing will be zero and one and add up to one."
+    },
+    {
+      "id": 39,
+      "start": 222.0,
+      "end": 227.0,
+      "text": "That's not the case anymore when we start doing things in log space because it's just not a linear function."
+    },
+    {
+      "id": 40,
+      "start": 227.0,
+      "end": 231.0,
+      "text": "So you need to re normalize like this."
+    },
+    {
+      "id": 41,
+      "start": 231.0,
+      "end": 234.0,
+      "text": "Luckily this is super easy like anything else you do in pytorch."
+    },
+    {
+      "id": 42,
+      "start": 234.0,
+      "end": 239.0,
+      "text": "You just add things together and take a softmax and you'll you'll get an output."
+    },
+    {
+      "id": 43,
+      "start": 239.0,
+      "end": 245.0,
+      "text": "But you do need to do this otherwise you're going to get something."
+    },
+    {
+      "id": 44,
+      "start": 245.0,
+      "end": 248.0,
+      "text": "Interpolation coefficient here also can be set to a constant."
+    },
+    {
+      "id": 45,
+      "start": 248.0,
+      "end": 255.0,
+      "text": "So you can you could learn it kind of dynamically or it can be separate."
+    },
+    {
+      "id": 46,
+      "start": 255.0,
+      "end": 258.0,
+      "text": "So and these actually have different meaning."
+    },
+    {
+      "id": 47,
+      "start": 258.0,
+      "end": 261.0,
+      "text": "Sorry, good."
+    },
+    {
+      "id": 48,
+      "start": 261.0,
+      "end": 266.0,
+      "text": "Yeah, yeah. So basically the way."
+    },
+    {
+      "id": 49,
+      "start": 266.0,
+      "end": 271.0,
+      "text": "The way you do this is you would have either."
+    },
+    {
+      "id": 50,
+      "start": 271.0,
+      "end": 281.0,
+      "text": "The same model you you would either take representations from one of these language models or you take representations from another bottle and you would just."
+    },
+    {
+      "id": 51,
+      "start": 281.0,
+      "end": 284.0,
+      "text": "So this model that protects."
+    },
+    {
+      "id": 52,
+      "start": 284.0,
+      "end": 295.0,
+      "text": "What this interpolation coefficient would be and optimization objective for that information coefficient is just not spicy."
+    },
+    {
+      "id": 53,
+      "start": 295.0,
+      "end": 301.0,
+      "text": "So this can also be good because this interpolation coefficient."
+    },
+    {
+      "id": 54,
+      "start": 301.0,
+      "end": 305.0,
+      "text": "Only like let's say you're interpolating two models together."
+    },
+    {
+      "id": 55,
+      "start": 305.0,
+      "end": 314.0,
+      "text": "It has one degree of freedom in each time step right because you're only predicting a probability."
+    },
+    {
+      "id": 56,
+      "start": 314.0,
+      "end": 323.0,
+      "text": "If you have five models you have you basically would be doing a softmax over five."
+    },
+    {
+      "id": 57,
+      "start": 323.0,
+      "end": 325.0,
+      "text": "And that's a lot fewer."
+    },
+    {
+      "id": 58,
+      "start": 325.0,
+      "end": 330.0,
+      "text": "That's a lot fewer than the whole vocabulary right and so this is relatively."
+    },
+    {
+      "id": 59,
+      "start": 330.0,
+      "end": 336.0,
+      "text": "And so this is a good interpolation coefficient is relatively easy compared to learning what we're into predict next."
+    },
+    {
+      "id": 60,
+      "start": 336.0,
+      "end": 340.0,
+      "text": "And because of this you could actually tune this."
+    },
+    {
+      "id": 61,
+      "start": 340.0,
+      "end": 344.0,
+      "text": "Sorry, you could tune this probability on a very small data set."
+    },
+    {
+      "id": 62,
+      "start": 344.0,
+      "end": 347.0,
+      "text": "And you could even have it be context independence."
+    },
+    {
+      "id": 63,
+      "start": 347.0,
+      "end": 351.0,
+      "text": "So you could just be, you know, calculating."
+    },
+    {
+      "id": 64,
+      "start": 351.0,
+      "end": 356.0,
+      "text": "Literally five five parameters here."
+    },
+    {
+      "id": 65,
+      "start": 356.0,
+      "end": 367.0,
+      "text": "So because of that like let's see you have a special domain or a special task where you have like 50 training examples or something like that or you know 100 training examples."
+    },
+    {
+      "id": 66,
+      "start": 367.0,
+      "end": 373.0,
+      "text": "You can learn this interpolation coefficient very effectively on just a few."
+    },
+    {
+      "id": 67,
+      "start": 373.0,
+      "end": 376.0,
+      "text": "A very small number of training examples."
+    },
+    {
+      "id": 68,
+      "start": 376.0,
+      "end": 383.0,
+      "text": "But like it could be very useful because like let's say you have a special domain medical language model."
+    },
+    {
+      "id": 69,
+      "start": 383.0,
+      "end": 390.0,
+      "text": "That's 1.3 billion parameters that you trained yourself and then you have a 70 billion parameter language model."
+    },
+    {
+      "id": 70,
+      "start": 390.0,
+      "end": 394.0,
+      "text": "That's like really good at modeling general English."
+    },
+    {
+      "id": 71,
+      "start": 394.0,
+      "end": 399.0,
+      "text": "So then you could learn the interpolation coefficient between those two such that."
+    },
+    {
+      "id": 72,
+      "start": 399.0,
+      "end": 405.0,
+      "text": "The large general purpose language model will be generating all of the kind of grammatical stuff."
+    },
+    {
+      "id": 73,
+      "start": 405.0,
+      "end": 412.0,
+      "text": "But whenever you switch over to modeling technical terms from the medical domain, then it learns to upweigh the medical language model is okay."
+    },
+    {
+      "id": 74,
+      "start": 412.0,
+      "end": 418.0,
+      "text": "So this can be quite this can be quite effective if you have a limited amount of data."
+    },
+    {
+      "id": 75,
+      "start": 418.0,
+      "end": 423.0,
+      "text": "There you want to find to be in this."
+    },
+    {
+      "id": 76,
+      "start": 423.0,
+      "end": 425.0,
+      "text": "Any other questions about that?"
+    },
+    {
+      "id": 77,
+      "start": 425.0,
+      "end": 428.0,
+      "text": "Yeah."
+    },
+    {
+      "id": 78,
+      "start": 428.0,
+      "end": 433.0,
+      "text": "I'm just going to talk about that."
+    },
+    {
+      "id": 79,
+      "start": 433.0,
+      "end": 435.0,
+      "text": "So linear versus log linear."
+    },
+    {
+      "id": 80,
+      "start": 435.0,
+      "end": 438.0,
+      "text": "You can actually think of this in logic."
+    },
+    {
+      "id": 81,
+      "start": 438.0,
+      "end": 441.0,
+      "text": "And what I mean by that is."
+    },
+    {
+      "id": 82,
+      "start": 441.0,
+      "end": 450.0,
+      "text": "Linear is kind of like a logical or it tries to come up with examples where either one of the two signs of hyperventilating."
+    },
+    {
+      "id": 83,
+      "start": 450.0,
+      "end": 454.0,
+      "text": "So we have the example of like bar around."
+    },
+    {
+      "id": 84,
+      "start": 454.0,
+      "end": 457.0,
+      "text": "Bar around nine."
+    },
+    {
+      "id": 85,
+      "start": 457.0,
+      "end": 486.0,
+      "text": "So if we take the average of these two in linear space."
+    },
+    {
+      "id": 86,
+      "start": 486.0,
+      "end": 489.0,
+      "text": "This would be 0.2."
+    },
+    {
+      "id": 87,
+      "start": 489.0,
+      "end": 492.0,
+      "text": "This would be 0.26."
+    },
+    {
+      "id": 88,
+      "start": 492.0,
+      "end": 496.0,
+      "text": "And this would be."
+    },
+    {
+      "id": 89,
+      "start": 496.0,
+      "end": 499.0,
+      "text": "0.21."
+    },
+    {
+      "id": 90,
+      "start": 499.0,
+      "end": 501.0,
+      "text": "And so."
+    },
+    {
+      "id": 91,
+      "start": 501.0,
+      "end": 504.0,
+      "text": "A linear combination between the two."
+    },
+    {
+      "id": 92,
+      "start": 504.0,
+      "end": 508.0,
+      "text": "We'll find run to be the highest scoring one."
+    },
+    {
+      "id": 93,
+      "start": 508.0,
+      "end": 512.0,
+      "text": "Because on the left side, we have one model that really likes this outfit."
+    },
+    {
+      "id": 94,
+      "start": 512.0,
+      "end": 515.0,
+      "text": "And we have another model that doesn't."
+    },
+    {
+      "id": 95,
+      "start": 515.0,
+      "end": 518.0,
+      "text": "This is."
+    },
+    {
+      "id": 96,
+      "start": 518.0,
+      "end": 527.0,
+      "text": "This can be good at using models that capture different traits or it can also be useful if like for example you have a."
+    },
+    {
+      "id": 97,
+      "start": 527.0,
+      "end": 541.0,
+      "text": "You have a small model that you really that really captures like very specific vocabulary and you want to update that specific vocabulary that gets a really low probability according to a general purpose model."
+    },
+    {
+      "id": 98,
+      "start": 541.0,
+      "end": 544.0,
+      "text": "This is also necessary when any model can assign zero probabilities."
+    },
+    {
+      "id": 99,
+      "start": 544.0,
+      "end": 548.0,
+      "text": "So if you have like an example of vocabulary that isn't included in the."
+    },
+    {
+      "id": 100,
+      "start": 548.0,
+      "end": 553.0,
+      "text": "The like vocabulary of another model or you have models with different vocabulary."
+    },
+    {
+      "id": 101,
+      "start": 553.0,
+      "end": 555.0,
+      "text": "Since necessary to do this."
+    },
+    {
+      "id": 102,
+      "start": 555.0,
+      "end": 558.0,
+      "text": "What when you're as more like logical and."
+    },
+    {
+      "id": 103,
+      "start": 558.0,
+      "end": 563.0,
+      "text": "So the interpolated model only likes choices where all the models agree."
+    },
+    {
+      "id": 104,
+      "start": 563.0,
+      "end": 570.0,
+      "text": "And this is particularly good when you want to restrict possible answers like you want to have one model be able to say no, I really don't like this."
+    },
+    {
+      "id": 105,
+      "start": 570.0,
+      "end": 572.0,
+      "text": "So I'm."
+    },
+    {
+      "id": 106,
+      "start": 572.0,
+      "end": 582.0,
+      "text": "For example, if you wanted to train a model that you knew was very adverse to toxic language and prevent the model from opening toxic language you could use log linear."
+    },
+    {
+      "id": 107,
+      "start": 582.0,
+      "end": 594.0,
+      "text": "So I can unfortunately calculate logs and exponents in my head well enough to decide this, but I'm sure that a linear model."
+    },
+    {
+      "id": 108,
+      "start": 594.0,
+      "end": 599.0,
+      "text": "Here model and pick the first one here in the log linear model."
+    },
+    {
+      "id": 109,
+      "start": 599.0,
+      "end": 604.0,
+      "text": "We pick the second one because the second."
+    }
+  ],
+  "language": "en"
+}

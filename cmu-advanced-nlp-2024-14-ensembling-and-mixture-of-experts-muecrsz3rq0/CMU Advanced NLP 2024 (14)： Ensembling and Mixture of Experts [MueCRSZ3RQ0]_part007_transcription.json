@@ -1,0 +1,245 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 7.0,
+      "text": "The translation model would be speech in English, text in English, and we would generate the output in Japanese."
+    },
+    {
+      "id": 1,
+      "start": 7.0,
+      "end": 11.0,
+      "text": "So it would take both the speech and the text when it was doing translation."
+    },
+    {
+      "id": 2,
+      "start": 11.0,
+      "end": 19.0,
+      "text": "And that would allow it to, number one, basically get a second opinion about whether the transcription was correct."
+    },
+    {
+      "id": 3,
+      "start": 19.0,
+      "end": 28.0,
+      "text": "But also, like, let's say there was some unique information that only appeared in the."
+    },
+    {
+      "id": 4,
+      "start": 28.0,
+      "end": 34.0,
+      "text": "So just to give an example, I read the book, I read the book."
+    },
+    {
+      "id": 5,
+      "start": 34.0,
+      "end": 43.0,
+      "text": "Are both transpired exactly the same way and they're different translations obviously because one is, you know, present or present tense in the other is passing."
+    },
+    {
+      "id": 6,
+      "start": 43.0,
+      "end": 56.0,
+      "text": "So there are examples where adding a cascaded system with those information and a static system would not."
+    },
+    {
+      "id": 7,
+      "start": 56.0,
+      "end": 65.0,
+      "text": "Another thing is iterative refinement. I think this is actually really interesting because large language models have opened up a whole bunch of possibilities for us in this space."
+    },
+    {
+      "id": 8,
+      "start": 65.0,
+      "end": 72.0,
+      "text": "This is like cascading and stacking, but it can be done multiple times and it can be done multiple times with the same model."
+    },
+    {
+      "id": 9,
+      "start": 72.0,
+      "end": 82.0,
+      "text": "So we have an input, we feed it into the bottle, we get an output, and then we feed the output back in and gradually refine it and make it better and better."
+    },
+    {
+      "id": 10,
+      "start": 82.0,
+      "end": 104.0,
+      "text": "And the first time this was done in neural networks was through something called deliberation networks and basically deliberation networks what they do is they take in an output and then they just gradually refine it to make it better and better they used reinforcement learning algorithm to do this where you generated the output and then improved it."
+    },
+    {
+      "id": 11,
+      "start": 104.0,
+      "end": 121.0,
+      "text": "Another thing that's really popular nowadays is diffusion models and I haven't quite decided whether I'll have time to cover diffusion models in depth, but basically the way a diffusion model works is very similar you start out with nothing and then you gradually make it better and better."
+    },
+    {
+      "id": 12,
+      "start": 121.0,
+      "end": 147.0,
+      "text": "The difference between deliberation networks and diffusion models is diffusion models you can train from scratch by basically noisy the input applying noise to the input and training very efficiently and these are very widely used in image generation they're not super widely used in text just because regular auto regressive models are so good for text, but there are a few efforts to do that."
+    },
+    {
+      "id": 13,
+      "start": 147.0,
+      "end": 159.0,
+      "text": "And then a final one is self refine and the idea behind self refine is you actually maybe I can open the paper because paper has a good."
+    },
+    {
+      "id": 14,
+      "start": 159.0,
+      "end": 161.0,
+      "text": "Thank you."
+    },
+    {
+      "id": 15,
+      "start": 177.0,
+      "end": 182.0,
+      "text": "Actually, I thought it had a good figure."
+    },
+    {
+      "id": 16,
+      "start": 182.0,
+      "end": 201.0,
+      "text": "Yeah, so maybe this is a figure so basically what you do is you feed in the input you generate an output and then you ask the model to give you feedback on the output and say yes, this output is good or like let's say you're doing code generation you can say no, this output has an error in it."
+    },
+    {
+      "id": 17,
+      "start": 201.0,
+      "end": 220.0,
+      "text": "And this is a problem with your output and then you feed in both the output and the feedback and ask the model to refine its output and you do this over and over again this allows you to improve the output and this is has ended up being pretty effective and a pretty wide number of tasks."
+    },
+    {
+      "id": 18,
+      "start": 220.0,
+      "end": 242.0,
+      "text": "One caveat about this is your model has to be really good for this to work so only models kind of on the level of GPT for and not on the level of GPT 3.5 have the ability to do this pretty consistently so it is something you need to be aware of."
+    },
+    {
+      "id": 19,
+      "start": 242.0,
+      "end": 246.0,
+      "text": "Yep, that's all I had for today I'm happy to."
+    },
+    {
+      "id": 20,
+      "start": 246.0,
+      "end": 249.0,
+      "text": "Talk about it."
+    },
+    {
+      "id": 21,
+      "start": 249.0,
+      "end": 254.0,
+      "text": "Yep."
+    },
+    {
+      "id": 22,
+      "start": 254.0,
+      "end": 272.0,
+      "text": "Yep, that this is a great question so if stacking has the potential to address information loss why would we ever choose a cascade model."
+    },
+    {
+      "id": 23,
+      "start": 272.0,
+      "end": 287.0,
+      "text": "I think basically there's potentially two reasons one reason is data availability so in order to train a stacked model you obviously need the outputs I guess you could."
+    },
+    {
+      "id": 24,
+      "start": 287.0,
+      "end": 291.0,
+      "text": "Yeah, I guess you could run the."
+    },
+    {
+      "id": 25,
+      "start": 291.0,
+      "end": 298.0,
+      "text": "In generate outputs for every training example you have but you would need to do that so you would need to run."
+    },
+    {
+      "id": 26,
+      "start": 298.0,
+      "end": 303.0,
+      "text": "Speed recognition for example and you also couldn't."
+    },
+    {
+      "id": 27,
+      "start": 303.0,
+      "end": 315.0,
+      "text": "You couldn't use any examples where you don't have the original input so you couldn't use text to text examples in less you like synthesize speech from text for machine translation for example so."
+    },
+    {
+      "id": 28,
+      "start": 315.0,
+      "end": 320.0,
+      "text": "Mixed it a little bit more tricky due to the data requirements but that's not insurmountable."
+    },
+    {
+      "id": 29,
+      "start": 320.0,
+      "end": 329.0,
+      "text": "The second reason is complexity and efficiency so you know you do have to come up with a model that takes in speech and text and."
+    },
+    {
+      "id": 30,
+      "start": 329.0,
+      "end": 334.0,
+      "text": "Runs and it might be easier just to help together a speech recognition."
+    },
+    {
+      "id": 31,
+      "start": 334.0,
+      "end": 347.0,
+      "text": "But like I think overall I like these methods I think these are good methods to use if you're if you're thinking about using a cascade system you should definitely consider using a stack system."
+    },
+    {
+      "id": 32,
+      "start": 347.0,
+      "end": 355.0,
+      "text": "Yeah."
+    },
+    {
+      "id": 33,
+      "start": 355.0,
+      "end": 366.0,
+      "text": "Can you measure the contribution of each component to an ensemble and the very very easy way to do that is what the interpolation for efficient so if you train the interpolation for efficient."
+    },
+    {
+      "id": 34,
+      "start": 366.0,
+      "end": 374.0,
+      "text": "Otherwise I guess it depends on what you mean by each contribution but I you know looking at the interpolation for."
+    },
+    {
+      "id": 35,
+      "start": 374.0,
+      "end": 384.0,
+      "text": "Also just how much the accuracy."
+    },
+    {
+      "id": 36,
+      "start": 384.0,
+      "end": 393.0,
+      "text": "Is iterative refinement the same idea is boosting in traditional like machine learning systems."
+    },
+    {
+      "id": 37,
+      "start": 393.0,
+      "end": 407.0,
+      "text": "I think it's a little bit different because iterative refinement what I'm talking about here it's usually taking into the output like rather complex output of a system in modifying it so you're not just modifying the probabilities."
+    },
+    {
+      "id": 38,
+      "start": 407.0,
+      "end": 436.0,
+      "text": "Of like a single classifier you're modifying the actual outputs that were generated from the point of view of a boosting model over a single categorical output it might actually be similar or the same but this is more like you generated a textual output and then you feed in the textual output to not a model and by generating the actual output so it's a lot more complex."
+    },
+    {
+      "id": 39,
+      "start": 436.0,
+      "end": 442.0,
+      "text": "Okay thanks a lot everyone."
+    }
+  ],
+  "language": "en"
+}

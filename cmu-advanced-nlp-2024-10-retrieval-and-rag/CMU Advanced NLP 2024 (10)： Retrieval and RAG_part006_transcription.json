@@ -1,0 +1,35 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 3.0,
+      "text": "Thank you for watching the video."
+    },
+    {
+      "id": 1,
+      "start": 3.0,
+      "end": 7.24,
+      "text": "And for people in the class, I'll be happy to take questions"
+    },
+    {
+      "id": 2,
+      "start": 7.24,
+      "end": 9.36,
+      "text": "on Pianza or during the office."
+    },
+    {
+      "id": 3,
+      "start": 9.36,
+      "end": 11.16,
+      "text": "So we're sitting here."
+    },
+    {
+      "id": 4,
+      "start": 11.16,
+      "end": 12.48,
+      "text": "Thanks a lot."
+    }
+  ],
+  "language": "en"
+}

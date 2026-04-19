@@ -1,0 +1,785 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 2.6,
+      "text": "we're going to look at a wide variety of options for the next time and step."
+    },
+    {
+      "id": 1,
+      "start": 2.6,
+      "end": 7.0,
+      "text": "Instead of generating all the way through a sequence and then generating all the way through a number sequence."
+    },
+    {
+      "id": 2,
+      "start": 7.0,
+      "end": 13.0,
+      "text": "And how this works is we're going to pick this sort of a number of candidates we'd like to explore a beam with."
+    },
+    {
+      "id": 3,
+      "start": 13.0,
+      "end": 16.3,
+      "text": "So in this example, we're going to pick three and we're going to say, all right,"
+    },
+    {
+      "id": 4,
+      "start": 16.3,
+      "end": 18.8,
+      "text": "here would be three options for time step one."
+    },
+    {
+      "id": 5,
+      "start": 18.8,
+      "end": 21.7,
+      "text": "For if we pick each of those three options,"
+    },
+    {
+      "id": 6,
+      "start": 21.7,
+      "end": 25.5,
+      "text": "what would be the three most likely things for time step two, right?"
+    },
+    {
+      "id": 7,
+      "start": 25.5,
+      "end": 28.4,
+      "text": "Rather than choosing just the single most likely thing in really decoding,"
+    },
+    {
+      "id": 8,
+      "start": 28.4,
+      "end": 30.2,
+      "text": "we're going to pick three options."
+    },
+    {
+      "id": 9,
+      "start": 30.2,
+      "end": 35.0,
+      "text": "And so now we have three options for time step one, three options for time start two."
+    },
+    {
+      "id": 10,
+      "start": 35.0,
+      "end": 38.0,
+      "text": "We now have nine options here, right?"
+    },
+    {
+      "id": 11,
+      "start": 38.0,
+      "end": 40.6,
+      "text": "Three options and then three more for each of these."
+    },
+    {
+      "id": 12,
+      "start": 40.6,
+      "end": 44.8,
+      "text": "And we don't want to continue doing this because this is going to sort of combinatorially explode."
+    },
+    {
+      "id": 13,
+      "start": 44.8,
+      "end": 48.0,
+      "text": "So we need to choose some subset of these to continue it."
+    },
+    {
+      "id": 14,
+      "start": 48.0,
+      "end": 51.8,
+      "text": "And the way we do that is we look at the probability over this two token sequence."
+    },
+    {
+      "id": 15,
+      "start": 51.8,
+      "end": 55.0,
+      "text": "And we choose the two that have the highest probability overall."
+    },
+    {
+      "id": 16,
+      "start": 55.1,
+      "end": 60.1,
+      "text": "So in this instance, we've chosen sort of one thing from this first group and two things from the second group."
+    },
+    {
+      "id": 17,
+      "start": 60.1,
+      "end": 66.9,
+      "text": "And now we're back down to three hypotheses each now to tokens along and we'll continue generating two times step three."
+    },
+    {
+      "id": 18,
+      "start": 66.9,
+      "end": 71.9,
+      "text": "We'll get nine options will put it back down to three and we'll continue until the end of generation,"
+    },
+    {
+      "id": 19,
+      "start": 71.9,
+      "end": 73.4,
+      "text": "where we now have three sequences,"
+    },
+    {
+      "id": 20,
+      "start": 73.4,
+      "end": 78.0,
+      "text": "we'll just pick the one that's highest probability out of those three to return."
+    },
+    {
+      "id": 21,
+      "start": 78.0,
+      "end": 81.4,
+      "text": "This is not guaranteed to get you the highest probability."
+    },
+    {
+      "id": 22,
+      "start": 81.5,
+      "end": 85.4,
+      "text": "You still have this risk that you could be sort of pointing out something that's high probability."
+    },
+    {
+      "id": 23,
+      "start": 85.4,
+      "end": 89.4,
+      "text": "But in general, this sort of works much better than greedy coding."
+    },
+    {
+      "id": 24,
+      "start": 89.4,
+      "end": 95.4,
+      "text": "And this is if you have a language model and you're sort of not sure what decoding method it's using."
+    },
+    {
+      "id": 25,
+      "start": 95.4,
+      "end": 98.4,
+      "text": "Other pretty good. It's either the researcher temperature sample."
+    },
+    {
+      "id": 26,
+      "start": 98.4,
+      "end": 101.4,
+      "text": "This is very effective. This is used pretty broad."
+    },
+    {
+      "id": 27,
+      "start": 102.4,
+      "end": 105.4,
+      "text": "There are however some issues with beam search."
+    },
+    {
+      "id": 28,
+      "start": 105.4,
+      "end": 114.4,
+      "text": "And one of the biggest ones is that when you're doing this maximum likelihood sampling you really are the sampling to search for something that's very high likelihood."
+    },
+    {
+      "id": 29,
+      "start": 114.4,
+      "end": 117.4,
+      "text": "You really sacrifice a lot of diversity in your office."
+    },
+    {
+      "id": 30,
+      "start": 117.4,
+      "end": 123.4,
+      "text": "And in particular, you can find out what the end of beam search for three different outputs to choose from that are pretty much the same."
+    },
+    {
+      "id": 31,
+      "start": 123.4,
+      "end": 126.4,
+      "text": "But there's certainly different token sequences, but they look very similar."
+    },
+    {
+      "id": 32,
+      "start": 126.4,
+      "end": 130.4,
+      "text": "And so maybe you want to set get sort of a more diverse set."
+    },
+    {
+      "id": 33,
+      "start": 131.4,
+      "end": 136.4,
+      "text": "There's a couple of different methods in this category. I'm going to very briefly shout out to them."
+    },
+    {
+      "id": 34,
+      "start": 136.4,
+      "end": 143.4,
+      "text": "But the idea here is to sort of reintroduce some of the benefits of sampling while still doing this kind of search for high probability things."
+    },
+    {
+      "id": 35,
+      "start": 143.4,
+      "end": 156.4,
+      "text": "The first beam search is one of these methods and hear the idea that we want to modify that scoring step when we choose which three out of our nine beams we want to continue to avoid choosing things that are really really close to each other."
+    },
+    {
+      "id": 36,
+      "start": 156.4,
+      "end": 165.4,
+      "text": "So maybe our highest probability thing is some sequence a and then if we look at the other sequences, there's one that's pretty high probability but very similar to that sequence."
+    },
+    {
+      "id": 37,
+      "start": 165.4,
+      "end": 179.4,
+      "text": "And there's one that's like slight little probability, but very different. And so maybe we would choose a sequence that is a little lower probability to maximize diversity in our set to try to get like sort of a wider range of options to choose from later in generation."
+    },
+    {
+      "id": 38,
+      "start": 179.4,
+      "end": 185.4,
+      "text": "So this modifies the scoring to not just take into account likelihood, but also similarity to other."
+    },
+    {
+      "id": 39,
+      "start": 185.4,
+      "end": 196.4,
+      "text": "Another option down this path is stochastic beam search where we're going to keep the scoring the same, but rather than choosing just the top three most likely to open to expand out each beam."
+    },
+    {
+      "id": 40,
+      "start": 196.4,
+      "end": 206.4,
+      "text": "We're actually going to sample from some distribution and you could sample from the model distribution directly using the ancestral sampling or you could use any of our sampling methods we talked about in the last section to do this."
+    },
+    {
+      "id": 41,
+      "start": 206.4,
+      "end": 215.4,
+      "text": "And the idea here is sort of similar to diverse beam search. We want to get sort of a wider exploration of our models like outlet space."
+    },
+    {
+      "id": 42,
+      "start": 215.4,
+      "end": 223.4,
+      "text": "You want to sort of explore more things instead of just seeking winding up with a bunch of outputs that look very similar at the end of the search."
+    },
+    {
+      "id": 43,
+      "start": 223.4,
+      "end": 227.4,
+      "text": "If folks are interested in these, I think they're both linked on the website."
+    },
+    {
+      "id": 44,
+      "start": 227.4,
+      "end": 231.4,
+      "text": "The paper examples of these ideas."
+    },
+    {
+      "id": 45,
+      "start": 231.4,
+      "end": 234.4,
+      "text": "Yes."
+    },
+    {
+      "id": 46,
+      "start": 234.4,
+      "end": 243.4,
+      "text": "So for stochastic beam search, the standards are both the fixing to the sound fine up to you."
+    },
+    {
+      "id": 47,
+      "start": 243.4,
+      "end": 253.4,
+      "text": "Yeah, exactly. So it's this like selection set here, but we're instead of just doing reading selection, we're going to do a sampling."
+    },
+    {
+      "id": 48,
+      "start": 253.4,
+      "end": 257.4,
+      "text": "Yes."
+    },
+    {
+      "id": 49,
+      "start": 257.4,
+      "end": 262.4,
+      "text": "So you're a big part of something super simple."
+    },
+    {
+      "id": 50,
+      "start": 262.4,
+      "end": 268.4,
+      "text": "If both of them are like, I thought you're the only one."
+    },
+    {
+      "id": 51,
+      "start": 268.4,
+      "end": 278.4,
+      "text": "Yeah, so you would, if it has a really high probability under both models, it would have a low probability after during the set of contrast."
+    },
+    {
+      "id": 52,
+      "start": 278.4,
+      "end": 284.4,
+      "text": "Right. So if the small amount was really good at your task, this might not work very well."
+    },
+    {
+      "id": 53,
+      "start": 284.4,
+      "end": 293.4,
+      "text": "Yeah, I think the paper they're generally evaluating on these sort of open ended generation time. I bet this works a lot worse for them."
+    },
+    {
+      "id": 54,
+      "start": 293.4,
+      "end": 298.4,
+      "text": "Yes."
+    },
+    {
+      "id": 55,
+      "start": 298.4,
+      "end": 308.4,
+      "text": "Yeah."
+    },
+    {
+      "id": 56,
+      "start": 308.4,
+      "end": 311.4,
+      "text": "So that's the great question."
+    },
+    {
+      "id": 57,
+      "start": 311.4,
+      "end": 316.4,
+      "text": "So the question is, how do we measure similar beings?"
+    },
+    {
+      "id": 58,
+      "start": 316.4,
+      "end": 325.4,
+      "text": "You can sort of define any kind of similarity function you like here, anything that you'd use to evaluate, like how similar something is to a gold reference, right."
+    },
+    {
+      "id": 59,
+      "start": 325.4,
+      "end": 332.4,
+      "text": "I think in the original diverse beam search, they do this by looking at like exact token match across the two, right?"
+    },
+    {
+      "id": 60,
+      "start": 332.4,
+      "end": 340.4,
+      "text": "These beams are the same in all but one of the tokens or they have like, you know, 50% of the tokens are shared across the beams."
+    },
+    {
+      "id": 61,
+      "start": 340.4,
+      "end": 342.4,
+      "text": "And maybe these are really similar."
+    },
+    {
+      "id": 62,
+      "start": 342.4,
+      "end": 344.4,
+      "text": "I'm trying to choose two things that are different."
+    },
+    {
+      "id": 63,
+      "start": 344.4,
+      "end": 348.4,
+      "text": "But you could swap that out for any metric."
+    },
+    {
+      "id": 64,
+      "start": 348.4,
+      "end": 349.4,
+      "text": "Yes."
+    },
+    {
+      "id": 65,
+      "start": 349.4,
+      "end": 351.4,
+      "text": "So it was exactly."
+    },
+    {
+      "id": 66,
+      "start": 351.4,
+      "end": 352.4,
+      "text": "The research."
+    },
+    {
+      "id": 67,
+      "start": 352.4,
+      "end": 354.4,
+      "text": "It's kind of like a self-linear."
+    },
+    {
+      "id": 68,
+      "start": 354.4,
+      "end": 356.4,
+      "text": "Every time."
+    },
+    {
+      "id": 69,
+      "start": 356.4,
+      "end": 359.4,
+      "text": "For the stochastic beam research is like a separate one."
+    },
+    {
+      "id": 70,
+      "start": 359.4,
+      "end": 361.4,
+      "text": "What do you mean by a shatter?"
+    },
+    {
+      "id": 71,
+      "start": 361.4,
+      "end": 371.4,
+      "text": "So it's not the same."
+    },
+    {
+      "id": 72,
+      "start": 371.4,
+      "end": 374.4,
+      "text": "Is it searching in a different space?"
+    },
+    {
+      "id": 73,
+      "start": 374.4,
+      "end": 375.4,
+      "text": "Yeah."
+    },
+    {
+      "id": 74,
+      "start": 375.4,
+      "end": 376.4,
+      "text": "So it's."
+    },
+    {
+      "id": 75,
+      "start": 376.4,
+      "end": 382.4,
+      "text": "In the same probability distribution, but it'll see a different part of the distribution."
+    },
+    {
+      "id": 76,
+      "start": 382.4,
+      "end": 387.4,
+      "text": "So when you're doing the research, you'll only ever look at the top."
+    },
+    {
+      "id": 77,
+      "start": 387.4,
+      "end": 391.4,
+      "text": "So you're just selecting like the maximum."
+    },
+    {
+      "id": 78,
+      "start": 391.4,
+      "end": 396.4,
+      "text": "But in sampling, you could you could get the same tokens right if they're really high."
+    },
+    {
+      "id": 79,
+      "start": 396.4,
+      "end": 401.4,
+      "text": "But you could also sample something that's further down the distribution."
+    },
+    {
+      "id": 80,
+      "start": 401.4,
+      "end": 406.4,
+      "text": "As a follow up to that, like, use to our stamps."
+    },
+    {
+      "id": 81,
+      "start": 406.4,
+      "end": 411.4,
+      "text": "Or taking so time to probably see other people like the time."
+    },
+    {
+      "id": 82,
+      "start": 411.4,
+      "end": 413.4,
+      "text": "Otherwise,"
+    },
+    {
+      "id": 83,
+      "start": 413.4,
+      "end": 416.4,
+      "text": "I just."
+    },
+    {
+      "id": 84,
+      "start": 416.4,
+      "end": 418.4,
+      "text": "Yeah."
+    },
+    {
+      "id": 85,
+      "start": 418.4,
+      "end": 421.4,
+      "text": "So in the sampling, we're taking to account the previous."
+    },
+    {
+      "id": 86,
+      "start": 421.4,
+      "end": 422.4,
+      "text": "The pre-fix."
+    },
+    {
+      "id": 87,
+      "start": 422.4,
+      "end": 423.4,
+      "text": "Yeah."
+    },
+    {
+      "id": 88,
+      "start": 423.4,
+      "end": 424.4,
+      "text": "So."
+    },
+    {
+      "id": 89,
+      "start": 424.4,
+      "end": 430.4,
+      "text": "If we will take into account the pre-fix, but the sampling mechanism here could be a special example."
+    },
+    {
+      "id": 90,
+      "start": 430.4,
+      "end": 431.4,
+      "text": "The only."
+    },
+    {
+      "id": 91,
+      "start": 431.4,
+      "end": 440.4,
+      "text": "The difference here is that we're also doing this sort of search step on top of that to choose the maximum likelihood things across most of these."
+    },
+    {
+      "id": 92,
+      "start": 440.4,
+      "end": 445.4,
+      "text": "So another important thing is you sample without replacement."
+    },
+    {
+      "id": 93,
+      "start": 445.4,
+      "end": 449.4,
+      "text": "And so normally you sample with replacement and you might get exactly the same thing."
+    },
+    {
+      "id": 94,
+      "start": 449.4,
+      "end": 452.4,
+      "text": "But when you're doing stochastic beam search, you sample without replacement."
+    },
+    {
+      "id": 95,
+      "start": 452.4,
+      "end": 458.4,
+      "text": "So you get like three ones agree to the probability, but they're going to be different."
+    },
+    {
+      "id": 96,
+      "start": 458.4,
+      "end": 459.4,
+      "text": "Yes."
+    },
+    {
+      "id": 97,
+      "start": 459.4,
+      "end": 466.4,
+      "text": "So beam search, like one of the characteristics of beam search is you always get three different things because you're picking the three top."
+    },
+    {
+      "id": 98,
+      "start": 466.4,
+      "end": 471.4,
+      "text": "When you do sampling, like stochastic beam search, you get three different things."
+    },
+    {
+      "id": 99,
+      "start": 471.4,
+      "end": 473.4,
+      "text": "They're not guaranteed to be the top."
+    },
+    {
+      "id": 100,
+      "start": 473.4,
+      "end": 476.4,
+      "text": "They could be distributed according to the."
+    },
+    {
+      "id": 101,
+      "start": 476.4,
+      "end": 478.4,
+      "text": "The distribution, but they're guaranteed to be different."
+    },
+    {
+      "id": 102,
+      "start": 478.4,
+      "end": 482.4,
+      "text": "So you can take a look at the favorite from our details of the zip code."
+    },
+    {
+      "id": 103,
+      "start": 482.4,
+      "end": 487.4,
+      "text": "So then we've been named different stuff from different parts of something that you have."
+    },
+    {
+      "id": 104,
+      "start": 487.4,
+      "end": 490.4,
+      "text": "And option that you can talk about."
+    },
+    {
+      "id": 105,
+      "start": 490.4,
+      "end": 493.4,
+      "text": "So it's going to go in with only one."
+    },
+    {
+      "id": 106,
+      "start": 493.4,
+      "end": 496.4,
+      "text": "You can't, yeah, you can't simple the same thing right."
+    },
+    {
+      "id": 107,
+      "start": 496.4,
+      "end": 499.4,
+      "text": "Yeah, so just repeat for the recording."
+    },
+    {
+      "id": 108,
+      "start": 499.4,
+      "end": 504.4,
+      "text": "And outchins were keeping track of and they're all going to be unique tokens."
+    },
+    {
+      "id": 109,
+      "start": 504.4,
+      "end": 506.4,
+      "text": "So at least."
+    },
+    {
+      "id": 110,
+      "start": 506.4,
+      "end": 509.4,
+      "text": "You can actually get the same output sequence from two different."
+    },
+    {
+      "id": 111,
+      "start": 509.4,
+      "end": 512.4,
+      "text": "And you can see the group open. I slightly different."
+    },
+    {
+      "id": 112,
+      "start": 512.4,
+      "end": 518.4,
+      "text": "But these will always be unique tokens."
+    },
+    {
+      "id": 113,
+      "start": 518.4,
+      "end": 521.4,
+      "text": "So that was sort of a."
+    },
+    {
+      "id": 114,
+      "start": 521.4,
+      "end": 527.4,
+      "text": "Why like a set of methods that we've developed to try to find the most probable sequence out of the model."
+    },
+    {
+      "id": 115,
+      "start": 527.4,
+      "end": 532.4,
+      "text": "But in the next section here, we're going to sort of think about whether that's actually what we want to do at all."
+    },
+    {
+      "id": 116,
+      "start": 532.4,
+      "end": 538.4,
+      "text": "So what is like, if do we really want the highest probability thing?"
+    },
+    {
+      "id": 117,
+      "start": 538.4,
+      "end": 544.4,
+      "text": "We know that outputs with really low probability tend to be really my worst than outputs with high probability, right?"
+    },
+    {
+      "id": 118,
+      "start": 544.4,
+      "end": 551.4,
+      "text": "Maybe I'm trying to predict what the next sentence should be after the cat saw the dog, right?"
+    },
+    {
+      "id": 119,
+      "start": 551.4,
+      "end": 555.4,
+      "text": "The cat sat down is way higher probability than the cat for wings."
+    },
+    {
+      "id": 120,
+      "start": 555.4,
+      "end": 559.4,
+      "text": "And at least with the cat's I've met that sounds pretty, that sounds pretty much right."
+    },
+    {
+      "id": 121,
+      "start": 559.4,
+      "end": 562.4,
+      "text": "Right. Like this is a much better output than the cat."
+    },
+    {
+      "id": 122,
+      "start": 562.4,
+      "end": 572.4,
+      "text": "But if you look at just the outputs with a relatively high probability and sort of less clear that this defines an exact ranking between those outputs, right?"
+    },
+    {
+      "id": 123,
+      "start": 572.4,
+      "end": 577.4,
+      "text": "So what I'm going to do is the cat sat down necessarily better than the cat ran away."
+    },
+    {
+      "id": 124,
+      "start": 577.4,
+      "end": 582.4,
+      "text": "These both seem like pretty reasonable outputs to me, even though one of them is slightly higher probability."
+    },
+    {
+      "id": 125,
+      "start": 582.4,
+      "end": 589.4,
+      "text": "And so we do we really like necessarily need to recover the cat sat down."
+    },
+    {
+      "id": 126,
+      "start": 589.4,
+      "end": 594.4,
+      "text": "And this gets a little a little more complicated still if we look at sort of a range of outputs."
+    },
+    {
+      "id": 127,
+      "start": 594.4,
+      "end": 598.4,
+      "text": "So say there's sort of six outputs that our model could give us."
+    },
+    {
+      "id": 128,
+      "start": 598.4,
+      "end": 602.4,
+      "text": "And that sort of full sequences, not individual tokens just for clarity."
+    },
+    {
+      "id": 129,
+      "start": 602.4,
+      "end": 605.4,
+      "text": "So maybe our outputs in order."
+    }
+  ],
+  "language": "en"
+}

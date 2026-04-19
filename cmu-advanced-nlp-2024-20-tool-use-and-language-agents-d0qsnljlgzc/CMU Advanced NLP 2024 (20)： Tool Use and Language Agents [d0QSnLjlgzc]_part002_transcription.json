@@ -1,0 +1,1109 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 2.16,
+      "text": "like the calculate rate of change toll."
+    },
+    {
+      "id": 1,
+      "start": 2.16,
+      "end": 4.4,
+      "text": "Narrow solution to come where some pull,"
+    },
+    {
+      "id": 2,
+      "start": 4.4,
+      "end": 7.56,
+      "text": "it's just like one tool calling expression."
+    },
+    {
+      "id": 3,
+      "start": 7.56,
+      "end": 9.96,
+      "text": "All you need to figure out is the argument"
+    },
+    {
+      "id": 4,
+      "start": 9.96,
+      "end": 12.92,
+      "text": "to implement internal function."
+    },
+    {
+      "id": 5,
+      "start": 12.92,
+      "end": 16.28,
+      "text": "And that could alleviate the errors that we've seen."
+    },
+    {
+      "id": 6,
+      "start": 16.28,
+      "end": 19.24,
+      "text": "But also, it could be like, benefit of humans"
+    },
+    {
+      "id": 7,
+      "start": 19.24,
+      "end": 22.6,
+      "text": "say it's easier for humans to verify this solution."
+    },
+    {
+      "id": 8,
+      "start": 25.44,
+      "end": 28.44,
+      "text": "So how does toll like our method work?"
+    },
+    {
+      "id": 9,
+      "start": 30.92,
+      "end": 32.44,
+      "text": "Just like the other side."
+    },
+    {
+      "id": 10,
+      "start": 36.6,
+      "end": 39.52,
+      "text": "So in general, here's the pipeline that we've seen"
+    },
+    {
+      "id": 11,
+      "start": 39.52,
+      "end": 41.2,
+      "text": "that we have a certain examples"
+    },
+    {
+      "id": 12,
+      "start": 41.2,
+      "end": 44.08,
+      "text": "in our solutions and the two bugs."
+    },
+    {
+      "id": 13,
+      "start": 44.08,
+      "end": 47.0,
+      "text": "And just directly initiate our empty two bugs"
+    },
+    {
+      "id": 14,
+      "start": 47.0,
+      "end": 49.12,
+      "text": "and declare the examples."
+    },
+    {
+      "id": 15,
+      "start": 49.12,
+      "end": 52.36,
+      "text": "And we'll be encounter a new examples"
+    },
+    {
+      "id": 16,
+      "start": 52.36,
+      "end": 54.52,
+      "text": "with unseen functionality."
+    },
+    {
+      "id": 17,
+      "start": 54.52,
+      "end": 58.6,
+      "text": "We ask to almost model to first generate a reusable tool"
+    },
+    {
+      "id": 18,
+      "start": 58.64,
+      "end": 62.2,
+      "text": "in a general solution using the tool that it just generated."
+    },
+    {
+      "id": 19,
+      "start": 62.2,
+      "end": 66.16,
+      "text": "And because we're like operating fairly in task time"
+    },
+    {
+      "id": 20,
+      "start": 66.16,
+      "end": 68.08,
+      "text": "without turning to permission,"
+    },
+    {
+      "id": 21,
+      "start": 68.08,
+      "end": 71.04,
+      "text": "we do include the quality of the parent,"
+    },
+    {
+      "id": 22,
+      "start": 71.04,
+      "end": 74.32,
+      "text": "we do sampling and here are six weeks of the best."
+    },
+    {
+      "id": 23,
+      "start": 74.32,
+      "end": 77.32,
+      "text": "And then we add the data solution"
+    },
+    {
+      "id": 24,
+      "start": 77.32,
+      "end": 80.56,
+      "text": "also add the tool to our two bugs for future use."
+    },
+    {
+      "id": 25,
+      "start": 80.56,
+      "end": 83.16,
+      "text": "So that aligns to the first, the create mode."
+    },
+    {
+      "id": 26,
+      "start": 83.16,
+      "end": 86.08,
+      "text": "The model can create a new function"
+    },
+    {
+      "id": 27,
+      "start": 86.08,
+      "end": 87.92,
+      "text": "when it's new for example."
+    },
+    {
+      "id": 28,
+      "start": 89.6,
+      "end": 94.6,
+      "text": "And the second scenario is using the import mode."
+    },
+    {
+      "id": 29,
+      "start": 95.96,
+      "end": 99.88,
+      "text": "So now the post we have many functions in our toolbox."
+    },
+    {
+      "id": 30,
+      "start": 99.88,
+      "end": 101.96,
+      "text": "And next time that window models"
+    },
+    {
+      "id": 31,
+      "start": 101.96,
+      "end": 104.84,
+      "text": "do anything in sample that uses the new function,"
+    },
+    {
+      "id": 32,
+      "start": 104.84,
+      "end": 106.96,
+      "text": "without a set of,"
+    },
+    {
+      "id": 33,
+      "start": 109.72,
+      "end": 112.16,
+      "text": "instead of regenerate a new tool,"
+    },
+    {
+      "id": 34,
+      "start": 112.16,
+      "end": 114.16,
+      "text": "we can add forward models to"
+    },
+    {
+      "id": 35,
+      "start": 115.16,
+      "end": 119.16,
+      "text": "directly import the tool from the toolbox."
+    },
+    {
+      "id": 36,
+      "start": 120.16,
+      "end": 122.16,
+      "text": "So it will like reuse the tool,"
+    },
+    {
+      "id": 37,
+      "start": 122.16,
+      "end": 124.16,
+      "text": "which aligns from the second import mode."
+    },
+    {
+      "id": 38,
+      "start": 124.16,
+      "end": 127.16,
+      "text": "And similarly generate solutions using that tool."
+    },
+    {
+      "id": 39,
+      "start": 129.16,
+      "end": 131.16,
+      "text": "We'll actually also put forward a skip mode"
+    },
+    {
+      "id": 40,
+      "start": 131.16,
+      "end": 134.16,
+      "text": "where you can not generate a tool"
+    },
+    {
+      "id": 41,
+      "start": 134.16,
+      "end": 139.16,
+      "text": "because you think there's probably no need to use it."
+    },
+    {
+      "id": 42,
+      "start": 140.16,
+      "end": 144.16,
+      "text": "And the result is really good, my opinion."
+    },
+    {
+      "id": 43,
+      "start": 145.48,
+      "end": 147.36,
+      "text": "So compared to the baseline"
+    },
+    {
+      "id": 44,
+      "start": 147.36,
+      "end": 150.08,
+      "text": "from the two blocks on the top,"
+    },
+    {
+      "id": 45,
+      "start": 150.08,
+      "end": 151.92,
+      "text": "or actually we did our method"
+    },
+    {
+      "id": 46,
+      "start": 151.92,
+      "end": 154.76,
+      "text": "can like confuse the accuracy a lot."
+    },
+    {
+      "id": 47,
+      "start": 154.76,
+      "end": 158.72,
+      "text": "So so maintain a reasonably small size of the values"
+    },
+    {
+      "id": 48,
+      "start": 158.72,
+      "end": 160.36,
+      "text": "like these things here."
+    },
+    {
+      "id": 49,
+      "start": 160.36,
+      "end": 162.68,
+      "text": "And also if you look at the middle one,"
+    },
+    {
+      "id": 50,
+      "start": 162.68,
+      "end": 165.04,
+      "text": "which features a number of operations,"
+    },
+    {
+      "id": 51,
+      "start": 165.04,
+      "end": 168.84,
+      "text": "it's a representative of how complex this solution is."
+    },
+    {
+      "id": 52,
+      "start": 169.36,
+      "end": 173.12,
+      "text": "The solution is generated on a set of much simple."
+    },
+    {
+      "id": 53,
+      "start": 174.32,
+      "end": 177.36,
+      "text": "This is the result of the GDMeat model."
+    },
+    {
+      "id": 54,
+      "start": 177.36,
+      "end": 181.36,
+      "text": "And also related to your simpler solutions of that method,"
+    },
+    {
+      "id": 55,
+      "start": 181.36,
+      "end": 184.04,
+      "text": "we did an interesting human verification study,"
+    },
+    {
+      "id": 56,
+      "start": 184.04,
+      "end": 185.88,
+      "text": "where it asks the humans"
+    },
+    {
+      "id": 57,
+      "start": 185.88,
+      "end": 189.24,
+      "text": "first to verify the correctness of the solution,"
+    },
+    {
+      "id": 58,
+      "start": 189.24,
+      "end": 191.04,
+      "text": "whether it's correct or not."
+    },
+    {
+      "id": 59,
+      "start": 191.04,
+      "end": 194.16,
+      "text": "And second, we will measure the time"
+    },
+    {
+      "id": 60,
+      "start": 194.16,
+      "end": 197.96,
+      "text": "that humans take to verify every single solution."
+    },
+    {
+      "id": 61,
+      "start": 197.96,
+      "end": 200.56,
+      "text": "And from here you can see that our methods"
+    },
+    {
+      "id": 62,
+      "start": 200.56,
+      "end": 202.48,
+      "text": "leads to 10 to 10 more metrics,"
+    },
+    {
+      "id": 63,
+      "start": 203.48,
+      "end": 205.0,
+      "text": "32-inch process,"
+    },
+    {
+      "id": 64,
+      "start": 205.0,
+      "end": 208.52,
+      "text": "so also make the process 30 to 40% faster."
+    },
+    {
+      "id": 65,
+      "start": 209.64,
+      "end": 213.8,
+      "text": "So that's like an overview of the tool making methods."
+    },
+    {
+      "id": 66,
+      "start": 213.8,
+      "end": 217.0,
+      "text": "So just to as a advanced scenarios for tool using,"
+    },
+    {
+      "id": 67,
+      "start": 217.0,
+      "end": 219.52,
+      "text": "even if we don't have human use tools,"
+    },
+    {
+      "id": 68,
+      "start": 219.52,
+      "end": 221.36,
+      "text": "it can still leverage the long-term models"
+    },
+    {
+      "id": 69,
+      "start": 221.36,
+      "end": 225.24,
+      "text": "to make tools and similarly benefit from those tools."
+    },
+    {
+      "id": 70,
+      "start": 226.08,
+      "end": 228.64,
+      "text": "Any questions simple?"
+    },
+    {
+      "id": 71,
+      "start": 238.0,
+      "end": 241.4,
+      "text": "So yeah, I'll go on to the next section,"
+    },
+    {
+      "id": 72,
+      "start": 241.4,
+      "end": 246.0,
+      "text": "which talks about evolution in empirical benefits"
+    },
+    {
+      "id": 73,
+      "start": 246.0,
+      "end": 246.96,
+      "text": "of using tools."
+    },
+    {
+      "id": 74,
+      "start": 248.04,
+      "end": 251.48,
+      "text": "So probably currently evaluate to use."
+    },
+    {
+      "id": 75,
+      "start": 251.48,
+      "end": 254.92,
+      "text": "The current benchmarks are originally in two columns."
+    },
+    {
+      "id": 76,
+      "start": 255.24,
+      "end": 258.08,
+      "text": "One is reusing system benchmarks"
+    },
+    {
+      "id": 77,
+      "start": 258.08,
+      "end": 261.48,
+      "text": "that they use tool augmented-only model"
+    },
+    {
+      "id": 78,
+      "start": 261.48,
+      "end": 264.16,
+      "text": "as their alternative approach to solve the task."
+    },
+    {
+      "id": 79,
+      "start": 265.12,
+      "end": 268.6,
+      "text": "So for example, this task usually involve reasoning,"
+    },
+    {
+      "id": 80,
+      "start": 269.6,
+      "end": 273.36,
+      "text": "simple form, and like the most simple task form,"
+    },
+    {
+      "id": 81,
+      "start": 273.36,
+      "end": 275.72,
+      "text": "are like mathematical reasoning,"
+    },
+    {
+      "id": 82,
+      "start": 275.72,
+      "end": 279.8,
+      "text": "like math data set or big bench data set."
+    },
+    {
+      "id": 83,
+      "start": 279.8,
+      "end": 283.16,
+      "text": "There are also like a level up"
+    },
+    {
+      "id": 84,
+      "start": 283.16,
+      "end": 285.92,
+      "text": "as tasks that require structured data,"
+    },
+    {
+      "id": 85,
+      "start": 285.92,
+      "end": 288.48,
+      "text": "such as table or knowledge class."
+    },
+    {
+      "id": 86,
+      "start": 288.48,
+      "end": 293.16,
+      "text": "And data sets for this kind of way are like,"
+    },
+    {
+      "id": 87,
+      "start": 293.16,
+      "end": 295.4,
+      "text": "their data sets for like weak key tables"
+    },
+    {
+      "id": 88,
+      "start": 295.4,
+      "end": 297.8,
+      "text": "for more like complex structured tables."
+    },
+    {
+      "id": 89,
+      "start": 299.12,
+      "end": 302.32,
+      "text": "And lastly, there also tasks that involve other modernities,"
+    },
+    {
+      "id": 90,
+      "start": 302.32,
+      "end": 304.32,
+      "text": "like visual QA columns,"
+    },
+    {
+      "id": 91,
+      "start": 304.32,
+      "end": 306.52,
+      "text": "where you can like generate"
+    },
+    {
+      "id": 92,
+      "start": 306.52,
+      "end": 308.96,
+      "text": "where we use existing program tools"
+    },
+    {
+      "id": 93,
+      "start": 308.96,
+      "end": 311.04,
+      "text": "to execute over an image,"
+    },
+    {
+      "id": 94,
+      "start": 311.04,
+      "end": 312.48,
+      "text": "to answer some questions about it,"
+    },
+    {
+      "id": 95,
+      "start": 312.48,
+      "end": 314.32,
+      "text": "or do some addressing in the image."
+    },
+    {
+      "id": 96,
+      "start": 316.12,
+      "end": 319.96,
+      "text": "And another category of benchmarks are like,"
+    },
+    {
+      "id": 97,
+      "start": 319.96,
+      "end": 322.2,
+      "text": "I've just made it API benchmarks."
+    },
+    {
+      "id": 98,
+      "start": 322.2,
+      "end": 326.2,
+      "text": "They only focus on the API category of tools."
+    },
+    {
+      "id": 99,
+      "start": 326.2,
+      "end": 329.28,
+      "text": "And the like process, how they create this"
+    },
+    {
+      "id": 100,
+      "start": 329.28,
+      "end": 331.8,
+      "text": "benchmarks are pretty much the same."
+    },
+    {
+      "id": 101,
+      "start": 331.8,
+      "end": 337.0,
+      "text": "They use final website that provide a lot of like public APIs."
+    },
+    {
+      "id": 102,
+      "start": 337.0,
+      "end": 339.2,
+      "text": "You script the APIs as well as"
+    },
+    {
+      "id": 103,
+      "start": 339.2,
+      "end": 341.32,
+      "text": "and like, medically what about them."
+    },
+    {
+      "id": 104,
+      "start": 341.36,
+      "end": 346.2,
+      "text": "And there are actually a lot of like data sets in this type."
+    },
+    {
+      "id": 105,
+      "start": 346.2,
+      "end": 349.92,
+      "text": "However, there are like two issues that we find"
+    },
+    {
+      "id": 106,
+      "start": 349.92,
+      "end": 352.28,
+      "text": "when we analyze this data set."
+    },
+    {
+      "id": 107,
+      "start": 353.64,
+      "end": 356.48,
+      "text": "One is the naturalness issue."
+    },
+    {
+      "id": 108,
+      "start": 356.48,
+      "end": 359.84,
+      "text": "So if you look different into the process"
+    },
+    {
+      "id": 109,
+      "start": 359.84,
+      "end": 362.8,
+      "text": "of how they create example using this APIs,"
+    },
+    {
+      "id": 110,
+      "start": 362.8,
+      "end": 365.28,
+      "text": "they usually just hear us say please select"
+    },
+    {
+      "id": 111,
+      "start": 365.28,
+      "end": 367.76,
+      "text": "like one or more APIs."
+    },
+    {
+      "id": 112,
+      "start": 368.76,
+      "end": 372.6,
+      "text": "And then ask for example, GPT models to synthesize"
+    },
+    {
+      "id": 113,
+      "start": 372.6,
+      "end": 375.48,
+      "text": "examples of using this API."
+    },
+    {
+      "id": 114,
+      "start": 375.48,
+      "end": 378.16,
+      "text": "So naturalness issue are to float."
+    },
+    {
+      "id": 115,
+      "start": 378.16,
+      "end": 381.48,
+      "text": "One is this selected tools may not be used together"
+    },
+    {
+      "id": 116,
+      "start": 381.48,
+      "end": 382.64,
+      "text": "in practice."
+    },
+    {
+      "id": 117,
+      "start": 382.64,
+      "end": 385.12,
+      "text": "And a second, as the example that I created"
+    },
+    {
+      "id": 118,
+      "start": 385.12,
+      "end": 388.12,
+      "text": "may not reflect the natural use case of this example."
+    },
+    {
+      "id": 119,
+      "start": 388.12,
+      "end": 393.6,
+      "text": "So this is the first issue of this instance."
+    },
+    {
+      "id": 120,
+      "start": 394.6,
+      "end": 397.96,
+      "text": "And second, we related to the first one"
+    },
+    {
+      "id": 121,
+      "start": 397.96,
+      "end": 399.96,
+      "text": "and executability of the tool."
+    },
+    {
+      "id": 122,
+      "start": 401.0,
+      "end": 403.8,
+      "text": "So like based on our over definition"
+    },
+    {
+      "id": 123,
+      "start": 403.8,
+      "end": 406.4,
+      "text": "that tools are programs, you probably think"
+    },
+    {
+      "id": 124,
+      "start": 406.4,
+      "end": 410.08,
+      "text": "that tools can be executed because they're programs"
+    },
+    {
+      "id": 125,
+      "start": 410.08,
+      "end": 411.84,
+      "text": "but actually not."
+    },
+    {
+      "id": 126,
+      "start": 411.84,
+      "end": 415.32,
+      "text": "So if you look at the table, actually more than half"
+    },
+    {
+      "id": 127,
+      "start": 415.32,
+      "end": 420.08,
+      "text": "the data sets, their tools are not executable."
+    },
+    {
+      "id": 128,
+      "start": 420.08,
+      "end": 423.44,
+      "text": "This may be related where only partially related"
+    },
+    {
+      "id": 129,
+      "start": 423.44,
+      "end": 425.32,
+      "text": "to how they create examples."
+    },
+    {
+      "id": 130,
+      "start": 425.32,
+      "end": 427.4,
+      "text": "But they just synthesize examples."
+    },
+    {
+      "id": 131,
+      "start": 427.4,
+      "end": 429.68,
+      "text": "And sometimes the example outputs."
+    },
+    {
+      "id": 132,
+      "start": 429.68,
+      "end": 432.36,
+      "text": "So without actually executing the tools."
+    },
+    {
+      "id": 133,
+      "start": 432.36,
+      "end": 434.36,
+      "text": "So to evaluate on the thing with that,"
+    },
+    {
+      "id": 134,
+      "start": 434.36,
+      "end": 437.04,
+      "text": "you don't necessarily need to execute the tools."
+    },
+    {
+      "id": 135,
+      "start": 437.04,
+      "end": 439.52,
+      "text": "They kind of like get this step."
+    },
+    {
+      "id": 136,
+      "start": 439.52,
+      "end": 442.56,
+      "text": "But there are also other reasons for example,"
+    },
+    {
+      "id": 137,
+      "start": 442.56,
+      "end": 445.4,
+      "text": "hosting this tools usually hundreds of thousands"
+    },
+    {
+      "id": 138,
+      "start": 445.4,
+      "end": 447.28,
+      "text": "of APIs are pretty costly,"
+    },
+    {
+      "id": 139,
+      "start": 447.28,
+      "end": 451.24,
+      "text": "especially if they involve large neural models."
+    },
+    {
+      "id": 140,
+      "start": 451.52,
+      "end": 455.36,
+      "text": "So some of these tools are not like stable."
+    },
+    {
+      "id": 141,
+      "start": 455.36,
+      "end": 456.96,
+      "text": "For example, to get weather, get time"
+    },
+    {
+      "id": 142,
+      "start": 456.96,
+      "end": 460.64,
+      "text": "to return different results at different times."
+    },
+    {
+      "id": 143,
+      "start": 460.64,
+      "end": 463.92,
+      "text": "So it's very hard for people to create static benchmarks"
+    },
+    {
+      "id": 144,
+      "start": 463.92,
+      "end": 466.52,
+      "text": "with a single reference task answer"
+    },
+    {
+      "id": 145,
+      "start": 466.52,
+      "end": 468.12,
+      "text": "for those kind of problems."
+    },
+    {
+      "id": 146,
+      "start": 471.28,
+      "end": 476.56,
+      "text": "And the evaluation benchmarks are, I think, pretty wife."
+    },
+    {
+      "id": 147,
+      "start": 476.56,
+      "end": 477.68,
+      "text": "They sit now."
+    },
+    {
+      "id": 148,
+      "start": 477.68,
+      "end": 479.64,
+      "text": "One of the tasks completion rate"
+    },
+    {
+      "id": 149,
+      "start": 479.64,
+      "end": 483.72,
+      "text": "where basically they just compare the model generated"
+    },
+    {
+      "id": 150,
+      "start": 483.72,
+      "end": 486.04,
+      "text": "response with the annotated reference"
+    },
+    {
+      "id": 151,
+      "start": 486.04,
+      "end": 490.04,
+      "text": "to the response and check the overlap of them."
+    },
+    {
+      "id": 152,
+      "start": 490.04,
+      "end": 493.92,
+      "text": "And the second is because some of the words"
+    },
+    {
+      "id": 153,
+      "start": 493.92,
+      "end": 495.96,
+      "text": "between are not executable."
+    },
+    {
+      "id": 154,
+      "start": 495.96,
+      "end": 499.6,
+      "text": "So they cannot execute the tool and get a final response."
+    },
+    {
+      "id": 155,
+      "start": 499.6,
+      "end": 502.6,
+      "text": "So in fact, they just compare the tool selection,"
+    },
+    {
+      "id": 156,
+      "start": 502.6,
+      "end": 505.88,
+      "text": "like the tooltool expression match"
+    },
+    {
+      "id": 157,
+      "start": 505.88,
+      "end": 509.96,
+      "text": "to see the correctness of the model generation."
+    },
+    {
+      "id": 158,
+      "start": 511.0,
+      "end": 514.96,
+      "text": "And third, especially for like to make it works,"
+    },
+    {
+      "id": 159,
+      "start": 514.96,
+      "end": 519.04,
+      "text": "there are works evaluate the tool reusability"
+    },
+    {
+      "id": 160,
+      "start": 519.04,
+      "end": 521.96,
+      "text": "to encourage the students to have more general function"
+    },
+    {
+      "id": 161,
+      "start": 521.96,
+      "end": 526.04,
+      "text": "in these as well as encouraging efficiency impact."
+    },
+    {
+      "id": 162,
+      "start": 528.12,
+      "end": 530.64,
+      "text": "However, there may be several aspects"
+    },
+    {
+      "id": 163,
+      "start": 530.64,
+      "end": 534.72,
+      "text": "new thing on this evaluation dimension."
+    },
+    {
+      "id": 164,
+      "start": 534.72,
+      "end": 536.64,
+      "text": "Can anyone think of some dimensions?"
+    },
+    {
+      "id": 165,
+      "start": 536.64,
+      "end": 539.56,
+      "text": "So you think are important for tools, but not covered here?"
+    },
+    {
+      "id": 166,
+      "start": 547.56,
+      "end": 550.72,
+      "text": "I think there are some of those areas"
+    },
+    {
+      "id": 167,
+      "start": 550.72,
+      "end": 554.92,
+      "text": "that clearly would be like maybe the properties"
+    },
+    {
+      "id": 168,
+      "start": 554.92,
+      "end": 556.08,
+      "text": "of the tools."
+    },
+    {
+      "id": 169,
+      "start": 556.08,
+      "end": 558.0,
+      "text": "I think there's four of them."
+    },
+    {
+      "id": 170,
+      "start": 558.0,
+      "end": 559.92,
+      "text": "Yeah, yeah, that's a good answer."
+    },
+    {
+      "id": 171,
+      "start": 561.72,
+      "end": 562.56,
+      "text": "Any other?"
+    },
+    {
+      "id": 172,
+      "start": 564.72,
+      "end": 566.72,
+      "text": "Maybe that's a sense of it too hard."
+    },
+    {
+      "id": 173,
+      "start": 566.72,
+      "end": 569.72,
+      "text": "But yeah, I think the condition cost one is a good one."
+    },
+    {
+      "id": 174,
+      "start": 569.72,
+      "end": 571.72,
+      "text": "And that's like related to the first one."
+    },
+    {
+      "id": 175,
+      "start": 571.72,
+      "end": 573.72,
+      "text": "If I can't do that, what's it do?"
+    },
+    {
+      "id": 176,
+      "start": 573.72,
+      "end": 575.72,
+      "text": "So go over each of them."
+    },
+    {
+      "id": 177,
+      "start": 575.72,
+      "end": 577.72,
+      "text": "So one is the efficiency part."
+    },
+    {
+      "id": 178,
+      "start": 577.72,
+      "end": 581.72,
+      "text": "It's basically comparing like a competition cost"
+    },
+    {
+      "id": 179,
+      "start": 581.72,
+      "end": 593.72,
+      "text": "that is spent for a large amount of solar and fish"
+    },
+    {
+      "id": 180,
+      "start": 594.72,
+      "end": 596.72,
+      "text": "for a lot of solar and fish."
+    },
+    {
+      "id": 181,
+      "start": 596.72,
+      "end": 599.72,
+      "text": "Like intuitively, we know you can tools and improve the"
+    },
+    {
+      "id": 182,
+      "start": 599.72,
+      "end": 600.72,
+      "text": "performance."
+    },
+    {
+      "id": 183,
+      "start": 600.72,
+      "end": 601.72,
+      "text": "But like."
+    }
+  ],
+  "language": "en"
+}

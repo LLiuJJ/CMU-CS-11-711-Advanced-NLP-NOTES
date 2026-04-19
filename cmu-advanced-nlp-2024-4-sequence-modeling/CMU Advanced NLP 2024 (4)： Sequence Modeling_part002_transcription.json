@@ -1,0 +1,563 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 29.0,
+      "text": "of the history. And so the way this works is essentially you have your input input."
+    },
+    {
+      "id": 1,
+      "start": 29.0,
+      "end": 37.0,
+      "text": "And then you keep on going like this all the way through the sequence."
+    },
+    {
+      "id": 2,
+      "start": 37.0,
+      "end": 45.0,
+      "text": "The convolution is a condition representation. It's on local context. So you have the inputs like this."
+    },
+    {
+      "id": 3,
+      "start": 45.0,
+      "end": 53.0,
+      "text": "And here you're conditioning on the word itself and the surrounding words on the right or the left."
+    },
+    {
+      "id": 4,
+      "start": 53.0,
+      "end": 63.0,
+      "text": "So you would do something like this. This is a typical convolution where you have this certain one here and the left one and the right one."
+    },
+    {
+      "id": 5,
+      "start": 63.0,
+      "end": 70.0,
+      "text": "And this would be a size three convolution. You can also have a size five convolution seven nine, you know, whatever else."
+    },
+    {
+      "id": 6,
+      "start": 70.0,
+      "end": 74.0,
+      "text": "That would take in more surrounding words like this."
+    },
+    {
+      "id": 7,
+      "start": 74.0,
+      "end": 82.0,
+      "text": "And then finally we have attention. And attention is conditioned representations on a weighted average of all tokens in the sequence."
+    },
+    {
+      "id": 8,
+      "start": 82.0,
+      "end": 87.0,
+      "text": "And so here we're conditioning on all of the other tokens in the sequence."
+    },
+    {
+      "id": 9,
+      "start": 87.0,
+      "end": 93.0,
+      "text": "But the amount that we condition on each of the tokens differs between them."
+    },
+    {
+      "id": 10,
+      "start": 93.0,
+      "end": 99.0,
+      "text": "So we might get more of this token less of this token and other things like that."
+    },
+    {
+      "id": 11,
+      "start": 99.0,
+      "end": 105.0,
+      "text": "And I'll go into the mechanisms of each of these."
+    },
+    {
+      "id": 12,
+      "start": 105.0,
+      "end": 112.0,
+      "text": "One important thing to think about is the computational complexity of each of these."
+    },
+    {
+      "id": 13,
+      "start": 112.0,
+      "end": 121.0,
+      "text": "And the computational complexity can be expressed as the sequence length."
+    },
+    {
+      "id": 14,
+      "start": 121.0,
+      "end": 128.0,
+      "text": "What's called the sequence length and in convolution has a convolution window size. So I'll call that w."
+    },
+    {
+      "id": 15,
+      "start": 128.0,
+      "end": 137.0,
+      "text": "So does anyone have an idea of the computational complexity recurrent neural network."
+    },
+    {
+      "id": 16,
+      "start": 137.0,
+      "end": 150.0,
+      "text": "So how how quickly does the computation of a recurrent neural network grow. And one way you can look at this is figure out the number of arrows that you see here."
+    },
+    {
+      "id": 17,
+      "start": 150.0,
+      "end": 155.0,
+      "text": "Yes, it's linear. So it's basically over at it."
+    },
+    {
+      "id": 18,
+      "start": 155.0,
+      "end": 163.0,
+      "text": "What about convolution? Any other ideas? Any ideas about convolution?"
+    },
+    {
+      "id": 19,
+      "start": 163.0,
+      "end": 168.0,
+      "text": "Yeah, and W and I'm still."
+    },
+    {
+      "id": 20,
+      "start": 168.0,
+      "end": 171.0,
+      "text": "And what about attention?"
+    },
+    {
+      "id": 21,
+      "start": 171.0,
+      "end": 173.0,
+      "text": "And square. Yeah."
+    },
+    {
+      "id": 22,
+      "start": 173.0,
+      "end": 180.0,
+      "text": "So what you can see is for very long sequences."
+    },
+    {
+      "id": 23,
+      "start": 180.0,
+      "end": 189.0,
+      "text": "For very long sequences, the asymptotic complexity of running a recurrent neural network is lower."
+    },
+    {
+      "id": 24,
+      "start": 189.0,
+      "end": 195.0,
+      "text": "So you can run a recurrent neural network over a sequence of length, you know, 20 million or something like that."
+    },
+    {
+      "id": 25,
+      "start": 195.0,
+      "end": 199.0,
+      "text": "And as long as you had enough memory, it would take a linear time."
+    },
+    {
+      "id": 26,
+      "start": 199.0,
+      "end": 204.0,
+      "text": "And if you do something like attention over a really long sequence, it would be more difficult."
+    },
+    {
+      "id": 27,
+      "start": 204.0,
+      "end": 212.0,
+      "text": "There's a lot of copyouts here because attention in convolution are easily parallelized, where is recurrence is not."
+    },
+    {
+      "id": 28,
+      "start": 212.0,
+      "end": 219.0,
+      "text": "And I'll talk about that in a second. But anyway, it's a good thing to keep in mind."
+    },
+    {
+      "id": 29,
+      "start": 219.0,
+      "end": 220.0,
+      "text": "Cool."
+    },
+    {
+      "id": 30,
+      "start": 220.0,
+      "end": 224.0,
+      "text": "So the next the first sequence model I want to introduce is recurrent neural networks."
+    },
+    {
+      "id": 31,
+      "start": 224.0,
+      "end": 230.0,
+      "text": "Oh, I'm sorry, one other thing I want to mention is all of these are still used."
+    },
+    {
+      "id": 32,
+      "start": 230.0,
+      "end": 237.0,
+      "text": "It might seem that like if you're very plugged into NLP, it might seem like, well, everybody's using attention."
+    },
+    {
+      "id": 33,
+      "start": 237.0,
+      "end": 240.0,
+      "text": "So why do we need to learn about the other ones?"
+    },
+    {
+      "id": 34,
+      "start": 240.0,
+      "end": 249.0,
+      "text": "But actually all of these are used and usually recurrence and convolution are used in combination with attention in some way for particular applications where."
+    },
+    {
+      "id": 35,
+      "start": 249.0,
+      "end": 258.0,
+      "text": "Like recurrence or the convolution are useful. So I'll go into details about me."
+    },
+    {
+      "id": 36,
+      "start": 258.0,
+      "end": 263.0,
+      "text": "So let's talk about the first sequence model recurrent neural networks."
+    },
+    {
+      "id": 37,
+      "start": 263.0,
+      "end": 265.0,
+      "text": "So recurrent neural networks."
+    },
+    {
+      "id": 38,
+      "start": 265.0,
+      "end": 272.0,
+      "text": "They're basically tools to remember information. They were invented in around 1990."
+    },
+    {
+      "id": 39,
+      "start": 272.0,
+      "end": 278.0,
+      "text": "And the way they work is a feed forward neural network looks a bit like this."
+    },
+    {
+      "id": 40,
+      "start": 278.0,
+      "end": 282.0,
+      "text": "We have some sort of low a couple over the context. We calculate embeddings."
+    },
+    {
+      "id": 41,
+      "start": 282.0,
+      "end": 287.0,
+      "text": "We do a transform. We get a hidden state and we make the prediction."
+    },
+    {
+      "id": 42,
+      "start": 287.0,
+      "end": 292.0,
+      "text": "Whereas a recurrent neural network feeds in the previous hidden state."
+    },
+    {
+      "id": 43,
+      "start": 292.0,
+      "end": 297.0,
+      "text": "And a very simple element style neural network looks."
+    },
+    {
+      "id": 44,
+      "start": 297.0,
+      "end": 303.0,
+      "text": "Or all contrast the feed forward neural network that we already know with an element style neural network."
+    },
+    {
+      "id": 45,
+      "start": 303.0,
+      "end": 312.0,
+      "text": "Recurrent neural network. So basically the feed forward network that we already know does a linear transform over the input."
+    },
+    {
+      "id": 46,
+      "start": 312.0,
+      "end": 318.0,
+      "text": "And then it runs it through a non linear function. And this could be like a 10H function or a rel U function or anything like that."
+    },
+    {
+      "id": 47,
+      "start": 318.0,
+      "end": 324.0,
+      "text": "And then a recurrent neural network. We add a multiplication by the in the previous hidden state."
+    },
+    {
+      "id": 48,
+      "start": 324.0,
+      "end": 328.0,
+      "text": "So it looks like this."
+    },
+    {
+      "id": 49,
+      "start": 328.0,
+      "end": 335.0,
+      "text": "And so if we look at what processing a sequence looks like, basically what we do is we start out with an initial state."
+    },
+    {
+      "id": 50,
+      "start": 335.0,
+      "end": 341.0,
+      "text": "This initial state could be like all zeros or it could be randomized or it could be learned or whatever else."
+    },
+    {
+      "id": 51,
+      "start": 341.0,
+      "end": 346.0,
+      "text": "And then based on based on this, we run it through an RNN function."
+    },
+    {
+      "id": 52,
+      "start": 346.0,
+      "end": 351.0,
+      "text": "And then you know use calculate the hidden state use it to make a prediction."
+    },
+    {
+      "id": 53,
+      "start": 351.0,
+      "end": 357.0,
+      "text": "We have the RNN function made prediction RNN made prediction RNN made prediction."
+    },
+    {
+      "id": 54,
+      "start": 357.0,
+      "end": 363.0,
+      "text": "So one important thing here is that this RNN is exactly the same function."
+    },
+    {
+      "id": 55,
+      "start": 363.0,
+      "end": 369.0,
+      "text": "No matter which position it appears in. And so because of that we."
+    },
+    {
+      "id": 56,
+      "start": 369.0,
+      "end": 382.0,
+      "text": "And so this is no matter how long the sequence becomes, we always have the same number of parameters, which is always like really important for a sequence model. So that's what this looks like here."
+    },
+    {
+      "id": 57,
+      "start": 382.0,
+      "end": 385.0,
+      "text": "So how do we train RNNs."
+    },
+    {
+      "id": 58,
+      "start": 385.0,
+      "end": 398.0,
+      "text": "Basically, if you remember, we can train neural networks as long as we have a directed a cyclic graph that calculates our loss function and then for propagation and back propagation will do all the rest to calculate our parameters."
+    },
+    {
+      "id": 59,
+      "start": 398.0,
+      "end": 402.0,
+      "text": "And we we update the parameters."
+    },
+    {
+      "id": 60,
+      "start": 402.0,
+      "end": 409.0,
+      "text": "So the way this works is let's say we're doing sequence labeling in each of these predictions is a part of speech."
+    },
+    {
+      "id": 61,
+      "start": 409.0,
+      "end": 412.0,
+      "text": "Each of these labels is a true part of speech label."
+    },
+    {
+      "id": 62,
+      "start": 412.0,
+      "end": 417.0,
+      "text": "Or sorry, each of these predictions is like a probability over the parts of speech for that sequence."
+    },
+    {
+      "id": 63,
+      "start": 417.0,
+      "end": 421.0,
+      "text": "Each of these labels is a true part of speech label."
+    },
+    {
+      "id": 64,
+      "start": 421.0,
+      "end": 427.0,
+      "text": "So basically what we do is from this we calculate the negative log likelihood of the true part of speech we get a loss."
+    },
+    {
+      "id": 65,
+      "start": 427.0,
+      "end": 431.0,
+      "text": "And so now we have four losses here."
+    },
+    {
+      "id": 66,
+      "start": 431.0,
+      "end": 440.0,
+      "text": "This is no longer a nice directed a cyclic graph that ends in a single loss function, which is kind of what we needed for back propagation, right."
+    },
+    {
+      "id": 67,
+      "start": 440.0,
+      "end": 443.0,
+      "text": "So what do we do very simple we just add them together."
+    },
+    {
+      "id": 68,
+      "start": 443.0,
+      "end": 452.0,
+      "text": "We take the sum and now we have a single loss function, which is the sum of all of the loss functions for each prediction that we made."
+    },
+    {
+      "id": 69,
+      "start": 452.0,
+      "end": 460.0,
+      "text": "And that's our total loss. And now we do have a directed a cyclic graph, where this is the terminal node and you can do backprop with this."
+    },
+    {
+      "id": 70,
+      "start": 460.0,
+      "end": 465.0,
+      "text": "This is true for all sequence models. I'm going to talk about today. I'm just illustrating it with recurrent networks."
+    },
+    {
+      "id": 71,
+      "start": 465.0,
+      "end": 469.0,
+      "text": "Any any questions here, everything good."
+    },
+    {
+      "id": 72,
+      "start": 469.0,
+      "end": 471.0,
+      "text": "Okay."
+    },
+    {
+      "id": 73,
+      "start": 471.0,
+      "end": 484.0,
+      "text": "Cool. Yeah. So now we have the loss. It's a well from DAG. We can run backprop. So basically what we do is we just run backprop and our loss goes out back into all of the places."
+    },
+    {
+      "id": 74,
+      "start": 484.0,
+      "end": 494.0,
+      "text": "Now parameters are tied across time. So the derivatives into the parameters are aggregated over all of the time stops."
+    },
+    {
+      "id": 75,
+      "start": 494.0,
+      "end": 501.0,
+      "text": "And this has been called backprop propagation through time since these were originally invented."
+    },
+    {
+      "id": 76,
+      "start": 501.0,
+      "end": 508.0,
+      "text": "So basically what it looks like is because the parameters for this RNN function are shared."
+    },
+    {
+      "id": 77,
+      "start": 508.0,
+      "end": 520.0,
+      "text": "They'll essentially be updated. They'll only be updated once, but they're updated from like four different positions in this network essentially."
+    },
+    {
+      "id": 78,
+      "start": 520.0,
+      "end": 526.0,
+      "text": "And this is the same for all sequence sequence models that I'm going to talk about today."
+    },
+    {
+      "id": 79,
+      "start": 526.0,
+      "end": 534.0,
+      "text": "Another variety of models that people use are bidirectional RNNs. And these are used when you want to, you know, do something like sequence labeling."
+    },
+    {
+      "id": 80,
+      "start": 534.0,
+      "end": 543.0,
+      "text": "And so you just run to RNNs. You want to run one from the beginning one from the end and can get made them together like this."
+    },
+    {
+      "id": 81,
+      "start": 543.0,
+      "end": 550.0,
+      "text": "Cool. Any questions? Yeah."
+    },
+    {
+      "id": 82,
+      "start": 550.0,
+      "end": 560.0,
+      "text": "This is change the complexity. It doesn't change the asymptotic complexity because you're multiplying by two."
+    },
+    {
+      "id": 83,
+      "start": 560.0,
+      "end": 570.0,
+      "text": "And like big. Oh, no, can't take it. It doesn't care if you multiply by a constant. But it does double the time that it would be."
+    },
+    {
+      "id": 84,
+      "start": 570.0,
+      "end": 574.0,
+      "text": "And then you can get a single one from the end."
+    },
+    {
+      "id": 85,
+      "start": 574.0,
+      "end": 575.0,
+      "text": "And then you can get a single one from the end."
+    },
+    {
+      "id": 86,
+      "start": 575.0,
+      "end": 576.0,
+      "text": "Okay."
+    },
+    {
+      "id": 87,
+      "start": 576.0,
+      "end": 577.0,
+      "text": "Okay."
+    },
+    {
+      "id": 88,
+      "start": 577.0,
+      "end": 579.0,
+      "text": "Let's go forward."
+    },
+    {
+      "id": 89,
+      "start": 579.0,
+      "end": 587.0,
+      "text": "Another problem that is particularly safely and in RNNs. And part of the reason why attention models are so useful is vanishing gradients."
+    },
+    {
+      "id": 90,
+      "start": 587.0,
+      "end": 593.0,
+      "text": "But you should be aware of this regardless of whether like no matter which model you're using."
+    },
+    {
+      "id": 91,
+      "start": 593.0,
+      "end": 598.0,
+      "text": "And I'm thinking about it very carefully is actually a really good way to design better architectures."
+    },
+    {
+      "id": 92,
+      "start": 598.0,
+      "end": 605.0,
+      "text": "So basically the problem with vanishing gradients is like let's say we have a prediction task where we're calculating."
+    }
+  ],
+  "language": "en"
+}

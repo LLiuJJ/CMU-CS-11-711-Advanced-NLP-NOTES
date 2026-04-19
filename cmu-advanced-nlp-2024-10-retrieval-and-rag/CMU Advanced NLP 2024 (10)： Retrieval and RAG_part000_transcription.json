@@ -1,0 +1,533 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 4.8,
+      "text": "Today I'm going to talk about retrieval and retrieval augmented generation."
+    },
+    {
+      "id": 1,
+      "start": 4.8,
+      "end": 9.76,
+      "text": "So if we look at our standard prompting flow, normally what we do is we combine together"
+    },
+    {
+      "id": 2,
+      "start": 9.76,
+      "end": 15.6,
+      "text": "a prompt and play with an input. So if we say please answer this question, I think"
+    },
+    {
+      "id": 3,
+      "start": 15.6,
+      "end": 19.76,
+      "text": "Vin Diesel has been a voice actor for several characters in TV series. Do you know what"
+    },
+    {
+      "id": 4,
+      "start": 19.76,
+      "end": 25.76,
+      "text": "their names are? We could get a response from a language model, but there's several problems"
+    },
+    {
+      "id": 5,
+      "start": 25.76,
+      "end": 34.32,
+      "text": "with this. The first is athoracian issues. The models generally have a knowledge cutoff,"
+    },
+    {
+      "id": 6,
+      "start": 34.32,
+      "end": 39.84,
+      "text": "so the parameters are usually only updated to a particular time. So for example, if a new Vin,"
+    },
+    {
+      "id": 7,
+      "start": 39.84,
+      "end": 44.96,
+      "text": "Diesel TV series comes out, then the model that was trained up to a certain time point won't"
+    },
+    {
+      "id": 8,
+      "start": 44.96,
+      "end": 52.88,
+      "text": "be able to know anything about it. There's also issues in private data. So data stored in private"
+    },
+    {
+      "id": 9,
+      "start": 52.88,
+      "end": 58.4,
+      "text": "text or data repositories is not suitable for training for a number of reasons. Number one,"
+    },
+    {
+      "id": 10,
+      "start": 58.4,
+      "end": 65.92,
+      "text": "it's not available to particular language model training providers such as, you know,"
+    },
+    {
+      "id": 11,
+      "start": 65.92,
+      "end": 72.4,
+      "text": "OpenAI or Google or anybody else like this. The second thing is access control issues. So"
+    },
+    {
+      "id": 12,
+      "start": 73.28,
+      "end": 78.16,
+      "text": "even if you're within an organization that has lots of private data and you can train a language"
+    },
+    {
+      "id": 13,
+      "start": 78.16,
+      "end": 83.84,
+      "text": "model on that, certain people in the organization may have access to certain varieties of data"
+    },
+    {
+      "id": 14,
+      "start": 83.84,
+      "end": 89.76,
+      "text": "and other people may not. So it's not just solely an issue of third party providers, it's an issue"
+    },
+    {
+      "id": 15,
+      "start": 89.76,
+      "end": 98.32,
+      "text": "of organization level access control in general. In addition, there are learning failures. So even for data"
+    },
+    {
+      "id": 16,
+      "start": 98.32,
+      "end": 102.88,
+      "text": "that the model was trained on, it might not be sufficient to get the right answer. And this is"
+    },
+    {
+      "id": 17,
+      "start": 102.88,
+      "end": 109.12,
+      "text": "particularly the case for very, very large training data sets and models that are, you know,"
+    },
+    {
+      "id": 18,
+      "start": 110.32,
+      "end": 115.76,
+      "text": "modestly sized because the model is very often won't be able to learn from a single look at a"
+    },
+    {
+      "id": 19,
+      "start": 115.76,
+      "end": 120.4,
+      "text": "particular fact or whatever else like this, especially a bit of early training."
+    },
+    {
+      "id": 20,
+      "start": 123.04,
+      "end": 130.16,
+      "text": "Another thing is even if the answer is correct, it might not be verifiable. So you might want to"
+    },
+    {
+      "id": 21,
+      "start": 130.16,
+      "end": 137.36,
+      "text": "be very sure that the model is not making any accuracy problems. And so in order to do that,"
+    },
+    {
+      "id": 22,
+      "start": 137.36,
+      "end": 140.16,
+      "text": "very often a human will want to go back to the source of the data."
+    },
+    {
+      "id": 23,
+      "start": 143.2,
+      "end": 148.0,
+      "text": "So to solve this, there's a method called retrieval augment in generation, which will also be the"
+    },
+    {
+      "id": 24,
+      "start": 148.0,
+      "end": 155.36,
+      "text": "topic of our second assignment here. And the way it works is you retrieve relevant passages efficiently,"
+    },
+    {
+      "id": 25,
+      "start": 156.32,
+      "end": 162.0,
+      "text": "ones that can entail the answer to a question, and then read the passages to answer the query."
+    },
+    {
+      "id": 26,
+      "start": 163.36,
+      "end": 169.92,
+      "text": "So we have documents like this. We have a query based on the query from retrieval. We get a"
+    },
+    {
+      "id": 27,
+      "start": 169.92,
+      "end": 175.76,
+      "text": "whole bunch of passages. We do reading, and then we get the answer."
+    },
+    {
+      "id": 28,
+      "start": 179.2,
+      "end": 184.88,
+      "text": "So this is some fact implemented in many or even most language modeling providers,"
+    },
+    {
+      "id": 29,
+      "start": 184.88,
+      "end": 190.4,
+      "text": "including OpenAI. So to give an example, I asked the question that I just said about"
+    },
+    {
+      "id": 30,
+      "start": 190.4,
+      "end": 198.48,
+      "text": "from Diesel's voice acting and TV series. And Cheggy PT gave me an answer, and you can see that"
+    },
+    {
+      "id": 31,
+      "start": 198.48,
+      "end": 204.08,
+      "text": "Cheggy PT's answer includes several places with quotes. They're the little blue quotes there."
+    },
+    {
+      "id": 32,
+      "start": 205.52,
+      "end": 212.24,
+      "text": "And if you click on the quote, it tells you where the information source came from. And so this"
+    },
+    {
+      "id": 33,
+      "start": 212.24,
+      "end": 218.48,
+      "text": "one says behind the voice actors, it's going to diesel. And behind the voice actors, TV shows big mouth"
+    },
+    {
+      "id": 34,
+      "start": 218.48,
+      "end": 227.76,
+      "text": "and diesel. Now, if we look closer into this answer, we'll see that it's not perfect even though it is"
+    },
+    {
+      "id": 35,
+      "start": 228.64,
+      "end": 234.08,
+      "text": "performing retrieval augment in generation. So, for example, I only asked about TV series, but it's"
+    },
+    {
+      "id": 36,
+      "start": 234.08,
+      "end": 239.92,
+      "text": "giving me lots of things about movies where it says Groot in Guardians of the Galaxy Volume 3,"
+    },
+    {
+      "id": 37,
+      "start": 239.92,
+      "end": 248.56,
+      "text": "2023 movie. And in fact, Vin Diesel was not even voicing a character named Groot here, so that's"
+    },
+    {
+      "id": 38,
+      "start": 248.56,
+      "end": 254.4,
+      "text": "definitely an accuracy mistake. And separately, there is a place where it says, additionally,"
+    },
+    {
+      "id": 39,
+      "start": 254.4,
+      "end": 259.84,
+      "text": "though the website for big mouthlets, Vin Diesel appears to be a misunderstanding or error,"
+    },
+    {
+      "id": 40,
+      "start": 259.84,
+      "end": 265.68,
+      "text": "as Nick Crowell is credited as the voice of Vin Diesel on that show. So there actually,"
+    },
+    {
+      "id": 41,
+      "start": 265.68,
+      "end": 271.68,
+      "text": "Nick Crowell was acting as Vin Diesel, but that's kind of a misunderstanding of the reader model."
+    },
+    {
+      "id": 42,
+      "start": 272.56,
+      "end": 277.2,
+      "text": "But anyway, you can get the general idea here. You can also see that it's not perfect even for very"
+    },
+    {
+      "id": 43,
+      "start": 277.2,
+      "end": 284.56,
+      "text": "strong models like GPT-4. So now I'd like to go into the actual methodology that we use for this."
+    },
+    {
+      "id": 44,
+      "start": 284.56,
+      "end": 292.32,
+      "text": "We have retrieval methods. And for the retrieval methods, we have quite a few different options."
+    },
+    {
+      "id": 45,
+      "start": 293.12,
+      "end": 298.72,
+      "text": "I'm going to go through each one of them at a time. So Sparse Retrieval, Document Level Dense"
+    },
+    {
+      "id": 46,
+      "start": 298.72,
+      "end": 305.36,
+      "text": "Retrieval, Token Level Dense Retrieval, Cross Encoder Rearranking, and Black Box Retrieval."
+    },
+    {
+      "id": 47,
+      "start": 306.16,
+      "end": 310.96,
+      "text": "So Black Box Retrieval, I'm not really going to go into it a whole lot. Basically, this is just"
+    },
+    {
+      "id": 48,
+      "start": 310.96,
+      "end": 318.72,
+      "text": "asking the Black Box Search Engine to retrieve the relevant context and getting the top"
+    },
+    {
+      "id": 49,
+      "start": 318.72,
+      "end": 324.64,
+      "text": "several results. Nonetheless, this is a pretty reasonable method to do it if you want to do search"
+    },
+    {
+      "id": 50,
+      "start": 324.64,
+      "end": 330.48,
+      "text": "over lots of data that exists on the internet already. And that, in fact, is what"
+    },
+    {
+      "id": 51,
+      "start": 330.48,
+      "end": 335.12,
+      "text": "a CHANJPT does. It looks up on the big by generating a query to the big."
+    },
+    {
+      "id": 52,
+      "start": 337.52,
+      "end": 342.56,
+      "text": "So anyway, let's go into the actual methods that you develop and control yourself. So the first"
+    },
+    {
+      "id": 53,
+      "start": 342.56,
+      "end": 348.8,
+      "text": "one is Sparse Retrieval. And the way this works is you express the query and document is a Sparse"
+    },
+    {
+      "id": 54,
+      "start": 348.8,
+      "end": 355.04,
+      "text": "word frequency vector usually normalized by length. And so if I ask query what is an LP,"
+    },
+    {
+      "id": 55,
+      "start": 355.92,
+      "end": 362.96,
+      "text": "we get a vector where each row of the vector corresponds to a different token."
+    },
+    {
+      "id": 56,
+      "start": 363.92,
+      "end": 376.24,
+      "text": "And we asked what is an LP. And so the places for what an LP and is will all have a non-zero value"
+    },
+    {
+      "id": 57,
+      "start": 376.24,
+      "end": 381.2,
+      "text": "and everything else will have a zero value. And we also normalized by the length of vector. So we"
+    },
+    {
+      "id": 58,
+      "start": 381.2,
+      "end": 388.32,
+      "text": "get something like 0.333.333. Then we have a whole bunch of documents. So the first document says"
+    },
+    {
+      "id": 59,
+      "start": 388.32,
+      "end": 394.0,
+      "text": "what is life. Candy is life. Someone really likes candy. We also have another one that says"
+    },
+    {
+      "id": 60,
+      "start": 394.0,
+      "end": 398.56,
+      "text": "NLP is an acronym for natural language processing. So this is a pretty good, you know,"
+    },
+    {
+      "id": 61,
+      "start": 400.4,
+      "end": 407.84,
+      "text": "answer to our question. Then we also have I like to do good research on an LP, which is, you know,"
+    },
+    {
+      "id": 62,
+      "start": 407.84,
+      "end": 413.12,
+      "text": "a nice sentiment, but not a very good answer to our question, I guess. So if we look at the"
+    },
+    {
+      "id": 63,
+      "start": 413.12,
+      "end": 426.8,
+      "text": "vectors here, we have what and candy and is have a fairly high score. And we have here NLP and is"
+    },
+    {
+      "id": 64,
+      "start": 426.8,
+      "end": 437.36,
+      "text": "have a high score and NLP has a non-zero score. So based on this, we find the document similarity"
+    },
+    {
+      "id": 65,
+      "start": 437.44,
+      "end": 444.0,
+      "text": "with the highest inner product or cosine similarity in the document collection. And so if we take"
+    },
+    {
+      "id": 66,
+      "start": 444.0,
+      "end": 449.68,
+      "text": "the inner product between these vectors, we actually see that the first one got the highest score"
+    },
+    {
+      "id": 67,
+      "start": 449.68,
+      "end": 461.76,
+      "text": "because of its relatively high values for the words what and is. So as you can see,"
+    },
+    {
+      "id": 68,
+      "start": 462.24,
+      "end": 468.24,
+      "text": "common words like what and is can get a high score kind of regardless of whether a document is"
+    },
+    {
+      "id": 69,
+      "start": 468.24,
+      "end": 473.28,
+      "text": "very relevant. And so one way we can fix this is through something called term waiting."
+    },
+    {
+      "id": 70,
+      "start": 474.8,
+      "end": 483.76,
+      "text": "And the way that term waiting works is in addition to having this vector that calculates the"
+    },
+    {
+      "id": 71,
+      "start": 483.76,
+      "end": 493.04,
+      "text": "frequency within a particular document, we also have an up waiting term that gives higher weight"
+    },
+    {
+      "id": 72,
+      "start": 493.04,
+      "end": 498.96,
+      "text": "to low frequency words because low frequency words like NLP tend to be more informative about"
+    },
+    {
+      "id": 73,
+      "start": 498.96,
+      "end": 505.2,
+      "text": "whether the document is relevant than high frequency words like what it is because these high"
+    },
+    {
+      "id": 74,
+      "start": 505.2,
+      "end": 510.64,
+      "text": "frequency words like what and is could happen kind of regardless of whether the"
+    },
+    {
+      "id": 75,
+      "start": 511.28,
+      "end": 516.08,
+      "text": "you know, document is relevant the particular terms of person is asking about."
+    },
+    {
+      "id": 76,
+      "start": 517.6,
+      "end": 525.6,
+      "text": "So one well used and easy to understand version of this is TFIDF or term frequency in document"
+    },
+    {
+      "id": 77,
+      "start": 525.6,
+      "end": 532.0,
+      "text": "frequency. So the way we define in term frequency is exactly what I talked about before. So it's"
+    },
+    {
+      "id": 78,
+      "start": 532.0,
+      "end": 539.84,
+      "text": "basically the frequency of the term T in the document D normalized by the total term frequency"
+    },
+    {
+      "id": 79,
+      "start": 539.84,
+      "end": 543.2,
+      "text": "within the document. So that's what I already showed in the previous slide."
+    },
+    {
+      "id": 80,
+      "start": 544.64,
+      "end": 551.2,
+      "text": "And then in document frequency is a little bit more involved. But basically the way this works is"
+    },
+    {
+      "id": 81,
+      "start": 551.2,
+      "end": 562.48,
+      "text": "we have log of the total number of documents in the collection divided by the total number of"
+    },
+    {
+      "id": 82,
+      "start": 563.36,
+      "end": 570.88,
+      "text": "times this term appeared in any particular document. And so if a term appears many times in any"
+    },
+    {
+      "id": 83,
+      "start": 570.88,
+      "end": 578.96,
+      "text": "particular document it will have a low IDF score, one that's close to zero. But if it rarely appears"
+    },
+    {
+      "id": 84,
+      "start": 578.96,
+      "end": 585.2,
+      "text": "it will have a high IDF score. So basically this is up waiting our free term. And then for TFIDF"
+    },
+    {
+      "id": 85,
+      "start": 586.16,
+      "end": 590.0,
+      "text": "we basically multiply these two terms together and we up wait the"
+    },
+    {
+      "id": 86,
+      "start": 590.96,
+      "end": 597.36,
+      "text": "low frequency words. There's another version of this called DM25 that is"
+    },
+    {
+      "id": 87,
+      "start": 598.56,
+      "end": 605.76,
+      "text": "widely used."
+    }
+  ],
+  "language": "en"
+}

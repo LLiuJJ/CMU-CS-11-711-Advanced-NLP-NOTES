@@ -1,0 +1,731 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 3.0,
+      "text": "and they also have instruction to enumptus, et cetera."
+    },
+    {
+      "id": 1,
+      "start": 3.0,
+      "end": 7.0,
+      "text": "Looking at the parameters, basically similar to Lama,"
+    },
+    {
+      "id": 2,
+      "start": 7.0,
+      "end": 10.0,
+      "text": "the one big difference is they're using non-parametric layer norm"
+    },
+    {
+      "id": 3,
+      "start": 10.0,
+      "end": 12.0,
+      "text": "instead of RMS norm."
+    },
+    {
+      "id": 4,
+      "start": 12.0,
+      "end": 15.0,
+      "text": "So this is basically layer norm with no parameters whatsoever."
+    },
+    {
+      "id": 5,
+      "start": 15.0,
+      "end": 21.0,
+      "text": "They didn't super clearly justify why they decided to do this."
+    },
+    {
+      "id": 6,
+      "start": 21.0,
+      "end": 23.0,
+      "text": "One difference from Pyfia."
+    },
+    {
+      "id": 7,
+      "start": 23.0,
+      "end": 27.0,
+      "text": "This was actually trained on 2.46 trillion tokens."
+    },
+    {
+      "id": 8,
+      "start": 28.0,
+      "end": 34.0,
+      "text": "So compared this to Pyfia, which was trained on 300 billion tokens."
+    },
+    {
+      "id": 9,
+      "start": 34.0,
+      "end": 37.0,
+      "text": "And so they basically trained it for a lot longer."
+    },
+    {
+      "id": 10,
+      "start": 37.0,
+      "end": 39.0,
+      "text": "They trained it on something called the DOMA corpus,"
+    },
+    {
+      "id": 11,
+      "start": 39.0,
+      "end": 43.0,
+      "text": "which they also created at AI2."
+    },
+    {
+      "id": 12,
+      "start": 43.0,
+      "end": 45.0,
+      "text": "Actually, I think this might be wrong."
+    },
+    {
+      "id": 13,
+      "start": 45.0,
+      "end": 47.0,
+      "text": "So just ignore that."
+    },
+    {
+      "id": 14,
+      "start": 47.0,
+      "end": 49.0,
+      "text": "That was a copy-based mistake from Pyfia."
+    },
+    {
+      "id": 15,
+      "start": 49.0,
+      "end": 53.0,
+      "text": "So they always use 3E to the minus 4 with is a learning rate,"
+    },
+    {
+      "id": 16,
+      "start": 53.0,
+      "end": 55.0,
+      "text": "which is the same as Islam."
+    },
+    {
+      "id": 17,
+      "start": 55.0,
+      "end": 60.0,
+      "text": "And the batch size is 4 million tokens, which is our citizen side."
+    },
+    {
+      "id": 18,
+      "start": 60.0,
+      "end": 65.0,
+      "text": "So the DOMA corpus that they created is actually pretty similar to the pile,"
+    },
+    {
+      "id": 19,
+      "start": 65.0,
+      "end": 67.0,
+      "text": "but it's a larger corpus."
+    },
+    {
+      "id": 20,
+      "start": 67.0,
+      "end": 69.0,
+      "text": "It's 3 trillion tokens."
+    },
+    {
+      "id": 21,
+      "start": 69.0,
+      "end": 70.0,
+      "text": "This is also fully open."
+    },
+    {
+      "id": 22,
+      "start": 70.0,
+      "end": 77.0,
+      "text": "So you can download it from Pugging Face if you can find some disk to put 3 trillion tokens on."
+    },
+    {
+      "id": 23,
+      "start": 77.0,
+      "end": 84.0,
+      "text": "So another thing is that they have a data processing pipeline of language filtering"
+    },
+    {
+      "id": 24,
+      "start": 84.0,
+      "end": 86.0,
+      "text": "quality filtering content filtering,"
+    },
+    {
+      "id": 25,
+      "start": 86.0,
+      "end": 90.0,
+      "text": "deduplication, multi source mixing and tokenization."
+    },
+    {
+      "id": 26,
+      "start": 90.0,
+      "end": 97.0,
+      "text": "And so the nice thing about this is a lot of this stuff is usually proprietary for most language modeling creators."
+    },
+    {
+      "id": 27,
+      "start": 97.0,
+      "end": 102.0,
+      "text": "So if you want to see all of the data processing pipeline that goes into training a model,"
+    },
+    {
+      "id": 28,
+      "start": 102.0,
+      "end": 105.0,
+      "text": "this is a pretty good example of that."
+    },
+    {
+      "id": 29,
+      "start": 105.0,
+      "end": 109.0,
+      "text": "The document types that are included are the coming pearl."
+    },
+    {
+      "id": 30,
+      "start": 109.0,
+      "end": 114.0,
+      "text": "And so the coming pearl is just data, a crawl from the internet."
+    },
+    {
+      "id": 31,
+      "start": 114.0,
+      "end": 119.0,
+      "text": "It's about 2.2 trillion tokens."
+    },
+    {
+      "id": 32,
+      "start": 119.0,
+      "end": 125.0,
+      "text": "They also have the stack, which is lots of code, about 400 billion tokens of code."
+    },
+    {
+      "id": 33,
+      "start": 125.0,
+      "end": 131.0,
+      "text": "C4, which is also web data, reddit,"
+    },
+    {
+      "id": 34,
+      "start": 131.0,
+      "end": 136.0,
+      "text": "stem papers, books, and Wikipedia,"
+    },
+    {
+      "id": 35,
+      "start": 136.0,
+      "end": 139.0,
+      "text": "and so on."
+    },
+    {
+      "id": 36,
+      "start": 139.0,
+      "end": 146.0,
+      "text": "You can see that it has a fairly large amount of coverage, although mostly in English."
+    },
+    {
+      "id": 37,
+      "start": 146.0,
+      "end": 152.0,
+      "text": "So some findings from although that I found interesting number one, it has competitive average performance."
+    },
+    {
+      "id": 38,
+      "start": 152.0,
+      "end": 161.0,
+      "text": "So as I mentioned, I think this is the first fully open and documented language model on the 7 billion range."
+    },
+    {
+      "id": 39,
+      "start": 161.0,
+      "end": 167.0,
+      "text": "That is competitive with all the other kind of like less open models in this range."
+    },
+    {
+      "id": 40,
+      "start": 167.0,
+      "end": 174.0,
+      "text": "So for example, one, the two is 70.5 average and all of the data sets that they're evaluating on."
+    },
+    {
+      "id": 41,
+      "start": 174.0,
+      "end": 181.0,
+      "text": "Falcon is 70.3, MPT is 69.8, and almost 69.3."
+    },
+    {
+      "id": 42,
+      "start": 181.0,
+      "end": 187.0,
+      "text": "So it's not a slouch with respect to accuracy compared to Pythia, which had 63."
+    },
+    {
+      "id": 43,
+      "start": 187.0,
+      "end": 192.0,
+      "text": "So the issue with Pythia could just be that they didn't train for long enough."
+    },
+    {
+      "id": 44,
+      "start": 192.0,
+      "end": 200.0,
+      "text": "And some evidence of this is this is where they measured performance constantly as a train for longer."
+    },
+    {
+      "id": 45,
+      "start": 200.0,
+      "end": 206.0,
+      "text": "So the left side is training on 500 billion tokens, which is already more than what Pythia trained on."
+    },
+    {
+      "id": 46,
+      "start": 206.0,
+      "end": 212.0,
+      "text": "The right side is 2.5 trillion tokens."
+    },
+    {
+      "id": 47,
+      "start": 212.0,
+      "end": 218.0,
+      "text": "And you can see interestingly that the numbers are just continuing to increase the say train for longer."
+    },
+    {
+      "id": 48,
+      "start": 218.0,
+      "end": 225.0,
+      "text": "So it seems that training for longer and longer just kind of helps."
+    },
+    {
+      "id": 49,
+      "start": 225.0,
+      "end": 230.0,
+      "text": "One question is whether they're like overfitting to the data set."
+    },
+    {
+      "id": 50,
+      "start": 230.0,
+      "end": 234.0,
+      "text": "Like is any of the test data included in their training data here?"
+    },
+    {
+      "id": 51,
+      "start": 234.0,
+      "end": 238.0,
+      "text": "They did do de-duplication to some extent to try to remove the test data."
+    },
+    {
+      "id": 52,
+      "start": 238.0,
+      "end": 243.0,
+      "text": "So I think it's quite probable that these are real gains."
+    },
+    {
+      "id": 53,
+      "start": 243.0,
+      "end": 252.0,
+      "text": "And if they trained for longer, they might get an even better model, but I'm not, you know, 100th century about that."
+    },
+    {
+      "id": 54,
+      "start": 252.0,
+      "end": 255.0,
+      "text": "Cool."
+    },
+    {
+      "id": 55,
+      "start": 255.0,
+      "end": 263.0,
+      "text": "Yeah, one other thing that I noticed, which might be, might be a little bit interesting is all of these that I didn't mention here is all of these have a learning rate schedule."
+    },
+    {
+      "id": 56,
+      "start": 263.0,
+      "end": 270.0,
+      "text": "And typically they have a learning rate schedule where they do the standard warm up where they increase and then they decrease."
+    },
+    {
+      "id": 57,
+      "start": 270.0,
+      "end": 273.0,
+      "text": "But they stop decreasing at a floor."
+    },
+    {
+      "id": 58,
+      "start": 273.0,
+      "end": 278.0,
+      "text": "And usually that floor is about one tenth the size of the original learning rate."
+    },
+    {
+      "id": 59,
+      "start": 278.0,
+      "end": 282.0,
+      "text": "So the if they start out three e to the minus four, they'll decrease it."
+    },
+    {
+      "id": 60,
+      "start": 282.0,
+      "end": 285.0,
+      "text": "But only to three e to the minus two."
+    },
+    {
+      "id": 61,
+      "start": 285.0,
+      "end": 287.0,
+      "text": "And then I can do something."
+    },
+    {
+      "id": 62,
+      "start": 287.0,
+      "end": 291.0,
+      "text": "So there might be a good thing to know."
+    },
+    {
+      "id": 63,
+      "start": 291.0,
+      "end": 295.0,
+      "text": "Any questions about this?"
+    },
+    {
+      "id": 64,
+      "start": 295.0,
+      "end": 296.0,
+      "text": "Okay."
+    },
+    {
+      "id": 65,
+      "start": 296.0,
+      "end": 299.0,
+      "text": "So now I'll get into a laminate."
+    },
+    {
+      "id": 66,
+      "start": 299.0,
+      "end": 303.0,
+      "text": "Laminate is a model that probably most people have heard about."
+    },
+    {
+      "id": 67,
+      "start": 303.0,
+      "end": 305.0,
+      "text": "It was created by meta."
+    },
+    {
+      "id": 68,
+      "start": 305.0,
+      "end": 310.0,
+      "text": "It's one of the strongest open language models."
+    },
+    {
+      "id": 69,
+      "start": 310.0,
+      "end": 314.0,
+      "text": "Now, although arguably there might be stronger open language models."
+    },
+    {
+      "id": 70,
+      "start": 314.0,
+      "end": 323.0,
+      "text": "And the goal is a strong and safe open lm and they have base and chat versions of it."
+    },
+    {
+      "id": 71,
+      "start": 323.0,
+      "end": 330.0,
+      "text": "And some unique features are I think this is the open model with the strongest safeties."
+    },
+    {
+      "id": 72,
+      "start": 330.0,
+      "end": 334.0,
+      "text": "Safeguard so it is."
+    },
+    {
+      "id": 73,
+      "start": 334.0,
+      "end": 340.0,
+      "text": "So if I were to pick one model that I wanted to use in an actual system that was directly conversing with users."
+    },
+    {
+      "id": 74,
+      "start": 340.0,
+      "end": 344.0,
+      "text": "I would probably pick this one over something like."
+    },
+    {
+      "id": 75,
+      "start": 344.0,
+      "end": 348.0,
+      "text": "Mistral, even though mistral shows superior performance some of the time."
+    },
+    {
+      "id": 76,
+      "start": 348.0,
+      "end": 352.0,
+      "text": "It might say things that you don't want to be saying to like users."
+    },
+    {
+      "id": 77,
+      "start": 352.0,
+      "end": 357.0,
+      "text": "So I think that's one of the nice things about model."
+    },
+    {
+      "id": 78,
+      "start": 357.0,
+      "end": 360.0,
+      "text": "So I've been comparing everything else to it."
+    },
+    {
+      "id": 79,
+      "start": 360.0,
+      "end": 362.0,
+      "text": "So that's pretty normal."
+    },
+    {
+      "id": 80,
+      "start": 362.0,
+      "end": 365.0,
+      "text": "The thing about the data is the data is not open."
+    },
+    {
+      "id": 81,
+      "start": 365.0,
+      "end": 369.0,
+      "text": "They didn't say what data they trained on for reasons that I talked about before."
+    },
+    {
+      "id": 82,
+      "start": 369.0,
+      "end": 375.0,
+      "text": "What they did say is it was trained on public sources, upsampling the most factual sources."
+    },
+    {
+      "id": 83,
+      "start": 375.0,
+      "end": 378.0,
+      "text": "So that's what they said."
+    },
+    {
+      "id": 84,
+      "start": 378.0,
+      "end": 381.0,
+      "text": "The one by one paper has more information."
+    },
+    {
+      "id": 85,
+      "start": 381.0,
+      "end": 388.0,
+      "text": "And so I'll talk about what they did in the lamba one paper and we can maybe extrapolate that they did something similar in the lamba two paper."
+    },
+    {
+      "id": 86,
+      "start": 388.0,
+      "end": 394.0,
+      "text": "And then the total training amount is two trillion tokens. So that's actually less."
+    },
+    {
+      "id": 87,
+      "start": 394.0,
+      "end": 400.0,
+      "text": "So if we look at the lamba one training data, it looks a little bit like it looks very much like the old training data."
+    },
+    {
+      "id": 88,
+      "start": 400.0,
+      "end": 406.0,
+      "text": "It's common crawl c4 get hub wiki pdf books archive stack exchange."
+    },
+    {
+      "id": 89,
+      "start": 406.0,
+      "end": 417.0,
+      "text": "And one thing you'll notice is that they up sampled wiki pdf in books and down sampled get hub according compared to the amount of data that they actually had."
+    },
+    {
+      "id": 90,
+      "start": 417.0,
+      "end": 423.0,
+      "text": "And so they did 2.4 epox over wiki pdf 2.2 epox over books."
+    },
+    {
+      "id": 91,
+      "start": 423.0,
+      "end": 432.0,
+      "text": "And only one epoch over like the standard web data and archive and stack exchange in 0.6 epox over the GitHub data that they had."
+    },
+    {
+      "id": 92,
+      "start": 432.0,
+      "end": 442.0,
+      "text": "So obviously they thought that this wiki pdf looks data was more valuable for some reason and they really wanted the model to learn well."
+    },
+    {
+      "id": 93,
+      "start": 442.0,
+      "end": 453.0,
+      "text": "So I think when they say that they upset old factual data, I'm assuming that that's also what they didn't want to do."
+    },
+    {
+      "id": 94,
+      "start": 453.0,
+      "end": 457.0,
+      "text": "So the next thing that's come."
+    },
+    {
+      "id": 95,
+      "start": 457.0,
+      "end": 460.0,
+      "text": "Yeah."
+    },
+    {
+      "id": 96,
+      "start": 460.0,
+      "end": 465.0,
+      "text": "What does it need to be out of right."
+    },
+    {
+      "id": 97,
+      "start": 465.0,
+      "end": 470.0,
+      "text": "Yeah, actually that's a really good question. So why are epox not integer values."
+    },
+    {
+      "id": 98,
+      "start": 470.0,
+      "end": 475.0,
+      "text": "There's actually no reason at all that you should do, you know, integer value of epox."
+    },
+    {
+      "id": 99,
+      "start": 475.0,
+      "end": 480.0,
+      "text": "You can always save out a checkpoint every 10,000 steps or something."
+    },
+    {
+      "id": 100,
+      "start": 480.0,
+      "end": 491.0,
+      "text": "So I actually encourage people to get away from saving up checkpoints every epox because that kind of discourages you from making your training data larger because if you make your training data larger, it will take."
+    },
+    {
+      "id": 101,
+      "start": 491.0,
+      "end": 494.0,
+      "text": "And so training takes forever."
+    },
+    {
+      "id": 102,
+      "start": 494.0,
+      "end": 501.0,
+      "text": "Because it takes forever to use an epoch, but in reality, you can just save out, you know, periodically and."
+    },
+    {
+      "id": 103,
+      "start": 501.0,
+      "end": 504.0,
+      "text": "And keep the checkpoints from earlier."
+    },
+    {
+      "id": 104,
+      "start": 504.0,
+      "end": 511.0,
+      "text": "So many language models don't train on all the data on the web because it would just be too expensive to be so despite the fact that they have that."
+    },
+    {
+      "id": 105,
+      "start": 511.0,
+      "end": 517.0,
+      "text": "But very good question though, it's that's important."
+    },
+    {
+      "id": 106,
+      "start": 517.0,
+      "end": 528.0,
+      "text": "Now I'd like to talk a little bit about the safety training that goes into the llama models. I might talk a little bit more about this later, but I think."
+    },
+    {
+      "id": 107,
+      "start": 528.0,
+      "end": 530.0,
+      "text": "I'll talk about it now."
+    },
+    {
+      "id": 108,
+      "start": 530.0,
+      "end": 537.0,
+      "text": "Basically the llama to developers put a lot of effort into training the models be safe because."
+    },
+    {
+      "id": 109,
+      "start": 537.0,
+      "end": 542.0,
+      "text": "You know, they're a big company and they don't want any PR disasters."
+    },
+    {
+      "id": 110,
+      "start": 542.0,
+      "end": 547.0,
+      "text": "And also, you know, they want an actual safe model that they can use and deploy into products."
+    },
+    {
+      "id": 111,
+      "start": 547.0,
+      "end": 552.0,
+      "text": "So I think they have the dual, you know, dual motivation there."
+    },
+    {
+      "id": 112,
+      "start": 552.0,
+      "end": 557.0,
+      "text": "The first thing that they did was they collected lots of data for reward modeling."
+    },
+    {
+      "id": 113,
+      "start": 557.0,
+      "end": 562.0,
+      "text": "And reward modeling, what they say what they're calling reward modeling is basically preference modeling."
+    },
+    {
+      "id": 114,
+      "start": 562.0,
+      "end": 570.0,
+      "text": "So they have, you know, multiple outputs where the two outputs are somehow ranked for preferences."
+    },
+    {
+      "id": 115,
+      "start": 570.0,
+      "end": 577.0,
+      "text": "And I talked about this when I was talking about DPO and the reinforcement learning class, for example."
+    },
+    {
+      "id": 116,
+      "start": 577.0,
+      "end": 584.0,
+      "text": "A lot of these actually exist. So there's like the anthropic hopeful and harmless data sets."
+    },
+    {
+      "id": 117,
+      "start": 584.0,
+      "end": 593.0,
+      "text": "These open AI data sets from web GPT stack exchange and stack exchange. They have hopeful answers and not helpful answers."
+    },
+    {
+      "id": 118,
+      "start": 593.0,
+      "end": 596.0,
+      "text": "So once that you get thumbs up and thumbs down to."
+    },
+    {
+      "id": 119,
+      "start": 596.0,
+      "end": 601.0,
+      "text": "And the Stanford human preferences data set."
+    },
+    {
+      "id": 120,
+      "start": 601.0,
+      "end": 603.0,
+      "text": "I forget my."
+    }
+  ],
+  "language": "en"
+}

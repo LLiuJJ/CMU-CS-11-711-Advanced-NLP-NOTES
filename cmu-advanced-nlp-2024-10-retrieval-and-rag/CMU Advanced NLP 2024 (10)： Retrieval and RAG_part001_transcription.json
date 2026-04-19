@@ -1,0 +1,1073 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 4.32,
+      "text": "that is widely used."
+    },
+    {
+      "id": 1,
+      "start": 4.32,
+      "end": 7.04,
+      "text": "This is more involved, so I'm not going"
+    },
+    {
+      "id": 2,
+      "start": 7.04,
+      "end": 8.72,
+      "text": "to go into all of the details."
+    },
+    {
+      "id": 3,
+      "start": 8.72,
+      "end": 11.04,
+      "text": "But basically, if you remember back"
+    },
+    {
+      "id": 4,
+      "start": 11.04,
+      "end": 15.56,
+      "text": "to the lecture on count-based language models,"
+    },
+    {
+      "id": 5,
+      "start": 15.56,
+      "end": 17.4,
+      "text": "there were a bunch of smoothing techniques"
+    },
+    {
+      "id": 6,
+      "start": 17.4,
+      "end": 19.64,
+      "text": "for these count-based language models."
+    },
+    {
+      "id": 7,
+      "start": 19.64,
+      "end": 25.04,
+      "text": "And this uses kind of a multiplicative additive smoothing"
+    },
+    {
+      "id": 8,
+      "start": 25.04,
+      "end": 29.96,
+      "text": "term to up-way things instead of using the term frequencies."
+    },
+    {
+      "id": 9,
+      "start": 30.96,
+      "end": 37.32,
+      "text": "And the actual formula is here k and the archetype of parameters."
+    },
+    {
+      "id": 10,
+      "start": 37.32,
+      "end": 41.76,
+      "text": "And at that VHDL is the average document length."
+    },
+    {
+      "id": 11,
+      "start": 41.76,
+      "end": 43.56,
+      "text": "The details of this are not really important,"
+    },
+    {
+      "id": 12,
+      "start": 43.56,
+      "end": 46.28,
+      "text": "but basically what you should know is that this is doing some smoothing"
+    },
+    {
+      "id": 13,
+      "start": 46.28,
+      "end": 47.92,
+      "text": "on the term frequencies."
+    },
+    {
+      "id": 14,
+      "start": 47.92,
+      "end": 50.12,
+      "text": "And you can look in more detail if you're interested."
+    },
+    {
+      "id": 15,
+      "start": 50.44,
+      "end": 60.52,
+      "text": "So now that we have this sort of term-based sparse vector,"
+    },
+    {
+      "id": 16,
+      "start": 60.52,
+      "end": 63.52,
+      "text": "we would like to use this to look up relevant documents"
+    },
+    {
+      "id": 17,
+      "start": 63.52,
+      "end": 65.72,
+      "text": "in a collection very quickly."
+    },
+    {
+      "id": 18,
+      "start": 65.72,
+      "end": 70.32,
+      "text": "Because we might have a collection that's extremely large,"
+    },
+    {
+      "id": 19,
+      "start": 70.32,
+      "end": 72.12,
+      "text": "like as large as the entire internet,"
+    },
+    {
+      "id": 20,
+      "start": 72.12,
+      "end": 74.8,
+      "text": "like what Google is doing when it searches."
+    },
+    {
+      "id": 21,
+      "start": 74.8,
+      "end": 77.32,
+      "text": "And so in order to sell this, we need a data structure"
+    },
+    {
+      "id": 22,
+      "start": 77.32,
+      "end": 81.44,
+      "text": "that allows for efficient sparse lookup of vectors."
+    },
+    {
+      "id": 23,
+      "start": 81.44,
+      "end": 85.36,
+      "text": "And so we have all of these sparse vectors like this."
+    },
+    {
+      "id": 24,
+      "start": 85.36,
+      "end": 91.4,
+      "text": "And we basically turn this into an index,"
+    },
+    {
+      "id": 25,
+      "start": 91.4,
+      "end": 96.24,
+      "text": "where we have something like a Python-stale dictionary"
+    },
+    {
+      "id": 26,
+      "start": 96.24,
+      "end": 101.36,
+      "text": "or a map that has, is the key, each word we would look"
+    },
+    {
+      "id": 27,
+      "start": 101.36,
+      "end": 102.24,
+      "text": "like to look up."
+    },
+    {
+      "id": 28,
+      "start": 102.24,
+      "end": 108.68,
+      "text": "And is the vector the corresponding index of that document?"
+    },
+    {
+      "id": 29,
+      "start": 108.68,
+      "end": 111.8,
+      "text": "So for example, what, in our case here,"
+    },
+    {
+      "id": 30,
+      "start": 111.8,
+      "end": 113.32,
+      "text": "only appears in document one."
+    },
+    {
+      "id": 31,
+      "start": 113.32,
+      "end": 115.8,
+      "text": "So it would point to document one."
+    },
+    {
+      "id": 32,
+      "start": 115.8,
+      "end": 118.68,
+      "text": "Candy also appears in document one."
+    },
+    {
+      "id": 33,
+      "start": 118.68,
+      "end": 120.88,
+      "text": "NLP appears in two and three."
+    },
+    {
+      "id": 34,
+      "start": 120.88,
+      "end": 122.72,
+      "text": "And so you can create this index like this."
+    },
+    {
+      "id": 35,
+      "start": 122.72,
+      "end": 124.44,
+      "text": "And this is called an inverted index."
+    },
+    {
+      "id": 36,
+      "start": 127.2,
+      "end": 129.72,
+      "text": "This is an important application, of course."
+    },
+    {
+      "id": 37,
+      "start": 129.72,
+      "end": 134.4,
+      "text": "So there's lots of software, the most kind of canonical software"
+    },
+    {
+      "id": 38,
+      "start": 134.4,
+      "end": 136.52,
+      "text": "for this is Apache Lucene."
+    },
+    {
+      "id": 39,
+      "start": 136.52,
+      "end": 141.72,
+      "text": "So if you want to build a big index to look up vectors"
+    },
+    {
+      "id": 40,
+      "start": 141.72,
+      "end": 143.88,
+      "text": "using this sparse index like this,"
+    },
+    {
+      "id": 41,
+      "start": 143.88,
+      "end": 145.8,
+      "text": "you can take a look at Lucene."
+    },
+    {
+      "id": 42,
+      "start": 150.4,
+      "end": 153.64,
+      "text": "So the next thing I'd like to talk about is dense retrieval."
+    },
+    {
+      "id": 43,
+      "start": 153.64,
+      "end": 155.48,
+      "text": "And the way dense retrieval works"
+    },
+    {
+      "id": 44,
+      "start": 155.48,
+      "end": 159.32,
+      "text": "is you encode the document inquiry into a dense vector"
+    },
+    {
+      "id": 45,
+      "start": 159.32,
+      "end": 161.52,
+      "text": "and find the nearest neighbor."
+    },
+    {
+      "id": 46,
+      "start": 161.52,
+      "end": 165.2,
+      "text": "In order to do this encoding, you can use a number of things."
+    },
+    {
+      "id": 47,
+      "start": 165.2,
+      "end": 167.44,
+      "text": "You can use out of the box embeddings,"
+    },
+    {
+      "id": 48,
+      "start": 167.44,
+      "end": 169.68,
+      "text": "where you can use learned embeddings"
+    },
+    {
+      "id": 49,
+      "start": 169.68,
+      "end": 172.76,
+      "text": "specifically created for the purpose of retrieval."
+    },
+    {
+      "id": 50,
+      "start": 174.0,
+      "end": 179.0,
+      "text": "And so what we do is we take all of these documents here."
+    },
+    {
+      "id": 51,
+      "start": 179.28,
+      "end": 182.6,
+      "text": "We convert them into embeddings using whatever embedding method"
+    },
+    {
+      "id": 52,
+      "start": 182.6,
+      "end": 184.68,
+      "text": "that we want to use."
+    },
+    {
+      "id": 53,
+      "start": 184.68,
+      "end": 187.96,
+      "text": "We then have a query and we take that query"
+    },
+    {
+      "id": 54,
+      "start": 187.96,
+      "end": 190.2,
+      "text": "and we match it and find the nearest neighbor here."
+    },
+    {
+      "id": 55,
+      "start": 191.96,
+      "end": 194.0,
+      "text": "So if you're just using out of the box embeddings,"
+    },
+    {
+      "id": 56,
+      "start": 194.0,
+      "end": 198.08,
+      "text": "you don't need to do anything special for retrieval."
+    },
+    {
+      "id": 57,
+      "start": 198.08,
+      "end": 199.68,
+      "text": "You can just take your favorite embeddings"
+    },
+    {
+      "id": 58,
+      "start": 199.68,
+      "end": 202.44,
+      "text": "like the sentence, verb embeddings"
+    },
+    {
+      "id": 59,
+      "start": 202.44,
+      "end": 206.76,
+      "text": "or the open AI, add a embedding,"
+    },
+    {
+      "id": 60,
+      "start": 206.76,
+      "end": 208.12,
+      "text": "or something like this."
+    },
+    {
+      "id": 61,
+      "start": 208.12,
+      "end": 211.32,
+      "text": "But actually the type of embeddings you need for retrieval"
+    },
+    {
+      "id": 62,
+      "start": 211.32,
+      "end": 214.08,
+      "text": "are kind of very special."
+    },
+    {
+      "id": 63,
+      "start": 214.08,
+      "end": 217.52,
+      "text": "And because of that, it's important to,"
+    },
+    {
+      "id": 64,
+      "start": 217.52,
+      "end": 220.24,
+      "text": "if you're very serious about doing a good job of retrieval,"
+    },
+    {
+      "id": 65,
+      "start": 220.24,
+      "end": 222.44,
+      "text": "it's important to use embedding set"
+    },
+    {
+      "id": 66,
+      "start": 222.44,
+      "end": 224.2,
+      "text": "or specifically tail-in for retrieval."
+    },
+    {
+      "id": 67,
+      "start": 225.48,
+      "end": 229.28,
+      "text": "And the reason why it is important to do this"
+    },
+    {
+      "id": 68,
+      "start": 229.28,
+      "end": 230.36,
+      "text": "is several hold."
+    },
+    {
+      "id": 69,
+      "start": 230.36,
+      "end": 233.2,
+      "text": "But the most intuitive way to think about it"
+    },
+    {
+      "id": 70,
+      "start": 233.2,
+      "end": 238.24,
+      "text": "is if we think about the things that GFIDF does,"
+    },
+    {
+      "id": 71,
+      "start": 238.24,
+      "end": 241.72,
+      "text": "GFIDF is giving a very high weight"
+    },
+    {
+      "id": 72,
+      "start": 241.72,
+      "end": 245.8,
+      "text": "to contentful words and rare words."
+    },
+    {
+      "id": 73,
+      "start": 245.8,
+      "end": 248.6,
+      "text": "And we're not guaranteed that any random embedding"
+    },
+    {
+      "id": 74,
+      "start": 248.6,
+      "end": 250.16,
+      "text": "that we get is going to do that."
+    },
+    {
+      "id": 75,
+      "start": 250.16,
+      "end": 255.16,
+      "text": "So for example, if we just take the average word embeddings"
+    },
+    {
+      "id": 76,
+      "start": 255.52,
+      "end": 258.32,
+      "text": "of every word in a sequence,"
+    },
+    {
+      "id": 77,
+      "start": 258.32,
+      "end": 260.0,
+      "text": "it's going to give the same weight"
+    },
+    {
+      "id": 78,
+      "start": 260.0,
+      "end": 263.88,
+      "text": "to all of the words in the output."
+    },
+    {
+      "id": 79,
+      "start": 263.88,
+      "end": 267.68,
+      "text": "And in fact, common words tend to have slightly higher norms"
+    },
+    {
+      "id": 80,
+      "start": 267.68,
+      "end": 269.6,
+      "text": "than infrequent words."
+    },
+    {
+      "id": 81,
+      "start": 269.6,
+      "end": 272.52,
+      "text": "And so that would actually upweight common words,"
+    },
+    {
+      "id": 82,
+      "start": 272.52,
+      "end": 274.8,
+      "text": "which is exactly the opposite thing we want."
+    },
+    {
+      "id": 83,
+      "start": 276.12,
+      "end": 279.4,
+      "text": "So how do we learn retrieval oriented embeddings?"
+    },
+    {
+      "id": 84,
+      "start": 280.56,
+      "end": 283.56,
+      "text": "The normal way we do this is we select positive"
+    },
+    {
+      "id": 85,
+      "start": 283.56,
+      "end": 288.04,
+      "text": "and negative documents and then train using a compressive loss."
+    },
+    {
+      "id": 86,
+      "start": 288.04,
+      "end": 292.52,
+      "text": "And so an example of this is we have a query"
+    },
+    {
+      "id": 87,
+      "start": 292.52,
+      "end": 295.56,
+      "text": "and then we have negative documents for that query"
+    },
+    {
+      "id": 88,
+      "start": 295.56,
+      "end": 298.56,
+      "text": "and we have positive documents for that query."
+    },
+    {
+      "id": 89,
+      "start": 298.56,
+      "end": 301.32,
+      "text": "And we formulate a hinge loss"
+    },
+    {
+      "id": 90,
+      "start": 301.32,
+      "end": 303.28,
+      "text": "or maybe some sort of probabilistic loss"
+    },
+    {
+      "id": 91,
+      "start": 303.28,
+      "end": 308.28,
+      "text": "similar to the hinge loss and do fine tuning of the embeddings."
+    },
+    {
+      "id": 92,
+      "start": 311.32,
+      "end": 316.32,
+      "text": "So if you have gold standard positive documents,"
+    },
+    {
+      "id": 93,
+      "start": 317.6,
+      "end": 321.04,
+      "text": "then this is relatively easy to train"
+    },
+    {
+      "id": 94,
+      "start": 321.04,
+      "end": 323.36,
+      "text": "because you just need the positive documents"
+    },
+    {
+      "id": 95,
+      "start": 323.36,
+      "end": 326.96,
+      "text": "and then you can get negative documents in a number of ways."
+    },
+    {
+      "id": 96,
+      "start": 326.96,
+      "end": 329.76,
+      "text": "One common way of getting negative documents"
+    },
+    {
+      "id": 97,
+      "start": 329.76,
+      "end": 333.32,
+      "text": "is do you just form a batch of data?"
+    },
+    {
+      "id": 98,
+      "start": 333.32,
+      "end": 335.32,
+      "text": "And given that batch of data,"
+    },
+    {
+      "id": 99,
+      "start": 335.32,
+      "end": 338.96,
+      "text": "you take all of the other documents in the batch."
+    },
+    {
+      "id": 100,
+      "start": 338.96,
+      "end": 341.0,
+      "text": "All of the documents in the batch"
+    },
+    {
+      "id": 101,
+      "start": 341.0,
+      "end": 343.68,
+      "text": "that are positive for some other query"
+    },
+    {
+      "id": 102,
+      "start": 343.68,
+      "end": 346.92,
+      "text": "and you use those as negative documents."
+    },
+    {
+      "id": 103,
+      "start": 346.92,
+      "end": 350.96,
+      "text": "So you sample 32 query document pairs,"
+    },
+    {
+      "id": 104,
+      "start": 350.96,
+      "end": 353.36,
+      "text": "you use the aligned ones as positive documents"
+    },
+    {
+      "id": 105,
+      "start": 353.36,
+      "end": 356.84,
+      "text": "and then use the 31 other ones as negative documents."
+    },
+    {
+      "id": 106,
+      "start": 356.84,
+      "end": 360.56,
+      "text": "And this is both effective and efficient"
+    },
+    {
+      "id": 107,
+      "start": 360.56,
+      "end": 364.48,
+      "text": "because you can kind of learn from the query document pairs"
+    },
+    {
+      "id": 108,
+      "start": 364.48,
+      "end": 367.2,
+      "text": "all the same time in an efficient implementation."
+    },
+    {
+      "id": 109,
+      "start": 369.6,
+      "end": 374.6,
+      "text": "However, this is not enough in many cases"
+    },
+    {
+      "id": 110,
+      "start": 374.72,
+      "end": 379.08,
+      "text": "because that will end up having lots of very"
+    },
+    {
+      "id": 111,
+      "start": 379.08,
+      "end": 381.4,
+      "text": "kind of obviously wrong documents"
+    },
+    {
+      "id": 112,
+      "start": 381.4,
+      "end": 386.24,
+      "text": "because their documents that are relevant"
+    },
+    {
+      "id": 113,
+      "start": 386.24,
+      "end": 387.92,
+      "text": "for a completely different query"
+    },
+    {
+      "id": 114,
+      "start": 387.92,
+      "end": 391.32,
+      "text": "and it's kind of easy to distinguish between those."
+    },
+    {
+      "id": 115,
+      "start": 391.32,
+      "end": 394.16,
+      "text": "You can just look at superficial word overlap."
+    },
+    {
+      "id": 116,
+      "start": 394.16,
+      "end": 395.56,
+      "text": "So another common thing to do"
+    },
+    {
+      "id": 117,
+      "start": 395.56,
+      "end": 397.36,
+      "text": "when you're training these models"
+    },
+    {
+      "id": 118,
+      "start": 397.36,
+      "end": 399.84,
+      "text": "is to get hard negatives."
+    },
+    {
+      "id": 119,
+      "start": 399.84,
+      "end": 403.28,
+      "text": "So hard negatives are basically negative examples"
+    },
+    {
+      "id": 120,
+      "start": 403.28,
+      "end": 406.36,
+      "text": "that look plausible but are actually wrong."
+    },
+    {
+      "id": 121,
+      "start": 406.36,
+      "end": 411.36,
+      "text": "And so here, this famous method called DPR"
+    },
+    {
+      "id": 122,
+      "start": 411.6,
+      "end": 416.36,
+      "text": "is it basically runs the encoders based on both"
+    },
+    {
+      "id": 123,
+      "start": 417.96,
+      "end": 419.8,
+      "text": "in batch negatives, like I mentioned before,"
+    },
+    {
+      "id": 124,
+      "start": 419.8,
+      "end": 421.72,
+      "text": "and hard negatives that were created"
+    },
+    {
+      "id": 125,
+      "start": 421.72,
+      "end": 424.48,
+      "text": "by looking up documents with VM25."
+    },
+    {
+      "id": 126,
+      "start": 424.48,
+      "end": 427.96,
+      "text": "And so the ones that were looked up by VM25"
+    },
+    {
+      "id": 127,
+      "start": 427.96,
+      "end": 430.36,
+      "text": "kind of look very similar superficially"
+    },
+    {
+      "id": 128,
+      "start": 430.36,
+      "end": 433.08,
+      "text": "but they might have subtle errors in them"
+    },
+    {
+      "id": 129,
+      "start": 433.08,
+      "end": 434.48,
+      "text": "for why they're inappropriate."
+    },
+    {
+      "id": 130,
+      "start": 437.04,
+      "end": 441.28,
+      "text": "There's also methods to learn these retrievers."
+    },
+    {
+      "id": 131,
+      "start": 441.28,
+      "end": 444.8,
+      "text": "Based on kind of not supervised data."
+    },
+    {
+      "id": 132,
+      "start": 444.8,
+      "end": 447.56,
+      "text": "So one major bottleneck if you're taking"
+    },
+    {
+      "id": 133,
+      "start": 447.56,
+      "end": 451.32,
+      "text": "the positive documents from human annotations"
+    },
+    {
+      "id": 134,
+      "start": 451.32,
+      "end": 453.28,
+      "text": "of whether something is correct or not"
+    },
+    {
+      "id": 135,
+      "start": 453.28,
+      "end": 457.48,
+      "text": "or human click through logs or other things like this"
+    },
+    {
+      "id": 136,
+      "start": 457.48,
+      "end": 462.48,
+      "text": "is that you need that data in order to start training the model."
+    },
+    {
+      "id": 137,
+      "start": 462.76,
+      "end": 466.72,
+      "text": "So a contriever is another method"
+    },
+    {
+      "id": 138,
+      "start": 466.72,
+      "end": 470.76,
+      "text": "that uses two random spans within a document"
+    },
+    {
+      "id": 139,
+      "start": 470.76,
+      "end": 474.48,
+      "text": "is a positive pair and random spans"
+    },
+    {
+      "id": 140,
+      "start": 474.48,
+      "end": 477.0,
+      "text": "from across documents is negative pairs."
+    },
+    {
+      "id": 141,
+      "start": 477.0,
+      "end": 480.76,
+      "text": "And so this can be used for very, very large scale"
+    },
+    {
+      "id": 142,
+      "start": 480.76,
+      "end": 483.0,
+      "text": "initial pre-training of the models."
+    },
+    {
+      "id": 143,
+      "start": 484.2,
+      "end": 486.16,
+      "text": "And then after you've done that large scale"
+    },
+    {
+      "id": 144,
+      "start": 486.16,
+      "end": 489.28,
+      "text": "initial pre-training, you can then go in and fine tune it"
+    },
+    {
+      "id": 145,
+      "start": 489.28,
+      "end": 492.4,
+      "text": "on actually annotated data to improve it further."
+    },
+    {
+      "id": 146,
+      "start": 496.2,
+      "end": 499.52,
+      "text": "Okay, so we've talked about training"
+    },
+    {
+      "id": 147,
+      "start": 499.52,
+      "end": 502.56,
+      "text": "of these dense product models,"
+    },
+    {
+      "id": 148,
+      "start": 502.56,
+      "end": 506.72,
+      "text": "these models that look at dense embedding overlap"
+    },
+    {
+      "id": 149,
+      "start": 506.72,
+      "end": 508.72,
+      "text": "or nearest neighbors."
+    },
+    {
+      "id": 150,
+      "start": 508.72,
+      "end": 511.76,
+      "text": "But the problem is in order to calculate this"
+    },
+    {
+      "id": 151,
+      "start": 511.76,
+      "end": 515.72,
+      "text": "we need to calculate it over a very, very large document base"
+    },
+    {
+      "id": 152,
+      "start": 515.72,
+      "end": 519.88,
+      "text": "and just taking a product between the query"
+    },
+    {
+      "id": 153,
+      "start": 519.88,
+      "end": 523.28,
+      "text": "and all of the other documents in the document base"
+    },
+    {
+      "id": 154,
+      "start": 523.28,
+      "end": 525.12,
+      "text": "is extremely costly."
+    },
+    {
+      "id": 155,
+      "start": 526.12,
+      "end": 529.12,
+      "text": "And so in order to fix this,"
+    },
+    {
+      "id": 156,
+      "start": 529.12,
+      "end": 532.92,
+      "text": "there are methods for approximate nearest neighbor search."
+    },
+    {
+      "id": 157,
+      "start": 532.92,
+      "end": 536.8,
+      "text": "And these are methods that allow you to retrieve embeddings"
+    },
+    {
+      "id": 158,
+      "start": 536.8,
+      "end": 539.32,
+      "text": "that have the maximum inner product"
+    },
+    {
+      "id": 159,
+      "start": 539.32,
+      "end": 541.52,
+      "text": "between them in some linear time."
+    },
+    {
+      "id": 160,
+      "start": 541.52,
+      "end": 545.0,
+      "text": "And because you're doing the maximum inner product,"
+    },
+    {
+      "id": 161,
+      "start": 545.0,
+      "end": 548.52,
+      "text": "this is also often called maximum inner product search or MIPS."
+    },
+    {
+      "id": 162,
+      "start": 550.72,
+      "end": 553.32,
+      "text": "So I'm going to introduce on a very high level"
+    },
+    {
+      "id": 163,
+      "start": 553.52,
+      "end": 556.52,
+      "text": "two common methods to do this."
+    },
+    {
+      "id": 164,
+      "start": 556.52,
+      "end": 559.72,
+      "text": "The first one is locality sensitive passion"
+    },
+    {
+      "id": 165,
+      "start": 559.72,
+      "end": 564.72,
+      "text": "or this can also be called kind of inverted index as well."
+    },
+    {
+      "id": 166,
+      "start": 565.04,
+      "end": 569.16,
+      "text": "And what you do is you make partitions in continuous space"
+    },
+    {
+      "id": 167,
+      "start": 569.16,
+      "end": 572.52,
+      "text": "and then you use it like an inverted index."
+    },
+    {
+      "id": 168,
+      "start": 572.52,
+      "end": 575.48,
+      "text": "So let's say we have a whole bunch of embeddings."
+    },
+    {
+      "id": 169,
+      "start": 575.48,
+      "end": 577.84,
+      "text": "I demonstrated two dimensional embeddings here,"
+    },
+    {
+      "id": 170,
+      "start": 577.84,
+      "end": 579.4,
+      "text": "but in reality this would be, you know,"
+    },
+    {
+      "id": 171,
+      "start": 579.4,
+      "end": 583.84,
+      "text": "as large as your word embedding your query"
+    },
+    {
+      "id": 172,
+      "start": 583.84,
+      "end": 585.2,
+      "text": "and document embedding space."
+    },
+    {
+      "id": 173,
+      "start": 585.2,
+      "end": 589.4,
+      "text": "So this would be, you know, 512 or 1024 or something like that."
+    },
+    {
+      "id": 174,
+      "start": 590.4,
+      "end": 595.12,
+      "text": "And what you do is you define a whole bunch of planes"
+    },
+    {
+      "id": 175,
+      "start": 595.12,
+      "end": 599.0,
+      "text": "that separate these points into two spaces."
+    },
+    {
+      "id": 176,
+      "start": 599.0,
+      "end": 601.2,
+      "text": "So if this is our first plane,"
+    },
+    {
+      "id": 177,
+      "start": 601.2,
+      "end": 603.2,
+      "text": "all of the points above the plane will get"
+    }
+  ],
+  "language": "en"
+}

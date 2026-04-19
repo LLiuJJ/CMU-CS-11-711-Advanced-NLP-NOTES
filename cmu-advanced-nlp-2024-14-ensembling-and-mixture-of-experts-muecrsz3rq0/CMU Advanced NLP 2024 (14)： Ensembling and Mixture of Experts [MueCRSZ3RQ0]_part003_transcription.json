@@ -1,0 +1,941 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 3.0,
+      "text": "that like 10 times and you train 10 different models"
+    },
+    {
+      "id": 1,
+      "start": 3.0,
+      "end": 5.4,
+      "text": "and then you ensemble those models together."
+    },
+    {
+      "id": 2,
+      "start": 5.4,
+      "end": 7.68,
+      "text": "And so this is another way to get multiple models"
+    },
+    {
+      "id": 3,
+      "start": 7.68,
+      "end": 9.72,
+      "text": "and both of these still improve your robustness"
+    },
+    {
+      "id": 4,
+      "start": 9.72,
+      "end": 12.32,
+      "text": "because they basically get a different view on the data."
+    },
+    {
+      "id": 5,
+      "start": 12.32,
+      "end": 15.36,
+      "text": "So they smooth over some of the idiosyncrasies."
+    },
+    {
+      "id": 6,
+      "start": 15.36,
+      "end": 16.72,
+      "text": "And as I mentioned before,"
+    },
+    {
+      "id": 7,
+      "start": 16.72,
+      "end": 19.96,
+      "text": "you can also get multiple models from different checkpoints"
+    },
+    {
+      "id": 8,
+      "start": 19.96,
+      "end": 22.24,
+      "text": "and then put them together."
+    },
+    {
+      "id": 9,
+      "start": 22.24,
+      "end": 24.44,
+      "text": "And all of these methods are pre-related."
+    },
+    {
+      "id": 10,
+      "start": 24.44,
+      "end": 26.2,
+      "text": "Both of them, basically what they're doing"
+    },
+    {
+      "id": 11,
+      "start": 26.2,
+      "end": 28.68,
+      "text": "is they're taking advantage of the fact"
+    },
+    {
+      "id": 12,
+      "start": 28.68,
+      "end": 32.08,
+      "text": "that you have particular models that saw different data"
+    },
+    {
+      "id": 13,
+      "start": 32.08,
+      "end": 33.76,
+      "text": "or saw data in a different order"
+    },
+    {
+      "id": 14,
+      "start": 33.76,
+      "end": 36.76,
+      "text": "or different nodes saw different parts of the data"
+    },
+    {
+      "id": 15,
+      "start": 36.76,
+      "end": 38.48,
+      "text": "because you dropped out some of the nodes"
+    },
+    {
+      "id": 16,
+      "start": 38.48,
+      "end": 40.2,
+      "text": "when they were back-propping"
+    },
+    {
+      "id": 17,
+      "start": 40.2,
+      "end": 41.76,
+      "text": "and particular varieties of the data."
+    },
+    {
+      "id": 18,
+      "start": 41.76,
+      "end": 46.76,
+      "text": "So even things like this can give you models"
+    },
+    {
+      "id": 19,
+      "start": 47.56,
+      "end": 50.52,
+      "text": "that are different enough to help when you're ensemble"
+    },
+    {
+      "id": 20,
+      "start": 50.52,
+      "end": 51.92,
+      "text": "and there's some other needs to go."
+    },
+    {
+      "id": 21,
+      "start": 52.12,
+      "end": 55.12,
+      "text": "And then of course, you can also..."
+    },
+    {
+      "id": 22,
+      "start": 58.12,
+      "end": 62.12,
+      "text": "Then of course, you can also combine together"
+    },
+    {
+      "id": 23,
+      "start": 62.12,
+      "end": 64.12,
+      "text": "like very different models like this"
+    },
+    {
+      "id": 24,
+      "start": 64.12,
+      "end": 67.12,
+      "text": "and that also works in different ways."
+    },
+    {
+      "id": 25,
+      "start": 69.12,
+      "end": 70.12,
+      "text": "Cool."
+    },
+    {
+      "id": 26,
+      "start": 71.12,
+      "end": 73.12,
+      "text": "Part of the reason why I wanted to mention that"
+    },
+    {
+      "id": 27,
+      "start": 73.12,
+      "end": 76.12,
+      "text": "dropout though in particular is there's also"
+    },
+    {
+      "id": 28,
+      "start": 76.12,
+      "end": 79.12,
+      "text": "other efficient methods for using multiple models."
+    },
+    {
+      "id": 29,
+      "start": 80.12,
+      "end": 84.12,
+      "text": "So the big problem with ensembling is the cost"
+    },
+    {
+      "id": 30,
+      "start": 84.12,
+      "end": 88.12,
+      "text": "and simple ensembling is very expensive"
+    },
+    {
+      "id": 31,
+      "start": 88.12,
+      "end": 91.12,
+      "text": "because it requires you to run multiple models at test time"
+    },
+    {
+      "id": 32,
+      "start": 91.12,
+      "end": 92.12,
+      "text": "and inference time."
+    },
+    {
+      "id": 33,
+      "start": 92.12,
+      "end": 94.12,
+      "text": "And this is something you don't want to be doing"
+    },
+    {
+      "id": 34,
+      "start": 94.12,
+      "end": 97.12,
+      "text": "if you're deploying a service or something"
+    },
+    {
+      "id": 35,
+      "start": 97.12,
+      "end": 100.12,
+      "text": "because it like linearly increases your cost"
+    },
+    {
+      "id": 36,
+      "start": 100.12,
+      "end": 104.12,
+      "text": "by the amount of models that you're running."
+    },
+    {
+      "id": 37,
+      "start": 104.12,
+      "end": 108.12,
+      "text": "And it requires both the end times to computation"
+    },
+    {
+      "id": 38,
+      "start": 109.12,
+      "end": 110.12,
+      "text": "and end times to memory."
+    },
+    {
+      "id": 39,
+      "start": 110.12,
+      "end": 113.12,
+      "text": "And memory is actually probably the worst thing"
+    },
+    {
+      "id": 40,
+      "start": 113.12,
+      "end": 116.12,
+      "text": "because you need to deploy extra GPU machines"
+    },
+    {
+      "id": 41,
+      "start": 116.12,
+      "end": 117.12,
+      "text": "and other stuff like that."
+    },
+    {
+      "id": 42,
+      "start": 117.12,
+      "end": 119.12,
+      "text": "So the question is,"
+    },
+    {
+      "id": 43,
+      "start": 119.12,
+      "end": 122.12,
+      "text": "is there any way we can get some of the benefits"
+    },
+    {
+      "id": 44,
+      "start": 122.12,
+      "end": 127.12,
+      "text": "of ensembling without having to create multiple models?"
+    },
+    {
+      "id": 45,
+      "start": 127.12,
+      "end": 130.12,
+      "text": "And luckily the answer is yes."
+    },
+    {
+      "id": 46,
+      "start": 133.12,
+      "end": 135.12,
+      "text": "The easiest method for doing so is something"
+    },
+    {
+      "id": 47,
+      "start": 135.12,
+      "end": 136.12,
+      "text": "called parameter averaging"
+    },
+    {
+      "id": 48,
+      "start": 136.12,
+      "end": 139.12,
+      "text": "and basically what you do is you just average"
+    },
+    {
+      "id": 49,
+      "start": 139.12,
+      "end": 142.12,
+      "text": "the parameters of multiple models together."
+    },
+    {
+      "id": 50,
+      "start": 142.12,
+      "end": 146.12,
+      "text": "This only works under certain conditions."
+    },
+    {
+      "id": 51,
+      "start": 146.12,
+      "end": 149.12,
+      "text": "So does anyone,"
+    },
+    {
+      "id": 52,
+      "start": 149.12,
+      "end": 152.12,
+      "text": "does anyone know what these conditions might be?"
+    },
+    {
+      "id": 53,
+      "start": 152.12,
+      "end": 157.12,
+      "text": "There's a few obvious ones and maybe a few slightly less obvious ones."
+    },
+    {
+      "id": 54,
+      "start": 157.12,
+      "end": 160.12,
+      "text": "So like first question,"
+    },
+    {
+      "id": 55,
+      "start": 160.12,
+      "end": 162.12,
+      "text": "do you think you could combine together,"
+    },
+    {
+      "id": 56,
+      "start": 162.12,
+      "end": 164.12,
+      "text": "do you think you could average together"
+    },
+    {
+      "id": 57,
+      "start": 164.12,
+      "end": 167.12,
+      "text": "the parameters of llama 7B and Laplace 70B?"
+    },
+    {
+      "id": 58,
+      "start": 170.12,
+      "end": 171.12,
+      "text": "No."
+    },
+    {
+      "id": 59,
+      "start": 172.12,
+      "end": 174.12,
+      "text": "The answer is no, but why not?"
+    },
+    {
+      "id": 60,
+      "start": 178.12,
+      "end": 180.12,
+      "text": "I mean, what does that even mean in the first place?"
+    },
+    {
+      "id": 61,
+      "start": 180.12,
+      "end": 183.12,
+      "text": "Right? Like they have totally different numbers of parameters."
+    },
+    {
+      "id": 62,
+      "start": 183.12,
+      "end": 186.12,
+      "text": "You wouldn't be able to find a one-to-one association"
+    },
+    {
+      "id": 63,
+      "start": 186.12,
+      "end": 190.12,
+      "text": "between 7B and like 7 billion parameters and 7 billion parameters."
+    },
+    {
+      "id": 64,
+      "start": 191.12,
+      "end": 195.12,
+      "text": "What about averaging together?"
+    },
+    {
+      "id": 65,
+      "start": 195.12,
+      "end": 201.12,
+      "text": "Let's say llama 7B and Missrol 7B."
+    },
+    {
+      "id": 66,
+      "start": 206.12,
+      "end": 208.12,
+      "text": "Yes, no?"
+    },
+    {
+      "id": 67,
+      "start": 208.12,
+      "end": 209.12,
+      "text": "Yeah."
+    },
+    {
+      "id": 68,
+      "start": 209.12,
+      "end": 211.12,
+      "text": "You get to do that like for the different parameters"
+    },
+    {
+      "id": 69,
+      "start": 211.12,
+      "end": 215.12,
+      "text": "for parameters to be different than your average."
+    },
+    {
+      "id": 70,
+      "start": 215.12,
+      "end": 218.12,
+      "text": "Yeah, for different architectures,"
+    },
+    {
+      "id": 71,
+      "start": 218.12,
+      "end": 221.12,
+      "text": "the parameters could mean different things."
+    },
+    {
+      "id": 72,
+      "start": 221.12,
+      "end": 226.12,
+      "text": "And even if the architecture is exactly the same,"
+    },
+    {
+      "id": 73,
+      "start": 226.12,
+      "end": 228.12,
+      "text": "even if your random initialization is different,"
+    },
+    {
+      "id": 74,
+      "start": 228.12,
+      "end": 231.12,
+      "text": "then that would be a disastrous."
+    },
+    {
+      "id": 75,
+      "start": 231.12,
+      "end": 233.12,
+      "text": "Basically, in neural networks,"
+    },
+    {
+      "id": 76,
+      "start": 233.12,
+      "end": 238.12,
+      "text": "there's no inherent meaning to like parameter number one, right?"
+    },
+    {
+      "id": 77,
+      "start": 238.12,
+      "end": 242.12,
+      "text": "And there's the idea of permutation invariance,"
+    },
+    {
+      "id": 78,
+      "start": 242.12,
+      "end": 244.12,
+      "text": "which is,"
+    },
+    {
+      "id": 79,
+      "start": 245.12,
+      "end": 251.12,
+      "text": "you can like randomly swap all of the dimensions"
+    },
+    {
+      "id": 80,
+      "start": 251.12,
+      "end": 253.12,
+      "text": "between it within a neural network"
+    },
+    {
+      "id": 81,
+      "start": 253.12,
+      "end": 256.12,
+      "text": "and get exactly the same function."
+    },
+    {
+      "id": 82,
+      "start": 258.12,
+      "end": 263.12,
+      "text": "As long as kind of in layer number one,"
+    },
+    {
+      "id": 83,
+      "start": 263.12,
+      "end": 267.12,
+      "text": "you swap and then also take the inputs in the next layer"
+    },
+    {
+      "id": 84,
+      "start": 267.12,
+      "end": 268.12,
+      "text": "and also swap."
+    },
+    {
+      "id": 85,
+      "start": 268.12,
+      "end": 271.12,
+      "text": "So, you know, as long as"
+    },
+    {
+      "id": 86,
+      "start": 271.12,
+      "end": 276.12,
+      "text": "if you have a weight maker except results in the,"
+    },
+    {
+      "id": 87,
+      "start": 276.12,
+      "end": 281.12,
+      "text": "in the outputs being ordered like one, two, three, four, five,"
+    },
+    {
+      "id": 88,
+      "start": 281.12,
+      "end": 284.12,
+      "text": "one, two, one,"
+    },
+    {
+      "id": 89,
+      "start": 284.12,
+      "end": 288.12,
+      "text": "three, five, four,"
+    },
+    {
+      "id": 90,
+      "start": 288.12,
+      "end": 293.12,
+      "text": "as long as you also swap the input,"
+    },
+    {
+      "id": 91,
+      "start": 293.12,
+      "end": 296.12,
+      "text": "direct input dimensions of this weight maker."
+    },
+    {
+      "id": 92,
+      "start": 296.12,
+      "end": 297.12,
+      "text": "So you get exactly the same thing,"
+    },
+    {
+      "id": 93,
+      "start": 297.12,
+      "end": 298.12,
+      "text": "because there are linearities."
+    },
+    {
+      "id": 94,
+      "start": 298.12,
+      "end": 301.12,
+      "text": "There are linear combinations of the parameters together."
+    },
+    {
+      "id": 95,
+      "start": 301.12,
+      "end": 305.12,
+      "text": "So neural networks have this feature of permutation invariance."
+    },
+    {
+      "id": 96,
+      "start": 305.12,
+      "end": 310.12,
+      "text": "So models that were trained from like different,"
+    },
+    {
+      "id": 97,
+      "start": 310.12,
+      "end": 313.12,
+      "text": "different initializations won't be able to be combined"
+    },
+    {
+      "id": 98,
+      "start": 313.12,
+      "end": 316.12,
+      "text": "together in this way."
+    },
+    {
+      "id": 99,
+      "start": 316.12,
+      "end": 320.12,
+      "text": "But the good thing is actually we have a whole bunch"
+    },
+    {
+      "id": 100,
+      "start": 320.12,
+      "end": 323.12,
+      "text": "of models that come from the same pre-trained model, right?"
+    },
+    {
+      "id": 101,
+      "start": 323.12,
+      "end": 324.12,
+      "text": "So we,"
+    },
+    {
+      "id": 102,
+      "start": 324.12,
+      "end": 327.12,
+      "text": "we have a whole bunch of models that come from the same pre-trained model, right?"
+    },
+    {
+      "id": 103,
+      "start": 327.12,
+      "end": 329.12,
+      "text": "We, we have this initialization here."
+    },
+    {
+      "id": 104,
+      "start": 329.12,
+      "end": 332.12,
+      "text": "This initialization was used to train Lama 27B."
+    },
+    {
+      "id": 105,
+      "start": 332.12,
+      "end": 335.12,
+      "text": "But now we have like hundreds, hundreds of models that are"
+    },
+    {
+      "id": 106,
+      "start": 335.12,
+      "end": 336.12,
+      "text": "derived from Lama 2."
+    },
+    {
+      "id": 107,
+      "start": 336.12,
+      "end": 338.12,
+      "text": "We have hundreds of models that are derived from mixed raw."
+    },
+    {
+      "id": 108,
+      "start": 338.12,
+      "end": 342.12,
+      "text": "And they're all of the dimensions actually mean the same thing,"
+    },
+    {
+      "id": 109,
+      "start": 342.12,
+      "end": 345.12,
+      "text": "because they're derived from the same parameters and first place."
+    },
+    {
+      "id": 110,
+      "start": 345.12,
+      "end": 348.12,
+      "text": "So those ones we can average together."
+    },
+    {
+      "id": 111,
+      "start": 348.12,
+      "end": 351.12,
+      "text": "And there's basically two ways that we can do this."
+    },
+    {
+      "id": 112,
+      "start": 351.12,
+      "end": 355.12,
+      "text": "One is by averaging together multiple checkpoints during training."
+    },
+    {
+      "id": 113,
+      "start": 355.12,
+      "end": 359.12,
+      "text": "So originally this was the big thing that people did."
+    },
+    {
+      "id": 114,
+      "start": 359.12,
+      "end": 363.12,
+      "text": "Like you would train a model from scratch for a really long time."
+    },
+    {
+      "id": 115,
+      "start": 363.12,
+      "end": 366.12,
+      "text": "But then you would take the final five checkpoints and you would just"
+    },
+    {
+      "id": 116,
+      "start": 366.12,
+      "end": 368.12,
+      "text": "average them together."
+    },
+    {
+      "id": 117,
+      "start": 368.12,
+      "end": 372.12,
+      "text": "And this helps reduce some of the noise that you get from"
+    },
+    {
+      "id": 118,
+      "start": 372.12,
+      "end": 376.12,
+      "text": "Stichester gradient descent and can improve your overall accuracy."
+    },
+    {
+      "id": 119,
+      "start": 376.12,
+      "end": 379.12,
+      "text": "If you're fine tuning any models, this is something you can do also."
+    },
+    {
+      "id": 120,
+      "start": 379.12,
+      "end": 381.12,
+      "text": "Because you're probably going to be saving checkpoints."
+    },
+    {
+      "id": 121,
+      "start": 381.12,
+      "end": 384.12,
+      "text": "You can just take the best five checkpoints and average them together."
+    },
+    {
+      "id": 122,
+      "start": 384.12,
+      "end": 389.12,
+      "text": "And that actually can improve your accuracy quite a bit."
+    },
+    {
+      "id": 123,
+      "start": 389.12,
+      "end": 392.12,
+      "text": "Another thing is fine tuned model merging."
+    },
+    {
+      "id": 124,
+      "start": 392.12,
+      "end": 396.12,
+      "text": "So fine tune in several ways and then merge them together."
+    },
+    {
+      "id": 125,
+      "start": 396.12,
+      "end": 401.12,
+      "text": "And so for example, we might take Lama 27 be instruct and on Vekuna 70,"
+    },
+    {
+      "id": 126,
+      "start": 401.12,
+      "end": 404.12,
+      "text": "1.5 and merge them together with some weights."
+    },
+    {
+      "id": 127,
+      "start": 404.12,
+      "end": 412.12,
+      "text": "And we could, you know, smooth over their idiosyncrasies and get better results too."
+    },
+    {
+      "id": 128,
+      "start": 412.12,
+      "end": 416.12,
+      "text": "Cool."
+    },
+    {
+      "id": 129,
+      "start": 416.12,
+      "end": 423.12,
+      "text": "Any questions here?"
+    },
+    {
+      "id": 130,
+      "start": 423.12,
+      "end": 425.12,
+      "text": "Oh yeah."
+    },
+    {
+      "id": 131,
+      "start": 425.12,
+      "end": 429.12,
+      "text": "So you possibly do a single one."
+    },
+    {
+      "id": 132,
+      "start": 429.12,
+      "end": 432.12,
+      "text": "I just came."
+    },
+    {
+      "id": 133,
+      "start": 432.12,
+      "end": 435.12,
+      "text": "I don't know."
+    },
+    {
+      "id": 134,
+      "start": 435.12,
+      "end": 443.12,
+      "text": "I was."
+    },
+    {
+      "id": 135,
+      "start": 443.12,
+      "end": 445.12,
+      "text": "I was."
+    },
+    {
+      "id": 136,
+      "start": 445.12,
+      "end": 448.12,
+      "text": "I was."
+    },
+    {
+      "id": 137,
+      "start": 448.12,
+      "end": 451.12,
+      "text": "I was."
+    },
+    {
+      "id": 138,
+      "start": 451.12,
+      "end": 455.12,
+      "text": "I was."
+    },
+    {
+      "id": 139,
+      "start": 455.12,
+      "end": 458.12,
+      "text": "I was."
+    },
+    {
+      "id": 140,
+      "start": 458.12,
+      "end": 464.12,
+      "text": "Yeah. So with this, with this parameter averaging be a good method for making a model."
+    },
+    {
+      "id": 141,
+      "start": 464.12,
+      "end": 479.12,
+      "text": "So if you're going to be able to make a model less toxic, for example, the answer is a little bit trickier there, I guess, because I feel like this is good for mixing two models together."
+    },
+    {
+      "id": 142,
+      "start": 479.12,
+      "end": 492.12,
+      "text": "So if you're mixing your like non toxicity tuned model or your safety tune model with the original base model that was not safety tune or something like that, then you might get something in the middle."
+    },
+    {
+      "id": 143,
+      "start": 492.12,
+      "end": 501.12,
+      "text": "And that's less safe than the, like the model that was trained to not be toxic. So it might be."
+    },
+    {
+      "id": 144,
+      "start": 501.12,
+      "end": 502.12,
+      "text": "Yeah, I'm not sure."
+    },
+    {
+      "id": 145,
+      "start": 502.12,
+      "end": 512.12,
+      "text": "But like, let's say you, let's say you have a model that somebody else did like a really good job instruction tuning for you."
+    },
+    {
+      "id": 146,
+      "start": 512.12,
+      "end": 520.12,
+      "text": "And any time you start using safety tuning on it, you like hurt the instruction tuning, like the model gets worse."
+    },
+    {
+      "id": 147,
+      "start": 520.12,
+      "end": 533.12,
+      "text": "I could see a world where you take the base model, the same base model, you take one, that 27 be trained like a less toxic version of one, 27 be an end to parameter averaging with the like well instruction tune model."
+    },
+    {
+      "id": 148,
+      "start": 533.12,
+      "end": 546.12,
+      "text": "That might work that might make something that's more safe and like not much worse instruction. So there's definitely I think creating things that you can do."
+    },
+    {
+      "id": 149,
+      "start": 546.12,
+      "end": 550.12,
+      "text": "Maybe I'll go in directly into the methods."
+    },
+    {
+      "id": 150,
+      "start": 550.12,
+      "end": 565.12,
+      "text": "So there's a few recent papers on this like this method has been around for a long time since at least 1996, recently people have examined it a lot in the context of kind of modern networks."
+    },
+    {
+      "id": 151,
+      "start": 565.12,
+      "end": 570.12,
+      "text": "And this paper model suit examines two strategies."
+    },
+    {
+      "id": 152,
+      "start": 570.12,
+      "end": 576.12,
+      "text": "One is uniform averaging where you just average all the parameters together, like as you would expect."
+    },
+    {
+      "id": 153,
+      "start": 576.12,
+      "end": 588.12,
+      "text": "But they also have a greedy averaging method and basically what they do here is they add one model and check if the whole like averaged model improves and then only if the whole average model improves to be keep that model."
+    },
+    {
+      "id": 154,
+      "start": 588.12,
+      "end": 593.12,
+      "text": "Otherwise, they throw it out and then they don't use it."
+    },
+    {
+      "id": 155,
+      "start": 593.12,
+      "end": 603.12,
+      "text": "What they demonstrate, this is a little bit small, but basically the purple star here is when they use greedy averaging and then the."
+    }
+  ],
+  "language": "en"
+}

@@ -1,0 +1,551 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 4.2,
+      "text": "the left side of the relation, a matrix for the right side of the relation."
+    },
+    {
+      "id": 1,
+      "start": 4.2,
+      "end": 8.24,
+      "text": "And then they feed in the embeddings of each of the entities in the relation."
+    },
+    {
+      "id": 2,
+      "start": 8.24,
+      "end": 13.12,
+      "text": "They have a non-linearity and then they have another vector that tries to predict the"
+    },
+    {
+      "id": 3,
+      "start": 13.12,
+      "end": 16.8,
+      "text": "probability of the actual relation being correct."
+    },
+    {
+      "id": 4,
+      "start": 16.8,
+      "end": 20.48,
+      "text": "So you would run this through a sigmoid and then if it was one,"
+    },
+    {
+      "id": 5,
+      "start": 20.48,
+      "end": 25.96,
+      "text": "the relation was likely to exist, if it was zero, then the relation was likely to not exist."
+    },
+    {
+      "id": 6,
+      "start": 25.96,
+      "end": 29.16,
+      "text": "And then they also proposed something called a neural tensor network."
+    },
+    {
+      "id": 7,
+      "start": 29.16,
+      "end": 33.24,
+      "text": "And this adds a bilinear feature extractor."
+    },
+    {
+      "id": 8,
+      "start": 33.24,
+      "end": 38.84,
+      "text": "And so basically what this is saying is we have the embedding here, the embedding here."
+    },
+    {
+      "id": 9,
+      "start": 38.84,
+      "end": 44.52,
+      "text": "We have a matrix and then we calculate the dot product between the embedding after transformation."
+    },
+    {
+      "id": 10,
+      "start": 44.52,
+      "end": 49.32,
+      "text": "It looks a lot like attention actually in a way because we have the bilinear attention."
+    },
+    {
+      "id": 11,
+      "start": 49.32,
+      "end": 51.24,
+      "text": "So it's similar to that as well."
+    },
+    {
+      "id": 12,
+      "start": 51.24,
+      "end": 53.92,
+      "text": "And then we also have the MLP."
+    },
+    {
+      "id": 13,
+      "start": 53.92,
+      "end": 57.32,
+      "text": "So this part corresponds to the MLP and then we have a bias term."
+    },
+    {
+      "id": 14,
+      "start": 59.72,
+      "end": 63.88,
+      "text": "And this is a powerful model, but it's a bit over parameterized."
+    },
+    {
+      "id": 15,
+      "start": 63.88,
+      "end": 71.0,
+      "text": "So we actually later, this kind of fell out of favor towards these more simple models"
+    },
+    {
+      "id": 16,
+      "start": 71.0,
+      "end": 74.68,
+      "text": "that we're using kind of just linear projections between the two."
+    },
+    {
+      "id": 17,
+      "start": 80.6,
+      "end": 83.2,
+      "text": "So there's a lot of methods like this."
+    },
+    {
+      "id": 18,
+      "start": 83.2,
+      "end": 88.84,
+      "text": "These methods are basically assuming that we have either knowledge graph embeddings."
+    },
+    {
+      "id": 19,
+      "start": 90.12,
+      "end": 95.32,
+      "text": "And we want to learn relations or they're assuming that we don't have any information at all about the knowledge graph."
+    },
+    {
+      "id": 20,
+      "start": 95.32,
+      "end": 98.76,
+      "text": "And we want to learn the knowledge graph embedding some selves."
+    },
+    {
+      "id": 21,
+      "start": 98.76,
+      "end": 106.04,
+      "text": "It's been used for both of them, but I'd say now it's probably most useful for learning knowledge graph embeddings."
+    },
+    {
+      "id": 22,
+      "start": 106.04,
+      "end": 110.84,
+      "text": "If you want to do any sort of knowledge graph based modeling, which can be useful."
+    },
+    {
+      "id": 23,
+      "start": 114.6,
+      "end": 116.28,
+      "text": "Cool, any questions about these ones?"
+    },
+    {
+      "id": 24,
+      "start": 120.12,
+      "end": 128.2,
+      "text": "Okay. Next, actually, this part might be a little bit simpler than the like knowledge graph based approaches."
+    },
+    {
+      "id": 25,
+      "start": 128.2,
+      "end": 132.76,
+      "text": "So another method for relations extraction is learning from text directly."
+    },
+    {
+      "id": 26,
+      "start": 133.72,
+      "end": 142.6,
+      "text": "And the first question about this is how do you get training data to learn about relation,"
+    },
+    {
+      "id": 27,
+      "start": 142.6,
+      "end": 144.04,
+      "text": "learn relation extraction?"
+    },
+    {
+      "id": 28,
+      "start": 144.12,
+      "end": 149.24,
+      "text": "And so there was this very influential paper, a distance supervision for relation extraction."
+    },
+    {
+      "id": 29,
+      "start": 149.24,
+      "end": 157.72,
+      "text": "I would say it's almost one of the first or certainly one of the most influential papers on like data augmentation or synthetic data for natural language processing."
+    },
+    {
+      "id": 30,
+      "start": 158.84,
+      "end": 164.44,
+      "text": "And basically, the idea is you already have a knowledge base that has some entries in it like wiki data."
+    },
+    {
+      "id": 31,
+      "start": 165.32,
+      "end": 169.56,
+      "text": "And so then given an entity relation entity triples,"
+    },
+    {
+      "id": 32,
+      "start": 170.52,
+      "end": 178.36,
+      "text": "can you extract all text that matches this particular relation type and use it to train a relation extractor, a supervised relation extractor."
+    },
+    {
+      "id": 33,
+      "start": 179.4,
+      "end": 184.12,
+      "text": "So the way this works is like, let's say we have this is an old paper."
+    },
+    {
+      "id": 34,
+      "start": 184.12,
+      "end": 193.0,
+      "text": "So the examples are also old, but let's say we have Steven Spielberg being a director of the film saving private Ryan and that's included in our our knowledge base."
+    },
+    {
+      "id": 35,
+      "start": 193.96,
+      "end": 200.6,
+      "text": "So what it would do is it would find all sentences that have Steven Spielberg and saving private Ryan included in them."
+    },
+    {
+      "id": 36,
+      "start": 200.6,
+      "end": 204.04,
+      "text": "And it would label this as like a positive example of that relation."
+    },
+    {
+      "id": 37,
+      "start": 205.0,
+      "end": 209.8,
+      "text": "So this is in general, often it's okay."
+    },
+    {
+      "id": 38,
+      "start": 209.8,
+      "end": 211.96,
+      "text": "It works reasonably well."
+    },
+    {
+      "id": 39,
+      "start": 211.96,
+      "end": 217.64,
+      "text": "But the problem with this is there are also negative examples of this."
+    },
+    {
+      "id": 40,
+      "start": 217.72,
+      "end": 229.48,
+      "text": "So like, for example, here, I think the first one is kind of a negative example for the director relation because Steven Spielberg's film saving private Ryan doesn't actually tell you he's the director."
+    },
+    {
+      "id": 41,
+      "start": 229.48,
+      "end": 231.96,
+      "text": "It just tells you that he somehow affiliated with it."
+    },
+    {
+      "id": 42,
+      "start": 231.96,
+      "end": 236.76,
+      "text": "He could be the writer or he could be the actor or or something else like that."
+    },
+    {
+      "id": 43,
+      "start": 236.76,
+      "end": 246.36,
+      "text": "So this is a nice way to create data for basically free, but at the same time, you can like create noisy examples and it can be a problem."
+    },
+    {
+      "id": 44,
+      "start": 248.04,
+      "end": 258.04,
+      "text": "So there's been a lot of work about this relationship, relation classification with neural networks."
+    },
+    {
+      "id": 45,
+      "start": 258.04,
+      "end": 261.88,
+      "text": "There's a lot of different methods that could be doing this."
+    },
+    {
+      "id": 46,
+      "start": 261.88,
+      "end": 269.88,
+      "text": "Most of them work by extracting features and then classifying somehow, although there are some large language model based methods now."
+    },
+    {
+      "id": 47,
+      "start": 270.68,
+      "end": 280.04,
+      "text": "One one thing about relation extraction or not kind of like information extraction in general is that very often you want to run this over like a huge corpus."
+    },
+    {
+      "id": 48,
+      "start": 280.04,
+      "end": 282.76,
+      "text": "You want to run it over the whole internet or other things like that."
+    },
+    {
+      "id": 49,
+      "start": 283.4,
+      "end": 291.32,
+      "text": "So from that point of view, like I said, I could just ask Mr. All to give me the answer about like whether cars are included in sentences."
+    },
+    {
+      "id": 50,
+      "start": 291.32,
+      "end": 298.84,
+      "text": "But if you want to run, you know, TPD 4 over the whole internet, that's a pretty big budget and you might want to reconsider that."
+    },
+    {
+      "id": 51,
+      "start": 298.92,
+      "end": 305.4,
+      "text": "So there are also there is also some benefit in having cheap and lightweight methods."
+    },
+    {
+      "id": 52,
+      "start": 307.32,
+      "end": 312.52,
+      "text": "So basically what this particular paper did is it extracted features and classified."
+    },
+    {
+      "id": 53,
+      "start": 312.52,
+      "end": 318.6,
+      "text": "So it extracted lexical features of the entities themselves and features of the whole span."
+    },
+    {
+      "id": 54,
+      "start": 319.32,
+      "end": 328.6,
+      "text": "And so like the way I most modern methods for this to do this is they basically extract features from the first."
+    },
+    {
+      "id": 55,
+      "start": 329.8,
+      "end": 344.52,
+      "text": "Part of the first entity, the second part of the first entity, the first part of the second entity in the last part of the second entity and take all of those embeddings feed them into like an MLP or something like that and then make a prediction about whether that relation exists."
+    },
+    {
+      "id": 56,
+      "start": 344.52,
+      "end": 348.04,
+      "text": "So if you have an embedding model, this is relatively easy to do."
+    },
+    {
+      "id": 57,
+      "start": 348.04,
+      "end": 354.68,
+      "text": "You feed it through like Roberta or you feed it through Mistral and get the embeddings for each of the tokens in."
+    },
+    {
+      "id": 58,
+      "start": 355.64,
+      "end": 358.28,
+      "text": "Invent you make a prediction based on those four embeddings."
+    },
+    {
+      "id": 59,
+      "start": 363.32,
+      "end": 368.76,
+      "text": "The details of that are like not super important unless you're going to go in and implement it yourself."
+    },
+    {
+      "id": 60,
+      "start": 368.76,
+      "end": 373.72,
+      "text": "So you can like if you're actually going to be doing relation extraction obviously the details are important."
+    },
+    {
+      "id": 61,
+      "start": 373.72,
+      "end": 377.96,
+      "text": "But I'm assuming that most people won't be, you know, doing that is your final project."
+    },
+    {
+      "id": 62,
+      "start": 378.76,
+      "end": 387.4,
+      "text": "But one really interesting thing that is relevant even if you're not doing relationship, relation extraction is how you can model noise."
+    },
+    {
+      "id": 63,
+      "start": 388.2,
+      "end": 393.48,
+      "text": "Because this as I said they're creating lots of like semi noisy data."
+    },
+    {
+      "id": 64,
+      "start": 394.36,
+      "end": 403.16,
+      "text": "And a lot of the work in getting good bottles for relation extraction has been how do we deal with this distance supervision noise."
+    },
+    {
+      "id": 65,
+      "start": 403.16,
+      "end": 409.32,
+      "text": "And I'm just going to give one example here, but there's like a series of papers after this that also tried to do similar things."
+    },
+    {
+      "id": 66,
+      "start": 410.28,
+      "end": 413.56,
+      "text": "So the idea is that there's noise in the distance supervision labels."
+    },
+    {
+      "id": 67,
+      "start": 414.36,
+      "end": 417.08,
+      "text": "And so we want to model and mitigate that noise."
+    },
+    {
+      "id": 68,
+      "start": 418.04,
+      "end": 422.44,
+      "text": "And the way this paper does this is they have an encoder."
+    },
+    {
+      "id": 69,
+      "start": 423.8,
+      "end": 428.28,
+      "text": "And from the encoder you calculate embeddings and make predictions."
+    },
+    {
+      "id": 70,
+      "start": 428.44,
+      "end": 434.68,
+      "text": "And so you have a small set of like very high quality data."
+    },
+    {
+      "id": 71,
+      "start": 435.72,
+      "end": 440.6,
+      "text": "And this small set of very high quality data you can basically trust that all of the data is not noisy."
+    },
+    {
+      "id": 72,
+      "start": 440.6,
+      "end": 445.64,
+      "text": "Like maybe it's manually annotated data and you have like 5,000 examples of it or something like that."
+    },
+    {
+      "id": 73,
+      "start": 445.64,
+      "end": 450.76,
+      "text": "And then separately from that you have like 5 million examples of automatically labeled data that might be good or might not be good."
+    },
+    {
+      "id": 74,
+      "start": 451.56,
+      "end": 457.8,
+      "text": "And so what they do is essentially at the beginning they take this encoder get embeddings make predictions over the high quality data."
+    },
+    {
+      "id": 75,
+      "start": 458.44,
+      "end": 468.92,
+      "text": "And then they have a separate noise modeling layer where what this noise modeling layer does is it has a transition matrix, which says given that this."
+    },
+    {
+      "id": 76,
+      "start": 469.88,
+      "end": 480.36,
+      "text": "Given that we made a particular prediction over classes because this is essentially a multi class classification problem, they transform the."
+    },
+    {
+      "id": 77,
+      "start": 480.92,
+      "end": 492.44,
+      "text": "So you don't remember if they transform the probabilities or the low jets, I think it's the probabilities, but they transform the probabilities and get a final distribution after noise."
+    },
+    {
+      "id": 78,
+      "start": 493.4,
+      "end": 502.44,
+      "text": "And so that means that you can basically smooth out this distribution and account for the fact that labels may be noisy or may may not be noisy."
+    },
+    {
+      "id": 79,
+      "start": 503.4,
+      "end": 521.0,
+      "text": "Then they add additional normalization on this transition matrix using something called trace normalization to move this matrix closer to the identity function, which says that the predictions are probably not wrong all the time."
+    },
+    {
+      "id": 80,
+      "start": 521.88,
+      "end": 526.52,
+      "text": "The predictions are probably correct, you know a lot of the time they're not correct all the time."
+    },
+    {
+      "id": 81,
+      "start": 527.24,
+      "end": 538.28,
+      "text": "So then you have that trace normalization competing with this trying to give you like a more smooth distribution and reduce your wall like reduce your loss."
+    },
+    {
+      "id": 82,
+      "start": 538.28,
+      "end": 549.0,
+      "text": "So I think this is actually a pretty interesting idea and it can be used not just for relation extraction, but also in cases where you might have noisy labels overall."
+    },
+    {
+      "id": 83,
+      "start": 549.0,
+      "end": 557.0,
+      "text": "So are there any questions about this or any of the things that are going on here."
+    },
+    {
+      "id": 84,
+      "start": 557.0,
+      "end": 575.0,
+      "text": "Even if you're completely uninterested in relation extraction, I'd encourage you to think about like what are some examples of things that you are interested in where you could get potentially noisy labels and how could you account for the noise there like that might be a thing to think about."
+    },
+    {
+      "id": 85,
+      "start": 575.0,
+      "end": 577.0,
+      "text": "So."
+    },
+    {
+      "id": 86,
+      "start": 577.0,
+      "end": 587.0,
+      "text": "Okay, so this was a very, very brief overview of how we create knowledge bases from textural data or from knowledge graph data structure knowledge graph data."
+    },
+    {
+      "id": 87,
+      "start": 587.0,
+      "end": 593.0,
+      "text": "So now I like to talk a little bit about how to use knowledge bases to inform neural models."
+    },
+    {
+      "id": 88,
+      "start": 593.0,
+      "end": 599.0,
+      "text": "And there's a bunch of different ways to do this."
+    },
+    {
+      "id": 89,
+      "start": 599.0,
+      "end": 601.0,
+      "text": "The."
+    },
+    {
+      "id": 90,
+      "start": 601.0,
+      "end": 603.0,
+      "text": "The first."
+    }
+  ],
+  "language": "en"
+}
